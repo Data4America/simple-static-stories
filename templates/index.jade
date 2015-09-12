@@ -20,11 +20,12 @@ block content
             p.more
               a(href=article.url) more
 
-block prepend footer
-  div.nav
-    if prevPage
-      a(href=prevPage.url) « Newer
-    else
-      a(href='/archive') « Archives
-    if nextPage
-      a(href=nextPage.url) Next page »
+block footer
+  div.container.content-block
+    p
+      if prevPage
+        a(href=prevPage.url) « Newer
+      else
+        a(href='/archive') « Archives
+      if nextPage
+        a(href=nextPage.url) Next page »

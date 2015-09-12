@@ -93,10 +93,10 @@
     max-width: 100%;
     height: auto;
 }
-.article-footer-links {
+
+footer .container {
     padding-top: 10px;
 }
-
 .footer-floating {
     background: rgba(0,0,0,.7);
     border-top: 1px solid #333;
