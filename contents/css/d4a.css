@@ -39,9 +39,6 @@
 .social-buttons li {
     margin-bottom: 3px;
 }
-#content {
-    padding: 10px 10px 0 10px;
-}
 @media (min-width: 992px) {
     .header-bar {
         background: none;
@@ -61,23 +58,26 @@
         z-index: -1;
     }
     #content {
-        margin-top: 107px;
+        margin-top: 97px;
+        padding: 10px 10px 0 10px;
         z-index: -2;
     }
+    .content-block {
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+    }
 }
-
-.content-block {
-    background-color: #fff;
-    position: relative;
-    z-index: 1;
-    border: 1px solid rgba(34,36,38,.15);
-    border-radius: 10px;
-    box-shadow: rgba(34, 36, 38, 0.14902) 0px 1px 2px 0px;
-    margin-bottom: 15px;
-}
-
-.description {
-    text-align: center;
+@media (min-width: 768px) {
+    #content {
+        padding-top: 10px;
+    }
+    .content-block {
+        border: 1px solid rgba(34,36,38,.15);
+        border-radius: 10px;
+        box-shadow: rgba(34, 36, 38, 0.14902) 0px 1px 2px 0px;
+        margin-bottom: 15px;
+    }
 }
 
 .container {
