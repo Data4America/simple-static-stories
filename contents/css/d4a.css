@@ -34,6 +34,10 @@
     height: 92px;
     padding-top: 25px;
     padding-right: 10px;
+    list-style-type: none;
+}
+.social-buttons li {
+    margin-bottom: 3px;
 }
 #content {
     padding: 10px 10px 0 10px;
@@ -59,9 +63,6 @@
     #content {
         margin-top: 107px;
         z-index: -2;
-    }
-    .social-buttons {
-        padding-right: 70px;
     }
 }
 

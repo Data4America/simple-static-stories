@@ -7,7 +7,10 @@ block prepend title
   | #{ page.title + ' - '}
 
 block social-buttons-top
-  p Social buttons for article
+  li
+    div.fb-like(data-href=locals.url+page.url, data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
+  li
+    a.twitter-share-button(href='https://twitter.com/share', data-url=locals.url+page.url, data-text=page.title, data-via='data4america') Tweet
 
 block content
   article.article
