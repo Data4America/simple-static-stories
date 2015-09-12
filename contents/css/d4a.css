@@ -6,7 +6,7 @@
 .logo-wrapper {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1200px;
+    max-width: 1150px;
     padding-left: 10px;
 }
 .top-menu {
@@ -29,6 +29,15 @@
 .logo {
     height: 92px;
 }
+.social-buttons {
+    text-align: right;
+    height: 92px;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+#content {
+    padding: 10px 10px 0 10px;
+}
 @media (min-width: 992px) {
     .header-bar {
         background: none;
@@ -50,6 +59,9 @@
     #content {
         margin-top: 107px;
         z-index: -2;
+    }
+    .social-buttons {
+        padding-right: 70px;
     }
 }
 
