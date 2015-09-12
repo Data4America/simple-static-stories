@@ -1,5 +1,5 @@
 .header-bar {
-    background: url(/img/background.jpg) center center;
+    background: url(../img/background.jpg) center center;
     background-size: 900px;
     height: 92px;
 }
@@ -48,7 +48,7 @@
         width: 100%;
     }
     .header-background {
-        background: url(/img/background.jpg) center center;
+        background: url(../img/background.jpg) center center;
         background-size: 900px;
         height: 92px;
         position: fixed;

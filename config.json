@@ -1,9 +1,7 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "Data4America",
-    "owner": "Data4America",
-    "description": "Bringing Data Journalism to a 21st Century Government"
+    "name": "Data4America"
   },
   "plugins": [
     "./plugins/paginator.coffee"
@@ -22,5 +20,6 @@
   },
   "paginator": {
     "perPage": 3
-  }
+  },
+  "baseUrl": "/story"
 }

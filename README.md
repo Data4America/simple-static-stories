@@ -8,7 +8,7 @@
 
 3. Run `npm start`
 
-4. Go to http://localhost:8080/
+4. Go to http://localhost:8080/story
 
 ## To build:
 
