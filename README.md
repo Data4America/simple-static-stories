@@ -1,4 +1,4 @@
-# Data4America Simple Static Site
+# Data4America Simple Static Stories
 
 ## To view:
 
