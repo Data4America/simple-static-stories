@@ -1,0 +1,26 @@
+.logo {
+    margin-bottom: 1em;
+}
+.description {
+    text-align: center;
+}
+
+.container {
+    max-width: 720px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.about {
+    margin-top: 1em;
+}
+
+.copy {
+    text-align: center;
+    
+    color: #777;
+}
