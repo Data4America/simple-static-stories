@@ -37,16 +37,19 @@
         z-index: -1;
     }
     #content {
-        margin-top: 92px;
+        margin-top: 107px;
         z-index: -2;
     }
 }
 
-#content .container,
-footer .container {
+.content-block {
     background-color: #fff;
     position: relative;
     z-index: 1;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 10px;
+    box-shadow: rgba(34, 36, 38, 0.14902) 0px 1px 2px 0px;
+    margin-bottom: 15px;
 }
 
 .description {
@@ -54,14 +57,20 @@ footer .container {
 }
 
 .container {
-    border-radius: 10px;
     max-width: 720px;
+}
+.container h1,
+.container h2 {
+    margin-top: 10px;
 }
 
 .article img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+.article-footer-links {
+    padding-top: 10px;
 }
 
 .footer-floating {

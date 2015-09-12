@@ -7,20 +7,21 @@ block content
   include author
   each article in articles
     article.article.intro
-      header
-        h2
-          a(href=article.url)= article.title
-        p.date.pull-right
-          span= moment.utc(article.date).format('YYYY-MM-DD')
-        p.author
-          | #{ 'By ' }
-          mixin author(article.metadata.author)
-      section.content
-        if article.intro.length > 0
-          != typogr(article.intro).typogrify()
-        if article.hasMore
-          p.more
-            a(href=article.url) more
+      div.container.content-block
+        header
+          h2
+            a(href=article.url)= article.title
+          p.date.pull-right
+            span= moment.utc(article.date).format('YYYY-MM-DD')
+          p.author
+            | #{ 'By ' }
+            mixin author(article.metadata.author)
+        section.content
+          if article.intro.length > 0
+            != typogr(article.intro).typogrify()
+          if article.hasMore
+            p.more
+              a(href=article.url) more
 
 block prepend footer
   div.nav
