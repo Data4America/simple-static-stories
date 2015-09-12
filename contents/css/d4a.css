@@ -6,14 +6,25 @@
 .logo-wrapper {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1070px;
+    max-width: 1200px;
     padding-left: 10px;
 }
 .top-menu {
     float: left;
 }
-.top-menu button {
+.hamburger {
+    border-radius: 0;
+    color: #fff;
     height: 92px;
+    background: none;
+    font-size: 24px;
+    padding: 0 5px;
+}
+.hamburger:active,
+.hamburger:focus,
+.hamburger:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
 }
 .logo {
     height: 92px;
