@@ -1,6 +1,52 @@
-.logo {
-    margin-bottom: 1em;
+.header-bar {
+    background: url(/img/background.jpg) center center;
+    background-size: 900px;
+    height: 92px;
 }
+.logo-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1070px;
+    padding-left: 10px;
+}
+.top-menu {
+    float: left;
+}
+.top-menu button {
+    height: 92px;
+}
+.logo {
+    height: 92px;
+}
+@media (min-width: 992px) {
+    .header-bar {
+        background: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .header-background {
+        background: url(/img/background.jpg) center center;
+        background-size: 900px;
+        height: 92px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    #content {
+        margin-top: 92px;
+        z-index: -2;
+    }
+}
+
+#content .container,
+footer .container {
+    background-color: #fff;
+}
+
 .description {
     text-align: center;
 }
@@ -9,7 +55,7 @@
     max-width: 720px;
 }
 
-img {
+.article img {
     display: block;
     max-width: 100%;
     height: auto;

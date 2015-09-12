@@ -7,10 +7,9 @@ block append vars
 block prepend title
   | #{ page.title + ' - '}
 
-block header
-  a(href='/')
-    img.logo(src=contents.img['header-small.png'].url)
-  div.container
+
+block content
+  article.article
     include author
     h1= page.title
     if page.metadata.author
@@ -18,9 +17,6 @@ block header
         | #{ 'By ' }
         mixin author(page.metadata.author)
     hr
-
-block content
-  article.article
     section.content!= typogr(page.html).typogrify()
     if page.metadata.code || page.metadata.data
       hr

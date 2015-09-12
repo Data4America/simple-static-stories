@@ -14,25 +14,29 @@ html(lang='en')
       link(rel='stylesheet', href=contents.css['bootstrap.min.css'].url)
       link(rel='stylesheet', href=contents.css['d4a.css'].url)
   body(class=bodyclass)
-    header.header
+    header
       block header
-        a(href='/')
-          img.logo(src=contents.img['header.png'].url)
-        div.container
-          p.description= locals.description
-          ul.nav.nav-pills.nav-justified
-            li
-              a(href='/about') About
-            li
-              a(href='/team') Our Team
-            li
-              a(href='/donate') Donate
-            li
-              a(href='/submit') Submit
-            li
-              a(href='http://datahub.io/organization/data4america') Data Sets
-            li
-              a(href='https://github.com/Data4America') GitHub
+        div.header-bar
+          div.logo-wrapper
+            div.dropdown.top-menu
+              button.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='/about') About
+                li
+                  a(href='/team') Our Team
+                li
+                  a(href='/donate') Donate
+                li
+                  a(href='/submit') Submit
+                li
+                  a(href='http://datahub.io/organization/data4america') Data Sets
+                li
+                  a(href='https://github.com/Data4America') GitHub
+            a(href='/')
+              img.logo(src=contents.img['logo.png'].url)
+        div.header-background
     div#content
       div.container
         block content
@@ -46,3 +50,5 @@ html(lang='en')
           hr
           section.copy
             p &copy; #{ new Date().getFullYear() } #{ locals.owner }
+  script(type='text/javascript', src=contents.js['jquery-2.1.4.min.js'].url)
+  script(type='text/javascript', src=contents.js['bootstrap.min.js'].url)
