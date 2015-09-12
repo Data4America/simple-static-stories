@@ -49,6 +49,8 @@ body {
 #content .container,
 footer .container {
     background-color: #fff;
+    position: relative;
+    z-index: 1;
 }
 
 .description {
