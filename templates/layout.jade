@@ -20,6 +20,19 @@ html(lang='en')
           img.logo(src=contents.img['header.png'].url)
         div.container
           p.description= locals.description
+          ul.nav.nav-pills.nav-justified
+            li
+              a(href='/about') About
+            li
+              a(href='/team') Our Team
+            li
+              a(href='/donate') Donate
+            li
+              a(href='/submit') Submit
+            li
+              a(href='http://datahub.io/organization/data4america') Data Sets
+            li
+              a(href='https://github.com/Data4America') GitHub
     div#content
       div.container
         block content

@@ -13,9 +13,10 @@ block header
   div.container
     include author
     h1= page.title
-    p.author
-      | #{ 'By ' }
-      mixin author(page.metadata.author)
+    if page.metadata.author
+      p.author
+        | #{ 'By ' }
+        mixin author(page.metadata.author)
     hr
 
 block content
