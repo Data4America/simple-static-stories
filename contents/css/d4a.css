@@ -1,3 +1,7 @@
+body {
+    margin-bottom: 60px;
+}
+
 .header-bar {
     background: url(/img/background.jpg) center center;
     background-size: 900px;
@@ -52,6 +56,7 @@ footer .container {
 }
 
 .container {
+    border-radius: 10px;
     max-width: 720px;
 }
 
@@ -61,12 +66,30 @@ footer .container {
     height: auto;
 }
 
-.about {
-    margin-top: 1em;
-}
-
-.copy {
+.footer-floating {
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+    border-top: 1px solid #333;
+    z-index: 5;
+    padding: 5px 0;
     text-align: center;
-    
-    color: #777;
+    font-size: larger;
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+}
+.footer-floating span {
+    vertical-align: -1px;
+}
+.footer-floating .btn {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.footer-blue {
+    color: #91b1ec;
+}
+.footer-red {
+    color: #C00;
+    font-style: italic;
 }

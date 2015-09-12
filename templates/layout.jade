@@ -36,6 +36,9 @@ html(lang='en')
                   a(href='https://github.com/Data4America') GitHub
             a(href='/')
               img.logo(src=contents.img['logo.png'].url)
+            div.pull-right
+              p Social buttons for article
+              p or whole site
         div.header-background
     div#content
       div.container
@@ -44,11 +47,14 @@ html(lang='en')
     footer
       div.container
         block footer
-          hr
-          section.about
-            !=contents['about.md'].html
-          hr
-          section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner }
+      div.footer-floating
+        a.btn.btn-danger(href='/donate')
+          | Donate
+        span
+          | Help 
+          span.footer-blue DATA
+          span.footer-red 4
+          span.footer-blue AMERICA 
+          | bring data science to politics.
   script(type='text/javascript', src=contents.js['jquery-2.1.4.min.js'].url)
   script(type='text/javascript', src=contents.js['bootstrap.min.js'].url)
