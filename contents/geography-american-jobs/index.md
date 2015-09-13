@@ -26,15 +26,12 @@ Here, jobs are colored by type, allowing us to see how different industries and 
 
 **One Dot = One Job**
 
-Red dot: Manufacturing and Logistics job
+<span style="color: firebrick">**Red dot**</span>: Manufacturing and Logistics job  
+<span style="color: royalblue">**Blue dot**</span>: Professional Services job  
+<span style="color: seagreen">**Green dot**</span>: Healthcare, Education, and Government job  
+<span style="color: orange">**Yellow dot**</span>: Retail, Hospitality, and Other Services job
 
-Blue dot: Professional Services job
-
-Green dot: Healthcare, Education, and Government job
-
-Yellow dot: Retail, Hospitality, and Other Services job
-
-See the full data visualization at: http://www.robertmanduca.com/projects/jobs.html
+See the full data visualization at http://www.robertmanduca.com/projects/jobs.html
 
 ---
 
@@ -84,22 +81,18 @@ Finally, Miami offers an example of how the geography of employment differs by s
 
 This map is based on the counts of jobs by industry and census block given in the Workplace Area Characteristics (WAC) files of the LEHD data. Within each census block, I randomly plotted one dot per job, color-coding based on North American Industry Classification System (NAICS) code into four categories:
 
----
+* <span style="color: firebrick">**Red**</span> — Manufacturing and Logistics: NAICS codes 11 (Agriculture and Forestry), 21 (Mining), 22 (Utilities), 23 (Construction), 31–33 (Manufacturing), 42 (Wholesale Trade), 48–49 (Transportation and Warehousing)
 
-· **Red** — Manufacturing and Logistics: NAICS codes 11 (Agriculture and Forestry), 21 (Mining), 22 (Utilities), 23 (Construction), 31–33 (Manufacturing), 42 (Wholesale Trade), 48–49 (Transportation and Warehousing)
+* <span style="color: royalblue">**Blue**</span> — Professional Services: NAICS codes 51 (Information), 52 (Finance and Insurance), 53 (Real Estate), 54 (Professional, Scientific, and Technical Services), 55 (Management of Companies and Enterprises)
 
-· **Blue** — Professional Services: NAICS codes 51 (Information), 52 (Finance and Insurance), 53 (Real Estate), 54 (Professional, Scientific, and Technical Services), 55 (Management of Companies and Enterprises)
+* <span style="color: seagreen">**Green**</span> — Healthcare, Education, and Government: NAICS codes 61 (Educational Services), 62 (Health Care), 81 (Other Services — largely Religious, Grantmaking, Civic, Professional, and Similar Organizations)
 
-· **Green** — Healthcare, Education, and Government: NAICS codes 61 (Educational Services), 62 (Health Care), 81 (Other Services — largely Religious, Grantmaking, Civic, Professional, and Similar Organizations)
-
-· **Yellow** — Retail, Hospitality, and Other Services: NAICS codes 44–45 (Retail Trade), 56 (Administrative and Support Services), 71 (Arts, Entertainment, and Recreation — largely Amusement, Gambling, and Recreation), 72 (Accommodation and Food Services)
-
----
+* <span style="color: orange">**Yellow**</span> — Retail, Hospitality, and Other Services: NAICS codes 44–45 (Retail Trade), 56 (Administrative and Support Services), 71 (Arts, Entertainment, and Recreation — largely Amusement, Gambling, and Recreation), 72 (Accommodation and Food Services)
 
 **Notes:** This dataset is extremely detailed and extensive, but it does have some quirks. First, data for Massachusetts is not yet available (although the state Office of Labor and Workforce Development is working on it). Second, in some cases employers with multiple branches may fail to specify which workers work at which branches. This is most notable with certain state and local government agencies. Third, some federal government jobs, mostly having to do with national security, are omitted.
 
----
+**Original Data Sources:**
 
-**Original Data Sources:** US Census Bureau LEHD Origin-Destination Employment Statistics Worker Area Characteristics files, http://lehd.ces.census.gov/data/#lodes
+* [US Census Bureau LEHD Origin-Destination Employment Statistics Worker Area Characteristics files](http://lehd.ces.census.gov/data/#lodes)
 
-US Census Bureau Tiger Line Census Block shapefiles https://www.census.gov/geo/maps-data/data/tiger-line.html
+* [US Census Bureau Tiger Line Census Block shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
