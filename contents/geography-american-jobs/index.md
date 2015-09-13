@@ -9,7 +9,6 @@ data: http://datahub.io/dataset/where-are-the-jobs
 
 The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf).
 
-
 The America economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/).
 
 That’s a lot of jobs! But where are these jobs located, exactly?
@@ -20,7 +19,15 @@ The LEHD data is based on state unemployment insurance records, and tabulates th
 
 <span class="more"></span>
 
-![](https://cdn-images-1.medium.com/max/718/1*WiyPlDVIeaUiOVwH35QNLw.png)
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<style type="text/css">
+.map {
+    height: 400px;
+    margin-bottom: 1em;
+}
+</style>
+
+<div id="map-manhattan" class="map"></div>
 
 Here, jobs are colored by type, allowing us to see how different industries and sectors exhibit different spatial patterns — some clustering in downtowns, others spreading across city and suburbs alike.
 
@@ -37,25 +44,25 @@ See the full data visualization at http://www.robertmanduca.com/projects/jobs.ht
 
 Each city in the United States has its own unique geography of employment, both in terms of the industries it specializes in and where its jobs tend to locate. In New York City, shown above, professional services, healthcare, and government jobs are concentrated in Manhattan, while manufacturing and logistics jobs are in the outer boroughs. The Los Angeles economy, in contrast, has a much larger presence of manufacturing and logistics jobs, and service jobs aren’t as concentrated — there are several medium-sized clusters in downtown LA, Pasadena, Glendale, Hollywood, and the Westside:
 
-![](https://cdn-images-1.medium.com/max/718/1*Kjdzb7c4dFcxmhCUR-brfw.png)
+<div id="map-los-angeles" class="map"></div>
 
 ---
 
 Knowing what’s where is crucial for informed policymaking — good urban policy isn’t one size fits all. That said, there are some general patterns that stand out across multiple cities. First, in many cities jobs are relatively concentrated — much more concentrated than residences. Most cities retain a lot of jobs downtown, even after fifty years of employment suburbanization. We can see this in New York and even LA, but it’s perhaps most striking in Chicago, where the Loop continues to dominate employment for the whole region:
 
-![](https://cdn-images-1.medium.com/max/718/1*PqxhdW-I3pzJKucYCKAedQ.png)
+<div id="map-chicago" class="map"></div>
 
 ---
 
 Where employment has suburbanized, it appears to have clustered in certain districts or along certain transportation corridors. In Dallas, there is a good deal of suburban employment but much of it is concentrated along Highway 75, the Dallas North Tollway, I-35 E, and Highway 114:
 
-![](https://cdn-images-1.medium.com/max/718/1*mEW3V8ck1JJEriUyxsGNmA.png)
+<div id="map-dallas" class="map"></div>
 
 ---
 
-Anchor institutions — large employers tied to a specific geography, like hospitals and universities — are also clearly visible in many cities. In Cleveland, for example, there is a cluster of green healthcare and education jobs a few miles east of downtown that is centered on Case Western Reserve University, Cleveland, Clinic, and the Louis Stokes VA Medical Center:
+Anchor institutions — large employers tied to a specific geography, like hospitals and universities — are also clearly visible in many cities. In Cleveland, for example, there is a cluster of green healthcare and education jobs a few miles east of downtown that is centered on Case Western Reserve University, Cleveland Clinic, and the Louis Stokes VA Medical Center:
 
-![](https://cdn-images-1.medium.com/max/718/1*chPgNLl1_6xCfvLO-9WoYA.png)
+<div id="map-cleveland" class="map"></div>
 
 Anchor institutions like these are important to economic developers because they tend to be stable sources of jobs and demand for local services that are unlikely to close down or depart a city during an economic downturn.
 
@@ -63,13 +70,13 @@ Anchor institutions like these are important to economic developers because they
 
 Most cities have a mix of the four employment types identified — manufacturing and logistics; professional services; health care, education, and government; and retail, hospitality, and other services — but the exact distribution varies quite a bit. Los Angeles has an abundance of manufacturing and logistics, while Washington DC is weighted towards government. Las Vegas is clearly dominated by hospitality:
 
-![](https://cdn-images-1.medium.com/max/718/1*kZ4D42I73K2y5nTqXTObTA.png)
+<div id="map-las-vegas" class="map"></div>
 
 ---
 
 Finally, Miami offers an example of how the geography of employment differs by sector. Blue professional service jobs are concentrated in downtown Miami and in downtown Coral Gables a few miles west. Red manufacturing and logistics jobs are found in the Port of Miami and by the airport. There is a concentration of yellow hospitality jobs in Miami Beach, along with scattered retail. Finally, dense green squares mostly representing hospitals are sprinkled throughout the metro area.
 
-![](https://cdn-images-1.medium.com/max/640/1*yUZriNeNAKAJ4IIv2VHhrw.png)
+<div id="map-miami" class="map"></div>
 
 ---
 
@@ -96,3 +103,41 @@ This map is based on the counts of jobs by industry and census block given in th
 * [US Census Bureau LEHD Origin-Destination Employment Statistics Worker Area Characteristics files](http://lehd.ces.census.gov/data/#lodes)
 
 * [US Census Bureau Tiger Line Census Block shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+<script>
+function displayMap(containerId, coords, zoom) {
+    var layers = {
+        Jobs: L.tileLayer('http://jobmaptiles.s3-website-us-east-1.amazonaws.com/tiles/{z}/{x}/{y}.png', {
+            errorTileUrl: 'http://www.robertmanduca.com/projects/jobs/blank.png',
+            detectRetina: false,
+            attribution: 'Jobs: Map data from US Census <a href="http://lehd.ces.census.gov" target="_blank">LEHD</a>, Imagery © <a href="http://www.robertmanduca.com" target="_blank">Robert Manduca</a>'
+        }),
+        Streets: L.tileLayer('http://tile.stamen.com/toner-background/{z}/{x}/{y}.png', {
+            opacity: 0.17,
+            attribution: 'Background: Map tiles by <a href="http://stamen.com" target="_blank">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright" target="_blank">ODbL</a>.'         
+        }),
+        Labels: L.tileLayer('http://tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
+            opacity: 0.7        
+        })
+    };
+
+    var map = L.map(containerId, {
+        center: coords,
+        minZoom: 4,
+        maxZoom: 13,
+        zoom: zoom,
+        layers: [layers.Jobs, layers.Streets, layers.Labels]
+    });
+
+    L.control.layers({}, layers).addTo(map);
+}
+
+displayMap('map-manhattan', [40.7403, -73.9697], 11);
+displayMap('map-los-angeles', [34.0500, -118.2500], 10);
+displayMap('map-chicago', [41.8769, -87.6947], 11);
+displayMap('map-dallas', [32.8067, -96.8170], 11);
+displayMap('map-cleveland', [41.4822, -81.6697], 12);
+displayMap('map-las-vegas', [36.1215, -115.1739], 11);
+displayMap('map-miami', [25.7953, -80.2489], 11);
+</script>
