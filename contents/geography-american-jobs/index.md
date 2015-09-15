@@ -22,8 +22,13 @@ The LEHD data is based on state unemployment insurance records, and tabulates th
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <style type="text/css">
 .map {
-    height: 400px;
+    height: 250px;
     margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+    .map {
+        height: 400px;
+    }
 }
 </style>
 
