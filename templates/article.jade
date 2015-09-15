@@ -16,7 +16,8 @@ block content
   article.article
     div.container.content-block
       include author
-      img.pull-left.article-thumbnail(src=page.url + 'thumbnail.png', style='margin-top: 1em')
+      div.pull-left.article-thumbnail-wrapper
+        img.article-thumbnail(src=page.url + 'thumbnail.png')
       div.article-title
         h1= page.title
         p.author

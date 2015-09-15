@@ -83,6 +83,9 @@
 .article-thumbnail {
     margin-right: 10px;
 }
+.article-thumbnail-wrapper {
+    margin-top: 1em;
+}
 .article-title {
     margin-left: 128px;
 }
