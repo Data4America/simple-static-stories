@@ -28,17 +28,21 @@ block footer
   div.container.content-block
     if page.metadata.code
       p
-        b #[a(href=page.metadata.code) Fork the code on Github]
+        b #[a(href=page.metadata.code) Fork the code on Github.] 
+        | We open source most code in our published stories.
     if page.metadata.data
       p
-        b #[a(href=page.metadata.data) Download the original data]
+        b #[a(href=page.metadata.data) Download the original data.] 
+        | We open source underlying data sets in our published stories.
     if page.metadata.data || page.metadata.code
       hr
     p
-      b #[a(href='http://data4america.org/submit') Submit your own data story]
+      b #[a(href='http://data4america.org/submit') Submit your own data story.] 
+      | We review crowdsourced submissions on a rolling basis.
     p
-      b Have a rebuttal data story? 
-      | Email it to us at submit@data4america.org
+      b #[a(href='mailto:submit@data4america.org') Have a rebuttal data story?] 
+      | Email it to us at submit@data4america.org. We'll distribute it in the footnotes of this story as a "Rebuttal". Our Editorial Board may even even want to publish it as a full article.
     hr
     p
-      b #[a(href='http://data4america.org/donate') Donate to Data4America]
+      b #[a(href='http://data4america.org/donate') Donate to Data4America.] 
+      | We’re a non-partisan, non-profit media platform bringing Data Journalism to 21st Century Government

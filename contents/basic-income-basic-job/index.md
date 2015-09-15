@@ -42,8 +42,6 @@ I consider this a draft and would appreciate a collaborative review process. If 
 
 ## Introduction
 
-
-
 Here, a basic income model is compared against a "basic job" model where the government guarantees employment for all non-disabled adults.
 
 ## Methods

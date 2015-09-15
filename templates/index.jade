@@ -1,5 +1,9 @@
 extends layout
 
+block append head
+  <style type="text/css">.sidenote, .marginnote, .sidenote-number, .sidenote-number:before, .sidenote-number:after, .margin-toggle { display: none; }</style>
+
+
 block content
   include author
   each article in articles

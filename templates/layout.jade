@@ -13,6 +13,7 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href=contents.css['bootstrap.min.css'].url)
       link(rel='stylesheet', href=contents.css['d4a.css'].url)
+      link(rel='stylesheet', href=contents.css['tufte.css'].url)
   body(class=bodyclass)
     header
       block header
@@ -43,7 +44,7 @@ html(lang='en')
                 li
                   div.fb-like(data-href='http://data4america.org/', data-layout='button', data-action='like', data-show-faces='false', data-share='false')
                 li
-                  a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='false') Follow @data4america
+                  a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='false', data-show-screen-name='false') Follow
         div.header-background
     div#content
       block content
@@ -52,7 +53,7 @@ html(lang='en')
       footer
         block footer
     div.footer-floating
-      a.btn.btn-danger(href='/donate')
+      a.btn.btn-danger(href='http://data4america.org/donate')
         | Donate
       span
         | Help 
