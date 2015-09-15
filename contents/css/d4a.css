@@ -1,13 +1,12 @@
 .header-bar {
     background: url(../img/background.jpg) center center;
     background-size: 900px;
-    height: 92px;
+    height: 74px;
 }
 .logo-wrapper {
     margin-right: auto;
     margin-left: auto;
     max-width: 1150px;
-    padding-left: 10px;
 }
 .top-menu {
     float: left;
@@ -15,7 +14,7 @@
 .hamburger {
     border-radius: 0;
     color: #fff;
-    height: 92px;
+    height: 74px;
     background: none;
     font-size: 24px;
     padding: 0 5px;
@@ -27,13 +26,13 @@
     background: rgba(0, 0, 0, 0.1);
 }
 .logo {
-    height: 92px;
+    height: 74px;
 }
 .social-buttons {
     text-align: right;
-    height: 92px;
-    padding-top: 25px;
+    height: 74px;
     padding-right: 10px;
+    padding-top: 16px;
     list-style-type: none;
 }
 .social-buttons li {
@@ -67,6 +66,9 @@
         position: relative;
         z-index: 1;
     }
+    .logo-wrapper {
+        padding-left: 10px;
+    }
 }
 @media (min-width: 768px) {
     #content {
@@ -77,6 +79,15 @@
         border-radius: 10px;
         box-shadow: rgba(34, 36, 38, 0.14902) 0px 1px 2px 0px;
         margin-bottom: 15px;
+    }
+    .logo,
+    .hamburger,
+    .header-bar,
+    .social-buttons {
+        height: 92px;
+    }
+    .social-buttons {
+        padding-top: 25px;
     }
 }
 
