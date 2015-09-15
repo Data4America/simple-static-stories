@@ -31,12 +31,14 @@
 .social-buttons {
     text-align: right;
     height: 74px;
-    padding-right: 10px;
-    padding-top: 16px;
+    padding-right: 5px;
+    padding-top: 27px;
     list-style-type: none;
 }
 .social-buttons li {
-    margin-bottom: 3px;
+    display: inline-block;
+    height: 25px;
+    vertical-align: middle;
 }
 @media (min-width: 992px) {
     .header-bar {
@@ -66,9 +68,6 @@
         position: relative;
         z-index: 1;
     }
-    .logo-wrapper {
-        padding-left: 10px;
-    }
 }
 @media (min-width: 768px) {
     #content {
@@ -87,7 +86,7 @@
         height: 92px;
     }
     .social-buttons {
-        padding-top: 25px;
+        padding-top: 36px;
     }
 }
 
