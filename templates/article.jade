@@ -26,13 +26,19 @@ block content
 
 block footer
   div.container.content-block
-    if page.metadata.code || page.metadata.data
-      if page.metadata.data
-        p.data-link
-          | #[a(href=page.metadata.data) Download the original data]
-      if page.metadata.code
-        p.code-link
-          | #[a(href=page.metadata.code) Fork the code on Github]
+    if page.metadata.code
+      p
+        b #[a(href=page.metadata.code) Fork the code on Github]
+    if page.metadata.data
+      p
+        b #[a(href=page.metadata.data) Download the original data]
+    if page.metadata.data || page.metadata.code
       hr
     p
-      a(href=contents.index.url) « Other stories
+      b #[a(href='http://data4america.org/submit') Submit your own data story]
+    p
+      b Have a rebuttal data story? 
+      | Email it to us at submit@data4america.org
+    hr
+    p
+      b #[a(href='http://data4america.org/donate') Donate to Data4America]
