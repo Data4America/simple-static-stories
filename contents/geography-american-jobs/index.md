@@ -13,7 +13,7 @@ The America economy is now host to [142,288,000 jobs](https://research.stlouisfe
 
 That’s a lot of jobs! But where are these jobs located, exactly?
 
-This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States. <label for="sn-full" class="margin-toggle sidenote-number"></label><input id="sn-full" class="margin-toggle" type="checkbox"><span class="sidenote">[Click here](http://www.robertmanduca.com/projects/jobs.html) to launch the full data visualization and explore patterns of job location across the US.</span>
+This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States.
 
 The LEHD data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
 

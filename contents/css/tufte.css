@@ -36,13 +36,6 @@ body { counter-reset: sidenote-counter; }
                    -ms-transform: translateX(-100%) translateX(-0.25rem);
                    transform: translateX(-100%) translateX(-0.25rem); }
 
-@media screen and (max-width: 760px) { p, footer { width: 90%; }
-                                       pre.code { width: 87.5%; }
-                                       ul { width: 85%; }
-                                       figure { max-width: 90%; }
-                                       figcaption, figure.fullwidth figcaption { margin-right: 0%; }
-                                       blockquote p, blockquote footer { width: 90%; }}
-
 input.margin-toggle { display: none; }
 
 label.sidenote-number { display: inline; }
