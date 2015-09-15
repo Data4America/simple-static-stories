@@ -43,8 +43,6 @@ Here, jobs are colored by type, allowing us to see how different industries and 
 <span style="color: seagreen">**Green dot**</span>: Healthcare, Education, and Government job  
 <span style="color: orange">**Yellow dot**</span>: Retail, Hospitality, and Other Services job
 
-See the full data visualization at http://www.robertmanduca.com/projects/jobs.html
-
 ---
 
 Each city in the United States has its own unique geography of employment, both in terms of the industries it specializes in and where its jobs tend to locate. In New York City, shown above, professional services, healthcare, and government jobs are concentrated in Manhattan, while manufacturing and logistics jobs are in the outer boroughs. The Los Angeles economy, in contrast, has a much larger presence of manufacturing and logistics jobs, and service jobs aren’t as concentrated — there are several medium-sized clusters in downtown LA, Pasadena, Glendale, Hollywood, and the Westside:
@@ -84,8 +82,6 @@ Finally, Miami offers an example of how the geography of employment differs by s
 <div id="map-miami" class="map"></div>
 
 ---
-
-**See the Full Data Viz**: http://www.robertmanduca.com/projects/jobs.html
 
 **Data viz inspired by**: The methodology used by Dustin Cable to create [the US Racial Dot Map](http://demographics.coopercenter.org/DotMap/index.html).
 
