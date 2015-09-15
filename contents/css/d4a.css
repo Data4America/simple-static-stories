@@ -80,6 +80,16 @@
     }
 }
 
+.article-thumbnail {
+    margin-right: 10px;
+}
+.article-title {
+    margin-left: 128px;
+}
+.author {
+    margin-bottom: 0;
+}
+
 .container {
     max-width: 720px;
 }

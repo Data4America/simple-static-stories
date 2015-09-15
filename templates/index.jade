@@ -10,13 +10,16 @@ block content
     article.article.intro
       div.container.content-block
         header
-          h2
-            a(href=article.url)= article.title
-          p.date.pull-right
-            span= moment.utc(article.date).format('YYYY-MM-DD')
-          p.author
-            | #{ 'By ' }
-            mixin author(article.metadata.author)
+          img.pull-left.article-thumbnail(src=article.url + 'thumbnail.png', style='margin-bottom: 1em')
+          div.article-title
+            h2
+              a(href=article.url)= article.title
+            p.author
+              | #{ 'By ' }
+              mixin author(article.metadata.author)
+            p.date
+              span= moment.utc(article.date).format('YYYY-MM-DD')
+        div.clearfix
         section.content
           if article.intro.length > 0
             != typogr(article.intro).typogrify()
