@@ -15,3 +15,11 @@
 1. Run `npm run build`
 
 2. Look in the `build` folder
+
+## To deploy:
+
+1. **First build it (see above)!**
+
+2. Run `npm run deploy-test` to deploy to test.data4america.org, or `npm run deploy` to deploy to stories.data4america.org.
+
+Note that you must have [the AWS CLI](http://aws.amazon.com/documentation/cli/) installed and configured before deploying.
