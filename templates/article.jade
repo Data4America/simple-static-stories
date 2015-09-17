@@ -6,12 +6,6 @@ block append vars
 block prepend title
   | #{ page.title + ' - '}
 
-block social-buttons-top
-  li
-    div.fb-like(data-href=locals.url+page.url, data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
-  li
-    a.twitter-share-button(href='https://twitter.com/share', data-url=locals.url+page.url, data-text=page.title, data-via='data4america') Tweet
-
 block content
   article.article
     div.container.content-block
@@ -52,5 +46,22 @@ block footer
     p
       b #[a(href='http://data4america.org/donate') Donate to Data4America.] 
       | We’re a non-partisan, non-profit media platform bringing Data Journalism to 21st Century Government
-  div.container.content-block()
+  div.container.content-block.share-buttons
+    hr.visible-xs(style='margin-top: 0')
+    h3.share-buttons-header Share this data story
+    ul
+      li
+        a.btn.share-email
+          i.fa.fa-envelope
+          | Email
+      li
+        a.btn.share-facebook
+          i.fa.fa-facebook
+          | Share
+      li
+        a.btn.share-twitter
+          i.fa.fa-twitter
+          | Tweet
+  div.container.content-block
+    hr.visible-xs(style='margin-top: 0')
     div.fb-comments(data-href='http://stories.data4america.org' + page.url, data-numposts=5, data-width="100%", style="margin: -8px")

@@ -159,3 +159,61 @@ footer .container {
         vertical-align: -1px;
     }
 }
+
+h3.share-buttons-header {
+    margin-top: 0;
+    text-align: center;
+}
+.share-buttons ul {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.share-buttons li {
+    display: inline-block;
+    padding: 0 2px;
+}
+.share-buttons .fa {
+    margin-right: 10px;
+}
+.share-email,
+.share-facebook,
+.share-twitter {
+    padding: 10px 20px;
+}
+.share-email {
+    background: #00b5ad;
+    color: #fff;
+}
+.share-email:hover {
+    background-color:#009c95;
+    color: #fff;
+}
+.share-email:active {
+    background-color:#00827c;
+    color: #fff;
+}
+.share-facebook {
+    background: #3b5998;
+    color: #fff;
+}
+.share-facebook:hover {
+    background-color:#304d8a;
+    color: #fff;
+}
+.share-facebook:active {
+    background-color:#2d4373;
+    color: #fff;
+}
+.share-twitter {
+    background: #0084b4;
+    color: #fff;
+}
+.share-twitter:hover {
+    background-color:#00719b;
+    color: #fff;
+}
+.share-twitter:active {
+    background-color:#005f81;
+    color: #fff;
+}
