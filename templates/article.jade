@@ -51,15 +51,15 @@ block footer
     h3.share-buttons-header Share this data story
     ul
       li
-        a.btn.share-email
+        a.btn#share-email
           i.fa.fa-envelope
           | Email
       li
-        a.btn.share-facebook
+        a.btn#share-facebook(data-url='http://stories.data4america.org' + page.url)
           i.fa.fa-facebook
           | Share
       li
-        a.btn.share-twitter
+        a.btn#share-twitter(data-url='http://stories.data4america.org' + page.url, data-text=page.title)
           i.fa.fa-twitter
           | Tweet
   div.container.content-block
