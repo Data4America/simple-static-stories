@@ -51,7 +51,7 @@ block footer
     h3.share-buttons-header Share this data story
     ul
       li
-        a.btn#share-email
+        a.btn#share-email(href='mailto:?subject=' + page.title + '&body=' + encodeURI('http://stories.data4america.org' + page.url))
           i.fa.fa-envelope
           | Email
       li
