@@ -217,3 +217,32 @@ h3.share-buttons-header {
     background-color:#005f81;
     color: #fff;
 }
+
+.board-of-directors-wrapper {
+    text-align: center;
+}
+.board-of-directors-wrapper h2 {
+    font-size: 22px;
+}
+.board-of-directors-wrapper h3 {
+    color: #777;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+}
+.board-of-directors-wrapper img {
+    display: inline;
+}
+.board-of-directors-wrapper .picture {
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+}
+.board-of-directors-wrapper .mini-logo {
+    height: 24px;
+    width: 24px;
+}
+.board-of-directors-wrapper .bio {
+    font-size: 12px;
+    text-align: left;
+}
