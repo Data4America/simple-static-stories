@@ -1,6 +1,5 @@
 .header-bar {
-    background: url(../img/background.jpg) center center;
-    background-size: 900px;
+    background: url(../img/background-small.jpg);
     height: 74px;
 }
 .logo-wrapper {
@@ -49,8 +48,7 @@
         width: 100%;
     }
     .header-background {
-        background: url(../img/background.jpg) center center;
-        background-size: 900px;
+        background: url(../img/background-small.jpg);
         height: 92px;
         position: fixed;
         top: 0;
