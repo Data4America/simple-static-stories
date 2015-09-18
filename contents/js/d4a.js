@@ -1,3 +1,11 @@
+window.fbAsyncInit = function() {
+    FB.init({
+        appId: '170634933274064',
+        xfbml: true,
+        version: 'v2.4'
+    });
+};
+
 function PopupCenter(pageURL, title, w, h) {
     var left = (screen.width/2)-(w/2);
     var top = (screen.height/2)-(h/2);
@@ -5,9 +13,12 @@ function PopupCenter(pageURL, title, w, h) {
 }
 
 document.getElementById('share-facebook').addEventListener('click', function () {
-    PopupCenter('http://www.facebook.com/sharer/sharer.php?u=' + encodeURI(this.dataset.url), 'Share with Facebook', 550, 400);
+    FB.ui({
+        method: 'share',
+        href: this.dataset.url,
+    }, function (response) {});
 });
 
 document.getElementById('share-twitter').addEventListener('click', function () {
-    PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI('{new data story} ' + this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
+    PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
 });

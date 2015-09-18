@@ -1,5 +1,14 @@
 extends layout
 
+block append head
+  meta(property='og:title', content=page.title)
+  meta(property='og:site_name', content='Data4America')
+  meta(property='og:url', content='http://stories.data4america.org' + page.url)
+  meta(property='fb:app_id', content='170634933274064')
+  meta(property='og:type', content='article')
+  meta(property='og:publisher', content='http://data4america.org/')
+  meta(property='og:image', content=page.url + 'thumbnail.png')
+
 block append vars
   - bodyclass = 'article-detail'
 
@@ -59,7 +68,7 @@ block footer
           i.fa.fa-facebook
           | Share
       li
-        a.btn#share-twitter(data-url='http://stories.data4america.org' + page.url, data-text=page.title)
+        a.btn#share-twitter(data-url='http://stories.data4america.org' + page.url, data-text='{new data story} ' + page.title)
           i.fa.fa-twitter
           | Tweet
   div.container.content-block
