@@ -9,5 +9,5 @@ document.getElementById('share-facebook').addEventListener('click', function () 
 });
 
 document.getElementById('share-twitter').addEventListener('click', function () {
-    PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text), 'Share on Twitter', 550, 400);
+    PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI('{new data story} ' + this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
 });
