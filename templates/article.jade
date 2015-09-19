@@ -3,11 +3,11 @@ extends layout
 block append head
   meta(property='og:title', content=page.title)
   meta(property='og:site_name', content='Data4America')
-  meta(property='og:url', content='http://stories.data4america.org' + page.url)
+  meta(property='og:url', content=locals.url + page.url)
   meta(property='fb:app_id', content='170634933274064')
   meta(property='og:type', content='article')
-  meta(property='og:publisher', content='http://data4america.org/')
-  meta(property='og:image', content='http://stories.data4america.org' + page.url + 'thumbnail-256.png')
+  meta(property='og:publisher', content=locals.url + '/')
+  meta(property='og:image', content=locals.url + page.url + 'thumbnail-256.png')
   meta(property='og:description', content=page.metadata.description)
 
 block append vars
@@ -61,17 +61,17 @@ block footer
     h3.share-buttons-header Share this data story
     ul
       li
-        a.btn#share-email(href='mailto:?subject=' + page.title + '&body=' + encodeURI('http://stories.data4america.org' + page.url))
+        a.btn#share-email(href='mailto:?subject=' + page.title + '&body=' + encodeURI(locals.url + page.url))
           i.fa.fa-envelope
           | Email
       li
-        a.btn#share-facebook(data-url='http://stories.data4america.org' + page.url)
+        a.btn#share-facebook(data-url=locals.url + page.url)
           i.fa.fa-facebook
           | Share
       li
-        a.btn#share-twitter(data-url='http://stories.data4america.org' + page.url, data-text='{new data story} ' + page.title)
+        a.btn#share-twitter(data-url=locals.url + page.url, data-text='{new data story} ' + page.title)
           i.fa.fa-twitter
           | Tweet
   div.container.content-block
     hr.visible-xs(style='margin-top: 0')
-    div.fb-comments(data-href='http://stories.data4america.org' + page.url, data-numposts=5, data-width="100%", style="margin: -8px")
+    div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px")
