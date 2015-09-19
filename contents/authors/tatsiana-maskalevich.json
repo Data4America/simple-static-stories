@@ -1,0 +1,20 @@
+{
+  "name": "Tatsiana Maskalevich",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Data Science @Stitch Fix, Statistics @Foothill, Speaker, enjoy taking data from numbers to stories.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://twitter.com/yourdatastar"
+    },
+    {
+      "type": "www",
+      "url": "http://svds.com/post/better-know-districts"
+    }
+  ],
+  "id": "tatsiana-maskalevich"
+}

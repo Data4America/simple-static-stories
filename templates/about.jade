@@ -8,16 +8,6 @@ block content
   div.container.content-block
     article.article
       section.content!= typogr(page.html).typogrify()
-    - var people = env.helpers.getPeople(contents).filter(function (p) { return p.editorialBoard; });
-    div.row.team-grid-wrapper
-      each person in people
-        div.col-xs-6
-          img.picture(src=person.picture)
-          h2= person.name
-          h3= person.title
-          p
-            each link in person.links
-              a(href=link.url)
-                img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
-          p.bio
-            | !{person.bio}
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });
+      include teamGrid
+      mixin teamGrid(people)

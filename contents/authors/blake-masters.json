@@ -1,0 +1,32 @@
+{
+  "name": "Blake Masters",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Co-Author of @<a href=\"http://zerotoonebook.com/\" target=\"_blank\">Zero To One</a>&#xA0;book with Peter Thiel. Co-founded @<a href=\"https://www.judicata.com/\" target=\"_blank\">Judicata</a>. @<a href=\"https://www.law.stanford.edu/\" target=\"_blank\">Stanford Law</a>&#xA0;&#x2018;12. @Stanford &#x2018;08.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/bgmasters"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/blakemasters"
+    },
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Blake_Masters_(author)"
+    },
+    {
+      "type": "amazon",
+      "url": "http://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296"
+    },
+    {
+      "type": "www",
+      "url": "http://techcrunch.com/2014/09/16/zero-to-one-how-blake-masters-went-from-being-peter-thiels-student-to-co-author/"
+    }
+  ],
+  "id": "blake-masters"
+}

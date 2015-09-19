@@ -1,0 +1,24 @@
+{
+  "name": "Britt Crawford",
+  "title": "Data + Analytics advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "Using analytics to make college more affordable @rafter.com. Reformed programmer.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/britt"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/brittcrawford"
+    },
+    {
+      "type": "www",
+      "url": "http://brittcrawford.com"
+    }
+  ],
+  "id": "britt-crawford"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Tess Cheatle",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "<span style=\"font-size: 13px;\">Digital advertising and analytics @Amazon. Formerly @Microsoft &amp; @POSSIBLE. Data enthusiast. Pizza connoisseur.</span>",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/TessCheatle"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/tesscheatle"
+    }
+  ],
+  "id": "tess-cheatle"
+}

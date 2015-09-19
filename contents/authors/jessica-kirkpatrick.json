@@ -1,0 +1,24 @@
+{
+  "name": "Jessica Kirkpatrick",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Astrophysicist turned Data Scientist @Hired_HQ. Formerly @Chegg, @InstaEDU, @Yammer &amp; @Microsoft. Blogger @AAS_Women &amp; @AstroBetter.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://twitter.com/berkeleyjess"
+    },
+    {
+      "type": "linkedin",
+      "url": "http://www.linkedin.com/in/berkeleyjess/"
+    },
+    {
+      "type": "www",
+      "url": "http://berkeleyjess.blogspot.com/"
+    }
+  ],
+  "id": "jessica-kirkpatrick"
+}

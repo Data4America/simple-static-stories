@@ -1,0 +1,32 @@
+{
+  "name": "Elissa Redmiles",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Ph.D. Student in Computer Science @University of Maryland. Former Data Science for Social Good Fellow @UChicago; Former Marketing Manager @IBM. Founder of 501&#xA9;(3) org. The Baby Blanket Project.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/eredmil1"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/elissaredmiles"
+    },
+    {
+      "type": "www",
+      "url": "http://www.cs.umd.edu/~eredmiles"
+    },
+    {
+      "type": "www",
+      "url": "http://chicagoinno.streetwise.co/2015/08/05/civic-data-uchicago-data-science-for-social-good-fellowship-hits-third-year/"
+    },
+    {
+      "type": "www",
+      "url": "https://www.cs.umd.edu/article/2015/07/elissa-redmiles-receives-judges-choice-prize-microsoft-challenge-change"
+    }
+  ],
+  "id": "elissa-redmiles"
+}

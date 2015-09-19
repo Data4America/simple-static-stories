@@ -1,0 +1,24 @@
+{
+  "name": "Abe Stanway",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "<span style=\"font-size: 13px;\">Data scientist @McKinsey. Previously data @Etsy, founder @Hackerleague</span>",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://twitter.com/meeyong"
+    },
+    {
+      "type": "www",
+      "url": "http://abe.is"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=V44kscaJe3M"
+    }
+  ],
+  "id": "abe-stanway"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Andy Barkett",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "<span>First-ever CTO of the Republican party. Now&#xA0;</span><span style=\"line-height: 1.4;\">CEO @Getexp.</span><span style=\"line-height: 1.4;\">&#xA0;</span><span style=\"line-height: 1.4;\">Former engineer @Google and @Facebook. MBA. Software nerd. Amateur power forward.</span>",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/abarkett"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/andrew-barkett/3/747/914"
+    },
+    {
+      "type": "youtube",
+      "url": "https://youtu.be/3HSb-xG0I1o"
+    },
+    {
+      "type": "amazon",
+      "url": "http://www.amazon.com/Manage-Your-Future-Developing-Fulfilling-ebook/dp/B00LAI32FQ"
+    }
+  ],
+  "id": "andy-barkett"
+}

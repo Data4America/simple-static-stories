@@ -1,0 +1,24 @@
+{
+  "name": "Nate Lubin",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "<span>Former Director of the Office of Digital Strategy at the White House and Director of Digital Marketing at Obama for America. Political Science @Harvard.&#xA0;</span>",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/NateLubin"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/nathaniel-lubin/5b/ba4/956"
+    },
+    {
+      "type": "www",
+      "url": "http://www.cnn.com/2015/01/14/politics/state-of-the-union-loses-pop/"
+    }
+  ],
+  "id": "nate-lubin"
+}

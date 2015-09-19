@@ -1,0 +1,19 @@
+
+mixin teamGrid(people)
+  - var elementsInRow = 2;
+  each person, i in people
+    - if ((i % elementsInRow == 0))
+      div.row.team-grid-wrapper
+        div.col-sm-1.hidden-xs
+        - each person in people.slice(i, i + elementsInRow)
+          div.col-sm-5.col-xs-6
+            img.picture(src='/authors/' + person.id + '.jpg')
+            h2= person.name
+            h3= person.title
+            p
+              each link in person.links
+                a(href=link.url)
+                  img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
+            p.bio
+              | !{person.bio}
+        div.col-sm-1.hidden-xs

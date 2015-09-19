@@ -1,0 +1,20 @@
+{
+  "name": "David Chudzicki",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Data Scientist &amp; Software Engineer @Kaggle.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/dchudz"
+    },
+    {
+      "type": "www",
+      "url": "http://www.davidchudzicki.com"
+    }
+  ],
+  "id": "david-chudzicki"
+}

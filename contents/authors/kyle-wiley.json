@@ -1,0 +1,32 @@
+{
+  "name": "Kyle Wiley",
+  "title": "Development advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "Development Officer @Heritage. @CKInstitute Koch Associate Alumni. @DallasYR Vice President. @VanguardPAC Member/Development",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/KWiley1"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/kyle-wiley/43/14/a96"
+    },
+    {
+      "type": "www",
+      "url": "http://watchdogwire.com/blog/author/kwiley/"
+    },
+    {
+      "type": "amazon",
+      "url": "http://watchdogwire.com/blog/author/kwiley/"
+    },
+    {
+      "type": "www",
+      "url": "https://dallasyr.org/board/"
+    }
+  ],
+  "id": "kyle-wiley"
+}

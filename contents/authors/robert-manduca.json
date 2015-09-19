@@ -1,5 +1,28 @@
 {
   "name": "Robert Manduca",
-  "email": "rmanduca@g.harvard.edu",
-  "bio": "whatever"
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Sociology PhD student @<a href=\"http://sociology.fas.harvard.edu/people/robert-manduca\" target=\"_blank\">Harvard</a>. Recent alum @<a href=\"http://dusp.mit.edu\" target=\"_blank\">MITdusp</a>. Former fellow @<a href=\"http://dssg.uchicago.edu\" target=\"_blank\">DSSG</a>.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/robertmanduca"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/robertmanduca"
+    },
+    {
+      "type": "www",
+      "url": "http://www.robertmanduca.com"
+    },
+    {
+      "type": "www",
+      "url": "http://www.washingtonpost.com/blogs/wonkblog/wp/2015/07/14/nearly-every-job-in-america-mapped-in-incredible-detail/"
+    }
+  ],
+  "id": "robert-manduca"
 }

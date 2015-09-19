@@ -1,0 +1,20 @@
+{
+  "name": "Sam Drzymala",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Digital Director for @CoryBooker. Formerly Obama 08, @ClaireCMC, @American_Bridge. Helps nurture and grow powerful communities.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/drzymalas"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/profile/view?id=AAMAAAD2IHMBaba5tZ8yThc434cSjl842kf5Lbw"
+    }
+  ],
+  "id": "sam-drzymala"
+}

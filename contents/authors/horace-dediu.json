@@ -1,0 +1,36 @@
+{
+  "name": "Horace Dediu",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Founder @<a href=\"http://asymco.com\" target=\"_blank\">Asymco.com</a>. Fellow @<a href=\"http://www.christenseninstitute.org/\" target=\"_blank\">Christensen Institute</a> for Disruptive Innovation. Host @<a href=\"http://5by5.tv/criticalpath/\" target=\"_blank\">The Critical Path</a> podcast.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/asymco"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/dediu"
+    },
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Horace_Dediu"
+    },
+    {
+      "type": "amazon",
+      "url": "http://www.amazon.com/The-Critical-Path-First-Year-ebook/dp/B009JGYOPI"
+    },
+    {
+      "type": "www",
+      "url": "http://fortune.com/2010/10/22/the-new-king-of-apple-analysts/"
+    },
+    {
+      "type": "www",
+      "url": "http://www.sternspeakers.com/horace-dediu"
+    }
+  ],
+  "id": "horace-dediu"
+}

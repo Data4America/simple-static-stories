@@ -1,0 +1,24 @@
+{
+  "name": "Ceslee Montgomery",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Data Scientist @Pebble. Affiliate @DataGuild + engagedIN. @Stanford &#x2018;14.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/cesleedineen"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/cesleedineen"
+    },
+    {
+      "type": "www",
+      "url": "http://cesleemontgomery.me/"
+    }
+  ],
+  "id": "ceslee-montgomery"
+}

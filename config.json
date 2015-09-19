@@ -5,7 +5,7 @@
   },
   "plugins": [
     "./plugins/paginator.coffee",
-    "./plugins/people.coffee"
+    "./plugins/people.js"
   ],
   "require": {
     "moment": "moment",

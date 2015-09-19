@@ -1,0 +1,28 @@
+{
+  "name": "Craig Montuori",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": true,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Partner @Venture Politics, Executive Director @Global EIR Coalition, Engineering &amp; Applied Science (Aerospace) @Caltech. Craig fixes visa problems for founders.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/craig_montuori"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/craig-montuori/2/361/686"
+    },
+    {
+      "type": "www",
+      "url": "http://globaleir.org"
+    },
+    {
+      "type": "quora",
+      "url": "http://www.quora.com/Craig-Montuori"
+    }
+  ],
+  "id": "craig-montuori"
+}

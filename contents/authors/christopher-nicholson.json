@@ -1,0 +1,24 @@
+{
+  "name": "Christopher Nicholson",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Partner @Venture Politics.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://www.twitter.com/chrisfnicholson"
+    },
+    {
+      "type": "linkedin",
+      "url": "http://www.linkedin.com/in/chrisfnicholson"
+    },
+    {
+      "type": "www",
+      "url": "http://www.cfn.io"
+    }
+  ],
+  "id": "christopher-nicholson"
+}

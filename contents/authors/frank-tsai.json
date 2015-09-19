@@ -1,0 +1,16 @@
+{
+  "name": "Frank Tsai",
+  "title": "Finance advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "<span style=\"font-size: 12px;\">CFO Partner of FLG Partners. Cofounder @Community Bank of the Bay. CFO roles @Sundance Institute, @United Way Silicon Valley, @Institute for the Future, @California Academy of Sciences, @Fair Trade USA, @Feed The Hunger Foundation</span>",
+  "links": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/frankjtsai"
+    }
+  ],
+  "id": "frank-tsai"
+}

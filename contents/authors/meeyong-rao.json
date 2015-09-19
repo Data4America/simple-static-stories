@@ -1,0 +1,24 @@
+{
+  "name": "Meeyong Rao",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Blogger @insightchaos. Independent market research consultant . Formerly @Gallup &amp; @GAO. @Cornell MPA &#x2018;06",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://twitter.com/meeyong"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/meeyong"
+    },
+    {
+      "type": "www",
+      "url": "http://insightchaos.com"
+    }
+  ],
+  "id": "meeyong-rao"
+}

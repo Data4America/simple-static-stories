@@ -1,0 +1,28 @@
+{
+  "name": "Jay Wacker",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Ontology Architect @<a href=\"https://www.quora.com/Jay-Wacker\" target=\"_blank\">Quora</a>. Consulting Physics Professor @<a href=\"https://physics.stanford.edu/\" target=\"_blank\">Stanford</a>.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/JayWacker"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/profile/view?id=14132627"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=zJsQpL8e3Ag"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=2Uzv1lxUTLw"
+    }
+  ],
+  "id": "jay-wacker"
+}

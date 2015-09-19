@@ -1,0 +1,36 @@
+{
+  "name": "Seth Kaddish",
+  "title": " Data Viz advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "Data scientist @Chegg. Planetary geoscience Ph.D. Founder of @<a href=\"http://vizual-statistix.tumblr.com/\" target=\"_blank\">VizualStatistix</a>. Mod for <a href=\"https://www.reddit.com/r/dataisbeautiful\" target=\"_blank\">/r/dataisbeautiful</a>. Dataviz contributor to @WIRED.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/VizualStatistix"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/seth-kadish/24/552/444"
+    },
+    {
+      "type": "www",
+      "url": "http://vizual-statistix.tumblr.com/"
+    },
+    {
+      "type": "www",
+      "url": "http://flowingdata.com/2014/03/25/level-of-road-grid/"
+    },
+    {
+      "type": "www",
+      "url": "http://www.wired.com/2014/11/marathon-route-elevation/"
+    },
+    {
+      "type": "amazon",
+      "url": "http://www.planetary.brown.edu/pdfs/3918.pdf"
+    }
+  ],
+  "id": "seth-kaddish"
+}

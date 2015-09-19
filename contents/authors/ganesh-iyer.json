@@ -1,0 +1,16 @@
+{
+  "name": "Ganesh Iyer",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "<span style=\"font-size: 13px;\">Analytics @Stubhub. Formerly consultant @MuSigma. Stathead. Avid learner. Soccer and cricket fan.</span>",
+  "links": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/ganesh-iyer/6/614/300"
+    }
+  ],
+  "id": "ganesh-iyer"
+}

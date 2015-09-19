@@ -1,0 +1,20 @@
+{
+  "name": "Zhan Li",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Strategic foresight and narrative specialist; Ph.D., Organizational Communication (USC), S.M. Media Studies (MIT); Board Director, World Future Society.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://twitter.com/thezhanly"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/profile/view?id=9115830"
+    }
+  ],
+  "id": "zhan-li"
+}

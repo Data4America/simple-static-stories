@@ -1,22 +1,28 @@
 {
   "name": "Chris McCoy",
-  "title": "Founder · Executive Director",
+  "title": "Founder · Executive Director",
   "founder": true,
   "boardOfDirectors": true,
   "editorialBoard": true,
-  "bio": "Founder @YourSports. Former elected National President @DECA.org. @Univ of Washington ‘06. Data entrepreneur. Sports fan.",
-  "picture": "http://41.media.tumblr.com/8eba0e1596e06d725615932d8f287ed1/tumblr_inline_nrbz4xq2B51txt5df_500.png",
-  "links": [{
-    "type": "yoursports",
-    "url": "https://yoursports.com/chris"
-  }, {
-    "type": "twitter",
-    "url": "https://twitter.com/chrisamccoy"
-  }, {
-    "type": "linkedin",
-    "url": "https://www.linkedin.com/in/chrisamccoy"
-  }, {
-    "type": "www",
-    "url": "http://www.businessinsider.com/the-55-unknown-rock-stars-in-tech-according-to-marc-andreessen-2014-10"
-  }]
+  "advisor": false,
+  "bio": "Founder @<a href=\"http://yoursports.com\" target=\"_blank\">YourSports</a>.com. Founder @<a href=\"http://ilovebaseball.org\" target=\"_blank\">I Love Baseball Foundation</a>. Former elected National President @<a href=\"http://deca.org\" target=\"_blank\">DECA.org</a>. @<a href=\"https://depts.washington.edu/foster/yoursports-connecting-the-world-online-through-sports/\" target=\"_blank\">Univ of Washington</a> &#x2018;06. Social data entrepreneur. Sports fan.",
+  "links": [
+    {
+      "type": "yoursports",
+      "url": "https://yoursports.com/chris"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/chrisamccoy"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/chrisamccoy"
+    },
+    {
+      "type": "www",
+      "url": "http://www.businessinsider.com/the-55-unknown-rock-stars-in-tech-according-to-marc-andreessen-2014-10"
+    }
+  ],
+  "id": "chris-mccoy"
 }
