@@ -8,6 +8,7 @@ block append head
   meta(property='og:type', content='article')
   meta(property='og:publisher', content='http://data4america.org/')
   meta(property='og:image', content='http://stories.data4america.org' + page.url + 'thumbnail-256.png')
+  meta(property='og:description', content=page.metadata.description)
 
 block append vars
   - bodyclass = 'article-detail'
