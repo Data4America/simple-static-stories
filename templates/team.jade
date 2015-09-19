@@ -6,7 +6,7 @@ block prepend title
 
 block content
   div.container.content-block
-    article.article
+    article.page
       include teamGrid
       h1 Our Team
       - var people = env.helpers.getPeople(contents).filter(function (p) { return !p.advisor; });

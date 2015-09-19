@@ -1,3 +1,56 @@
+html, body {
+  background: #FAFAFA;
+  font-family: 'Trasandina';
+  font-size: 16px;
+}
+h1, h2, h3, h4 {
+    font-weight: bold;
+    text-align: center;
+}
+.article h1, .article h2, .article h3, .article h4 {
+    text-align: left;
+}
+
+@font-face {
+  font-family: 'Trasandina';
+  src: url('/fonts/TrasandinaRegular.otf') format("opentype");
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+@font-face {
+  font-family: 'Trasandina';
+  src: url('/fonts/TrasandinaRegular-Italic.otf') format("opentype");
+  font-style: italic;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+@font-face {
+  font-family: 'Trasandina';
+  src: url('/fonts/TrasandinaBold.otf') format("opentype");
+  font-style: normal;
+  font-weight: bold;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+@font-face {
+  font-family: 'Trasandina';
+  src: url('/fonts/TrasandinaBold-Italic.otf') format("opentype");
+  font-style: italic;
+  font-weight: bold;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
 .header-bar {
     background: url(../img/background-small.jpg);
     height: 74px;
@@ -38,9 +91,6 @@
     display: inline-block;
     height: 25px;
     vertical-align: middle;
-}
-.social-buttons .fb-like {
-    margin-top: 1px;
 }
 
 @media (min-width: 992px) {
@@ -95,9 +145,9 @@
 #subscribe-button {
     background-color: #2185d0;
     color: #fff;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
-    padding: 2px 8px;
+    padding: 1px 8px 0 8px;
 }
 #subscribe-button:active {
     background-color:#1a69a4;
@@ -129,7 +179,7 @@
 }
 .container h1,
 .container h2 {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .article img {
@@ -139,7 +189,7 @@
 }
 
 footer .container {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 .footer-floating {
     background: rgba(0,0,0,.7);
@@ -154,6 +204,7 @@ footer .container {
     vertical-align: -1px;
 }
 .footer-floating .btn {
+    font-size: 16px;
     font-weight: bold;
     margin-right: 10px;
 }
@@ -189,6 +240,7 @@ h3.share-buttons-header {
     padding: 0;
     text-align: center;
     width: 100%;
+    margin-bottom: 15px;
 }
 .share-buttons li {
     display: inline-block;
