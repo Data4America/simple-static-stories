@@ -4,6 +4,7 @@
     "name": "Data4America"
   },
   "plugins": [
+    "./node_modules/wintersmith-nap/src/wintersmith-nap.coffee",
     "./plugins/paginator.coffee",
     "./plugins/people.js"
   ],
@@ -22,5 +23,15 @@
   "paginator": {
     "perPage": 3
   },
-  "baseUrl": "/"
+  "baseUrl": "/",
+  "nap": {
+    "assets": {
+      "css": {
+        "main": ["/css/*"]
+      },
+      "js": {
+        "main": ["/js/*"]
+      }
+    }
+  }
 }

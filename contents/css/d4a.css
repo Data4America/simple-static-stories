@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
 }
 
 .header-bar {
-    background: url(../img/background-small.jpg);
+    background: url(/img/background-small.jpg);
     height: 74px;
 }
 .logo-wrapper {
@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
         width: 100%;
     }
     .header-background {
-        background: url(../img/background-small.jpg);
+        background: url(/img/background-small.jpg);
         height: 92px;
         position: fixed;
         top: 0;
