@@ -7,7 +7,7 @@ block append head
   meta(property='fb:app_id', content='170634933274064')
   meta(property='og:type', content='article')
   meta(property='og:publisher', content='http://data4america.org/')
-  meta(property='og:image', content='http://stories.data4america.org' + page.url + 'thumbnail.png')
+  meta(property='og:image', content='http://stories.data4america.org' + page.url + 'thumbnail-256.png')
 
 block append vars
   - bodyclass = 'article-detail'
@@ -20,7 +20,7 @@ block content
     div.container.content-block
       include author
       div.pull-left.article-thumbnail-wrapper
-        img.article-thumbnail(src=page.url + 'thumbnail.png')
+        img.article-thumbnail(src=page.url + 'thumbnail.png', srcset=page.url + 'thumbnail.png 1x, ' + page.url + 'thumbnail-256.png 2x')
       div.article-title
         h1= page.title
         p.author

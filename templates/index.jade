@@ -6,7 +6,7 @@ block content
     article.article.intro
       div.container.content-block
         header
-          img.pull-left.article-thumbnail(src=article.url + 'thumbnail.png', style='margin-bottom: 1em')
+          img.pull-left.article-thumbnail(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x', style='margin-bottom: 1em')
           div.article-title
             h2
               a(href=article.url)= article.title
