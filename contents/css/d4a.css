@@ -84,13 +84,16 @@ h1, h2, h3, h4 {
     text-align: right;
     height: 74px;
     padding-right: 5px;
-    padding-top: 27px;
+    padding-top: 24px;
     list-style-type: none;
 }
 .social-buttons li {
     display: inline-block;
     height: 25px;
     vertical-align: middle;
+}
+.social-buttons li.not-fb {
+    margin-top: 4px;
 }
 
 @media (min-width: 992px) {
