@@ -28,3 +28,15 @@ if (shareTwitterEl) {
         PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
     });
 }
+
+// Only run Google Analytics in production
+var enableAnalyticsHostnames = ['stories.data4america.org', 'data4america.org', 'www.data4america.org'];
+if (enableAnalyticsHostnames.indexOf(location.hostname) >= 0) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64882029-1', 'auto');
+    ga('send', 'pageview');
+}
