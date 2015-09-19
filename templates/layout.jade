@@ -44,7 +44,7 @@ html(lang='en')
             ul.pull-right.social-buttons
               block social-buttons-top
                 li
-                  button.btn#subscribe-button
+                  button.btn#subscribe-button(data-toggle='modal' data-target='#subscribe-modal')
                     i.fa.fa-envelope
                     | Subscribe
                 li
@@ -52,6 +52,25 @@ html(lang='en')
                 li
                   a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='false', data-show-screen-name='false') Follow
         div.header-background
+    div.modal.fade#subscribe-modal
+      div.modal-dialog
+        div.modal-content
+          div.modal-header
+            button.close(data-dismiss='close') &times;
+            h4.modal-title Subscribe to the Data4America mailing list
+          div.modal-body
+            div#mc_embed_signup
+              form.validate#mc-embedded-subscribe-form(action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=219ac0990b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
+                div#mc_embed_signup_scroll
+                  div.form-group.mc-field-group
+                    label(for='mce-EMAIL') Email Address
+                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                  div.clear#mce-responses
+                    <div class="response text-danger" id="mce-error-response" style="display:none; margin-bottom: 1em"></div>
+                    <div class="response text-success" id="mce-success-response" style="display:none; margin-bottom: 1em"></div>
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_72207b8a0819659d0b69c1f9c_219ac0990b" tabindex="-1" value=""></div>
+                  button.btn.btn-primary#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[3]='LNAME';ftypes[3]='text';fnames[2]='AMOUNT';ftypes[2]='number';fnames[4]='DONATETO';ftypes[4]='text';fnames[6]='TSHIRT';ftypes[6]='text';fnames[7]='FACEBOOK';ftypes[7]='url';fnames[8]='TWITTER';ftypes[8]='url';fnames[9]='LINKEDIN';ftypes[9]='url';fnames[5]='ADDRESS';ftypes[5]='text';fnames[10]='ID';ftypes[10]='text';fnames[11]='DT';ftypes[11]='text';fnames[12]='ANON';ftypes[12]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     div#content
       block content
         div.container

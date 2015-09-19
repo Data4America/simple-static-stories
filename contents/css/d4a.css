@@ -39,6 +39,9 @@
     height: 25px;
     vertical-align: middle;
 }
+.social-buttons .fb-like {
+    margin-top: 1px;
+}
 
 @media (min-width: 992px) {
     .header-bar {
