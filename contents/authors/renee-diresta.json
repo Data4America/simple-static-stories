@@ -1,0 +1,19 @@
+{
+  "name": "Renee Diresta",
+  "title": "Board of Directors",
+  "boardOfDirectors": true,
+  "editorialBoard": true,
+  "bio": "Current biz dev @Haven. Former VC @O'Reilly. Former trader @Jane Street. Helped sponsor and <a href=\"http://www.wired.com/2015/06/antivaxxers-influencing-legislation/\">provide data science</a> to the SB277 bill signed by the CA governor.",
+  "picture": "http://40.media.tumblr.com/53d7465c61e522e1d847bdffc93b795d/tumblr_inline_nrbz5bUYHH1txt5df_500.png",
+  "links": [{
+    "type": "twitter",
+    "url": "https://twitter.com/noupside"
+  }, {
+    "type": "linkedin",
+    "url": "https://www.linkedin.com/in/reneediresta"
+  }, {
+    "type": "www",
+    "url": "http://www.wired.com/2015/06/antivaxxers-influencing-legislation/"
+  }],
+  "defaultLink": "twitter"
+}

@@ -4,7 +4,8 @@
     "name": "Data4America"
   },
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "./plugins/people.coffee"
   ],
   "require": {
     "moment": "moment",

@@ -216,31 +216,32 @@ h3.share-buttons-header {
     color: #fff;
 }
 
-.board-of-directors-wrapper {
+.team-grid-wrapper {
     text-align: center;
 }
-.board-of-directors-wrapper h2 {
+.team-grid-wrapper h2 {
     font-size: 22px;
 }
-.board-of-directors-wrapper h3 {
+.team-grid-wrapper h3 {
     color: #777;
     font-size: 16px;
     font-weight: bold;
     margin-top: 0;
 }
-.board-of-directors-wrapper img {
+.team-grid-wrapper img {
     display: inline;
 }
-.board-of-directors-wrapper .picture {
+.team-grid-wrapper .picture {
     border-radius: 10px;
     height: 100px;
     width: 100px;
 }
-.board-of-directors-wrapper .mini-logo {
+.team-grid-wrapper .mini-logo {
     height: 24px;
     width: 24px;
+    margin: 0 2px;
 }
-.board-of-directors-wrapper .bio {
+.team-grid-wrapper .bio {
     font-size: 12px;
     text-align: left;
 }
