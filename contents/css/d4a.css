@@ -39,6 +39,7 @@
     height: 25px;
     vertical-align: middle;
 }
+
 @media (min-width: 992px) {
     .header-bar {
         background: none;
@@ -86,6 +87,25 @@
     .social-buttons {
         padding-top: 36px;
     }
+}
+
+#subscribe-button {
+    background-color: #2185d0;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 8px;
+}
+#subscribe-button:active {
+    background-color:#1a69a4;
+    color: #fff;
+}
+#subscribe-button:hover {
+    background-color:#1678c2;
+    color: #fff;
+}
+#subscribe-button i {
+    margin-right: 4px;
 }
 
 .article-thumbnail {
