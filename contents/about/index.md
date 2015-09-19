@@ -3,7 +3,7 @@ template: about.jade
 title: About
 ---
 
-# Data Journalism for a 21<span></span>st Century Government
+# Data Journalism for a 21[]()st Century Government
 
 Data4America is a non-partisan, non-profit crowdsourced media platform bringing data science to politics. 
 
@@ -11,7 +11,7 @@ Data4America is a non-partisan, non-profit crowdsourced media platform bringing 
 
 Our non-partisan Editorial Board evaluates and votes on the crowdsourced data journalism based upon its math integrity, data authority, and bias. Creators of published stories receive stipends. Our stories are syndicated to media partners and promoted throughout social media. The underlying data sets and code bases can be open sourced. 
 
-Learn More: http://www.slideshare.net/chrisamccoy/overviewdata4america-52615481
+Learn More: [Check out this presentation on SlideShare](http://www.slideshare.net/chrisamccoy/overviewdata4america-52615481)
 
 **Questions?** Drop us a line at [chris@data4america.org](mailto:chris@data4america.org).
 
