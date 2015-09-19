@@ -1,10 +1,44 @@
+var order = [
+    'chris-mccoy',
+    'renee-diresta',
+    'craig-montuori',
+    'nate-lubin',
+    'andy-barkett',
+    'horace-dediu',
+    'blake-masters',
+    'jessica-kirkpatrick',
+    'abe-stanway',
+    'robert-manduca',
+    'ceslee-montgomery',
+    'tatsiana-maskalevich',
+    'jay-wacker',
+    'david-chudzicki',
+    'tess-cheatle',
+    'meeyong-rao',
+    'theron-tingstad',
+    'elissa-redmiles',
+    'zhan-li',
+    'jeremy-scheff',
+    'ganesh-iyer',
+    'sam-penrose',
+    'andrew-trabulsi',
+    'sam-drzymala',
+    'christopher-nicholson',
+    'becky-stark',
+    'seth-kaddish',
+    'kyle-wiley',
+    'frank-tsai',
+    'britt-crawford'
+];
+
 function sortObjective(p) {
-  // Sort by role, then by last name
-  return (p.founder ? 1e9 : 0) + 
-         (p.boardOfDirectors ? 1e8 : 0) + 
-         (p.editorialBoard ? 1e7 : 0) + 
-         (p.advisor ? 1e6 : 0) +
-         -p.id.split('-')[1][0].charCodeAt();
+    // Sort by role, then by position in "order" above, then alphabetical by last name
+    return (p.founder ? 1e9 : 0) + 
+           (p.boardOfDirectors ? 1e8 : 0) + 
+           (p.editorialBoard ? 1e7 : 0) + 
+           (p.advisor ? 1e6 : 0) +
+           (order.length - order.indexOf(p.id)) * 1e4 +
+           -p.id.split('-')[1][0].charCodeAt(); //
 }
 
 module.exports = function(env, callback) {
