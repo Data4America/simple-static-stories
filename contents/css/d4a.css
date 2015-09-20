@@ -81,17 +81,16 @@ h1, h2, h3, h4 {
 }
 .social-buttons {
     text-align: right;
+}
+.social-button {
+    display: flex;
     height: 74px;
-    padding: 24px 5px 0 0;
-    list-style-type: none;
+    float: left;
+    padding-right: 4px;
+    align-items: center;
 }
-.social-buttons li {
-    display: inline-block;
-    height: 25px;
-    vertical-align: middle;
-}
-.social-buttons li.not-fb {
-    margin-top: 4px;
+.social-button-not-fb {
+    margin-top: 1px;
 }
 
 @media (min-width: 992px) {
@@ -135,11 +134,8 @@ h1, h2, h3, h4 {
     .logo,
     .hamburger,
     .header-bar,
-    .social-buttons {
+    .social-button {
         height: 92px;
-    }
-    .social-buttons {
-        padding-top: 36px;
     }
 }
 
