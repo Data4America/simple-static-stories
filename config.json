@@ -4,7 +4,7 @@
     "name": "Data4America"
   },
   "plugins": [
-    "./node_modules/wintersmith-nap/src/wintersmith-nap.coffee",
+    "wintersmith-nap",
     "./plugins/paginator.coffee",
     "./plugins/people.js"
   ],

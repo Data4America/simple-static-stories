@@ -10,7 +10,7 @@
     "typogr": "0.5.x",
     "underscore": "1.4.x",
     "wintersmith": "^2.2.1",
-    "wintersmith-nap": "git://github.com/dumbmatter/wintersmith-nap.git"
+    "wintersmith-nap": "^0.2.4"
   },
   "private": "true"
 }
