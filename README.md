@@ -10,16 +10,8 @@
 
 4. Go to http://localhost:8080/story
 
-## To build:
-
-1. Run `npm run build`
-
-2. Look in the `build` folder
-
 ## To deploy:
 
-1. **First build it (see above)!**
+1. Install and configure `s3cmd`. On Ubuntu, you can do `sudo apt-get install s3cmd` and then `s3cmd --configure`. If you get an error while configuring, [maybe this is happening](http://stackoverflow.com/a/25637457/786644).
 
 2. Run `npm run deploy-test` to deploy to test.data4america.org, or `npm run deploy` to deploy to stories.data4america.org.
-
-Note that you must have [the AWS CLI](http://aws.amazon.com/documentation/cli/) installed and configured before deploying.
