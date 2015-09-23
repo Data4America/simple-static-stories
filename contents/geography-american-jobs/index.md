@@ -8,15 +8,9 @@ data: http://datahub.io/dataset/where-are-the-jobs
 description: "The American economy is now host to 142,288,000 jobs. But where are these jobs located, exactly?"
 ---
 
-The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf).
+The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That’s a lot of jobs! But where are these jobs located, exactly?
 
-The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/).
-
-That’s a lot of jobs! But where are these jobs located, exactly?
-
-This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States.
-
-The LEHD data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
+This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States. The data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
 
 <span class="more"></span>
 
