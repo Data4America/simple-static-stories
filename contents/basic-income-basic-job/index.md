@@ -74,11 +74,11 @@ If better estimates and more thorough modeling can produce a narrower distributi
 
 <div id="tooltip"></div>
 <div class="row">
-  <div class="col-sm-6 col-md-5 col-lg-4">
+  <div class="col-md-6 col-lg-5">
     <h4>Basic income</h4>
     <table id="biBars"></table>
   </div>
-  <div class="col-sm-6 col-md-5 col-lg-4">
+  <div class="col-md-6 col-lg-5">
     <h4>Basic job</h4>
     <table id="bjBars"></table>
   </div>

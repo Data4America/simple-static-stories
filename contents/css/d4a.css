@@ -7,6 +7,12 @@ h1, h2, h3, h4 {
     font-weight: bold;
     text-align: center;
 }
+h4 {
+    font-size: 1em;
+}
+hr {
+    margin: 1.5em 0;
+}
 .article h1, .article h2, .article h3, .article h4 {
     text-align: left;
 }
