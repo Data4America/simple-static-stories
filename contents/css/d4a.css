@@ -162,15 +162,16 @@ p {
 
 .article-thumbnail {
     margin-right: 10px;
+    margin-bottom: 0;
 }
 .article-thumbnail-wrapper {
     margin-top: 1em;
 }
-.article-title {
-    margin-left: 128px;
+.date {
+    margin-bottom: 0;
 }
 .author {
-    margin-bottom: 0;
+    margin-top: 0.5em;
 }
 
 .container {

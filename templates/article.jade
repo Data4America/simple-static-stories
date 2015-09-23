@@ -22,14 +22,12 @@ block content
       include author
       div.pull-left.article-thumbnail-wrapper
         img.article-thumbnail(src=page.url + 'thumbnail.png', srcset=page.url + 'thumbnail.png 1x, ' + page.url + 'thumbnail-256.png 2x')
-      div.article-title
-        h1= page.title
-        p.author
-          | #{ 'By ' }
-          mixin author(page.metadata.author)
-        p.date
-          span= moment.utc(page.date).format('YYYY-MM-DD')
+      h1= page.title
+      p.date
+        span= moment.utc(page.date).format('YYYY-MM-DD')
       div.clearfix
+      p.author
+        mixin author(page.metadata.author)
       hr
       section.content!= typogr(page.html).typogrify()
 

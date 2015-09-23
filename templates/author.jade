@@ -1,4 +1,6 @@
 
 mixin author(authorName)
   - var author = contents.authors[authorName + '.json'];
-  span.author= author.metadata.name
+  span.author
+    | #{ 'Created by: ' }
+    a(href=author.metadata.links[0].url)= author.metadata.name
