@@ -1,6 +1,7 @@
 html, body {
   font-family: 'Trasandina';
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.5em;
 }
 h1, h2, h3, h4 {
     font-weight: bold;
@@ -8,6 +9,9 @@ h1, h2, h3, h4 {
 }
 .article h1, .article h2, .article h3, .article h4 {
     text-align: left;
+}
+p {
+    margin-bottom: 1.5em;
 }
 
 @font-face {
@@ -88,9 +92,7 @@ h1, h2, h3, h4 {
     float: left;
     padding-right: 4px;
     align-items: center;
-}
-.social-button-not-fb {
-    margin-top: 1px;
+    line-height: 1em; /* Otherwise facebook like button gets shifted down */
 }
 
 @media (min-width: 992px) {
@@ -193,6 +195,7 @@ footer .container {
     border-top: 1px solid #333;
     padding: 5px 0;
     text-align: center;
+    font-size: 16px;
     font-weight: bold;
     color: #fff;
     margin-top: 1em;
@@ -218,7 +221,7 @@ footer .container {
     }
     .footer-floating {
         margin-top: 0;
-        font-size: larger;
+        font-size: 20px;
         bottom: 0;
         z-index: 5;
         position: fixed;
