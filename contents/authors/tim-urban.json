@@ -1,0 +1,16 @@
+{
+  "name": "Tim Urban",
+  "title": "Media advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "Co-founder and writer/illustrator at @waitbutwhy",
+  "links": [
+    {
+      "type": "www",
+      "url": "https://www.waitbutwhy.com/"
+    }
+  ],
+  "id": "tim-urban"
+}

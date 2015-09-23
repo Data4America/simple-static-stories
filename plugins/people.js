@@ -25,9 +25,10 @@ var order = [
     'sam-drzymala',
     'christopher-nicholson',
     'becky-stark',
+    'tim-urban',
+    'frank-tsai',
     'seth-kaddish',
     'kyle-wiley',
-    'frank-tsai',
     'britt-crawford'
 ];
 
