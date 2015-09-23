@@ -300,6 +300,7 @@ h3.share-buttons-header {
 
 .team-grid-wrapper {
     text-align: center;
+    line-height: 1.42857143;
 }
 .team-grid-wrapper h2 {
     font-size: 22px;
@@ -326,4 +327,7 @@ h3.share-buttons-header {
 .team-grid-wrapper .bio {
     font-size: 12px;
     text-align: left;
+}
+.team-grid-links {
+    margin-bottom: 10px;
 }

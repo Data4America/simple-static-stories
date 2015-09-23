@@ -10,7 +10,7 @@ mixin teamGrid(people)
             img.picture(src='/authors/' + person.id + '.jpg')
             h2= person.name
             h3= person.title
-            p
+            p.team-grid-links
               each link in person.links
                 a(href=link.url, target='_blank')
                   img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
