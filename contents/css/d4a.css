@@ -17,7 +17,7 @@ hr {
     text-align: left;
 }
 p {
-    margin-bottom: 1.5em;
+    margin-top: 1em;
 }
 
 @font-face {
@@ -237,6 +237,10 @@ footer .container {
     .footer-floating span {
         vertical-align: -1px;
     }
+}
+
+.article-footer-links p:first-of-type {
+    margin-top: 0;
 }
 
 h3.share-buttons-header {
