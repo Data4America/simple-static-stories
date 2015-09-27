@@ -13,9 +13,7 @@ block content
             | Published: 
             span= moment.utc(article.date).format('YYYY-MM-DD')
           div.clearfix
-          p.author
-            mixin author(article.metadata.author)
-        hr
+          mixin author(article.metadata.author)
         section.content
           if article.intro.length > 0
             != typogr(article.intro).typogrify()

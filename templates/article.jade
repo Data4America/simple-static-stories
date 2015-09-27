@@ -33,7 +33,6 @@ block content
       div.clearfix
       p.author
         mixin author(page.metadata.author)
-      hr
       section.content!= typogr(page.html).typogrify()
 
 block footer
