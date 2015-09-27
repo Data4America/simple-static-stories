@@ -18,7 +18,7 @@ This data visualization from Harvard PhD student Robert Manduca plots one dot fo
 <style type="text/css">
 .map {
     height: 250px;
-    margin-bottom: 1em;
+    margin-bottom: 25px;
 }
 @media (min-width: 768px) {
     .map {
