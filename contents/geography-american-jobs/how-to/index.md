@@ -6,6 +6,7 @@ template: article.jade
 code: https://github.com/Data4America/jobmaps
 data: http://datahub.io/dataset/where-are-the-jobs
 description: "Instructions for how to take jobs data and create a geographical map."
+child: true
 ---
 
 1. Download data on number of jobs at the smallest available level of spatial aggregation, and shapefiles of the associated geography. Also make sure you have GEOS installed on your computer (this should be installed if you have the osgeo or shapely packages in Python).

@@ -21,7 +21,11 @@ block content
     div.container.content-block
       include author
       div.pull-left.article-thumbnail-wrapper
-        img.article-thumbnail(src=page.url + 'thumbnail.png', srcset=page.url + 'thumbnail.png 1x, ' + page.url + 'thumbnail-256.png 2x')
+        if page.metadata.child
+          - var thumbnailPath = '../';
+        else
+          - var thumbnailPath = page.url;
+        img.article-thumbnail(src=thumbnailPath + 'thumbnail.png', srcset=thumbnailPath + 'thumbnail.png 1x, ' + thumbnailPath + 'thumbnail-256.png 2x')
       h1= page.title
       p.date
         | Published: 
