@@ -8,7 +8,7 @@ data: http://datahub.io/dataset/where-are-the-jobs
 description: "The American economy is now host to 142,288,000 jobs. But where are these jobs located, exactly?"
 ---
 
-The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That’s a lot of jobs! But where are these jobs located, exactly?
+The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That`s a lot of jobs! But where are these jobs located, exactly?
 
 This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States. The data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
 
@@ -40,13 +40,13 @@ Here, jobs are colored by type, allowing us to see how different industries and 
 
 ---
 
-Each city in the United States has its own unique geography of employment, both in terms of the industries it specializes in and where its jobs tend to locate. In New York City, shown above, professional services, healthcare, and government jobs are concentrated in Manhattan, while manufacturing and logistics jobs are in the outer boroughs. The Los Angeles economy, in contrast, has a much larger presence of manufacturing and logistics jobs, and service jobs aren’t as concentrated — there are several medium-sized clusters in downtown LA, Pasadena, Glendale, Hollywood, and the Westside:
+Each city in the United States has its own unique geography of employment, both in terms of the industries it specializes in and where its jobs tend to locate. In New York City, shown above, professional services, healthcare, and government jobs are concentrated in Manhattan, while manufacturing and logistics jobs are in the outer boroughs. The Los Angeles economy, in contrast, has a much larger presence of manufacturing and logistics jobs, and service jobs aren`t as concentrated — there are several medium-sized clusters in downtown LA, Pasadena, Glendale, Hollywood, and the Westside:
 
 <div id="map-los-angeles" class="map"></div>
 
 ---
 
-Knowing what’s where is crucial for informed policymaking — good urban policy isn’t one size fits all. That said, there are some general patterns that stand out across multiple cities. First, in many cities jobs are relatively concentrated — much more concentrated than residences. Most cities retain a lot of jobs downtown, even after fifty years of employment suburbanization. We can see this in New York and even LA, but it’s perhaps most striking in Chicago, where the Loop continues to dominate employment for the whole region:
+Knowing what`s where is crucial for informed policymaking — good urban policy isn`t one size fits all. That said, there are some general patterns that stand out across multiple cities. First, in many cities jobs are relatively concentrated — much more concentrated than residences. Most cities retain a lot of jobs downtown, even after fifty years of employment suburbanization. We can see this in New York and even LA, but it`s perhaps most striking in Chicago, where the Loop continues to dominate employment for the whole region:
 
 <div id="map-chicago" class="map"></div>
 
@@ -99,6 +99,46 @@ This map is based on the counts of jobs by industry and census block given in th
 * [US Census Bureau LEHD Origin-Destination Employment Statistics Worker Area Characteristics files](http://lehd.ces.census.gov/data/#lodes)
 
 * [US Census Bureau Tiger Line Census Block shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+
+## How to make your own jobs map:
+
+1. Download data on number of jobs at the smallest available level of spatial aggregation, and shapefiles of the associated geography. Also make sure you have GEOS installed on your computer (this should be installed if you have the osgeo or shapely packages in Python).
+
+2. [Clone our git repo](https://github.com/Data4America/jobmaps) to get the files mentioned in the following steps.
+
+3. Open the script `dotfile_wac.py`. Fill in the `dirpath` variable on line 16 with the path to your working directory. Adjust the four categories `makers`, `services`, `professions`, and `support` on lines 34-37 to conform to whatever categories you prefer.   Adjust or remove the `fips2abbrev` code on lines 182-186 if your data does not require translating from a FIPS code to a US postal abbreviation. Adjust the `wac_filename`, `input_filename`, and `output_filename` variables on lines 191-193 to conform to your files. 
+
+4. Run the script `dotfile_wac.py`. This may take a while to run. It will produce one csv file per state (or whatever input files you used) with one line per job, giving the type of job, quadkey location, and lat/long coordinates associated with the random point assigned to that job. 
+
+5. Run the script `sort_by_quadkey.py`, again filling in your directory and the output filenames you used. This will read in all the individual csv output files from step 3 and compile them into one large dataset, then sort that dataset by quadkey and output it is a csv. 
+
+6. It may be the case that there are rows missing certain data in the csv from step 4. These should be output at the beginning or end of the file. You can check them by running `tail csvfile.csv` in the terminal and delete them by running sed `linenum1,linenum2d` csvfile.csv > newcsvfile.csv
+
+7. Open the text file `zoomlevel.txt` in a text editor. Edit it to list the zoom levels that you want to have. 
+
+8. Open the script `dotmap_server.pde` in Processing. Edit the `reader` variable in line 92 to point at your data file. Edit the colors on lines 168-186 to whatever colors you prefer. 
+
+9. Run the script `dotmap_server.pde`. This will read in your master csv and output a series of map tiles, organized in a directory as `zoomlevel/tile_x_coordinate/tile_y_coordinate.png`.
+
+10. Copy the output tiles to your website. 
+
+11. Create a blank png image that is the same size as your tiles and copy it over to the website. 
+
+11. You can create the webmap using leaflet:
+
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+        <div id="map"></div>
+        <script type="text/javascript">
+        var map = L.map('map').setView([lat, long],zoomlevel);
+            L.tileLayer('http://url_to_tile_directory/{z}/{x}/{y}.png', {
+            maxZoom: 13,
+            minZoom: 4,
+            errorTileUrl: 'http://url_to_blank_tile.png',
+            attribution: 'Make Sure to Attribute Your Data'
+        }).addTo(map);
+        </script>
+
+12. Congratulations! You're done!
 
 <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 <script>
