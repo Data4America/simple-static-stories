@@ -104,7 +104,7 @@ This map is based on the counts of jobs by industry and census block given in th
 <script>
 function displayMap(containerId, coords, zoom) {
     var layers = {
-        Jobs: L.tileLayer('http://jobmaptiles.s3-website-us-east-1.amazonaws.com/tiles/{z}/{x}/{y}.png', {
+        Jobs: L.tileLayer('http://jobstiles.s3-website-us-west-2.amazonaws.com/tiles4/{z}/{x}/{y}.png', {
             errorTileUrl: 'http://www.robertmanduca.com/projects/jobs/blank.png',
             detectRetina: false,
             attribution: 'Jobs: Map data from US Census <a href="http://lehd.ces.census.gov" target="_blank">LEHD</a>, Imagery © <a href="http://www.robertmanduca.com" target="_blank">Robert Manduca</a>'
