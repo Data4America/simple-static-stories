@@ -5,6 +5,10 @@ mixin author(authorName)
     | #{ 'Created by: ' }
     a(href=author.metadata.links[0].url, style='margin-right: 5px')= author.metadata.name
 
+    - var seenWww = false;
     each link in author.metadata.links
       a(href=link.url, target='_blank')
-        img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
+        if link.type !== 'www' || !seenWww
+          img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
+          if link.type === 'www'
+            - seenWww = true;
