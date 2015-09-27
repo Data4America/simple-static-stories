@@ -316,14 +316,14 @@ h3.share-buttons-header {
     margin-top: 0;
 }
 .team-grid-wrapper img {
-    display: inline;
 }
 .team-grid-wrapper .picture {
     border-radius: 10px;
     height: 100px;
     width: 100px;
 }
-.team-grid-wrapper .mini-logo {
+.mini-logo {
+    display: inline !important;
     height: 24px;
     width: 24px;
     margin: 0 2px;
@@ -334,4 +334,10 @@ h3.share-buttons-header {
 }
 .team-grid-links {
     margin-bottom: 10px;
+}
+
+.author .mini-logo {
+    height: 18px;
+    width: 18px;
+    vertical-align: -2px;
 }

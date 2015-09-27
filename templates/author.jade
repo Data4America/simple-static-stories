@@ -3,4 +3,8 @@ mixin author(authorName)
   - var author = contents.authors[authorName + '.json'];
   span.author
     | #{ 'Created by: ' }
-    a(href=author.metadata.links[0].url)= author.metadata.name
+    a(href=author.metadata.links[0].url, style='margin-right: 5px')= author.metadata.name
+
+    each link in author.metadata.links
+      a(href=link.url, target='_blank')
+        img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
