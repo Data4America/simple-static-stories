@@ -5,7 +5,9 @@ mixin author(authorName)
   span.author
     | #{ 'Created by: ' }
     b
-      a(href=author.metadata.email, style='margin-right: 5px')= author.metadata.name
+      a(href=author.metadata.email)= author.metadata.name
+
+    img.mini-picture(src='/authors/' + author.metadata.id + '.jpg')
 
     - var seenWww = false;
     each link in author.metadata.links
