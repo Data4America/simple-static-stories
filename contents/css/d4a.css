@@ -182,11 +182,9 @@ p {
 .article-title-link:focus {
     color: #000;
 }
-.date {
-    margin-top: 0.5em;
-}
+.date,
 .author {
-    margin-top: 0.5em;
+    font-size: 16px;
 }
 .author .mini-picture {
     display: inline !important;
