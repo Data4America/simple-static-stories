@@ -69,21 +69,21 @@ find $SITE_DIR \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' -o -iname '
 
 
 yellow '--> Uploading css files'
-s3cmd sync --cf-invalidate --exclude '*.*' --include '*.css' --add-header='Content-Type: text/css' --add-header='Cache-Control: max-age=604800' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
+s3cmd sync --cf-invalidate --no-mime-magic --exclude '*.*' --include '*.css' --add-header='Content-Type: text/css' --add-header='Cache-Control: max-age=604800' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
 
 yellow '--> Uploading js files'
-s3cmd sync --cf-invalidate --exclude '*.*' --include '*.js' --add-header='Content-Type: application/javascript' --add-header='Cache-Control: max-age=604800' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
+s3cmd sync --cf-invalidate --no-mime-magic --exclude '*.*' --include '*.js' --add-header='Content-Type: application/javascript' --add-header='Cache-Control: max-age=604800' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
 
 # Sync media files (Cache: expire in 10 weeks)
 yellow '--> Uploading otf fonts'
-s3cmd sync --cf-invalidate --exclude '*.*' --include '*.otf' --add-header='Cache-Control: max-age=6048000' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
+s3cmd sync --cf-invalidate --no-mime-magic --exclude '*.*' --include '*.otf' --add-header='Cache-Control: max-age=6048000' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
 
 yellow '--> Uploading images (jpg, png, ico)'
-s3cmd sync --cf-invalidate --exclude '*.*' --include '*.png' --include '*.jpg' --include '*.ico' --add-header='Expires: Sat, 20 Nov 2020 18:46:39 GMT' --add-header='Cache-Control: max-age=6048000' $SITE_DIR $BUCKET
+s3cmd sync --cf-invalidate --no-mime-magic --exclude '*.*' --include '*.png' --include '*.jpg' --include '*.ico' --add-header='Expires: Sat, 20 Nov 2020 18:46:39 GMT' --add-header='Cache-Control: max-age=6048000' $SITE_DIR $BUCKET
 
 # Sync html files (Cache: 2 hours)
 yellow '--> Uploading html files'
-s3cmd sync --cf-invalidate --exclude '*.*' --include '*.html' --add-header='Content-Type: text/html' --add-header='Cache-Control: max-age=7200, must-revalidate' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
+s3cmd sync --cf-invalidate --no-mime-magic --exclude '*.*' --include '*.html' --add-header='Content-Type: text/html' --add-header='Cache-Control: max-age=7200, must-revalidate' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
 
 # Sync everything else
 yellow '--> Syncing everything else'
