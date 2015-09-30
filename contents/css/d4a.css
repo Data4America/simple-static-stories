@@ -176,6 +176,12 @@ p {
 .article-thumbnail-wrapper {
     margin-top: 15px;
 }
+.article-title-link,
+.article-title-link:hover,
+.article-title-link:active,
+.article-title-link:focus {
+    color: #000;
+}
 .date {
     margin-top: 0.5em;
 }

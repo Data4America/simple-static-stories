@@ -31,7 +31,7 @@ block content
       hr.thin
       p.date
         | Published on: 
-        span= moment.utc(page.date).format('YYYY-MM-DD')
+        span= moment.utc(page.date).format('MMMM D, YYYY')
       p.author
         mixin author(page.metadata.author)
       section.content!= typogr(page.html).typogrify()
