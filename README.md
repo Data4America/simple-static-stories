@@ -12,6 +12,6 @@
 
 ## To deploy:
 
-1. Install and configure `s3cmd`. On Ubuntu, you can do `sudo apt-get install s3cmd` and then `s3cmd --configure`. If you get an error while configuring, [maybe this is happening](http://stackoverflow.com/a/25637457/786644).
+1. [Install `s3cmd`](https://github.com/s3tools/s3cmd/blob/master/INSTALL) and configure it by running `s3cmd --configure`.
 
 2. Run `npm run deploy-test` to deploy to test.data4america.org, or `npm run deploy` to deploy to stories.data4america.org.

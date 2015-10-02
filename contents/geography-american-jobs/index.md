@@ -1,7 +1,7 @@
 ---
 title: The Geography of American Jobs
 author: robert-manduca
-date: 2015-09-11
+date: 2015-09-30
 template: article.jade
 code: https://github.com/Data4America/jobmaps
 data: http://datahub.io/dataset/where-are-the-jobs
@@ -14,7 +14,7 @@ This data visualization from Harvard PhD student Robert Manduca plots one dot fo
 
 <span class="more"></span>
 
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="leaflet-0.7.5.css" />
 <style type="text/css">
 .map {
     height: 250px;
@@ -102,7 +102,7 @@ This map is based on the counts of jobs by industry and census block given in th
 
 **Want to make your own job map? [Read this to see how it's done!](how-to/)**
 
-<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+<script src="leaflet-0.7.5.js"></script>
 <script>
 function displayMap(containerId, coords, zoom) {
     var layers = {

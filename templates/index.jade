@@ -8,11 +8,12 @@ block content
         header
           img.pull-left.article-thumbnail(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
           h1
-            a(href=article.url)= article.title
-          p.date
-            | Published: 
-            span= moment.utc(article.date).format('YYYY-MM-DD')
+            a(href=article.url).article-title-link= article.title
           div.clearfix
+          hr.thin
+          p.date
+            | Published on: 
+            span= moment.utc(article.date).format('MMMM D, YYYY')
           mixin author(article.metadata.author)
         section.content
           if article.intro.length > 0

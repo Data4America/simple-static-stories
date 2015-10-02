@@ -27,10 +27,11 @@ block content
           - var thumbnailPath = page.url;
         img.article-thumbnail(src=thumbnailPath + 'thumbnail.png', srcset=thumbnailPath + 'thumbnail.png 1x, ' + thumbnailPath + 'thumbnail-256.png 2x')
       h1= page.title
-      p.date
-        | Published: 
-        span= moment.utc(page.date).format('YYYY-MM-DD')
       div.clearfix
+      hr.thin
+      p.date
+        | Published on: 
+        span= moment.utc(page.date).format('MMMM D, YYYY')
       p.author
         mixin author(page.metadata.author)
       section.content!= typogr(page.html).typogrify()
