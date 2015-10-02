@@ -1,4 +1,9 @@
-/* Compiled straight from https://github.com/Data4America/source/blob/674fc1490b12a9e798420145367ec37f3971ffd7/assets/less/dfa/donate.less because I'm lazy */
+.donate-wrapper {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+/* Compiled straight from https://github.com/Data4America/source/blob/03581539a15c827787ce8fc0f40f7b15dd5d0d06/assets/less/dfa/donate.less because I'm lazy */
 
 .dfa-donate {
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -14,6 +19,9 @@
   .dfa-donate {
     width: auto;
     padding: 0.7em;
+  }
+  #dfa-donate-form {
+    margin-top: 1em;
   }
 }
 .dfa-donate h4 {
@@ -382,6 +390,9 @@ input::-webkit-inner-spin-button {
   font-weight: bold;
 }
 /* PERSONAL INFO FORM */
+#dfa-personal-info-form table {
+  width: 100%;
+}
 #dfa-personal-info-form table td {
   padding: 0.5em;
 }
@@ -467,6 +478,14 @@ input::-webkit-inner-spin-button {
 /* THANK YOU MODULE */
 #dfa-thank-you {
   display: none;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-thank-you {
+    margin-top: 1.4em;
+  }
+  #dfa-thank-you h1 {
+    font-size: 1.5em;
+  }
 }
 /* RANGE SLIDER */
 .dfa-range-slider {

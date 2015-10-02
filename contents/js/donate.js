@@ -415,8 +415,11 @@
     '     </p>' +
     '   </div>' +
     '   <p class="thankyou-video" style="padding:0.6em;"></p>' +
-    '   <p style="padding-top:20px;">' +
+    '   <p style="padding: 0 5px 5px; margin: 0;">' +
     '     <iframe border="0" src="http://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
+    '   </p>' +
+    '   <p style="padding: 10px 0 0; text-align: center; font-size: 1.4em; margin: 0;">' +
+    '     <a href="javascript:;" class="dfa-btn-donate-again">Donate Again</a>'
     '   </p>' +
     ' </div>' +
     // DFA BUDGET MODULE
@@ -470,6 +473,7 @@
     $('.body-text').html(content);
 
     var $mod = $('.dfa-donate'),
+      $modal = $('#dfa-donate-modal'),
       $formDonate = $('#dfa-donate-form'),
       $formPersonalInfo = $('#dfa-personal-info-form'),
       $modLearnMore = $('#dfa-learn-more'),
@@ -487,6 +491,7 @@
       $btnCheque = $('.btnCheque'),
       $btnBack = $('.dfa-button-back'),
       $btnBackCheque = $('.dfa-button-back-cheque'),
+      $btnDonateAgain = $('.dfa-btn-donate-again'),
       $btnProceed = $('.dfa-button-proceed'),
       $linkLearnMore = $('.dfa-link-learn-more'),
       $linkBudget = $('.dfa-link-budget'),
@@ -520,8 +525,8 @@
     var paymentData;
 
     var handler = global.StripeCheckout.configure({
-      key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
-      //key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
+      //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
+      key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
       image: 'https://33.media.tumblr.com/avatar_55d711f733d2_128.png',
       token: function(token) {
 
@@ -606,6 +611,10 @@
 
         if ($(this).hasClass('.dfa-button-skip')) {
           $formPersonalInfo.find('input[name="donateto"]').val("General Fund");
+        }
+
+        if ($modal.length) {
+          $modal.find('.icon.close').hide();
         }
 
         charge();
@@ -721,8 +730,6 @@
 
       var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
 
-      console.log(amount);
-
       var desc = '$' + numberWithCommas(amount / 100) +
         (type == 'monthly' ? ' Monthly Donation' : ' Donation');
 
@@ -815,7 +822,11 @@
     }
 
     function goToTop() {
-      $(window).scrollTop($mod.offset().top);
+      if ($modal.length) {
+        $modal.parents('.ui.dimmer.modals').scrollTop(0);
+      } else {
+        $(window).scrollTop($mod.offset().top);
+      }
     }
 
     function showHeader(headerType) {
@@ -845,6 +856,7 @@
     function charge() {
       $.getScript('http://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
 
+      goToTop();
       $formDonate.hide();
       $modLoading.show();
     }
@@ -852,6 +864,8 @@
     function submitData() {
       $formPersonalInfo.hide();
       $modLoading.show();
+
+      goToTop();
 
       var $form = $formPersonalInfo;
       var fields = {};
@@ -911,12 +925,29 @@
         $modThankYou.find('.thankyou-' + type + ' .anon').html('anonymous');
       }
 
+      if ($modal.length) {
+        $modal.find('.icon.close').show();
+      }
+
       var $td = $('.thankyou-video');
       var width = $td.width();
       var aspectRatio = 315/560;
       var height = width * aspectRatio;
       var embed = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/FguGc5NkFf0?autoplay=1" frameborder="0" allowfullscreen></iframe>';
       $td.html(embed);
+    }
+
+    function resetForm() {
+      $modThankYou.find('.thankyou-monthly, .thankyou-ontime, .thankyou-member, .thankyou-sponsor').hide();
+      $modThankYou.hide();
+
+      $formDonate.show();
+      justDonate();
+      $(window).scrollTop(0);
+
+      if ($modal.length) {
+        $modal.parents('.ui.dimmer.modals').scrollTop(0);
+      }
     }
 
     function numberWithCommas(x) {
@@ -1028,6 +1059,7 @@
     $btnCheque.on('click', giveByCheque);
     $btnBack.on('click', goToDonateForm);
     $btnBackCheque.on('click', goToCheque);
+    $btnDonateAgain.on('click', resetForm);
 
     $sponsorStepButtons.on('click', openStep);
 
@@ -1049,6 +1081,7 @@
       $formDonate.hide();
       $formPersonalInfo.show();
       $modLoading.hide();
+
       goToTop();
     };
 
