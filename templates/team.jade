@@ -3,14 +3,16 @@ extends layout
 block prepend title
   | #{ page.title + ' - '}
 
-
 block content
   div.container.content-block
+    h1= page.title
     article.page
       include teamGrid
-      h1 Our Team
-      - var people = env.helpers.getPeople(contents).filter(function (p) { return !p.advisor; });
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.founder || p.boardOfDirectors || p.editorialBoard; });
       mixin teamGrid(people)
-      h2 Advisors
+      h1 Advisors
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.advisor; });
       mixin teamGrid(people)
+      h1 Staff
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.staff; });
+      mixin teamGrid(people, "staff")

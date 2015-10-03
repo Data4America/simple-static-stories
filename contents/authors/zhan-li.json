@@ -5,6 +5,8 @@
   "boardOfDirectors": false,
   "editorialBoard": true,
   "advisor": false,
+  "staff": true,
+  "staffTitle": "Communications",
   "bio": "Strategic foresight and narrative specialist; Ph.D., Organizational Communication (USC), S.M. Media Studies (MIT); Board Director, World Future Society.",
   "links": [
     {
