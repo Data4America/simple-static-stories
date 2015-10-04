@@ -3,27 +3,30 @@ extends layout
 block content
   include author
   each article in articles
-    article.article.intro
-      div.container.content-block
-        header
-          img.pull-left.article-thumbnail(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
-          h1
-            a(href=article.url).article-title-link= article.title
-          div.clearfix
-          hr.thin
-          p.date
-            | Published on: 
-            span= moment.utc(article.date).format('MMMM D, YYYY')
-          mixin author(article.metadata.author)
-        section.content
-          if article.intro.length > 0
-            != typogr(article.intro).typogrify()
-          if article.hasMore
-            p.more
-              a(href=article.url) more
+    article.article.ui.segments
+      div.ui.segment
+        div.ui.items
+          div.item
+            div.image
+              img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
+            div.content
+              h1.ui.header
+                a(href=article.url).article-title-link= article.title
+              div.extra Published on: 
+                span= moment.utc(article.date).format('MMMM D, YYYY')
+
+      div.ui.segment
+        mixin author(article.metadata.author)
+
+      div.ui.segment
+        if article.intro.length > 0
+          != typogr(article.intro).typogrify()
+        if article.hasMore
+          p.more
+            a(href=article.url) more
 
 block footer
-  div.container.content-block.article-footer-links
+  div.ui.segment
     p
       if prevPage
         a(href=prevPage.url) « Newer

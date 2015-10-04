@@ -1,13 +1,12 @@
 
 mixin author(authorName)
-  hr.thin
   - var author = contents.authors[authorName + '.json'];
   span.author
     | #{ 'Created by: ' }
     b
       a(href='mailto:' + author.metadata.email)= author.metadata.name
 
-    img.mini-picture(src='/authors/' + author.metadata.id + '.jpg')
+    img.ui.avatar.image(src='/authors/' + author.metadata.id + '.jpg', style="margin-left: 4px;")
 
     - var seenWww = false;
     each link in author.metadata.links
@@ -16,4 +15,3 @@ mixin author(authorName)
           img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
           if link.type === 'www'
             - seenWww = true;
-  hr.thin

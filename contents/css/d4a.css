@@ -23,45 +23,6 @@ p {
     margin-top: 1em;
 }
 
-@font-face {
-  font-family: 'Trasandina';
-  src: url('/fonts/TrasandinaRegular.otf') format("opentype");
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
-}
-
-@font-face {
-  font-family: 'Trasandina';
-  src: url('/fonts/TrasandinaRegular-Italic.otf') format("opentype");
-  font-style: italic;
-  font-weight: normal;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
-}
-
-@font-face {
-  font-family: 'Trasandina';
-  src: url('/fonts/TrasandinaBold.otf') format("opentype");
-  font-style: normal;
-  font-weight: bold;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
-}
-
-@font-face {
-  font-family: 'Trasandina';
-  src: url('/fonts/TrasandinaBold-Italic.otf') format("opentype");
-  font-style: italic;
-  font-weight: bold;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
-}
 
 .header-bar {
     background: url(/img/background-small.jpg);
@@ -88,9 +49,6 @@ p {
 .hamburger:hover {
     color: #fff;
     background: rgba(0, 0, 0, 0.1);
-}
-.logo {
-    height: 74px;
 }
 .social-buttons {
     text-align: right;
@@ -142,7 +100,6 @@ p {
         box-shadow: rgba(34, 36, 38, 0.14902) 0px 1px 2px 0px;
         margin-bottom: 15px;
     }
-    .logo,
     .hamburger,
     .header-bar,
     .social-button {

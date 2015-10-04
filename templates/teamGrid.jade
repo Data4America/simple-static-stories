@@ -1,19 +1,19 @@
 
 mixin teamGrid(people, type)
   - var elementsInRow = 2;
-  each person, i in people
-    - if ((i % elementsInRow == 0))
-      div.row.team-grid-wrapper
-        div.col-sm-1.hidden-xs
-        - each person in people.slice(i, i + elementsInRow)
-          div.col-sm-5.col-xs-6
-            img.picture(src='/authors/' + person.id + '.jpg')
-            h2= person.name
+  div.ui.cards
+    each person, i in people
+      - if ((i % elementsInRow == 0))
+      - each person in people.slice(i, i + elementsInRow)
+        div.card
+          div.image
+            img(src='/authors/' + person.id + '.jpg')
+          div.content
+            h2.header= person.name
             h3= type === 'staff' ? person.staffTitle : person.title
             p.team-grid-links
               each link in person.links
                 a(href=link.url, target='_blank')
                   img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
-            p.bio
+            div.description
               | !{person.bio}
-        div.col-sm-1.hidden-xs

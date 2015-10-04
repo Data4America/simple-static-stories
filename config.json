@@ -27,10 +27,10 @@
   "nap": {
     "assets": {
       "css": {
-        "main": ["/css/bootstrap.css", "/css/d4a.css", "/css/font-awesome.css", "/css/donate.css"]
+        "main": ["/css/styles.css"]
       },
       "js": {
-        "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/bootstrap.js"]
+        "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/bootstrap.js", "/js/semantic.min.js"]
       }
     }
   }

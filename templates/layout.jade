@@ -16,76 +16,98 @@ html(lang='en')
   body(class=bodyclass)
     header
       block header
-        div.header-bar
-          div.logo-wrapper
-            div.dropdown.top-menu
-              button.btn.dropdown-toggle.hamburger(data-toggle='dropdown')
-                i.fa.fa-bars
-              ul.dropdown-menu
-                li
-                  a(href='/') Stories
-                li
-                  a(href='/about/') About
-                li
-                  a(href='/team/') Our Team
-                li
-                  a(href='/staff/') Staff
-                li
-                  a(href='/donate/') Donate
-                li
-                  a(href='http://data4america.org/upload') Submit Content
-                li
-                  a(href='http://datahub.io/organization/data4america') Data Sets
-                li
-                  a(href='https://github.com/Data4America') GitHub
-                li
-                  a(href='/request-government-data') Request Government Data
-            a(href=contents.index.url)
-              img.logo(src=contents.img['logo.png'].url)
-            div.pull-right.social-buttons
-              block social-buttons-top
-                div.social-button
-                  button.btn#subscribe-button(data-toggle='modal' data-target='#subscribe-modal')
-                    i.fa.fa-envelope
-                    | Subscribe
-                div.social-button
-                  div.fb-like(data-href='http://data4america.org/', data-layout='button', data-action='like', data-show-faces='false', data-share='false')
-                div.social-button
-                  a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='false', data-show-screen-name='false') Follow
-        div.header-background
-    div.modal.fade#subscribe-modal
-      div.modal-dialog
-        div.modal-content
-          div.modal-header
-            button.close(type='button', data-dismiss='modal') &times;
-            h4.modal-title Subscribe to the Data4America mailing list
-          div.modal-body
-            div#mc_embed_signup
-              form.validate#mc-embedded-subscribe-form(action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=219ac0990b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
-                div#mc_embed_signup_scroll
-                  div.form-group.mc-field-group
-                    label(for='mce-EMAIL') Email Address
-                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
-                  div.clear#mce-responses
-                    <div class="response text-danger" id="mce-error-response" style="display:none; margin-bottom: 1em"></div>
-                    <div class="response text-success" id="mce-success-response" style="display:none; margin-bottom: 1em"></div>
-                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_72207b8a0819659d0b69c1f9c_219ac0990b" tabindex="-1" value=""></div>
-                  button.btn.btn-primary#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
-    div#content
-      block content
-        div.container
-          h2 Welcome to zombocom!
-      footer
+
+        div#dfa-header.ui.borderless.inverted.main.menu.fixed
+          div.ui.container
+            div.ui.dropdown.icon.item
+              i.big.sidebar.icon
+              div.menu
+                a.item(href="http://data4america.org/about", target="_blank") About Data4America
+                a.item(href="http://data4america.org/upload", target="_blank") Submit Content
+                a.item(href="http://data.data4america.org", target="_blank") Submit Data
+                a.item(href="http://git.data4america.org", target="_blank") Submit Software
+                a.item(href="http://data4america.org/donate", target="_blank") Donate
+                a.item(href="http://data4america.org/subscribe", target="_blank") Email Subscribe
+            div.logo.item
+              a.logo(href="/")
+            div.right.menu.social-buttons
+              div.item
+                button.dfa-btn-subscribe.ui.button.red.mini Subscribe
+              div.item
+                button.dfa-btn-donate.ui.button.white.mini(style="background:#FFF;") Donate
+              div.item
+                button.dfa-btn-share.ui.button.blue.mini Share
+
+        div#dfa-menu.ui.six.item.small.inverted.blue.main.menu
+          div.ui.container
+            a.item(target="_blank", href="http://data4america.org/about") ABOUT
+            a.item(target="_blank", href="http://data4america.org/team") OUR TEAM
+            a.item(target="_blank", href="http://data4america.org/donate") DONATE
+            a.item(target="_blank", href="http://data4america.org/upload") SUBMIT CONTENT
+            a.item(target="_blank", href="http://data4america.org/datasets") DATA SETS
+            a.item(target="_blank", href="http://data4america.org/github") GITHUB
+
+    div#dfa-subscribe-modal.ui.modal.small
+      i.close.icon
+      div.content
+        div.ui.two.column.grid
+          div.column
+            h3.ui.header Like us on Facebook
+            div.fb-like(data-href='http://data4america.org/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
+          div.column
+            h3.ui.header Follow us on Twitter
+            a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='true', data-show-screen-name='false') Follow
+        div.ui.horizontal.divider OR
+        h3.ui.header Subscribe to Data4America newsletter:
+        div#mc_embed_signup
+          form.ui.form.validate#mc-embedded-subscribe-form(action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=219ac0990b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
+            div#mc_embed_signup_scroll
+              div.field
+                <input type="email" value="" name="EMAIL" placeholder="Your Email Address" class="required email form-control" id="mce-EMAIL">
+              div.clear#mce-responses
+                <div class="response text-danger" id="mce-error-response" style="display:none; margin-bottom: 1em"></div>
+                <div class="response text-success" id="mce-success-response" style="display:none; margin-bottom: 1em"></div>
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_72207b8a0819659d0b69c1f9c_219ac0990b" tabindex="-1" value=""></div>
+              button.ui.button.primary#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
+
+    div#dfa-content
+      div.ui.text.container
+        block content
         block footer
-    div.footer-floating
-      a.btn.btn-danger(href='http://data4america.org/donate')
-        | Donate
-      span
-        | Help 
-        span.footer-blue DATA
-        span.footer-red 4
-        span.footer-blue AMERICA 
-        | bring data science to government.
+
+    div#dfa-footer(style="display:none;")
+      h3.ui.header
+        a.ui.red.button.donate.dfa-btn-donate Donate
+        span Help bring data science to government.
+
+    div#dfa-donate-modal.ui.modal(style="min-height:1200px;")
+      i.close.icon
+      div.content
+        div.body-text
+
+    div#dfa-share-modal.ui.small.modal
+      i.close.icon
+      div.header Share this data story
+      div.content
+        div.description
+
+          div.ui.facebook.button
+            i.ui.facebook.icon
+            span.text Share
+
+          div.ui.twitter.button
+            i.ui.twitter.icon
+            span.text Tweet
+
+          h4.ui.header Link:
+          div.ui.action.input.fluid
+            input#cliptext(type="text", value="http://test.data4america.org/geography-american-jobs/")
+            button.copy-button.ui.button.icon(data-clipboard-target="#cliptext")
+              i.icon.copy
+
+      div.actions
+        div.ui.cancel.button Cancel
+
   block js
     != nap.js('main')
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

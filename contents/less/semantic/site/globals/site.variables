@@ -19,8 +19,8 @@
 --------------------*/
 
 /* For source only. Modified in gulp for dist */
-@imagePath : '/contents/less/semantic/themes/default/assets/images';
-@fontPath  : '/contents/less/semantic/themes/default/assets/fonts';
+@imagePath : '/less/semantic/themes/default/assets/images';
+@fontPath  : '/less/semantic/themes/default/assets/fonts';
 
 /*-------------------
       Site Colors

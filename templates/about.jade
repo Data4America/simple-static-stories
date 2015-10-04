@@ -5,7 +5,7 @@ block prepend title
 
 
 block content
-  div.container.content-block
+  div.ui.segment
     article.page
       section.content!= typogr(page.html).typogrify()
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });

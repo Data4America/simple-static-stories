@@ -11,7 +11,6 @@ var gulp = require('gulp'),
 
 // Paths
 var paths = {
-  assets: 'assets/',
   less:   'contents/less/',
   js:     'contents/js/',
   css:   'contents/css/'
@@ -42,7 +41,7 @@ gulp.task('lint', function () {
         .pipe(eslint.failOnError());
 });
 
-gulp.task('css', function () {
+gulp.task('less', function () {
   return gulp.src(paths.less + 'styles.less')
     .pipe(less({
       paths: [ paths.less ]
@@ -69,5 +68,5 @@ gulp.task('default', function() {
   gulp.watch([
     paths.less + '/**/*.less',
     paths.less + '/**/*.variables',
-    paths.less + '/**/*.overrides'], ['css']);
+    paths.less + '/**/*.overrides'], ['less']);
 });

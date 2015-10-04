@@ -26,7 +26,7 @@ html, body {
 
 @font-face {
   font-family: 'Trasandina';
-  src: url('/contents/fonts/TrasandinaRegular.otf') format("opentype");
+  src: url('/fonts/TrasandinaRegular.otf') format("opentype");
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -36,7 +36,7 @@ html, body {
 
 @font-face {
   font-family: 'Trasandina';
-  src: url('/contents/fonts/TrasandinaRegular-Italic.otf') format("opentype");
+  src: url('/fonts/TrasandinaRegular-Italic.otf') format("opentype");
   font-style: italic;
   font-weight: normal;
   font-variant: normal;
@@ -46,7 +46,7 @@ html, body {
 
 @font-face {
   font-family: 'Trasandina';
-  src: url('/contents/fonts/TrasandinaBold.otf') format("opentype");
+  src: url('/fonts/TrasandinaBold.otf') format("opentype");
   font-style: normal;
   font-weight: bold;
   font-variant: normal;
@@ -56,7 +56,7 @@ html, body {
 
 @font-face {
   font-family: 'Trasandina';
-  src: url('/contents/fonts/TrasandinaBold-Italic.otf') format("opentype");
+  src: url('/fonts/TrasandinaBold-Italic.otf') format("opentype");
   font-style: italic;
   font-weight: bold;
   font-variant: normal;
@@ -69,7 +69,7 @@ html, body {
 --------------------*/
 #dfa-header {
   background-color: #B4B4B4;
-  background: url(/contents/img/background.jpg) center center;
+  background: url(/img/background.jpg) center center;
   background-size: 900px;
   border-radius: 0;
   margin: 0;
@@ -91,7 +91,7 @@ html, body {
 }
 
 #dfa-header .item.logo a {
-  background: url(/contents/img/logo-256.png) center center;
+  background: url(/img/logo-256.png) center center;
   display: inline-block;
   background-size: 60px 60px;
   height: 40px;
@@ -206,7 +206,7 @@ html, body {
 --------------------*/
 
 #dfa-content {
-  padding: 4px 0 65px;
+  padding: 14px 0 65px;
   background: #FAFAFA;
 }
 
@@ -233,7 +233,7 @@ html, body {
 
 #dfa-content .ui.container {
   position: relative;
-  z-index: 5;
+  z-index: 101;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -253,6 +253,27 @@ html, body {
     display:block;
     margin: 0 auto 0.4em;
   }
+}
+
+hr {
+  margin: 1em 0 0.5em 0;
+  box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.mini-logo {
+    display: inline !important;
+    height: 24px;
+    width: 24px;
+    margin: 0 2px;
+}
+
+.author .mini-logo {
+  height: 0.9em;
+  width: 0.9em;
+  vertical-align: -2px;
 }
 
 /*-------------------
@@ -287,11 +308,23 @@ html, body {
   background: rgba(0, 0, 0, 0.7);
   border-top: 1px solid #333;
   text-align: center;
-  z-index: 5;
+  z-index: 102;
 }
 
 #dfa-footer .ui.header {
   color: white;
+}
+
+#dfa-footer .ui.button {
+  vertical-align: middle;
+  font-size: 1.4em;
+  padding: 0.45em 0.8em;
+  margin-right: 0.4em;
+}
+
+#dfa-footer span {
+  font-size: 1.4em;
+  vertical-align: middle;
 }
 
 /* Mobile */
@@ -304,7 +337,7 @@ html, body {
 
 .icon-sms {
   display: inline-block;
-  background: url(/contents/img/sms.png);
+  background: url(/img/sms.png);
   background-size: 100%;
   vertical-align: middle;
   margin-bottom: -5px;
@@ -361,7 +394,7 @@ body.embed {
   width: 54px;
   position: relative;
   z-index: 1;
-  background: url(/contents/img/background.jpg) center center;
+  background: url(/img/background.jpg) center center;
   background-size: 900px;
 }
 
@@ -392,7 +425,7 @@ body.embed {
 }
 
 #dfa-embed .logo {
-  background: url(/contents/img/embed-logo.png) center center no-repeat;
+  background: url(/img/embed-logo.png) center center no-repeat;
   display: inline-block;
   background-size: 100%;
   height: 100%;

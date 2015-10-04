@@ -17,27 +17,30 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
-  article.article
-    div.container.content-block
+  article.article.ui.segments
+    div.ui.segment
+      div.ui.items
+        div.item
+          div.image
+            if page.metadata.child
+              - var thumbnailPath = '../';
+            else
+              - var thumbnailPath = page.url;
+            img(src=thumbnailPath + 'thumbnail.png', srcset=thumbnailPath + 'thumbnail.png 1x, ' + thumbnailPath + 'thumbnail-256.png 2x')
+          div.content
+            h1.ui.header= page.title
+            div.extra Published on: 
+              span= moment.utc(page.date).format('MMMM D, YYYY')
+
+    div.ui.segment
+      mixin author(page.metadata.author)
+
+    div.ui.segment
       include author
-      div.pull-left.article-thumbnail-wrapper
-        if page.metadata.child
-          - var thumbnailPath = '../';
-        else
-          - var thumbnailPath = page.url;
-        img.article-thumbnail(src=thumbnailPath + 'thumbnail.png', srcset=thumbnailPath + 'thumbnail.png 1x, ' + thumbnailPath + 'thumbnail-256.png 2x')
-      h1= page.title
-      div.clearfix
-      hr.thin
-      p.date
-        | Published on: 
-        span= moment.utc(page.date).format('MMMM D, YYYY')
-      p.author
-        mixin author(page.metadata.author)
       section.content!= typogr(page.html).typogrify()
 
 block footer
-  div.container.content-block.article-footer-links
+  div.ui.segment.article-footer-links
     hr.visible-xs(style='margin-top: 0')
     if page.metadata.code
       p
@@ -59,7 +62,8 @@ block footer
     p
       b #[a(href='http://data4america.org/donate') Donate to Data4America.] 
       | We’re a non-partisan, non-profit media platform bringing Data Journalism to 21st Century Government
-  div.container.content-block.share-buttons
+
+  div.ui.segment.share-buttons
     hr.visible-xs(style='margin-top: 0')
     h3.share-buttons-header Share this data story
     ul
@@ -75,6 +79,7 @@ block footer
         a.btn#share-twitter(data-url=locals.url + page.url, data-text='{new data story} ' + page.title)
           i.fa.fa-twitter
           | Tweet
-  div.container.content-block
+
+  div.ui.segment
     hr.visible-xs(style='margin-top: 0')
     div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px")
