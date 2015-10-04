@@ -56,9 +56,6 @@ gulp.task('less', function () {
 gulp.task('semantic-js', function(){
   return gulp.src([paths.less + 'semantic/definitions/**/*.js'])
     .pipe(concat('semantic.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('semantic.min.js'))
-    .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 });
 
