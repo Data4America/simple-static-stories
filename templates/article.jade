@@ -41,7 +41,6 @@ block content
 
 block footer
   div.ui.segment.article-footer-links
-    hr.visible-xs(style='margin-top: 0')
     if page.metadata.code
       p
         b #[a(href=page.metadata.code) Fork the code on Github.] 
@@ -63,23 +62,29 @@ block footer
       b #[a(href='http://data4america.org/donate') Donate to Data4America.] 
       | We’re a non-partisan, non-profit media platform bringing Data Journalism to 21st Century Government
 
-  div.ui.segment.share-buttons
-    hr.visible-xs(style='margin-top: 0')
-    h3.share-buttons-header Share this data story
-    ul
-      li
-        a.btn#share-email(href='mailto:?subject=' + page.title + '&body=' + encodeURI(locals.url + page.url))
-          i.fa.fa-envelope
-          | Email
-      li
-        a.btn#share-facebook(data-url=locals.url + page.url)
-          i.fa.fa-facebook
-          | Share
-      li
-        a.btn#share-twitter(data-url=locals.url + page.url, data-text='{new data story} ' + page.title)
-          i.fa.fa-twitter
-          | Tweet
+  div.ui.segment.center.aligned
+    h2.ui.header Share this data story
+    div.dfa-share
+      div.container
+        div.ui.grey.email.button
+          i.icon.mail
+          span.text Email
+        div.ui.facebook.button
+          i.ui.facebook.icon
+          span.text Share
+        div.ui.twitter.button
+          i.ui.twitter.icon
+          span.text Tweet
+
+      div.container.mobile(style="display:none;")
+        div.ui.grey.email.button.circular.icon
+          i.icon.mail
+        div.ui.facebook.button.circular.icon
+          i.ui.facebook.icon
+        div.ui.twitter.button.circular.icon
+          i.ui.twitter.icon
+        a.circular.ui.icon.button.orange(href="javascript:;")
+          i.icon-sms
 
   div.ui.segment
-    hr.visible-xs(style='margin-top: 0')
     div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px")
