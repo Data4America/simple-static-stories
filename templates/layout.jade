@@ -93,14 +93,27 @@ html(lang='en')
       div.header Share this data story
       div.content
         div.description
+          div.dfa-share(style="text-align:center;")
+            div.container
+              div.ui.grey.email.button
+                i.icon.mail
+                span.text Email
+              div.ui.facebook.button
+                i.ui.facebook.icon
+                span.text Share
+              div.ui.twitter.button
+                i.ui.twitter.icon
+                span.text Tweet
 
-          div.ui.facebook.button
-            i.ui.facebook.icon
-            span.text Share
-
-          div.ui.twitter.button
-            i.ui.twitter.icon
-            span.text Tweet
+            div.container.mobile(style="display:none;")
+              div.ui.grey.email.button.circular.icon
+                i.icon.mail
+              div.ui.facebook.button.circular.icon
+                i.ui.facebook.icon
+              div.ui.twitter.button.circular.icon
+                i.ui.twitter.icon
+              a.circular.ui.icon.button.orange(href="javascript:;")
+                i.icon-sms
 
           h4.ui.header Link:
           div.ui.action.input.fluid

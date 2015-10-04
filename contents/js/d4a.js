@@ -66,8 +66,8 @@ $(document).ready(function() {
 
     $('#dfa-sidebar').width(screen.width);
 
-    $('.dfa-share > .container:eq(0)').hide();
-    $('.dfa-share > .container:eq(1)').show();
+    $('.dfa-share .container:not(.mobile)').hide();
+    $('.dfa-share .container.mobile').show();
 
     $('.dfa-donate-modal .close.icon').remove();
   }
