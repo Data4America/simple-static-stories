@@ -1,16 +1,15 @@
 
 mixin teamGrid(people, type)
   - var elementsInRow = 2;
-  div.ui.cards
+  div.ui.two.column.grid.dfa-team-grid
     each person, i in people
       - if ((i % elementsInRow == 0))
         - each person in people.slice(i, i + elementsInRow)
-          div.card
-            div.image
-              img(src='/authors/' + person.id + '.jpg')
+          div.column(style="text-align:center")
+            img.ui.small.circular.image(src='/authors/' + person.id + '.jpg')
             div.content
-              h2.header= person.name
-              h3= type === 'staff' ? person.staffTitle : person.title
+              h2.ui.header= person.name
+              h4.ui.header.grey= type === 'staff' ? person.staffTitle : person.title
               p.team-grid-links
                 each link in person.links
                   a(href=link.url, target='_blank')

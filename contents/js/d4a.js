@@ -117,6 +117,10 @@ $(document).ready(function() {
     }
   });
 
+  if (window.location.pathname.search("/donate") === 0) {
+    $('#dfa-footer').remove();
+  }
+
   $('.dfa-btn-donate').click(function() {
     $('#dfa-donate-modal')
       .modal({
