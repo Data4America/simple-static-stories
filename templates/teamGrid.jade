@@ -4,16 +4,16 @@ mixin teamGrid(people, type)
   div.ui.cards
     each person, i in people
       - if ((i % elementsInRow == 0))
-      - each person in people.slice(i, i + elementsInRow)
-        div.card
-          div.image
-            img(src='/authors/' + person.id + '.jpg')
-          div.content
-            h2.header= person.name
-            h3= type === 'staff' ? person.staffTitle : person.title
-            p.team-grid-links
-              each link in person.links
-                a(href=link.url, target='_blank')
-                  img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
-            div.description
-              | !{person.bio}
+        - each person in people.slice(i, i + elementsInRow)
+          div.card
+            div.image
+              img(src='/authors/' + person.id + '.jpg')
+            div.content
+              h2.header= person.name
+              h3= type === 'staff' ? person.staffTitle : person.title
+              p.team-grid-links
+                each link in person.links
+                  a(href=link.url, target='_blank')
+                    img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
+              div.description
+                | !{person.bio}
