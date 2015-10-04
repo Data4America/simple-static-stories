@@ -8,7 +8,7 @@ data: http://datahub.io/dataset/where-are-the-jobs
 description: "The American economy is now host to 142,288,000 jobs. But where are these jobs located, exactly?"
 ---
 
-The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That`s a lot of jobs! But where are these jobs located, exactly?
+The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That's a lot of jobs! But where are these jobs located, exactly?
 
 This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States. The data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
 
@@ -40,13 +40,13 @@ Here, jobs are colored by type, allowing us to see how different industries and 
 
 ---
 
-Each city in the United States has its own unique geography of employment, both in terms of the industries it specializes in and where its jobs tend to locate. In New York City, shown above, professional services, healthcare, and government jobs are concentrated in Manhattan, while manufacturing and logistics jobs are in the outer boroughs. The Los Angeles economy, in contrast, has a much larger presence of manufacturing and logistics jobs, and service jobs aren`t as concentrated — there are several medium-sized clusters in downtown LA, Pasadena, Glendale, Hollywood, and the Westside:
+Each city in the United States has its own unique geography of employment, both in terms of the industries it specializes in and where its jobs tend to locate. In New York City, shown above, professional services, healthcare, and government jobs are concentrated in Manhattan, while manufacturing and logistics jobs are in the outer boroughs. The Los Angeles economy, in contrast, has a much larger presence of manufacturing and logistics jobs, and service jobs aren't as concentrated — there are several medium-sized clusters in downtown LA, Pasadena, Glendale, Hollywood, and the Westside:
 
 <div id="map-los-angeles" class="map"></div>
 
 ---
 
-Knowing what`s where is crucial for informed policymaking — good urban policy isn`t one size fits all. That said, there are some general patterns that stand out across multiple cities. First, in many cities jobs are relatively concentrated — much more concentrated than residences. Most cities retain a lot of jobs downtown, even after fifty years of employment suburbanization. We can see this in New York and even LA, but it`s perhaps most striking in Chicago, where the Loop continues to dominate employment for the whole region:
+Knowing what's where is crucial for informed policymaking — good urban policy isn't one size fits all. That said, there are some general patterns that stand out across multiple cities. First, in many cities jobs are relatively concentrated — much more concentrated than residences. Most cities retain a lot of jobs downtown, even after fifty years of employment suburbanization. We can see this in New York and even LA, but it's perhaps most striking in Chicago, where the Loop continues to dominate employment for the whole region:
 
 <div id="map-chicago" class="map"></div>
 
