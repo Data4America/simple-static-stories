@@ -50473,7 +50473,7 @@ input::-moz-focus-inner {
   font-size: 0.9em;
 }
 /*-------------------
-      MAIN HEADER
+      FONTS
 --------------------*/
 @font-face {
   font-family: 'Trasandina';
@@ -50520,6 +50520,7 @@ input::-moz-focus-inner {
   background-size: 900px;
   border-radius: 0;
   margin: 0;
+  display: none;
 }
 #dfa-header.ui.menu .item {
   padding: 0.4em 0.2em;
@@ -50564,16 +50565,51 @@ input::-moz-focus-inner {
 }
 #dfa-menu {
   z-index: 1;
-  margin-top: 51px;
   border-radius: 0;
   border: none;
+  background: none;
+  box-shadow: none;
+}
+#dfa-menu a.item:before {
+  background: none;
+}
+#dfa-menu a.item {
+  border: none;
+  font-size: 0.8em;
 }
 #dfa-menu a.item:hover {
   background: #CC0505;
+  color: #FFFFFF;
+}
+#dfa-slogan {
+  color: #767676;
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 1em 0 1em 1.8em;
+  font-weight: bold;
 }
 @media only screen and (max-width: 767px) {
   #dfa-menu {
     display: none;
+  }
+  #dfa-slogan {
+    font-size: 1em;
+    margin: 1em 0;
+  }
+}
+/*-------------------
+    COVER
+--------------------*/
+#dfa-cover {
+  height: 340px;
+  background: url(/img/cover.jpg) center center;
+  background-size: cover;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-cover {
+    height: 190px;
+    background-size: 150%;
   }
 }
 /*-------------------
@@ -50638,6 +50674,11 @@ input::-moz-focus-inner {
 #dfa-content p {
   line-height: 2em;
 }
+@media only screen and (max-width: 767px) {
+  #dfa-content p {
+    word-break: break-word;
+  }
+}
 #dfa-content .ui.statistic .label,
 #dfa-embed .ui.statistic .label {
   text-align: left;
@@ -50659,7 +50700,6 @@ input::-moz-focus-inner {
   #dfa-content .ui.container {
     position: relative;
     z-index: 0;
-    margin-top: 60px;
   }
   #dfa-content .ui.statistic .label,
   #dfa-embed .ui.statistic .label {

@@ -103,6 +103,7 @@ $(document).ready(function() {
   });
 
   var scrollCount = 0;
+  var contentTop = $('#dfa-content').offset().top;
   $(window).on('scroll', function() {
     scrollCount++;
     if (scrollCount >= 20) {
@@ -110,9 +111,11 @@ $(document).ready(function() {
       hideEmailForm();
     }
 
-    if ($(window).scrollTop() > 72) {
+    if ($(window).scrollTop() > contentTop) {
+      $('#dfa-header').show();
       $('#dfa-footer').show();
     } else {
+      $('#dfa-header').hide();
       $('#dfa-footer').hide();
     }
   });

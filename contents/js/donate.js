@@ -416,7 +416,7 @@
     '   </div>' +
     '   <p class="thankyou-video" style="padding:0.6em;"></p>' +
     '   <p style="padding: 0 5px 0; text-align: center; font-size: 1.2em; margin: 0;">' +
-    '     Share your support'
+    '     Share your support' +
     '   </p>' +
     '   <p style="padding: 0 5px 5px; margin: 0;">' +
     '     <iframe border="0" src="http://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
