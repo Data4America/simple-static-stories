@@ -5,7 +5,9 @@ block prepend title
 
 
 block content
-  div.ui.segment
+  div.ui.segment.dfa-about
+    h1.ui.header.aligned.center= page.title
+    div.ui.divider
     article.page
       section.content!= typogr(page.html).typogrify()
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });
