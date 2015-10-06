@@ -6,6 +6,7 @@ template: article.jade
 code: https://github.com/Data4America/jobmaps
 data: http://datahub.io/dataset/where-are-the-jobs
 description: "The American economy is now host to 142,288,000 jobs. But where are these jobs located, exactly?"
+published: true
 ---
 
 The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That's a lot of jobs! But where are these jobs located, exactly?
@@ -13,6 +14,8 @@ The latest employment numbers show that non-farm employment in America increased
 This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States. The data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
 
 <span class="more"></span>
+
+**[Click here to see a full visualization!](full-screen/)**
 
 <link rel="stylesheet" href="leaflet-0.7.5.css" />
 <style type="text/css">
@@ -101,6 +104,8 @@ This map is based on the counts of jobs by industry and census block given in th
 * [US Census Bureau Tiger Line Census Block shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 
 **Want to make your own job map? [Read this to see how it's done!](how-to/)**
+
+**[Click here to see a full visualization!](full-screen/)**
 
 <script src="leaflet-0.7.5.js"></script>
 <script>

@@ -1,7 +1,8 @@
 {
   "locals": {
     "url": "http://stories.data4america.org",
-    "name": "Data4America"
+    "name": "Data4America",
+    "development": true
   },
   "plugins": [
     "wintersmith-nap",

@@ -66,9 +66,10 @@ block footer
     h2.ui.header Share this data story
     div.dfa-share
       div.container
-        div.ui.grey.email.button
-          i.icon.mail
-          span.text Email
+        a(href='mailto:?subject=' + page.title + '&body=' + encodeURI(locals.url + page.url))
+          div.ui.grey.email.button
+            i.icon.mail
+            span.text Email
         div.ui.facebook.button
           i.ui.facebook.icon
           span.text Share
