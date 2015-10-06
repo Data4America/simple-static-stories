@@ -13,6 +13,8 @@ The latest employment numbers show that non-farm employment in America increased
 
 This data visualization from Harvard PhD student Robert Manduca plots one dot for every job in the United States. The data is based on state unemployment insurance records, and tabulates the count of jobs by census block.
 
+**[Click here to see a full visualization!](full-screen/)**
+
 <span class="more"></span>
 
 <link rel="stylesheet" href="leaflet-0.7.5.css" />
