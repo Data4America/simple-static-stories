@@ -104,9 +104,10 @@ html(lang='en')
         div.description
           div.dfa-share(style="text-align:center;")
             div.container
-              div.ui.grey.email.button
-                i.icon.mail
-                span.text Email
+              a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '')))
+                div.ui.grey.email.button
+                  i.icon.mail
+                  span.text Email
               div.ui.facebook.button
                 i.ui.facebook.icon
                 span.text Share
