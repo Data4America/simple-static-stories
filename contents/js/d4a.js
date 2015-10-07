@@ -126,17 +126,22 @@ $(document).ready(function() {
 
   if (window.location.pathname.search("/donate") === 0) {
     $('#dfa-footer').remove();
+    $('.dfa-btn-donate').remove();
   }
 
+  var $donateModal = $('#dfa-donate-modal');
+  $donateModal
+    .modal({
+      onShow: function() {
+        $donateModal.modal('refresh');
+      },
+      onHidden: function() {
+        $donateModal.find('.body-text').html('');
+        $.getScript('/js/donate.js');
+      },
+    });
   $('.dfa-btn-donate').click(function() {
-    $('#dfa-donate-modal')
-      .modal({
-        onShow: function() {
-          $('#dfa-donate-modal').modal('refresh');
-        }
-      })
-      .modal('show');
-    ;
+    $donateModal.modal('show');
   });
   $.getScript('/js/donate.js');
 

@@ -944,6 +944,8 @@
       $modThankYou.find('.thankyou-monthly, .thankyou-ontime, .thankyou-member, .thankyou-sponsor').hide();
       $modThankYou.hide();
 
+      $('.thankyou-video').html('');
+
       $formDonate.show();
       justDonate();
       $(window).scrollTop(0);
