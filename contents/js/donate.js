@@ -204,7 +204,7 @@
     '   </tr>' +
     '   <tr>' +
     '     <td style="padding-bottom:0;">' +
-    '       <p style="color:#777; font-size:0.66em; text-align:left;">Data4America is a California nonprofit corporation in the process of partnering with a fiscal sponsor for its 501(c)(3) tax-exempt status. It is also applying for its own 501(c)(3) status from the IRS—which will take 3-9 months to receive. When the fiscal sponsorship partnership is finalized—expected by Oct 30, 2015—your donation will be 100% tax deductible. Data4America will send your tax-deductible donation receipt once the 501(c)(3) fiscal sponsorship is established.</p>' +
+    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America, Inc. is a California nonprofit corporation days away from finalizing its fiscal sponsorship with a local Silicon Valley 501(c)(3) organization. A donation to Data4America will be 100% tax deductible through this fiscal sponsorship. You will receive a tax deductible receipt within 30 days of your donation. <a href="https://www.councilofnonprofits.org/tools-resources/fiscal-sponsorship-nonprofits" target="_blank">Learn more</a> about fiscal sponsorships.</p>' +
     '     </td>' +
     '   </tr>' +
     ' </table>' +
@@ -359,7 +359,7 @@
     '   San Francisco, CA 94123<br />' +
     '   EIN: 47-4629656</p>' +
     '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
-    '   <p style="color:#777; font-size:0.8em;">Data4America is a California nonprofit corporation in the process of applying for a determination from the IRS that it qualifies as a tax-exempt public charity under Section 501(c)(3) of the Internal Revenue Code.  When and if the IRS grants exemption, donations made after July 16, 2015 will be tax deductible.  Donations are not, however, deductible until a final determination is made.</p>' +
+    '   <p style="color:#777; font-size:0.8em;">Data4America, Inc. is a California nonprofit corporation days away from finalizing its fiscal sponsorship with a local Silicon Valley 501(c)(3) organization. A donation to Data4America will be 100% tax deductible through this fiscal sponsorship. You will receive a tax deductible receipt within 30 days of your donation. <a href="https://www.councilofnonprofits.org/tools-resources/fiscal-sponsorship-nonprofits" target="_blank">Learn more</a> about fiscal sponsorships.</p>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
     '   </p>' +
