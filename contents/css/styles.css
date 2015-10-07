@@ -50530,6 +50530,7 @@ input::-moz-focus-inner {
   font-size: 0.8em;
   padding: 0.2em 0.9em 0.1em;
   line-height: 1.55em;
+  width: 5.8em;
 }
 #dfa-header .item.logo {
   padding-left: 0;

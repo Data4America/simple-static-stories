@@ -103,7 +103,7 @@ $(document).ready(function() {
   });
 
   var scrollCount = 0;
-  var contentTop = $('#dfa-content').offset().top;
+  var contentTop = $('#dfa-cover').height();
   $(window).on('scroll', function() {
     scrollCount++;
     if (scrollCount >= 20) {
@@ -111,12 +111,16 @@ $(document).ready(function() {
       hideEmailForm();
     }
 
-    if ($(window).scrollTop() > contentTop) {
-      $('#dfa-header').show();
+    if ($(window).scrollTop() > 10) {
       $('#dfa-footer').show();
     } else {
-      $('#dfa-header').hide();
       $('#dfa-footer').hide();
+    }
+
+    if ($(window).scrollTop() > contentTop) {
+      $('#dfa-header').show();
+    } else {
+      $('#dfa-header').hide();
     }
   });
 

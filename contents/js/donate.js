@@ -12,7 +12,7 @@
     '   <tr>' +
     '     <td>' +
     '       <h4 class="dfa-header-text donate" style="font-size: 1em; margin-bottom: 0;">' +
-    '         Help us bring data science to government. ' +
+    '         Help us bring data science to politics. ' +
     '         <a href="javascript:;" class="dfa-link-learn-more">Learn More</a>' +
     '       </h4>' +
     '       <h4 class="dfa-header-text sponsor" style="display:none; margin: 0; font-size: 1.4em;">' +
