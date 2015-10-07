@@ -103,7 +103,7 @@ $(document).ready(function() {
   });
 
   var scrollCount = 0;
-  var contentTop = $('#dfa-content').offset().top;
+  var contentTop = $('#dfa-cover').height();
   $(window).on('scroll', function() {
     scrollCount++;
     if (scrollCount >= 20) {
@@ -111,28 +111,37 @@ $(document).ready(function() {
       hideEmailForm();
     }
 
-    if ($(window).scrollTop() > contentTop) {
-      $('#dfa-header').show();
+    if ($(window).scrollTop() > 10) {
       $('#dfa-footer').show();
     } else {
-      $('#dfa-header').hide();
       $('#dfa-footer').hide();
+    }
+
+    if ($(window).scrollTop() > contentTop) {
+      $('#dfa-header').show();
+    } else {
+      $('#dfa-header').hide();
     }
   });
 
   if (window.location.pathname.search("/donate") === 0) {
     $('#dfa-footer').remove();
+    $('.dfa-btn-donate').remove();
   }
 
+  var $donateModal = $('#dfa-donate-modal');
+  $donateModal
+    .modal({
+      onShow: function() {
+        $donateModal.modal('refresh');
+      },
+      onHidden: function() {
+        $donateModal.find('.body-text').html('');
+        $.getScript('/js/donate.js');
+      },
+    });
   $('.dfa-btn-donate').click(function() {
-    $('#dfa-donate-modal')
-      .modal({
-        onShow: function() {
-          $('#dfa-donate-modal').modal('refresh');
-        }
-      })
-      .modal('show');
-    ;
+    $donateModal.modal('show');
   });
   $.getScript('/js/donate.js');
 
