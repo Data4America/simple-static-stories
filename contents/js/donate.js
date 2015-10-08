@@ -419,7 +419,7 @@
     '     Share your support' +
     '   </p>' +
     '   <p style="padding: 0 5px 5px; margin: 0;">' +
-    '     <iframe border="0" src="http://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
+    '     <iframe border="0" src="https://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
     '   </p>' +
     '   <p style="padding: 10px 0 0; text-align: center; font-size: 1.4em; margin: 0;">' +
     '     <a href="javascript:;" class="dfa-btn-donate-again">Donate Again</a>'
@@ -857,7 +857,7 @@
     }
 
     function charge() {
-      $.getScript('http://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
+      $.getScript('https://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
 
       goToTop();
       $formDonate.hide();
@@ -909,7 +909,7 @@
         rand: parseInt(Math.random() * 40000)
       });
 
-      $.getScript('http://dev.data4america.org/donate/finalize.php?' + urlVars);
+      $.getScript('https://dev.data4america.org/donate/finalize.php?' + urlVars);
     }
 
     function goToThankYou() {
