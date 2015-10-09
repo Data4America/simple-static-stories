@@ -353,7 +353,7 @@
     '     <li>Publish data-driven and educational stories about politics, government, and public policy across all levels of government. These stories are sourced from the crowd, approved by our non-partisan Editorial Board, and syndicated across the web.</li>' +
     '     <li>Build software to make some of these data sets publicly available for anyone in the world to use.</li>' +
     '     <li>Put on special events bringing together leaders across government, technology, and data science. We\'ll be discussing what the future of America is--and how does technology help us get there.</li>' +
-    '     <li>Potentially expand the Data4America concept of non-partisan Political education through data science, data visualization, and open government data sets to other countries. We have a long-term vision--and are building the underlying technology for--expanding to Data4India, Data4UK, Data4Canada, and even Data4China...</li>' +
+    '     <li>Potentially expand the Data4America concept to other countries utilizing our underlying technology and distributed editorial board model. Imagine Data4India, Data4UK, Data4Canada, and even Data4China...</li>' +
     '   </ol>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
