@@ -94,13 +94,14 @@
     '       <div class="dfa-amount">' +
     '         <span class="preinput">$</span>' +
     '         <input type="number" name="amount" class="dfa-amount-input" value="" placeholder="Enter Amount" />' +
-    '         <span class="postinput">Monthly</span>' +
+    '         <span class="postinput">One Time</span>' +
     '         <div id="dfa-arrow-control"><div class="arrow up"></div><div class="arrow down"></div></div>' +
     '       </div>' +
     '     </td>' +
     '   </tr>' +
     '   <tr class="dfa-field price-options">' +
     '     <td>' +
+    '       <span class="dfa-price-option" data-value="10">$10</span>' +
     '       <span class="dfa-price-option selected" data-value="25">$25</span>' +
     '       <span class="dfa-price-option" data-value="100">$100</span>' +
     '       <span class="dfa-price-option" data-value="250">$250</span>' +
@@ -111,7 +112,7 @@
     '   <tr class="dfa-field monthly-check">' +
     '     <td>' +
     '       <div class="dfa-check">' +
-    '         <input id="dfa-monthly-subscription" name="monthly" type="checkbox" value="1" checked="checked">' +
+    '         <input id="dfa-monthly-subscription" name="monthly" type="checkbox" value="1" >' +
     '         <label for="dfa-monthly-subscription">Make this a recurring monthly gift</label>' +
     '       </div>' +
     '     </td>' +
@@ -336,7 +337,7 @@
     '  </table>' +
     '  <input type="hidden" name="sendNewsletters" value="yes" />' +
     '  <input type="hidden" name="anon" value="no" />' +
-    '  <input type="hidden" name="donationType" value="monthly" />' +
+    '  <input type="hidden" name="donationType" value="onetime" />' +
     '  <input type="hidden" name="donationId" value="" />' +
     '  <input type="hidden" name="amount" value="" />' +
     '  <input type="hidden" name="donateto" value="" />' +
@@ -727,7 +728,7 @@
 
       showHeader('donate');
 
-      $($priceOptions[0]).trigger('click');
+      $($priceOptions[1]).trigger('click');
 
       $linkSponsor.show();
       $linkMember.show();
@@ -1104,7 +1105,7 @@
 
     $('.dfa-amount-input').focus();
 
-    $($priceOptions[0]).trigger('click');
+    $($priceOptions[1]).trigger('click');
 
     populateIssues();
 
