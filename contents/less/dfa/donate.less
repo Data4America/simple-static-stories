@@ -119,6 +119,44 @@ a.dfa-button img {
     text-indent: -9999px;
 }
 
+.dfa-field.price-options td {
+  text-align: center;
+  padding-top: 0;
+}
+
+.dfa-price-option {
+  display: inline-block;
+  padding: 0.6em 1em;
+  border: 2px solid #CC0001;
+  color: #CC0001;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #FFF3F3;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+  .dfa-price-option {
+    padding: 0.4em 0.35em;
+    color: #CC0001;
+    font-size: 0.8em;
+  }
+}
+
+.dfa-price-option:hover {
+  background: #FFCCCC;
+}
+
+.dfa-price-option.selected {
+  background: #CC0001;
+  color:white;
+}
+
+.dfa-price-option.selected:hover {
+  background: #CC0001;
+  color:white;
+}
+
 .icn.credit-card {
     background-image: url(//d2f2byp0zok4br.cloudfront.net/credit-card.svg);
     width: 2.4rem;
@@ -135,7 +173,7 @@ a.dfa-button img {
 }
 
 .icn.cheque {
-    background-image: url(http://dev.data4america.org/assets/images/cheque.png);
+    background-image: url(/img/cheque.png);
     width: 3rem;
     margin-left: 0.3rem;
     margin-top: -0.1em;
@@ -240,36 +278,6 @@ input::-webkit-inner-spin-button {
     left: 0;
 }
 
-/* ARROW CONTROLS */
-#dfa-arrow-control {
-    height: 2.4em;
-    position: absolute;
-    left: 9em;
-    top: 0.4em;
-    width: 1.6em;
-    display:none;
-}
-
-#dfa-arrow-control .up,
-#dfa-arrow-control .down {
-    background-image: url('http://dev.data4america.org/assets/images/arrow-up.png');
-    background-size:100%;
-    width:1.6em;
-    height:1.2em;
-    opacity: 0.6;
-    cursor: pointer;
-    background-size: center center;
-}
-
-#dfa-arrow-control .down {
-    background-image: url('http://dev.data4america.org/assets/images/arrow-down.png');
-}
-
-#dfa-arrow-control .up:hover,
-#dfa-arrow-control .down:hover {
-    opacity: 1;
-}
-
 .dfa-check {
     position: relative;
     text-align: left;
@@ -332,7 +340,7 @@ input::-webkit-inner-spin-button {
     -webkit-locale: en;
     -webkit-perspective-origin: 80px 20px;
     -webkit-transform-origin: 80px 20px;
-    background: rgb(255, 255, 255) url(http://dev.data4america.org/assets/images/select-arrow.png) no-repeat scroll 95% 50% / auto padding-box padding-box;
+    background: rgb(255, 255, 255) url(/img/select-arrow.png) no-repeat scroll 95% 50% / auto padding-box padding-box;
     border: 3px solid rgb(239, 239, 239);
     margin: 0px;
     padding: 5px 35px 5px 15px;

@@ -127,6 +127,7 @@ $(document).ready(function() {
   if (window.location.pathname.search("/donate") === 0) {
     $('#dfa-footer').remove();
     $('.dfa-btn-donate').remove();
+    $('#dfa-donate-modal').remove();
   }
 
   var $donateModal = $('#dfa-donate-modal');

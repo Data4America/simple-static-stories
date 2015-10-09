@@ -99,6 +99,15 @@
     '       </div>' +
     '     </td>' +
     '   </tr>' +
+    '   <tr class="dfa-field price-options">' +
+    '     <td>' +
+    '       <span class="dfa-price-option selected" data-value="25">$25</span>' +
+    '       <span class="dfa-price-option" data-value="100">$100</span>' +
+    '       <span class="dfa-price-option" data-value="250">$250</span>' +
+    '       <span class="dfa-price-option" data-value="500">$500</span>' +
+    '       <span class="dfa-price-option" data-value="1000">$1,000</span>' +
+    '     </td>' +
+    '   </tr>' +
     '   <tr class="dfa-field monthly-check">' +
     '     <td>' +
     '       <div class="dfa-check">' +
@@ -340,10 +349,10 @@
     '   </div>' +
     '   <p>Your support will help us do the following:</p>' +
     '   <ol>' +
-    '     <li>Publish data-driven stories about politics, government, and public policy across all levels of government. These stories are sourced from the crowd, approved by our non-partisan Editorial Board, and syndicated across the web.</li>' +
+    '     <li>Publish data-driven and educational stories about politics, government, and public policy across all levels of government. These stories are sourced from the crowd, approved by our non-partisan Editorial Board, and syndicated across the web.</li>' +
     '     <li>Build software to make some of these data sets publicly available for anyone in the world to use.</li>' +
-    '     <li>Put on special events bringing together leaders across government, technology, and data science. We\'ll be discussing what the future is--and how do we get there.</li>' +
-    '     <li>Expand the Data4America concept of data journalism sourced from the crowed and published by expert editorial boards to other countries. Imagine Data4India, Data4UK, Data4Canada, and even Data4China...</li>' +
+    '     <li>Put on special events bringing together leaders across government, technology, and data science. We\'ll be discussing what the future of America is--and how does technology help us get there.</li>' +
+    '     <li>Potentially expand the Data4America concept of non-partisan Political education through data science, data visualization, and open government data sets to other countries. We have a long-term vision--and are building the underlying technology for--expanding to Data4India, Data4UK, Data4Canada, and even Data4China...</li>' +
     '   </ol>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
@@ -419,7 +428,7 @@
     '     Share your support' +
     '   </p>' +
     '   <p style="padding: 0 5px 5px; margin: 0;">' +
-    '     <iframe border="0" src="http://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
+    '     <iframe border="0" src="https://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
     '   </p>' +
     '   <p style="padding: 10px 0 0; text-align: center; font-size: 1.4em; margin: 0;">' +
     '     <a href="javascript:;" class="dfa-btn-donate-again">Donate Again</a>'
@@ -508,7 +517,8 @@
       $rangeSlider = $('.dfa-range-slider'),
       $sponsorStepButtons = $('.dfa-step-button'),
       $sponsorSelectState = $('.dfa-select.select-states'),
-      $sponsorSelectCountry = $('.dfa-select.select-countries');
+      $sponsorSelectCountry = $('.dfa-select.select-countries'),
+      $priceOptions = $('.dfa-price-option');
 
 
     var sponsorOptions = [
@@ -648,6 +658,7 @@
       $('.dfa-field-sponsor:not(.sub_issue)').show();
       $('.dfa-field-member').hide();
       $('.dfa-field.monthly-check').hide();
+      $('.dfa-field.price-options').hide();
       $('.dfa-field.anon-check').hide();
       $('.dfa-field.choose-donation-table').hide();
       $('.dfa-field.choose-donation').hide();
@@ -672,6 +683,7 @@
 
       $('.dfa-field-member').show();
       $('.dfa-field-sponsor').hide();
+      $('.dfa-field.price-options').hide();
       $('.dfa-field.monthly-check').hide();
       $('.dfa-field.anon-check').hide();
       $('.dfa-field.choose-donation-table').hide();
@@ -699,6 +711,7 @@
       $('.dfa-field.monthly-check').show();
       $('.dfa-field.anon-check').show();
       $('.dfa-field.choose-donation').show();
+      $('.dfa-field.price-options').show();
       $('.dfa-field.donation-input').show();
       $priceArrows.hide();
       $secCheque.hide();
@@ -711,9 +724,10 @@
       $checkMonthly.prop('checked', true);
 
       checkMonthly.apply($checkMonthly[0]);
-      //checkChooseDonation.apply($checkChooseDonation[0]);
 
       showHeader('donate');
+
+      $($priceOptions[0]).trigger('click');
 
       $linkSponsor.show();
       $linkMember.show();
@@ -828,7 +842,7 @@
       if ($modal.length) {
         $modal.parents('.ui.dimmer.modals').scrollTop(0);
       } else {
-        $(window).scrollTop($mod.offset().top);
+        $(window).scrollTop($('#dfa-content').offset().top);
       }
     }
 
@@ -857,7 +871,7 @@
     }
 
     function charge() {
-      $.getScript('http://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
+      $.getScript('https://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
 
       goToTop();
       $formDonate.hide();
@@ -909,7 +923,7 @@
         rand: parseInt(Math.random() * 40000)
       });
 
-      $.getScript('http://dev.data4america.org/donate/finalize.php?' + urlVars);
+      $.getScript('https://dev.data4america.org/donate/finalize.php?' + urlVars);
     }
 
     function goToThankYou() {
@@ -941,7 +955,7 @@
     }
 
     function resetForm() {
-      $modThankYou.find('.thankyou-monthly, .thankyou-ontime, .thankyou-member, .thankyou-sponsor').hide();
+      $modThankYou.find('.thankyou-monthly, .thankyou-onetime, .thankyou-member, .thankyou-sponsor').hide();
       $modThankYou.hide();
 
       $('.thankyou-video').html('');
@@ -1011,6 +1025,19 @@
       $input.val( numberWithCommas(amount) );
     }
 
+    function selectPrice() {
+      $priceOptions.removeClass('selected');
+      $(this).addClass('selected');
+
+      $input.val( $(this).attr('data-value') );
+    }
+
+    function onInputAdded() {
+      $priceOptions.removeClass('selected');
+
+      $('.dfa-price-option[data-value="' + $input.val() + '"]').addClass('selected');
+    }
+
     function openStep() {
       var action = $(this).attr('data-step');
       var $step2 = $('.dfa-sponsor-step.step2');
@@ -1065,14 +1092,19 @@
     $btnBack.on('click', goToDonateForm);
     $btnBackCheque.on('click', goToCheque);
     $btnDonateAgain.on('click', resetForm);
+    $priceOptions.on('click', selectPrice);
 
     $sponsorStepButtons.on('click', openStep);
+
+    $input.on('input', onInputAdded);
 
     $inputTableBudget.on('input', calculateBudget);
 
     $btnProceed.on('click', submitData);
 
     $('.dfa-amount-input').focus();
+
+    $($priceOptions[0]).trigger('click');
 
     populateIssues();
 
