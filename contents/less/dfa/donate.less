@@ -126,20 +126,31 @@ a.dfa-button img {
 
 .dfa-price-option {
   display: inline-block;
-  padding: 0.6em 1em;
+  padding: 0.4em 0.65em;
   border: 2px solid #CC0001;
   color: #CC0001;
   border-radius: 5px;
   cursor: pointer;
-  background: #FFF3F3;
+  background: #fff;
   font-weight: bold;
+  line-height: 1.5em;
+}
+
+.dfa-price-option.rd {
+  background: #FDEAEA;
 }
 
 @media only screen and (max-width: 767px) {
+  .dfa-field.price-options td {
+    padding-bottom: 0;
+  }
+
   .dfa-price-option {
-    padding: 0.4em 0.35em;
     color: #CC0001;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    margin-bottom: 0.25em;
+    line-height: 1.4em;
+    padding-top: 0.5em;
   }
 }
 
@@ -150,6 +161,7 @@ a.dfa-button img {
 .dfa-price-option.selected {
   background: #CC0001;
   color:white;
+
 }
 
 .dfa-price-option.selected:hover {
