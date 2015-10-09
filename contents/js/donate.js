@@ -106,7 +106,7 @@
     '       <span class="dfa-price-option" data-value="100">$100</span>' +
     '       <span class="dfa-price-option" data-value="250">$250</span>' +
     '       <span class="dfa-price-option" data-value="500">$500</span>' +
-    '       <span class="dfa-price-option" data-value="1000">$1,000</span>' +
+    '       <span class="dfa-price-option rd" data-value="1000">$1,000</span>' +
     '     </td>' +
     '   </tr>' +
     '   <tr class="dfa-field monthly-check">' +
@@ -1031,6 +1031,7 @@
       $(this).addClass('selected');
 
       $input.val( $(this).attr('data-value') );
+      $input.focus();
     }
 
     function onInputAdded() {

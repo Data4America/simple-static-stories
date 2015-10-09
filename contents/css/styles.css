@@ -49987,9 +49987,12 @@ a.dfa-button img {
   color: #CC0001;
   border-radius: 5px;
   cursor: pointer;
-  background: #FDEAEA;
+  background: #fff;
   font-weight: bold;
   line-height: 1.5em;
+}
+.dfa-price-option.rd {
+  background: #FDEAEA;
 }
 @media only screen and (max-width: 767px) {
   .dfa-field.price-options td {
@@ -50007,12 +50010,12 @@ a.dfa-button img {
   background: #FFCCCC;
 }
 .dfa-price-option.selected {
-  background: #fff;
-  color: #CC0001;
+  background: #CC0001;
+  color: white;
 }
 .dfa-price-option.selected:hover {
-  background: #fff;
-  color: #CC0001;
+  background: #CC0001;
+  color: white;
 }
 .icn.credit-card {
   background-image: url(//d2f2byp0zok4br.cloudfront.net/credit-card.svg);
