@@ -70,10 +70,10 @@ block footer
           div.ui.grey.email.button
             i.icon.mail
             span.text Email
-        div.ui.facebook.button
+        div.ui.facebook.button(data-url=locals.url)
           i.ui.facebook.icon
           span.text Share
-        div.ui.twitter.button
+        div.ui.twitter.button(data-url=locals.url + page.url, data-text=page.title)
           i.ui.twitter.icon
           span.text Tweet
 

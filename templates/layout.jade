@@ -116,14 +116,15 @@ html(lang='en')
         div.description
           div.dfa-share(style="text-align:center;")
             div.container
-              a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '')))
+              a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '/')))
                 div.ui.grey.email.button
                   i.icon.mail
                   span.text Email
-              div.ui.facebook.button
+              div.ui.facebook.button(data-url=locals.url + (page !== undefined ? page.url : '/'))
                 i.ui.facebook.icon
                 span.text Share
-              div.ui.twitter.button
+              - console.log(page);
+              div.ui.twitter.button(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
                 i.ui.twitter.icon
                 span.text Tweet
 
@@ -139,7 +140,7 @@ html(lang='en')
 
           h4.ui.header Link:
           div.ui.action.input.fluid
-            input#cliptext(type="text", value="http://test.data4america.org/geography-american-jobs/")
+            input#cliptext(type="text", value=locals.url + (page !== undefined ? page.url : '/'))
             button.copy-button.ui.button.icon(data-clipboard-target="#cliptext")
               i.icon.copy
 
@@ -148,7 +149,6 @@ html(lang='en')
 
   block js
     != nap.js('main')
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
