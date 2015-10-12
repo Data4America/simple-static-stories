@@ -267,18 +267,16 @@ function bars(containerId, amounts, amounts2) {
 
     rows.append('td')
         .on('mouseover', function (d) {
-            div.style('opacity', 0.9);
+            div.style('opacity', 1);
             div.html(function () {
                     if (d.sign === 1) {
                         return 'Costs $' + (d.value / 1e12).toFixed(2) + ' trillion';
                     }
                     return 'Reduces costs $' + (-d.value / 1e12).toFixed(2) + ' trillion';
-                })
-               .style('left', (d3.event.pageX + 15) + 'px')
-               .style('top', (d3.event.pageY) + 'px');
+                });
         })
         .on('mouseout', function (d) {
-            div.style('opacity', 0);
+            div.html('');
         })
         .append('div')
         .style('width', function (d) { return d.width + 'px'; })

@@ -27,14 +27,8 @@ Basic income is a system where the government directly gives money to all its ci
   }
 
   #tooltip {
-    background-color: #000;
-    color: #fff;
-    position: absolute;
-    border-radius: 8px;
-    pointer-events: none;
-    padding: 5px;
-    z-index: 10;
-    opacity: 0;
+    color: #888;
+    height: 1em;
   }
 </style>
 
@@ -54,12 +48,12 @@ Here, a basic income model is compared against a "basic job" model where the gov
 
 ### Histograms of total costs, 1000 simulations
 
-<div class="row">
-  <div class="col-sm-6">
+<div class="ui two column stackable grid">
+  <div class="column">
     <h4>Basic income</h4>
     <div id="biHist"></div>
   </div>
-  <div class="col-sm-6">
+  <div class="column">
     <h4>Basic job</h4>
     <div id="bjHist"></div>
   </div>
@@ -73,17 +67,17 @@ If better estimates and more thorough modeling can produce a narrower distributi
 
 ### Average values of components, 1000 simulations
 
-<div id="tooltip"></div>
-<div class="row">
-  <div class="col-md-6 col-lg-5">
+<div class="ui two column stackable grid">
+  <div class="column" style="padding-bottom: 0">
     <h4>Basic income</h4>
     <table id="biBars"></table>
   </div>
-  <div class="col-md-6 col-lg-5">
+  <div class="column" style="padding-bottom: 0">
     <h4>Basic job</h4>
     <table id="bjBars"></table>
   </div>
-</div><p></p>
+</div>
+<p id="tooltip"></p>
 
 <a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
 
