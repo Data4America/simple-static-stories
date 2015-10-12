@@ -3,7 +3,7 @@ template: about.jade
 title: About Data4America
 ---
 
-# Bringing Data Science to the study of Politics
+# Bringing Data Science to Politics
 
 Data4America.org is an educational and non-partisan non-profit bringing data science to politics.
 
