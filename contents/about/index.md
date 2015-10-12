@@ -5,7 +5,7 @@ title: About Data4America
 
 # Bringing Data Science to the study of Politics
 
-Data4America is a non-partisan, not-for-profit, and crowdsourced media organization bringing data science, data visualization, and open data sets to the study of politics. 
+Data4America.org is an educational and non-partisan non-profit bringing data science to politics.
 
 **How It Works:** Anyone can submit a data visualization, data model, or infographic to Data4America.
 
