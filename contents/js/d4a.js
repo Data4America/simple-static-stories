@@ -144,7 +144,14 @@ $(document).ready(function() {
   $('.dfa-btn-donate').click(function() {
     $donateModal.modal('show');
   });
-  $.getScript('/js/donate.js');
+
+  $.getScript('https://checkout.stripe.com/checkout.js', function() {
+    $.getScript('/js/donate.js');
+  });
+
+  $.getScript('//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', function() {
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[3]='LNAME';ftypes[3]='text';fnames[2]='AMOUNT';ftypes[2]='number';fnames[4]='DONATETO';ftypes[4]='text';fnames[6]='TSHIRT';ftypes[6]='text';fnames[7]='FACEBOOK';ftypes[7]='url';fnames[8]='TWITTER';ftypes[8]='url';fnames[9]='LINKEDIN';ftypes[9]='url';fnames[5]='ADDRESS';ftypes[5]='text';fnames[10]='ID';ftypes[10]='text';fnames[11]='DT';ftypes[11]='text';fnames[12]='ANON';ftypes[12]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+  });
 
   $('.dfa-btn-share').click(function() {
     $('#dfa-share-modal').modal('show');
