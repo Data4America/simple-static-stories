@@ -1,0 +1,22 @@
+{
+  "name": "Chris Belsky",
+  "title": "",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": false,
+  "staff": true,
+  "staffTitle": "Operations",
+  "bio": "Polymath attorney. Experience @YouTube Copyright, @California Senate; @UC Hastings, @American Constitution Society, @USC, @Semester at Sea.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/chrisbelsky"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/chris-belsky/2/a56/b90"
+    }
+  ],
+  "id": "chris-belsky"
+}

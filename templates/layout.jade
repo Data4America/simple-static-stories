@@ -47,25 +47,25 @@ html(lang='en')
 
         div#dfa-menu.ui.small.main.menu
           div.ui.text.container
-            a.item(href="/", target="blank") STORIES
-            a.item(href="/about/", target="blank") ABOUT
-            a.item(href="/team/", target="blank") OUR TEAM
-            a.item(href="/donate/", target="blank") DONATE
-            a.item(href="/upload/", target="blank") SUBMIT CONTENT
-            a.item(href="http://data.data4america.org/", target="blank") DATA SETS
-            a.item(href="http://git.data4america.org/", target="blank") GITHUB
+            a.item(href="/") STORIES
+            a.item(href="/about/") ABOUT
+            a.item(href="/team/") OUR TEAM
+            a.item(href="/donate/") DONATE
+            a.item(href="/upload/") SUBMIT CONTENT
+            a.item(href="http://data.data4america.org/") DATA SETS
+            a.item(href="http://git.data4america.org/") GITHUB
 
         div#dfa-menu-mobile
           div.ui.text.container
             div.ui.small.main.menu.four.item
-                a.item(href="/", target="blank") STORIES
-                a.item(href="/about/", target="blank") ABOUT
-                a.item(href="/team/", target="blank") OUR TEAM
-                a.item(href="/donate/", target="blank") DONATE
+                a.item(href="/") STORIES
+                a.item(href="/about/") ABOUT
+                a.item(href="/team/") OUR TEAM
+                a.item(href="/donate/") DONATE
             div.ui.small.main.menu.second.three.item
-                a.item(href="http://data4america.org/upload", target="blank") SUBMIT CONTENT
-                a.item(href="http://data4america.org/datasets", target="blank") DATA SETS
-                a.item(href="http://data4america.org/github", target="blank") GITHUB
+                a.item(href="http://data4america.org/upload") SUBMIT CONTENT
+                a.item(href="http://data4america.org/datasets") DATA SETS
+                a.item(href="http://data4america.org/github") GITHUB
 
     div#dfa-subscribe-modal.ui.modal.small
       i.close.icon
@@ -116,14 +116,15 @@ html(lang='en')
         div.description
           div.dfa-share(style="text-align:center;")
             div.container
-              a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '')))
+              a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '/')))
                 div.ui.grey.email.button
                   i.icon.mail
                   span.text Email
-              div.ui.facebook.button
+              div.ui.facebook.button(data-url=locals.url + (page !== undefined ? page.url : '/'))
                 i.ui.facebook.icon
                 span.text Share
-              div.ui.twitter.button
+              - console.log(page);
+              div.ui.twitter.button(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
                 i.ui.twitter.icon
                 span.text Tweet
 
@@ -139,7 +140,7 @@ html(lang='en')
 
           h4.ui.header Link:
           div.ui.action.input.fluid
-            input#cliptext(type="text", value="http://test.data4america.org/geography-american-jobs/")
+            input#cliptext(type="text", value=locals.url + (page !== undefined ? page.url : '/'))
             button.copy-button.ui.button.icon(data-clipboard-target="#cliptext")
               i.icon.copy
 
@@ -148,6 +149,5 @@ html(lang='en')
 
   block js
     != nap.js('main')
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
