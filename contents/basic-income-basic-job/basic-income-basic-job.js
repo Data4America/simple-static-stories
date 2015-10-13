@@ -168,9 +168,11 @@ run('CYO');
 // Update permalink by calling this function
 function updateUrl() {
     // Do this instead of directly setting window.location.hash to prevent adding extra history entries
-    var baseUrl = window.location.href.split('#')[0];
+    var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
     var url = baseUrl + '#' + encodeURIComponent(state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
-    window.location.replace(url);
+    if (window.location.pathname.indexOf('local') >= 0) {
+        window.location.replace(url);
+    }
     document.getElementById('permalink').value = url;
 }
 
