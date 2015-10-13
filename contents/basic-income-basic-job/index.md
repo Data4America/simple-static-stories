@@ -68,6 +68,8 @@ Here, a basic income model is compared against a "basic job" model where the gov
   </div>
 </div>
 
+<a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
+
 In both examples, there is clearly a lot of variability in how much the programs cost. But by doing a Monte Carlo simulation, the range of outcomes can be seen. From these results, it is apparent that our model of basic income is actually not more costly than our model of basic job, although there is enough overlap to call them roughly equivalent.
 
 If better estimates and more thorough modeling can produce a narrower distribution that lies closer to $0 than to $2 trillion, that would be good. But regardless, given a US budget that is already denominated in trillions of dollars, this model shows that basic income need not be prohibitively expensive.
@@ -85,6 +87,8 @@ If better estimates and more thorough modeling can produce a narrower distributi
   </div>
 </div>
 <div id="tooltip" class="tooltip"></div>
+
+<a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
 
 The red bars show costs, the black bars show reductions in costs.
 
@@ -142,6 +146,8 @@ And mathematical modeling is a useful tool for quantitatively explaining your re
   </div>
 </div>
 
+<a href="javascript:run('CYO')">Click to re-run Monte Carlo simulations</a>
+
 ### Average values of components, 1000 simulations
 
 <div class="ui two column stackable grid">
@@ -155,6 +161,8 @@ And mathematical modeling is a useful tool for quantitatively explaining your re
   </div>
 </div>
 <div id="tooltipCYO" class="tooltip"></div>
+
+<a href="javascript:run('CYO')">Click to re-run Monte Carlo simulations</a>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script type="text/javascript" src="basic-income-basic-job.js"></script>
