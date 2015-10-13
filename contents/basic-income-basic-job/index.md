@@ -46,7 +46,7 @@ Here, a basic income model is compared against a "basic job" model where the gov
 
 ## Results
 
-<div class="ui form">
+<form class="ui form">
   <div class="field">
     <div class="four fields">
       <div class="field">
@@ -66,15 +66,11 @@ Here, a basic income model is compared against a "basic job" model where the gov
         <input type="text" id="disabledAdults">
       </div>
       <div class="field">
-        <label>Eliminated Wealth Transfers ($)</label>
-        <input type="text" id="currentWealthTransfers">
+        <br><br><div class="ui button" id="recalculate">Recalculate</div>
       </div>
     </div>
   </div>
-  <center>
-    <div class="ui button" id="recalculate">Recalculate</div>
-  </center>
-</div>
+</form>
 
 ### Histograms of total costs, 1000 simulations
 
@@ -113,9 +109,11 @@ Although basic income has much higher direct costs due to its broader population
 
 Additionally, through this analysis you can see that it is unlikely that unleashing the creative geniuses stuck in crappy jobs will result in significant economic gains, although we might get a few more Harry Potters out of it.
 
-## Conclusions
+## Discussion
 
-There are two conclusions here.
+Now the real question is, is that cost worth it? What programs could you eliminate with a basic income? [We currently spend about $1 trillion/year on anti-povery programs](http://www.cato-unbound.org/2014/08/26/basic-income-guarantee-simplicity-what-cost), but maybe you want to cut [even more than that](https://www.chrisstucchio.com/blog/2013/basic_income_vs_basic_job.html). Whatever your desired cuts, you should weight them against the costs of a basic income.
+
+Ultimately, there are two conclusions here.
 
 Basic income would not necessarily be prohibitively expensive, although of course the devil is in the details.
 

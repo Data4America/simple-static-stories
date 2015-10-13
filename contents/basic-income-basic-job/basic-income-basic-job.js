@@ -18,11 +18,23 @@ var state = {
     // In the 2010 census, there were 227 million adults. Of those, 154 million were in the labor force and 21 million were disabled. 
     numAdults: 227e6,
     laborForce: 154e6,
-    disabledAdults: 21e6,
-
-    // As mentioned above, part of the reason to implement basic income is to eliminate inefficient government welfare programs. Let's start with a very optimistic estimate of how much this could save - say, [2010 US government spending](http://www.usgovernmentspending.com/piechart_2010_US_total) minus spending for education, defense, protection, transportation, and interest. That's $3.4 trillion.
-    currentWealthTransfers: 3369e9
+    disabledAdults: 21e6
 };
+
+// Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
+var parts = decodeURIComponent(window.location.hash).split(',');
+parts[0] = parts[0].slice(1); // Get rid of #
+parts = parts.map(function (part) {
+    return parseFloat(part);
+});
+if (parts.length === 4 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2]) && !isNaN(parts[3])) {
+    var state = {
+        basicIncome: parts[0],
+        numAdults: parts[1],
+        laborForce: parts[2],
+        disabledAdults: parts[3]
+    };
+}
 
 // I can hear you already! Maybe you don't want to cut all the programs I just proposed to cut. Maybe you want to cut some things that I didn't cut, such as defense spending. Here's the beauty of this model: [it's simple and it's open source](https://github.com/dumbmatter/basic-income-basic-job). With a little bit of programming knowledge, you can change these assumptions and see how it adds up. For example, you could keep Medicaid by cutting defense spending by 50%. The important thing is to do the math.
 
@@ -37,7 +49,6 @@ function basicIncomeCostBenefit() {
 
     //  First, **how much does it cost to send that much money to so many people?** Well, I'm going to cut some money right off the top. Although the simplest basic income system pays the same amount to everyone, is also possible to have a system like progressive income tax, where it gradually phases out. In fact, my fellow Rutgers alumnus Milton Friedman proposed to implement basic income through a negative income tax, which would naturally phase out as income increases. Let's assume that reduces costs to roughly `1/2 * numAdults * basicIncome` or $1.65 trillion. That's a lot of money, but we'll see how it all adds up at the end.
     amounts.directCosts = 1/2 * state.numAdults * state.basicIncome;
-console.log(amounts.directCosts, state.basicIncome);
 
     // There is also some **administrative overhead**, but due to the simplicity of determining eligibility and payouts, this will be small, let's say maybe $250 per adult.
     var administrativeCostPerPerson = gaussRand(250, 75);
@@ -149,32 +160,41 @@ function run() {
 // Run the simulations on page load
 run();
 
+// Update permalink by calling this function
+function updateUrl() {
+    // Do this instead of directly setting window.location.hash to prevent adding extra history entries
+    var baseUrl = window.location.href.split('#')[0];
+    window.location.replace(baseUrl + '#' + encodeURIComponent(state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults));
+}
+
 // Initialize UI
 var formEls = {
     basicIncome: document.getElementById('basicIncome'),
     numAdults: document.getElementById('numAdults'),
     laborForce: document.getElementById('laborForce'),
-    disabledAdults: document.getElementById('disabledAdults'),
-    currentWealthTransfers: document.getElementById('currentWealthTransfers')
+    disabledAdults: document.getElementById('disabledAdults')
 };
 for (var key in formEls) {
     if (formEls.hasOwnProperty(key)) {
+        console.log(key);
         formEls[key].value = state[key];
+        console.log(formEls[key].value);
     }
 }
 document.getElementById('recalculate').addEventListener('click', function () {
-    console.log('recalculate');
-
     for (var key in formEls) {
         if (formEls.hasOwnProperty(key)) {
             var value = parseFloat(formEls[key].value);
             if (!isNaN(value)) {
+                console.log('set', key, 'to', value)
                 state[key] = value;
             }
         }
     }
 
     run();
+
+    updateUrl();
 });
 
 // ## Display results
@@ -184,15 +204,19 @@ function render() {
     bars('biBars', biAmountsAvg, bjAmountsAvg);
     bars('bjBars', bjAmountsAvg, biAmountsAvg);
 
-    histogram('biHist', biTotals);
-    histogram('bjHist', bjTotals);
+    var allTotals = biTotals.concat(bjTotals);
+    var min = Math.floor(Math.min.apply(null, allTotals));
+    var max = Math.ceil(Math.max.apply(null, allTotals));
+
+    histogram('biHist', biTotals, [min, max]);
+    histogram('bjHist', bjTotals, [min, max]);
 }
 
 // The histograms need to be re-rendered when the size of the window changes, otherwise they won't fit in the window correctly
 window.addEventListener('resize', render);
 
 // Plot one of the histograms, showing the distribution of possible costs
-function histogram(containerId, values) {
+function histogram(containerId, values, domain) {
     var container = document.getElementById(containerId);
     container.innerHTML = '';
 
@@ -201,7 +225,7 @@ function histogram(containerId, values) {
         height = 200 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
-        .domain([0, 4])
+        .domain(domain)
         .range([0, width]);
 
     // Generate a histogram with 10 evenly-spaced bins from input values
@@ -230,7 +254,7 @@ function histogram(containerId, values) {
 
     bar.append('rect')
         .attr('x', 1)
-        .attr('width', x(data[0].dx) - 1)
+        .attr('width', x(data[0].dx + domain[0]) - 1)
         .attr('height', function (d) { return height - y(d.y); });
 
     svg.append('g')
