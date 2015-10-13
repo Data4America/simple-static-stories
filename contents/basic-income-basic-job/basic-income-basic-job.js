@@ -11,7 +11,7 @@
 // ## Constants
 // ------------
 // These are just default values! The user can change them easily through a form.
-var state = {
+var defaultState = {
     // Our goal is to make sure everyone gets at least the minimum wage ($7.25/hr for 40 hours/week and 50 weeks/year, or $14,500/year) even without working.
     basicIncome: 7.25 * 40 * 50,
 
@@ -34,6 +34,8 @@ if (parts.length === 4 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2
         laborForce: parts[2],
         disabledAdults: parts[3]
     };
+} else {
+    var state = defaultState;
 }
 
 // I can hear you already! Maybe you don't want to cut all the programs I just proposed to cut. Maybe you want to cut some things that I didn't cut, such as defense spending. Here's the beauty of this model: [it's simple and it's open source](https://github.com/dumbmatter/basic-income-basic-job). With a little bit of programming knowledge, you can change these assumptions and see how it adds up. For example, you could keep Medicaid by cutting defense spending by 50%. The important thing is to do the math.
@@ -43,7 +45,7 @@ if (parts.length === 4 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2
 // Now, we're going to enumerate all the costs and benefits associated with a basic income. Because there is uncertainty in calculating each of these factors, I will often going pick a relatively wide range of random values to represent a variety of possible outcomes and repeat my calculations many times. This is called the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method) and it's a good way to understand uncertainty in an estimate involving randomness.
 
 // Each time this function is called, the model will be run once. Because there is randomness in the model, the output will vary. Later, this function will be run many times to assess the full range of possible outcomes.
-function basicIncomeCostBenefit() {
+function basicIncomeCostBenefit(state) {
     // This object will store all the costs and benefits of the basic income as key/value pairs.
     var amounts = {};
 
@@ -78,7 +80,7 @@ function basicIncomeCostBenefit() {
 // A reasonable comparison for a basic income is, what if the government just gave every unemployed person an minimum wage job? That would also have a high cost, but some benefits too, right? That's what was proposed in [the article that inspired this one](https://www.chrisstucchio.com/blog/2013/basic_income_vs_basic_job.html), but let's see how likely that is.
 
 // Like the basic income model, this function will run the model once each time it is called. The output of this function is the same format as `basicIncomeCostBenefit`, so the results can be easily compared.
-function basicJobCostBenefit() {
+function basicJobCostBenefit(state) {
     var amounts = {};
 
     // Again, there is some uncertainty about the **effects on the labor force**. Maybe some people will desperately take other jobs to avoid a basic job. Maybe others will see the basic job as favorable to their current job. Let's treat this the same as in the basic income scenario, allowing it to vary between positive and negative.
@@ -121,18 +123,20 @@ var bjTotals = [];
 var biAmountsAvg;
 var bjAmountsAvg;
 
-function run() {
+function run(cyo) {
     // Number of simulations to run at once
     var N = 1000;
 
+    var localState = cyo === 'CYO' ? state : defaultState;
+
     // Run the modesl N times and save the results
     for (var i = 0; i < N; i++) {
-        biAmounts[i] = basicIncomeCostBenefit();
+        biAmounts[i] = basicIncomeCostBenefit(localState);
         biTotals[i] = Object.keys(biAmounts[i]).reduce(function (total, key) {
             return biAmounts[i][key] / 1e12 + total;
         }, 0);
 
-        bjAmounts[i] = basicJobCostBenefit();
+        bjAmounts[i] = basicJobCostBenefit(localState);
         bjTotals[i] = Object.keys(bjAmounts[i]).reduce(function (total, key) {
             return bjAmounts[i][key] / 1e12 + total;
         }, 0);
@@ -154,11 +158,12 @@ function run() {
     bjAmountsAvg = bjAmounts.reduce(amountsAvgReducer, {});
 
     // This will generate and display charts based on the generated results - see the next section for details
-    render();
+    render(cyo);
 }
 
 // Run the simulations on page load
 run();
+run('CYO');
 
 // Update permalink by calling this function
 function updateUrl() {
@@ -194,7 +199,7 @@ document.getElementById('recalculate').addEventListener('click', function () {
         }
     }
 
-    run();
+    run('CYO');
 
     updateUrl();
 });
@@ -202,16 +207,18 @@ document.getElementById('recalculate').addEventListener('click', function () {
 // ## Display results
 // -----------------
 // Generate and display all charts
-function render() {
-    bars('biBars', 'tooltip', biAmountsAvg, bjAmountsAvg);
-    bars('bjBars', 'tooltip', bjAmountsAvg, biAmountsAvg);
+function render(cyo) {
+    cyo = cyo === 'CYO' ? 'CYO' : '';
+
+    bars('biBars' + cyo, 'tooltip' + cyo, biAmountsAvg, bjAmountsAvg);
+    bars('bjBars' + cyo, 'tooltip' + cyo, bjAmountsAvg, biAmountsAvg);
 
     var allTotals = biTotals.concat(bjTotals);
     var min = Math.floor(Math.min.apply(null, allTotals));
     var max = Math.ceil(Math.max.apply(null, allTotals));
 
-    histogram('biHist', biTotals, [min, max]);
-    histogram('bjHist', bjTotals, [min, max]);
+    histogram('biHist' + cyo, biTotals, [min, max]);
+    histogram('bjHist' + cyo, bjTotals, [min, max]);
 }
 
 // The histograms need to be re-rendered when the size of the window changes, otherwise they won't fit in the window correctly
