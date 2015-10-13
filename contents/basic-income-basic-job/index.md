@@ -47,14 +47,6 @@ Here, a basic income model is compared against a "basic job" model where the gov
 
 ## Results
 
-<p>
-  <div class="ui form">
-    <div class="field">
-      <input type="text" id="permalink" placeholder="Permalink">
-    </div>
-  </div>
-</p>
-
 ### Histograms of total costs, 1000 simulations
 
 <div class="ui two column stackable grid">
@@ -132,6 +124,14 @@ And mathematical modeling is a useful tool for quantitatively explaining your re
     <div class="ui button" id="recalculate">Generate</div>
   </center>
 </form>
+
+<p>
+  <div class="ui form">
+    <div class="field">
+      <input type="text" id="permalink" placeholder="Permalink">
+    </div>
+  </div>
+</p>
 
 ### Histograms of total costs, 1000 simulations
 
