@@ -102,6 +102,10 @@ And mathematical modeling is a useful tool for quantitatively explaining your re
 ## Create Your Own
 
 <form class="ui form">
+  <div class="field">
+    <label>Region Name</label>
+    <input type="text" id="regionName">
+  </div>
   <div class="four fields">
     <div class="field">
       <label>Basic Income ($/person)</label>

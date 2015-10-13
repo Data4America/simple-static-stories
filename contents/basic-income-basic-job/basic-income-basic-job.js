@@ -18,21 +18,27 @@ var defaultState = {
     // In the 2010 census, there were 227 million adults. Of those, 154 million were in the labor force and 21 million were disabled. 
     numAdults: 227e6,
     laborForce: 154e6,
-    disabledAdults: 21e6
+    disabledAdults: 21e6,
+
+    regionName: 'USA'
 };
 
 // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
 var parts = decodeURIComponent(window.location.hash).split(',');
 parts[0] = parts[0].slice(1); // Get rid of #
-parts = parts.map(function (part) {
+parts = parts.map(function (part, i) {
+    if (i === 0) {
+        return hackyEscape(part);
+    }
     return parseFloat(part);
 });
-if (parts.length === 4 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2]) && !isNaN(parts[3])) {
+if (parts.length === 5 && !isNaN(parts[1]) && !isNaN(parts[2]) && !isNaN(parts[3]) && !isNaN(parts[4])) {
     var state = {
-        basicIncome: parts[0],
-        numAdults: parts[1],
-        laborForce: parts[2],
-        disabledAdults: parts[3]
+        basicIncome: parts[1],
+        numAdults: parts[2],
+        laborForce: parts[3],
+        disabledAdults: parts[4],
+        regionName: parts[0]
     };
 } else {
     var state = defaultState;
@@ -169,7 +175,7 @@ run('CYO');
 function updateUrl() {
     // Do this instead of directly setting window.location.hash to prevent adding extra history entries
     var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
-    var url = baseUrl + '#' + encodeURIComponent(state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
+    var url = baseUrl + '#' + encodeURIComponent(state.regionName + ',' + state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
     if (window.location.pathname.indexOf('local') >= 0) {
         window.location.replace(url);
     }
@@ -181,22 +187,29 @@ var formEls = {
     basicIncome: document.getElementById('basicIncome'),
     numAdults: document.getElementById('numAdults'),
     laborForce: document.getElementById('laborForce'),
-    disabledAdults: document.getElementById('disabledAdults')
+    disabledAdults: document.getElementById('disabledAdults'),
+    regionName: document.getElementById('regionName')
 };
 for (var key in formEls) {
     if (formEls.hasOwnProperty(key)) {
-        console.log(key);
         formEls[key].value = state[key];
-        console.log(formEls[key].value);
     }
 }
+if (document.getElementById('regionNameTitle')) { document.getElementById('regionNameTitle').innerHTML = state.regionName; }
 document.getElementById('recalculate').addEventListener('click', function () {
     for (var key in formEls) {
         if (formEls.hasOwnProperty(key)) {
-            var value = parseFloat(formEls[key].value);
-            if (!isNaN(value)) {
-                console.log('set', key, 'to', value)
+            if (key === 'regionName') {
+                // WARNING BIG HACK SECURITY RISK
+                value = hackyEscape(formEls[key].value);
                 state[key] = value;
+                if (document.getElementById('regionNameTitle')) { document.getElementById('regionNameTitle').innerHTML = value; }
+            } else {
+                var value = parseFloat(formEls[key].value);
+                if (!isNaN(value)) {
+                    console.log('set', key, 'to', value)
+                    state[key] = value;
+                }
             }
         }
     }
@@ -381,4 +394,14 @@ function gaussRand(mu, sigma) {
 function binomRand(N, p) {
     var count = Math.round(gaussRand(N * p, Math.sqrt(N * p * (1 - p))));
     return count > 0 ? count : 0;
+}
+
+// ## WARNING WARNING SECURITY HOLE
+
+function hackyEscape(string) {
+console.log(string);
+    return string.replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
 }

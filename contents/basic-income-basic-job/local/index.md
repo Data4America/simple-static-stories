@@ -1,5 +1,5 @@
 ---
-title: "My Basic Income Policy Analysis for <Name of Geography>"
+title: "My Basic Income Policy Analysis"
 author: jeremy-scheff
 date: 2015-09-11
 template: article.jade
@@ -27,7 +27,13 @@ child: true
   }
 </style>
 
+# Analysis for: <span id="regionNameTitle"></span>
+
 <form class="ui form">
+  <div class="field">
+    <label>Region Name</label>
+    <input type="text" id="regionName">
+  </div>
   <div class="four fields">
     <div class="field">
       <label>Basic Income ($/person)</label>
