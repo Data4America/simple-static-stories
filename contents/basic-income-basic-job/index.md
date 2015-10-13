@@ -47,7 +47,6 @@ Here, a basic income model is compared against a "basic job" model where the gov
 ## Results
 
 <form class="ui form">
-  <div class="field">
     <div class="four fields">
       <div class="field">
         <label>Basic Income ($/person)</label>
@@ -69,8 +68,15 @@ Here, a basic income model is compared against a "basic job" model where the gov
         <br><br><div class="ui button" id="recalculate">Recalculate</div>
       </div>
     </div>
-  </div>
 </form>
+
+<p>
+  <div class="ui form">
+    <div class="field">
+      <input type="text" id="permalink" placeholder="Permalink">
+    </div>
+  </div>
+</p>
 
 ### Histograms of total costs, 1000 simulations
 

@@ -164,7 +164,9 @@ run();
 function updateUrl() {
     // Do this instead of directly setting window.location.hash to prevent adding extra history entries
     var baseUrl = window.location.href.split('#')[0];
-    window.location.replace(baseUrl + '#' + encodeURIComponent(state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults));
+    var url = baseUrl + '#' + encodeURIComponent(state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
+    window.location.replace(url);
+    document.getElementById('permalink').value = url;
 }
 
 // Initialize UI
