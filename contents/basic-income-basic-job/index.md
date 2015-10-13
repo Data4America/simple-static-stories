@@ -46,6 +46,36 @@ Here, a basic income model is compared against a "basic job" model where the gov
 
 ## Results
 
+<div class="ui form">
+  <div class="field">
+    <div class="four fields">
+      <div class="field">
+        <label>Basic Income ($/person)</label>
+        <input type="text" id="basicIncome">
+      </div>
+      <div class="field">
+        <label><br># Adults</label>
+        <input type="text" id="numAdults">
+      </div>
+      <div class="field">
+        <label><br># in Labor Force</label>
+        <input type="text" id="laborForce">
+      </div>
+      <div class="field">
+        <label><br># Disabled Adults</label>
+        <input type="text" id="disabledAdults">
+      </div>
+      <div class="field">
+        <label>Eliminated Wealth Transfers ($)</label>
+        <input type="text" id="currentWealthTransfers">
+      </div>
+    </div>
+  </div>
+  <center>
+    <div class="ui button" id="recalculate">Recalculate</div>
+  </center>
+</div>
+
 ### Histograms of total costs, 1000 simulations
 
 <div class="ui two column stackable grid">
@@ -58,8 +88,6 @@ Here, a basic income model is compared against a "basic job" model where the gov
     <div id="bjHist"></div>
   </div>
 </div>
-
-<a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
 
 In both examples, there is clearly a lot of variability in how much the programs cost. But by doing a Monte Carlo simulation, the range of outcomes can be seen. From these results, it is apparent that our model of basic income is actually not more costly than our model of basic job, although there is enough overlap to call them roughly equivalent.
 
@@ -78,8 +106,6 @@ If better estimates and more thorough modeling can produce a narrower distributi
   </div>
 </div>
 <p id="tooltip"></p>
-
-<a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
 
 The red bars show costs, the black bars show reductions in costs.
 
