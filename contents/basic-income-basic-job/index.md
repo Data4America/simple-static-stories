@@ -26,9 +26,10 @@ Basic income is a system where the government directly gives money to all its ci
     shape-rendering: crispEdges;
   }
 
-  #tooltip {
+  .tooltip {
     color: #888;
-    height: 1em;
+    height: 2em;
+    margin-top: 1em;
   }
 </style>
 
@@ -45,30 +46,6 @@ Here, a basic income model is compared against a "basic job" model where the gov
 [Click here.](methods.html)
 
 ## Results
-
-<form class="ui form">
-    <div class="four fields">
-      <div class="field">
-        <label>Basic Income ($/person)</label>
-        <input type="text" id="basicIncome">
-      </div>
-      <div class="field">
-        <label># Adults</label>
-        <input type="text" id="numAdults">
-      </div>
-      <div class="field">
-        <label># in Labor Force</label>
-        <input type="text" id="laborForce">
-      </div>
-      <div class="field">
-        <label># Disabled Adults</label>
-        <input type="text" id="disabledAdults">
-      </div>
-    </div>
-    <center>
-      <div class="ui button" id="recalculate">Generate</div>
-    </center>
-</form>
 
 <p>
   <div class="ui form">
@@ -107,7 +84,7 @@ If better estimates and more thorough modeling can produce a narrower distributi
     <table id="bjBars"></table>
   </div>
 </div>
-<p id="tooltip"></p>
+<div id="tooltip" class="tooltip"></div>
 
 The red bars show costs, the black bars show reductions in costs.
 
@@ -124,6 +101,60 @@ Ultimately, there are two conclusions here.
 Basic income would not necessarily be prohibitively expensive, although of course the devil is in the details.
 
 And mathematical modeling is a useful tool for quantitatively explaining your reasoning. I know my reasoning here is very simple and likely very wrong at times, but at least it's explicit. My only request is that criticism comes with a model.
+
+
+## Create Your Own
+
+<form class="ui form">
+  <div class="four fields">
+    <div class="field">
+      <label>Basic Income ($/person)</label>
+      <input type="text" id="basicIncome">
+    </div>
+    <div class="field">
+      <label># Adults</label>
+      <input type="text" id="numAdults">
+    </div>
+    <div class="field">
+      <label># in Labor Force</label>
+      <input type="text" id="laborForce">
+    </div>
+    <div class="field">
+      <label># Disabled Adults</label>
+      <input type="text" id="disabledAdults">
+    </div>
+  </div>
+  <center>
+    <div class="ui button" id="recalculate">Generate</div>
+  </center>
+</form>
+
+### Histograms of total costs, 1000 simulations
+
+<div class="ui two column stackable grid">
+  <div class="column">
+    <h4>Basic income</h4>
+    <div id="biHistCYO"></div>
+  </div>
+  <div class="column">
+    <h4>Basic job</h4>
+    <div id="bjHistCYO"></div>
+  </div>
+</div>
+
+### Average values of components, 1000 simulations
+
+<div class="ui two column stackable grid">
+  <div class="column" style="padding-bottom: 0">
+    <h4>Basic income</h4>
+    <table id="biBarsCYO"></table>
+  </div>
+  <div class="column" style="padding-bottom: 0">
+    <h4>Basic job</h4>
+    <table id="bjBarsCYO"></table>
+  </div>
+</div>
+<div id="tooltipCYO" class="tooltip"></div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script type="text/javascript" src="basic-income-basic-job.js"></script>

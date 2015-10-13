@@ -203,8 +203,8 @@ document.getElementById('recalculate').addEventListener('click', function () {
 // -----------------
 // Generate and display all charts
 function render() {
-    bars('biBars', biAmountsAvg, bjAmountsAvg);
-    bars('bjBars', bjAmountsAvg, biAmountsAvg);
+    bars('biBars', 'tooltip', biAmountsAvg, bjAmountsAvg);
+    bars('bjBars', 'tooltip', bjAmountsAvg, biAmountsAvg);
 
     var allTotals = biTotals.concat(bjTotals);
     var min = Math.floor(Math.min.apply(null, allTotals));
@@ -271,7 +271,7 @@ function histogram(containerId, values, domain) {
 }
 
 // Plot one of the bar graphs, showing the average contribution of different components to the total cost
-function bars(containerId, amounts, amounts2) {
+function bars(containerId, tooltipId, amounts, amounts2) {
     var container = document.getElementById(containerId);
     container.innerHTML = '';
 
@@ -312,7 +312,7 @@ function bars(containerId, amounts, amounts2) {
         });
     });
 
-    var div = d3.select('#tooltip')
+    var div = d3.select('#' + tooltipId)
         .style('opacity', 0);
 
     var rows = d3.select('#' + containerId)
