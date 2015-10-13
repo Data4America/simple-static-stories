@@ -53,21 +53,21 @@ Here, a basic income model is compared against a "basic job" model where the gov
         <input type="text" id="basicIncome">
       </div>
       <div class="field">
-        <label><br># Adults</label>
+        <label># Adults</label>
         <input type="text" id="numAdults">
       </div>
       <div class="field">
-        <label><br># in Labor Force</label>
+        <label># in Labor Force</label>
         <input type="text" id="laborForce">
       </div>
       <div class="field">
-        <label><br># Disabled Adults</label>
+        <label># Disabled Adults</label>
         <input type="text" id="disabledAdults">
       </div>
-      <div class="field">
-        <br><br><div class="ui button" id="recalculate">Recalculate</div>
-      </div>
     </div>
+    <center>
+      <div class="ui button" id="recalculate">Generate</div>
+    </center>
 </form>
 
 <p>
