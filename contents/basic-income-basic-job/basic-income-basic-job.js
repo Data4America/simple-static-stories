@@ -10,16 +10,39 @@
 
 // ## Constants
 // ------------
-// Our goal is to make sure everyone gets at least the minimum wage ($7.25/hr for 40 hours/week and 50 weeks/year, or $14,500/year) even without working.
-var basicIncome = 7.25 * 40 * 50;
+// These are just default values! The user can change them easily through a form.
+var defaultState = {
+    // Our goal is to make sure everyone gets at least the minimum wage ($7.25/hr for 40 hours/week and 50 weeks/year, or $14,500/year) even without working.
+    basicIncome: 7.25 * 40 * 50,
 
-// In the 2010 census, there were 227 million adults. Of those, 154 million were in the labor force and 21 million were disabled. 
-var numAdults = 227e6;
-var laborForce = 154e6;
-var disabledAdults = 21e6;
+    // In the 2010 census, there were 227 million adults. Of those, 154 million were in the labor force and 21 million were disabled. 
+    numAdults: 227e6,
+    laborForce: 154e6,
+    disabledAdults: 21e6,
 
-// As mentioned above, part of the reason to implement basic income is to eliminate inefficient government welfare programs. Let's start with a very optimistic estimate of how much this could save - say, [2010 US government spending](http://www.usgovernmentspending.com/piechart_2010_US_total) minus spending for education, defense, protection, transportation, and interest. That's $3.4 trillion.
-var currentWealthTransfers = 3369e9;
+    regionName: 'USA'
+};
+
+// Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
+var parts = decodeURIComponent(window.location.hash).split(',');
+parts[0] = parts[0].slice(1); // Get rid of #
+parts = parts.map(function (part, i) {
+    if (i === 0) {
+        return hackyEscape(part);
+    }
+    return parseFloat(part);
+});
+if (parts.length === 5 && !isNaN(parts[1]) && !isNaN(parts[2]) && !isNaN(parts[3]) && !isNaN(parts[4])) {
+    var state = {
+        basicIncome: parts[1],
+        numAdults: parts[2],
+        laborForce: parts[3],
+        disabledAdults: parts[4],
+        regionName: parts[0]
+    };
+} else {
+    var state = defaultState;
+}
 
 // I can hear you already! Maybe you don't want to cut all the programs I just proposed to cut. Maybe you want to cut some things that I didn't cut, such as defense spending. Here's the beauty of this model: [it's simple and it's open source](https://github.com/dumbmatter/basic-income-basic-job). With a little bit of programming knowledge, you can change these assumptions and see how it adds up. For example, you could keep Medicaid by cutting defense spending by 50%. The important thing is to do the math.
 
@@ -28,29 +51,29 @@ var currentWealthTransfers = 3369e9;
 // Now, we're going to enumerate all the costs and benefits associated with a basic income. Because there is uncertainty in calculating each of these factors, I will often going pick a relatively wide range of random values to represent a variety of possible outcomes and repeat my calculations many times. This is called the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method) and it's a good way to understand uncertainty in an estimate involving randomness.
 
 // Each time this function is called, the model will be run once. Because there is randomness in the model, the output will vary. Later, this function will be run many times to assess the full range of possible outcomes.
-function basicIncomeCostBenefit() {
+function basicIncomeCostBenefit(state) {
     // This object will store all the costs and benefits of the basic income as key/value pairs.
     var amounts = {};
 
     //  First, **how much does it cost to send that much money to so many people?** Well, I'm going to cut some money right off the top. Although the simplest basic income system pays the same amount to everyone, is also possible to have a system like progressive income tax, where it gradually phases out. In fact, my fellow Rutgers alumnus Milton Friedman proposed to implement basic income through a negative income tax, which would naturally phase out as income increases. Let's assume that reduces costs to roughly `1/2 * numAdults * basicIncome` or $1.65 trillion. That's a lot of money, but we'll see how it all adds up at the end.
-    amounts.directCosts = 1/2 * numAdults * basicIncome;
+    amounts.directCosts = 1/2 * state.numAdults * state.basicIncome;
 
     // There is also some **administrative overhead**, but due to the simplicity of determining eligibility and payouts, this will be small, let's say maybe $250 per adult.
     var administrativeCostPerPerson = gaussRand(250, 75);
-    amounts.administrativeCosts = numAdults * administrativeCostPerPerson;
+    amounts.administrativeCosts = state.numAdults * administrativeCostPerPerson;
 
     // Then, **what happens to the labor force?** Would people who were previously unable to work due to ill-concieved government regulation like [welfare cliffs](https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/) start working? [The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.](http://apps.npr.org/unfit-for-work/) Some of them would start working again if they recieved an unconditional basic income. Alternatively, some workers may decide that their basic income revenue is enough for them and quit their jobs.
     // 
     // I'm not really sure what the net effect would be, so let's include some uncertainty here. In some simulations, basic income will increase the labor force. In others, it will decrease. Again... want to fiddle with my numbers? [Try your own!](https://github.com/dumbmatter/basic-income-basic-job)
     var nonWorkerMultiplier = uniformRand(-0.10, 0.15);
-    var nonWorkers = (numAdults - laborForce - disabledAdults) * (1 + nonWorkerMultiplier);
+    var nonWorkers = (state.numAdults - state.laborForce - state.disabledAdults) * (1 + nonWorkerMultiplier);
 
     // With a basic income, **many people would be free to pursue new career paths** or start small businesses (or bring existing careers and businesses out from under the table). Additionally, there could be an economic stimulus due to more poor people having money to spend, similar to [what has been observed for food stamps](http://money.cnn.com/2008/01/29/news/economy/stimulus_analysis/).
     // 
     // How big is this effect? That's really difficult to estimate, so again let's let this component vary randomly between positive and negative.
     var avgHourlyWage = 25;
     var productivityMultiplier = uniformRand(-0.1, 0.2);
-    amounts.productivity = -laborForce * (40 * 52 * avgHourlyWage) * productivityMultiplier;
+    amounts.productivity = -state.laborForce * (40 * 52 * avgHourlyWage) * productivityMultiplier;
 
     // And just for fun, let's add the **JK Rowling effect**. JK Rowling is of course the author of the Harry Potter novels. She famously wrote the first novel while on welfare. Basic income could possibly allow even more people to have this luxury.
     amounts.jkRowling = -binomRand(nonWorkers, 1e-7) * 1e9;
@@ -63,17 +86,17 @@ function basicIncomeCostBenefit() {
 // A reasonable comparison for a basic income is, what if the government just gave every unemployed person an minimum wage job? That would also have a high cost, but some benefits too, right? That's what was proposed in [the article that inspired this one](https://www.chrisstucchio.com/blog/2013/basic_income_vs_basic_job.html), but let's see how likely that is.
 
 // Like the basic income model, this function will run the model once each time it is called. The output of this function is the same format as `basicIncomeCostBenefit`, so the results can be easily compared.
-function basicJobCostBenefit() {
+function basicJobCostBenefit(state) {
     var amounts = {};
 
     // Again, there is some uncertainty about the **effects on the labor force**. Maybe some people will desperately take other jobs to avoid a basic job. Maybe others will see the basic job as favorable to their current job. Let's treat this the same as in the basic income scenario, allowing it to vary between positive and negative.
     var nonWorkerMultiplier = uniformRand(-0.1, 0.15);
-    var numBasicWorkers = (numAdults - disabledAdults - laborForce) * (1 + nonWorkerMultiplier);
+    var numBasicWorkers = (state.numAdults - state.disabledAdults - state.laborForce) * (1 + nonWorkerMultiplier);
 
     // There is a large overall cost, of course. You have to **pay all non-disabled non-working adults** $14.5k/year to work a basic job, which comes out to $0.77 trillion total. That is less than half of the direct cost of basic income! But let's see how it all adds up at the end. For instance, there will also be **disabled adults** who can't work but still need to be paid, which brings the direct cost up to around $1 trillion.
-    amounts.directCosts = numBasicWorkers * basicIncome;
+    amounts.directCosts = numBasicWorkers * state.basicIncome;
     var administrativeCostPerDisabledPerson = gaussRand(500, 150);
-    amounts.disabled = disabledAdults * (basicIncome + administrativeCostPerDisabledPerson);
+    amounts.disabled = state.disabledAdults * (state.basicIncome + administrativeCostPerDisabledPerson);
 
     // There will also be some **administrative overhead** involved in this program, much more than would be required for basic income. Let's say about $5k per basic worker, with a good amount of randomness included to account for uncertainty.
     var administrativeCostPerWorker = gaussRand(5000, 1500);
@@ -106,18 +129,20 @@ var bjTotals = [];
 var biAmountsAvg;
 var bjAmountsAvg;
 
-function run() {
+function run(cyo) {
     // Number of simulations to run at once
     var N = 1000;
 
+    var localState = cyo === 'CYO' ? state : defaultState;
+
     // Run the modesl N times and save the results
     for (var i = 0; i < N; i++) {
-        biAmounts[i] = basicIncomeCostBenefit();
+        biAmounts[i] = basicIncomeCostBenefit(localState);
         biTotals[i] = Object.keys(biAmounts[i]).reduce(function (total, key) {
             return biAmounts[i][key] / 1e12 + total;
         }, 0);
 
-        bjAmounts[i] = basicJobCostBenefit();
+        bjAmounts[i] = basicJobCostBenefit(localState);
         bjTotals[i] = Object.keys(bjAmounts[i]).reduce(function (total, key) {
             return bjAmounts[i][key] / 1e12 + total;
         }, 0);
@@ -139,28 +164,83 @@ function run() {
     bjAmountsAvg = bjAmounts.reduce(amountsAvgReducer, {});
 
     // This will generate and display charts based on the generated results - see the next section for details
-    render();
+    render(cyo);
 }
 
 // Run the simulations on page load
 run();
+run('CYO');
+
+// Update permalink by calling this function
+function updateUrl() {
+    // Do this instead of directly setting window.location.hash to prevent adding extra history entries
+    var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
+    var url = baseUrl + '#' + encodeURIComponent(state.regionName + ',' + state.basicIncome + ',' + state.numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
+    if (window.location.pathname.indexOf('local') >= 0) {
+        window.location.replace(url);
+    }
+    document.getElementById('permalink').value = url;
+}
+
+// Initialize UI
+var formEls = {
+    basicIncome: document.getElementById('basicIncome'),
+    numAdults: document.getElementById('numAdults'),
+    laborForce: document.getElementById('laborForce'),
+    disabledAdults: document.getElementById('disabledAdults'),
+    regionName: document.getElementById('regionName')
+};
+for (var key in formEls) {
+    if (formEls.hasOwnProperty(key)) {
+        formEls[key].value = state[key];
+    }
+}
+if (document.getElementById('regionNameTitle')) { document.getElementById('regionNameTitle').innerHTML = state.regionName; }
+document.getElementById('recalculate').addEventListener('click', function () {
+    for (var key in formEls) {
+        if (formEls.hasOwnProperty(key)) {
+            if (key === 'regionName') {
+                // WARNING BIG HACK SECURITY RISK
+                value = hackyEscape(formEls[key].value);
+                state[key] = value;
+                if (document.getElementById('regionNameTitle')) { document.getElementById('regionNameTitle').innerHTML = value; }
+            } else {
+                var value = parseFloat(formEls[key].value);
+                if (!isNaN(value)) {
+                    console.log('set', key, 'to', value)
+                    state[key] = value;
+                }
+            }
+        }
+    }
+
+    run('CYO');
+
+    updateUrl();
+});
 
 // ## Display results
 // -----------------
 // Generate and display all charts
-function render() {
-    bars('biBars', biAmountsAvg, bjAmountsAvg);
-    bars('bjBars', bjAmountsAvg, biAmountsAvg);
+function render(cyo) {
+    cyo = cyo === 'CYO' ? 'CYO' : '';
 
-    histogram('biHist', biTotals);
-    histogram('bjHist', bjTotals);
+    bars('biBars' + cyo, 'tooltip' + cyo, biAmountsAvg, bjAmountsAvg);
+    bars('bjBars' + cyo, 'tooltip' + cyo, bjAmountsAvg, biAmountsAvg);
+
+    var allTotals = biTotals.concat(bjTotals);
+    var min = Math.floor(Math.min.apply(null, allTotals));
+    var max = Math.ceil(Math.max.apply(null, allTotals));
+
+    histogram('biHist' + cyo, biTotals, [min, max]);
+    histogram('bjHist' + cyo, bjTotals, [min, max]);
 }
 
 // The histograms need to be re-rendered when the size of the window changes, otherwise they won't fit in the window correctly
 window.addEventListener('resize', render);
 
 // Plot one of the histograms, showing the distribution of possible costs
-function histogram(containerId, values) {
+function histogram(containerId, values, domain) {
     var container = document.getElementById(containerId);
     container.innerHTML = '';
 
@@ -169,7 +249,7 @@ function histogram(containerId, values) {
         height = 200 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
-        .domain([0, 4])
+        .domain(domain)
         .range([0, width]);
 
     // Generate a histogram with 10 evenly-spaced bins from input values
@@ -198,7 +278,7 @@ function histogram(containerId, values) {
 
     bar.append('rect')
         .attr('x', 1)
-        .attr('width', x(data[0].dx) - 1)
+        .attr('width', x(data[0].dx + domain[0]) - 1)
         .attr('height', function (d) { return height - y(d.y); });
 
     svg.append('g')
@@ -213,7 +293,7 @@ function histogram(containerId, values) {
 }
 
 // Plot one of the bar graphs, showing the average contribution of different components to the total cost
-function bars(containerId, amounts, amounts2) {
+function bars(containerId, tooltipId, amounts, amounts2) {
     var container = document.getElementById(containerId);
     container.innerHTML = '';
 
@@ -254,7 +334,7 @@ function bars(containerId, amounts, amounts2) {
         });
     });
 
-    var div = d3.select('#tooltip')
+    var div = d3.select('#' + tooltipId)
         .style('opacity', 0);
 
     var rows = d3.select('#' + containerId)
@@ -267,18 +347,16 @@ function bars(containerId, amounts, amounts2) {
 
     rows.append('td')
         .on('mouseover', function (d) {
-            div.style('opacity', 0.9);
+            div.style('opacity', 1);
             div.html(function () {
                     if (d.sign === 1) {
                         return 'Costs $' + (d.value / 1e12).toFixed(2) + ' trillion';
                     }
                     return 'Reduces costs $' + (-d.value / 1e12).toFixed(2) + ' trillion';
-                })
-               .style('left', (d3.event.pageX + 15) + 'px')
-               .style('top', (d3.event.pageY) + 'px');
+                });
         })
         .on('mouseout', function (d) {
-            div.style('opacity', 0);
+            div.html('');
         })
         .append('div')
         .style('width', function (d) { return d.width + 'px'; })
@@ -316,4 +394,14 @@ function gaussRand(mu, sigma) {
 function binomRand(N, p) {
     var count = Math.round(gaussRand(N * p, Math.sqrt(N * p * (1 - p))));
     return count > 0 ? count : 0;
+}
+
+// ## WARNING WARNING SECURITY HOLE
+
+function hackyEscape(string) {
+console.log(string);
+    return string.replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
 }
