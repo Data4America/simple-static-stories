@@ -51353,6 +51353,9 @@ input::-moz-focus-inner {
 /*-------------------
       MAIN HEADER
 --------------------*/
+header {
+  background: #FAFAFA;
+}
 #dfa-header {
   background: #333;
   background-size: 900px;
