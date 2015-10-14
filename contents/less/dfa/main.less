@@ -69,20 +69,25 @@ html, body {
 --------------------*/
 #dfa-header {
   background: #333;
-  /*background: url(/img/background.jpg) center center;*/
   background-size: 900px;
   border-radius: 0;
   margin: 0;
   display:none;
   z-index: 1001;
   box-shadow: 0 4px 8px #777;
+  font-family: 'Trasandina';
 }
 
 #dfa-header.ui.menu .item {
   padding: 0.2em 0.8em;
-  font-size: 1.05em;
+  font-size: 1.1em;
   font-weight: bold;
   background-color: #CF1A1A;
+}
+
+#dfa-header.ui.inverted.menu a.item:hover {
+  background: #D82121;
+  color: #ffffff;
 }
 
 #dfa-header.ui.menu .item.dropdown {
@@ -100,10 +105,17 @@ html, body {
   }
 }
 
-#dfa-header.ui.menu .item.dfa-header-title {
+#dfa-header.ui.menu .item.dfa-header-title,
+  #dfa-header.ui.menu .item.dfa-header-article-share {
+  font-family: 'Lato';
   background: none;
   font-style: italic;
   font-weight: 300;
+}
+
+#dfa-header.ui.inverted.menu a.dfa-header-article-share.item:hover {
+  background: #555;
+  color: #ffffff;
 }
 
 #dfa-header.ui.menu .item .button {
@@ -251,8 +263,8 @@ html, body {
   transform: rotate(-90deg) !important;
   display: inline-block;
   position: fixed;
-  left: -32px;
-  top: 153px;
+  left: -37px;
+  top: 114px;
   color: #fff;
   padding: .4em 1em .4em;
   border-radius: 0 0 4px 4px;
@@ -281,7 +293,7 @@ html, body {
 }
 
 #dfa-sidebar .item:before {
-  background: #fff;
+  background: none;
 }
 
 #dfa-sidebar .ui.card {
@@ -315,6 +327,7 @@ html, body {
   line-height: 2em;
   font-size: 1.2em;
   font-weight: 300;
+  padding-left: 1.05em;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -422,6 +435,7 @@ hr {
 #dfa-footer .ui.header {
   color: white;
   font-size:1.2em;
+  font-family: 'Trasandina';
 }
 
 #dfa-footer .ui.button {
@@ -429,6 +443,7 @@ hr {
   font-size: 1.2em;
   padding: 0.45em 0.8em;
   margin-right: 0.4em;
+  font-family: 'Trasandina';
 }
 
 #dfa-footer > span {

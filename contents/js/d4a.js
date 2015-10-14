@@ -55,6 +55,9 @@ $(document).ready(function() {
     $('.dfa-donate-modal .close.icon').remove();
 
     $('.dfa-header-title').remove();
+    $('.dfa-header-article-share').remove();
+  } else {
+    $('.dfa-article-header .sms').remove();
   }
 
   $('#dfa-header .subscribe').click(function() {
@@ -78,14 +81,14 @@ $(document).ready(function() {
     }, 1000);
   });
 
-  $('.ui.button.facebook').click(function() {
+  $('.ui.button.facebook, .dfa-header-article-share.fb').click(function() {
     FB.ui({
         method: 'share',
         href: this.dataset.url
     }, function () {});
   });
 
-  $('.ui.button.twitter').click(function() {
+  $('.ui.button.twitter, .dfa-header-article-share.tw').click(function() {
     PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
   });
 
@@ -114,6 +117,8 @@ $(document).ready(function() {
   if ($('article.article.big').length) {
     var title = $('.dfa-article-header .ui.header').html();
     $('.dfa-header-title').html('Article: ' + title);
+  } else {
+    $('.dfa-header-article-share').remove();
   }
 
   if (window.location.pathname.search("/donate") === 0) {
