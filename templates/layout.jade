@@ -21,27 +21,24 @@ html(lang='en')
 
         div#dfa-header.ui.borderless.inverted.main.menu.fixed
           div.ui.container
-            div.ui.dropdown.icon.item
-              i.big.sidebar.icon
-              div.menu
-                a.item(href="/") Stories
-                a.item(href="/about/") About Data4America
-                a.item(href="/team/") Our Team
-                a.item(href="/staff") Staff
-                a.item(href="/upload/") Submit Content
-                a.item(href="http://data.data4america.org/") Submit Data
-                a.item(href="http://git.data4america.org/") Submit Software
-                a.item(href="/donate/") Donate
-                a.item(href="/request-government-data") Request Data
             div.logo.item
               a.logo(href="/")
+            a.item.dfa-btn-subscribe(href="javascript:;") Subscribe
+            a.item.dfa-btn-donate(href="javascript:;") Donate
+            a.item.dfa-btn-share(href="javascript:;") Share
             div.right.menu.social-buttons
-              div.item
-                button.dfa-btn-subscribe.ui.button.red.mini Subscribe
-              div.item
-                button.dfa-btn-donate.ui.button.white.mini(style="background:#FFF;") Donate
-              div.item
-                button.dfa-btn-share.ui.button.blue.mini Share
+              div.ui.dropdown.icon.item
+                i.big.sidebar.icon
+                div.menu
+                  a.item(href="/") Stories
+                  a.item(href="/about/") About Data4America
+                  a.item(href="/team/") Our Team
+                  a.item(href="/staff") Staff
+                  a.item(href="/upload/") Submit Content
+                  a.item(href="http://data.data4america.org/") Submit Data
+                  a.item(href="http://git.data4america.org/") Submit Software
+                  a.item(href="/donate/") Donate
+                  a.item(href="/request-government-data") Request Data
 
         div#dfa-slogan Bringing Data Science to the study of Politics
 
