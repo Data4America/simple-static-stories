@@ -53,6 +53,8 @@ $(document).ready(function() {
     $('.dfa-share .container.mobile').show();
 
     $('.dfa-donate-modal .close.icon').remove();
+
+    $('.dfa-header-title').remove();
   }
 
   $('#dfa-header .subscribe').click(function() {
@@ -108,6 +110,11 @@ $(document).ready(function() {
       $('#dfa-header').hide();
     }
   });
+
+  if ($('article.article.big').length) {
+    var title = $('.dfa-article-header .ui.header').html();
+    $('.dfa-header-title').html('Article: ' + title);
+  }
 
   if (window.location.pathname.search("/donate") === 0) {
     $('#dfa-footer').remove();

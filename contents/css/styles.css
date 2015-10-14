@@ -51354,7 +51354,7 @@ input::-moz-focus-inner {
       MAIN HEADER
 --------------------*/
 #dfa-header {
-  background-color: #CF1A1A;
+  background: #333;
   /*background: url(/img/background.jpg) center center;*/
   background-size: 900px;
   border-radius: 0;
@@ -51364,13 +51364,27 @@ input::-moz-focus-inner {
   box-shadow: 0 4px 8px #777;
 }
 #dfa-header.ui.menu .item {
-  padding: 0.4em 0.6em;
+  padding: 0.2em 0.8em;
   font-size: 1.05em;
   font-weight: bold;
+  background-color: #CF1A1A;
 }
 #dfa-header.ui.menu .item.dropdown {
-  background-color: #072C6F;
-  padding: 0.5em 0.8em;
+  background-color: #333;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-header {
+    background-color: #CF1A1A;
+  }
+  #dfa-header.ui.menu .item {
+    padding: 0.4em 0.65em;
+    font-size: 0.95em;
+  }
+}
+#dfa-header.ui.menu .item.dfa-header-title {
+  background: none;
+  font-style: italic;
+  font-weight: 300;
 }
 #dfa-header.ui.menu .item .button {
   font-size: 0.8em;
@@ -51378,7 +51392,7 @@ input::-moz-focus-inner {
   line-height: 1.55em;
   width: 5.8em;
 }
-#dfa-header .item.logo {
+#dfa-header.ui.menu .item.logo {
   background: #ddd;
 }
 #dfa-header .item.logo a {
@@ -51392,7 +51406,7 @@ input::-moz-focus-inner {
   z-index: 104;
   width: 212px;
   font-size: 1.4em;
-  background-color: #072C6F;
+  background-color: #333;
 }
 #dfa-header.ui.menu .ui.dropdown .menu .item {
   color: #fff !important;
