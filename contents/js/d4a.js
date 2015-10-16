@@ -116,7 +116,7 @@ $(document).ready(function() {
 
   if ($('article.article.big').length) {
     var title = $('.dfa-article-header .ui.header').html();
-    $('.dfa-header-title').html('Article: ' + title);
+    $('.dfa-header-title').html(title);
   } else {
     $('.dfa-header-article-share').remove();
   }

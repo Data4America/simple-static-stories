@@ -71,30 +71,21 @@ block footer
       b #[a(href='http://data4america.org/donate') Donate to Data4America.] 
       | We’re a non-partisan, non-profit media platform bringing Data Journalism to 21st Century Government
 
-  div.ui.segment.center.aligned
-    h2.ui.header Share this data story
-    div.dfa-share
-      div.container
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
         a(href='mailto:?subject=' + page.title + '&body=' + encodeURI(locals.url + page.url))
-          div.ui.grey.email.button
+          div.ui.grey.email.button.fluid
             i.icon.mail
-            span.text Email
-        div.ui.facebook.button(data-url=locals.url)
+            span.text Share by Email
+      div.column
+        div.ui.facebook.fluid.button(data-url=locals.url)
           i.ui.facebook.icon
-          span.text Share
-        div.ui.twitter.button(data-url=locals.url + page.url, data-text=page.title)
+          span.text Share on Email
+      div.column
+        div.ui.twitter.fluid.button(data-url=locals.url + page.url, data-text=page.title)
           i.ui.twitter.icon
-          span.text Tweet
-
-      div.container.mobile(style="display:none;")
-        div.ui.grey.email.button.circular.icon
-          i.icon.mail
-        div.ui.facebook.button.circular.icon
-          i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon
-          i.ui.twitter.icon
-        a.circular.ui.icon.button.orange(href="javascript:;")
-          i.icon-sms
+          span.text Post on Twitter
 
   div.ui.segment
     div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px")

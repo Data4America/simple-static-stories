@@ -50488,6 +50488,16 @@ input::-moz-focus-inner {
   padding: 0.5em 1em;
   font-size: 0.9em;
 }
+.dfa-share.ui.segment {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .dfa-share.ui.segment {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
 /*!
  * # Data 4 America - Main Styles
  *
@@ -51417,7 +51427,7 @@ header {
 }
 #dfa-header.ui.menu .ui.dropdown .menu {
   z-index: 104;
-  width: 212px;
+  width: 312px;
   font-size: 1.4em;
   background-color: #333;
 }
@@ -51498,6 +51508,34 @@ header {
     margin: 1em 0;
   }
 }
+#dfa-menu-footer {
+  margin-left: 0;
+  margin-top: 20px;
+  font-size: 0.9em;
+  text-align: center;
+}
+#dfa-menu-footer ul {
+  margin: 0;
+  padding: 0;
+}
+#dfa-menu-footer li {
+  display: inline-block;
+  margin-left: 10px;
+  text-transform: uppercase;
+  padding: 0.4em 0;
+}
+#dfa-menu-footer li a {
+  color: #7c7d7e;
+}
+#dfa-logo-footer {
+  background: url(/img/logo-256.png) center center;
+  display: inline-block;
+  background-size: 100px 100px;
+  height: 64px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
 /*-------------------
     COVER
 --------------------*/
@@ -51523,12 +51561,17 @@ header {
   display: inline-block;
   position: fixed;
   left: -37px;
-  top: 114px;
+  top: 320px;
   color: #fff;
   padding: .4em 1em .4em;
   border-radius: 0 0 4px 4px;
   cursor: pointer;
   z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  .dfa-sidebar-tap {
+    top: 190px;
+  }
 }
 .ui.sidebar .dfa-sidebar-tap {
   left: initial;
@@ -51568,7 +51611,7 @@ header {
     CONTENT
 --------------------*/
 #dfa-content {
-  padding: 0 0 65px;
+  padding: 0 0 20px;
   background: #FAFAFA;
 }
 #dfa-content p {
@@ -51662,7 +51705,7 @@ hr {
   background: rgba(0, 0, 0, 0.7);
   border-top: 1px solid #333;
   text-align: center;
-  z-index: 102;
+  z-index: 1002;
 }
 #dfa-footer .ui.header {
   color: white;
@@ -51835,3 +51878,6 @@ body.embed {
 .dfa-team-grid .team-grid-links a {
   margin-right: 0.3em;
 }
+/*-------------------
+
+--------------------*/

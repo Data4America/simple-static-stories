@@ -31,10 +31,10 @@ html(lang='en')
       div.item.note All data stories have been reviewed and approved by the non-partisan Editorial Board
 
       div.item(href="", target="blank")
-        div.ui.link.card
+        div.ui.card
           div.content
             img.ui.small.left.floated.image(src="http://i1.wp.com/flowingdata.com/wp-content/uploads/2015/07/Technology-sector-over-time.png?zoom=2&resize=200%2C147")
-            div.header Loans from Freddie and Fannie that defaulted after the bubble
+            div.header Loans from Freddie and Fannie that defaulted
             div.meta Published: 04/23/2015
           div.extra.content
             div.author
@@ -70,7 +70,7 @@ html(lang='en')
               a.item.icon.dfa-header-article-share
                 i.icon.mail
               div.right.menu.social-buttons
-                div.ui.dropdown.icon.item
+                div.ui.dropdown.top.right.icon.item
                   i.big.sidebar.icon
                   div.menu
                     a.item(href="/") Stories
@@ -122,6 +122,31 @@ html(lang='en')
         div.ui.text.container
           block content
           block footer
+
+      div.ui.container.text(style="margin-bottom:80px;")
+        div#dfa-logo-footer
+        div#dfa-menu-footer
+          ul
+            li
+              a.item(href="/") STORIES
+            li
+              a.item(href="/about/") ABOUT
+            li
+              a.item(href="/team/") OUR TEAM
+            li
+              a.item(href="/donate/") DONATE
+            li
+              a.item(href="/upload/") SUBMIT CONTENT
+            li
+              a.item(href="http://data.data4america.org/") DATA SETS
+            li
+              a.item(href="http://git.data4america.org/") GITHUB
+
+        div.ui.divider
+
+        h3.ui.header(style="line-height: 1.4em; text-align: center;")
+          | Help advance the Data4America’s mission “to promote and elevate the standards of journalism” by 
+          a.dfa-btn-donate(href="javascript:;") making a donation.
 
       div#dfa-footer(style="display:none;")
         h3.ui.header
