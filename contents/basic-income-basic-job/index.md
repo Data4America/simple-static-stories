@@ -33,17 +33,124 @@ Basic income is a system where the government directly gives money to all its ci
   }
 </style>
 
-## Preface
-
-I consider this a draft and would appreciate a collaborative review process. If the outcome of that review process is that my article is bullshit, I'm fine with that. We should aim for a high standard of quality.
-
-## Introduction
-
-Here, a basic income model is compared against a "basic job" model where the government guarantees employment for all non-disabled adults.
-
 ## Methods
 
-[Click here.](methods.html)
+The methods come down to four critical questions that govern the feasibility of a basic income program. None of these questions have obvious answers, so at the end, you'll be able to select what you think the most sensible answers are, and then you can see if your answers add up.
+
+### 1. How big is the basic income?
+
+### 2. Are we really going to send Bill Gates a check every month, or does something like a Negative Income Tax make more sense?
+
+bill gates thing is misnomer, in reality his taxes would still be higher than UBI. But.. could still raise them more to offset it! Discuss NIT, which is same idea basically.
+
+previous two questions address cost. but... how to pay for it? That's next two questions.
+
+### 3. What spending cuts can be made?
+
+### 4. What effect will basic income have on the economy?
+
+discuss static vs dynamic
+
+## Customize
+
+<form class="ui form">
+  <div class="four fields">
+    <div class="field">
+      <label>Basic Income (per adult)</label>
+      <div class="ui left labeled input">
+        <div class="ui left label">$</div>
+        <input type="text" id="basicIncome" disabled>
+      </div>
+      <div class="grouped fields">
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="basicIncomeType" value="10k">
+            <label>$10k/year</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="basicIncomeType" value="14.5k">
+            <label>Full time minimum wage ($14.5k/year)</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="basicIncomeType" value="20k">
+            <label>$20k/year</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="basicIncomeType" value="custom">
+            <label>Custom</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>UBI or NIT?</label>
+      <select id="ubiOrNit">
+        <option value="ubi">UBI while keeping taxes the same</option>
+        <option value="nit">Either use a NIT or increase taxes on the rich while applying UBI</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Spending Cuts (billions)</label>
+      <div class="ui left labeled input">
+        <div class="ui label">$</div>
+        <input type="text" id="spendingCuts" disabled>
+      </div>
+      <div class="grouped fields">
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType" checked="checked">
+            <label>$10k/year</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType">
+            <label>Full time minimum wage ($14.5k/year)</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType">
+            <label>$20k/year</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType">
+            <label><input type="text" id="spendingCuts" placeholder="Custom Amount"></checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>% GDP Growth Range</label>
+      <div class="ui right labeled input">
+        <input type="text" id="gdpRangeMin">
+        <div class="ui right label">%</div>
+      </div>
+      <center>to</center>
+      <div class="ui right labeled input">
+        <input type="text" id="gdbRangeMax">
+        <div class="ui right label">%</div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<p>
+  <div class="ui form">
+    <div class="field">
+      <input type="text" id="permalink" placeholder="Permalink">
+    </div>
+  </div>
+</p>
+
 
 ## Results
 
@@ -59,8 +166,6 @@ Here, a basic income model is compared against a "basic job" model where the gov
     <div id="bjHist"></div>
   </div>
 </div>
-
-<a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
 
 In both examples, there is clearly a lot of variability in how much the programs cost. But by doing a Monte Carlo simulation, the range of outcomes can be seen. From these results, it is apparent that our model of basic income is actually not more costly than our model of basic job, although there is enough overlap to call them roughly equivalent.
 
@@ -80,8 +185,6 @@ If better estimates and more thorough modeling can produce a narrower distributi
 </div>
 <div id="tooltip" class="tooltip"></div>
 
-<a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
-
 The red bars show costs, the black bars show reductions in costs.
 
 Although basic income has much higher direct costs due to its broader population of recipients, this is mostly accounted for by increased productivity and decreased administrative costs.
@@ -98,75 +201,8 @@ Basic income would not necessarily be prohibitively expensive, although of cours
 
 And mathematical modeling is a useful tool for quantitatively explaining your reasoning. I know my reasoning here is very simple and likely very wrong at times, but at least it's explicit. My only request is that criticism comes with a model.
 
+## Annotated source code
 
-## Create Your Own
-
-<form class="ui form">
-  <div class="field">
-    <label>Region Name</label>
-    <input type="text" id="regionName">
-  </div>
-  <div class="four fields">
-    <div class="field">
-      <label>Basic Income ($/person)</label>
-      <input type="text" id="basicIncome">
-    </div>
-    <div class="field">
-      <label># Adults</label>
-      <input type="text" id="numAdults">
-    </div>
-    <div class="field">
-      <label># in Labor Force</label>
-      <input type="text" id="laborForce">
-    </div>
-    <div class="field">
-      <label># Disabled Adults</label>
-      <input type="text" id="disabledAdults">
-    </div>
-  </div>
-  <center>
-    <div class="ui button" id="recalculate">Generate</div>
-  </center>
-</form>
-
-<p>
-  <div class="ui form">
-    <div class="field">
-      <input type="text" id="permalink" placeholder="Permalink">
-    </div>
-  </div>
-</p>
-
-### Histograms of total costs, 1000 simulations
-
-<div class="ui two column stackable grid">
-  <div class="column">
-    <h4>Basic income</h4>
-    <div id="biHistCYO"></div>
-  </div>
-  <div class="column">
-    <h4>Basic job</h4>
-    <div id="bjHistCYO"></div>
-  </div>
-</div>
-
-<a href="javascript:run('CYO')">Click to re-run Monte Carlo simulations</a>
-
-### Average values of components, 1000 simulations
-
-<div class="ui two column stackable grid">
-  <div class="column" style="padding-bottom: 0">
-    <h4>Basic income</h4>
-    <table id="biBarsCYO"></table>
-  </div>
-  <div class="column" style="padding-bottom: 0">
-    <h4>Basic job</h4>
-    <table id="bjBarsCYO"></table>
-  </div>
-</div>
-<div id="tooltipCYO" class="tooltip"></div>
-
-<a href="javascript:run('CYO')">Click to re-run Monte Carlo simulations</a>
-
+[Click here.](methods.html)
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script type="text/javascript" src="basic-income-basic-job.js"></script>
