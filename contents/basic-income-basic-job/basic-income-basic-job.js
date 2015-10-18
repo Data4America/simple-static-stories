@@ -14,6 +14,7 @@ function basicIncomeInit() {
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
+        cutsTaxes: 0,
         cutsTaxesWelfare: true,
         cutsTaxesLoopholes: false,
         cutsTaxesDefense: true,
@@ -53,18 +54,19 @@ function basicIncomeInit() {
 
     // ## Basic income model
     // ---------------------
-    // Now, we're going to enumerate all the costs and benefits associated with a basic income. Because there is uncertainty in calculating each of these factors, I will often going pick a relatively wide range of random values to represent a variety of possible outcomes and repeat my calculations many times. This is called the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method) and it's a good way to understand uncertainty in an estimate involving randomness.
+    // Now, we're going to enumerate all the costs and benefits associated with a basic income.
 
-    // Each time this function is called, the model will be run once. Because there is randomness in the model, the output will vary. Later, this function will be run many times to assess the full range of possible outcomes.
     function basicIncomeCostBenefit(state) {
-        // This object will store all the costs and benefits of the basic income as key/value pairs.
+        // This object will store all the costs and benefits of the basic income as key/value pairs. Values are in trillions. Costs are positives, benefits are negative.
         var amounts = {};
 
-        //  First, **how much does it cost to send that much money to so many people?** Well, I'm going to cut some money right off the top. Although the simplest basic income system pays the same amount to everyone, is also possible to have a system like progressive income tax, where it gradually phases out. In fact, my fellow Rutgers alumnus Milton Friedman proposed to implement basic income through a negative income tax, which would naturally phase out as income increases. Let's assume that reduces costs to roughly `1/2 * numAdults * basicIncome` or $1.65 trillion. That's a lot of money, but we'll see how it all adds up at the end.
-        amounts.directCosts = 1/2 * numAdults * state.basicIncome;
+        var factor = state.ubiOrNit === 'ubi' ? 1 : 0.5;
+        amounts.directCosts = factor * numAdults * state.basicIncome / 1e12;
+        amounts.directSavings = -state.cutsTaxes / 1000;
 
-        // Then, **what happens to the labor force?** Would people who were previously unable to work due to ill-concieved government regulation like [welfare cliffs](https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/) start working? [The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.](http://apps.npr.org/unfit-for-work/) Some of them would start working again if they recieved an unconditional basic income. Alternatively, some workers may decide that their basic income revenue is enough for them and quit their jobs.
-    // GDP range from -5 to 20
+        var taxAsPercentGdp = 0.243; // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
+        var gdp = 18;
+        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * taxAsPercentGdp * gdp;
 
         return amounts;
     }
@@ -77,69 +79,36 @@ function basicIncomeInit() {
 
     // ## Run models and aggregate results
     // ----------------------------------
-    // Arrays containing objects, each one the output of `basicIncomeCostBenefit` or `basicJobCostBenefit` which is an object containing all the cost/benefit components
-    var biAmounts = [];
-    var bjAmounts = [];
+    // The output of `basicIncomeCostBenefit` which is an object containing all the cost/benefit components
+    var biAmounts = {};
 
-    // Arrays containing the total cost/benefit from each run, which is just one number per run
-    var biTotals = [];
-    var bjTotals = [];
+    // The total cost/benefit and its standard deviation
+    var biTotal = 0;
+    var biTotalStdev = 0;
 
-    // Objects containing the average cost/benefit component values across all runs
-    var biAmountsAvg;
-    var bjAmountsAvg;
+    function run(state) {
+        biAmounts = basicIncomeCostBenefit(state);
+        biTotal = Object.keys(biAmounts).reduce(function (total, key) {
+            return biAmounts[key] + total;
+        }, 0);
 
-    function run(cyo) {
-        // Number of simulations to run at once
-        var N = 1000;
-
-        var localState = cyo === 'CYO' ? state : defaultState;
-
-        // Run the modesl N times and save the results
-        for (var i = 0; i < N; i++) {
-            biAmounts[i] = basicIncomeCostBenefit(localState);
-            biTotals[i] = Object.keys(biAmounts[i]).reduce(function (total, key) {
-                return biAmounts[i][key] / 1e12 + total;
-            }, 0);
-
-            bjAmounts[i] = basicJobCostBenefit(localState);
-            bjTotals[i] = Object.keys(bjAmounts[i]).reduce(function (total, key) {
-                return bjAmounts[i][key] / 1e12 + total;
-            }, 0);
-        }
-
-        // Precompute the average values from all N simulations
-        function amountsAvgReducer(avg, amounts) {
-            Object.keys(amounts).forEach(function (key) {
-                if (avg.hasOwnProperty(key)) {
-                    avg[key] += amounts[key] / N;
-                } else {
-                    avg[key] = amounts[key] / N;
-                }
-            });
-
-            return avg;
-        }
-        biAmountsAvg = biAmounts.reduce(amountsAvgReducer, {});
-        bjAmountsAvg = bjAmounts.reduce(amountsAvgReducer, {});
+        // Assume the input max and min are 2 standard deviations from the mean
+        biTotalStdev = (state.gdpRangeMax - state.gdpRangeMin) / 4;
+console.log(biAmounts, biTotal, biTotalStdev);
 
         // This will generate and display charts based on the generated results - see the next section for details
-        render(cyo);
+//        render();
     }
-
-    // Run the simulations on page load
-    //run();
-    //run('CYO');
 
     // Update permalink by calling this function
     function updateUrl() {
         // Do this instead of directly setting window.location.hash to prevent adding extra history entries
-        var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
+        /*var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
         var url = baseUrl + '#' + encodeURIComponent(state.regionName + ',' + state.basicIncome + ',' + numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
         if (window.location.pathname.indexOf('local') >= 0) {
             window.location.replace(url);
-        }
-        document.getElementById('permalink').value = url;
+        }*/
+        document.getElementById('permalink').value = 'Not implemented yet!';
     }
 
     // Initialize UI
@@ -162,32 +131,18 @@ function basicIncomeInit() {
     state2form(state, formEls);
     $("#customize-form :input").change(function() {
         if (!updating) {
-console.log('update due to form change');
             updating = true;
             form2state(state, formEls);
             updating = false;
         }
-    /*    for (var key in formEls) {
-            if (formEls.hasOwnProperty(key)) {
-                if (key === 'regionName') {
-                    // WARNING BIG HACK SECURITY RISK
-                    value = hackyEscape(formEls[key].value);
-                    state[key] = value;
-                    if (document.getElementById('regionNameTitle')) { document.getElementById('regionNameTitle').innerHTML = value; }
-                } else {
-                    var value = parseFloat(formEls[key].value);
-                    if (!isNaN(value)) {
-                        console.log('set', key, 'to', value)
-                        state[key] = value;
-                    }
-                }
-            }
-        }
 
-        run('CYO');
+        run(state);
 
-        updateUrl();*/
+        updateUrl();
     });
+
+    // Run the simulations on page load
+    run(state);
 
     // ## Display results
     // -----------------
@@ -347,7 +302,6 @@ console.log('update due to form change');
     }
 
     function state2form(state, formEls) {
-console.log('state2form');
         // Normal inputs
         var input = ['basicIncome', 'ubiOrNit', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
@@ -378,11 +332,11 @@ console.log('state2form');
             cutsTaxesOnePercent: 157,
             cutsTaxesCustom: state.cutsTaxesCustomValue,
         };
-        var cutsTaxes = 0;
+        state.cutsTaxes = 0;
         Object.keys(checkboxes).forEach(function (checkbox) {
             formEls[checkbox].checked = state[checkbox];
             if (formEls[checkbox].checked) {
-                cutsTaxes += checkboxes[checkbox];
+                state.cutsTaxes += checkboxes[checkbox];
             }
         });
 
@@ -399,7 +353,6 @@ console.log('state2form');
     }
 
     function form2state(state, formEls) {
-console.log('form2state');
         // Integer inputs
         var input = ['basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {

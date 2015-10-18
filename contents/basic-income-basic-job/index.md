@@ -43,6 +43,10 @@ The methods come down to four critical questions that govern the feasibility of 
 
 bill gates thing is misnomer, in reality his taxes would still be higher than UBI. But.. could still raise them more to offset it! Discuss NIT, which is same idea basically.
 
+FIX THIS
+
+Well, I'm going to cut some money right off the top. Although the simplest basic income system pays the same amount to everyone, is also possible to have a system like progressive income tax, where it gradually phases out. In fact, my fellow Rutgers alumnus Milton Friedman proposed to implement basic income through a negative income tax, which would naturally phase out as income increases. Let's assume that reduces costs to roughly `1/2 * numAdults * basicIncome` or $1.65 trillion. That's a lot of money, but we'll see how it all adds up at the end.
+
 previous two questions address cost. but... how to pay for it? That's next two questions.
 
 ### 3. What spending cuts can be made?
@@ -50,6 +54,8 @@ previous two questions address cost. but... how to pay for it? That's next two q
 ### 4. What effect will basic income have on the economy?
 
 discuss static vs dynamic
+
+Then, **what happens to the labor force?** Would people who were previously unable to work due to ill-concieved government regulation like [welfare cliffs](https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/) start working? [The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.](http://apps.npr.org/unfit-for-work/) Some of them would start working again if they recieved an unconditional basic income. Alternatively, some workers may decide that their basic income revenue is enough for them and quit their jobs.
 
 ## Customize
 
