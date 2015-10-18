@@ -143,7 +143,7 @@ function basicIncomeInit() {
     // -----------------
     // Generate and display all charts
     function render() {
-        bars('biBars', 'tooltip', biAmounts);
+        bars('biBars', biAmounts);
 
         histogram('biHist', biTotal, biTotalStddev);
     }
@@ -232,7 +232,7 @@ function basicIncomeInit() {
     }
 
     // Plot one of the bar graphs, showing the average contribution of different components to the total cost
-    function bars(containerId, tooltipId, amounts) {
+    function bars(containerId, amounts) {
         var container = document.getElementById(containerId);
         container.innerHTML = '';
 
@@ -268,9 +268,6 @@ function basicIncomeInit() {
             });
         });
 
-        var div = d3.select('#' + tooltipId)
-            .style('opacity', 0);
-
         var rows = d3.select('#' + containerId)
             .selectAll('table')
             .data(data)
@@ -280,27 +277,28 @@ function basicIncomeInit() {
             .html(function (d) { return d.category; });
 
         rows.append('td')
-            .on('mouseover', function (d) {
-                div.style('opacity', 1);
-                div.html(function () {
-                        if (d.sign === 1) {
-                            return 'Costs $' + (d.value).toFixed(2) + ' trillion';
-                        }
-                        return 'Reduces costs $' + (-d.value).toFixed(2) + ' trillion';
-                    });
-            })
-            .on('mouseout', function (d) {
-                div.html('');
-            })
             .append('div')
             .style('width', function (d) { return d.width + 'px'; })
             .style('height', '1em')
             .style('margin-left', function (d) { return d.offset + 'px'; })
             .style('background-color', function (d) { return d.sign === 1 ? 'red' : 'black'; });
+
+        rows.append('td')
+            .html(function (d) { return formatTrillions(d.value); })
     }
 
     // ## Utility functions
     // --------------------
+
+    function formatTrillions(num) {
+        var str = '';
+        if (num < 0) {
+            str += '-';
+            num = -num;
+        }
+        str += '$' + num.toFixed(2) + 'T';
+        return str;
+    }
 
     // ## WARNING WARNING SECURITY HOLE
     function hackyEscape(string) {

@@ -27,9 +27,8 @@ Basic income is a system where the government directly gives money to all its ci
     shape-rendering: crispEdges;
   }
 
-  .tooltip {
-    color: #888;
-    height: 2em;
+  .biBars td {
+    padding: 2px;
   }
 </style>
 
@@ -173,9 +172,8 @@ Then, **what happens to the labor force?** Would people who were previously unab
     <div id="biHist"></div>
   </div>
   <div class="column">
-    <h4>Average costs by component</h4>
-    <table id="biBars"></table>
-    <div id="tooltip" class="tooltip"></div>
+    <h4>Average costs/savings by component</h4>
+    <table id="biBars" class="biBars"></table>
   </div>
 </div>
 
