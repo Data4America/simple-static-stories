@@ -90,11 +90,11 @@ function basicIncomeInit() {
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        var biTotalStdev = (state.gdpRangeMax - state.gdpRangeMin) / 4;
-console.log(biAmounts, biTotal, biTotalStdev);
+        var biTotalStddev = (state.gdpRangeMax - state.gdpRangeMin) / 4;
+console.log(biAmounts, biTotal, biTotalStddev);
 
         // This will generate and display charts based on the generated results - see the next section for details
-        render(biAmounts, biTotal, biTotalStdev);
+        render(biAmounts, biTotal, biTotalStddev);
     }
 
     // Update permalink by calling this function
@@ -144,44 +144,86 @@ console.log(biAmounts, biTotal, biTotalStdev);
     // ## Display results
     // -----------------
     // Generate and display all charts
-    function render(biAmounts, biTotal, biTotalStdev) {
+    function render(biAmounts, biTotal, biTotalStddev) {
         bars('biBars', 'tooltip', biAmounts);
 
-/*        var allTotals = biTotals.concat(bjTotals);
-        var min = Math.floor(Math.min.apply(null, allTotals));
-        var max = Math.ceil(Math.max.apply(null, allTotals));
-
-        histogram('biHist', biTotals, [min, max]);
-        histogram('bjHist', bjTotals, [min, max]);*/
+        histogram('biHist', biTotal, biTotalStddev);
     }
 
     // The histograms need to be re-rendered when the size of the window changes, otherwise they won't fit in the window correctly
     window.addEventListener('resize', render);
 
     // Plot one of the histograms, showing the distribution of possible costs
-    function histogram(containerId, values, domain) {
+// from http://bl.ocks.org/mbostock/4349187
+// Sample from a normal distribution with mean 0, stddev 1.
+function normal() {
+    var x = 0,
+        y = 0,
+        rds, c;
+    do {
+        x = Math.random() * 2 - 1;
+        y = Math.random() * 2 - 1;
+        rds = x * x + y * y;
+    } while (rds == 0 || rds > 1);
+    c = Math.sqrt(-2 * Math.log(rds) / rds); // Box-Muller transform
+    return x * c; // throw away extra sample y * c
+}
+
+//taken from Jason Davies science library
+// https://github.com/jasondavies/science.js/
+function gaussian(x) {
+    var gaussianConstant = 1 / Math.sqrt(2 * Math.PI),
+        mean = 0,
+        sigma = 1;
+
+    x = (x - mean) / sigma;
+    return gaussianConstant * Math.exp(-.5 * x * x) / sigma;
+};
+    function histogram(containerId, mean, stddev) {
         var container = document.getElementById(containerId);
         container.innerHTML = '';
+
+        var data = [];
+
+        // loop to populate data array with 
+        // probabily - quantile pairs
+        var q, p, el;
+        for (var i = 0; i < 100000; i++) {
+            q = normal() // calc random draw from normal dist
+            p = gaussian(q) // calc prob of rand draw
+            el = {
+                "q": q * stddev + mean,
+                "p": p
+            }
+            data.push(el)
+        };
+
+        // need to sort for plotting
+        data.sort(function(x, y) {
+            return x.q - y.q;
+        }); 
 
         var margin = {top: 10, right: 30, bottom: 45, left: 30},
             width = container.offsetWidth - margin.left - margin.right,
             height = 200 - margin.top - margin.bottom;
 
         var x = d3.scale.linear()
-            .domain(domain)
             .range([0, width]);
 
-        // Generate a histogram with 10 evenly-spaced bins from input values
-        var data = d3.layout.histogram()
-            .bins(x.ticks(10))(values);
-
         var y = d3.scale.linear()
-            .domain([0, d3.max(data, function (d) { return d.y; })])
             .range([height, 0]);
 
         var xAxis = d3.svg.axis()
             .scale(x)
             .orient('bottom');
+
+        var line = d3.svg.line()
+            .x(function(d) {
+                return x(d.q);
+            })
+            .y(function(d) {
+                return y(d.p);
+            });
 
         var svg = d3.select('#' + containerId).append('svg')
             .attr('width', width + margin.left + margin.right)
@@ -189,21 +231,22 @@ console.log(biAmounts, biTotal, biTotalStdev);
             .append('g')
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-        var bar = svg.selectAll('.bar')
-            .data(data)
-            .enter().append('g')
-            .attr('class', 'bar')
-            .attr('transform', function (d) { return 'translate(' + x(d.x) + ',' + y(d.y) + ')'; });
-
-        bar.append('rect')
-            .attr('x', 1)
-            .attr('width', x(data[0].dx + domain[0]) - 1)
-            .attr('height', function (d) { return height - y(d.y); });
+        x.domain(d3.extent(data, function(d) {
+            return d.q;
+        }));
+        y.domain(d3.extent(data, function(d) {
+            return d.p;
+        }));
 
         svg.append('g')
             .attr('class', 'x axis')
             .attr('transform', 'translate(0,' + height + ')')
             .call(xAxis);
+
+        svg.append("path")
+            .datum(data)
+            .attr("class", "line")
+            .attr("d", line);
 
         svg.append('text')
             .attr('transform', 'translate(' + (width / 2) + ' ,' + (height + margin.bottom - 5) + ')')
