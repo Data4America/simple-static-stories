@@ -29,7 +29,6 @@ Basic income is a system where the government directly gives money to all its ci
   .tooltip {
     color: #888;
     height: 2em;
-    margin-top: 1em;
   }
 </style>
 
@@ -178,36 +177,21 @@ Then, **what happens to the labor force?** Would people who were previously unab
 
 ## Results
 
-### Histograms of total costs, 1000 simulations
-
 <div class="ui two column stackable grid">
   <div class="column">
-    <h4>Basic income</h4>
+    <h4>Distribution of possible costs</h4>
     <div id="biHist"></div>
   </div>
   <div class="column">
-    <h4>Basic job</h4>
-    <div id="bjHist"></div>
+    <h4>Average costs by component</h4>
+    <table id="biBars"></table>
+    <div id="tooltip" class="tooltip"></div>
   </div>
 </div>
 
 In both examples, there is clearly a lot of variability in how much the programs cost. But by doing a Monte Carlo simulation, the range of outcomes can be seen. From these results, it is apparent that our model of basic income is actually not more costly than our model of basic job, although there is enough overlap to call them roughly equivalent.
 
 If better estimates and more thorough modeling can produce a narrower distribution that lies closer to $0 than to $2 trillion, that would be good. But regardless, given a US budget that is already denominated in trillions of dollars, this model shows that basic income need not be prohibitively expensive.
-
-### Average values of components, 1000 simulations
-
-<div class="ui two column stackable grid">
-  <div class="column" style="padding-bottom: 0">
-    <h4>Basic income</h4>
-    <table id="biBars"></table>
-  </div>
-  <div class="column" style="padding-bottom: 0">
-    <h4>Basic job</h4>
-    <table id="bjBars"></table>
-  </div>
-</div>
-<div id="tooltip" class="tooltip"></div>
 
 The red bars show costs, the black bars show reductions in costs.
 

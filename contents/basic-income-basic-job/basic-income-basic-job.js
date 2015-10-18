@@ -77,27 +77,24 @@ function basicIncomeInit() {
 
     // And one more time, [here is a link to the code](https://github.com/dumbmatter/basic-income-basic-job) so you can easily generate your own model based on your own assumptions.
 
-    // ## Run models and aggregate results
+    // ## Run model
     // ----------------------------------
-    // The output of `basicIncomeCostBenefit` which is an object containing all the cost/benefit components
-    var biAmounts = {};
-
-    // The total cost/benefit and its standard deviation
-    var biTotal = 0;
-    var biTotalStdev = 0;
 
     function run(state) {
-        biAmounts = basicIncomeCostBenefit(state);
-        biTotal = Object.keys(biAmounts).reduce(function (total, key) {
+        // The output of `basicIncomeCostBenefit` is an object containing all the cost/benefit components
+        var biAmounts = basicIncomeCostBenefit(state);
+
+        // The total cost/benefit
+        var biTotal = Object.keys(biAmounts).reduce(function (total, key) {
             return biAmounts[key] + total;
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        biTotalStdev = (state.gdpRangeMax - state.gdpRangeMin) / 4;
+        var biTotalStdev = (state.gdpRangeMax - state.gdpRangeMin) / 4;
 console.log(biAmounts, biTotal, biTotalStdev);
 
         // This will generate and display charts based on the generated results - see the next section for details
-//        render();
+        render(biAmounts, biTotal, biTotalStdev);
     }
 
     // Update permalink by calling this function
@@ -147,18 +144,15 @@ console.log(biAmounts, biTotal, biTotalStdev);
     // ## Display results
     // -----------------
     // Generate and display all charts
-    function render(cyo) {
-        cyo = cyo === 'CYO' ? 'CYO' : '';
+    function render(biAmounts, biTotal, biTotalStdev) {
+        bars('biBars', 'tooltip', biAmounts);
 
-        bars('biBars' + cyo, 'tooltip' + cyo, biAmountsAvg, bjAmountsAvg);
-        bars('bjBars' + cyo, 'tooltip' + cyo, bjAmountsAvg, biAmountsAvg);
-
-        var allTotals = biTotals.concat(bjTotals);
+/*        var allTotals = biTotals.concat(bjTotals);
         var min = Math.floor(Math.min.apply(null, allTotals));
         var max = Math.ceil(Math.max.apply(null, allTotals));
 
-        histogram('biHist' + cyo, biTotals, [min, max]);
-        histogram('bjHist' + cyo, bjTotals, [min, max]);
+        histogram('biHist', biTotals, [min, max]);
+        histogram('bjHist', bjTotals, [min, max]);*/
     }
 
     // The histograms need to be re-rendered when the size of the window changes, otherwise they won't fit in the window correctly
@@ -218,7 +212,7 @@ console.log(biAmounts, biTotal, biTotalStdev);
     }
 
     // Plot one of the bar graphs, showing the average contribution of different components to the total cost
-    function bars(containerId, tooltipId, amounts, amounts2) {
+    function bars(containerId, tooltipId, amounts) {
         var container = document.getElementById(containerId);
         container.innerHTML = '';
 
@@ -229,13 +223,8 @@ console.log(biAmounts, biTotal, biTotalStdev);
             return amounts[category];
         });
 
-        var categories2 = Object.keys(amounts2).sort();
-        var values2 = categories2.map(function (category) {
-            return amounts2[category];
-        });
-
-        var maxValue = Math.max.apply(Math, values.concat(values2));
-        var minValue = Math.min.apply(Math, values.concat(values2));
+        var maxValue = Math.max.apply(Math, values);
+        var minValue = Math.min.apply(Math, values);
 
         var zero;
         if (minValue > 0 || maxValue < 0) {
@@ -275,9 +264,9 @@ console.log(biAmounts, biTotal, biTotalStdev);
                 div.style('opacity', 1);
                 div.html(function () {
                         if (d.sign === 1) {
-                            return 'Costs $' + (d.value / 1e12).toFixed(2) + ' trillion';
+                            return 'Costs $' + (d.value).toFixed(2) + ' trillion';
                         }
-                        return 'Reduces costs $' + (-d.value / 1e12).toFixed(2) + ' trillion';
+                        return 'Reduces costs $' + (-d.value).toFixed(2) + ' trillion';
                     });
             })
             .on('mouseout', function (d) {
