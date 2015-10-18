@@ -57,7 +57,7 @@ discuss static vs dynamic
 
 Then, **what happens to the labor force?** Would people who were previously unable to work due to ill-concieved government regulation like [welfare cliffs](https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/) start working? [The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.](http://apps.npr.org/unfit-for-work/) Some of them would start working again if they recieved an unconditional basic income. Alternatively, some workers may decide that their basic income revenue is enough for them and quit their jobs.
 
-## Customize
+## Customize Results
 
 <form class="ui form" id="customize-form">
   <div class="four fields">
@@ -167,17 +167,6 @@ Then, **what happens to the labor force?** Would people who were previously unab
   </div>
 </form>
 
-<p>
-  <div class="ui form">
-    <div class="field">
-      <input type="text" id="permalink" placeholder="Permalink">
-    </div>
-  </div>
-</p>
-
-
-## Results
-
 <div class="ui two column stackable grid">
   <div class="column">
     <h4>Distribution of possible costs</h4>
@@ -189,6 +178,14 @@ Then, **what happens to the labor force?** Would people who were previously unab
     <div id="tooltip" class="tooltip"></div>
   </div>
 </div>
+
+<p>
+  <div class="ui form">
+    <div class="field">
+      <input type="text" id="permalink" placeholder="Permalink">
+    </div>
+  </div>
+</p>
 
 In both examples, there is clearly a lot of variability in how much the programs cost. But by doing a Monte Carlo simulation, the range of outcomes can be seen. From these results, it is apparent that our model of basic income is actually not more costly than our model of basic job, although there is enough overlap to call them roughly equivalent.
 
