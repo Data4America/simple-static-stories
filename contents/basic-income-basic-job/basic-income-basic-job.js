@@ -399,6 +399,10 @@ function basicIncomeInit() {
             state.cutsTaxesCustomValue === 0
         }
 
+        if (state.gdpRangeMin >= state.gdpRangeMax) {
+            state.gdpRangeMax = state.gdpRangeMin + 1;
+        }
+
         // Sync
         state2form(state, formEls);
     }
