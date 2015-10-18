@@ -162,7 +162,10 @@ function basicIncomeInit() {
     state2form(state, formEls);
     $("#customize-form :input").change(function() {
         if (!updating) {
+console.log('update due to form change');
+            updating = true;
             form2state(state, formEls);
+            updating = false;
         }
     /*    for (var key in formEls) {
             if (formEls.hasOwnProperty(key)) {
@@ -345,9 +348,6 @@ function basicIncomeInit() {
 
     function state2form(state, formEls) {
 console.log('state2form');
-
-        updating = true;
-
         // Normal inputs
         var input = ['basicIncome', 'ubiOrNit', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
@@ -391,12 +391,51 @@ console.log('state2form');
         if (state.cutsTaxesCustomValue === 0) {
             formEls.cutsTaxesCustomValue.value = '';
         }
-
-        updating = false;
+        if (formEls.cutsTaxesCustom.checked) {
+            formEls.cutsTaxesCustomValue.disabled = false;
+        } else {
+            formEls.cutsTaxesCustomValue.disabled = true;
+        }
     }
 
     function form2state(state, formEls) {
 console.log('form2state');
+        // Integer inputs
+        var input = ['basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        input.forEach(function (input) {
+            if (!isNaN(parseInt(formEls[input].value, 10))) {
+                state[input] = parseInt(formEls[input].value, 10);
+            }
+        });
+
+        state.ubiOrNit = formEls.ubiOrNit.value === 'ubi' ? 'ubi' : 'nit'
+
+        // Radio buttons
+        for (var i = 0; i < formEls.basicIncomeType.length; i++) {
+            var radio = formEls.basicIncomeType[i];
+            if (radio.checked) {
+                state.basicIncomeType = radio.value;
+            }
+        }
+        if (state.basicIncomeType === '10k') {
+            state.basicIncome = 10000;
+        } else if (state.basicIncomeType === 'minimumWage') {
+            state.basicIncome = 7.25 * 40 * 50;
+        } else if (state.basicIncomeType === '20k') {
+            state.basicIncome = 20000;
+        } else {
+            state.basicIncomeType = 'custom';
+        }
+
+        // Check boxes, cutsTaxes calculation
+        var checkboxes = ['cutsTaxesWelfare', 'cutsTaxesLoopholes', 'cutsTaxesDefense', 'cutsTaxesSocialSecurity', 'cutsTaxesMedicaid', 'cutsTaxesOnePercent', 'cutsTaxesCustom'];
+        checkboxes.forEach(function (checkbox) {
+            state[checkbox] = formEls[checkbox].checked;
+        });
+
+        if (formEls.cutsTaxesCustomValue.value = '') {
+            state.cutsTaxesCustomValue === 0
+        }
 
         // Sync
         state2form(state, formEls);
