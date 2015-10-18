@@ -53,7 +53,7 @@ discuss static vs dynamic
 
 ## Customize
 
-<form class="ui form">
+<form class="ui form" id="customize-form">
   <div class="four fields">
     <div class="field">
       <label>Basic Income (per adult)</label>
@@ -70,7 +70,7 @@ discuss static vs dynamic
         </div>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="basicIncomeType" value="14.5k">
+            <input type="radio" name="basicIncomeType" value="minimumWage">
             <label>Full time minimum wage ($14.5k/year)</label>
           </div>
         </div>
@@ -92,56 +92,56 @@ discuss static vs dynamic
       <label>UBI or NIT?</label>
       <select id="ubiOrNit">
         <option value="ubi">UBI while keeping taxes the same</option>
-        <option value="nit">Either use a NIT or increase taxes on the rich while applying UBI</option>
+        <option value="nit">Use a NIT or increase taxes on the rich while applying UBI</option>
       </select>
     </div>
     <div class="field">
       <label>Cuts and taxes (billions)</label>
       <div class="ui left labeled input">
         <div class="ui label">$</div>
-        <input type="text" id="spendingCuts" disabled>
+        <input type="text" id="cutsTaxes" disabled>
       </div>
       <div class="grouped fields">
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
+            <input type="checkbox" id="cutsTaxesWelfare">
             <label>$375B - Eliminate redundant welfare <a href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf">[1]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
+            <input type="checkbox" id="cutsTaxesLoopholes">
             <label>$740B - Eliminate tax loopholes <a href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf">[1]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
+            <input type="checkbox" id="cutsTaxesDefense">
             <label>$300B - Cut defense spending in half <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
+            <input type="checkbox" id="cutsTaxesSocialSecurity">
             <label>$695B - Eliminate Social Security <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
+            <input type="checkbox" id="cutsTaxesMedicaid">
             <label>$290B - Eliminate Medicaid <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
+            <input type="checkbox" id="cutsTaxesOnePercent">
             <label>$157B - Raise taxes on top 1% to 40% <a href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html">[3]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType">
-            <label><input type="text" id="spendingCuts" placeholder="Custom Amount"></checkbox>
+            <input type="checkbox" id="cutsTaxesCustom">
+            <label><input type="text" id="cutsTaxesCustomValue" placeholder="Custom Amount"></checkbox>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ discuss static vs dynamic
       </div>
       <center>to</center>
       <div class="ui right labeled input">
-        <input type="text" id="gdbRangeMax">
+        <input type="text" id="gdpRangeMax">
         <div class="ui right label">%</div>
       </div>
     </div>
