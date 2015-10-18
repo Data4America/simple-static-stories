@@ -28,8 +28,9 @@ function basicIncomeInit() {
     };
     var updating = false;
 
-    // In the 2010 census, there were 227 million adults.
-    var numAdults = 227e6;
+    var numAdults = 227e6; // In the 2010 census, there were 227 million adults.
+    var taxAsPercentGdp = 0.243; // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
+    var gdp = 18; // Trillions of dollars
 
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
     var parts = decodeURIComponent(window.location.hash).split(',');
@@ -64,8 +65,6 @@ function basicIncomeInit() {
         amounts.directCosts = factor * numAdults * state.basicIncome / 1e12;
         amounts.directSavings = -state.cutsTaxes / 1000;
 
-        var taxAsPercentGdp = 0.243; // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
-        var gdp = 18;
         amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * taxAsPercentGdp * gdp;
 
         return amounts;
@@ -90,7 +89,7 @@ function basicIncomeInit() {
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        var biTotalStddev = (state.gdpRangeMax - state.gdpRangeMin) / 4;
+        var biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * taxAsPercentGdp * gdp;
 console.log(biAmounts, biTotal, biTotalStddev);
 
         // This will generate and display charts based on the generated results - see the next section for details
@@ -188,7 +187,7 @@ function gaussian(x) {
         // loop to populate data array with 
         // probabily - quantile pairs
         var q, p, el;
-        for (var i = 0; i < 100000; i++) {
+        for (var i = 0; i < 10000; i++) {
             q = normal() // calc random draw from normal dist
             p = gaussian(q) // calc prob of rand draw
             el = {
@@ -372,7 +371,7 @@ function gaussian(x) {
             }
         });
 
-        formEls.cutsTaxes.value = cutsTaxes;
+        formEls.cutsTaxes.value = state.cutsTaxes;
 
         if (state.cutsTaxesCustomValue === 0) {
             formEls.cutsTaxesCustomValue.value = '';
