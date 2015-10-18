@@ -78,22 +78,21 @@ function basicIncomeInit() {
 
     // ## Run model
     // ----------------------------------
-
+    var biAmounts, biTotal, biTotalStddev;
     function run(state) {
         // The output of `basicIncomeCostBenefit` is an object containing all the cost/benefit components
-        var biAmounts = basicIncomeCostBenefit(state);
+        biAmounts = basicIncomeCostBenefit(state);
 
         // The total cost/benefit
-        var biTotal = Object.keys(biAmounts).reduce(function (total, key) {
+        biTotal = Object.keys(biAmounts).reduce(function (total, key) {
             return biAmounts[key] + total;
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        var biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * taxAsPercentGdp * gdp;
-console.log(biAmounts, biTotal, biTotalStddev);
+        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * taxAsPercentGdp * gdp;
 
         // This will generate and display charts based on the generated results - see the next section for details
-        render(biAmounts, biTotal, biTotalStddev);
+        render();
     }
 
     // Update permalink by calling this function
@@ -104,7 +103,7 @@ console.log(biAmounts, biTotal, biTotalStddev);
         if (window.location.pathname.indexOf('local') >= 0) {
             window.location.replace(url);
         }*/
-        document.getElementById('permalink').value = 'Not implemented yet!';
+        document.getElementById('permalink').value = 'Permalink not implemented yet!';
     }
 
     // Initialize UI
@@ -143,64 +142,42 @@ console.log(biAmounts, biTotal, biTotalStddev);
     // ## Display results
     // -----------------
     // Generate and display all charts
-    function render(biAmounts, biTotal, biTotalStddev) {
+    function render() {
         bars('biBars', 'tooltip', biAmounts);
 
         histogram('biHist', biTotal, biTotalStddev);
     }
 
-    // The histograms need to be re-rendered when the size of the window changes, otherwise they won't fit in the window correctly
+    // The histogram needs to be re-rendered when the size of the window changes, otherwise it won't fit in the window correctly
     window.addEventListener('resize', render);
 
-    // Plot one of the histograms, showing the distribution of possible costs
-// from http://bl.ocks.org/mbostock/4349187
-// Sample from a normal distribution with mean 0, stddev 1.
-function normal() {
-    var x = 0,
-        y = 0,
-        rds, c;
-    do {
-        x = Math.random() * 2 - 1;
-        y = Math.random() * 2 - 1;
-        rds = x * x + y * y;
-    } while (rds == 0 || rds > 1);
-    c = Math.sqrt(-2 * Math.log(rds) / rds); // Box-Muller transform
-    return x * c; // throw away extra sample y * c
-}
-
-//taken from Jason Davies science library
-// https://github.com/jasondavies/science.js/
-function gaussian(x) {
-    var gaussianConstant = 1 / Math.sqrt(2 * Math.PI),
-        mean = 0,
-        sigma = 1;
-
-    x = (x - mean) / sigma;
-    return gaussianConstant * Math.exp(-.5 * x * x) / sigma;
-};
+    // Plot the histograms, showing the distribution of possible costs
     function histogram(containerId, mean, stddev) {
         var container = document.getElementById(containerId);
         container.innerHTML = '';
 
         var data = [];
 
-        // loop to populate data array with 
-        // probabily - quantile pairs
-        var q, p, el;
-        for (var i = 0; i < 10000; i++) {
-            q = normal() // calc random draw from normal dist
-            p = gaussian(q) // calc prob of rand draw
-            el = {
-                "q": q * stddev + mean,
-                "p": p
-            }
-            data.push(el)
-        };
-
-        // need to sort for plotting
-        data.sort(function(x, y) {
-            return x.q - y.q;
-        }); 
+        var N = 1000;
+        var minx = mean - 5 * stddev;
+        if (minx > 0) {
+            minx = 0;
+        }
+        var maxx = mean + 5 * stddev;
+        if (maxx < 0) {
+            maxx = 0;
+        }
+        var dx = (maxx - minx) / N;
+        var xval = minx;
+        var k1 = 1 / (stddev * Math.sqrt(2 * Math.PI));
+        var k2 = -1 / (2 * Math.pow(stddev, 2));
+        for (var i = 0; i < N; i++) {
+            data.push({
+                x: xval,
+                y: k1 * Math.exp(k2 * Math.pow(xval - mean, 2))
+            })
+            xval += dx;
+        }
 
         var margin = {top: 10, right: 30, bottom: 45, left: 30},
             width = container.offsetWidth - margin.left - margin.right,
@@ -214,14 +191,15 @@ function gaussian(x) {
 
         var xAxis = d3.svg.axis()
             .scale(x)
-            .orient('bottom');
+            .orient('bottom')
+            .ticks(5);
 
         var line = d3.svg.line()
             .x(function(d) {
-                return x(d.q);
+                return x(d.x);
             })
             .y(function(d) {
-                return y(d.p);
+                return y(d.y);
             });
 
         var svg = d3.select('#' + containerId).append('svg')
@@ -231,10 +209,10 @@ function gaussian(x) {
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
         x.domain(d3.extent(data, function(d) {
-            return d.q;
+            return d.x;
         }));
         y.domain(d3.extent(data, function(d) {
-            return d.p;
+            return d.y;
         }));
 
         svg.append('g')
