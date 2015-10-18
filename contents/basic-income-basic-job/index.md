@@ -96,7 +96,7 @@ discuss static vs dynamic
       </select>
     </div>
     <div class="field">
-      <label>Spending Cuts (billions)</label>
+      <label>Cuts and taxes (billions)</label>
       <div class="ui left labeled input">
         <div class="ui label">$</div>
         <input type="text" id="spendingCuts" disabled>
@@ -104,20 +104,38 @@ discuss static vs dynamic
       <div class="grouped fields">
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" name="basicIncomeType" checked="checked">
-            <label>$10k/year</label>
+            <input type="checkbox" name="basicIncomeType">
+            <label>$375B - Eliminate redundant welfare <a href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf">[1]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
             <input type="checkbox" name="basicIncomeType">
-            <label>Full time minimum wage ($14.5k/year)</label>
+            <label>$740B - Eliminate tax loopholes <a href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf">[1]</a></label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox">
             <input type="checkbox" name="basicIncomeType">
-            <label>$20k/year</label>
+            <label>$300B - Cut defense spending in half <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType">
+            <label>$695B - Eliminate Social Security <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType">
+            <label>$290B - Eliminate Medicaid <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="basicIncomeType">
+            <label>$157B - Raise taxes on top 1% to 40% <a href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html">[3]</a></label>
           </div>
         </div>
         <div class="field">
@@ -129,7 +147,7 @@ discuss static vs dynamic
       </div>
     </div>
     <div class="field">
-      <label>% GDP Growth Range</label>
+      <label>GDP Growth Change</label>
       <div class="ui right labeled input">
         <input type="text" id="gdpRangeMin">
         <div class="ui right label">%</div>
