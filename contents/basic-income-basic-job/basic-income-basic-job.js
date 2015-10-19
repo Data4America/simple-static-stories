@@ -232,6 +232,19 @@ function basicIncomeInit() {
             .attr("class", "area negative")
             .attr("d", area);
 
+        var today = new Date();
+        var dd = today.getDate();    //<<===== no need
+        var mm = today.getMonth()+1; //January is 0!   //<<===== no need
+        var yyyy = today.getFullYear();  //<<===== no need
+
+
+        svg.append("line")
+            .attr("x1", x(0))
+            .attr("y1", 0)
+            .attr("x2", x(0))
+            .attr("y2", height)
+            .attr("class", "vertical-line");
+
         svg.append('text')
             .attr('transform', 'translate(' + (width / 2) + ' ,' + (height + margin.bottom - 5) + ')')
             .style('text-anchor', 'middle')
