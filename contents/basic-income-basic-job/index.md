@@ -162,7 +162,7 @@ Then, **what happens to the labor force?** Would people who were previously unab
       </div>
     </div>
     <div class="field">
-      <label>GDP Growth Change</label>
+      <label>GDP Change</label>
       <div class="ui right labeled input">
         <input type="text" id="gdpRangeMin">
         <div class="ui right label">%</div>
