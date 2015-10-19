@@ -40,6 +40,13 @@ Basic income is a system where the government directly gives money to all its ci
   .biBars td {
     padding: 2px;
   }
+  .biBars tr td:first-child {
+    padding-left: 0;
+  }
+  .biBars tr td:last-child {
+    text-align: right;
+    padding-right: 0;
+  }
 </style>
 
 ## Methods
