@@ -204,10 +204,6 @@ function basicIncomeInit() {
             .y0(height)
             .y1(function(d) { return y(d.y); });
 
-        var line = d3.svg.line()
-            .x(function(d) { return x(d.x); })
-            .y(function(d) { return y(d.y); });
-
         var svg = d3.select('#' + containerId).append('svg')
             .attr('width', width + margin.left + margin.right)
             .attr('height', height + margin.top + margin.bottom)
@@ -227,14 +223,14 @@ function basicIncomeInit() {
             .call(xAxis);
 
         svg.append("path")
-            .datum(data)
-            .attr("class", "area")
+            .datum(data.filter(function (d) { return d.x > 0; }))
+            .attr("class", "area positive")
             .attr("d", area);
 
         svg.append("path")
-            .datum(data)
-            .attr("class", "line")
-            .attr("d", line);
+            .datum(data.filter(function (d) { return d.x < 0; }))
+            .attr("class", "area negative")
+            .attr("d", area);
 
         svg.append('text')
             .attr('transform', 'translate(' + (width / 2) + ' ,' + (height + margin.bottom - 5) + ')')
@@ -292,7 +288,7 @@ function basicIncomeInit() {
             .style('width', function (d) { return d.width + 'px'; })
             .style('height', '1em')
             .style('margin-left', function (d) { return d.offset + 'px'; })
-            .style('background-color', function (d) { return d.sign === 1 ? 'red' : 'black'; });
+            .style('background-color', function (d) { return d.sign === 1 ? 'firebrick' : 'steelblue'; });
 
         rows.append('td')
             .html(function (d) { return formatTrillions(d.value); })
