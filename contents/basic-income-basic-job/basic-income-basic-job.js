@@ -145,14 +145,14 @@ function basicIncomeInit() {
     function render() {
         bars('biBars', biAmounts);
 
-        histogram('biHist', biTotal, biTotalStddev);
+        distribution('biDist', biTotal, biTotalStddev);
     }
 
-    // The histogram needs to be re-rendered when the size of the window changes, otherwise it won't fit in the window correctly
+    // The distribution needs to be re-rendered when the size of the window changes, otherwise it won't fit in the window correctly
     window.addEventListener('resize', render);
 
-    // Plot the histograms, showing the distribution of possible costs
-    function histogram(containerId, mean, stddev) {
+    // Plot the distribution of possible costs
+    function distribution(containerId, mean, stddev) {
         var container = document.getElementById(containerId);
         container.innerHTML = '';
 

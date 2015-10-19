@@ -179,7 +179,7 @@ Then, **what happens to the labor force?** Would people who were previously unab
 <div class="ui two column stackable grid">
   <div class="column">
     <h4>Distribution of possible costs</h4>
-    <div id="biHist"></div>
+    <div id="biDist"></div>
   </div>
   <div class="column">
     <h4>Average costs/savings by component</h4>
