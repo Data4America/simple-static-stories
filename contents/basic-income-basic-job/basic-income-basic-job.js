@@ -179,6 +179,11 @@ function basicIncomeInit() {
             xval += dx;
         }
 
+        data.forEach(function(d) {
+          d.date = d.x;
+          d.close = d.y;
+        });
+
         var margin = {top: 10, right: 30, bottom: 45, left: 30},
             width = container.offsetWidth - margin.left - margin.right,
             height = 200 - margin.top - margin.bottom;
@@ -194,13 +199,14 @@ function basicIncomeInit() {
             .orient('bottom')
             .ticks(5);
 
+        var area = d3.svg.area()
+            .x(function(d) { return x(d.x); })
+            .y0(height)
+            .y1(function(d) { return y(d.y); });
+
         var line = d3.svg.line()
-            .x(function(d) {
-                return x(d.x);
-            })
-            .y(function(d) {
-                return y(d.y);
-            });
+            .x(function(d) { return x(d.x); })
+            .y(function(d) { return y(d.y); });
 
         var svg = d3.select('#' + containerId).append('svg')
             .attr('width', width + margin.left + margin.right)
@@ -219,6 +225,11 @@ function basicIncomeInit() {
             .attr('class', 'x axis')
             .attr('transform', 'translate(0,' + height + ')')
             .call(xAxis);
+
+        svg.append("path")
+            .datum(data)
+            .attr("class", "area")
+            .attr("d", area);
 
         svg.append("path")
             .datum(data)
