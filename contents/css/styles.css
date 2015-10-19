@@ -51319,6 +51319,7 @@ input::-moz-focus-inner {
     line-height: 2.3em;
     font-weight: 300;
     font-size: 1.2em;
+    padding-left: 1.05em;
   }
 }
 /*-------------------
@@ -51454,6 +51455,11 @@ header {
   border: none;
   background: none;
   box-shadow: none;
+  margin: 0em 0 1em;
+  font-size: 1.2em;
+}
+#dfa-menu .ui.container {
+  width: 1040px;
 }
 #dfa-menu-mobile .ui.menu {
   margin: 0;
@@ -51491,7 +51497,7 @@ header {
   font-size: 1.8em;
   font-style: italic;
   font-weight: 300;
-  margin: 1em 0 1em 1.8em;
+  margin: 1em 0 0.7em 1.8em;
 }
 @media only screen and (max-width: 767px) {
   #dfa-menu {
@@ -51618,7 +51624,6 @@ header {
   line-height: 2em;
   font-size: 1.2em;
   font-weight: 300;
-  padding-left: 1.05em;
 }
 @media only screen and (max-width: 767px) {
   #dfa-content p {
@@ -51878,6 +51883,3 @@ body.embed {
 .dfa-team-grid .team-grid-links a {
   margin-right: 0.3em;
 }
-/*-------------------
-
---------------------*/
