@@ -92,6 +92,14 @@ $(document).ready(function() {
     PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
   });
 
+  $('.ui.button.email, .dfa-header-article-share.em').click(function() {
+    var url = this.dataset.url;
+    var text = encodeURI(this.dataset.text);
+    text = text.replace('#', '%23');
+    var link = 'https://mail.google.com/mail/?view=cm&fs=1&to=&su=' + text + '&body=' + encodeURI(url);
+    PopupCenter(link, 'Send an Email', 550,400);
+  });
+
   var scrollCount = 0;
   var contentTop = $('#dfa-cover').height();
   $(window).on('scroll', function() {
@@ -168,6 +176,63 @@ $(document).ready(function() {
   $('.dfa-btn-subscribe').click(function() {
     $('#dfa-subscribe-modal').modal('show');
   });
+
+  if ($('.slide-controls').length) {
+    var slideIndex = -1;
+    var totalSlides = $('.dfa-slide').length;
+
+    $('.slide-controls .next, .slide-controls .prev').click(function() {
+      if ($(this).hasClass('disabled')) {
+        return;
+      }
+
+      if ($(this).hasClass('next')) {
+        showSlide(true);
+      } else {
+        showSlide(false);
+      }
+    });
+
+    showSlide(true);
+
+    function showSlide(next) {
+      if (next) {
+        slideIndex++;
+
+        if (slideIndex == 0) {
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+        } else {
+          $('.dfa-slide:eq(' + (slideIndex - 1) + ')').transition('fade right', function() {
+            $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+          });
+        }
+
+      } else {
+
+        slideIndex--;
+
+        $('.dfa-slide:eq(' + (slideIndex + 1) + ')').transition('fade left', function() {
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right');
+        });
+
+      }
+
+      $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
+
+      if (slideIndex === 0) {
+        $('.slide-controls .prev').addClass('disabled');
+      } else {
+        $('.slide-controls .prev').removeClass('disabled');
+      }
+
+      if (totalSlides === (slideIndex + 1)) {
+        $('.slide-controls .next').addClass('disabled');
+      } else {
+        $('.slide-controls .next').removeClass('disabled');
+      }
+    }
+
+  }
 });
 
 function hideEmailForm() {

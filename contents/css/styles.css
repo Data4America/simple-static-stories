@@ -51459,7 +51459,7 @@ header {
   font-size: 1.2em;
 }
 #dfa-menu .ui.container {
-  width: 1040px;
+  width: 855px;
 }
 #dfa-menu-mobile .ui.menu {
   margin: 0;
@@ -51882,4 +51882,7 @@ body.embed {
 }
 .dfa-team-grid .team-grid-links a {
   margin-right: 0.3em;
+}
+.dfa-slide {
+  display: none;
 }
