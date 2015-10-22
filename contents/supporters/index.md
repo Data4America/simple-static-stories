@@ -1,5 +1,5 @@
 ---
-template: page.jade
+template: supporters.jade
 title: Our Supporters
 ---
 

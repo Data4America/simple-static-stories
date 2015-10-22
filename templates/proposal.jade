@@ -4,6 +4,11 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
+  div.ui.segment
+    h1.ui.header Request for Proposal
+    div.ui.divider
+    p Some text here
+
   div.ui.icon.three.item.menu.inverted.red.slide-controls
     a.item.prev.disabled
       i.chevron.left.icon 
@@ -12,11 +17,6 @@ block content
     a.item.next
       | Next 
       i.chevron.right.icon
-
-  div.ui.segment.dfa-slide
-    h1.ui.header Request for Propoal
-    div.ui.divider
-    p Some text here
 
   div.ui.segment.dfa-slide
     h1.ui.header Sector: Environment

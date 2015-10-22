@@ -51383,6 +51383,10 @@ header {
   font-weight: bold;
   background-color: #CF1A1A;
 }
+#dfa-header.ui.menu .item:focus,
+#dfa-header.ui.menu .item:active {
+  outline: none;
+}
 #dfa-header.ui.inverted.menu a.item:hover {
   background: #D82121;
   color: #ffffff;
@@ -51549,6 +51553,8 @@ header {
   height: 340px;
   background: url(/img/cover.jpg) center center;
   background-size: cover;
+  cursor: pointer;
+  display: block;
 }
 @media only screen and (max-width: 767px) {
   #dfa-cover {
