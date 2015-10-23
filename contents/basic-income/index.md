@@ -1,10 +1,10 @@
 ---
-title: "A new social contract: Basic Income vs. Basic Jobs"
+title: "Modeling basic income - does it add up?"
 author: jeremy-scheff
-date: 2015-09-11
+date: 2015-10-22
 template: article.jade
 code: https://github.com/Data4America/basic-income-basic-job
-description: "Mathematical modeling of the impact of basic income, compared against if the government just gave everyone jobs."
+description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
 published: false
 ---
 
