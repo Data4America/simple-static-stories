@@ -103,7 +103,7 @@ function basicIncomeInit() {
         if (window.location.pathname.indexOf('local') >= 0) {
             window.location.replace(url);
         }*/
-        document.getElementById('permalink').value = 'Permalink not implemented yet!';
+        document.getElementById('permalink').value = 'Permalink not implemented yet, but eventually this will link to a self-contained mini-page';
     }
 
     // Initialize UI
