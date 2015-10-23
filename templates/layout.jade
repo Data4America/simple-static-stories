@@ -60,8 +60,22 @@ html(lang='en')
               div.logo.item
                 a.logo(href="/")
               a.item.dfa-btn-subscribe(href="javascript:;") Subscribe
-              a.item.dfa-btn-donate(href="javascript:;") Donate
               a.item.dfa-btn-share(href="javascript:;") Share
+              div.ui.dropdown.icon.item
+                | Menu  
+                i.big.sidebar.icon
+                div.menu
+                  a.item(href="/") All Stories
+                  a.item(href="/request-for-proposal/") Request for Proposal
+                  a.item(href="/sponsorship/") Sponsorships
+                  a.item(href="/about/") About Data4America
+                  a.item(href="/team/") Our Team
+                  a.item(href="/donate/") Donate
+                  a.item(href="/upload/") Submit Content
+                  a.item(href="http://data.data4america.org/") Submit Data
+                  a.item(href="http://git.data4america.org/") Submit Software
+                  a.item(href="/request-government-data") Request Data
+                  a.item(href="/supporters/") Our Supporters
               div.item.dfa-header-title
               a.item.icon.dfa-header-article-share.fb(data-url=locals.url + (page !== undefined ? page.url : '/'))
                 i.icon.facebook
@@ -70,24 +84,11 @@ html(lang='en')
               a.item.icon.dfa-header-article-share.em(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
                 i.icon.mail
               div.right.menu.social-buttons
-                div.ui.dropdown.top.right.icon.item
-                  i.big.sidebar.icon
-                  div.menu
-                    a.item(href="/") All Stories
-                    a.item(href="/request-for-proposal/") Request for Proposal
-                    a.item(href="/about/") About Data4America
-                    a.item(href="/team/") Our Team
-                    a.item(href="/donate/") Donate
-                    a.item(href="/upload/") Submit Content
-                    a.item(href="http://data.data4america.org/") Submit Data
-                    a.item(href="http://git.data4america.org/") Submit Software
-                    a.item(href="/request-government-data") Request Data
-                    a.item(href="/supporters/") Our Supporters
 
           div#dfa-slogan Bringing Data Science to the study of Politics
 
           div#dfa-menu.ui.main.menu
-            div.ui.container
+            div.ui.text.container
               a.item(href="/") STORIES
               a.item(href="/about/") ABOUT
               a.item(href="/team/") OUR TEAM
@@ -95,7 +96,6 @@ html(lang='en')
               a.item(href="/upload/") SUBMIT CONTENT
               a.item(href="http://data.data4america.org/") DATA SETS
               a.item(href="http://git.data4america.org/") GITHUB
-              a.item(href="/supporters/") OUR SUPPORTERS
 
       div#dfa-subscribe-modal.ui.modal.small
         i.close.icon
@@ -147,7 +147,8 @@ html(lang='en')
         div.ui.divider
 
         h3.ui.header(style="line-height: 1.4em; text-align: center;")
-          | Help Data4America power the crowdsourced and non-partisan education of public policy using data science, data visualization, and infographics. 
+          | Help Data4America reduce the noise in media by publishing crowdsourced and non-partisan policy education--powered by data science and data visualization. 
+          br
           a.dfa-btn-donate(href="javascript:;") Make a donation.
 
       div#dfa-footer(style="display:none;")

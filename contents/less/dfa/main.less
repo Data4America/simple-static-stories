@@ -19,6 +19,7 @@ html, body {
 
 @import "donate.less";
 @import "article.less";
+@import "sponsorship.less";
 
 /*-------------------
       FONTS
@@ -99,10 +100,6 @@ header {
   color: #ffffff;
 }
 
-#dfa-header.ui.menu .item.dropdown {
-  background-color: #333;
-}
-
 @media only screen and (max-width: @largestMobileScreen) {
   #dfa-header {
     background-color: #CF1A1A;
@@ -151,6 +148,12 @@ header {
   width: 312px;
   font-size: 1.4em;
   background-color: #333;
+}
+
+#dfa-header.ui.menu .ui.dropdown .sidebar.icon {
+  font-size: 1em;
+  margin-left: 0.3em;
+  line-height: 0.9em;
 }
 
 #dfa-header.ui.menu .ui.dropdown .menu .item {
@@ -680,4 +683,13 @@ body.embed {
 
 .dfa-slide {
   display: none;
+  min-height: 400px
+}
+
+#dfa-supporters .item .header {
+  font-weight: bold;
+}
+
+#dfa-supporters .item .description {
+  font-weight: normal;
 }
