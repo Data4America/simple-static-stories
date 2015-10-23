@@ -3,7 +3,7 @@ title: "Modeling basic income - does it add up?"
 author: jeremy-scheff
 date: 2015-10-22
 template: article.jade
-code: https://github.com/Data4America/basic-income-basic-job
+code: https://github.com/Data4America/simple-static-stories/blob/development/contents/basic-income/basic-income.js
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
 published: false
 ---
@@ -219,4 +219,4 @@ Because of this wide range of uncertainty, the form below allows you to enter a 
 So what do you think? Do the numbers add up?
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-<script type="text/javascript" src="basic-income-basic-job.js"></script>
+<script type="text/javascript" src="basic-income.js"></script>
