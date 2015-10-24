@@ -103,6 +103,7 @@ header {
 @media only screen and (max-width: @largestMobileScreen) {
   #dfa-header {
     background-color: #CF1A1A;
+    display:block;
   }
 
   #dfa-header.ui.menu .item {
@@ -163,15 +164,16 @@ header {
 
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
+
   #dfa-header .ui.button {
     padding-left: .7em;
     padding-right: .7em;
   }
 
   #dfa-header .item.logo a {
-    background-size: 60px 60px;
-    height: 40px;
-    width: 60px;
+    background-size: 54px 54px;
+    height: 33px;
+    width: 54px;
   }
 }
 
@@ -303,6 +305,7 @@ header {
   #dfa-cover {
     height: 190px;
     background-size: 150%;
+    background-position-y: -40px;
   }
 }
 
@@ -326,7 +329,7 @@ header {
 
 @media only screen and (max-width: @largestMobileScreen) {
   .dfa-sidebar-tap {
-    top: 190px;
+    top: 120px;
   }
 }
 
@@ -692,4 +695,8 @@ body.embed {
 
 #dfa-supporters .item .description {
   font-weight: normal;
+}
+
+#dfa-sponsorship .ui.grid .column {
+  cursor: pointer;
 }

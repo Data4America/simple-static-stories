@@ -31,8 +31,19 @@ var isMobile = function() {
 }
 
 $(document).ready(function() {
-  $('#dfa-header .ui.dropdown').dropdown();
 
+  // Initialize the header Menu
+  $('#dfa-header .ui.dropdown').dropdown({
+    onShow: function() {
+      if (isMobile()) {
+        var left = $('#dfa-header .ui.dropdown').offset().left;
+        console.log(left);
+        $('#dfa-header .ui.dropdown .menu').css('left', -left + 'px');
+      }
+    }
+  });
+
+  // Initialize Sidebar click
   $('.dfa-sidebar-tap, .ui.sidebar .angle.double.left').click(function() {
     $('.ui.sidebar')
       .sidebar({
@@ -43,6 +54,14 @@ $(document).ready(function() {
   });
 
   $('#dfa-sidebar-border').height(screen.height);
+
+  // If sponsor policy channel
+  if ($('#dfa-sponsorship').length) {
+    $('#dfa-sponsorship .ui.grid .column').click(function() {
+      $('.dfa-link-sponsor').trigger('click');
+      $('.dfa-btn-donate').trigger('click');
+    });
+  }
 
   if (isMobile()) {
     $('#dfa-header.ui.menu .ui.dropdown .menu').width(screen.width);
@@ -56,6 +75,22 @@ $(document).ready(function() {
 
     $('.dfa-header-title').remove();
     $('.dfa-header-article-share').remove();
+
+    // If sponsor policy channel
+    if ($('#dfa-sponsorship').length) {
+      $('#dfa-sponsorship .ui.grid')
+        .removeClass('three column')
+        .addClass('two column');
+    }
+
+    // If sponsor policy channel
+    if ($('#dfa-supporters').length) {
+      $('#dfa-supporters .horizontal.segments .segment').css('width', 'auto');
+      $('#dfa-supporters .horizontal.segments')
+        .removeClass('horizontal')
+        .addClass('vertical');
+    }
+
   } else {
     $('.dfa-article-header .sms').remove();
   }
@@ -115,10 +150,12 @@ $(document).ready(function() {
       $('#dfa-footer').hide();
     }
 
-    if ($(window).scrollTop() > contentTop) {
-      $('#dfa-header').show();
-    } else {
-      $('#dfa-header').hide();
+    if (!isMobile) {
+      if ($(window).scrollTop() > contentTop) {
+        $('#dfa-header').show();
+      } else {
+        $('#dfa-header').hide();
+      }
     }
   });
 
