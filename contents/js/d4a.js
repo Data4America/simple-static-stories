@@ -150,7 +150,7 @@ $(document).ready(function() {
       $('#dfa-footer').hide();
     }
 
-    if (!isMobile) {
+    if (!isMobile()) {
       if ($(window).scrollTop() > contentTop) {
         $('#dfa-header').show();
       } else {
