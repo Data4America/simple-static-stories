@@ -31,6 +31,8 @@ var isMobile = function() {
 }
 
 $(document).ready(function() {
+  $('.checkbox').checkbox();
+  $('.ui.form .ui.dropdown').dropdown();
 
   // Initialize the header Menu
   $('#dfa-header .ui.dropdown').dropdown({
@@ -254,7 +256,7 @@ $(document).ready(function() {
 
       }
 
-      $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
+      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
 
       if (slideIndex === 0) {
         $('.slide-controls .prev').addClass('disabled');

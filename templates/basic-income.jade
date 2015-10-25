@@ -1,0 +1,155 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div.ui.icon.three.item.menu.inverted.red.slide-controls.top.attached
+    a.item.prev.disabled
+      i.chevron.left.icon
+      |  Back
+    div.item.text Step 1 of 7
+    a.item.next
+      | Next
+      i.chevron.right.icon
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Create you basic income model
+    div.ui.divider
+    p Create a model any geography
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Enter your information
+    div.ui.divider
+    div.ui.form
+      div.two.fields
+        div.field
+          label First Name
+          input(placeholder="First Name",type="text")
+        div.field
+          label Last Name
+          input(placeholder="Last Name",type="text")
+      div.field
+        label Your email address
+        input(placeholder="Email Address",type="text")
+      div.field
+        label Name of the region
+        input(placeholder="Region",type="text")
+      div.field.right.slide-controls
+        div.ui.red.button.next Next
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Step 1: Basic Income (per adult)
+    div.ui.divider
+    div.ui.form
+      div.field
+        div.ui.left.labeled.input
+          div.ui.label $
+          input(type="text",placeholder="Amount")
+      div.grouped.fields
+        div.field
+          div.ui.radio.checkbox
+            input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
+            label $10k/year
+        div.field
+          div.ui.radio.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label Full time minimum wage ($14.5k/year)
+        div.field
+          div.ui.radio.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $20k/year
+        div.field
+          div.ui.radio.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label Custom
+      div.field.right.slide-controls
+        div.ui.red.button.next Next
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Step 2: UBI or NIT?
+    div.ui.divider
+    div.ui.form
+      div.field
+        label Gender
+        select.ui.dropdown
+          option(value="") Choose
+          option(value="1") UBI
+          option(value="1") NIT
+      div.field.right.slide-controls
+        div.ui.red.button.next Next
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Step 3: Cuts and taxes (billions)
+    div.ui.divider
+    div.ui.form
+      div.field
+        div.ui.left.labeled.input
+          div.ui.label $
+          input(type="text",placeholder="Amount")
+      div.grouped.fields
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
+            label $375B - Eliminate redundant welfare
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $740B - Eliminate tax loopholes
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $300B - Cut defense spending in half
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $695B - Eliminate Social Security
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $290B - Eliminate Medicaid
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $290B - Eliminate Medicaid
+        div.field
+          div.ui.checkbox
+            input(type="radio",name="fruit",tabindex="0",class="hidden")
+            label $157B - Raises taxes on top 1% to 40%
+      div.field.right.slide-controls
+        div.ui.red.button.next Next
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Step 4: GDP Change
+    div.ui.divider
+    div.ui.form
+      div.two.fields
+        div.field
+          label From
+          div.ui.right.labeled.input
+            input(type="text",placeholder="Amount")
+            div.ui.label %
+        div.field
+          label To
+          div.ui.right.labeled.input
+            input(type="text",placeholder="Amount")
+            div.ui.label %
+      div.field.right.slide-controls
+        div.ui.red.button.next Generate
+
+  div.ui.segment.bottom.attached.dfa-slide
+    h1.ui.header Results
+    div.ui.divider
+    img.ui.image(src="/img/model.png")
+    div.ui.divider
+    div.dfa-share(style="padding-bottom:1em; text-align:center;")
+      | Share you results:
+      div.ui.grey.email.button.circular.icon
+        i.icon.mail
+      div.ui.facebook.button.circular.icon
+        i.ui.facebook.icon
+      div.ui.twitter.button.circular.icon
+        i.ui.twitter.icon
+      a.circular.ui.icon.button.sms.orange(href="javascript:;")
+        i.icon-sms
+
