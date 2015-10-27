@@ -52277,7 +52277,7 @@ header {
   background-color: #333;
 }
 #dfa-header.ui.menu .ui.dropdown .menu .donate {
-  background-color: #133671 !important;
+  background-color: #CC0505 !important;
   font-weight: 700 !important;
 }
 #dfa-header.ui.menu .ui.dropdown .sidebar.icon {
@@ -52781,5 +52781,5 @@ body.embed {
   background: #133671 !important;
 }
 #dfa-menu-floating .item.donate {
-  background: #133671 !important;
+  background: #CC0505 !important;
 }
