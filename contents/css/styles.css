@@ -52277,6 +52277,10 @@ header {
   font-size: 1.4em;
   background-color: #333;
 }
+#dfa-header.ui.menu .ui.dropdown .menu .donate {
+  background-color: #CC0505 !important;
+  font-weight: 700 !important;
+}
 #dfa-header.ui.menu .ui.dropdown .sidebar.icon {
   font-size: 1em;
   margin-left: 0.3em;
@@ -52748,4 +52752,16 @@ body.embed {
 }
 #dfa-sponsorship .ui.grid .column {
   cursor: pointer;
+}
+.slide-controls.ui.menu .item.prev {
+  background-color: #2185D0 !important;
+}
+.slide-controls.ui.menu .item.next {
+  background-color: #CC0505 !important;
+}
+.slide-controls.ui.menu .item.text {
+  background: #FFFFFF;
+  color: #767676;
+  border: 1px solid #C1C1C1;
+  border-width: 1px 0 1px 0;
 }

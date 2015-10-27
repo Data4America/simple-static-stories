@@ -4,22 +4,25 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
-  div.ui.icon.three.item.menu.inverted.red.slide-controls.top.attached
+  div.ui.segment
+    h1.ui.header Create your basic income model for any geography
+
+  div.ui.icon.menu.inverted.grey.slide-controls.top.attached
     a.item.prev.disabled
       i.chevron.left.icon
-      |  Back
     div.item.text Step 1 of 7
     a.item.next
-      | Next
       i.chevron.right.icon
+    div.menu.right
+      a.item
+        i.icon.facebook
+      a.item
+        i.icon.twitter
 
   div.ui.segment.bottom.attached.dfa-slide
-    h1.ui.header Create you basic income model
-    div.ui.divider
-    p Create a model any geography
-
-  div.ui.segment.bottom.attached.dfa-slide
-    h1.ui.header Enter your information
+    h2.ui.header
+      span.ui.red.label.large 1 
+      |  Enter your personal information
     div.ui.divider
     div.ui.form
       div.two.fields
@@ -33,13 +36,15 @@ block content
         label Your email address
         input(placeholder="Email Address",type="text")
       div.field
-        label Name of the region
-        input(placeholder="Region",type="text")
+        label Name of your country or region
+        input(placeholder="Type in",type="text")
       div.field.right.slide-controls
         div.ui.red.button.next Next
 
   div.ui.segment.bottom.attached.dfa-slide
-    h1.ui.header Step 1: Basic Income (per adult)
+    h2.ui.header
+      span.ui.red.label.large 2
+      |  Basic Income (per adult)
     div.ui.divider
     div.ui.form
       div.field
@@ -67,7 +72,9 @@ block content
         div.ui.red.button.next Next
 
   div.ui.segment.bottom.attached.dfa-slide
-    h1.ui.header Step 2: UBI or NIT?
+    h2.ui.header
+      span.ui.red.label.large 3
+      |  UBI or NIT?
     div.ui.divider
     div.ui.form
       div.field
@@ -80,7 +87,9 @@ block content
         div.ui.red.button.next Next
 
   div.ui.segment.bottom.attached.dfa-slide
-    h1.ui.header Step 3: Cuts and taxes (billions)
+    h2.ui.header
+      span.ui.red.label.large 4
+      |  Cuts and taxes (billions)
     div.ui.divider
     div.ui.form
       div.field
@@ -120,7 +129,9 @@ block content
         div.ui.red.button.next Next
 
   div.ui.segment.bottom.attached.dfa-slide
-    h1.ui.header Step 4: GDP Change
+    h2.ui.header
+      span.ui.red.label.large 5
+      |  GDP Change
     div.ui.divider
     div.ui.form
       div.two.fields
@@ -134,8 +145,8 @@ block content
           div.ui.right.labeled.input
             input(type="text",placeholder="Amount")
             div.ui.label %
-      div.field.right.slide-controls
-        div.ui.red.button.next Generate
+      div.field.right.slide-controls(style="text-align: center; margin-top: 9.5em;")
+        div.ui.red.button.next.massive Generate
 
   div.ui.segment.bottom.attached.dfa-slide
     h1.ui.header Results
