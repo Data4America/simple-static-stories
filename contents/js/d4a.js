@@ -35,6 +35,8 @@ $(document).ready(function() {
   $('.ui.form .ui.dropdown').dropdown();
 
   // Initialize the header Menu
+  $('#dfa-menu-floating').dropdown();
+
   $('#dfa-header .ui.dropdown').dropdown({
     onShow: function() {
       if (isMobile()) {
@@ -152,12 +154,10 @@ $(document).ready(function() {
       $('#dfa-footer').hide();
     }
 
-    if (!isMobile()) {
-      if ($(window).scrollTop() > contentTop) {
-        $('#dfa-header').show();
-      } else {
-        $('#dfa-header').hide();
-      }
+    if ($(window).scrollTop() > contentTop) {
+      $('#dfa-header').show();
+    } else {
+      $('#dfa-header').hide();
     }
   });
 

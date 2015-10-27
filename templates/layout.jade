@@ -55,6 +55,21 @@ html(lang='en')
 
           a#dfa-cover(href="/")
 
+          div#dfa-menu-floating.ui.inverted.icon.right.pointing.dropdown
+            i.big.sidebar.icon
+            div.menu
+              a.item(href="/") All Stories
+              a.item(href="/request-for-proposal/") Request for Proposal
+              a.item(href="/sponsorship/") Sponsorships
+              a.item(href="/about/") About Data4America
+              a.item(href="/team/") Our Team
+              a.donate.item(href="/donate/") Donate
+              a.item(href="/upload/") Submit Content
+              a.item(href="http://data.data4america.org/") Submit Data
+              a.item(href="http://git.data4america.org/") Submit Software
+              a.item(href="/request-government-data") Request Data
+              a.item(href="/supporters/") Our Supporters
+
           div#dfa-header.ui.borderless.inverted.main.menu.fixed
             div.container
               div.logo.item
@@ -85,14 +100,14 @@ html(lang='en')
                 i.icon.mail
               div.right.menu.social-buttons
 
-          div#dfa-slogan Bringing Data Science to the study of Politics
+          div#dfa-slogan Bringing Data Science to the understanding of Politics
 
           div#dfa-menu.ui.main.menu
             div.ui.text.container
               a.item(href="/") STORIES
               a.item(href="/about/") ABOUT
               a.item(href="/team/") OUR TEAM
-              a.item(href="/donate/") DONATE
+              a.item(href="/donate/", style="font-weight:bold;") DONATE
               a.item(href="/upload/") SUBMIT CONTENT
               a.item(href="http://data.data4america.org/") DATA SETS
               a.item(href="http://git.data4america.org/") GITHUB
@@ -147,7 +162,7 @@ html(lang='en')
         div.ui.divider
 
         h3.ui.header(style="line-height: 1.4em; text-align: center;")
-          | Help Data4America improve the public's understanding of the issues by publishing crowdsourced and non-partisan stories--powered by data science and data visualization. 
+          | Help Data4America improve the public's understanding of public policy by publishing user-generated and non-partisan explainer stories--powered by data science and data visualization. 
           a.dfa-btn-donate(href="javascript:;") Make a donation.
 
       div#dfa-footer(style="display:none;")
@@ -207,3 +222,4 @@ html(lang='en')
       <div id="fb-root"></div>
       <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','//connect.facebook.net/en_US/fbevents.js'); fbq('init', '810448618996739'); fbq('track', "PageView");</script>
