@@ -74,18 +74,17 @@ block footer
   div.ui.basic.segment.dfa-share
     div.ui.equal.width.grid.stackable
       div.column
-        a(href='mailto:?subject=' + page.title + '&body=' + encodeURI(locals.url + page.url))
-          div.ui.grey.email.button.fluid
-            i.icon.mail
-            span.text Share by Email
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
       div.column
-        div.ui.facebook.fluid.button(data-url=locals.url)
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
           i.ui.facebook.icon
-          span.text Share on Email
+          span.text Share
       div.column
-        div.ui.twitter.fluid.button(data-url=locals.url + page.url, data-text=page.title)
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
           i.ui.twitter.icon
-          span.text Post on Twitter
+          span.text Tweet
 
   div.ui.segment
     div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px")

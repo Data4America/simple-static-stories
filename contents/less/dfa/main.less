@@ -19,6 +19,7 @@ html, body {
 
 @import "donate.less";
 @import "article.less";
+@import "sponsorship.less";
 
 /*-------------------
       FONTS
@@ -89,13 +90,14 @@ header {
   background-color: #CF1A1A;
 }
 
-#dfa-header.ui.inverted.menu a.item:hover {
-  background: #D82121;
-  color: #ffffff;
+#dfa-header.ui.menu .item:focus,
+ #dfa-header.ui.menu .item:active {
+   outline: none;
 }
 
-#dfa-header.ui.menu .item.dropdown {
-  background-color: #333;
+#dfa-header.ui.inverted.menu a.item:hover {
+  background: #133671 !important;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -148,6 +150,17 @@ header {
   background-color: #333;
 }
 
+#dfa-header.ui.menu .ui.dropdown .menu .donate {
+  background-color: @red !important;
+  font-weight: 700 !important;
+}
+
+#dfa-header.ui.menu .ui.dropdown .sidebar.icon {
+  font-size: 1em;
+  margin-left: 0.3em;
+  line-height: 0.9em;
+}
+
 #dfa-header.ui.menu .ui.dropdown .menu .item {
   color: #fff !important;
   border-bottom: 1px solid #4A4A4A;
@@ -155,15 +168,16 @@ header {
 
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
+
   #dfa-header .ui.button {
     padding-left: .7em;
     padding-right: .7em;
   }
 
   #dfa-header .item.logo a {
-    background-size: 60px 60px;
-    height: 40px;
-    width: 60px;
+    background-size: 54px 54px;
+    height: 33px;
+    width: 54px;
   }
 }
 
@@ -174,6 +188,12 @@ header {
   border: none;
   background: none;
   box-shadow: none;
+  margin: 0em 0 1em;
+  font-size:1.2em;
+}
+
+#dfa-menu .ui.container {
+  width: 855px;
 }
 
 #dfa-menu-mobile .ui.menu {
@@ -219,7 +239,7 @@ header {
   font-size: 1.8em;
   font-style: italic;
   font-weight: 300;
-  margin: 1em 0 1em 1.8em;
+  margin: 1em 0 0.7em 1.8em;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -281,6 +301,8 @@ header {
   height: 340px;
   background: url(/img/cover.jpg) center center;
   background-size: cover;
+  cursor: pointer;
+  display:block;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -310,7 +332,7 @@ header {
 
 @media only screen and (max-width: @largestMobileScreen) {
   .dfa-sidebar-tap {
-    top: 190px;
+    top: 120px;
   }
 }
 
@@ -369,7 +391,6 @@ header {
   line-height: 2em;
   font-size: 1.2em;
   font-weight: 300;
-  padding-left: 1.05em;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -666,7 +687,59 @@ body.embed {
   margin-right: 0.3em;
 }
 
-/*-------------------
+.dfa-slide {
+  display: none;
+}
 
---------------------*/
+.slide-controls {
+  text-align: center;
+}
 
+.saperator {
+    padding: 0 .6em;
+}
+
+#dfa-supporters .item .header {
+  font-weight: bold;
+}
+
+#dfa-supporters .item .description {
+  font-weight: normal;
+}
+
+#dfa-sponsorship .ui.grid .column {
+  cursor: pointer;
+}
+
+#dfa-menu-floating {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  font-family: 'Trasandina';
+
+  .menu {
+    background-color:#333;
+  }
+
+  .menu:after {
+    width: 0.9em;
+    height: 0.9em;
+    box-shadow: none;
+    background: #333333;
+  }
+
+  .menu > .item {
+    padding: 0.8rem 1.4rem !important;
+    font-size: 1.6rem;
+    color: @white;
+    border-bottom: 1px solid #444;
+  }
+
+  .item:hover {
+    background: #133671 !important;
+  }
+
+  .item.donate {
+    background: @red !important;
+  }
+}

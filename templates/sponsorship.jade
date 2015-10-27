@@ -1,0 +1,57 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-sponsorship.ui.segment
+    h1.ui.header Sponsor a Policy Channel
+    div.ui.divider
+    p You can sponsor any issue at the local, state, or federal level. We’ll actively promote the channel and start accepting crowd sourced submissions for your sponsored policy topic. You’ll be able to read each submission. You’ll be publicly recognized for the sponsorship.  We only publish what the non-partisan Data4America Editorial Board approves. Here are some examples:
+
+    div.ui.three.column.grid
+
+      div.column
+        div.icons.environment
+        h3.ui.grey.header Environment
+      div.column
+        div.icons.military
+        h3.ui.grey.header Military
+      div.column
+        div.icons.race-gender
+        h3.ui.grey.header Race and Gender
+
+      div.column
+        div.icons.wall-street
+        h3.ui.grey.header Wall Street Reform
+      div.column
+        div.icons.spending
+        h3.ui.grey.header Federal Spending
+      div.column
+        div.icons.drugs
+        h3.ui.grey.header Drug Legalization
+
+      div.column
+        div.icons.immigration
+        h3.ui.grey.header Immigration
+      div.column
+        div.icons.religion
+        h3.ui.grey.header Government and Religion
+      div.column
+        div.icons.education
+        h3.ui.grey.header Education
+
+      div.column
+        div.icons.entitlement
+        h3.ui.grey.header Entitlement Programs
+      div.column
+        div.icons.taxes
+        h3.ui.grey.header Taxes
+      div.column
+        div.icons.foreign
+        h3.ui.grey.header Foreign Affairs
+
+    h2.ui.header.grey
+      span(style="color:black") Cost: 
+      | Choose your own ($10,000 is the minimum donation)
+
