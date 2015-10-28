@@ -5,7 +5,6 @@ var order = [
     'nate-lubin',
     'andy-barkett',
     'horace-dediu',
-    'blake-masters',
     'jessica-kirkpatrick',
     'abe-stanway',
     'robert-manduca',
@@ -34,7 +33,9 @@ var order = [
     'susan-gentz',
     'chris-belsky',
     'alex-albright',
-    'sarah-levine'
+    'sarah-levine',
+    'blake-masters',
+    'ramez-naam'
 ];
 
 function sortObjective(p) {
