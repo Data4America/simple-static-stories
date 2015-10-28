@@ -24,6 +24,8 @@ var order = [
     'sam-drzymala',
     'christopher-nicholson',
     'becky-stark',
+    'blake-masters',
+    'ramez-naam',
     'tim-urban',
     'frank-tsai',
     'seth-kaddish',
@@ -33,9 +35,7 @@ var order = [
     'susan-gentz',
     'chris-belsky',
     'alex-albright',
-    'sarah-levine',
-    'blake-masters',
-    'ramez-naam'
+    'sarah-levine'
 ];
 
 function sortObjective(p) {
