@@ -4,6 +4,8 @@ var order = [
     'craig-montuori',
     'nate-lubin',
     'andy-barkett',
+    'becky-stark',
+    'alex-albright',
     'horace-dediu',
     'jessica-kirkpatrick',
     'abe-stanway',
@@ -19,11 +21,11 @@ var order = [
     'zhan-li',
     'jeremy-scheff',
     'ganesh-iyer',
+    'sarah-levine',
     'sam-penrose',
     'andrew-trabulsi',
     'sam-drzymala',
     'christopher-nicholson',
-    'becky-stark',
     'blake-masters',
     'cyan-banister',
     'ramez-naam',
@@ -34,9 +36,7 @@ var order = [
     'britt-crawford',
     'waylin-ross',
     'susan-gentz',
-    'chris-belsky',
-    'alex-albright',
-    'sarah-levine'
+    'chris-belsky'
 ];
 
 function sortObjective(p) {
