@@ -17,8 +17,8 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
-  article.article.ui.segments
-    div.ui.segment
+  article.article.big.ui.segments
+    div.ui.segment.dfa-article-header
       div.ui.items
         div.item
           div.image
@@ -31,6 +31,15 @@ block content
             h1.ui.header= page.title
             div.extra Published on: 
               span= moment.utc(page.date).format('MMMM D, YYYY')
+      div.dfa-share(style="padding-bottom:1em;")
+        div.ui.grey.email.button.circular.icon
+          i.icon.mail
+        div.ui.facebook.button.circular.icon
+          i.ui.facebook.icon
+        div.ui.twitter.button.circular.icon
+          i.ui.twitter.icon
+        a.circular.ui.icon.button.sms.orange(href="javascript:;")
+          i.icon-sms
 
     div.ui.segment
       mixin author(page.metadata.author)
@@ -62,30 +71,20 @@ block footer
       b #[a(href='http://data4america.org/donate') Donate to Data4America.] 
       | We’re a non-partisan, non-profit media platform bringing Data Journalism to 21st Century Government
 
-  div.ui.segment.center.aligned
-    h2.ui.header Share this data story
-    div.dfa-share
-      div.container
-        a(href='mailto:?subject=' + page.title + '&body=' + encodeURI(locals.url + page.url))
-          div.ui.grey.email.button
-            i.icon.mail
-            span.text Email
-        div.ui.facebook.button(data-url=locals.url)
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
           i.ui.facebook.icon
           span.text Share
-        div.ui.twitter.button(data-url=locals.url + page.url, data-text=page.title)
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
           i.ui.twitter.icon
           span.text Tweet
-
-      div.container.mobile(style="display:none;")
-        div.ui.grey.email.button.circular.icon
-          i.icon.mail
-        div.ui.facebook.button.circular.icon
-          i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon
-          i.ui.twitter.icon
-        a.circular.ui.icon.button.orange(href="javascript:;")
-          i.icon-sms
 
   div.ui.segment
     div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px")

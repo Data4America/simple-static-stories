@@ -17,8 +17,9 @@ html, body {
   background: #FAFAFA;
 }
 
-
 @import "donate.less";
+@import "article.less";
+@import "sponsorship.less";
 
 /*-------------------
       FONTS
@@ -67,18 +68,60 @@ html, body {
 /*-------------------
       MAIN HEADER
 --------------------*/
+header {
+  background: #FAFAFA;
+}
+
 #dfa-header {
-  background-color: #B4B4B4;
-  background: url(/img/background.jpg) center center;
+  background: #333;
   background-size: 900px;
   border-radius: 0;
   margin: 0;
   display:none;
   z-index: 1001;
+  box-shadow: 0 4px 8px #777;
+  font-family: 'Trasandina';
 }
 
 #dfa-header.ui.menu .item {
-  padding: 0.4em 0.2em;
+  padding: 0.2em 0.8em;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #CF1A1A;
+}
+
+#dfa-header.ui.menu .item:focus,
+ #dfa-header.ui.menu .item:active {
+   outline: none;
+}
+
+#dfa-header.ui.inverted.menu a.item:hover {
+  background: #133671 !important;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: @largestMobileScreen) {
+  #dfa-header {
+    background-color: #CF1A1A;
+  }
+
+  #dfa-header.ui.menu .item {
+    padding: 0.4em 0.65em;
+    font-size: 0.95em;
+  }
+}
+
+#dfa-header.ui.menu .item.dfa-header-title,
+  #dfa-header.ui.menu .item.dfa-header-article-share {
+  font-family: 'Lato';
+  background: none;
+  font-style: italic;
+  font-weight: 300;
+}
+
+#dfa-header.ui.inverted.menu a.dfa-header-article-share.item:hover {
+  background: #555;
+  color: #ffffff;
 }
 
 #dfa-header.ui.menu .item .button {
@@ -88,9 +131,8 @@ html, body {
   width: 5.8em;
 }
 
-#dfa-header .item.logo {
-  padding-left: 0;
-  padding-right: 0;
+#dfa-header.ui.menu .item.logo {
+  background: #ddd;
 }
 
 #dfa-header .item.logo a {
@@ -103,9 +145,20 @@ html, body {
 
 #dfa-header.ui.menu .ui.dropdown .menu {
   z-index:104;
-  width: 212px;
+  width: 312px;
   font-size: 1.4em;
-  background: rgb(51, 51, 51);
+  background-color: #333;
+}
+
+#dfa-header.ui.menu .ui.dropdown .menu .donate {
+  background-color: @red !important;
+  font-weight: 700 !important;
+}
+
+#dfa-header.ui.menu .ui.dropdown .sidebar.icon {
+  font-size: 1em;
+  margin-left: 0.3em;
+  line-height: 0.9em;
 }
 
 #dfa-header.ui.menu .ui.dropdown .menu .item {
@@ -115,15 +168,16 @@ html, body {
 
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
+
   #dfa-header .ui.button {
     padding-left: .7em;
     padding-right: .7em;
   }
 
   #dfa-header .item.logo a {
-    background-size: 60px 60px;
-    height: 40px;
-    width: 60px;
+    background-size: 54px 54px;
+    height: 33px;
+    width: 54px;
   }
 }
 
@@ -134,6 +188,12 @@ html, body {
   border: none;
   background: none;
   box-shadow: none;
+  margin: 0em 0 1em;
+  font-size:1.2em;
+}
+
+#dfa-menu .ui.container {
+  width: 855px;
 }
 
 #dfa-menu-mobile .ui.menu {
@@ -151,7 +211,7 @@ html, body {
 
 #dfa-menu a.item {
   border: 0;
-  font-size:0.8em;
+  font-size:0.7em;
   padding: 0.3em 1.85em;
   color: #002864;
 }
@@ -176,9 +236,10 @@ html, body {
 #dfa-slogan {
   color: @grey;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-style: italic;
-  margin: 1em 0 1em 1.8em;
+  font-weight: 300;
+  margin: 1em 0 0.7em 1.8em;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -186,8 +247,12 @@ html, body {
     display:none;
   }
 
+  #dfa-slogan {
+    display:none;
+  }
+
   #dfa-menu-mobile {
-    display:block;
+    display:none;
   }
 
   #dfa-slogan {
@@ -196,6 +261,38 @@ html, body {
   }
 }
 
+#dfa-menu-footer {
+  margin-left: 0;
+  margin-top: 20px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#dfa-menu-footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+#dfa-menu-footer li {
+  display: inline-block;
+  margin-left: 10px;
+  text-transform: uppercase;
+  padding: 0.4em 0;
+}
+
+#dfa-menu-footer li a {
+  color: #7c7d7e;
+}
+
+#dfa-logo-footer {
+  background: url(/img/logo-256.png) center center;
+  display: inline-block;
+  background-size: 100px 100px;
+  height: 64px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
 
 /*-------------------
     COVER
@@ -204,6 +301,8 @@ html, body {
   height: 340px;
   background: url(/img/cover.jpg) center center;
   background-size: cover;
+  cursor: pointer;
+  display:block;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -222,13 +321,19 @@ html, body {
   transform: rotate(-90deg) !important;
   display: inline-block;
   position: fixed;
-  left: -32px;
-  top: 153px;
+  left: -37px;
+  top: 320px;
   color: #fff;
   padding: .4em 1em .4em;
   border-radius: 0 0 4px 4px;
   cursor: pointer;
   z-index: 2;
+}
+
+@media only screen and (max-width: @largestMobileScreen) {
+  .dfa-sidebar-tap {
+    top: 120px;
+  }
 }
 
 .ui.sidebar .dfa-sidebar-tap {
@@ -252,7 +357,7 @@ html, body {
 }
 
 #dfa-sidebar .item:before {
-  background: #fff;
+  background: none;
 }
 
 #dfa-sidebar .ui.card {
@@ -278,12 +383,14 @@ html, body {
 --------------------*/
 
 #dfa-content {
-  padding: 0 0 65px;
+  padding: 0 0 20px;
   background: #FAFAFA;
 }
 
 #dfa-content p {
   line-height: 2em;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -317,6 +424,7 @@ html, body {
   #dfa-content .ui.container {
     position: relative;
     z-index: 0;
+    margin: 1em 0 !important;
   }
 
   #dfa-content .ui.statistic .label,
@@ -352,14 +460,6 @@ hr {
   vertical-align: -2px;
 }
 
-.ui.items>.item>.image:not(.ui) {
-  width:125px;
-}
-
-.ui.items>.item>.content>.header {
-  font-size:2.2em;
-}
-
 /*-------------------
     EMAIL FORM
 --------------------*/
@@ -392,12 +492,13 @@ hr {
   background: rgba(0, 0, 0, 0.7);
   border-top: 1px solid #333;
   text-align: center;
-  z-index: 102;
+  z-index: 1002;
 }
 
 #dfa-footer .ui.header {
   color: white;
   font-size:1.2em;
+  font-family: 'Trasandina';
 }
 
 #dfa-footer .ui.button {
@@ -405,9 +506,10 @@ hr {
   font-size: 1.2em;
   padding: 0.45em 0.8em;
   margin-right: 0.4em;
+  font-family: 'Trasandina';
 }
 
-#dfa-footer span {
+#dfa-footer > span {
   vertical-align: middle;
 }
 
@@ -583,4 +685,61 @@ body.embed {
 
 .dfa-team-grid .team-grid-links a {
   margin-right: 0.3em;
+}
+
+.dfa-slide {
+  display: none;
+}
+
+.slide-controls {
+  text-align: center;
+}
+
+.saperator {
+    padding: 0 .6em;
+}
+
+#dfa-supporters .item .header {
+  font-weight: bold;
+}
+
+#dfa-supporters .item .description {
+  font-weight: normal;
+}
+
+#dfa-sponsorship .ui.grid .column {
+  cursor: pointer;
+}
+
+#dfa-menu-floating {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  font-family: 'Trasandina';
+
+  .menu {
+    background-color:#333;
+  }
+
+  .menu:after {
+    width: 0.9em;
+    height: 0.9em;
+    box-shadow: none;
+    background: #333333;
+  }
+
+  .menu > .item {
+    padding: 0.8rem 1.4rem !important;
+    font-size: 1.6rem;
+    color: @white;
+    border-bottom: 1px solid #444;
+  }
+
+  .item:hover {
+    background: #133671 !important;
+  }
+
+  .item.donate {
+    background: @red !important;
+  }
 }

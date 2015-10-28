@@ -1,0 +1,28 @@
+{
+  "name": "Ramez Naam",
+  "title": "Science Advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "Author @Nexus trilogy. Author @The Infinite Resource: The Power of Ideas on a Finite Planet. Teacher @Singularity U. Energy innovation advocate.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/ramez"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/pub/ramez-naam/0/109/a3"
+    },
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ramez_Naam"
+    },
+    {
+      "type": "amazon",
+      "url": "http://rameznaam.com/nexus"
+    }
+  ],
+  "id": "ramez-naam"
+}

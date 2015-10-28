@@ -18,7 +18,7 @@ Usage: ${0} [staging | live]
     live        Deploy to the live (www) bucket
 _EOF_
 }
- 
+
 ##
 # Color stuff
 ##

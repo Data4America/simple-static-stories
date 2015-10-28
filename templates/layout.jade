@@ -14,140 +14,173 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
       != nap.css('main')
   body(class=bodyclass)
-    header
-      block header
 
-        div#dfa-cover
+    div.dimmed.pusher
 
-        div#dfa-header.ui.borderless.inverted.main.menu.fixed
-          div.ui.container
-            div.ui.dropdown.icon.item
-              i.big.sidebar.icon
-              div.menu
-                a.item(href="/") Stories
-                a.item(href="/about/") About Data4America
-                a.item(href="/team/") Our Team
-                a.item(href="/staff") Staff
-                a.item(href="/upload/") Submit Content
-                a.item(href="http://data.data4america.org/") Submit Data
-                a.item(href="http://git.data4america.org/") Submit Software
-                a.item(href="/donate/") Donate
-                a.item(href="/request-government-data") Request Data
-            div.logo.item
-              a.logo(href="/")
-            div.right.menu.social-buttons
-              div.item
-                button.dfa-btn-subscribe.ui.button.red.mini Subscribe
-              div.item
-                button.dfa-btn-donate.ui.button.white.mini(style="background:#FFF;") Donate
-              div.item
-                button.dfa-btn-share.ui.button.blue.mini Share
+      header
+        block header
 
-        div#dfa-slogan Bringing Data Science to the study of Politics
+          a#dfa-cover(href="/")
 
-        div#dfa-menu.ui.small.main.menu
-          div.ui.text.container
-            a.item(href="/") STORIES
-            a.item(href="/about/") ABOUT
-            a.item(href="/team/") OUR TEAM
-            a.item(href="/donate/") DONATE
-            a.item(href="/upload/") SUBMIT CONTENT
-            a.item(href="http://data.data4america.org/") DATA SETS
-            a.item(href="http://git.data4america.org/") GITHUB
+          div#dfa-menu-floating.ui.inverted.icon.right.pointing.dropdown
+            i.big.sidebar.icon
+            div.menu
+              a.item(href="/") All Stories
+              a.item(href="/about/") About Data4America
+              a.item(href="/team/") Our Team
+              a.donate.item(href="/donate/") Donate
+              a.item(href="/upload/") Submit Content
+              a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+              a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+              a.item(href="/request-government-data") Request Data
 
-        div#dfa-menu-mobile
-          div.ui.text.container
-            div.ui.small.main.menu.four.item
-                a.item(href="/") STORIES
-                a.item(href="/about/") ABOUT
-                a.item(href="/team/") OUR TEAM
-                a.item(href="/donate/") DONATE
-            div.ui.small.main.menu.second.three.item
-                a.item(href="http://data4america.org/upload") SUBMIT CONTENT
-                a.item(href="http://data4america.org/datasets") DATA SETS
-                a.item(href="http://data4america.org/github") GITHUB
-
-    div#dfa-subscribe-modal.ui.modal.small
-      i.close.icon
-      div.content
-        div.ui.two.column.grid
-          div.column
-            h3.ui.header Like us on Facebook
-            div.fb-like(data-href='http://data4america.org/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
-          div.column
-            h3.ui.header Follow us on Twitter
-            a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='true', data-show-screen-name='false') Follow
-        div.ui.horizontal.divider OR
-        h3.ui.header Receive new Data4America stories by e-mail
-        div#mc_embed_signup
-          form.ui.form.validate#mc-embedded-subscribe-form(action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=219ac0990b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
-            div#mc_embed_signup_scroll
-              div.field
-                <input type="email" value="" name="EMAIL" placeholder="Your Email Address" class="required email form-control" id="mce-EMAIL">
-              div.clear#mce-responses
-                <div class="response text-danger" id="mce-error-response" style="display:none; margin-bottom: 1em"></div>
-                <div class="response text-success" id="mce-success-response" style="display:none; margin-bottom: 1em"></div>
-              <div style="position: absolute; left: -5000px;"><input type="text" name="b_72207b8a0819659d0b69c1f9c_219ac0990b" tabindex="-1" value=""></div>
-              button.ui.button.primary#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
-
-    div#dfa-content
-      div.ui.text.container
-        block content
-        block footer
-
-    div#dfa-footer(style="display:none;")
-      h3.ui.header
-        a.ui.red.button.donate.dfa-btn-donate Donate
-        span Help 
-          span.footer-blue DATA
-          span.footer-red 4
-          span.footer-blue AMERICA 
-          | bring data science to politics.
-
-    div#dfa-donate-modal.ui.modal(style="min-height:1200px;")
-      i.close.icon
-      div.content
-        div.body-text
-
-    div#dfa-share-modal.ui.small.modal
-      i.close.icon
-      div.header Share Story
-      div.content
-        div.description
-          div.dfa-share(style="text-align:center;")
+          div#dfa-header.ui.borderless.inverted.main.menu.fixed
             div.container
-              a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '/')))
-                div.ui.grey.email.button
-                  i.icon.mail
-                  span.text Email
-              div.ui.facebook.button(data-url=locals.url + (page !== undefined ? page.url : '/'))
-                i.ui.facebook.icon
-                span.text Share
-              - console.log(page);
-              div.ui.twitter.button(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
-                i.ui.twitter.icon
-                span.text Tweet
-
-            div.container.mobile(style="display:none;")
-              div.ui.grey.email.button.circular.icon
+              div.logo.item
+                a.logo(href="/")
+              a.item.dfa-btn-subscribe(href="javascript:;") Subscribe
+              a.item.dfa-btn-share(href="javascript:;") Share
+              div.ui.dropdown.icon.item
+                | Menu  
+                i.big.sidebar.icon
+                div.menu
+                  a.item(href="/") All Stories
+                  a.item(href="/about/") About Data4America
+                  a.item(href="/team/") Our Team
+                  a.donate.item(href="/donate/") Donate
+                  a.item(href="/upload/") Submit Content
+                  a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+                  a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+                  a.item(href="/request-government-data") Request Data
+              div.item.dfa-header-title
+              a.item.icon.dfa-header-article-share.fb(data-url=locals.url + (page !== undefined ? page.url : '/'))
+                i.icon.facebook
+              a.item.icon.dfa-header-article-share.tw(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
+                i.icon.twitter
+              a.item.icon.dfa-header-article-share.em(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
                 i.icon.mail
-              div.ui.facebook.button.circular.icon
-                i.ui.facebook.icon
-              div.ui.twitter.button.circular.icon
-                i.ui.twitter.icon
-              a.circular.ui.icon.button.orange(href="javascript:;")
-                i.icon-sms
+              div.right.menu.social-buttons
 
-          h4.ui.header Link:
-          div.ui.action.input.fluid
-            input#cliptext(type="text", value=locals.url + (page !== undefined ? page.url : '/'))
-            button.copy-button.ui.button.icon(data-clipboard-target="#cliptext")
-              i.icon.copy
+          div#dfa-slogan Bringing Data Science to the understanding of Politics
 
-      div.actions
-        div.ui.cancel.button Cancel
+          div#dfa-menu.ui.main.menu
+            div.ui.text.container
+              a.item(href="/") STORIES
+              a.item(href="/about/") ABOUT
+              a.item(href="/team/") OUR TEAM
+              a.item(href="/donate/", style="color:#CC0505; font-weight:bold;") DONATE
+              a.item(href="/upload/") SUBMIT CONTENT
+              a.item(href="http://data.data4america.org/", target="_blank") DATA SETS
+              a.item(href="http://git.data4america.org/", target="_blank") GITHUB
 
-  block js
-    != nap.js('main')
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+      div#dfa-subscribe-modal.ui.modal.small
+        i.close.icon
+        div.content
+          div.ui.two.column.grid
+            div.column
+              h3.ui.header Like us on Facebook
+              div.fb-like(data-href='https://www.facebook.com/data4america', data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
+            div.column
+              h3.ui.header Follow us on Twitter
+              a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='true', data-show-screen-name='false') Follow
+          div.ui.horizontal.divider OR
+          h3.ui.header Send me Data4America stories by email
+          div#mc_embed_signup
+            form.ui.form.validate#mc-embedded-subscribe-form(action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=219ac0990b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
+              div#mc_embed_signup_scroll
+                div.field
+                  <input type="email" value="" name="EMAIL" placeholder="Your Email Address" class="required email form-control" id="mce-EMAIL">
+                div.clear#mce-responses
+                  <div class="response text-danger" id="mce-error-response" style="display:none; margin-bottom: 1em"></div>
+                  <div class="response text-success" id="mce-success-response" style="display:none; margin-bottom: 1em"></div>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_72207b8a0819659d0b69c1f9c_219ac0990b" tabindex="-1" value=""></div>
+                button.ui.button.primary#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
+
+      div#dfa-content
+        div.ui.text.container
+          block content
+          block footer
+
+      div.ui.container.text(style="margin-bottom:80px;")
+        div#dfa-logo-footer
+        div#dfa-menu-footer
+          ul
+            li
+              a.item(href="/") STORIES
+            li
+              a.item(href="/about/") ABOUT
+            li
+              a.item(href="/team/") OUR TEAM
+            li
+              a.item(href="/donate/") DONATE
+            li
+              a.item(href="/upload/") SUBMIT CONTENT
+            li
+              a.item(href="http://data.data4america.org/") DATA SETS
+            li
+              a.item(href="http://git.data4america.org/") GITHUB
+
+        div.ui.divider
+
+        h3.ui.header(style="line-height: 1.4em; text-align: center;")
+          | Help Data4America improve the public's understanding of policy ideas and political issues by publishing user-generated and non-partisan explainer stories--powered by data science and data visualization. 
+          a.dfa-btn-donate(href="javascript:;") Make a donation.
+
+      div#dfa-footer(style="display:none;")
+        h3.ui.header
+          a.ui.red.button.donate.dfa-btn-donate Donate
+          span Help 
+            span.footer-blue DATA
+            span.footer-red 4
+            span.footer-blue AMERICA 
+            | bring data science to politics.
+
+      div#dfa-donate-modal.ui.modal(style="min-height:1200px;")
+        i.close.icon
+        div.content
+          div.body-text
+
+      div#dfa-share-modal.ui.small.modal
+        i.close.icon
+        div.header Share Story
+        div.content
+          div.description
+            div.dfa-share(style="text-align:center;")
+              div.container
+                a(href='mailto:?subject=' + (page !== undefined ? page.title : locals.name) + '&body=' + encodeURI(locals.url + (page !== undefined ? page.url : '/')))
+                  div.ui.grey.email.button
+                    i.icon.mail
+                    span.text Email
+                div.ui.facebook.button(data-url=locals.url + (page !== undefined ? page.url : '/'))
+                  i.ui.facebook.icon
+                  span.text Share
+                - console.log(page);
+                div.ui.twitter.button(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
+                  i.ui.twitter.icon
+                  span.text Tweet
+
+              div.container.mobile(style="display:none;")
+                div.ui.grey.email.button.circular.icon
+                  i.icon.mail
+                div.ui.facebook.button.circular.icon
+                  i.ui.facebook.icon
+                div.ui.twitter.button.circular.icon
+                  i.ui.twitter.icon
+                a.circular.ui.icon.button.orange(href="javascript:;")
+                  i.icon-sms
+
+            h4.ui.header Link:
+            div.ui.action.input.fluid
+              input#cliptext(type="text", value=locals.url + (page !== undefined ? page.url : '/'))
+              button.copy-button.ui.button(data-clipboard-target="#cliptext")
+                span Copy
+
+        div.actions
+          div.ui.cancel.button Cancel
+
+    block js
+      != nap.js('main')
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','//connect.facebook.net/en_US/fbevents.js'); fbq('init', '810448618996739'); fbq('track', "PageView");</script>

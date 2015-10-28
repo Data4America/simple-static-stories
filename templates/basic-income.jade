@@ -1,0 +1,242 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div.ui.icon.menu.inverted.red.slide-controls.top.attached
+    a.item.prev.disabled
+      i.chevron.left.icon
+    div.item.text Step 1 of 7
+    a.item.next
+      i.chevron.right.icon
+    div.menu.right
+      a.item
+        i.icon.mail
+      a.item
+        i.icon.facebook
+      a.item
+        i.icon.twitter
+
+  div.ui.segment.attached(style="min-height:400px; overflow:hidden;")
+    div.dfa-slide
+      div.ui.items
+        div.item(style="margin-top:3em;")
+          div.image(style="width:175px;")
+            img(src="/basic-income-basic-job/thumbnail-256.png")
+          div.content
+            h1.ui.header A new social contract: Basic Income vs. Basic Jobs
+            p Create your basic income model for any geography.
+            div.slide-controls(style="text-align: center; margin-top: 2em;")
+              div.ui.red.button.huge.next Get Started
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 1
+        |  Who are you?
+      div.ui.divider
+      div.ui.form
+        div.two.fields
+          div.field
+            label First Name
+            input(placeholder="First Name",type="text")
+          div.field
+            label Last Name
+            input(placeholder="Last Name",type="text")
+        div.field
+          label Your email address
+          input(placeholder="Email Address",type="text")
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 2
+        |  What region or country are you modeling for?
+      div.ui.divider
+      div.ui.form
+        div.field
+          label Name of region of country
+          input(placeholder="Type in",type="text")
+        div.field
+          label Source
+          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 3
+        |  How many residents live in this geography?
+      div.ui.divider
+      div.ui.form
+        div.field
+          label Source
+          input(placeholder="Copy and paste the URL for this information",type="text")
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 4
+        |  What will the age 18 and over Basic Income be?
+      div.ui.divider
+      div.ui.form
+        div.field
+          div.ui.left.labeled.input
+            div.ui.label $
+            input(type="text",placeholder="Amount")
+        div.grouped.fields
+          div.field
+            div.ui.radio.checkbox
+              input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
+              label $10k/year
+          div.field
+            div.ui.radio.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label Full time minimum wage ($14.5k/year)
+          div.field
+            div.ui.radio.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $20k/year
+          div.field
+            div.ui.radio.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label Custom
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 5
+        |  Do you want to use a Basic Income or a Negative Income Tax?
+      div.ui.divider
+      div.ui.form
+        div.field
+          select.ui.dropdown
+            option(value="") Choose
+            option(value="1") UBI
+            option(value="1") NIT
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 6
+        |  What tax cuts do you want to make?
+      div.ui.divider
+      div.ui.form
+        div.field
+          div.ui.left.labeled.input
+            div.ui.label $
+            input(type="text",placeholder="Amount")
+        div.grouped.fields
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
+              label $375B - Eliminate redundant welfare
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $740B - Eliminate tax loopholes
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $300B - Cut defense spending in half
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $695B - Eliminate Social Security
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $290B - Eliminate Medicaid
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $290B - Eliminate Medicaid
+          div.field
+            div.ui.checkbox
+              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              label $157B - Raises taxes on top 1% to 40%
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 7
+        |  GDP Change
+      div.ui.divider
+      div.ui.form
+        div.two.fields
+          div.field
+            label From
+            div.ui.right.labeled.input
+              input(type="text",placeholder="Amount")
+              div.ui.label %
+          div.field
+            label To
+            div.ui.right.labeled.input
+              input(type="text",placeholder="Amount")
+              div.ui.label %
+        div.field.right.slide-controls
+          div.ui.red.button.next.huge Next
+
+    div.dfa-slide
+      h2.ui.header
+        span.ui.red.label.large 8
+        |  Review your steps
+      div.ui.divider
+      div.ui.form
+        table.ui.definition.table
+          thead
+            tr
+              th
+              th Your Selection
+          tbody
+            tr
+              td Basic Income (per adult)
+              td $25,000
+            tr
+              td UBI or NIT?
+              td NIT
+            tr
+              td Cuts and taxes
+              td $695B - Eliminate Social Security
+            tr
+              td GDP Change
+              td $145,000 - $500,000
+        div.field.right.slide-controls
+          div.ui.red.button.next.massive Generate
+
+    div.dfa-slide
+      h1.ui.header Results
+      div.ui.divider
+      img.ui.image(src="/img/model.png")
+      div.ui.divider
+      div.dfa-share(style="padding-bottom:1em; text-align:center;")
+        | Share you results:
+        div.ui.grey.email.button.circular.icon
+          i.icon.mail
+        div.ui.facebook.button.circular.icon
+          i.ui.facebook.icon
+        div.ui.twitter.button.circular.icon
+          i.ui.twitter.icon
+        a.circular.ui.icon.button.sms.orange(href="javascript:;")
+          i.icon-sms
+
+  div.ui.segment.inverted.grey.attached.center.aligned(style="padding: 0.4em 0.5em; font-size: 0.9em;")
+    | All data stories have been reviewed and approved by the non-partisan Editorial Board
+
+  div.ui.segment.inverted.bottom.attached.center.aligned(style="background: #002868; padding: 0.4em 0.5em;font-size: 0.9em;")
+    div.action.author
+      | Created by: 
+      strong  Jeremy Scheff 
+      img.ui.avatar.image(src="/authors/jeremy-scheff.jpg") 
+      a(href="http://dumbmatter.com/", target="_blank")
+        img.mini-logo(src="/img/mini-logos/www.png")
+      |   
+      a(href="https://www.linkedin.com/pub/jeremy-scheff/28/87b/999",target="_blank")
+        img.mini-logo(src="/img/mini-logos/linkedin.png")
+
+

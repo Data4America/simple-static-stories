@@ -1,0 +1,63 @@
+/*!
+ * # Data 4 America - Main Styles
+ *
+ * Copyright 2015 Data4America.org
+ */
+
+/*******************************
+            Theme
+*******************************/
+
+@type    : 'global';
+@element : 'site';
+
+@import (multiple) 'semantic/theme.config';
+
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.items>.item>.image:not(.ui) {
+  width:125px;
+}
+
+.ui.items>.item>.content>.header {
+  font-size:2.4em;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: @largestMobileScreen) {
+  .ui.segment.dfa-article-header {
+    padding: 0;
+    text-align: center;
+  }
+
+  .dfa-article-header {
+    .ui.items > .item > .image,
+    .ui.items > .item > .image > img {
+      max-width: none !important;
+      width: 100% !important;
+      max-height: none !important;
+    }
+
+    .ui.items > .item > .image {
+      max-height: 200px !important;
+      overflow: hidden;
+    }
+
+    .ui.items > .item > .image > img {
+      margin-top: -3.5em;
+    }
+
+    .ui.items>.item>.content>.header {
+      text-align: center;
+    }
+  }
+
+  #dfa-content p {
+    line-height: 2.3em;
+    font-weight: 300;
+    font-size: 1.1em;
+  }
+
+}

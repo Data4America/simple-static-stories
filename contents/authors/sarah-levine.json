@@ -1,0 +1,24 @@
+{
+  "name": "Sarah Levine",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Empirical research @StanfordLaw. All about using data to craft smart policy. Cartography enthusiast & organizer @maptimeSV.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/sarahmakesmaps"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/sarahmlevine"
+    },
+    {
+      "type": "www",
+      "url": "http://www.sarahmakesmaps.com/"
+    }
+  ],
+  "id": "sarah-levine"
+}

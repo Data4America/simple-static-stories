@@ -26,15 +26,10 @@ Basic income is a system where the government directly gives money to all its ci
     shape-rendering: crispEdges;
   }
 
-  #tooltip {
-    background-color: #000;
-    color: #fff;
-    position: absolute;
-    border-radius: 8px;
-    pointer-events: none;
-    padding: 5px;
-    z-index: 10;
-    opacity: 0;
+  .tooltip {
+    color: #888;
+    height: 2em;
+    margin-top: 1em;
   }
 </style>
 
@@ -54,12 +49,12 @@ Here, a basic income model is compared against a "basic job" model where the gov
 
 ### Histograms of total costs, 1000 simulations
 
-<div class="row">
-  <div class="col-sm-6">
+<div class="ui two column stackable grid">
+  <div class="column">
     <h4>Basic income</h4>
     <div id="biHist"></div>
   </div>
-  <div class="col-sm-6">
+  <div class="column">
     <h4>Basic job</h4>
     <div id="bjHist"></div>
   </div>
@@ -73,17 +68,17 @@ If better estimates and more thorough modeling can produce a narrower distributi
 
 ### Average values of components, 1000 simulations
 
-<div id="tooltip"></div>
-<div class="row">
-  <div class="col-md-6 col-lg-5">
+<div class="ui two column stackable grid">
+  <div class="column" style="padding-bottom: 0">
     <h4>Basic income</h4>
     <table id="biBars"></table>
   </div>
-  <div class="col-md-6 col-lg-5">
+  <div class="column" style="padding-bottom: 0">
     <h4>Basic job</h4>
     <table id="bjBars"></table>
   </div>
-</div><p></p>
+</div>
+<div id="tooltip" class="tooltip"></div>
 
 <a href="javascript:run()">Click to re-run Monte Carlo simulations</a>
 
@@ -93,13 +88,85 @@ Although basic income has much higher direct costs due to its broader population
 
 Additionally, through this analysis you can see that it is unlikely that unleashing the creative geniuses stuck in crappy jobs will result in significant economic gains, although we might get a few more Harry Potters out of it.
 
-## Conclusions
+## Discussion
 
-There are two conclusions here.
+Now the real question is, is that cost worth it? What programs could you eliminate with a basic income? [We currently spend about $1 trillion/year on anti-povery programs](http://www.cato-unbound.org/2014/08/26/basic-income-guarantee-simplicity-what-cost), but maybe you want to cut [even more than that](https://www.chrisstucchio.com/blog/2013/basic_income_vs_basic_job.html). Whatever your desired cuts, you should weight them against the costs of a basic income.
+
+Ultimately, there are two conclusions here.
 
 Basic income would not necessarily be prohibitively expensive, although of course the devil is in the details.
 
 And mathematical modeling is a useful tool for quantitatively explaining your reasoning. I know my reasoning here is very simple and likely very wrong at times, but at least it's explicit. My only request is that criticism comes with a model.
+
+
+## Create Your Own
+
+<form class="ui form">
+  <div class="field">
+    <label>Region Name</label>
+    <input type="text" id="regionName">
+  </div>
+  <div class="four fields">
+    <div class="field">
+      <label>Basic Income ($/person)</label>
+      <input type="text" id="basicIncome">
+    </div>
+    <div class="field">
+      <label># Adults</label>
+      <input type="text" id="numAdults">
+    </div>
+    <div class="field">
+      <label># in Labor Force</label>
+      <input type="text" id="laborForce">
+    </div>
+    <div class="field">
+      <label># Disabled Adults</label>
+      <input type="text" id="disabledAdults">
+    </div>
+  </div>
+  <center>
+    <div class="ui button" id="recalculate">Generate</div>
+  </center>
+</form>
+
+<p>
+  <div class="ui form">
+    <div class="field">
+      <input type="text" id="permalink" placeholder="Permalink">
+    </div>
+  </div>
+</p>
+
+### Histograms of total costs, 1000 simulations
+
+<div class="ui two column stackable grid">
+  <div class="column">
+    <h4>Basic income</h4>
+    <div id="biHistCYO"></div>
+  </div>
+  <div class="column">
+    <h4>Basic job</h4>
+    <div id="bjHistCYO"></div>
+  </div>
+</div>
+
+<a href="javascript:run('CYO')">Click to re-run Monte Carlo simulations</a>
+
+### Average values of components, 1000 simulations
+
+<div class="ui two column stackable grid">
+  <div class="column" style="padding-bottom: 0">
+    <h4>Basic income</h4>
+    <table id="biBarsCYO"></table>
+  </div>
+  <div class="column" style="padding-bottom: 0">
+    <h4>Basic job</h4>
+    <table id="bjBarsCYO"></table>
+  </div>
+</div>
+<div id="tooltipCYO" class="tooltip"></div>
+
+<a href="javascript:run('CYO')">Click to re-run Monte Carlo simulations</a>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script type="text/javascript" src="basic-income-basic-job.js"></script>

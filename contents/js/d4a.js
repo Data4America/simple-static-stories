@@ -31,8 +31,23 @@ var isMobile = function() {
 }
 
 $(document).ready(function() {
-  $('#dfa-header .ui.dropdown').dropdown();
+  $('.checkbox').checkbox();
+  $('.ui.form .ui.dropdown').dropdown();
 
+  // Initialize the header Menu
+  $('#dfa-menu-floating').dropdown();
+
+  $('#dfa-header .ui.dropdown').dropdown({
+    onShow: function() {
+      if (isMobile()) {
+        var left = $('#dfa-header .ui.dropdown').offset().left;
+        console.log(left);
+        $('#dfa-header .ui.dropdown .menu').css('left', -left + 'px');
+      }
+    }
+  });
+
+  // Initialize Sidebar click
   $('.dfa-sidebar-tap, .ui.sidebar .angle.double.left').click(function() {
     $('.ui.sidebar')
       .sidebar({
@@ -44,6 +59,14 @@ $(document).ready(function() {
 
   $('#dfa-sidebar-border').height(screen.height);
 
+  // If sponsor policy channel
+  if ($('#dfa-sponsorship').length) {
+    $('#dfa-sponsorship .ui.grid .column').click(function() {
+      $('.dfa-link-sponsor').trigger('click');
+      $('.dfa-btn-donate').trigger('click');
+    });
+  }
+
   if (isMobile()) {
     $('#dfa-header.ui.menu .ui.dropdown .menu').width(screen.width);
 
@@ -53,6 +76,27 @@ $(document).ready(function() {
     $('.dfa-share .container.mobile').show();
 
     $('.dfa-donate-modal .close.icon').remove();
+
+    $('.dfa-header-title').remove();
+    $('.dfa-header-article-share').remove();
+
+    // If sponsor policy channel
+    if ($('#dfa-sponsorship').length) {
+      $('#dfa-sponsorship .ui.grid')
+        .removeClass('three column')
+        .addClass('two column');
+    }
+
+    // If sponsor policy channel
+    if ($('#dfa-supporters').length) {
+      $('#dfa-supporters .horizontal.segments .segment').css('width', 'auto');
+      $('#dfa-supporters .horizontal.segments')
+        .removeClass('horizontal')
+        .addClass('vertical');
+    }
+
+  } else {
+    $('.dfa-article-header .sms').remove();
   }
 
   $('#dfa-header .subscribe').click(function() {
@@ -76,15 +120,23 @@ $(document).ready(function() {
     }, 1000);
   });
 
-  $('.ui.button.facebook').click(function() {
+  $('.ui.button.facebook, .dfa-header-article-share.fb').click(function() {
     FB.ui({
         method: 'share',
         href: this.dataset.url
     }, function () {});
   });
 
-  $('.ui.button.twitter').click(function() {
+  $('.ui.button.twitter, .dfa-header-article-share.tw').click(function() {
     PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
+  });
+
+  $('.ui.button.email, .dfa-header-article-share.em').click(function() {
+    var url = this.dataset.url;
+    var text = encodeURI(this.dataset.text);
+    text = text.replace('#', '%23');
+    var link = 'https://mail.google.com/mail/?view=cm&fs=1&to=&su=' + text + '&body=' + encodeURI(url);
+    PopupCenter(link, 'Send an Email', 550,400);
   });
 
   var scrollCount = 0;
@@ -108,6 +160,13 @@ $(document).ready(function() {
       $('#dfa-header').hide();
     }
   });
+
+  if ($('article.article.big').length) {
+    var title = $('.dfa-article-header .ui.header').html();
+    $('.dfa-header-title').html(title);
+  } else {
+    $('.dfa-header-article-share').remove();
+  }
 
   if (window.location.pathname.search("/donate") === 0) {
     $('#dfa-footer').remove();
@@ -156,6 +215,63 @@ $(document).ready(function() {
   $('.dfa-btn-subscribe').click(function() {
     $('#dfa-subscribe-modal').modal('show');
   });
+
+  if ($('.slide-controls').length) {
+    var slideIndex = -1;
+    var totalSlides = $('.dfa-slide').length;
+
+    $('.slide-controls .next, .slide-controls .prev').click(function() {
+      if ($(this).hasClass('disabled')) {
+        return;
+      }
+
+      if ($(this).hasClass('next')) {
+        showSlide(true);
+      } else {
+        showSlide(false);
+      }
+    });
+
+    showSlide(true);
+
+    function showSlide(next) {
+      if (next) {
+        slideIndex++;
+
+        if (slideIndex == 0) {
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+        } else {
+          $('.dfa-slide:eq(' + (slideIndex - 1) + ')').transition('fade right', function() {
+            $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+          });
+        }
+
+      } else {
+
+        slideIndex--;
+
+        $('.dfa-slide:eq(' + (slideIndex + 1) + ')').transition('fade left', function() {
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right');
+        });
+
+      }
+
+      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
+
+      if (slideIndex === 0) {
+        $('.slide-controls .prev').addClass('disabled');
+      } else {
+        $('.slide-controls .prev').removeClass('disabled');
+      }
+
+      if (totalSlides === (slideIndex + 1)) {
+        $('.slide-controls .next').addClass('disabled');
+      } else {
+        $('.slide-controls .next').removeClass('disabled');
+      }
+    }
+
+  }
 });
 
 function hideEmailForm() {
