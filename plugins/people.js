@@ -25,6 +25,7 @@ var order = [
     'christopher-nicholson',
     'becky-stark',
     'blake-masters',
+    'cyan-banister',
     'ramez-naam',
     'tim-urban',
     'frank-tsai',
