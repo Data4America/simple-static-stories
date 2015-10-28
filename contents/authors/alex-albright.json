@@ -1,0 +1,24 @@
+{
+  "name": "Alex Albright",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Research Fellow @Stanford Law. Founder @The Little Dataset. Aspiring (Nondismal) Economist & Dataset Explorer. @Williams '14.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/AllbriteAllday"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/apalbright"
+    },
+    {
+      "type": "www",
+      "url": "http://thelittledataset.com/"
+    }
+  ],
+  "id": "alex-albright"
+}

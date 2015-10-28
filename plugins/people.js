@@ -33,6 +33,7 @@ var order = [
     'waylin-ross',
     'susan-gentz',
     'chris-belsky',
+    'alex-albright',
     'sarah-levine'
 ];
 
