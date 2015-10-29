@@ -31,8 +31,14 @@ var isMobile = function() {
 }
 
 $(document).ready(function() {
-  $('.checkbox').checkbox();
   $('.ui.form .ui.dropdown').dropdown();
+
+  $('.dfa-bi-checkboxes .checkbox').checkbox({
+    uncheckable: true,
+  });
+
+  $('.dfa-ubi-nit .checkbox').checkbox();
+  $('.dfa-tax-cuts .checkbox').checkbox();
 
   // Initialize the header Menu
   $('#dfa-menu-floating').dropdown();

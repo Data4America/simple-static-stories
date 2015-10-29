@@ -49,8 +49,9 @@ block content
           label Your email address
           div.ui.huge.input
             input(placeholder="Email Address",type="text")
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -61,12 +62,13 @@ block content
         div.field
           label Name of region of country
           div.ui.huge.input
-            input(placeholder="Type in",type="text")
-        div.field
-          label Wikipedia URL
+            input(placeholder="Write in",type="text")
+        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
+          label What is its Wikipedia URL?
           input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -74,12 +76,13 @@ block content
         |  How many residents live in this geography?
       div.ui.divider
       div.ui.form
-        div.field
+        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
           label Source URL
           div.ui.huge.input
             input(placeholder="Copy and paste the URL for this information",type="text")
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -91,7 +94,7 @@ block content
           div.ui.huge.left.labeled.input
             div.ui.label $
             input(type="text",placeholder="Amount")
-        div.grouped.fields
+        div.grouped.fields.dfa-bi-checkboxes
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
@@ -107,17 +110,18 @@ block content
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label Custom
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+              label Choose My Own
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 5
-        |  Do you want to use a Basic Income or a Negative Income Tax?
+        | Use a Basic Income or a Negative Income Tax?
       div.ui.divider
       div.ui.form
-        div.grouped.fields
+        div.grouped.fields.dfa-ubi-nit
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="ubi",checked="",tabindex="0",class="hidden")
@@ -126,8 +130,9 @@ block content
             div.ui.slider.checkbox
               input(type="radio",name="ubi",tabindex="0",class="hidden")
               label Negative Income Tax
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -139,37 +144,38 @@ block content
           div.ui.left.labeled.input
             div.ui.label $
             input(type="text",placeholder="Amount")
-        div.grouped.fields
+        div.grouped.fields.dfa-tax-cuts
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",checked="",tabindex="0",class="hidden")
-              label $375B - Eliminate redundant welfare
+              label $375 Billion - Eliminate redundant welfare
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $740B - Eliminate tax loopholes
+              label $740 Billion - Eliminate tax loopholes
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $300B - Cut defense spending in half
+              label $300 Billion - Cut defense spending in half
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $695B - Eliminate Social Security
+              label $695 Billion - Eliminate Social Security
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $290B - Eliminate Medicaid
+              label $290 Billion - Eliminate Medicaid
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $290B - Eliminate Medicaid
+              label $290 Billion - Eliminate Medicaid
           div.field
             div.ui.toggle.checkbox
               input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $157B - Raises taxes on top 1% to 40%
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+              label $157 Billion - Raises taxes on top 1% to 40%
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -180,16 +186,17 @@ block content
         div.two.fields
           div.field
             label From
-            div.ui.right.labeled.input
+            div.ui.left.labeled.input
+              div.ui.label $
               input(type="text",placeholder="Amount")
-              div.ui.label %
           div.field
             label To
-            div.ui.right.labeled.input
+            div.ui.left.labeled.input
+              div.ui.label $
               input(type="text",placeholder="Amount")
-              div.ui.label %
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -214,13 +221,14 @@ block content
             tr
               td Cuts and taxes
               td
-               a.changeStep(href="javascript:;",data-step="7") $695B - Eliminate Social Security
+               a.changeStep(href="javascript:;",data-step="7") $695 Billion - Eliminate Social Security
             tr
               td GDP Change
               td
                a.changeStep(href="javascript:;",data-step="8") $145,000 - $500,000
         div.field.right.slide-controls
-          div.ui.red.button.next.massive Generate
+          div.ui.white.button.prev.huge Back
+          div.ui.red.button.next.huge Generate
 
     div.dfa-slide
       h1.ui.header Results
@@ -228,7 +236,7 @@ block content
       img.ui.image(src="/img/model.png")
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        h3.ui.header Thank your generating your own Basic Income prediction model for Texas, USA!
+        h3.ui.header Thank your generating a prediction model for Texas, USA!
         p Please share it with your friends and family.
         div.ui.grey.email.button.circular.icon
           i.icon.mail
@@ -238,27 +246,23 @@ block content
           i.ui.twitter.icon
         a.circular.ui.icon.button.sms.orange(href="javascript:;")
           i.icon-sms
-      div.ui.divider
-      h4.ui.header(style="margin-top:0.2em;") Share this URL:
       div.ui.action.input.fluid
         input#cliptext(type="text", value="http://data4america.org/basic-income")
         button.copy-button.ui.button(data-clipboard-target="#cliptext")
           span Copy
 
   div.ui.segment.inverted.grey.attached.center.aligned(style="padding: 0.4em 0.5em; font-size: 0.9em;")
-    | Re-create this data science-powered prediction model for your own region or country--then share!
+    | HOW TO: Build a prediction model for your own region or country, then share.
 
   div.ui.segment.inverted.bottom.attached.center.aligned(style="background: #002868; padding: 0.4em 0.5em;font-size: 0.9em;")
     div.action.author
       | Model created by 
-      strong  Jeremy Scheff 
-      img.ui.avatar.image(src="/authors/jeremy-scheff.jpg") 
-      a(href="http://dumbmatter.com/", target="_blank")
-        img.mini-logo(src="/img/mini-logos/www.png")
-      |   
-      a(href="https://www.linkedin.com/pub/jeremy-scheff/28/87b/999",target="_blank")
-        img.mini-logo(src="/img/mini-logos/linkedin.png")
+      a(href="http://dumbmatter.com/", target="_blank", style="color:white;")
+        strong  Jeremy Scheff 
+        img.ui.avatar.image(src="/authors/jeremy-scheff.jpg") 
       span.saperator ·
-      a.dfa-btn-donate(href="javascript:;", style="color:white; font-weight:bold;") Donate
+      a(href="http://datahub.io/organization/data4america#_=_", target="_blank", style="color:white; font-weight:bold;") Submit a Data Story
+      span.saperator ·
+      a.dfa-btn-donate(href="javascript:;", style="color:white; font-weight:bold;") Donate to D4A
 
 
