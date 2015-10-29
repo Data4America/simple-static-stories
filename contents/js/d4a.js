@@ -62,8 +62,8 @@ $(document).ready(function() {
   // If sponsor policy channel
   if ($('#dfa-sponsorship').length) {
     $('#dfa-sponsorship .ui.grid .column').click(function() {
-      $('.dfa-link-sponsor').trigger('click');
-      $('.dfa-btn-donate').trigger('click');
+      var top = $('.dfa-donate').offset().top;
+      $("html, body").animate({ scrollTop: top }, 1000);
     });
   }
 
@@ -168,7 +168,8 @@ $(document).ready(function() {
     $('.dfa-header-article-share').remove();
   }
 
-  if (window.location.pathname.search("/donate") === 0) {
+  if (window.location.pathname.search("/donate") === 0
+      || window.location.pathname.search("/sponsorship") === 0) {
     $('#dfa-footer').remove();
     $('.dfa-btn-donate').remove();
     $('#dfa-donate-modal').remove();
@@ -190,7 +191,11 @@ $(document).ready(function() {
   });
 
   $.getScript('https://checkout.stripe.com/checkout.js', function() {
-    $.getScript('/js/donate.js');
+    $.getScript('/js/donate.js', function() {
+      if (window.location.pathname.search("/sponsorship") === 0) {
+        $('.dfa-link-sponsor').trigger('click');
+      }
+    });
   });
 
   $.getScript('//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', function() {
