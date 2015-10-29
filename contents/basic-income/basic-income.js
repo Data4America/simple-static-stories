@@ -123,8 +123,11 @@ function basicIncomeInit() {
         gdpRangeMin: document.getElementById('gdpRangeMin'),
         gdpRangeMax: document.getElementById('gdpRangeMax')
     };
+console.log('here!');
     state2form(state, formEls);
+console.log('there!');
     $("#customize-form :input").change(function() {
+console.log('CHANGE');
         if (!updating) {
             updating = true;
             form2state(state, formEls);
@@ -457,8 +460,13 @@ function basicIncomeInit() {
 (function() {
     var setIntervalId = setInterval(function() {
         if (window.jQuery) {
-            basicIncomeInit();
-            clearInterval(setIntervalId);
+            try {
+                basicIncomeInit();
+            } catch (e) {
+                throw e;
+            } finally {
+                clearInterval(setIntervalId);
+            }
         }
     }, 100);
 }());

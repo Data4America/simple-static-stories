@@ -4,6 +4,8 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
+  link(rel="stylesheet", type="text/css", href="/basic-income/basic-income.css")
+
   div.ui.icon.menu.inverted.red.slide-controls.top.attached
     a.item.prev.disabled
       i.chevron.left.icon
@@ -18,7 +20,7 @@ block content
       a.item
         i.icon.twitter
 
-  div.ui.segment.attached(style="min-height:400px; overflow:hidden;")
+  div.ui.segment.attached#customize-form(style="min-height:400px; overflow:hidden;")
     div.dfa-slide
       div.ui.items
         div.item(style="margin-top:3em;")
@@ -93,23 +95,23 @@ block content
         div.field
           div.ui.huge.left.labeled.input
             div.ui.label $
-            input(type="text",placeholder="Amount")
+            input#basicIncome(type="text", disabled)
         div.grouped.fields.dfa-bi-checkboxes
           div.field
             div.ui.slider.checkbox
-              input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
+              input(type="radio",name="basicIncomeType", value="10k", tabindex="0",class="hidden")
               label $10,000/year
           div.field
             div.ui.slider.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              input(type="radio",name="basicIncomeType", value="minimumWage", tabindex="0",class="hidden")
               label Full time minimum wage ($14,500/year)
           div.field
             div.ui.slider.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              input(type="radio",name="basicIncomeType", value="20k", tabindex="0",class="hidden")
               label $20,000/year
           div.field
             div.ui.slider.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
+              input(type="radio",name="basicIncomeType", value="custom", tabindex="0",class="hidden")
               label Choose My Own
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
@@ -123,8 +125,12 @@ block content
       div.ui.form
         div.grouped.fields.dfa-ubi-nit
           div.field
+            select#ubiOrNit
+              option(value="ubi") UBI while keeping taxes the same
+              option(value="nit") Use a NIT or increase taxes on the rich while applying UBI
+          div.field
             div.ui.slider.checkbox
-              input(type="radio",name="ubi",checked="",tabindex="0",class="hidden")
+              input(type="radio",name="ubi",tabindex="0",class="hidden")
               label Universal Basic Income
           div.field
             div.ui.slider.checkbox
@@ -143,36 +149,37 @@ block content
         div.field
           div.ui.left.labeled.input
             div.ui.label $
-            input(type="text",placeholder="Amount")
+            input#cutsTaxes(type="text", disabled)
         div.grouped.fields.dfa-tax-cuts
           div.field
             div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",checked="",tabindex="0",class="hidden")
+              input#cutsTaxesWelfare(type="checkbox",name="fruit",tabindex="0",class="hidden")
               label $375 Billion - Eliminate redundant welfare
           div.field
             div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              input#cutsTaxesLoopholes(type="checkbox",name="fruit",tabindex="0",class="hidden")
               label $740 Billion - Eliminate tax loopholes
           div.field
             div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              input#cutsTaxesDefense(type="checkbox",name="fruit",tabindex="0",class="hidden")
               label $300 Billion - Cut defense spending in half
           div.field
             div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              input#cutsTaxesSocialSecurity(type="checkbox",name="fruit",tabindex="0",class="hidden")
               label $695 Billion - Eliminate Social Security
           div.field
             div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              input#cutsTaxesMedicaid(type="checkbox",name="fruit",tabindex="0",class="hidden")
               label $290 Billion - Eliminate Medicaid
           div.field
             div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $290 Billion - Eliminate Medicaid
-          div.field
-            div.ui.toggle.checkbox
-              input(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              input#cutsTaxesOnePercent(type="checkbox",name="fruit",tabindex="0",class="hidden")
               label $157 Billion - Raises taxes on top 1% to 40%
+          div.field
+            div.ui.toggle.checkbox
+              input#cutsTaxesCustom(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label
+                input#cutsTaxesCustomValue(type="text", placeholder="Custom Amount")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -188,12 +195,12 @@ block content
             label From
             div.ui.left.labeled.input
               div.ui.label $
-              input(type="text",placeholder="Amount")
+              input#gdpRangeMin(type="text",placeholder="Amount")
           div.field
             label To
             div.ui.left.labeled.input
               div.ui.label $
-              input(type="text",placeholder="Amount")
+              input#gdpRangeMax(type="text",placeholder="Amount")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -233,7 +240,18 @@ block content
     div.dfa-slide
       h1.ui.header Results
       div.ui.divider
-      img.ui.image(src="/img/model.png")
+      div.ui.two.column.stackable.grid
+        div.column
+          h4 Distribution of possible costs
+          div#biDist(style="width: 320px")
+        div.column
+          h4 Average costs/savings by component
+          table.biBars#biBars
+
+      div.ui.form
+        div.field
+          input#permalink(type="text", placeholder="Permalink")
+
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
         h3.ui.header Thank your generating a prediction model for Texas, USA!
@@ -265,4 +283,5 @@ block content
       span.saperator ·
       a.dfa-btn-donate(href="javascript:;", style="color:white; font-weight:bold;") Donate to D4A
 
-
+  script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js")
+  script(type="text/javascript", src="/basic-income/basic-income.js")
