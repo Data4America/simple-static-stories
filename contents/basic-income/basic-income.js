@@ -110,7 +110,7 @@ function basicIncomeInit() {
     var formEls = {
         basicIncome: document.getElementById('basicIncome'),
         basicIncomeType: document.getElementsByName('basicIncomeType'),
-        ubiOrNit: document.getElementById('ubiOrNit'),
+        ubiOrNit: document.getElementsByName('ubiOrNit'),
         cutsTaxes: document.getElementById('cutsTaxes'),
         cutsTaxesWelfare: document.getElementById('cutsTaxesWelfare'),
         cutsTaxesLoopholes: document.getElementById('cutsTaxesLoopholes'),
@@ -333,24 +333,27 @@ console.log('CHANGE');
 
     function state2form(state, formEls) {
         // Normal inputs
-        var input = ['basicIncome', 'ubiOrNit', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             formEls[input].value = state[input];
         });
 
         // Radio buttons
-        for (var i = 0; i < formEls.basicIncomeType.length; i++) {
-            var radio = formEls.basicIncomeType[i];
-            radio.checked = radio.value === state.basicIncomeType;
+        var groups = ['basicIncomeType', 'ubiOrNit'];
+        groups.forEach(function (group) {
+            for (var i = 0; i < formEls[group].length; i++) {
+                var radio = formEls[group][i];
+                radio.checked = radio.value === state[group];
 
-            if (radio.value === 'custom') {
-                if (radio.checked) {
-                    formEls.basicIncome.disabled = false;
-                } else {
-                    formEls.basicIncome.disabled = true;
+                if (group === 'basicIncomeType' && radio.value === 'custom') {
+                    if (radio.checked) {
+                        formEls.basicIncome.disabled = false;
+                    } else {
+                        formEls.basicIncome.disabled = true;
+                    }
                 }
             }
-        }
+        })
 
         // Check boxes, cutsTaxes calculation
         var checkboxes = {
@@ -391,15 +394,16 @@ console.log('CHANGE');
             }
         });
 
-        state.ubiOrNit = formEls.ubiOrNit.value === 'ubi' ? 'ubi' : 'nit'
-
         // Radio buttons
-        for (var i = 0; i < formEls.basicIncomeType.length; i++) {
-            var radio = formEls.basicIncomeType[i];
-            if (radio.checked) {
-                state.basicIncomeType = radio.value;
+        var groups = ['basicIncomeType', 'ubiOrNit'];
+        groups.forEach(function (group) {
+            for (var i = 0; i < formEls[group].length; i++) {
+                var radio = formEls[group][i];
+                if (radio.checked) {
+                    state[group] = radio.value;
+                }
             }
-        }
+        });
         if (state.basicIncomeType === '10k') {
             state.basicIncome = 10000;
         } else if (state.basicIncomeType === 'minimumWage') {

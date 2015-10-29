@@ -125,16 +125,12 @@ block content
       div.ui.form
         div.grouped.fields.dfa-ubi-nit
           div.field
-            select#ubiOrNit
-              option(value="ubi") UBI while keeping taxes the same
-              option(value="nit") Use a NIT or increase taxes on the rich while applying UBI
-          div.field
             div.ui.slider.checkbox
-              input(type="radio",name="ubi",tabindex="0",class="hidden")
+              input(type="radio", name="ubiOrNit", value="ubi", tabindex="0",class="hidden")
               label Universal Basic Income
           div.field
             div.ui.slider.checkbox
-              input(type="radio",name="ubi",tabindex="0",class="hidden")
+              input(type="radio", name="ubiOrNit", value="nit", tabindex="0",class="hidden")
               label Negative Income Tax
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
