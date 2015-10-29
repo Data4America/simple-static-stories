@@ -175,6 +175,20 @@ $(document).ready(function() {
     $('#dfa-donate-modal').remove();
   }
 
+  if (window.location.pathname.search("/basic-income") === 0) {
+    $.getScript('https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js', function() {
+      var clipboard = new Clipboard('.copy-button');
+
+      clipboard.on('success', function(e) {
+          console.info('Action:', e.action);
+          console.info('Text:', e.text);
+          console.info('Trigger:', e.trigger);
+
+          e.clearSelection();
+      });
+    });
+  }
+
   var $donateModal = $('#dfa-donate-modal');
   $donateModal
     .modal({
@@ -238,6 +252,18 @@ $(document).ready(function() {
     });
 
     showSlide(true);
+
+    $('a.changeStep').click(function() {
+      var step = parseInt($(this).attr('data-step'));
+
+      $('.dfa-slide:eq(' + (slideIndex) + ')').transition('fade left', function() {
+        $('.dfa-slide:eq(' + (step - 1) + ')').transition('fade right');
+      });
+
+      slideIndex = step - 1;
+
+      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
+    });
 
     function showSlide(next) {
       if (next) {
