@@ -72,7 +72,7 @@
     '       </div>' +
     '       <div class="dfa-sponsor-step step3">' +
     '         <h1><strong>Step 3:</strong> Choose your Issue:</h1>' +
-    '         <p>What type of story would you like to sponsor?</p>' +
+    '         <div style="margin: 0 0 0.6em;">What type of story would you like to sponsor?</div>' +
     '         <select class="dfa-select" name="sponsor_issue"></select>' +
     '         <div class="write_in" style="display:none;">' +
     '           <h3 style="margin: 1em 0.3em 0.4em"></h3>' +

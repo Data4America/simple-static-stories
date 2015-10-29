@@ -31,8 +31,14 @@ var isMobile = function() {
 }
 
 $(document).ready(function() {
-  $('.checkbox').checkbox();
   $('.ui.form .ui.dropdown').dropdown();
+
+  $('.dfa-bi-checkboxes .checkbox').checkbox({
+    uncheckable: true,
+  });
+
+  $('.dfa-ubi-nit .checkbox').checkbox();
+  $('.dfa-tax-cuts .checkbox').checkbox();
 
   // Initialize the header Menu
   $('#dfa-menu-floating').dropdown();
@@ -62,8 +68,8 @@ $(document).ready(function() {
   // If sponsor policy channel
   if ($('#dfa-sponsorship').length) {
     $('#dfa-sponsorship .ui.grid .column').click(function() {
-      $('.dfa-link-sponsor').trigger('click');
-      $('.dfa-btn-donate').trigger('click');
+      var top = $('.dfa-donate').offset().top;
+      $("html, body").animate({ scrollTop: top }, 1000);
     });
   }
 
@@ -168,10 +174,25 @@ $(document).ready(function() {
     $('.dfa-header-article-share').remove();
   }
 
-  if (window.location.pathname.search("/donate") === 0) {
+  if (window.location.pathname.search("/donate") === 0
+      || window.location.pathname.search("/sponsorship") === 0) {
     $('#dfa-footer').remove();
     $('.dfa-btn-donate').remove();
     $('#dfa-donate-modal').remove();
+  }
+
+  if (window.location.pathname.search("/basic-income") === 0) {
+    $.getScript('https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js', function() {
+      var clipboard = new Clipboard('.copy-button');
+
+      clipboard.on('success', function(e) {
+          console.info('Action:', e.action);
+          console.info('Text:', e.text);
+          console.info('Trigger:', e.trigger);
+
+          e.clearSelection();
+      });
+    });
   }
 
   var $donateModal = $('#dfa-donate-modal');
@@ -190,7 +211,11 @@ $(document).ready(function() {
   });
 
   $.getScript('https://checkout.stripe.com/checkout.js', function() {
-    $.getScript('/js/donate.js');
+    $.getScript('/js/donate.js', function() {
+      if (window.location.pathname.search("/sponsorship") === 0) {
+        $('.dfa-link-sponsor').trigger('click');
+      }
+    });
   });
 
   $.getScript('//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', function() {
@@ -233,6 +258,18 @@ $(document).ready(function() {
     });
 
     showSlide(true);
+
+    $('a.changeStep').click(function() {
+      var step = parseInt($(this).attr('data-step'));
+
+      $('.dfa-slide:eq(' + (slideIndex) + ')').transition('fade left', function() {
+        $('.dfa-slide:eq(' + (step - 1) + ')').transition('fade right');
+      });
+
+      slideIndex = step - 1;
+
+      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
+    });
 
     function showSlide(next) {
       if (next) {
