@@ -260,7 +260,7 @@ $(document).ready(function() {
     showSlide(true);
 
     $('a.changeStep').click(function() {
-      var step = parseInt($(this).attr('data-step'));
+      var step = parseInt($(this).attr('data-step'), 10);
 
       $('.dfa-slide:eq(' + (slideIndex) + ')').transition('fade left', function() {
         $('.dfa-slide:eq(' + (step - 1) + ')').transition('fade right');
@@ -268,7 +268,7 @@ $(document).ready(function() {
 
       slideIndex = step - 1;
 
-      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
+      $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
     });
 
     function showSlide(next) {
@@ -293,7 +293,7 @@ $(document).ready(function() {
 
       }
 
-      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
+      $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
 
       if (slideIndex === 0) {
         $('.slide-controls .prev').addClass('disabled');
@@ -303,6 +303,7 @@ $(document).ready(function() {
 
       if (totalSlides === (slideIndex + 1)) {
         $('.slide-controls .next').addClass('disabled');
+        $(document).trigger('lastSlide');
       } else {
         $('.slide-controls .next').removeClass('disabled');
       }

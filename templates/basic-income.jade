@@ -6,10 +6,12 @@ block prepend title
 block content
   link(rel="stylesheet", type="text/css", href="/basic-income/basic-income.css")
 
+  div!= typogr(page.html).typogrify()
+
   div.ui.icon.menu.inverted.red.slide-controls.top.attached
     a.item.prev.disabled
       i.chevron.left.icon
-    div.item.text Step 1 of 7
+    div.item.text
     a.item.next
       i.chevron.right.icon
     div.menu.right
@@ -224,7 +226,7 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 8
-        |  Review your steps (THIS IS FAKE)
+        |  Review your choices (THIS IS FAKE)
       div.ui.divider
       div.ui.form
         table.ui.definition.table

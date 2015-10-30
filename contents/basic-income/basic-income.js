@@ -123,11 +123,8 @@ function basicIncomeInit() {
         gdpRangeMin: document.getElementById('gdpRangeMin'),
         gdpRangeMax: document.getElementById('gdpRangeMax')
     };
-console.log('here!');
     state2form(state, formEls);
-console.log('there!');
     $("#customize-form :input").change(function() {
-console.log('CHANGE');
         if (!updating) {
             updating = true;
             form2state(state, formEls);
@@ -140,7 +137,11 @@ console.log('CHANGE');
     });
 
     // Run the simulations on page load
-    run(state);
+    $(document).on('lastSlide', function () {
+        setTimeout(function () {
+            run(state);
+        }, 1000);
+    });
 
     // ## Display results
     // -----------------
