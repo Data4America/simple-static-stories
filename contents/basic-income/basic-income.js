@@ -384,6 +384,13 @@ function basicIncomeInit() {
         } else {
             formEls.cutsTaxesCustomValue.disabled = true;
         }
+
+        // Review slide
+        document.getElementById('reviewBasicIncome').innerHTML = state.basicIncome;
+        document.getElementById('reviewUbiOrNit').innerHTML = state.ubiOrNit.toUpperCase();
+        document.getElementById('reviewCutsTaxes').innerHTML = state.cutsTaxes;
+        document.getElementById('reviewGdpRangeMin').innerHTML = state.gdpRangeMin;
+        document.getElementById('reviewGdpRangeMax').innerHTML = state.gdpRangeMax;
     }
 
     function form2state(state, formEls) {
