@@ -70,6 +70,11 @@ $(document).ready(function() {
     $('#dfa-sponsorship .ui.grid .column').click(function() {
       var top = $('.dfa-donate').offset().top;
       $("html, body").animate({ scrollTop: top }, 1000);
+
+      var option = $(this).attr('data-option');
+
+      $('.dfa-select[name="sponsor_issue"] option[value="' + option + '"]').prop('selected', true);
+      $('.dfa-button.dfa-step-button[data-step="country"]').trigger('click');
     });
   }
 

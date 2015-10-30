@@ -979,7 +979,7 @@
       sponsorOptions.forEach(function(item) {
         options += '<optgroup label="' + item.name + '">';
         item.options.forEach(function(option) {
-          options += '<option>' + option + '</option>';
+          options += '<option value="' + option +'">' + option + '</option>';
         });
         options += '<option>Write in your own</option>';
         options += '</optgroup>';

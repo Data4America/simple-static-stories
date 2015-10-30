@@ -699,14 +699,39 @@ body.embed {
     padding: 0 .6em;
 }
 
-#dfa-supporters .item .header {
-  font-weight: bold;
-}
 
-#dfa-supporters .item .description {
-  font-weight: normal;
-  font-size: 0.9em;
-  color:@grey;
+#dfa-supporters {
+
+  .ui.horizontal.segments > .segment:nth-child(1) {
+    padding: 0;
+  }
+
+  .ui.items > .item > .image:not(.ui) {
+    width: 175px;
+  }
+
+  .ui.items > .item > .image + .content {
+    padding-left: 0.5em;
+  }
+
+  .item .header {
+    margin-top:0.5em;
+    font-weight: bold;
+  }
+
+  .item .description {
+    font-weight: normal;
+    font-size: 0.9em;
+    color:@grey;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.items > .item > .image + .content {
+      padding-left: 0.5em;
+      padding-top: 0;
+    }
+  }
+
 }
 
 #dfa-sponsorship .ui.grid .column {
