@@ -25,12 +25,19 @@ block content
       div.ui.items
         div.item(style="margin-top:3em;")
           div.image(style="width:175px;")
-            img(src="/basic-income-basic-job/thumbnail-256.png")
+            img(src="/basic-income/thumbnail-256.png")
           div.content
-            h1.ui.header A new social contract: Basic Income vs. Basic Jobs
+            h1.ui.header Modeling basic income - does it add up?
             p Create your basic income model for any geography.
             div.slide-controls(style="text-align: center; margin-top: 2em;")
               div.ui.red.button.huge.next Get Started
+
+    div.dfa-slide
+      h2.ui.header What is basic income?
+      div.ui.divider
+      p.dfa-slide-text Basic income is a system where the government directly gives money to all its citizens, rather than somewhat indirectly through complicated welfare programs. The idea is that removing the overhead and inefficiencies inherent in welfare programs and putting more money in the pocket of the poor could be very beneficial.
+      p.dfa-slide-text Beyond that, there are many questions. Should the amount of money phase out for wealthy citizens? Which entitlements and regulations should it replace? And most importantly, how much will it cost and what will the benefits be?
+      p.dfa-slide-text Mathematical modeling allows us to quantitatively state our hypothesis, evaluate its plausibility, and explore alternative options.
 
     div.dfa-slide
       h2.ui.header
@@ -91,6 +98,8 @@ block content
         span.ui.red.label.large 4
         |  What will the age 18 and over Basic Income be?
       div.ui.divider
+      p.dfa-slide-text It's obvious that giving everyone $100k/year would make little sense - it would just lead to inflation. It's similarly obvious that giving everyone $100/year wouldn't really help much because it's so small.
+      p.dfa-slide-text A good starting point might be the equivalent of a full time minimum wage job, which works out to $14.5k/year. If you think that should be higher or lower, you can edit it below.
       div.ui.form
         div.field
           div.ui.huge.left.labeled.input
@@ -122,6 +131,10 @@ block content
         span.ui.red.label.large 5
         | Use a Basic Income or a Negative Income Tax?
       div.ui.divider
+      p.dfa-slide-text There are broadly two schools of thought about basic income:
+      p.dfa-slide-text #[b Send everyone a check every month.] This is appealing because it's very simple, very clear, and very egalitarian.
+      p.dfa-slide-text #[b Give the full basic income only to people making $0, and gradually phase it out for people making more.] This approach is also known as a #[a(href="https://www.youtube.com/watch?v=xtpgkX588nM") negative income tax].
+      p.dfa-slide-text In reality, the two approaches aren't so different. For example, you could send everyone a $1000 check every month, but raise taxes on the rich so that they pay an extra $1000/month. The important thing is, a lot of money could be saved by taking the second approach, possibly #[a(href="http://www.philipharvey.info/ubiandnit.pdf") as much as 50%]. And that makes sense - imagine if people making $0 get the full basic income, rich people get nothing, and there is a continuum in between so that a person with a median income gets half the basic income.
       div.ui.form
         div.grouped.fields.dfa-ubi-nit
           div.field
@@ -139,8 +152,10 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 6
-        |  What tax cuts do you want to make?
+        |  Spending cuts and tax increases
       div.ui.divider
+      p.dfa-slide-text With a basic income in place, there would be no need for many welfare programs. And the US has a lot of them: TANF, SNAP, WIC, etc. There are programs with overlapping goals. There are redundant state/local/federal programs. There are programs with very high administrative costs. These programs could all be eliminated if basic income existed as an alternative. In total, that adds up to #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") about $375 billion dollars].
+      p.dfa-slide-text Unfortunately, basic income would cost much more than that, so you might want to propose other cuts as well. Conservatives might use a #[a(href="http://www.cato-unbound.org/2014/08/26/basic-income-guarantee-simplicity-what-cost") more broad definition of welfare and want to cut up to $1 trillion/year in anti-poverty programs]. Liberals might want to raise taxes on the super-rich and shift some of our world-leading military spending over to basic income spending. And people in between might want to do some combination. Below, you can define what you think the optimal mix is.
       div.ui.form
         div.field
           div.ui.left.labeled.input
@@ -150,27 +165,27 @@ block content
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesWelfare(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $375 Billion - Eliminate redundant welfare
+              label $375 Billion - Eliminate redundant welfare #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesLoopholes(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $740 Billion - Eliminate tax loopholes
+              label $740 Billion - Eliminate tax loopholes #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesDefense(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $300 Billion - Cut defense spending in half
+              label $300 Billion - Cut defense spending in half #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesSocialSecurity(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $695 Billion - Eliminate Social Security
+              label $695 Billion - Eliminate Social Security #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesMedicaid(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $290 Billion - Eliminate Medicaid
+              label $290 Billion - Eliminate Medicaid #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesOnePercent(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $157 Billion - Raises taxes on top 1% to 40%
+              label $157 Billion - Raises taxes on top 1% to 40% #[a(href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html") [3]]
           div.field
             div.ui.toggle.checkbox
               input#cutsTaxesCustom(type="checkbox",name="fruit",tabindex="0",class="hidden")
@@ -185,6 +200,11 @@ block content
         span.ui.red.label.large 7
         |  GDP Change
       div.ui.divider
+      p.dfa-slide-text Economic models fall largely into two categories: #[a(href="https://en.wikipedia.org/wiki/Static_analysis") static and dynamic]. Dynamic models attempt to assess how the economy will respond to a change. That may seem like a good thing, but it is a possible source of bias. For example, cutting taxes may lead to economic growth, but how much? If an answer is uncertain, a dynamic model may just represent the bias of whoever designed it. From that perspective, static models are more conservative.
+      p.dfa-slide-text However, with a policy as large as basic income, static analysis may be unrealistic. Just consider the economic implications. Poor people would have much more money to spend, which could have #[a(href="http://money.cnn.com/2008/01/29/news/economy/stimulus_analysis/") a stimulatory effect similar to food stamps]. People who were previously unable to work due to ill-concieved government regulation like #[a(href="https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/") welfare cliffs] could start working. #[a(href="http://apps.npr.org/unfit-for-work/") The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.] Some of them would start working again if they recieved a basic income. 
+      p.dfa-slide-text On the other hand, some workers may decide that their basic income revenue is enough for them and quit their jobs or work less. That would have a negative impact on the economy. So maybe the effect of basic income would actually be negative!
+      p.dfa-slide-text Because of this wide range of uncertainty, the form below allows you to enter a range of possible changes in GDP that would result from the implementation of basic income. The model then assumes that tax revenue as a percentage of GDP would remain constant, resulting in additional (or decreased) revenue equal to that rate times the change in the GDP.
+
       div.ui.form
         div.two.fields
           div.field
@@ -204,7 +224,7 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 8
-        |  Review your steps
+        |  Review your steps (THIS IS FAKE)
       div.ui.divider
       div.ui.form
         table.ui.definition.table
@@ -224,11 +244,11 @@ block content
             tr
               td Cuts and taxes
               td
-               a.changeStep(href="javascript:;",data-step="7") $695 Billion - Eliminate Social Security
+               a.changeStep(href="javascript:;",data-step="7") $695 Billion
             tr
               td GDP Change
               td
-               a.changeStep(href="javascript:;",data-step="8") $145,000 - $500,000
+               a.changeStep(href="javascript:;",data-step="8") -5% to 15%
         div.field.right.slide-controls
           div.ui.white.button.prev.huge Back
           div.ui.red.button.next.huge Generate
@@ -243,10 +263,6 @@ block content
         div.column
           h4 Average costs/savings by component
           table.biBars#biBars
-
-      div.ui.form
-        div.field
-          input#permalink(type="text", placeholder="Permalink")
 
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")

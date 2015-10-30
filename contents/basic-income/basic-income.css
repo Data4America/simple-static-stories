@@ -30,3 +30,8 @@
   text-align: right;
   padding-right: 0;
 }
+
+.dfa-slide-text {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+}
