@@ -52752,7 +52752,7 @@ body.embed {
   padding: 0;
 }
 #dfa-supporters .ui.items > .item > .image:not(.ui) {
-  width: 175px;
+  width: 200px;
 }
 #dfa-supporters .ui.items > .item > .image + .content {
   padding-left: 0.5em;
