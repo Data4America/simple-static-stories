@@ -273,11 +273,8 @@ $(document).ready(function() {
 
     var transitionInProgress = false;
     function showSlide(next) {
-console.log('showSlide');
       var afterTransition = function () {
         transitionInProgress = false;
-
-        $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
 
         if (slideIndex === 0) {
           $('.slide-controls .prev').addClass('disabled');
@@ -298,9 +295,12 @@ console.log('showSlide');
         return;
       }
 
+console.log(slideIndex);
+
       transitionInProgress = true;
       if (next) {
         slideIndex++;
+        $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
 
         if (slideIndex == 0) {
           $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left', afterTransition);
@@ -311,6 +311,8 @@ console.log('showSlide');
         }
       } else {
         slideIndex--;
+        $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
+
         $('.dfa-slide:eq(' + (slideIndex + 1) + ')').transition('fade left', function() {
           $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right', afterTransition);
         });

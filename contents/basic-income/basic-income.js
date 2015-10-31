@@ -136,11 +136,9 @@ function basicIncomeInit() {
         updateUrl();
     });
 
-    // Run the simulations on page load
+    // Run the simulations when lastSlide becomes visible
     $(document).on('lastSlide', function () {
-        setTimeout(function () {
-            run(state);
-        }, 1000);
+        run(state);
     });
 
     // ## Display results
