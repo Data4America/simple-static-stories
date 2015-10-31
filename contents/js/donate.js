@@ -524,15 +524,15 @@
 
     var sponsorOptions = [
       { name: 'Criminal Justice', options: [ 'Drug policy', 'Death penalty', 'Gun control', 'Background checks for gun purchases' ] },
-      { name: 'Culture and Society', options: [ 'Abortion', 'Arts', 'Civil Rights', 'Religious Freedom Act', 'Gay marriage', 'Police voilence and Race', 'Wage and Race', 'Wage and Gender', 'Voting oppertunities by race/gender/class' ] },
-      { name: 'Domestic Policy', options: [ 'Immigration reform', 'Border security', 'Birthright citizenship', 'Temporary amnesty', 'NSA Surveillance', 'Campaign finance', 'Net Neutrality', 'Affirmative action', 'Patriot Act', 'Gerrymandering', 'Confederate flag'] },
-      { name: 'Economic Affairs', options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Accountability', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes'] },
-      { name: 'Education', options: [ 'Elementary education', 'Secondary education', 'Higher education', 'In-State Tuition', 'Common Core', 'Student Loans', 'Skills-based education', 'Technology education' ] },
-      { name: 'Environment', options: [ 'Food policy', 'Air quality', 'Global warming' ] },
-      { name: 'Government Operations', options: [ 'Government spending', 'Term limits for Congress', 'Campaign finance reform', 'Government privatization' ] },
-      { name: 'Health', options: [ 'Health insurance', 'Medicare/Medicade', 'Immigration health', 'Euthanasia', 'Mandates for birth control', 'Marijuana legalization', 'Patient Protection and Affordable Care Act (Obamacare)' ] },
-      { name: 'Social Welfare', options: [ 'Social Security', 'Welfare', 'Welfare drug tests', 'Basic Income proposal', 'Basic Jobs proposal' ] },
-      { name: 'Foreign Affairs', options: [ 'Military spending', 'Open data', 'Technology', 'War on ISIS', 'Support of Israel', 'Deal with Iran', 'United Nations membership', 'Drone policy', 'NSA Surveillance' ] },
+      { name: 'Culture and Society', options: [ 'Race and Gender', 'Government and Religion', 'Abortion', 'Arts', 'Civil Rights', 'Religious Freedom Act', 'Gay marriage', 'Police voilence and Race', 'Wage and Race', 'Wage and Gender', 'Voting oppertunities by race/gender/class' ] },
+      { name: 'Domestic Policy', options: [ 'Immigration', 'Border security', 'Birthright citizenship', 'Temporary amnesty', 'NSA Surveillance', 'Campaign finance', 'Net Neutrality', 'Affirmative action', 'Patriot Act', 'Gerrymandering', 'Confederate flag'] },
+      { name: 'Economic Affairs', options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Reform', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes'] },
+      { name: 'Education', options: [ 'Education', 'Elementary education', 'Secondary education', 'Higher education', 'In-State Tuition', 'Common Core', 'Student Loans', 'Skills-based education', 'Technology education' ] },
+      { name: 'Environment', options: [ 'Environment', 'Food policy', 'Air quality', 'Global warming' ] },
+      { name: 'Government Operations', options: [ 'Federal spending', 'Term limits for Congress', 'Campaign finance reform', 'Government privatization' ] },
+      { name: 'Health', options: [ 'Health insurance', 'Medicare/Medicade', 'Immigration health', 'Euthanasia', 'Mandates for birth control', 'Drug Legalization', 'Patient Protection and Affordable Care Act (Obamacare)' ] },
+      { name: 'Social Welfare', options: [ 'Entitlement Programs', 'Social Security', 'Welfare', 'Welfare drug tests', 'Basic Income proposal', 'Basic Jobs proposal' ] },
+      { name: 'Foreign Affairs', options: [ 'Foreign Affairs', 'Military', 'Military spending', 'Open data', 'Technology', 'War on ISIS', 'Support of Israel', 'Deal with Iran', 'United Nations membership', 'Drone policy', 'NSA Surveillance' ] },
       { name: 'Other', options: [] },
     ];
 
