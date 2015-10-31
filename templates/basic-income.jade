@@ -71,9 +71,9 @@ block content
       div.ui.divider
       div.ui.form
         div.field
-          label Name of region of country
+          label Name of region or country
           div.ui.huge.input
-            input(placeholder="Write in",type="text")
+            input#regionName(placeholder="Write in",type="text")
         div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
           label What is its Wikipedia URL?
           input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
@@ -87,20 +87,25 @@ block content
         |  Your geography details
       div.ui.divider
       div.ui.form
-        p (need to collect population, minimum wage, GDP, and tax revenue as a fraction of GDP - but for now, the values for the US will be used)
-        div.field
-          label Population
-          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
-        div.field
-          label Minimum wage
-          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
-        div.field
-          label GDP
-          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
-        div.field
-          label Tax revenue (fraction of GDP)
-          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
-        div.field
+        div.two.fields
+          div.field
+            label Number of adults
+            input#numAdults(type="text")
+          div.field
+            label Minimum wage (per hour)
+            div.ui.left.labeled.input
+              div.ui.label $
+              input#minimumWage(type="text")
+        div.two.fields
+          div.field
+            label GDP (trillions)
+            div.ui.left.labeled.input
+              div.ui.label $
+              input#gdp(type="text")
+          div.field
+            label Tax revenue (fraction of GDP)
+            input#taxAsPercentGdp(type="text")
+        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
           label Source URL
           div.ui.huge.input
             input(placeholder="Copy and paste the URL for this information",type="text")
@@ -111,7 +116,7 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 4
-        |  What will the age 18 and over Basic Income be?
+        |  Annual basic income amount
       div.ui.divider
       div.ui.form
         div.field
@@ -161,7 +166,7 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 6
-        |  Spending cuts and tax increases
+        |  Spending cuts and tax increases (billions)
       div.ui.divider
       div.ui.form
         div.field
@@ -276,7 +281,7 @@ block content
 
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        h3.ui.header Thank your generating a prediction model for the USA!
+        h3.ui.header Thank your generating a prediction model for <span id="regionNameTextEnd"></span>!
         p Please share it with your friends and family.
         div.ui.grey.email.button.circular.icon
           i.icon.mail

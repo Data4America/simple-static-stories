@@ -295,8 +295,6 @@ $(document).ready(function() {
         return;
       }
 
-console.log(slideIndex);
-
       transitionInProgress = true;
       if (next) {
         slideIndex++;

@@ -11,6 +11,11 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
+        regionName: 'USA',
+        numAdults: 227e6, // In the 2010 census, there were 227 million adults.
+        taxAsPercentGdp: 0.243, // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
+        gdp: 18, // Trillions of dollars
+        minimumWage: 7.25, // Dollars/hr
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
@@ -27,10 +32,6 @@ function basicIncomeInit() {
         gdpRangeMax: 15
     };
     var updating = false;
-
-    var numAdults = 227e6; // In the 2010 census, there were 227 million adults.
-    var taxAsPercentGdp = 0.243; // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
-    var gdp = 18; // Trillions of dollars
 
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
     var parts = decodeURIComponent(window.location.hash).split(',');
@@ -62,10 +63,10 @@ function basicIncomeInit() {
         var amounts = {};
 
         var factor = state.ubiOrNit === 'ubi' ? 1 : 0.5;
-        amounts.directCosts = factor * numAdults * state.basicIncome / 1e12;
+        amounts.directCosts = factor * state.numAdults * state.basicIncome / 1e12;
         amounts.directSavings = -state.cutsTaxes / 1000;
 
-        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * taxAsPercentGdp * gdp;
+        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * state.taxAsPercentGdp * state.gdp;
 
         return amounts;
     }
@@ -89,7 +90,7 @@ function basicIncomeInit() {
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * taxAsPercentGdp * gdp;
+        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * state.taxAsPercentGdp * state.gdp;
 
         // This will generate and display charts based on the generated results - see the next section for details
         render();
@@ -108,6 +109,11 @@ function basicIncomeInit() {
 
     // Initialize UI
     var formEls = {
+        regionName: document.getElementById('regionName'),
+        numAdults: document.getElementById('numAdults'),
+        taxAsPercentGdp: document.getElementById('taxAsPercentGdp'),
+        gdp: document.getElementById('gdp'),
+        minimumWage: document.getElementById('minimumWage'),
         basicIncome: document.getElementById('basicIncome'),
         basicIncomeType: document.getElementsByName('basicIncomeType'),
         ubiOrNit: document.getElementsByName('ubiOrNit'),
@@ -145,6 +151,8 @@ function basicIncomeInit() {
     // -----------------
     // Generate and display all charts
     function render() {
+        document.getElementById('regionNameTextEnd').innerHTML = state.regionName;
+
         bars('biBars', biAmounts);
 
         distribution('biDist', biTotal, biTotalStddev);
@@ -332,7 +340,7 @@ function basicIncomeInit() {
 
     function state2form(state, formEls) {
         // Normal inputs
-        var input = ['basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp', 'minimumWage', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             formEls[input].value = state[input];
         });
@@ -392,11 +400,22 @@ function basicIncomeInit() {
     }
 
     function form2state(state, formEls) {
+        state.regionName = escape(formEls.regionName.value);
+        console.log(state.regionName);
+
         // Integer inputs
-        var input = ['basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['numAdults', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (!isNaN(parseInt(formEls[input].value, 10))) {
                 state[input] = parseInt(formEls[input].value, 10);
+            }
+        });
+
+        // Float inputs
+        input = ['taxAsPercentGdp', 'gdp', 'minimumWage'];
+        input.forEach(function (input) {
+            if (!isNaN(parseFloat(formEls[input].value))) {
+                state[input] = parseFloat(formEls[input].value);
             }
         });
 
@@ -465,6 +484,33 @@ function basicIncomeInit() {
         var count = Math.round(gaussRand(N * p, Math.sqrt(N * p * (1 - p))));
         return count > 0 ? count : 0;
     }
+
+    // From underscore.js
+    // List of HTML entities for escaping.
+    var escapeMap = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '`': '&#x60;'
+    };
+
+    // Functions for escaping and unescaping strings to/from HTML interpolation.
+    var createEscaper = function(map) {
+      var escaper = function(match) {
+        return map[match];
+      };
+      // Regexes for identifying a key that needs to be escaped
+      var source = '(?:' + Object.keys(map).join('|') + ')';
+      var testRegexp = RegExp(source);
+      var replaceRegexp = RegExp(source, 'g');
+      return function(string) {
+        string = string == null ? '' : '' + string;
+        return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
+      };
+    };
+    var escape = createEscaper(escapeMap);
 }
 
 (function() {
