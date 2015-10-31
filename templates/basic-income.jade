@@ -212,23 +212,19 @@ block content
         span.ui.red.label.large 7
         |  GDP Change
       div.ui.divider
-      p.dfa-slide-text Economic models fall largely into two categories: #[a(href="https://en.wikipedia.org/wiki/Static_analysis") static and dynamic]. Dynamic models attempt to assess how the economy will respond to a change. That may seem like a good thing, but it is a possible source of bias. For example, cutting taxes may lead to economic growth, but how much? If an answer is uncertain, a dynamic model may just represent the bias of whoever designed it. From that perspective, static models are more conservative.
-      p.dfa-slide-text However, with a policy as large as basic income, static analysis may be unrealistic. Just consider the economic implications. Poor people would have much more money to spend, which could have #[a(href="http://money.cnn.com/2008/01/29/news/economy/stimulus_analysis/") a stimulatory effect similar to food stamps]. People who were previously unable to work due to ill-concieved government regulation like #[a(href="https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/") welfare cliffs] could start working. #[a(href="http://apps.npr.org/unfit-for-work/") The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.] Some of them would start working again if they recieved a basic income. 
-      p.dfa-slide-text On the other hand, some workers may decide that their basic income revenue is enough for them and quit their jobs or work less. That would have a negative impact on the economy. So maybe the effect of basic income would actually be negative!
-      p.dfa-slide-text Because of this wide range of uncertainty, the form below allows you to enter a range of possible changes in GDP that would result from the implementation of basic income. The model then assumes that tax revenue as a percentage of GDP would remain constant, resulting in additional (or decreased) revenue equal to that rate times the change in the GDP.
-
+      p.dfa-slide-text Will basic income result in economic growth due to the stimulatory effects of more money in the hands of poor people and the removal of welfare cliffs? Or will it lead to economic contraction due to people working less? There is no perfect way to estimate this, so below specify a range of possible GDP changes.
       div.ui.form
         div.two.fields
           div.field
-            label From
-            div.ui.left.labeled.input
-              div.ui.label $
+            label Minimum
+            div.ui.right.labeled.input
               input#gdpRangeMin(type="text",placeholder="Amount")
+              div.ui.label %
           div.field
-            label To
-            div.ui.left.labeled.input
-              div.ui.label $
+            label Maximum
+            div.ui.right.labeled.input
               input#gdpRangeMax(type="text",placeholder="Amount")
+              div.ui.label %
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
