@@ -271,44 +271,51 @@ $(document).ready(function() {
       $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
     });
 
+    var transitionInProgress = false;
     function showSlide(next) {
+console.log('showSlide');
+      var afterTransition = function () {
+        transitionInProgress = false;
+
+        $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
+
+        if (slideIndex === 0) {
+          $('.slide-controls .prev').addClass('disabled');
+        } else {
+          $('.slide-controls .prev').removeClass('disabled');
+        }
+
+        if (totalSlides === (slideIndex + 1)) {
+          $('.slide-controls .next').addClass('disabled');
+          $(document).trigger('lastSlide');
+        } else {
+          $('.slide-controls .next').removeClass('disabled');
+        }
+      }
+
+      // If two transitions happen at the same time, don't let the second one proceed otherwise the layout gets fucked up
+      if (transitionInProgress) {
+        return;
+      }
+
+      transitionInProgress = true;
       if (next) {
         slideIndex++;
 
         if (slideIndex == 0) {
-          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left', afterTransition);
         } else {
           $('.dfa-slide:eq(' + (slideIndex - 1) + ')').transition('fade right', function() {
-            $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+            $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left', afterTransition);
           });
         }
-
       } else {
-
         slideIndex--;
-
         $('.dfa-slide:eq(' + (slideIndex + 1) + ')').transition('fade left', function() {
-          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right');
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right', afterTransition);
         });
-
-      }
-
-      $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
-
-      if (slideIndex === 0) {
-        $('.slide-controls .prev').addClass('disabled');
-      } else {
-        $('.slide-controls .prev').removeClass('disabled');
-      }
-
-      if (totalSlides === (slideIndex + 1)) {
-        $('.slide-controls .next').addClass('disabled');
-        $(document).trigger('lastSlide');
-      } else {
-        $('.slide-controls .next').removeClass('disabled');
       }
     }
-
   }
 });
 
