@@ -34,20 +34,9 @@ function basicIncomeInit() {
     var updating = false;
 
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
-    var parts = decodeURIComponent(window.location.hash).split(',');
-    parts[0] = parts[0].slice(1); // Get rid of #
-    parts = parts.map(function (part, i) {
-        if (i === 0) {
-            return hackyEscape(part);
-        }
-        return parseFloat(part);
-    });
-    if (parts.length === 5 && !isNaN(parts[1]) && !isNaN(parts[2]) && !isNaN(parts[3])) {
-        var state = {
-            basicIncome: parts[1],
-            laborForce: parts[3],
-            regionName: parts[0]
-        };
+    var hash = decodeURIComponent(window.location.hash);
+    if (hash) {
+        var state = hash2state(hash.slice(1)); // Get rid of # before passing to function
     } else {
         var state = defaultState;
     }
@@ -151,7 +140,7 @@ function basicIncomeInit() {
         bars('biBars', biAmounts);
 
         distribution('biDist', biTotal, biTotalStddev);
-        
+
         updateUrl();
     }
 
@@ -467,17 +456,20 @@ console.log(state, state2hash(state), hash2state(state2hash(state)), state);
         return hash;
     }
     function hash2state(hash) {
-        var sortedKeys = Object.keys(state).sort();
+        var sortedKeys = Object.keys(defaultState).sort();
 
         var values = JSON.parse(hash);
 
         if (sortedKeys.length !== values.length) {
-            throw new Error('Hash has wrong number of values');
+            console.log('Hash has wrong number of values');
         }
 
+        var localState = {};
         sortedKeys.forEach(function (key, i) {
-            state[key] = values[i];
+            localState[key] = values[i];
         });
+
+        return localState;
     }
 
     // Because JavaScript's ecosystem is a wasteland, I wrote some helper functions for generating the random numbers used in the models
