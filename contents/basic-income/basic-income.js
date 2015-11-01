@@ -99,12 +99,9 @@ function basicIncomeInit() {
     // Update permalink by calling this function
     function updateUrl() {
         // Do this instead of directly setting window.location.hash to prevent adding extra history entries
-        /*var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
-        var url = baseUrl + '#' + encodeURIComponent(state.regionName + ',' + state.basicIncome + ',' + numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
-        if (window.location.pathname.indexOf('local') >= 0) {
-            window.location.replace(url);
-        }*/
-        document.getElementById('cliptext').value = 'Permalink not implemented yet, but eventually this will link to a self-contained mini-page';
+        var baseUrl = window.location.origin + '/basic-income/custom/';
+        var url = baseUrl + '#' + encodeURIComponent(state2hash(state));
+        document.getElementById('cliptext').value = url;
     }
 
     // Initialize UI
@@ -138,8 +135,6 @@ function basicIncomeInit() {
         }
 
         run(state);
-
-        updateUrl();
     });
 
     // Run the simulations when lastSlide becomes visible
@@ -156,6 +151,8 @@ function basicIncomeInit() {
         bars('biBars', biAmounts);
 
         distribution('biDist', biTotal, biTotalStddev);
+        
+        updateUrl();
     }
 
     // The distribution needs to be re-rendered when the size of the window changes, otherwise it won't fit in the window correctly
@@ -455,6 +452,32 @@ function basicIncomeInit() {
 
         // Sync
         state2form(state, formEls);
+    }
+
+console.log(state, state2hash(state), hash2state(state2hash(state)), state);
+    function state2hash(state) {
+        var sortedKeys = Object.keys(state).sort();
+
+        var values = sortedKeys.map(function (key) {
+            return state[key];
+        });
+
+        var hash = JSON.stringify(values);
+
+        return hash;
+    }
+    function hash2state(hash) {
+        var sortedKeys = Object.keys(state).sort();
+
+        var values = JSON.parse(hash);
+
+        if (sortedKeys.length !== values.length) {
+            throw new Error('Hash has wrong number of values');
+        }
+
+        sortedKeys.forEach(function (key, i) {
+            state[key] = values[i];
+        });
     }
 
     // Because JavaScript's ecosystem is a wasteland, I wrote some helper functions for generating the random numbers used in the models
