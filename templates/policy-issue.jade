@@ -1,0 +1,76 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-policy-issue.ui.segments
+    div.ui.segment
+      h1.ui.header Sex Work
+      div.ui.statistics
+        div.red.statistic
+          div.label Level
+          div.value Culture & Society
+        div.blue.statistic
+          div.label Geography
+          div.value United States
+    div.ui.segment
+      div.ui.horizontal.list
+        div.item
+          img.ui.avatar.image(src="http://semantic-ui.com/images/avatar/small/helen.jpg")
+          div.content
+            div.header Cyan Banister
+            a(href="https://twitter.com/cyantist", target="_blank")
+              i.ui.icon.twitter(style="color:#0084B4;")
+            a(href="https://www.linkedin.com/in/cyanb", target="_blank")
+              i.ui.icon.linkedin(style="color:#0077B5;")
+
+      p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
+        span.d4a Data
+          span.f 4
+          | America
+        |  Editorial Board approves.
+    div.ui.segment
+      h3.ui.header About Sex Work:
+      p Policy calls for the United States to not to criminally penalize any person -- adult or minor -- for selling his or her own sexual services. Additionally, the U.S. should not criminally penalize those who purchase sexual services from adults. 
+    div.ui.segment
+      h3.ui.header Recommended Sources:
+      div.ui.list
+        div.item
+          a(href="http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/") http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/
+        div.item
+          a(href="http://www.economist.com/blogs/economist-explains/2015/08/economist-explains-13") http://www.economist.com/blogs/economist-explains/2015/08/economist-explains-13
+        div.item
+          a(href="http://prostitution.procon.org/view.subissues.php?issueID=000363") http://prostitution.procon.org/view.subissues.php?issueID=000363
+        div.item
+          a(href="https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/") https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/
+        div.item
+          a(href="http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6") http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6
+      iframe(src="https://docs.google.com/forms/d/1xOK9aOTswAMNKgb7U9NdLJ62kQK3uMEvsnP3xUp7TzI/viewform?embedded=true", width="100%", height="1306", frameborder="0", marginheight="0", marginwidth="0")
+    div.ui.segment
+      h3.ui.header Recommended Datasets
+      iframe(src="https://docs.google.com/forms/d/1HXvow45G2LoXs6jh4w2keIMcV2KvHy1BzVDFKKp_iV8/viewform?embedded=true", width="100%", height="1500", frameborder="0", marginheight="0", marginwidth="0")
+    div.ui.segment
+      h3.ui.header Published Stories:
+      div.ui.horizontal.list
+        div.item
+          img.ui.avatar.image(src="http://semantic-ui.com/images/avatar2/small/matthew.png")
+          div.content
+            a.header Sex 101 
+            | by Daniyal Nawaz
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+

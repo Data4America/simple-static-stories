@@ -52206,6 +52206,12 @@ input::-moz-focus-inner {
   text-transform: none;
 }
 /*-------------------
+     TEXT STYLE
+--------------------*/
+.d4a .f {
+  font-style: italic;
+}
+/*-------------------
       MAIN HEADER
 --------------------*/
 header {
@@ -52804,4 +52810,30 @@ body.embed {
 }
 #dfa-menu-floating .item.donate {
   background: #CC0505 !important;
+}
+#dfa-data-page .ui.list {
+  margin-left: 3em;
+}
+#dfa-data-page .ui.list .item {
+  font-size: 1.2em;
+  font-weight: 200;
+  line-height: 1.6em;
+}
+#dfa-data-page .ui.ordered.list > .item:before {
+  margin-left: -2em;
+}
+#dfa-policy-issue .ui.statistics .statistic {
+  margin-bottom: 0;
+}
+#dfa-policy-issue .ui.statistics .value {
+  font-size: 1.8rem;
+}
+#dfa-policy-issue .ui.statistics .label {
+  text-align: left;
+}
+#dfa-policy-issue .note {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  color: #767676;
+  margin: 1em 0 0;
 }
