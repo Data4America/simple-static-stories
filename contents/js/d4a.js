@@ -172,6 +172,15 @@ $(document).ready(function() {
     }
   });
 
+  $('#dfa-content p, #dfa-content .ui.header').each(function() {
+    var html = $(this).html();
+    if (html.search('Data4America') >= 0) {
+      html = html.
+        replace('Data4America', '<span class="d4a">Data<span class="f">4</span>America</span>');
+      $(this).html(html);
+    }
+  });
+
   if ($('article.article.big').length) {
     var title = $('.dfa-article-header .ui.header').html();
     $('.dfa-header-title').html(title);
