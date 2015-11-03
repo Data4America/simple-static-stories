@@ -4,7 +4,7 @@
   "founder": false,
   "boardOfDirectors": false,
   "editorialBoard": false,
-  "advisor": false,
+  "advisor": true,
   "bio": "CEO @Zivity, Co-Founder @Signal Media Project, Angel Investor, Philanthropist.",
   "links": [
     {
