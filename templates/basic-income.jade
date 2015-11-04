@@ -168,36 +168,8 @@ block content
           div.ui.left.labeled.input
             div.ui.label $
             input#cutsTaxes(type="text", disabled)
-        div.grouped.fields.dfa-tax-cuts
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesWelfare(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $375 Billion - Eliminate redundant welfare #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesLoopholes(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $740 Billion - Eliminate tax loopholes #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesDefense(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $300 Billion - Cut defense spending in half #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesSocialSecurity(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $695 Billion - Eliminate Social Security #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesMedicaid(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $290 Billion - Eliminate Medicaid #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesOnePercent(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $157 Billion - Raises taxes on top 1% to 40% #[a(href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html") [3]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesCustom(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label
-                input#cutsTaxesCustomValue(type="text", placeholder="Custom Amount")
+        div#cutsTaxesEntries
+        br
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
