@@ -4,10 +4,14 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
+  link(rel="stylesheet", type="text/css", href="/basic-income/basic-income.css")
+
+  div!= typogr(page.html).typogrify()
+
   div.ui.icon.menu.inverted.red.slide-controls.top.attached
     a.item.prev.disabled
       i.chevron.left.icon
-    div.item.text Step 1 of 7
+    div.item.text
     a.item.next
       i.chevron.right.icon
     div.menu.right
@@ -18,17 +22,24 @@ block content
       a.item
         i.icon.twitter
 
-  div.ui.segment.attached(style="min-height:400px; overflow:hidden;")
+  div.ui.segment.attached#customize-form(style="min-height:400px; overflow:hidden;")
     div.dfa-slide
       div.ui.items
         div.item(style="margin-top:3em;")
           div.image(style="width:175px;")
-            img(src="/basic-income-basic-job/thumbnail-256.png")
+            img(src="/basic-income/thumbnail-256.png")
           div.content
-            h1.ui.header A new social contract: Basic Income vs. Basic Jobs
+            h1.ui.header Modeling basic income - does it add up?
             p Create your basic income model for any geography.
             div.slide-controls(style="text-align: center; margin-top: 2em;")
               div.ui.red.button.huge.next Get Started
+
+    div.dfa-slide
+      h2.ui.header What is basic income?
+      div.ui.divider
+      p.dfa-slide-text Basic income is a system where the government directly gives money to all its citizens, rather than somewhat indirectly through complicated welfare programs. The idea is that removing the overhead and inefficiencies inherent in welfare programs and putting more money in the pocket of the poor could be very beneficial.
+      p.dfa-slide-text Beyond that, there are many questions. Should the amount of money phase out for wealthy citizens? Which entitlements and regulations should it replace? And most importantly, how much will it cost and what will the benefits be?
+      p.dfa-slide-text Mathematical modeling allows us to quantitatively state our hypothesis, evaluate its plausibility, and explore alternative options.
 
     div.dfa-slide
       h2.ui.header
@@ -39,15 +50,19 @@ block content
         div.two.fields
           div.field
             label First Name
-            input(placeholder="First Name",type="text")
+            div.ui.huge.input
+              input(placeholder="First Name",type="text")
           div.field
             label Last Name
-            input(placeholder="Last Name",type="text")
+            div.ui.huge.input
+              input(placeholder="Last Name",type="text")
         div.field
           label Your email address
-          input(placeholder="Email Address",type="text")
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+          div.ui.huge.input
+            input(placeholder="Email Address",type="text")
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
@@ -56,136 +71,168 @@ block content
       div.ui.divider
       div.ui.form
         div.field
-          label Name of region of country
-          input(placeholder="Type in",type="text")
-        div.field
-          label Source
+          label Name of region or country
+          div.ui.huge.input
+            input#regionName(placeholder="Write in",type="text")
+        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
+          label What is its Wikipedia URL?
           input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 3
-        |  How many residents live in this geography?
+        |  Your geography details
       div.ui.divider
       div.ui.form
-        div.field
-          label Source
-          input(placeholder="Copy and paste the URL for this information",type="text")
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.two.fields
+          div.field
+            label Number of adults
+            input#numAdults(type="text")
+          div.field
+            label Minimum wage (per hour)
+            div.ui.left.labeled.input
+              div.ui.label $
+              input#minimumWage(type="text")
+        div.two.fields
+          div.field
+            label GDP (trillions)
+            div.ui.left.labeled.input
+              div.ui.label $
+              input#gdp(type="text")
+          div.field
+            label Tax revenue (fraction of GDP)
+            input#taxAsPercentGdp(type="text")
+        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
+          label Source URL
+          div.ui.huge.input
+            input(placeholder="Copy and paste the URL for this information",type="text")
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 4
-        |  What will the age 18 and over Basic Income be?
+        |  Annual basic income amount
       div.ui.divider
       div.ui.form
         div.field
-          div.ui.left.labeled.input
+          div.ui.huge.left.labeled.input
             div.ui.label $
-            input(type="text",placeholder="Amount")
-        div.grouped.fields
+            input#basicIncome(type="text", disabled)
+        div.grouped.fields.dfa-bi-checkboxes
           div.field
-            div.ui.radio.checkbox
-              input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
-              label $10k/year
+            div.ui.slider.checkbox
+              input(type="radio",name="basicIncomeType", value="10k", tabindex="0",class="hidden")
+              label $10,000/year
           div.field
-            div.ui.radio.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label Full time minimum wage ($14.5k/year)
+            div.ui.slider.checkbox
+              input(type="radio",name="basicIncomeType", value="minimumWage", tabindex="0",class="hidden")
+              label Full time minimum wage ($14,500/year)
           div.field
-            div.ui.radio.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $20k/year
+            div.ui.slider.checkbox
+              input(type="radio",name="basicIncomeType", value="20k", tabindex="0",class="hidden")
+              label $20,000/year
           div.field
-            div.ui.radio.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label Custom
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+            div.ui.slider.checkbox
+              input(type="radio",name="basicIncomeType", value="custom", tabindex="0",class="hidden")
+              label Choose My Own
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 5
-        |  Do you want to use a Basic Income or a Negative Income Tax?
+        | Use a Basic Income or a Negative Income Tax?
       div.ui.divider
       div.ui.form
-        div.field
-          select.ui.dropdown
-            option(value="") Choose
-            option(value="1") UBI
-            option(value="1") NIT
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.grouped.fields.dfa-ubi-nit
+          div.field
+            div.ui.slider.checkbox
+              input(type="radio", name="ubiOrNit", value="ubi", tabindex="0",class="hidden")
+              label Universal Basic Income (Give everyone exactly the same monthly payment.)
+          div.field
+            div.ui.slider.checkbox
+              input(type="radio", name="ubiOrNit", value="nit", tabindex="0",class="hidden")
+              label Negative Income Tax (Give the full basic income only to people making $0, and gradually phase it out for people making more.)
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 6
-        |  What tax cuts do you want to make?
+        |  Spending cuts and tax increases (billions)
       div.ui.divider
       div.ui.form
         div.field
           div.ui.left.labeled.input
             div.ui.label $
-            input(type="text",placeholder="Amount")
-        div.grouped.fields
+            input#cutsTaxes(type="text", disabled)
+        div.grouped.fields.dfa-tax-cuts
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",checked="",tabindex="0",class="hidden")
-              label $375B - Eliminate redundant welfare
+            div.ui.toggle.checkbox
+              input#cutsTaxesWelfare(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label $375 Billion - Eliminate redundant welfare #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $740B - Eliminate tax loopholes
+            div.ui.toggle.checkbox
+              input#cutsTaxesLoopholes(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label $740 Billion - Eliminate tax loopholes #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $300B - Cut defense spending in half
+            div.ui.toggle.checkbox
+              input#cutsTaxesDefense(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label $300 Billion - Cut defense spending in half #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $695B - Eliminate Social Security
+            div.ui.toggle.checkbox
+              input#cutsTaxesSocialSecurity(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label $695 Billion - Eliminate Social Security #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $290B - Eliminate Medicaid
+            div.ui.toggle.checkbox
+              input#cutsTaxesMedicaid(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label $290 Billion - Eliminate Medicaid #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $290B - Eliminate Medicaid
+            div.ui.toggle.checkbox
+              input#cutsTaxesOnePercent(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label $157 Billion - Raises taxes on top 1% to 40% #[a(href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html") [3]]
           div.field
-            div.ui.checkbox
-              input(type="radio",name="fruit",tabindex="0",class="hidden")
-              label $157B - Raises taxes on top 1% to 40%
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+            div.ui.toggle.checkbox
+              input#cutsTaxesCustom(type="checkbox",name="fruit",tabindex="0",class="hidden")
+              label
+                input#cutsTaxesCustomValue(type="text", placeholder="Custom Amount")
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 7
         |  GDP Change
       div.ui.divider
+      p.dfa-slide-text Will basic income result in economic growth due to the stimulatory effects of more money in the hands of poor people and the removal of welfare cliffs? Or will it lead to economic contraction due to people working less? There is no perfect way to estimate this, so below specify a range of possible GDP changes.
       div.ui.form
         div.two.fields
           div.field
-            label From
+            label Minimum
             div.ui.right.labeled.input
-              input(type="text",placeholder="Amount")
+              input#gdpRangeMin(type="text",placeholder="Amount")
               div.ui.label %
           div.field
-            label To
+            label Maximum
             div.ui.right.labeled.input
-              input(type="text",placeholder="Amount")
+              input#gdpRangeMax(type="text",placeholder="Amount")
               div.ui.label %
-        div.field.right.slide-controls
-          div.ui.red.button.next.huge Next
+        div.field.right.slide-controls(style="text-align:left;")
+          div.ui.white.button.prev.large Back
+          div.ui.red.button.next.large Next
 
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 8
-        |  Review your steps
+        |  Review your choices
       div.ui.divider
       div.ui.form
         table.ui.definition.table
@@ -196,26 +243,42 @@ block content
           tbody
             tr
               td Basic Income (per adult)
-              td $25,000
+              td 
+                a.changeStep(href="javascript:;",data-step="5")
+                  $#[span#reviewBasicIncome]/year
             tr
               td UBI or NIT?
-              td NIT
+              td
+                a.changeStep(href="javascript:;",data-step="6")
+                  span#reviewUbiOrNit
             tr
-              td Cuts and taxes
-              td $695B - Eliminate Social Security
+              td Cuts and tax increases
+              td
+                a.changeStep(href="javascript:;",data-step="7")
+                  $#[span#reviewCutsTaxes]B
             tr
               td GDP Change
-              td $145,000 - $500,000
+              td
+                a.changeStep(href="javascript:;",data-step="8") #[span#reviewGdpRangeMin]% to #[span#reviewGdpRangeMax]%
         div.field.right.slide-controls
-          div.ui.red.button.next.massive Generate
+          div.ui.white.button.prev.huge Back
+          div.ui.red.button.next.huge Generate
 
     div.dfa-slide
       h1.ui.header Results
       div.ui.divider
-      img.ui.image(src="/img/model.png")
+      div.ui.two.column.stackable.grid
+        div.column
+          h4 Distribution of possible costs
+          div#biDist
+        div.column
+          h4 Average costs/savings by component
+          table.biBars#biBars
+
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        | Share you results:
+        h3.ui.header Thank your generating a prediction model for <span id="regionNameTextEnd"></span>!
+        p Please share it with your friends and family.
         div.ui.grey.email.button.circular.icon
           i.icon.mail
         div.ui.facebook.button.circular.icon
@@ -224,19 +287,24 @@ block content
           i.ui.twitter.icon
         a.circular.ui.icon.button.sms.orange(href="javascript:;")
           i.icon-sms
+      div.ui.action.input.fluid
+        input#cliptext(type="text", value="http://data4america.org/basic-income")
+        button.copy-button.ui.button(data-clipboard-target="#cliptext")
+          span Copy
 
   div.ui.segment.inverted.grey.attached.center.aligned(style="padding: 0.4em 0.5em; font-size: 0.9em;")
-    | All data stories have been reviewed and approved by the non-partisan Editorial Board
+    | HOW TO: Build a prediction model for your own region or country, then share.
 
   div.ui.segment.inverted.bottom.attached.center.aligned(style="background: #002868; padding: 0.4em 0.5em;font-size: 0.9em;")
     div.action.author
-      | Created by: 
-      strong  Jeremy Scheff 
-      img.ui.avatar.image(src="/authors/jeremy-scheff.jpg") 
-      a(href="http://dumbmatter.com/", target="_blank")
-        img.mini-logo(src="/img/mini-logos/www.png")
-      |   
-      a(href="https://www.linkedin.com/pub/jeremy-scheff/28/87b/999",target="_blank")
-        img.mini-logo(src="/img/mini-logos/linkedin.png")
+      | Model created by 
+      a(href="http://dumbmatter.com/", target="_blank", style="color:white;")
+        strong  Jeremy Scheff 
+        img.ui.avatar.image(src="/authors/jeremy-scheff.jpg") 
+      span.saperator ·
+      a(href="http://datahub.io/organization/data4america#_=_", target="_blank", style="color:white; font-weight:bold;") Submit a Data Story
+      span.saperator ·
+      a.dfa-btn-donate(href="javascript:;", style="color:white; font-weight:bold;") Donate to D4A
 
-
+  script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js")
+  script(type="text/javascript", src="/basic-income/basic-income.js")

@@ -11,6 +11,11 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
+        regionName: 'USA',
+        numAdults: 227e6, // In the 2010 census, there were 227 million adults.
+        taxAsPercentGdp: 0.243, // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
+        gdp: 18, // Trillions of dollars
+        minimumWage: 7.25, // Dollars/hr
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
@@ -28,25 +33,11 @@ function basicIncomeInit() {
     };
     var updating = false;
 
-    var numAdults = 227e6; // In the 2010 census, there were 227 million adults.
-    var taxAsPercentGdp = 0.243; // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
-    var gdp = 18; // Trillions of dollars
-
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
-    var parts = decodeURIComponent(window.location.hash).split(',');
-    parts[0] = parts[0].slice(1); // Get rid of #
-    parts = parts.map(function (part, i) {
-        if (i === 0) {
-            return hackyEscape(part);
-        }
-        return parseFloat(part);
-    });
-    if (parts.length === 5 && !isNaN(parts[1]) && !isNaN(parts[2]) && !isNaN(parts[3])) {
-        var state = {
-            basicIncome: parts[1],
-            laborForce: parts[3],
-            regionName: parts[0]
-        };
+    var hash = decodeURIComponent(window.location.hash);
+    if (hash) {
+        var state = hash2state(hash.slice(1)); // Get rid of # before passing to function
+console.log(state.cutsTaxes);
     } else {
         var state = defaultState;
     }
@@ -62,10 +53,10 @@ function basicIncomeInit() {
         var amounts = {};
 
         var factor = state.ubiOrNit === 'ubi' ? 1 : 0.5;
-        amounts.directCosts = factor * numAdults * state.basicIncome / 1e12;
+        amounts.directCosts = factor * state.numAdults * state.basicIncome / 1e12;
         amounts.directSavings = -state.cutsTaxes / 1000;
 
-        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * taxAsPercentGdp * gdp;
+        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * state.taxAsPercentGdp * state.gdp;
 
         return amounts;
     }
@@ -89,7 +80,7 @@ function basicIncomeInit() {
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * taxAsPercentGdp * gdp;
+        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * state.taxAsPercentGdp * state.gdp;
 
         // This will generate and display charts based on the generated results - see the next section for details
         render();
@@ -98,19 +89,21 @@ function basicIncomeInit() {
     // Update permalink by calling this function
     function updateUrl() {
         // Do this instead of directly setting window.location.hash to prevent adding extra history entries
-        /*var baseUrl = window.location.origin + '/basic-income-basic-job/local/';
-        var url = baseUrl + '#' + encodeURIComponent(state.regionName + ',' + state.basicIncome + ',' + numAdults + ',' + state.laborForce + ',' + state.disabledAdults);
-        if (window.location.pathname.indexOf('local') >= 0) {
-            window.location.replace(url);
-        }*/
-        document.getElementById('permalink').value = 'Permalink not implemented yet, but eventually this will link to a self-contained mini-page';
+        var baseUrl = window.location.origin + '/basic-income/custom/';
+        var url = baseUrl + '#' + encodeURIComponent(state2hash(state));
+        document.getElementById('cliptext').value = url;
     }
 
     // Initialize UI
     var formEls = {
+        regionName: document.getElementById('regionName'),
+        numAdults: document.getElementById('numAdults'),
+        taxAsPercentGdp: document.getElementById('taxAsPercentGdp'),
+        gdp: document.getElementById('gdp'),
+        minimumWage: document.getElementById('minimumWage'),
         basicIncome: document.getElementById('basicIncome'),
         basicIncomeType: document.getElementsByName('basicIncomeType'),
-        ubiOrNit: document.getElementById('ubiOrNit'),
+        ubiOrNit: document.getElementsByName('ubiOrNit'),
         cutsTaxes: document.getElementById('cutsTaxes'),
         cutsTaxesWelfare: document.getElementById('cutsTaxesWelfare'),
         cutsTaxesLoopholes: document.getElementById('cutsTaxesLoopholes'),
@@ -123,7 +116,16 @@ function basicIncomeInit() {
         gdpRangeMin: document.getElementById('gdpRangeMin'),
         gdpRangeMax: document.getElementById('gdpRangeMax')
     };
-    state2form(state, formEls);
+
+    var reviewEls = {
+        reviewBasicIncome: document.getElementById('reviewBasicIncome'),
+        reviewUbiOrNit: document.getElementById('reviewUbiOrNit'),
+        reviewCutsTaxes: document.getElementById('reviewCutsTaxes'),
+        reviewGdpRangeMin: document.getElementById('reviewGdpRangeMin'),
+        reviewGdpRangeMax: document.getElementById('reviewGdpRangeMax')
+    };
+
+    state2form(state, formEls, reviewEls);
     $("#customize-form :input").change(function() {
         if (!updating) {
             updating = true;
@@ -132,20 +134,28 @@ function basicIncomeInit() {
         }
 
         run(state);
-
-        updateUrl();
     });
 
-    // Run the simulations on page load
+    // Run the simulations when lastSlide becomes visible
+    $(document).on('lastSlide', function () {
+        run(state);
+    });
+
     run(state);
 
     // ## Display results
     // -----------------
     // Generate and display all charts
     function render() {
+        if (document.getElementById('regionNameTextEnd')) {
+            document.getElementById('regionNameTextEnd').innerHTML = state.regionName;
+        }
+
         bars('biBars', biAmounts);
 
         distribution('biDist', biTotal, biTotalStddev);
+
+        updateUrl();
     }
 
     // The distribution needs to be re-rendered when the size of the window changes, otherwise it won't fit in the window correctly
@@ -328,26 +338,31 @@ function basicIncomeInit() {
             .replace(/>/g, '&gt;');
     }
 
-    function state2form(state, formEls) {
+    function state2form(state, formEls, reviewEls) {
         // Normal inputs
-        var input = ['basicIncome', 'ubiOrNit', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp', 'minimumWage', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
-            formEls[input].value = state[input];
+            if (formEls[input]) {
+                formEls[input].value = state[input];
+            }
         });
 
         // Radio buttons
-        for (var i = 0; i < formEls.basicIncomeType.length; i++) {
-            var radio = formEls.basicIncomeType[i];
-            radio.checked = radio.value === state.basicIncomeType;
+        var groups = ['basicIncomeType', 'ubiOrNit'];
+        groups.forEach(function (group) {
+            for (var i = 0; i < formEls[group].length; i++) {
+                var radio = formEls[group][i];
+                radio.checked = radio.value === state[group];
 
-            if (radio.value === 'custom') {
-                if (radio.checked) {
-                    formEls.basicIncome.disabled = false;
-                } else {
-                    formEls.basicIncome.disabled = true;
+                if (group === 'basicIncomeType' && radio.value === 'custom') {
+                    if (radio.checked) {
+                        formEls.basicIncome.disabled = false;
+                    } else {
+                        formEls.basicIncome.disabled = true;
+                    }
                 }
             }
-        }
+        })
 
         // Check boxes, cutsTaxes calculation
         var checkboxes = {
@@ -359,44 +374,83 @@ function basicIncomeInit() {
             cutsTaxesOnePercent: 157,
             cutsTaxesCustom: state.cutsTaxesCustomValue,
         };
-        state.cutsTaxes = 0;
+        if (formEls.cutsTaxes) {
+            state.cutsTaxes = 0;
+        }
         Object.keys(checkboxes).forEach(function (checkbox) {
+            if (!formEls[checkbox]) {
+                return;
+            }
+
             formEls[checkbox].checked = state[checkbox];
             if (formEls[checkbox].checked) {
                 state.cutsTaxes += checkboxes[checkbox];
             }
         });
 
-        formEls.cutsTaxes.value = state.cutsTaxes;
-
-        if (state.cutsTaxesCustomValue === 0) {
-            formEls.cutsTaxesCustomValue.value = '';
+        if (formEls.cutsTaxes) {
+            formEls.cutsTaxes.value = state.cutsTaxes;
         }
-        if (formEls.cutsTaxesCustom.checked) {
-            formEls.cutsTaxesCustomValue.disabled = false;
-        } else {
-            formEls.cutsTaxesCustomValue.disabled = true;
+
+        if (formEls.cutsTaxesCustomValue) {
+            if (state.cutsTaxesCustomValue === 0) {
+                formEls.cutsTaxesCustomValue.value = '';
+            }
+            if (formEls.cutsTaxesCustom.checked) {
+                formEls.cutsTaxesCustomValue.disabled = false;
+            } else {
+                formEls.cutsTaxesCustomValue.disabled = true;
+            }
+        }
+
+        // Review slide
+        if (reviewEls.reviewBasicIncome) {
+            reviewEls.reviewBasicIncome.innerHTML = state.basicIncome;
+        }
+        if (reviewEls.reviewUbiOrNit) {
+            reviewEls.reviewUbiOrNit.innerHTML = state.ubiOrNit.toUpperCase();
+        }
+        if (reviewEls.reviewCutsTaxes) {
+            reviewEls.reviewCutsTaxes.innerHTML = state.cutsTaxes;
+        }
+        if (reviewEls.reviewGdpRangeMin) {
+            reviewEls.reviewGdpRangeMin.innerHTML = state.gdpRangeMin;
+        }
+        if (reviewEls.reviewGdpRangeMax) {
+            reviewEls.reviewGdpRangeMax.innerHTML = state.gdpRangeMax;
         }
     }
 
     function form2state(state, formEls) {
+        state.regionName = escape(formEls.regionName.value);
+        console.log(state.regionName);
+
         // Integer inputs
-        var input = ['basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['numAdults', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (!isNaN(parseInt(formEls[input].value, 10))) {
                 state[input] = parseInt(formEls[input].value, 10);
             }
         });
 
-        state.ubiOrNit = formEls.ubiOrNit.value === 'ubi' ? 'ubi' : 'nit'
+        // Float inputs
+        input = ['taxAsPercentGdp', 'gdp', 'minimumWage'];
+        input.forEach(function (input) {
+            if (!isNaN(parseFloat(formEls[input].value))) {
+                state[input] = parseFloat(formEls[input].value);
+            }
+        });
 
         // Radio buttons
-        for (var i = 0; i < formEls.basicIncomeType.length; i++) {
-            var radio = formEls.basicIncomeType[i];
-            if (radio.checked) {
-                state.basicIncomeType = radio.value;
+        var groups = ['basicIncomeType', 'ubiOrNit'];
+        groups.forEach(function (group) {
+            for (var i = 0; i < formEls[group].length; i++) {
+                var radio = formEls[group][i];
+                if (radio.checked) {
+                    state[group] = radio.value;
+                }
             }
-        }
+        });
         if (state.basicIncomeType === '10k') {
             state.basicIncome = 10000;
         } else if (state.basicIncomeType === 'minimumWage') {
@@ -421,8 +475,40 @@ function basicIncomeInit() {
             state.gdpRangeMax = state.gdpRangeMin + 1;
         }
 
+
+console.log('UPDATE STATE form2state');
         // Sync
-        state2form(state, formEls);
+        state2form(state, formEls, reviewEls);
+    }
+
+    function state2hash(state) {
+        var sortedKeys = Object.keys(state).sort();
+
+        var values = sortedKeys.map(function (key) {
+            return state[key];
+        });
+
+        var hash = JSON.stringify(values);
+
+        return hash;
+    }
+    function hash2state(hash) {
+        var sortedKeys = Object.keys(defaultState).sort();
+
+        var values = JSON.parse(hash);
+
+console.log(defaultState, sortedKeys, values);
+        if (sortedKeys.length !== values.length) {
+            console.log('Hash has wrong number of values');
+        }
+
+console.log('UPDATE STATE hash2state');
+        var localState = {};
+        sortedKeys.forEach(function (key, i) {
+            localState[key] = values[i];
+        });
+
+        return localState;
     }
 
     // Because JavaScript's ecosystem is a wasteland, I wrote some helper functions for generating the random numbers used in the models
@@ -452,13 +538,45 @@ function basicIncomeInit() {
         var count = Math.round(gaussRand(N * p, Math.sqrt(N * p * (1 - p))));
         return count > 0 ? count : 0;
     }
+
+    // From underscore.js
+    // List of HTML entities for escaping.
+    var escapeMap = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '`': '&#x60;'
+    };
+
+    // Functions for escaping and unescaping strings to/from HTML interpolation.
+    var createEscaper = function(map) {
+      var escaper = function(match) {
+        return map[match];
+      };
+      // Regexes for identifying a key that needs to be escaped
+      var source = '(?:' + Object.keys(map).join('|') + ')';
+      var testRegexp = RegExp(source);
+      var replaceRegexp = RegExp(source, 'g');
+      return function(string) {
+        string = string == null ? '' : '' + string;
+        return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
+      };
+    };
+    var escape = createEscaper(escapeMap);
 }
 
 (function() {
     var setIntervalId = setInterval(function() {
         if (window.jQuery) {
-            basicIncomeInit();
-            clearInterval(setIntervalId);
+            try {
+                basicIncomeInit();
+            } catch (e) {
+                throw e;
+            } finally {
+                clearInterval(setIntervalId);
+            }
         }
     }, 100);
 }());

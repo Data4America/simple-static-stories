@@ -1,0 +1,24 @@
+{
+  "name": "Benjamin Wellington",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Open Data Story Teller @IQuantNY. Teach @PrattInstitute.  Contributor @NewYorker. Analyst @twosigma.  Ph.D. in NLP from NYU.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/iquantny"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/benjaminwellington"
+    },
+    {
+      "type": "www",
+      "url": "http://iquant.nyc"
+    }
+  ],
+  "id": "benjamin-wellington"
+}
