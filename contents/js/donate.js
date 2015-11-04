@@ -214,7 +214,7 @@
     '   </tr>' +
     '   <tr>' +
     '     <td style="padding-bottom:0;">' +
-    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America, Inc. is a California nonprofit corporation days away from finalizing its fiscal sponsorship with a local Silicon Valley 501(c)(3) organization. A donation to Data4America will be 100% tax deductible through this fiscal sponsorship. You will receive a tax deductible receipt within 30 days of your donation. <a href="https://www.councilofnonprofits.org/tools-resources/fiscal-sponsorship-nonprofits" target="_blank">Learn more</a> about fiscal sponsorships.</p>' +
+    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America, Inc. is a California nonprofit corporation with a 501(c)(3) fiscal sponsorship from the Silicon Valley Community Foundation. A donation to Data4America is 100% tax deductible through this SVCF fiscal sponsorship.  Your tax deductible receipt will be sent in the next 30 days. Learn about SVCF: <a href="http://www.siliconvalleycf.org/" target="_blank">http://www.siliconvalleycf.org/</a>.</p>' +
     '     </td>' +
     '   </tr>' +
     ' </table>' +
@@ -369,7 +369,7 @@
     '   San Francisco, CA 94123<br />' +
     '   EIN: 47-4629656</p>' +
     '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
-    '   <p style="color:#777; font-size:0.8em;">Data4America, Inc. is a California nonprofit corporation days away from finalizing its fiscal sponsorship with a local Silicon Valley 501(c)(3) organization. A donation to Data4America will be 100% tax deductible through this fiscal sponsorship. You will receive a tax deductible receipt within 30 days of your donation. <a href="https://www.councilofnonprofits.org/tools-resources/fiscal-sponsorship-nonprofits" target="_blank">Learn more</a> about fiscal sponsorships.</p>' +
+    '   <p style="color:#777; font-size:0.8em;">Data4America, Inc. is a California nonprofit corporation with a 501(c)(3) fiscal sponsorship from the Silicon Valley Community Foundation. A donation to Data4America is 100% tax deductible through this SVCF fiscal sponsorship.  Your tax deductible receipt will be sent in the next 30 days. Learn about SVCF: <a href="http://www.siliconvalleycf.org/" target="_blank">http://www.siliconvalleycf.org/</a>.</p>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
     '   </p>' +
@@ -524,15 +524,15 @@
 
     var sponsorOptions = [
       { name: 'Criminal Justice', options: [ 'Drug policy', 'Death penalty', 'Gun control', 'Background checks for gun purchases' ] },
-      { name: 'Culture and Society', options: [ 'Abortion', 'Arts', 'Civil Rights', 'Religious Freedom Act', 'Gay marriage', 'Police voilence and Race', 'Wage and Race', 'Wage and Gender', 'Voting oppertunities by race/gender/class' ] },
-      { name: 'Domestic Policy', options: [ 'Immigration reform', 'Border security', 'Birthright citizenship', 'Temporary amnesty', 'NSA Surveillance', 'Campaign finance', 'Net Neutrality', 'Affirmative action', 'Patriot Act', 'Gerrymandering', 'Confederate flag'] },
-      { name: 'Economic Affairs', options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Accountability', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes'] },
-      { name: 'Education', options: [ 'Elementary education', 'Secondary education', 'Higher education', 'In-State Tuition', 'Common Core', 'Student Loans', 'Skills-based education', 'Technology education' ] },
-      { name: 'Environment', options: [ 'Food policy', 'Air quality', 'Global warming' ] },
-      { name: 'Government Operations', options: [ 'Government spending', 'Term limits for Congress', 'Campaign finance reform', 'Government privatization' ] },
-      { name: 'Health', options: [ 'Health insurance', 'Medicare/Medicade', 'Immigration health', 'Euthanasia', 'Mandates for birth control', 'Marijuana legalization', 'Patient Protection and Affordable Care Act (Obamacare)' ] },
-      { name: 'Social Welfare', options: [ 'Social Security', 'Welfare', 'Welfare drug tests', 'Basic Income proposal', 'Basic Jobs proposal' ] },
-      { name: 'Foreign Affairs', options: [ 'Military spending', 'Open data', 'Technology', 'War on ISIS', 'Support of Israel', 'Deal with Iran', 'United Nations membership', 'Drone policy', 'NSA Surveillance' ] },
+      { name: 'Culture and Society', options: [ 'Race and Gender', 'Government and Religion', 'Abortion', 'Arts', 'Civil Rights', 'Religious Freedom Act', 'Gay marriage', 'Police voilence and Race', 'Wage and Race', 'Wage and Gender', 'Voting oppertunities by race/gender/class' ] },
+      { name: 'Domestic Policy', options: [ 'Immigration', 'Border security', 'Birthright citizenship', 'Temporary amnesty', 'NSA Surveillance', 'Campaign finance', 'Net Neutrality', 'Affirmative action', 'Patriot Act', 'Gerrymandering', 'Confederate flag'] },
+      { name: 'Economic Affairs', options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Reform', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes'] },
+      { name: 'Education', options: [ 'Education', 'Elementary education', 'Secondary education', 'Higher education', 'In-State Tuition', 'Common Core', 'Student Loans', 'Skills-based education', 'Technology education' ] },
+      { name: 'Environment', options: [ 'Environment', 'Food policy', 'Air quality', 'Global warming' ] },
+      { name: 'Government Operations', options: [ 'Federal spending', 'Term limits for Congress', 'Campaign finance reform', 'Government privatization' ] },
+      { name: 'Health', options: [ 'Health insurance', 'Medicare/Medicade', 'Immigration health', 'Euthanasia', 'Mandates for birth control', 'Drug Legalization', 'Patient Protection and Affordable Care Act (Obamacare)' ] },
+      { name: 'Social Welfare', options: [ 'Entitlement Programs', 'Social Security', 'Welfare', 'Welfare drug tests', 'Basic Income proposal', 'Basic Jobs proposal' ] },
+      { name: 'Foreign Affairs', options: [ 'Foreign Affairs', 'Military', 'Military spending', 'Open data', 'Technology', 'War on ISIS', 'Support of Israel', 'Deal with Iran', 'United Nations membership', 'Drone policy', 'NSA Surveillance' ] },
       { name: 'Other', options: [] },
     ];
 
@@ -979,7 +979,7 @@
       sponsorOptions.forEach(function(item) {
         options += '<optgroup label="' + item.name + '">';
         item.options.forEach(function(option) {
-          options += '<option>' + option + '</option>';
+          options += '<option value="' + option +'">' + option + '</option>';
         });
         options += '<option>Write in your own</option>';
         options += '</optgroup>';
