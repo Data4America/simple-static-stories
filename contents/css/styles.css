@@ -52847,6 +52847,13 @@ body.embed {
 #dfa-policy-issue .ui.horizontal.list {
   margin: 0;
 }
+#dfa-policy-issue .ui.horizontal.list .ui.avatar.image {
+  width: 4em;
+  height: 4em;
+}
+#dfa-policy-issue .ui.horizontal.list .item a {
+  font-size: 0.8em;
+}
 #dfa-policy-issue .ui.horizontal.list > .item > img.image + .content {
   padding-left: 0.1em;
 }
