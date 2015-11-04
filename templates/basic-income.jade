@@ -30,7 +30,7 @@ block content
             img(src="/basic-income/thumbnail-256.png")
           div.content
             h1.ui.header Modeling basic income - does it add up?
-            p Create your basic income model for any geography.
+            p Create your basic income model for any region.
             div.slide-controls(style="text-align: center; margin-top: 2em;")
               div.ui.red.button.huge.next Get Started
 
@@ -84,7 +84,7 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 3
-        |  Your geography details
+        |  Your region details
       div.ui.divider
       div.ui.form
         div.two.fields
@@ -208,24 +208,44 @@ block content
               th Your Selection
           tbody
             tr
-              td Basic Income (per adult)
+              td Region Name
+              td 
+                a.changeStep(href="javascript:;",data-step="4")
+                  #[span#reviewRegionName]
+            tr
+              td Number of adults
               td 
                 a.changeStep(href="javascript:;",data-step="5")
+                  #[span#reviewNumAdults]
+            tr
+              td GDP
+              td 
+                a.changeStep(href="javascript:;",data-step="5")
+                  $#[span#reviewGdp]T
+            tr
+              td Tax revenue (fraction of GDP)
+              td 
+                a.changeStep(href="javascript:;",data-step="5")
+                  #[span#reviewTaxAsPercentGdp]
+            tr
+              td Basic Income (per adult)
+              td 
+                a.changeStep(href="javascript:;",data-step="6")
                   $#[span#reviewBasicIncome]/year
             tr
               td UBI or NIT?
               td
-                a.changeStep(href="javascript:;",data-step="6")
+                a.changeStep(href="javascript:;",data-step="7")
                   span#reviewUbiOrNit
             tr
               td Cuts and tax increases
               td
-                a.changeStep(href="javascript:;",data-step="7")
+                a.changeStep(href="javascript:;",data-step="8")
                   $#[span#reviewCutsTaxes]B
             tr
               td GDP Change
               td
-                a.changeStep(href="javascript:;",data-step="8") #[span#reviewGdpRangeMin]% to #[span#reviewGdpRangeMax]%
+                a.changeStep(href="javascript:;",data-step="9") #[span#reviewGdpRangeMin]% to #[span#reviewGdpRangeMax]%
         div.field.right.slide-controls
           div.ui.white.button.prev.huge Back
           div.ui.red.button.next.huge Generate

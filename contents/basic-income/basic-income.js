@@ -121,6 +121,10 @@ function basicIncomeInit() {
     };
 
     var textEls = {
+        reviewRegionName: document.getElementById('reviewRegionName'),
+        reviewNumAdults: document.getElementById('reviewNumAdults'),
+        reviewGdp: document.getElementById('reviewGdp'),
+        reviewTaxAsPercentGdp: document.getElementById('reviewTaxAsPercentGdp'),
         reviewBasicIncome: document.getElementById('reviewBasicIncome'),
         reviewUbiOrNit: document.getElementById('reviewUbiOrNit'),
         reviewCutsTaxes: document.getElementById('reviewCutsTaxes'),
@@ -415,6 +419,18 @@ function basicIncomeInit() {
 
 
         // Review slide, other text content
+        if (textEls.reviewRegionName) {
+            textEls.reviewRegionName.innerHTML = state.regionName[0];
+        }
+        if (textEls.reviewNumAdults) {
+            textEls.reviewNumAdults.innerHTML = state.numAdults[0];
+        }
+        if (textEls.reviewGdp) {
+            textEls.reviewGdp.innerHTML = state.gdp[0];
+        }
+        if (textEls.reviewTaxAsPercentGdp) {
+            textEls.reviewTaxAsPercentGdp.innerHTML = state.taxAsPercentGdp[0];
+        }
         if (textEls.reviewBasicIncome) {
             textEls.reviewBasicIncome.innerHTML = state.basicIncome;
         }
