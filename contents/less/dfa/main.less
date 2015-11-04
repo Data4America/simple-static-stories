@@ -802,6 +802,20 @@ body.embed {
 
 #dfa-policy-issue {
 
+  h1.ui.header {
+    font-size:2.3em;
+  }
+
+  h2.ui.header {
+
+    font-family: 'Trasandina';
+    font-size:2em;
+
+    .blue { color: @blue; }
+
+    .red { color: @red; }
+  }
+
   .ui.statistics {
     .statistic {
       margin-bottom: 0;
@@ -816,6 +830,10 @@ body.embed {
     }
   }
 
+  .ui.horizontal.list {
+    margin: 0.5em 0;
+  }
+
   .note {
     font-size: 0.8em;
     line-height: 1.4em;
@@ -823,5 +841,14 @@ body.embed {
     margin: 1em 0 0;
   }
 
+  .list .item a {
+    word-wrap: break-word;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .statistic.geo {
+      margin-top: 1em;
+    }
+  }
 }
 

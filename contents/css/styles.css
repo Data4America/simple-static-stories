@@ -52822,6 +52822,19 @@ body.embed {
 #dfa-data-page .ui.ordered.list > .item:before {
   margin-left: -2em;
 }
+#dfa-policy-issue h1.ui.header {
+  font-size: 2.3em;
+}
+#dfa-policy-issue h2.ui.header {
+  font-family: 'Trasandina';
+  font-size: 2em;
+}
+#dfa-policy-issue h2.ui.header .blue {
+  color: #2185D0;
+}
+#dfa-policy-issue h2.ui.header .red {
+  color: #CC0505;
+}
 #dfa-policy-issue .ui.statistics .statistic {
   margin-bottom: 0;
 }
@@ -52831,9 +52844,20 @@ body.embed {
 #dfa-policy-issue .ui.statistics .label {
   text-align: left;
 }
+#dfa-policy-issue .ui.horizontal.list {
+  margin: 0.5em 0;
+}
 #dfa-policy-issue .note {
   font-size: 0.8em;
   line-height: 1.4em;
   color: #767676;
   margin: 1em 0 0;
+}
+#dfa-policy-issue .list .item a {
+  word-wrap: break-word;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-policy-issue .statistic.geo {
+    margin-top: 1em;
+  }
 }
