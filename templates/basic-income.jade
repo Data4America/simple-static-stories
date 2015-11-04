@@ -73,10 +73,10 @@ block content
         div.field
           label Name of region or country
           div.ui.huge.input
-            input#regionName(placeholder="Write in",type="text")
+            input#regionName(type="text")
         div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
           label What is its Wikipedia URL?
-          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
+          input#regionNameSource(type="text", placeholder="Source URL")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -91,19 +91,18 @@ block content
           div.field
             label Number of adults
             input#numAdults(type="text")
+            input#numAdultsSource(type="text", placeholder="Source URL")
         div.two.fields
           div.field
             label GDP (trillions)
             div.ui.left.labeled.input
               div.ui.label $
               input#gdp(type="text")
+            input#gdpSource(type="text", placeholder="Source URL")
           div.field
             label Tax revenue (fraction of GDP)
             input#taxAsPercentGdp(type="text")
-        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
-          label Source URL
-          div.ui.huge.input
-            input(placeholder="Copy and paste the URL for this information",type="text")
+            input#taxAsPercentGdpSource(type="text", placeholder="Source URL")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next

@@ -11,10 +11,10 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
-        regionName: 'USA',
-        numAdults: 227e6, // In the 2010 census, there were 227 million adults.
-        taxAsPercentGdp: 0.243, // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
-        gdp: 18, // Trillions of dollars
+        regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
+        numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
+        taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
+        gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
@@ -60,10 +60,10 @@ function basicIncomeInit() {
         var amounts = {};
 
         var factor = state.ubiOrNit === 'ubi' ? 1 : 0.5;
-        amounts.directCosts = factor * state.numAdults * state.basicIncome / 1e12;
+        amounts.directCosts = factor * state.numAdults[0] * state.basicIncome / 1e12;
         amounts.directSavings = -cutsTaxesTotal(state.cutsTaxes) / 1000;
 
-        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * state.taxAsPercentGdp * state.gdp;
+        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * state.taxAsPercentGdp[0] * state.gdp[0];
 
         return amounts;
     }
@@ -87,7 +87,7 @@ function basicIncomeInit() {
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * state.taxAsPercentGdp * state.gdp;
+        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * state.taxAsPercentGdp[0] * state.gdp[0];
 
         // This will generate and display charts based on the generated results - see the next section for details
         render();
@@ -104,9 +104,13 @@ function basicIncomeInit() {
     // Initialize UI
     var formEls = {
         regionName: document.getElementById('regionName'),
+        regionNameSource: document.getElementById('regionNameSource'),
         numAdults: document.getElementById('numAdults'),
+        numAdultsSource: document.getElementById('numAdultsSource'),
         taxAsPercentGdp: document.getElementById('taxAsPercentGdp'),
+        taxAsPercentGdpSource: document.getElementById('taxAsPercentGdpSource'),
         gdp: document.getElementById('gdp'),
+        gdpSource: document.getElementById('gdpSource'),
         basicIncome: document.getElementById('basicIncome'),
         basicIncomeType: document.getElementsByName('basicIncomeType'),
         ubiOrNit: document.getElementsByName('ubiOrNit'),
@@ -358,10 +362,21 @@ function basicIncomeInit() {
 
     function state2form(state, formEls, textEls) {
         // Normal inputs
-        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp', 'basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (formEls[input]) {
                 formEls[input].value = state[input];
+            }
+        });
+
+        // Sourced inputs
+        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp'];
+        input.forEach(function (input) {
+            if (formEls[input]) {
+                formEls[input].value = state[input][0];
+            }
+            if (formEls[input + 'Source']) {
+                formEls[input + 'Source'].value = state[input][1];
             }
         });
 
@@ -416,29 +431,42 @@ function basicIncomeInit() {
             textEls.reviewGdpRangeMax.innerHTML = state.gdpRangeMax;
         }
         if (textEls.regionNameTextEnd) {
-            textEls.regionNameTextEnd.innerHTML = state.regionName;
+            textEls.regionNameTextEnd.innerHTML = state.regionName[0];
         }
     }
 
     function form2state(state, formEls) {
-console.log('form2state');
-        state.regionName = escape(formEls.regionName.value);
-        console.log(state.regionName);
+        // Sourced text inputs
+        state.regionName[0] = escape(formEls.regionName.value);
 
         // Integer inputs
-        var input = ['numAdults', 'basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (!isNaN(parseInt(formEls[input].value, 10))) {
                 state[input] = parseInt(formEls[input].value, 10);
             }
         });
 
-        // Float inputs
+        // Sourced integer inputs
+        input = ['numAdults'];
+        input.forEach(function (input) {
+            if (!isNaN(parseInt(formEls[input].value, 10))) {
+                state[input][0] = parseInt(formEls[input].value, 10);
+            }
+        });
+
+        // Sourced float inputs
         input = ['taxAsPercentGdp', 'gdp'];
         input.forEach(function (input) {
             if (!isNaN(parseFloat(formEls[input].value))) {
-                state[input] = parseFloat(formEls[input].value);
+                state[input][0] = parseFloat(formEls[input].value);
             }
+        });
+
+        // Sources
+        input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp'];
+        input.forEach(function (input) {
+            state[input][1] = escape(formEls[input + 'Source'].value);
         });
 
         // Radio buttons
@@ -470,7 +498,7 @@ console.log('form2state');
         var amounts = document.getElementsByName('cutsTaxesAmount');
         var sources = document.getElementsByName('cutsTaxesSource');
         state.cutsTaxes = Array.prototype.map.call(names, function (name, i) {
-            return [name.value, amounts[i].value, sources[i].value];
+            return [escape(name.value), escape(amounts[i].value), escape(sources[i].value)];
         });
 
         // Sync
