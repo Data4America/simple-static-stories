@@ -19,12 +19,12 @@ function basicIncomeInit() {
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
         cutsTaxes: [
-            ['Eliminate redundant welfare', 375, 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-            ['Eliminate tax loopholes', 740, 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-            ['Cut defense spending in half', 300, 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Eliminate Social Security', 695, 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Eliminate Medicaid', 290, 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Raises taxes on top 1% to 40%', 157, 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
+            ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+            ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+            ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+            ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+            ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+            ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
         ],
         gdpRangeMin: -5,
         gdpRangeMax: 15
@@ -47,7 +47,11 @@ function basicIncomeInit() {
 
     function cutsTaxesTotal(cutsTaxes) {
         return cutsTaxes.reduce(function (total, cutTax) {
-            return total + cutTax[1];
+            var parsed = parseInt(cutTax[1], 10);
+            if (isNaN(parsed)) {
+                return total;
+            }
+            return total + parsed;
         }, 0);
     }
 
@@ -122,7 +126,7 @@ function basicIncomeInit() {
     };
 
     state2form(state, formEls, textEls);
-    $("#customize-form :input").change(function() {
+    $("#customize-form").on('change', 'input', function() {
         if (!updating) {
             updating = true;
             form2state(state, formEls);
@@ -333,7 +337,7 @@ function basicIncomeInit() {
     function cutsTaxesRow(entry) {
         entry = entry !== undefined ? entry : ['', '', ''];
 
-        if (entry[1] === 0) { entry[1] = ''; } // So placeholder text shows
+//        if (entry[1] === '0') { entry[1] = ''; } // So placeholder text shows
 
         return '<div class="four fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div><div class="field"><a>Remove</a></div></div>';
     }
@@ -341,7 +345,7 @@ function basicIncomeInit() {
     function addCutsTaxesRowToState() {
         console.log('addCutsTaxesRowToState');
 
-        state.cutsTaxes.push(['', 0, '']);
+        state.cutsTaxes.push(['', '', '']);
 
         state2form(state, formEls, textEls);
     }
@@ -408,6 +412,7 @@ function basicIncomeInit() {
     }
 
     function form2state(state, formEls) {
+console.log('form2state');
         state.regionName = escape(formEls.regionName.value);
         console.log(state.regionName);
 
@@ -451,8 +456,14 @@ function basicIncomeInit() {
             state.gdpRangeMax = state.gdpRangeMin + 1;
         }
 
+        // cutsTaxes
+        var names = document.getElementsByName('cutsTaxesName');
+        var amounts = document.getElementsByName('cutsTaxesAmount');
+        var sources = document.getElementsByName('cutsTaxesSource');
+        state.cutsTaxes = Array.prototype.map.call(names, function (name, i) {
+            return [name.value, amounts[i].value, sources[i].value];
+        });
 
-console.log('UPDATE STATE form2state');
         // Sync
         state2form(state, formEls, textEls);
     }
