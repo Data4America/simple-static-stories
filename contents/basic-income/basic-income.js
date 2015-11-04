@@ -149,6 +149,10 @@ function basicIncomeInit() {
         run(state);
     });
 
+    $('.ubi-popup').popup({
+        on: 'click'
+    });
+
     run(state);
 
     // ## Display results
@@ -417,7 +421,6 @@ function basicIncomeInit() {
             });
         }
 
-
         // Review slide, other text content
         if (textEls.reviewRegionName) {
             textEls.reviewRegionName.innerHTML = state.regionName[0];
@@ -537,12 +540,10 @@ function basicIncomeInit() {
 
         var values = JSON.parse(hash);
 
-console.log(defaultState, sortedKeys, values);
         if (sortedKeys.length !== values.length) {
             console.log('Hash has wrong number of values');
         }
 
-console.log('UPDATE STATE hash2state');
         var localState = {};
         sortedKeys.forEach(function (key, i) {
             localState[key] = values[i];
