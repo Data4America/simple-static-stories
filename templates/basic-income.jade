@@ -91,11 +91,6 @@ block content
           div.field
             label Number of adults
             input#numAdults(type="text")
-          div.field
-            label Minimum wage (per hour)
-            div.ui.left.labeled.input
-              div.ui.label $
-              input#minimumWage(type="text")
         div.two.fields
           div.field
             label GDP (trillions)
@@ -131,7 +126,7 @@ block content
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="minimumWage", tabindex="0",class="hidden")
-              label Full time minimum wage ($14,500/year)
+              label Full time US minimum wage ($14,500/year)
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="20k", tabindex="0",class="hidden")

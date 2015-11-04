@@ -15,7 +15,6 @@ function basicIncomeInit() {
         numAdults: 227e6, // In the 2010 census, there were 227 million adults.
         taxAsPercentGdp: 0.243, // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
         gdp: 18, // Trillions of dollars
-        minimumWage: 7.25, // Dollars/hr
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
@@ -100,7 +99,6 @@ console.log(state.cutsTaxes);
         numAdults: document.getElementById('numAdults'),
         taxAsPercentGdp: document.getElementById('taxAsPercentGdp'),
         gdp: document.getElementById('gdp'),
-        minimumWage: document.getElementById('minimumWage'),
         basicIncome: document.getElementById('basicIncome'),
         basicIncomeType: document.getElementsByName('basicIncomeType'),
         ubiOrNit: document.getElementsByName('ubiOrNit'),
@@ -340,7 +338,7 @@ console.log(state.cutsTaxes);
 
     function state2form(state, formEls, reviewEls) {
         // Normal inputs
-        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp', 'minimumWage', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (formEls[input]) {
                 formEls[input].value = state[input];
@@ -434,7 +432,7 @@ console.log(state.cutsTaxes);
         });
 
         // Float inputs
-        input = ['taxAsPercentGdp', 'gdp', 'minimumWage'];
+        input = ['taxAsPercentGdp', 'gdp'];
         input.forEach(function (input) {
             if (!isNaN(parseFloat(formEls[input].value))) {
                 state[input] = parseFloat(formEls[input].value);
