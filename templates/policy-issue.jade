@@ -8,10 +8,7 @@ block content
     div.ui.segment
       h1.ui.header.center.aligned Policy Issue
       div.ui.divider
-      h2.ui.header.center.aligned Issue: 
-        span.blue Sex Work
-        |  in 
-        span.red United States 
+      h2.ui.header.center.aligned Issue: Legalize Sex Work in the United States
       div.ui.statistics(style="display:none;")
         div.red.statistic
           div.label Level
@@ -21,11 +18,19 @@ block content
           div.value United States
     div.ui.segment
       h3.ui.header Sponsored By:
-      div.ui.horizontal.list.huge
+      div.ui.horizontal.list.massive
         div.item
           img.ui.avatar.image(src="/img/cyan.jpg")
           div.content
             div.header Cyan Banister
+            a(href="https://twitter.com/cyantist", target="_blank")
+              i.ui.icon.twitter(style="color:#0084B4;")
+            a(href="https://www.linkedin.com/in/cyanb", target="_blank")
+              i.ui.icon.linkedin(style="color:#0077B5;")
+        div.item
+          img.ui.avatar.image(src="/authors/chris-mccoy.jpg")
+          div.content
+            div.header Chris McCoy
             a(href="https://twitter.com/cyantist", target="_blank")
               i.ui.icon.twitter(style="color:#0084B4;")
             a(href="https://www.linkedin.com/in/cyanb", target="_blank")
@@ -38,10 +43,10 @@ block content
         |  Editorial Board approves.
     div.ui.segment
       h3.ui.header About Sex Work:
-      p Policy calls for the United States to not to criminally penalize any person -- adult or minor -- for selling his or her own sexual services. Additionally, the U.S. should not criminally penalize those who purchase sexual services from adults. 
+      p This Sex Work policy calls for the United States to not to criminally penalize any person--adult or minor--for selling his or her own sexual services. Additionally, the U.S. should not criminally penalize those who purchase sexual services from adults.
     div.ui.segment
-      h3.ui.header Recommended Sources:
-      div.ui.list
+      h3.ui.header Additional Reading:
+      div.ui.bulleted.list
         div.item
           a(href="http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/") http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/
         div.item
@@ -52,21 +57,27 @@ block content
           a(href="https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/") https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/
         div.item
           a(href="http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6") http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6
-      div.ui.divider
-      div(style="text-align:center; margin-top:0.5em;")
-        a.ui.blue.button.large(href="/policy/submitasource", target="_blank") Submit A New Source
+      div(style="margin-top:0.5em;")
+        a.ui.blue.button.large(href="/policy/submitasource", target="_blank") Submit a New Source
     div.ui.segment
       h3.ui.header Recommended Datasets:
-      div(style="text-align:center; margin-top:0.5em;")
-        a.ui.blue.button.large(href="/policy/submitdata", target="_blank") Submit A New Dataset
-    div.ui.segment
+      div.ui.warning.message
+        i.icon.warning.circle
+        | No datasets exist
+      div(style="margin-top:0.5em;")
+        a.ui.blue.button.large(href="/policy/submitdata", target="_blank") Submit a New Dataset
+    div.ui.segment.reward
       h3.ui.header Reward for Being Published:
-      h1.ui.header.teal $2,500
+      div.ui.bulleted.list.large
+        div.item $2,500
+        div.item  Invited to our content creator’s social network
     div.ui.segment
       h3.ui.header Published Stories:
-      p None yet!
+      div.ui.warning.message
+        i.icon.warning.circle
+        | No stories have been published by our Editorial Board yet
     div.ui.segment.center.aligned
-      a.ui.red.button.huge(href="/upload", target="_blank") Submit A Story
+      a.ui.red.button.huge(href="/upload", target="_blank") Submit a Story
 
   div.ui.basic.segment.dfa-share
     div.ui.equal.width.grid.stackable

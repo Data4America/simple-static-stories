@@ -7,7 +7,11 @@ block content
   div#dfa-data-page.ui.segments
     div.ui.segment.center.aligned
       h1.ui.header Open Data Sets
-      p(style="font-weight:400;") Our team has curated more than 220 government-sector open data sets and organized into a single directory.
+      p(style="font-weight:400;") Our team has curated more than 200 open and structured data sets, then organized them into a single directory for your storytelling on 
+        span.d4a Data
+          span.f(style="color:#CC0001; font-weight:bold;") 4
+          | America
+        | .
     div.ui.segment
       p Each day we're publishing a new Dataset of the Day and sharing on social media.
       p Here's why we believe in open data repositories:
@@ -20,5 +24,20 @@ block content
     div.ui.segment
       iframe(src="https://docs.google.com/spreadsheets/d/1dDBFrFhA9HwNeBduP9oXcpYOA1Q7zwMK7LAg3_6pmhg/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false", width="100%", height="575", frameborder="0", marginheight="0", marginwidth="0")
     div.ui.segment.center.aligned
-      a.ui.red.button.huge(href="/data/submit", target="_blank") Submit A New Dataset
+      a.ui.red.button.huge(href="/data/submit", target="_blank") Submit a New Dataset
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
 

@@ -831,7 +831,39 @@ body.embed {
   }
 
   .ui.horizontal.list {
-    margin: 0.5em 0;
+    margin: 0;
+  }
+
+  .ui.horizontal.list > .item > img.image + .content {
+    padding-left: 0.1em;
+  }
+
+  .ui.bulleted.list {
+
+    .item {
+      word-wrap: break-word;
+      font-size: 1em;
+      line-height: 1.6em;
+    }
+  }
+
+  .reward .grid {
+    position: relative;
+  }
+
+  .reward .column {
+    text-align: center;
+  }
+
+  .reward .ui.statistic .value {
+    font-size: 1.8em;
+    font-weight: bolder;
+    margin-bottom: 0.3em;
+  }
+
+  .reward .ui.statistic .label {
+    font-size: 0.8em;
+    font-weight: normal;
   }
 
   .note {
@@ -839,10 +871,6 @@ body.embed {
     line-height: 1.4em;
     color: @grey;
     margin: 1em 0 0;
-  }
-
-  .list .item a {
-    word-wrap: break-word;
   }
 
   @media only screen and (max-width: @largestMobileScreen) {

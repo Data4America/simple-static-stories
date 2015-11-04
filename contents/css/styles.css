@@ -52845,16 +52845,36 @@ body.embed {
   text-align: left;
 }
 #dfa-policy-issue .ui.horizontal.list {
-  margin: 0.5em 0;
+  margin: 0;
+}
+#dfa-policy-issue .ui.horizontal.list > .item > img.image + .content {
+  padding-left: 0.1em;
+}
+#dfa-policy-issue .ui.bulleted.list .item {
+  word-wrap: break-word;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+#dfa-policy-issue .reward .grid {
+  position: relative;
+}
+#dfa-policy-issue .reward .column {
+  text-align: center;
+}
+#dfa-policy-issue .reward .ui.statistic .value {
+  font-size: 1.8em;
+  font-weight: bolder;
+  margin-bottom: 0.3em;
+}
+#dfa-policy-issue .reward .ui.statistic .label {
+  font-size: 0.8em;
+  font-weight: normal;
 }
 #dfa-policy-issue .note {
   font-size: 0.8em;
   line-height: 1.4em;
   color: #767676;
   margin: 1em 0 0;
-}
-#dfa-policy-issue .list .item a {
-  word-wrap: break-word;
 }
 @media only screen and (max-width: 767px) {
   #dfa-policy-issue .statistic.geo {
