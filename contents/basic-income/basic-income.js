@@ -334,18 +334,24 @@ function basicIncomeInit() {
             .replace(/>/g, '&gt;');
     }
 
-    function cutsTaxesRow(entry) {
+    function cutsTaxesRow(entry, i) {
         entry = entry !== undefined ? entry : ['', '', ''];
 
-//        if (entry[1] === '0') { entry[1] = ''; } // So placeholder text shows
-
-        return '<div class="four fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div><div class="field"><a>Remove</a></div></div>';
+        return '<div class="four fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div><div class="field"><a class="cutsTaxesRemove" data-i="' + i + '">Remove</a></div></div>';
     }
 
-    function addCutsTaxesRowToState() {
-        console.log('addCutsTaxesRowToState');
-
+    function addCutsTaxesRow() {
         state.cutsTaxes.push(['', '', '']);
+
+        state2form(state, formEls, textEls);
+    }
+
+    function removeCutsTaxesRow(e) {
+        var i = parseInt(e.target.dataset.i);
+
+        if (!isNaN(i)) {
+            state.cutsTaxes.splice(i, 1);
+        }
 
         state2form(state, formEls, textEls);
     }
@@ -382,11 +388,14 @@ function basicIncomeInit() {
         }
         if (formEls.cutsTaxesEntries) {
             formEls.cutsTaxesEntries.innerHTML = '';
-            state.cutsTaxes.forEach(function (entry) {
-                formEls.cutsTaxesEntries.innerHTML += cutsTaxesRow(entry);
+            state.cutsTaxes.forEach(function (entry, i) {
+                formEls.cutsTaxesEntries.innerHTML += cutsTaxesRow(entry, i);
             });
             formEls.cutsTaxesEntries.innerHTML += '<a id="cutsTaxesAdd">Add entry</a>';
-            document.getElementById('cutsTaxesAdd').addEventListener('click', addCutsTaxesRowToState);
+            document.getElementById('cutsTaxesAdd').addEventListener('click', addCutsTaxesRow);
+            Array.prototype.forEach.call(document.getElementsByClassName('cutsTaxesRemove'), function (removeEl) {
+                removeEl.addEventListener('click', removeCutsTaxesRow);
+            });
         }
 
 
