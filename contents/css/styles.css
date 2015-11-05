@@ -52786,3 +52786,14 @@ body.embed {
 #dfa-menu-floating .item.donate {
   background: #CC0505 !important;
 }
+#dfa-data-page .ui.list {
+  margin-left: 3em;
+}
+#dfa-data-page .ui.list .item {
+  font-size: 1.2em;
+  font-weight: 200;
+  line-height: 1.6em;
+}
+#dfa-data-page .ui.ordered.list > .item:before {
+  margin-left: -2em;
+}

@@ -11,23 +11,21 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
-        regionName: 'USA',
-        numAdults: 227e6, // In the 2010 census, there were 227 million adults.
-        taxAsPercentGdp: 0.243, // http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95
-        gdp: 18, // Trillions of dollars
-        minimumWage: 7.25, // Dollars/hr
+        regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
+        numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
+        taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
+        gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
-        cutsTaxes: 0,
-        cutsTaxesWelfare: true,
-        cutsTaxesLoopholes: false,
-        cutsTaxesDefense: true,
-        cutsTaxesSocialSecurity: false,
-        cutsTaxesMedicaid: false,
-        cutsTaxesOnePercent: true,
-        cutsTaxesCustom: false,
-        cutsTaxesCustomValue: 0,
+        cutsTaxes: [
+            ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+            ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+            ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+            ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+            ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+            ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
+        ],
         gdpRangeMin: -5,
         gdpRangeMax: 15
     };
@@ -37,7 +35,6 @@ function basicIncomeInit() {
     var hash = decodeURIComponent(window.location.hash);
     if (hash) {
         var state = hash2state(hash.slice(1)); // Get rid of # before passing to function
-console.log(state.cutsTaxes);
     } else {
         var state = defaultState;
     }
@@ -48,15 +45,25 @@ console.log(state.cutsTaxes);
     // ---------------------
     // Now, we're going to enumerate all the costs and benefits associated with a basic income.
 
+    function cutsTaxesTotal(cutsTaxes) {
+        return cutsTaxes.reduce(function (total, cutTax) {
+            var parsed = parseInt(cutTax[1], 10);
+            if (isNaN(parsed)) {
+                return total;
+            }
+            return total + parsed;
+        }, 0);
+    }
+
     function basicIncomeCostBenefit(state) {
         // This object will store all the costs and benefits of the basic income as key/value pairs. Values are in trillions. Costs are positives, benefits are negative.
         var amounts = {};
 
         var factor = state.ubiOrNit === 'ubi' ? 1 : 0.5;
-        amounts.directCosts = factor * state.numAdults * state.basicIncome / 1e12;
-        amounts.directSavings = -state.cutsTaxes / 1000;
+        amounts.directCosts = factor * state.numAdults[0] * state.basicIncome / 1e12;
+        amounts.directSavings = -cutsTaxesTotal(state.cutsTaxes) / 1000;
 
-        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * state.taxAsPercentGdp * state.gdp;
+        amounts.economicGrowth = -0.01 * (state.gdpRangeMin + state.gdpRangeMax) / 2 * state.taxAsPercentGdp[0] * state.gdp[0];
 
         return amounts;
     }
@@ -80,7 +87,7 @@ console.log(state.cutsTaxes);
         }, 0);
 
         // Assume the input max and min are 2 standard deviations from the mean
-        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * state.taxAsPercentGdp * state.gdp;
+        biTotalStddev = 0.01 * (state.gdpRangeMax - state.gdpRangeMin) / 4 * state.taxAsPercentGdp[0] * state.gdp[0];
 
         // This will generate and display charts based on the generated results - see the next section for details
         render();
@@ -97,36 +104,37 @@ console.log(state.cutsTaxes);
     // Initialize UI
     var formEls = {
         regionName: document.getElementById('regionName'),
+        regionNameSource: document.getElementById('regionNameSource'),
         numAdults: document.getElementById('numAdults'),
+        numAdultsSource: document.getElementById('numAdultsSource'),
         taxAsPercentGdp: document.getElementById('taxAsPercentGdp'),
+        taxAsPercentGdpSource: document.getElementById('taxAsPercentGdpSource'),
         gdp: document.getElementById('gdp'),
-        minimumWage: document.getElementById('minimumWage'),
+        gdpSource: document.getElementById('gdpSource'),
         basicIncome: document.getElementById('basicIncome'),
         basicIncomeType: document.getElementsByName('basicIncomeType'),
         ubiOrNit: document.getElementsByName('ubiOrNit'),
         cutsTaxes: document.getElementById('cutsTaxes'),
-        cutsTaxesWelfare: document.getElementById('cutsTaxesWelfare'),
-        cutsTaxesLoopholes: document.getElementById('cutsTaxesLoopholes'),
-        cutsTaxesDefense: document.getElementById('cutsTaxesDefense'),
-        cutsTaxesSocialSecurity: document.getElementById('cutsTaxesSocialSecurity'),
-        cutsTaxesMedicaid: document.getElementById('cutsTaxesMedicaid'),
-        cutsTaxesOnePercent: document.getElementById('cutsTaxesOnePercent'),
-        cutsTaxesCustom: document.getElementById('cutsTaxesCustom'),
-        cutsTaxesCustomValue: document.getElementById('cutsTaxesCustomValue'),
+        cutsTaxesEntries: document.getElementById('cutsTaxesEntries'), // cutsTaxesEntries children are dynamic!
         gdpRangeMin: document.getElementById('gdpRangeMin'),
         gdpRangeMax: document.getElementById('gdpRangeMax')
     };
 
-    var reviewEls = {
+    var textEls = {
+        reviewRegionName: document.getElementById('reviewRegionName'),
+        reviewNumAdults: document.getElementById('reviewNumAdults'),
+        reviewGdp: document.getElementById('reviewGdp'),
+        reviewTaxAsPercentGdp: document.getElementById('reviewTaxAsPercentGdp'),
         reviewBasicIncome: document.getElementById('reviewBasicIncome'),
         reviewUbiOrNit: document.getElementById('reviewUbiOrNit'),
         reviewCutsTaxes: document.getElementById('reviewCutsTaxes'),
         reviewGdpRangeMin: document.getElementById('reviewGdpRangeMin'),
-        reviewGdpRangeMax: document.getElementById('reviewGdpRangeMax')
+        reviewGdpRangeMax: document.getElementById('reviewGdpRangeMax'),
+        regionNameTextEnd: document.getElementById('regionNameTextEnd')
     };
 
-    state2form(state, formEls, reviewEls);
-    $("#customize-form :input").change(function() {
+    state2form(state, formEls, textEls);
+    $("#customize-form").on('change', 'input', function() {
         if (!updating) {
             updating = true;
             form2state(state, formEls);
@@ -141,16 +149,16 @@ console.log(state.cutsTaxes);
         run(state);
     });
 
+    $('.ubi-popup').popup({
+        on: 'click'
+    });
+
     run(state);
 
     // ## Display results
     // -----------------
     // Generate and display all charts
     function render() {
-        if (document.getElementById('regionNameTextEnd')) {
-            document.getElementById('regionNameTextEnd').innerHTML = state.regionName;
-        }
-
         bars('biBars', biAmounts);
 
         distribution('biDist', biTotal, biTotalStddev);
@@ -338,12 +346,45 @@ console.log(state.cutsTaxes);
             .replace(/>/g, '&gt;');
     }
 
-    function state2form(state, formEls, reviewEls) {
+    function cutsTaxesRow(entry, i) {
+        entry = entry !== undefined ? entry : ['', '', ''];
+
+        return '<div class="four fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div><div class="field"><a class="cutsTaxesRemove" data-i="' + i + '">Remove</a></div></div>';
+    }
+
+    function addCutsTaxesRow() {
+        state.cutsTaxes.push(['', '', '']);
+
+        state2form(state, formEls, textEls);
+    }
+
+    function removeCutsTaxesRow(e) {
+        var i = parseInt(e.target.dataset.i);
+
+        if (!isNaN(i)) {
+            state.cutsTaxes.splice(i, 1);
+        }
+
+        state2form(state, formEls, textEls);
+    }
+
+    function state2form(state, formEls, textEls) {
         // Normal inputs
-        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp', 'minimumWage', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (formEls[input]) {
                 formEls[input].value = state[input];
+            }
+        });
+
+        // Sourced inputs
+        var input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp'];
+        input.forEach(function (input) {
+            if (formEls[input]) {
+                formEls[input].value = state[input][0];
+            }
+            if (formEls[input + 'Source']) {
+                formEls[input + 'Source'].value = state[input][1];
             }
         });
 
@@ -364,81 +405,87 @@ console.log(state.cutsTaxes);
             }
         })
 
-        // Check boxes, cutsTaxes calculation
-        var checkboxes = {
-            cutsTaxesWelfare: 375,
-            cutsTaxesLoopholes: 740,
-            cutsTaxesDefense: 300,
-            cutsTaxesSocialSecurity: 695,
-            cutsTaxesMedicaid: 290,
-            cutsTaxesOnePercent: 157,
-            cutsTaxesCustom: state.cutsTaxesCustomValue,
-        };
+        // cutsTaxes stuff
         if (formEls.cutsTaxes) {
-            state.cutsTaxes = 0;
+            formEls.cutsTaxes.value = cutsTaxesTotal(state.cutsTaxes);
         }
-        Object.keys(checkboxes).forEach(function (checkbox) {
-            if (!formEls[checkbox]) {
-                return;
-            }
-
-            formEls[checkbox].checked = state[checkbox];
-            if (formEls[checkbox].checked) {
-                state.cutsTaxes += checkboxes[checkbox];
-            }
-        });
-
-        if (formEls.cutsTaxes) {
-            formEls.cutsTaxes.value = state.cutsTaxes;
+        if (formEls.cutsTaxesEntries) {
+            formEls.cutsTaxesEntries.innerHTML = '';
+            state.cutsTaxes.forEach(function (entry, i) {
+                formEls.cutsTaxesEntries.innerHTML += cutsTaxesRow(entry, i);
+            });
+            formEls.cutsTaxesEntries.innerHTML += '<a id="cutsTaxesAdd">Add entry</a>';
+            document.getElementById('cutsTaxesAdd').addEventListener('click', addCutsTaxesRow);
+            Array.prototype.forEach.call(document.getElementsByClassName('cutsTaxesRemove'), function (removeEl) {
+                removeEl.addEventListener('click', removeCutsTaxesRow);
+            });
         }
 
-        if (formEls.cutsTaxesCustomValue) {
-            if (state.cutsTaxesCustomValue === 0) {
-                formEls.cutsTaxesCustomValue.value = '';
-            }
-            if (formEls.cutsTaxesCustom.checked) {
-                formEls.cutsTaxesCustomValue.disabled = false;
-            } else {
-                formEls.cutsTaxesCustomValue.disabled = true;
-            }
+        // Review slide, other text content
+        if (textEls.reviewRegionName) {
+            textEls.reviewRegionName.innerHTML = state.regionName[0];
         }
-
-        // Review slide
-        if (reviewEls.reviewBasicIncome) {
-            reviewEls.reviewBasicIncome.innerHTML = state.basicIncome;
+        if (textEls.reviewNumAdults) {
+            textEls.reviewNumAdults.innerHTML = state.numAdults[0];
         }
-        if (reviewEls.reviewUbiOrNit) {
-            reviewEls.reviewUbiOrNit.innerHTML = state.ubiOrNit.toUpperCase();
+        if (textEls.reviewGdp) {
+            textEls.reviewGdp.innerHTML = state.gdp[0];
         }
-        if (reviewEls.reviewCutsTaxes) {
-            reviewEls.reviewCutsTaxes.innerHTML = state.cutsTaxes;
+        if (textEls.reviewTaxAsPercentGdp) {
+            textEls.reviewTaxAsPercentGdp.innerHTML = state.taxAsPercentGdp[0];
         }
-        if (reviewEls.reviewGdpRangeMin) {
-            reviewEls.reviewGdpRangeMin.innerHTML = state.gdpRangeMin;
+        if (textEls.reviewBasicIncome) {
+            textEls.reviewBasicIncome.innerHTML = state.basicIncome;
         }
-        if (reviewEls.reviewGdpRangeMax) {
-            reviewEls.reviewGdpRangeMax.innerHTML = state.gdpRangeMax;
+        if (textEls.reviewUbiOrNit) {
+            textEls.reviewUbiOrNit.innerHTML = state.ubiOrNit.toUpperCase();
+        }
+        if (textEls.reviewCutsTaxes) {
+            textEls.reviewCutsTaxes.innerHTML = cutsTaxesTotal(state.cutsTaxes);
+        }
+        if (textEls.reviewGdpRangeMin) {
+            textEls.reviewGdpRangeMin.innerHTML = state.gdpRangeMin;
+        }
+        if (textEls.reviewGdpRangeMax) {
+            textEls.reviewGdpRangeMax.innerHTML = state.gdpRangeMax;
+        }
+        if (textEls.regionNameTextEnd) {
+            textEls.regionNameTextEnd.innerHTML = state.regionName[0];
         }
     }
 
     function form2state(state, formEls) {
-        state.regionName = escape(formEls.regionName.value);
-        console.log(state.regionName);
+        // Sourced text inputs
+        state.regionName[0] = escape(formEls.regionName.value);
 
         // Integer inputs
-        var input = ['numAdults', 'basicIncome', 'cutsTaxesCustomValue', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (!isNaN(parseInt(formEls[input].value, 10))) {
                 state[input] = parseInt(formEls[input].value, 10);
             }
         });
 
-        // Float inputs
-        input = ['taxAsPercentGdp', 'gdp', 'minimumWage'];
+        // Sourced integer inputs
+        input = ['numAdults'];
+        input.forEach(function (input) {
+            if (!isNaN(parseInt(formEls[input].value, 10))) {
+                state[input][0] = parseInt(formEls[input].value, 10);
+            }
+        });
+
+        // Sourced float inputs
+        input = ['taxAsPercentGdp', 'gdp'];
         input.forEach(function (input) {
             if (!isNaN(parseFloat(formEls[input].value))) {
-                state[input] = parseFloat(formEls[input].value);
+                state[input][0] = parseFloat(formEls[input].value);
             }
+        });
+
+        // Sources
+        input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp'];
+        input.forEach(function (input) {
+            state[input][1] = escape(formEls[input + 'Source'].value);
         });
 
         // Radio buttons
@@ -461,24 +508,20 @@ console.log(state.cutsTaxes);
             state.basicIncomeType = 'custom';
         }
 
-        // Check boxes, cutsTaxes calculation
-        var checkboxes = ['cutsTaxesWelfare', 'cutsTaxesLoopholes', 'cutsTaxesDefense', 'cutsTaxesSocialSecurity', 'cutsTaxesMedicaid', 'cutsTaxesOnePercent', 'cutsTaxesCustom'];
-        checkboxes.forEach(function (checkbox) {
-            state[checkbox] = formEls[checkbox].checked;
-        });
-
-        if (formEls.cutsTaxesCustomValue.value = '') {
-            state.cutsTaxesCustomValue === 0
-        }
-
         if (state.gdpRangeMin >= state.gdpRangeMax) {
             state.gdpRangeMax = state.gdpRangeMin + 1;
         }
 
+        // cutsTaxes
+        var names = document.getElementsByName('cutsTaxesName');
+        var amounts = document.getElementsByName('cutsTaxesAmount');
+        var sources = document.getElementsByName('cutsTaxesSource');
+        state.cutsTaxes = Array.prototype.map.call(names, function (name, i) {
+            return [escape(name.value), escape(amounts[i].value), escape(sources[i].value)];
+        });
 
-console.log('UPDATE STATE form2state');
         // Sync
-        state2form(state, formEls, reviewEls);
+        state2form(state, formEls, textEls);
     }
 
     function state2hash(state) {
@@ -497,12 +540,10 @@ console.log('UPDATE STATE form2state');
 
         var values = JSON.parse(hash);
 
-console.log(defaultState, sortedKeys, values);
         if (sortedKeys.length !== values.length) {
             console.log('Hash has wrong number of values');
         }
 
-console.log('UPDATE STATE hash2state');
         var localState = {};
         sortedKeys.forEach(function (key, i) {
             localState[key] = values[i];

@@ -30,7 +30,7 @@ block content
             img(src="/basic-income/thumbnail-256.png")
           div.content
             h1.ui.header Modeling basic income - does it add up?
-            p Create your basic income model for any geography.
+            p Create your basic income model for any region.
             div.slide-controls(style="text-align: center; margin-top: 2em;")
               div.ui.red.button.huge.next Get Started
 
@@ -73,10 +73,10 @@ block content
         div.field
           label Name of region or country
           div.ui.huge.input
-            input#regionName(placeholder="Write in",type="text")
+            input#regionName(type="text")
         div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
           label What is its Wikipedia URL?
-          input(placeholder="Copy and paste the Wikipedia URL for region or country",type="text")
+          input#regionNameSource(type="text", placeholder="Source URL")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -84,31 +84,27 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 3
-        |  Your geography details
+        |  Your region details
       div.ui.divider
       div.ui.form
         div.two.fields
           div.field
             label Number of adults
             input#numAdults(type="text")
-          div.field
-            label Minimum wage (per hour)
-            div.ui.left.labeled.input
-              div.ui.label $
-              input#minimumWage(type="text")
+            input#numAdultsSource(type="text", placeholder="Source URL")
         div.two.fields
           div.field
             label GDP (trillions)
             div.ui.left.labeled.input
               div.ui.label $
               input#gdp(type="text")
+            input#gdpSource(type="text", placeholder="Source URL")
           div.field
-            label Tax revenue (fraction of GDP)
+            label
+              | Tax revenue (fraction of GDP)
+              i.help.icon.circle.ubi-popup(data-html='Add up all the tax revenue in your region and divide it by your region\'s GDP. This quantity <a href="https://en.wikipedia.org/wiki/Hauser%27s_law">tends to remain constant</a>, so it can be used to estimate the effects of basic income-induced GDP changes on total tax revenue.')
             input#taxAsPercentGdp(type="text")
-        div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
-          label Source URL
-          div.ui.huge.input
-            input(placeholder="Copy and paste the URL for this information",type="text")
+            input#taxAsPercentGdpSource(type="text", placeholder="Source URL")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -131,7 +127,7 @@ block content
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="minimumWage", tabindex="0",class="hidden")
-              label Full time minimum wage ($14,500/year)
+              label Full time US minimum wage ($14,500/year)
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="20k", tabindex="0",class="hidden")
@@ -173,36 +169,8 @@ block content
           div.ui.left.labeled.input
             div.ui.label $
             input#cutsTaxes(type="text", disabled)
-        div.grouped.fields.dfa-tax-cuts
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesWelfare(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $375 Billion - Eliminate redundant welfare #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesLoopholes(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $740 Billion - Eliminate tax loopholes #[a(href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf") [1]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesDefense(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $300 Billion - Cut defense spending in half #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesSocialSecurity(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $695 Billion - Eliminate Social Security #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesMedicaid(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $290 Billion - Eliminate Medicaid #[a(href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget") [2]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesOnePercent(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label $157 Billion - Raises taxes on top 1% to 40% #[a(href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html") [3]]
-          div.field
-            div.ui.toggle.checkbox
-              input#cutsTaxesCustom(type="checkbox",name="fruit",tabindex="0",class="hidden")
-              label
-                input#cutsTaxesCustomValue(type="text", placeholder="Custom Amount")
+        div#cutsTaxesEntries
+        br
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -242,24 +210,44 @@ block content
               th Your Selection
           tbody
             tr
-              td Basic Income (per adult)
+              td Region Name
+              td 
+                a.changeStep(href="javascript:;",data-step="4")
+                  #[span#reviewRegionName]
+            tr
+              td Number of adults
               td 
                 a.changeStep(href="javascript:;",data-step="5")
+                  #[span#reviewNumAdults]
+            tr
+              td GDP
+              td 
+                a.changeStep(href="javascript:;",data-step="5")
+                  $#[span#reviewGdp]T
+            tr
+              td Tax revenue (fraction of GDP)
+              td 
+                a.changeStep(href="javascript:;",data-step="5")
+                  #[span#reviewTaxAsPercentGdp]
+            tr
+              td Basic Income (per adult)
+              td 
+                a.changeStep(href="javascript:;",data-step="6")
                   $#[span#reviewBasicIncome]/year
             tr
               td UBI or NIT?
               td
-                a.changeStep(href="javascript:;",data-step="6")
+                a.changeStep(href="javascript:;",data-step="7")
                   span#reviewUbiOrNit
             tr
               td Cuts and tax increases
               td
-                a.changeStep(href="javascript:;",data-step="7")
+                a.changeStep(href="javascript:;",data-step="8")
                   $#[span#reviewCutsTaxes]B
             tr
               td GDP Change
               td
-                a.changeStep(href="javascript:;",data-step="8") #[span#reviewGdpRangeMin]% to #[span#reviewGdpRangeMax]%
+                a.changeStep(href="javascript:;",data-step="9") #[span#reviewGdpRangeMin]% to #[span#reviewGdpRangeMax]%
         div.field.right.slide-controls
           div.ui.white.button.prev.huge Back
           div.ui.red.button.next.huge Generate
@@ -277,7 +265,7 @@ block content
 
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        h3.ui.header Thank your generating a prediction model for <span id="regionNameTextEnd"></span>!
+        h3.ui.header Thank your generating a data model for <span id="regionNameTextEnd"></span>!
         p Please share it with your friends and family.
         div.ui.grey.email.button.circular.icon
           i.icon.mail
@@ -293,7 +281,7 @@ block content
           span Copy
 
   div.ui.segment.inverted.grey.attached.center.aligned(style="padding: 0.4em 0.5em; font-size: 0.9em;")
-    | HOW TO: Build a prediction model for your own region or country, then share.
+    | HOW TO: Build a data model for your own region or country, then share.
 
   div.ui.segment.inverted.bottom.attached.center.aligned(style="background: #002868; padding: 0.4em 0.5em;font-size: 0.9em;")
     div.action.author
