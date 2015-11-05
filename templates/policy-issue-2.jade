@@ -1,0 +1,112 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-policy-issue.ui.segments
+    div.ui.segment
+      h1.ui.header.center.aligned Policy Issue
+      div.ui.divider
+      h2.ui.header.center.aligned
+        span(style="color:#CC0505;") Reform the Criminal Justice System 
+        | in the 
+        br
+        span(style="color:#2185D0;") United States
+    div.ui.segment
+      h3.ui.header Sponsored By:
+      div.ui.horizontal.list.massive
+        div.item
+          img.ui.avatar.image(src="https://pbs.twimg.com/profile_images/629737455856386048/hZZG820B_400x400.jpg")
+          div.content
+            div.header Koch Foundation
+            a(href="https://twitter.com/ckinstitute", target="_blank")
+              i.ui.icon.twitter(style="color:#0084B4;")
+            a(href="http://www.charleskochinstitute.org/why-reform-the-justice-system/", target="_blank")
+              i.ui.icon.globe(style="color:#666;")
+
+      p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
+        span.d4a Data
+          span.f 4
+          | America
+        |  Editorial Board approves.
+    div.ui.segment
+      h3.ui.header About Reform Criminal Justice System Reform:
+      p Though we may have arrived at our current criminal justice system through the actions of many well-meaning individuals, far too many of its features run counter to the basic principles of a free society.
+      p The United States currently incarcerates 
+        a(href="http://sentencingproject.org/doc/publications/inc_Trends_in_Corrections_Fact_sheet.pdf", target="_blank") 2.2 million people
+        | , at a rate of 
+        a(href="http://sentencingproject.org/doc/publications/inc_Trends_in_Corrections_Fact_sheet.pdf", target="_blank") over 700 for every 100,000 residents
+        |. Somewhere between 
+        a(href="http://www.sentencingproject.org/doc/publications/cc_HiT_CriminalRecords_profile_1.pdf", target="_blank") 70 million and 100 million
+        |  Americans have a criminal record, which acts as a barrier to employment and other opportunities following release. Because children who have a parent behind bars are more likely to end up in prison themselves, our system is harming both this generation and the next.
+      p Many of the system’s flaws begin in the U.S. Code, which contains more laws than anyone could be expected to read or understand. The absence of a clear definition of a “crime” has made counting the number of crimes on the books nearly impossible. The latest count puts the number at 
+        a(href="http://www.heritage.org/research/reports/2013/04/the-need-for-a-mistake-of-law-defense-as-a-response-to-overcriminalization", target="_blank") over 4,500
+        | . That, of course, does not even include the over 
+        a(href="http://www.heritage.org/research/reports/2013/04/the-need-for-a-mistake-of-law-defense-as-a-response-to-overcriminalization", target="_blank") 300,000 regulatory violations
+        |  that carry criminal penalties. Many of those laws do not contain a mens rea requirement, meaning an individual who commits a crime without intending to can be found guilty nonetheless.
+      p Furthermore, the use of militarized policing tactics and  equipment creates deep tensions between law enforcement agents and the communities they police, endangering both and creating a sense of insecurity. Other problems emanate from civil asset forfeiture laws, which sometimes incentivize law enforcement to act in ways that threaten the rights of innocent individuals, and mandatory minimum sentencing laws, which impose unduly harsh and counterproductive punishments, often on nonviolent offenders.
+      p Overwhelmingly, these policies have led to increased incarceration, which consumes a significant portion of state and federal budgets. Corrections spending represents the 
+        a(href="http://www.cbpp.org/research/changing-priorities-state-criminal-justice-reforms-and-investments-in-education", target="_blank") third-largest category of spending
+        |  for most states, and 
+        a(href="https://www.themarshallproject.org/2015/02/12/the-cost-of-crime-fighting", target="_blank") over 20 percent
+        |  of the Department of Justice’s budget.
+      p But incarceration is costly in more than just dollars and cents. The collateral consequences of a criminal record make it difficult for ex-offenders to successfully re-enter society. Occupational licensing laws bar ex-offenders from performing certain jobs, regardless of their expertise or experience, and hiring policies discourage employers from hiring ex-offenders. Further, incarceration is an especially expensive public safety solution given that while crime has been falling for the last 25 years, 
+        a(href="http://cascadepolicy.org/pdf/pub/Reducing_Correction_Costs_2013_PDF.pdf", target="_blank") less than one-third
+        |  of that reduction is explained by rising incarceration rates.
+      p To better understand the key issues involved in engendering such a system, the United States will need to close gaps in research, identify policy solutions, and overcome resistance to reform. The Charles Koch Institute’s Advancing Justice summit in New Orleans this week will gather leading figures in the reform movement to discuss these issues and spur both research and action that will enhance public safety and human dignity. For more on the summit, including information about the speakers and panelists, please visit the 
+        a(href="http://www.charleskochinstitute.org/justicesummit/", target="_blank") summit website
+        | .
+
+    div.ui.segment
+      h3.ui.header Additional Reading:
+      div.ui.bulleted.list
+        div.item
+          a(href="http://www.charleskochinstitute.org/why-reform-the-justice-system/") http://www.charleskochinstitute.org/why-reform-the-justice-system/
+      div(style="margin-top:0.5em;")
+        a.ui.blue.button.large(href="/policy/submitasource", target="_blank") Submit a New Source
+    div.ui.segment
+      h3.ui.header Recommended Datasets:
+      div.ui.warning.message
+        i.icon.warning.circle
+        | No datasets exist
+      div(style="margin-top:0.5em;")
+        a.ui.blue.button.large(href="/policy/submitdata", target="_blank") Submit a New Dataset
+    div.ui.segment.reward
+      h3.ui.header Reward for Being Published:
+      div.ui.bulleted.list.large
+        div.item $2,500 stipend
+        div.item 
+         span.d4a D
+           span.f(style="color:#CC0001; font-weight:bold;") 4
+           | A 
+         |  tee-shirt
+        div.item Invited to our content creator’s private Slack channel
+    div.ui.segment
+      h3.ui.header D4A Published Stories on Criminal Justice Reform:
+      div.ui.info.message
+        i.icon.checkered.flag
+        | Be the first one, submit your data viz 
+        a(href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=submit@data4america.org&su=&tf=1", target="blank") submit@data4america.org
+    div.ui.segment
+      a(href="/faq", target="blank") Read our FAQ 
+      |  about submissions.
+    div.ui.segment
+      a.ui.red.button.huge(href="/upload", target="_blank") Submit a Story
+      a.ui.white.button.huge(href="/sponsorship/", target="_blank") More Issues
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+
