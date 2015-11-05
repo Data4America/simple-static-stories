@@ -177,10 +177,11 @@
     '       <p>Please make your donation check payable to: <strong>Data4America, Inc.</strong>.</p>' +
     '       <p>For Policy Issue sponsorships, please write the issue in the memo of the check. Indicate what city, state, or country it is for.</p>' +
     '       <p>If you\'re sponsoring a policy channel in honor of someone or want to sponsor a channel anonymously please write that in the memo of your check too.</p>' +
-    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Data4America<br />' +
-    '       1927 Greenwich St<br />' +
-    '       San Francisco, CA 94123<br />' +
-    '       EIN: 47-4629656</p>' +
+    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
+    '       Attn: Gifts Administration // Data4America<br />' +
+    '       2440 West El Camino Real, Suite 300<br />' +
+    '       Mountain View, CA 94040<br />' +
+    '       EIN: 20-5205488</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
     '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
@@ -190,10 +191,11 @@
     '       <h1 style="text-align:center;">Become a Member by Check</h1>' +
     '       <p>Please make your donation check payable to: <strong>Data4America, Inc.</strong>.</p>' +
     '       <p>If you\'re becoming a member in honor of someone or want to become a member anonymously, please write that in the memo of your check.</p>' +
-    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Data4America<br />' +
-    '       1927 Greenwich St<br />' +
-    '       San Francisco, CA 94123<br />' +
-    '       EIN: 47-4629656</p>' +
+    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
+    '       Attn: Gifts Administration // Data4America<br />' +
+    '       2440 West El Camino Real, Suite 300<br />' +
+    '       Mountain View, CA 94040<br />' +
+    '       EIN: 20-5205488</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
     '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
@@ -366,10 +368,11 @@
     '   <h1 style="text-align:center;">Donate by Check</h1>' +
     '   <p>Please make your donation check payable to: <strong>Data4America.org</strong>.</p>' +
     '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a story, or want to become a founding member of Data4America, please write that in the memo of your check.</p>' +
-    '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Data4America<br />' +
-    '   1927 Greenwich St<br />' +
-    '   San Francisco, CA 94123<br />' +
-    '   EIN: 47-4629656</p>' +
+    '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
+    '   Attn: Gifts Administration // Data4America<br />' +
+    '   2440 West El Camino Real, Suite 300<br />' +
+    '   Mountain View, CA 94040<br />' +
+    '   EIN: 20-5205488</p>' +
     '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
     '   <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '   <p style="color:#777; font-size:0.8em;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
