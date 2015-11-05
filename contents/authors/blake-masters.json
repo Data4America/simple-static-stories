@@ -1,10 +1,10 @@
 {
   "name": "Blake Masters",
-  "title": "Editorial Board",
+  "title": "Technology Advisor",
   "founder": false,
   "boardOfDirectors": false,
-  "editorialBoard": true,
-  "advisor": false,
+  "editorialBoard": false,
+  "advisor": true,
   "bio": "Co-Author of @<a href=\"http://zerotoonebook.com/\" target=\"_blank\">Zero To One</a>&#xA0;book with Peter Thiel. Co-founded @<a href=\"https://www.judicata.com/\" target=\"_blank\">Judicata</a>. @<a href=\"https://www.law.stanford.edu/\" target=\"_blank\">Stanford Law</a>&#xA0;&#x2018;12. @Stanford &#x2018;08.",
   "links": [
     {

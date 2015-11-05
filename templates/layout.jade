@@ -15,40 +15,7 @@ html(lang='en')
       != nap.css('main')
   body(class=bodyclass)
 
-    div#dfa-sidebar.ui.very.wide.sidebar.vertical.menu
-
-      div(style="position:relative;")
-        div#dfa-sidebar-border
-          div.dfa-sidebar-tap
-            i.ui.icon.angle.double.up
-            |  BACK
-
-      div.item
-        h1.ui.header.red
-          img.ui.image(src="/img/logo-256.png", style="width: 2.5em;")
-          | Stories
-
-      div.item.note All data stories have been reviewed and approved by the non-partisan Editorial Board
-
-      div.item(href="", target="blank")
-        div.ui.card
-          div.content
-            img.ui.small.left.floated.image(src="http://i1.wp.com/flowingdata.com/wp-content/uploads/2015/07/Technology-sector-over-time.png?zoom=2&resize=200%2C147")
-            div.header Loans from Freddie and Fannie that defaulted
-            div.meta Published: 04/23/2015
-          div.extra.content
-            div.author
-              | Created by:
-              strong
-                a(href="http://twitter.com/chrisamccoy",target="_blank")
-                |  Chris McCoy
-              img.ui.avatar.image(src="/img/chris-mccoy.png")
-
     div.dimmed.pusher
-
-      div.dfa-sidebar-tap
-        i.ui.icon.list.layout
-        |  STORIES
 
       header
         block header
@@ -65,10 +32,9 @@ html(lang='en')
               a.item(href="/team/") Our Team
               a.donate.item(href="/donate/") Donate
               a.item(href="/upload/") Submit Content
-              a.item(href="http://data.data4america.org/", target="blank") Submit Data
-              a.item(href="http://git.data4america.org/", target="blank") Submit Software
+              a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+              a.item(href="http://git.data4america.org/", target="_blank") Submit Software
               a.item(href="/request-government-data") Request Data
-              a.item(href="/supporters/") Our Supporters
 
           div#dfa-header.ui.borderless.inverted.main.menu.fixed
             div.container
@@ -87,10 +53,9 @@ html(lang='en')
                   a.item(href="/team/") Our Team
                   a.donate.item(href="/donate/") Donate
                   a.item(href="/upload/") Submit Content
-                  a.item(href="http://data.data4america.org/", target="blank") Submit Data
-                  a.item(href="http://git.data4america.org/", target="blank") Submit Software
+                  a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+                  a.item(href="http://git.data4america.org/", target="_blank") Submit Software
                   a.item(href="/request-government-data") Request Data
-                  a.item(href="/supporters/") Our Supporters
               div.item.dfa-header-title
               a.item.icon.dfa-header-article-share.fb(data-url=locals.url + (page !== undefined ? page.url : '/'))
                 i.icon.facebook
@@ -109,8 +74,8 @@ html(lang='en')
               a.item(href="/team/") OUR TEAM
               a.item(href="/donate/", style="color:#CC0505; font-weight:bold;") DONATE
               a.item(href="/upload/") SUBMIT CONTENT
-              a.item(href="http://data.data4america.org/") DATA SETS
-              a.item(href="http://git.data4america.org/") GITHUB
+              a.item(href="http://data.data4america.org/", target="_blank") DATA SETS
+              a.item(href="http://git.data4america.org/", target="_blank") GITHUB
 
       div#dfa-subscribe-modal.ui.modal.small
         i.close.icon

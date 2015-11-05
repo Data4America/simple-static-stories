@@ -1,0 +1,37 @@
+.area {
+    stroke-width: 0;
+}
+.area.positive {
+    fill: firebrick;
+}
+.area.negative {
+    fill: steelblue;
+}
+
+.vertical-line {
+  stroke: black;
+  stroke-dasharray: 5,5;
+  stroke-width: 1.5;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.biBars td {
+  padding: 2px;
+}
+.biBars tr td:first-child {
+  padding-left: 0;
+}
+.biBars tr td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.dfa-slide-text {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+}

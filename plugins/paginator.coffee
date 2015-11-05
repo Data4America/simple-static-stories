@@ -20,7 +20,8 @@ module.exports = (env, callback) ->
     # note that each article is assumed to have its own directory in the articles directory
     articles = contents._.directories.map (item) -> item.index
     # skip articles that does not have a template associated
-    articles = articles.filter (item) -> item && item.template is 'article.jade'
+    articles = articles.filter (item) -> item && item.metadata.article
+    console.log(articles[0])
     # sort article by date
     articles.sort (a, b) -> b.date - a.date
     return articles

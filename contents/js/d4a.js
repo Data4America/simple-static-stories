@@ -274,7 +274,7 @@ $(document).ready(function() {
     showSlide(true);
 
     $('a.changeStep').click(function() {
-      var step = parseInt($(this).attr('data-step'));
+      var step = parseInt($(this).attr('data-step'), 10);
 
       $('.dfa-slide:eq(' + (slideIndex) + ')').transition('fade left', function() {
         $('.dfa-slide:eq(' + (step - 1) + ')').transition('fade right');
@@ -282,46 +282,54 @@ $(document).ready(function() {
 
       slideIndex = step - 1;
 
-      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
+      $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
     });
 
+    var transitionInProgress = false;
     function showSlide(next) {
-      if (next) {
-        slideIndex++;
+      var afterTransition = function () {
+        transitionInProgress = false;
 
-        if (slideIndex == 0) {
-          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
+        if (slideIndex === 0) {
+          $('.slide-controls .prev').addClass('disabled');
         } else {
-          $('.dfa-slide:eq(' + (slideIndex - 1) + ')').transition('fade right', function() {
-            $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left');
-          });
+          $('.slide-controls .prev').removeClass('disabled');
         }
 
-      } else {
+        if (totalSlides === (slideIndex + 1)) {
+          $('.slide-controls .next').addClass('disabled');
+          $(document).trigger('lastSlide');
+        } else {
+          $('.slide-controls .next').removeClass('disabled');
+        }
+      }
 
+      // If two transitions happen at the same time, don't let the second one proceed otherwise the layout gets fucked up
+      if (transitionInProgress) {
+        return;
+      }
+
+      transitionInProgress = true;
+      if (next) {
+        slideIndex++;
+        $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
+
+        if (slideIndex == 0) {
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left', afterTransition);
+        } else {
+          $('.dfa-slide:eq(' + (slideIndex - 1) + ')').transition('fade right', function() {
+            $('.dfa-slide:eq(' + slideIndex + ')').transition('fade left', afterTransition);
+          });
+        }
+      } else {
         slideIndex--;
+        $('.slide-controls .text').html('Slide ' + (slideIndex + 1) + ' of ' + totalSlides);
 
         $('.dfa-slide:eq(' + (slideIndex + 1) + ')').transition('fade left', function() {
-          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right');
+          $('.dfa-slide:eq(' + slideIndex + ')').transition('fade right', afterTransition);
         });
-
-      }
-
-      $('.slide-controls .text').html('Step ' + (slideIndex + 1) + ' of ' + totalSlides);
-
-      if (slideIndex === 0) {
-        $('.slide-controls .prev').addClass('disabled');
-      } else {
-        $('.slide-controls .prev').removeClass('disabled');
-      }
-
-      if (totalSlides === (slideIndex + 1)) {
-        $('.slide-controls .next').addClass('disabled');
-      } else {
-        $('.slide-controls .next').removeClass('disabled');
       }
     }
-
   }
 });
 

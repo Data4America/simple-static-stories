@@ -25,8 +25,8 @@
     '   </tr>' +
     '   <tr class="dfa-field dfa-field-member">' +
     '     <td>' +
-    '       <p>Data4America Memberships are annual opportunities to support 100% of our work.</p>' +
-    '       <p>Here\'s what you\'ll receive as a Founding Member:</p>' +
+    '       <div>Data4America Memberships are annual opportunities to support 100% of our work.</div>' +
+    '       <div style="margin:1.5em auto 1em">Here\'s what you\'ll receive as a Founding Member:</div>' +
     '       <ol>' +
     '         <li>Attend the annual Data4America Conference in San Francisco, CA.</li>' +
     '         <li>Get invited to attend monthly fireside chats held in San Francisco or Washington D.C. These chats are highlighted by local and national experts across the technology, data science, media, and public policy spaces.</li>' +
@@ -182,6 +182,7 @@
     '       San Francisco, CA 94123<br />' +
     '       EIN: 47-4629656</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
     '   <tr id="dfa-cheque-member" style="display:none;">' +
@@ -194,6 +195,7 @@
     '       San Francisco, CA 94123<br />' +
     '       EIN: 47-4629656</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
     '   <tr class="dfa-field action-buttons">' +
@@ -214,7 +216,7 @@
     '   </tr>' +
     '   <tr>' +
     '     <td style="padding-bottom:0;">' +
-    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America, Inc. is a California nonprofit corporation with a 501(c)(3) fiscal sponsorship from the Silicon Valley Community Foundation. A donation to Data4America is 100% tax deductible through this SVCF fiscal sponsorship.  Your tax deductible receipt will be sent in the next 30 days. Learn about SVCF: <a href="http://www.siliconvalleycf.org/" target="_blank">http://www.siliconvalleycf.org/</a>.</p>' +
+    '       <p style="color:#777; font-size:0.65em; text-align:left;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '     </td>' +
     '   </tr>' +
     ' </table>' +
@@ -369,7 +371,8 @@
     '   San Francisco, CA 94123<br />' +
     '   EIN: 47-4629656</p>' +
     '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
-    '   <p style="color:#777; font-size:0.8em;">Data4America, Inc. is a California nonprofit corporation with a 501(c)(3) fiscal sponsorship from the Silicon Valley Community Foundation. A donation to Data4America is 100% tax deductible through this SVCF fiscal sponsorship.  Your tax deductible receipt will be sent in the next 30 days. Learn about SVCF: <a href="http://www.siliconvalleycf.org/" target="_blank">http://www.siliconvalleycf.org/</a>.</p>' +
+    '   <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
+    '   <p style="color:#777; font-size:0.8em;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
     '   </p>' +
@@ -665,6 +668,8 @@
       $('.dfa-field.choose-donation').hide();
       $('.dfa-field.donation-input').hide();
       $priceArrows.show();
+      $secCheque.hide();
+      $memberCheque.hide();
 
       $amount.find('.postinput').html('One Time');
       $input.attr('type', 'text');
