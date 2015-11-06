@@ -14,17 +14,17 @@ block content
         br
         span(style="color:#2185D0;") United States
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        div.ui.grey.email.button.circular.icon
+        div.ui.grey.email.button.circular.icon(data-text="Reform the Criminal Justice System in the United States", data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/")
           i.icon.mail
-        div.ui.facebook.button.circular.icon
+        div.ui.facebook.button.circular.icon(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/")
           i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon
+        div.ui.twitter.button.circular.icon(data-text="Reform the Criminal Justice System in the United States", data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/")
           i.ui.twitter.icon
     div.ui.segment
       h3.ui.header Sponsored By:
       div.ui.horizontal.list.massive
         div.item
-          img.ui.avatar.image(src="https://pbs.twimg.com/profile_images/629737455856386048/hZZG820B_400x400.jpg")
+          img.ui.avatar.image(src="https://pbs.twimg.com/profile_images/629737455856386048/hZZG820B_400x400.jpg", style="border-radius: 4px;")
           div.content
             div.header Koch Foundation
             a(href="https://twitter.com/ckinstitute", target="_blank")
@@ -39,6 +39,9 @@ block content
         |  Editorial Board approves.
     div.ui.segment
       h3.ui.header About Reform Criminal Justice System Reform:
+      p(style="font-size: 0.75em;margin-top: -1em;margin-bottom: 0.6em;") (via 
+        a(href="http://www.charleskochinstitute.org/why-reform-the-justice-system/", target="_blank") http://www.charleskochinstitute.org/why-reform-the-justice-system/
+        | )
       p Though we may have arrived at our current criminal justice system through the actions of many well-meaning individuals, far too many of its features run counter to the basic principles of a free society.
       p The United States currently incarcerates 
         a(href="http://sentencingproject.org/doc/publications/inc_Trends_in_Corrections_Fact_sheet.pdf", target="_blank") 2.2 million people
@@ -61,9 +64,7 @@ block content
       p But incarceration is costly in more than just dollars and cents. The collateral consequences of a criminal record make it difficult for ex-offenders to successfully re-enter society. Occupational licensing laws bar ex-offenders from performing certain jobs, regardless of their expertise or experience, and hiring policies discourage employers from hiring ex-offenders. Further, incarceration is an especially expensive public safety solution given that while crime has been falling for the last 25 years, 
         a(href="http://cascadepolicy.org/pdf/pub/Reducing_Correction_Costs_2013_PDF.pdf", target="_blank") less than one-third
         |  of that reduction is explained by rising incarceration rates.
-      p To better understand the key issues involved in engendering such a system, the United States will need to close gaps in research, identify policy solutions, and overcome resistance to reform. The Charles Koch Institute’s Advancing Justice summit in New Orleans this week will gather leading figures in the reform movement to discuss these issues and spur both research and action that will enhance public safety and human dignity. For more on the summit, including information about the speakers and panelists, please visit the 
-        a(href="http://www.charleskochinstitute.org/justicesummit/", target="_blank") summit website
-        | .
+      p To better understand the key issues involved in engendering such a system, the United States will need to close gaps in research, identify policy solutions, and overcome resistance to reform.
 
     div.ui.segment
       h3.ui.header Learn More:
@@ -90,7 +91,11 @@ block content
          |  tee-shirt
         div.item Invited to our content creator’s private Slack channel
     div.ui.segment
-      h3.ui.header D4A Published Stories on Criminal Justice Reform:
+      h3.ui.header
+         span.d4a D
+           span.f(style="color:#CC0001;") 4
+           | A 
+         |  Published Stories on Criminal Justice Reform:
       div.ui.info.message
         i.icon.checkered.flag
         | Be the first one, submit your data viz 
@@ -105,15 +110,14 @@ block content
   div.ui.basic.segment.dfa-share
     div.ui.equal.width.grid.stackable
       div.column
-        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+        div.ui.white.email.huge.button.fluid(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/", data-text="Reform the Criminal Justice System in the United States",style="border-radius:0;")
           i.icon.mail
           span.text Email
       div.column
-        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+        div.ui.facebook.huge.fluid.button(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/",style="border-radius:0;")
           i.ui.facebook.icon
           span.text Share
       div.column
-        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+        div.ui.twitter.fluid.huge.button(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/", data-text="Reform the Criminal Justice System in the United States",style="border-radius:0;")
           i.ui.twitter.icon
           span.text Tweet
-
