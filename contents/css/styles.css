@@ -50499,6 +50499,10 @@ input::-moz-focus-inner {
     padding-right: 0.5em;
   }
 }
+#dfa-content .dfa-donate p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
 /*!
  * # Data 4 America - Main Styles
  *
