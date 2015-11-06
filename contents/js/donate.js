@@ -174,8 +174,8 @@
     '   <tr id="dfa-cheque" style="display:none;">' +
     '     <td style="background-color: #eee; border-radius: 10px; padding: 1em;">' +
     '       <h1 style="text-align:center;">Sponsor a Channel by Check</h1>' +
-    '       <p>Please make your donation check payable to: <strong>Data4America, Inc.</strong>.</p>' +
-    '       <p>For Policy Issue sponsorships, please write the issue in the memo of the check. Indicate what city, state, or country it is for.</p>' +
+    '       <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
+    '       <p>For Policy Issue sponsorships, please write the name of the issue in the memo of your check. Indicate what city, state, or country it is for.</p>' +
     '       <p>If you\'re sponsoring a policy channel in honor of someone or want to sponsor a channel anonymously please write that in the memo of your check too.</p>' +
     '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
     '       Attn: Gifts Administration // Data4America<br />' +
@@ -189,7 +189,7 @@
     '   <tr id="dfa-cheque-member" style="display:none;">' +
     '     <td style="background-color: #eee; border-radius: 10px; padding: 1em;">' +
     '       <h1 style="text-align:center;">Become a Member by Check</h1>' +
-    '       <p>Please make your donation check payable to: <strong>Data4America, Inc.</strong>.</p>' +
+    '       <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
     '       <p>If you\'re becoming a member in honor of someone or want to become a member anonymously, please write that in the memo of your check.</p>' +
     '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
     '       Attn: Gifts Administration // Data4America<br />' +
@@ -366,8 +366,8 @@
     // CHECK MODULE
     ' <div id="dfa-cheque-mod">' +
     '   <h1 style="text-align:center;">Donate by Check</h1>' +
-    '   <p>Please make your donation check payable to: <strong>Data4America.org</strong>.</p>' +
-    '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a story, or want to become a founding member of Data4America, please write that in the memo of your check.</p>' +
+    '   <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
+    '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a Policy Issue, or want to become a founding member of Data4America, please write that in the memo of your check too.</p>' +
     '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
     '   Attn: Gifts Administration // Data4America<br />' +
     '   2440 West El Camino Real, Suite 300<br />' +
@@ -851,7 +851,7 @@
       if ($modal.length) {
         $modal.parents('.ui.dimmer.modals').scrollTop(0);
       } else {
-        $(window).scrollTop($('#dfa-content').offset().top);
+        $(window).scrollTop($('#dfa-content').offset().top - 70);
       }
     }
 
