@@ -1,0 +1,99 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-policy-issues.ui.segments
+    div.ui.segment.center.aligned
+      h1.ui.header Policy Issues
+    div.ui.segment.dfa-table
+      table.ui.celled.table
+        thead
+          tr
+            th Policy
+            th Location
+            th Sponsors
+        tbody
+          tr
+            td.issue-title
+              a(href="/issue/sex-work/federal/usa/") Legalize Sex Work
+            td United States
+            td.sponsors
+              div.ui.divided.list
+                div.item
+                  img.ui.avatar.image(src="/img/cyan.jpg")
+                  div.content
+                    div.header Cyan Banister
+                    div
+                      a(href="https://twitter.com/cyantist", target="_blank")
+                        i.ui.icon.twitter(style="color:#0084B4;")
+                      a(href="https://www.linkedin.com/in/cyanb", target="_blank")
+                        i.ui.icon.linkedin(style="color:#0077B5;")
+                      span.saperator ·
+                      a.say-thanks(href="javascript:;") Say Thanks
+                div.item
+                  img.ui.avatar.image(src="/authors/chris-mccoy.jpg")
+                  div.content
+                    div.header Chris McCoy
+                    div
+                      a(href="https://twitter.com/chrismccoy", target="_blank")
+                        i.ui.icon.twitter(style="color:#0084B4;")
+                      a(href="https://www.linkedin.com/in/chrismccoy", target="_blank")
+                        i.ui.icon.linkedin(style="color:#0077B5;")
+                      span.saperator ·
+                      a.say-thanks(href="javascript:;") Say Thanks
+          tr
+            td.issue-title
+              a(href="/issue/reform-criminal-justice/federal/usa/") Reform the Criminal Justice System
+            td United States
+            td.sponsors
+              div.ui.divided.list
+                div.item
+                  img.ui.avatar.image(src="https://pbs.twimg.com/profile_images/629737455856386048/hZZG820B_400x400.jpg", style="border-radius: 4px;")
+                  div.content
+                    div.header Koch Foundation
+                    div
+                      a(href="https://twitter.com/ckinstitute", target="_blank")
+                        i.ui.icon.twitter(style="color:#0084B4;")
+                      a(href="http://www.charleskochinstitute.org/why-reform-the-justice-system/", target="_blank")
+                        i.ui.icon.globe(style="color:#666;")
+                      span.saperator ·
+                      a.say-thanks(href="javascript:;") Say Thanks
+          tr
+            td.issue-title
+              a(href="/issue/reduction-of-co2-emissions/federal/usa/") 50% reduction of C02 emissions by 2030
+            td United States
+            td.sponsors
+              div.ui.divided.list
+                div.item
+                  img.ui.avatar.image(src="/img/nextclimate.jpg", style="border-radius: 4px;")
+                  div.content
+                    div.header NextGen Climate
+                    div
+                      a(href="https://twitter.com/nextgenclimate", target="_blank")
+                        i.ui.icon.twitter(style="color:#0084B4;")
+                      a(href="https://nextgenclimate.org/", target="_blank")
+                        i.ui.icon.globe(style="color:#666;")
+                      span.saperator ·
+                      a.say-thanks(href="javascript:;") Say Thanks
+          tr
+            td.issue-title
+              a(href="/issue/modernize-early-childhood-learning/state/california/") Modernize early childhood learning and support systems and provide universal access for children from birth to five
+            td California
+            td.sponsors
+              div.ui.divided.list
+                div.item
+                  img.ui.avatar.image(src="/img/common-sense-kids.png", style="border-radius: 4px;")
+                  div.content
+                    div.header CommonSense 
+                      br 
+                      | Kids Action
+                    div
+                      a(href="https://twitter.com/ckinstitute", target="_blank")
+                        i.ui.icon.twitter(style="color:#0084B4;")
+                      a(href="http://www.charleskochinstitute.org/why-reform-the-justice-system/", target="_blank")
+                        i.ui.icon.globe(style="color:#666;")
+                      span.saperator ·
+                      a.say-thanks(href="javascript:;") Say Thanks
+
