@@ -139,7 +139,11 @@ $(document).ready(function() {
   });
 
   $('.ui.button.twitter, .dfa-header-article-share.tw').click(function() {
-    PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
+    var params = '?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text);
+    if (!$(this).hasClass('say-thanks')) {
+      params = params + '&hashtags=d4a&via=data4america'
+    }
+    PopupCenter('http://twitter.com/intent/tweet' + params, 'Share on Twitter', 550, 400);
   });
 
   $('.ui.button.email, .dfa-header-article-share.em').click(function() {
@@ -228,6 +232,18 @@ $(document).ready(function() {
     $.getScript('/js/donate.js', function() {
       if (window.location.pathname.search("/sponsorship") === 0) {
         $('.dfa-link-sponsor').trigger('click');
+
+        if (window.location.search.search('select=') > 0) {
+          var values = window.location.search.split('=')[1].split(',');
+
+          window.console.log(values);
+
+          var top = $('.dfa-donate').offset().top;
+          $("html, body").animate({ scrollTop: top }, 1000);
+
+          $('.dfa-select[name="sponsor_issue"] option[value="' + decodeURI(values[0]) + '"]').prop('selected', true);
+          $('.dfa-button.dfa-step-button[data-step="country"]').trigger('click');
+        }
       }
     });
   });

@@ -1,0 +1,115 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-policy-issue.ui.segments
+    div.ui.segment
+      h1.ui.header.center.aligned POLICY ISSUE
+      div.ui.divider
+      h2.ui.header.center.aligned ISSUE: 
+        span(style="color:#CC0505;") Modernize early childhood learning and support systems and provide universal access for children from birth to five
+        br
+        | in the 
+        span(style="color:#2185D0;") California
+      div.dfa-share(style="padding-bottom:1em; text-align:center;")
+        div.ui.grey.email.button.circular.icon(data-text="50% reduction of C02 emissions by 2030 in the United States", data-url="http://test.data4america.org/issue/modernize-early-childhood-learning/state/california/")
+          i.icon.mail
+        div.ui.facebook.button.circular.icon(data-url="http://test.data4america.org/issue/modernize-early-childhood-learning/state/california/")
+          i.ui.facebook.icon
+        div.ui.twitter.button.circular.icon(data-text="50% reduction of C02 emissions by 2030 in the United States", data-url="http://test.data4america.org/issue/modernize-early-childhood-learning/state/california/")
+          i.ui.twitter.icon
+    div.ui.segment
+      h3.ui.header Sponsored By:
+      div.ui.horizontal.list.massive
+        div.item
+          img.ui.avatar.image(src="https://www.commonsensemedia.org/sites/all/themes/commonsense/images/logo-kids-action@2x.png", style="border-radius: 4px;")
+          div.content
+            div.header CommonSense Kids Action
+            a(href="https://twitter.com/nextgenclimate", target="_blank")
+              i.ui.icon.twitter(style="color:#0084B4;")
+            a(href="https://nextgenclimate.org/", target="_blank")
+              i.ui.icon.globe(style="color:#666;")
+
+      button.ui.small.button.twitter.say-thanks(data-text="Thanks to @nextgenclimate for sponsoring the Modernize early childhood learning and support systems in the California on @Data4America.", data-url="http://test.data4america.org/issue/modernize-early-childhood-learning/state/california/")
+        i.ui.twitter.icon
+        | Say Thanks
+
+      p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
+        span.d4a Data
+          span.f 4
+          | America
+        |  Editorial Board approves.
+    div.ui.segment
+      h3.ui.header About the Policy Issue:
+      p Common Sense Kids Action has a simple mission: to make kids and education our nation’s top priority. We believe that every child deserves a fair start. Access to high-quality early learning and health supports are key to ensuring every child has the opportunity to succeed in school and life.
+      p The research is clear: learning starts early, and quality matters. There are many ideas for improving our education system, but one of the ways to make the biggest difference in the lives of our kids—and the success of our schools—is by investing in quality early childhood education, the teachers who nurture that learning, and the support programs our children need starting at birth—including health, nutrition, and quality child care. 
+      p Quality early learning experiences and engagements—with parents, teachers, and caregivers—lay the foundation for strong cognition and character. They help young children develop early language and math skills, encourage their social-emotional development, and nurture their curiosity. Investments in quality early childhood programs also bring significant economic benefits to the state and nation over time. 
+      p In order to provide our kids with an equal opportunity to thrive, we must make the health, education, and well-being of all children under five a top priority. 
+      h4.ui.header THE RIGHT START COMMISSION
+      p Unfortunately, far too many of California’s early childhood systems do not have the resources to support all children, do not provide high-quality services, and inefficiently allocate the resources available. That’s why, starting in the spring of 2015, Common Sense Kids Action will convene a commission of the state’s leading policymakers, community leaders, and business leaders to examine our state’s early childhood programs from the bottom up.
+      p The Commission will be asked to develop a plan to modernize California’s early childhood learning and support systems and provide universal access to these improved systems for children from birth to age five. The Commission’s study will be designed to serve as a national model other states can adopt.
+      h4.ui.header A VISION FOR SUCCESS
+      p The underpinning of the Commission’s plan will be a set of principles for a high-quality system of early childhood and care in California. It will be based on the latest research and incorporate best practices from other states and nations. The Commission’s recommendations will be the focus of our California legislative agenda in 2016. They will also be a model for states across the nation to leverage.
+      p The Commission’s process will include a series of statewide events. Commissioners and Commission staff will seek input from practitioners in the field of early education and care, parents, educators, and respected researchers. After the plan is released we will advocate for its adoption with California’s opinion leaders and the public.
+
+    div.ui.segment
+      h3.ui.header Learn More:
+      div.ui.bulleted.list
+        div.item
+          a(href="https://www.commonsensemedia.org/kids-action/Right-Start-Commission", target="_blank") https://www.commonsensemedia.org/kids-action/Right-Start-Commission
+      div(style="margin-top:0.5em;")
+        a.ui.blue.button.large(href="/policy/submitasource", target="_blank") Submit a New Source
+    div.ui.segment
+      h3.ui.header Recommended Datasets:
+      div.ui.warning.message
+        i.icon.warning.circle
+        | No datasets exist
+      div(style="margin-top:0.5em;")
+        a.ui.blue.button.large(href="/policy/submitdata", target="_blank") Submit a New Dataset
+    div.ui.segment.reward
+      h3.ui.header Reward for Being Published:
+      div.ui.bulleted.list.large
+        div.item $2,500 stipend
+        div.item 
+         span.d4a D
+           span.f(style="color:#CC0001; font-weight:bold;") 4
+           | A 
+         |  tee-shirt
+        div.item Invited to our content creator’s private Slack channel
+    div.ui.segment
+      h3.ui.header
+         span.d4a D
+           span.f(style="color:#CC0001;") 4
+           | A 
+         |  Published Stories on 50% reduction of C02 emissions by 2030:
+      div.ui.info.message
+        i.icon.checkered.flag
+        | Be the first one, submit your data viz 
+        a(href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=submit@data4america.org&su=&tf=1", target="blank") submit@data4america.org
+    div.ui.segment
+      a(href="/faq", target="blank") Read our FAQ 
+      |  about submissions.
+    div.ui.segment
+      a.ui.red.button.huge(href="/upload", target="_blank") Submit a Story
+      a.ui.white.button.huge(href="/sponsorship/", target="_blank") More Issues
+    div.ui.segment
+      a(href="/sponsorship?select=Education,State", target="_blank") Co-Sponsor Policy
+      span.saperator ·
+      a(href="/sponsorship", target="_blank") Sponsor a New Policy Issue
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.white.email.huge.button.fluid(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/", data-text="Reform the Criminal Justice System in the United States",style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/",style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url="http://test.data4america.org/issue/reform-criminal-justice/federal/usa/", data-text="Reform the Criminal Justice System in the United States",style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet

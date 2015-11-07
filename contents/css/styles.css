@@ -52839,6 +52839,11 @@ body.embed {
 #dfa-policy-issue h2.ui.header .red {
   color: #CC0505;
 }
+#dfa-policy-issue .say-thanks {
+  display: block;
+  padding: 0.6em 0.8em;
+  margin-top: 0.5em;
+}
 #dfa-policy-issue .ui.statistics .statistic {
   margin-bottom: 0;
 }

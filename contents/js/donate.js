@@ -529,7 +529,7 @@
 
 
     var sponsorOptions = [
-      { name: 'Criminal Justice', options: [ 'Drug policy', 'Death penalty', 'Gun control', 'Background checks for gun purchases' ] },
+      { name: 'Criminal Justice', options: [ 'Criminal justice reform', 'Drug policy', 'Death penalty', 'Gun control', 'Sex work', 'Background checks for gun purchases' ] },
       { name: 'Culture and Society', options: [ 'Race and Gender', 'Government and Religion', 'Abortion', 'Arts', 'Civil Rights', 'Religious Freedom Act', 'Gay marriage', 'Police voilence and Race', 'Wage and Race', 'Wage and Gender', 'Voting oppertunities by race/gender/class' ] },
       { name: 'Domestic Policy', options: [ 'Immigration', 'Border security', 'Birthright citizenship', 'Temporary amnesty', 'NSA Surveillance', 'Campaign finance', 'Net Neutrality', 'Affirmative action', 'Patriot Act', 'Gerrymandering', 'Confederate flag'] },
       { name: 'Economic Affairs', options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Reform', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes'] },
