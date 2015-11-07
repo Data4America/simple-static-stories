@@ -25,8 +25,8 @@
     '   </tr>' +
     '   <tr class="dfa-field dfa-field-member">' +
     '     <td>' +
-    '       <p>Data4America Memberships are annual opportunities to support 100% of our work.</p>' +
-    '       <p>Here\'s what you\'ll receive as a Founding Member:</p>' +
+    '       <div>Data4America Memberships are annual opportunities to support 100% of our work.</div>' +
+    '       <div style="margin:1.5em auto 1em">Here\'s what you\'ll receive as a Founding Member:</div>' +
     '       <ol>' +
     '         <li>Attend the annual Data4America Conference in San Francisco, CA.</li>' +
     '         <li>Get invited to attend monthly fireside chats held in San Francisco or Washington D.C. These chats are highlighted by local and national experts across the technology, data science, media, and public policy spaces.</li>' +
@@ -174,26 +174,30 @@
     '   <tr id="dfa-cheque" style="display:none;">' +
     '     <td style="background-color: #eee; border-radius: 10px; padding: 1em;">' +
     '       <h1 style="text-align:center;">Sponsor a Channel by Check</h1>' +
-    '       <p>Please make your donation check payable to: <strong>Data4America, Inc.</strong>.</p>' +
-    '       <p>For Policy Issue sponsorships, please write the issue in the memo of the check. Indicate what city, state, or country it is for.</p>' +
+    '       <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
+    '       <p>For Policy Issue sponsorships, please write the name of the issue in the memo of your check. Indicate what city, state, or country it is for.</p>' +
     '       <p>If you\'re sponsoring a policy channel in honor of someone or want to sponsor a channel anonymously please write that in the memo of your check too.</p>' +
-    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Data4America<br />' +
-    '       1927 Greenwich St<br />' +
-    '       San Francisco, CA 94123<br />' +
-    '       EIN: 47-4629656</p>' +
+    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
+    '       Attn: Gifts Administration // Data4America<br />' +
+    '       2440 West El Camino Real, Suite 300<br />' +
+    '       Mountain View, CA 94040<br />' +
+    '       EIN: 20-5205488</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
     '   <tr id="dfa-cheque-member" style="display:none;">' +
     '     <td style="background-color: #eee; border-radius: 10px; padding: 1em;">' +
     '       <h1 style="text-align:center;">Become a Member by Check</h1>' +
-    '       <p>Please make your donation check payable to: <strong>Data4America, Inc.</strong>.</p>' +
+    '       <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
     '       <p>If you\'re becoming a member in honor of someone or want to become a member anonymously, please write that in the memo of your check.</p>' +
-    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Data4America<br />' +
-    '       1927 Greenwich St<br />' +
-    '       San Francisco, CA 94123<br />' +
-    '       EIN: 47-4629656</p>' +
+    '       <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
+    '       Attn: Gifts Administration // Data4America<br />' +
+    '       2440 West El Camino Real, Suite 300<br />' +
+    '       Mountain View, CA 94040<br />' +
+    '       EIN: 20-5205488</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
     '   <tr class="dfa-field action-buttons">' +
@@ -214,7 +218,7 @@
     '   </tr>' +
     '   <tr>' +
     '     <td style="padding-bottom:0;">' +
-    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America, Inc. is a California nonprofit corporation with a 501(c)(3) fiscal sponsorship from the Silicon Valley Community Foundation. A donation to Data4America is 100% tax deductible through this SVCF fiscal sponsorship.  Your tax deductible receipt will be sent in the next 30 days. Learn about SVCF: <a href="http://www.siliconvalleycf.org/" target="_blank">http://www.siliconvalleycf.org/</a>.</p>' +
+    '       <p style="color:#777; font-size:0.65em; text-align:left;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '     </td>' +
     '   </tr>' +
     ' </table>' +
@@ -362,14 +366,16 @@
     // CHECK MODULE
     ' <div id="dfa-cheque-mod">' +
     '   <h1 style="text-align:center;">Donate by Check</h1>' +
-    '   <p>Please make your donation check payable to: <strong>Data4America.org</strong>.</p>' +
-    '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a story, or want to become a founding member of Data4America, please write that in the memo of your check.</p>' +
-    '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Data4America<br />' +
-    '   1927 Greenwich St<br />' +
-    '   San Francisco, CA 94123<br />' +
-    '   EIN: 47-4629656</p>' +
+    '   <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
+    '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a Policy Issue, or want to become a founding member of Data4America, please write that in the memo of your check too.</p>' +
+    '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
+    '   Attn: Gifts Administration // Data4America<br />' +
+    '   2440 West El Camino Real, Suite 300<br />' +
+    '   Mountain View, CA 94040<br />' +
+    '   EIN: 20-5205488</p>' +
     '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
-    '   <p style="color:#777; font-size:0.8em;">Data4America, Inc. is a California nonprofit corporation with a 501(c)(3) fiscal sponsorship from the Silicon Valley Community Foundation. A donation to Data4America is 100% tax deductible through this SVCF fiscal sponsorship.  Your tax deductible receipt will be sent in the next 30 days. Learn about SVCF: <a href="http://www.siliconvalleycf.org/" target="_blank">http://www.siliconvalleycf.org/</a>.</p>' +
+    '   <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
+    '   <p style="color:#777; font-size:0.8em;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
     '   </p>' +
@@ -665,6 +671,8 @@
       $('.dfa-field.choose-donation').hide();
       $('.dfa-field.donation-input').hide();
       $priceArrows.show();
+      $secCheque.hide();
+      $memberCheque.hide();
 
       $amount.find('.postinput').html('One Time');
       $input.attr('type', 'text');
@@ -843,7 +851,7 @@
       if ($modal.length) {
         $modal.parents('.ui.dimmer.modals').scrollTop(0);
       } else {
-        $(window).scrollTop($('#dfa-content').offset().top);
+        $(window).scrollTop($('#dfa-content').offset().top - 70);
       }
     }
 
