@@ -4,7 +4,7 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
-  div#dfa-policy-issue.ui.segments
+  div#dfa-policy-issue.ui.segments(data-title="Legalize Sex Work in the United States")
     div.ui.segment
       h1.ui.header.center.aligned POLICY ISSUE
       div.ui.divider
@@ -31,8 +31,7 @@ block content
             a(href="https://www.linkedin.com/in/cyanb", target="_blank")
               i.ui.icon.linkedin(style="color:#0077B5;")
 
-      div
-        i.ui.twitter.icon(style="color:#0084B4;")
+      div(style="padding-left: 0.8em; font-size: 0.9em; font-weight: bold;")
         a.say-thanks(href="javascript:;", data-text="Thanks to @cyantist for sponsoring the Legalize Sex Work in United States", data-url="http://test.data4america.org/issue/sex-work/federal/usa/") Say Thanks
 
       p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 

@@ -194,9 +194,13 @@ $(document).ready(function() {
   if ($('article.article.big').length) {
     var title = $('.dfa-article-header .ui.header').html();
     $('.dfa-header-title').html(title);
+  } else if ($('#dfa-policy-issue').length) {
+    var title = $('#dfa-policy-issue').attr('data-title');
+    $('.dfa-header-title').html(title);
   } else {
     $('.dfa-header-article-share').remove();
   }
+
 
   if (window.location.pathname.search("/donate") === 0
       || window.location.pathname.search("/sponsorship") === 0) {
@@ -239,16 +243,15 @@ $(document).ready(function() {
       if (window.location.pathname.search("/sponsorship") === 0) {
         $('.dfa-link-sponsor').trigger('click');
 
-
-        values = localStorage.getItem('cosponsor');
+        var values = localStorage.getItem('cosponsor');
         if (values && values.length) {
           console.log(values);
           values = values.split(',');
 
-          var top = $('.dfa-donate').offset().top;
+          var top = $('.dfa-donate').offset().top + 220;
           $("html, body").animate({ scrollTop: top }, 1000);
 
-          localStorage.setItem('cosponsor', null);
+          localStorage.setItem('cosponsor', '');
 
           $('.dfa-select[name="sponsor_issue"] option[value="' + decodeURI(values[0]) + '"]').prop('selected', true);
           $('.dfa-button.dfa-step-button[data-step="country"]').trigger('click');
