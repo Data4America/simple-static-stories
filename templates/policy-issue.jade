@@ -9,9 +9,9 @@ block content
   div#dfa-policy-issue.ui.segments(data-title=issue.title)
 
     - if(issue.demo)
-      div.ui.inverted.segment.teal
+      div.ui.inverted.segment.grey(style="background-color: #B3B3B3 !important;")
         i.info.circle.icon
-        | This page does not represent an actual policy issue and is only for demo purposes.
+        | This page does not represent an actual sponsored policy issue. It’s for demo purposes-only.
 
     div.ui.segment
       h1.ui.header.center.aligned POLICY ISSUE
@@ -37,7 +37,12 @@ block content
         div.item
           img.ui.avatar.image(src=sponsor.img, style="border-radius: 4px;")
           div.content
-            div.header= sponsor.name
+            div.header
+              = sponsor.name
+              - if (sponsor.desc)
+                | , 
+                span.desc(style="color: #666; font-size: 0.9em;")
+                  = sponsor.desc
             if sponsor.twitter
               a(href=sponsor.twitter, target="_blank")
                 i.ui.icon.twitter(style="color:#0084B4;")
@@ -50,8 +55,8 @@ block content
             if sponsor.wikipedia
               a(href=sponsor.wikipedia, target="_blank")
                 img(src="/img/wikipedia.png", style="width: 21px; height: 21px; display: inline-block;margin-bottom: -0.24em;")
-            span.saperator(style="padding: 0 .4em; vertical-align:middle;") ·
-            a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=issue.url, style="font-size: 0.6em;") Say Thanks
+            div(style="line-height: 0.7em; padding-left: 0.15em;")
+              a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=issue.url, style="font-size: 0.6em;") Say Thanks
 
       p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
         span.d4a Data

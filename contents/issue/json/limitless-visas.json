@@ -7,7 +7,8 @@
   "titleBreak": true,
   "demo": true,
   "sponsor": {
-    "name": "Marc Benioff, CEO @Salesroce",
+    "name": "Marc Benioff",
+    "desc": "CEO @Salesforce",
     "img": "/img/marc-beinoff.jpeg",
     "twitter": "https://twitter.com/Benioff",
     "linkedin": "https://www.linkedin.com/in/marcbenioff",
