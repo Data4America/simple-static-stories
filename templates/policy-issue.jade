@@ -9,7 +9,7 @@ block content
   div#dfa-policy-issue.ui.segments(data-title=issue.title)
 
     - if(issue.demo)
-      div.ui.inverted.segment.grey(style="background-color: #B3B3B3 !important;")
+      div.ui.inverted.segment.grey(style="background-color: #D4D4D4 !important;font-size: 0.85em;")
         i.info.circle.icon
         | This page does not represent an actual sponsored policy issue. It’s for demo purposes-only.
 
@@ -30,7 +30,7 @@ block content
         div.ui.twitter.button.circular.icon(data-text=issue.title, data-url=issue.url)
           i.ui.twitter.icon
 
-    div.ui.segment
+    div.ui.segment.sponsor
       h3.ui.header Sponsored By:
       div.ui.horizontal.list.massive
         - var sponsor = issue.sponsor
@@ -41,7 +41,7 @@ block content
               = sponsor.name
               - if (sponsor.desc)
                 | , 
-                span.desc(style="color: #666; font-size: 0.9em;")
+                span.desc(style="color: #999; font-size: 0.9em;")
                   = sponsor.desc
             if sponsor.twitter
               a(href=sponsor.twitter, target="_blank")

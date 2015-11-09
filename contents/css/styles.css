@@ -52897,6 +52897,11 @@ body.embed {
 #dfa-policy-issue .ui.button {
   -webkit-print-color-adjust: exact;
 }
+@media only screen and (max-width: 767px) {
+  #dfa-policy-issue .ui.segment.sponsor .ui.list .header {
+    display: inline;
+  }
+}
 .dfa-share .button {
   -webkit-print-color-adjust: exact;
 }
