@@ -7,6 +7,12 @@ block prepend title
 block content
   - var issue = contents.issue.json[page.metadata.json].metadata
   div#dfa-policy-issue.ui.segments(data-title=issue.title)
+
+    - if(issue.demo)
+      div.ui.inverted.segment.teal
+        i.info.circle.icon
+        | This page does not represent an actual policy issue and is only for demo purposes.
+
     div.ui.segment
       h1.ui.header.center.aligned POLICY ISSUE
       div.ui.divider
@@ -23,11 +29,6 @@ block content
           i.ui.facebook.icon
         div.ui.twitter.button.circular.icon(data-text=issue.title, data-url=issue.url)
           i.ui.twitter.icon
-
-    - if(issue.demo)
-      div.ui.inverted.segment.teal
-        i.info.circle.icon
-        | This page does not represent an actual policy issue and is only for demo purposes.
 
     div.ui.segment
       h3.ui.header Sponsored By:
@@ -135,9 +136,9 @@ block content
       a.ui.white.button.large(href="/sponsorship/", target="_blank") More Issues
 
     div.ui.segment
-      a.cosponsor(href="/sponsorship", target="_blank", data-value=issue.name + ',' + issue.geographicLevel) Co-Sponsor Policy Issue
+      a.cosponsor(href="/sponsorship", target="_blank", data-value=issue.name + ',' + issue.geographicLevel) Co-Sponsor
       span.saperator ·
-      a(href="/sponsorship", target="_blank") Sponsor a New Policy Issue
+      a(href="/sponsorship", target="_blank") Sponsor New Policy Issue
 
   div.ui.basic.segment.dfa-share
     div.ui.equal.width.grid.stackable

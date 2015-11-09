@@ -310,6 +310,7 @@ header {
   background-size: cover;
   cursor: pointer;
   display:block;
+  -webkit-print-color-adjust: exact;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -884,8 +885,19 @@ body.embed {
     background: rgb(231,238,247);
   }
 
+  .ui.segment {
+    -webkit-print-color-adjust: exact;
+  }
+
+  .ui.button {
+    -webkit-print-color-adjust: exact;
+  }
+
 }
 
+.dfa-share .button {
+  -webkit-print-color-adjust: exact;
+}
 
 #dfa-policy-issues {
   .ui.segment.dfa-table {
@@ -926,3 +938,12 @@ body.embed {
 
   }
 }
+
+@media print {
+  #dfa-menu-floating { display:none; }
+  #dfa-footer { display:none; }
+  #dfa-menu { display:none; }
+  #dfa-header { display:none !important; }
+}
+
+
