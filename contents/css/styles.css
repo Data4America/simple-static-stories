@@ -52887,10 +52887,8 @@ body.embed {
   color: #767676;
   margin: 1em 0 0;
 }
-@media only screen and (max-width: 767px) {
-  #dfa-policy-issue .statistic.geo {
-    margin-top: 1em;
-  }
+#dfa-policy-issue .ui.styled.accordion {
+  background: #e7eef7;
 }
 #dfa-policy-issues .ui.segment.dfa-table {
   padding: 0;

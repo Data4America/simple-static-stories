@@ -1,0 +1,33 @@
+{
+  "title": "Universal access to education for children from birth to age five in the California",
+  "url": "http://test.data4america.org/issue/sex-work/federal/usa/",
+  "name": "Universal access to education for children from birth to age five",
+  "geography": "California",
+  "geographicLevel": "State",
+  "demo": true,
+  "sponsor": {
+    "name": "CommonSense Kids Action",
+    "img": "/img/common-sense-kids.png",
+    "twitter": "https://twitter.com/nextgenclimate",
+    "www": "https://nextgenclimate.org/",
+    "thanksText": "Thanks to @nextgenclimate for sponsoring the Modernize early childhood learning and support systems in the California."
+  },
+  "about": {
+    "paragraphs": [
+      "Common Sense Kids Action has a simple mission: to make kids and education our nation’s top priority. We believe that every child deserves a fair start. Access to high-quality early learning and health supports are key to ensuring every child has the opportunity to succeed in school and life.",
+      "The research is clear: learning starts early, and quality matters. There are many ideas for improving our education system, but one of the ways to make the biggest difference in the lives of our kids—and the success of our schools—is by investing in quality early childhood education, the teachers who nurture that learning, and the support programs our children need starting at birth—including health, nutrition, and quality child care.",
+      "Quality early learning experiences and engagements—with parents, teachers, and caregivers—lay the foundation for strong cognition and character. They help young children develop early language and math skills, encourage their social-emotional development, and nurture their curiosity. Investments in quality early childhood programs also bring significant economic benefits to the state and nation over time.",
+      "In order to provide our kids with an equal opportunity to thrive, we must make the health, education, and well-being of all children under five a top priority.",
+      "<strong>THE RIGHT START COMMISSION</strong>",
+      "Unfortunately, far too many of California’s early childhood systems do not have the resources to support all children, do not provide high-quality services, and inefficiently allocate the resources available. That’s why, starting in the spring of 2015, Common Sense Kids Action will convene a commission of the state’s leading policymakers, community leaders, and business leaders to examine our state’s early childhood programs from the bottom up.",
+      "The Commission will be asked to develop a plan to modernize California’s early childhood learning and support systems and provide universal access to these improved systems for children from birth to age five. The Commission’s study will be designed to serve as a national model other states can adopt.",
+      "<strong>A VISION FOR SUCCESS</strong>",
+      "The underpinning of the Commission’s plan will be a set of principles for a high-quality system of early childhood and care in California. It will be based on the latest research and incorporate best practices from other states and nations. The Commission’s recommendations will be the focus of our California legislative agenda in 2016. They will also be a model for states across the nation to leverage.",
+      "The Commission’s process will include a series of statewide events. Commissioners and Commission staff will seek input from practitioners in the field of early education and care, parents, educators, and respected researchers. After the plan is released we will advocate for its adoption with California’s opinion leaders and the public."
+    ]
+  },
+  "learnMore": [
+    "https://www.commonsensemedia.org/kids-action/Right-Start-Commission"
+  ],
+  "datasets": []
+}

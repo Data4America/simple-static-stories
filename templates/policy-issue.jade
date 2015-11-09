@@ -3,67 +3,102 @@ extends layout
 block prepend title
   | #{ page.title + ' - '}
 
+
 block content
-  div#dfa-policy-issue.ui.segments(data-title="Legalize Sex Work in the United States")
+  - var issue = contents.issue.json[page.metadata.json].metadata
+  div#dfa-policy-issue.ui.segments(data-title=issue.title)
     div.ui.segment
       h1.ui.header.center.aligned POLICY ISSUE
       div.ui.divider
       h2.ui.header.center.aligned
-        span(style="color:#CC0505;") Legalize Sex Work 
-        | in the 
-        span(style="color:#2185D0;") United States
+        span(style="color:#CC0505;")= issue.name
+        - if (issue.titleBreak)
+          br
+        |  in the 
+        span(style="color:#2185D0;")= issue.geography
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        div.ui.grey.email.button.circular.icon(data-text="Legalize Sex Work in the United States", data-url="http://test.data4america.org/issue/sex-work/federal/usa/")
+        div.ui.grey.email.button.circular.icon(data-text=issue.title, data-url=issue.url)
           i.icon.mail
-        div.ui.facebook.button.circular.icon(data-url="http://test.data4america.org/issue/sex-work/federal/usa/")
+        div.ui.facebook.button.circular.icon(data-url=issue.url)
           i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon(data-text="Legalize Sex Work in the United States", data-url="http://test.data4america.org/issue/sex-work/federal/usa/")
+        div.ui.twitter.button.circular.icon(data-text=issue.title, data-url=issue.url)
           i.ui.twitter.icon
+
+    - if(issue.demo)
+      div.ui.inverted.segment.teal
+        i.info.circle.icon
+        | This page does represent an actual policy and is only for demo purposes.
+
     div.ui.segment
       h3.ui.header Sponsored By:
       div.ui.horizontal.list.massive
+        - var sponsor = issue.sponsor
         div.item
-          img.ui.avatar.image(src="/img/cyan.jpg")
+          img.ui.avatar.image(src=sponsor.img, style="border-radius: 4px;")
           div.content
-            div.header Cyan Banister
-            a(href="https://twitter.com/cyantist", target="_blank")
-              i.ui.icon.twitter(style="color:#0084B4;")
-            a(href="https://www.linkedin.com/in/cyanb", target="_blank")
-              i.ui.icon.linkedin(style="color:#0077B5;")
-
-      div(style="padding-left: 0.8em; font-size: 0.9em; font-weight: bold;")
-        a.say-thanks(href="javascript:;", data-text="Thanks to @cyantist for sponsoring the Legalize Sex Work in United States", data-url="http://test.data4america.org/issue/sex-work/federal/usa/") Say Thanks
+            div.header= sponsor.name
+            if sponsor.twitter
+              a(href=sponsor.twitter, target="_blank")
+                i.ui.icon.twitter(style="color:#0084B4;")
+            if sponsor.linkedin
+              a(href=sponsor.linkedin, target="_blank")
+                i.ui.icon.linkedin(style="color:#0077B5;")
+            if sponsor.www
+              a(href=sponsor.www, target="_blank")
+                i.ui.icon.globe(style="color:#666;")
+            if sponsor.wikipedia
+              a(href=sponsor.wikipedia, target="_blank")
+                img(src="/img/wikipedia.png", style="width: 21px; height: 21px; display: inline-block;margin-bottom: -0.24em;")
+            span.saperator(style="padding: 0 .4em; vertical-align:middle;") ·
+            a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=issue.url, style="font-size: 0.6em;") Say Thanks
 
       p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
         span.d4a Data
           span.f 4
           | America
         |  Editorial Board approves.
-    div.ui.segment
-      h3.ui.header About Legalizing Sex Work:
-      p This Legalizing Sex Work policy calls for the United States to not to criminally penalize any person--adult or minor--for selling his or her own sexual services. Additionally, the U.S. should not criminally penalize those who purchase sexual services from adults.
+
+    div.ui.segment.about
+      h3.ui.header About this issue:
+      - if(issue.about.via)
+        p(style="font-size: 0.75em; margin-top: -1em; margin-bottom: 0.6em;") (via 
+          a(href=issue.about.via, target="_blank")= issue.about.via
+          | )
+
+      - for (key in issue.about.paragraphs)
+        p.para= issue.about.paragraphs[key]
+
     div.ui.segment
       h3.ui.header Learn More:
       div.ui.bulleted.list
-        div.item
-          a(href="http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/") http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/
-        div.item
-          a(href="http://www.economist.com/blogs/economist-explains/2015/08/economist-explains-13") http://www.economist.com/blogs/economist-explains/2015/08/economist-explains-13
-        div.item
-          a(href="http://prostitution.procon.org/view.subissues.php?issueID=000363") http://prostitution.procon.org/view.subissues.php?issueID=000363
-        div.item
-          a(href="https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/") https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/
-        div.item
-          a(href="http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6") http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6
-      div(style="margin-top:0.5em;")
-        a.ui.blue.button.large(href="/policy/submitasource", target="_blank") Submit a New Source
+        - for (key in issue.learnMore)
+          div.item
+            a(href=issue.learnMore[key], target="_blank")= issue.learnMore[key]
+      div.ui.styled.fluid.accordion.submit-source
+        div.title
+          i.dropdown.icon
+          |  Submit a New Source
+        div.content
+          iframe(src="https://docs.google.com/forms/d/1xOK9aOTswAMNKgb7U9NdLJ62kQK3uMEvsnP3xUp7TzI/viewform?embedded=true", width="100%", height="1315", frameborder="0", marginheight="0", marginwidth="0")
+
     div.ui.segment
       h3.ui.header Recommended Datasets:
-      div.ui.warning.message
-        i.icon.warning.circle
-        | No datasets exist
-      div(style="margin-top:0.5em;")
-        a.ui.blue.button.large(href="/policy/submitdata", target="_blank") Submit a New Dataset
+      - if (issue.datasets.length)
+        div.ui.bulleted.list
+          - for (key in issue.datasets)
+            div.item
+              a(href=issue.datasets[key], target="_blank")= issue.datasets[key]
+      - else
+        div.ui.warning.message
+          i.icon.warning.circle
+          | No datasets exist
+      div.ui.styled.fluid.accordion.submit-dataset
+        div.title
+          i.dropdown.icon
+          |  Submit a New Dataset
+        div.content
+          iframe(src="https://docs.google.com/forms/d/1HXvow45G2LoXs6jh4w2keIMcV2KvHy1BzVDFKKp_iV8/viewform?embedded=true", width="100%", height="1510", frameborder="0", marginheight="0", marginwidth="0")
+
     div.ui.segment.reward
       h3.ui.header Reward for Being Published:
       div.ui.bulleted.list.large
@@ -74,39 +109,48 @@ block content
            | A 
          |  tee-shirt
         div.item Invited to our content creator’s private Slack channel
+
     div.ui.segment
       h3.ui.header
          span.d4a D
            span.f(style="color:#CC0001;") 4
-           | A 
-         |  Published Stories on Legalize Sex Work:
+           | A
+         |  Published Stories on 
+         = issue.name
+         | :
       div.ui.info.message
         i.icon.checkered.flag
-        | Be the first one, submit your data viz:  
+        | Be the first one, submit your data viz: 
         a(href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=submit@data4america.org&su=&tf=1", target="blank") submit@data4america.org
+
     div.ui.segment
-      a(href="/faq", target="blank") Read our FAQ 
-      |  about submissions.
+      div.ui.accordion.faq
+        div.title
+          i.dropdown.icon
+          |  Read our FAQ
+        div.content FAQ
+
     div.ui.segment
       a.ui.red.button.large(href="/upload", target="_blank") Submit a Story
       a.ui.white.button.large(href="/sponsorship/", target="_blank") More Issues
+
     div.ui.segment
-      a.cosponsor(href="/sponsorship", target="_blank", data-value="Sex work,Federal") Co-Sponsor Policy Issue
+      a.cosponsor(href="/sponsorship", target="_blank", data-value=issue.name + ',' + issue.geographicLevel) Co-Sponsor Policy Issue
       span.saperator ·
       a(href="/sponsorship", target="_blank") Sponsor a New Policy Issue
 
   div.ui.basic.segment.dfa-share
     div.ui.equal.width.grid.stackable
       div.column
-        div.ui.white.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+        div.ui.white.email.huge.button.fluid(data-url=issue.url, data-text=issue.title,style="border-radius:0;")
           i.icon.mail
           span.text Email
       div.column
-        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+        div.ui.facebook.huge.fluid.button(data-url=issue.url, style="border-radius:0;")
           i.ui.facebook.icon
           span.text Share
       div.column
-        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+        div.ui.twitter.fluid.huge.button(data-url=issue.url, data-text=issue.title, style="border-radius:0;")
           i.ui.twitter.icon
           span.text Tweet
 

@@ -1,0 +1,27 @@
+{
+  "title": "Legalize Sex Work in the United States",
+  "url": "http://test.data4america.org/issue/sex-work/federal/usa/",
+  "name": "Legalize Sex Work",
+  "geography": "United States",
+  "geographicLevel": "Federal",
+  "sponsor": {
+    "name": "Cyan Banister",
+    "img": "/img/cyan.jpg",
+    "twitter": "https://twitter.com/cyantist",
+    "linkedin": "https://www.linkedin.com/in/cyanb",
+    "thanksText": "Thanks to @cyantist for sponsoring the Legalize Sex Work in United States"
+  },
+  "about": {
+    "paragraphs": [
+      "This Legalizing Sex Work policy calls for the United States to not to criminally penalize any person--adult or minor--for selling his or her own sexual services. Additionally, the U.S. should not criminally penalize those who purchase sexual services from adults."
+    ]
+  },
+  "learnMore": [
+    "http://thinkprogress.org/justice/2015/07/31/3686698/sex-work-legalize/",
+    "http://www.economist.com/blogs/economist-explains/2015/08/economist-explains-13",
+    "http://prostitution.procon.org/view.subissues.php?issueID=000363",
+    "https://www.amnesty.org/en/qa-policy-to-protect-the-human-rights-of-sex-workers/",
+    "http://www.businessinsider.com/sex-worker-explains-the-difference-between-legalizing-and-decriminalizing-prostitution-2015-6"
+  ],
+  "datasets": []
+}

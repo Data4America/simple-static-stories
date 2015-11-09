@@ -37,6 +37,10 @@ $(document).ready(function() {
     uncheckable: true,
   });
 
+  $('.submit-source.accordion').accordion();
+  $('.submit-dataset.accordion').accordion();
+  $('.faq.accordion').accordion();
+
   $('.dfa-ubi-nit .checkbox').checkbox();
   $('.dfa-tax-cuts .checkbox').checkbox();
 
@@ -196,11 +200,20 @@ $(document).ready(function() {
     $('.dfa-header-title').html(title);
   } else if ($('#dfa-policy-issue').length) {
     var title = $('#dfa-policy-issue').attr('data-title');
-    $('.dfa-header-title').html(title);
+    $('.dfa-header-title').html('ISSUE: ' + title);
   } else {
     $('.dfa-header-article-share').remove();
   }
 
+
+  if ($('#dfa-policy-issue').length) {
+    $('#dfa-policy-issue .about p.para').each(function() {
+      var html = $(this).html();
+      var e = document.createElement('div');
+      e.innerHTML = html;
+      $(this).html(e.childNodes[0].nodeValue);
+    });
+  }
 
   if (window.location.pathname.search("/donate") === 0
       || window.location.pathname.search("/sponsorship") === 0) {

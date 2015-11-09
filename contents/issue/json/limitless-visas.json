@@ -1,0 +1,36 @@
+{
+  "title": "Limitless H1-B Visas for high-skilled workers in the United States",
+  "url": "http://test.data4america.org/issue/limitless-h1b-visas/federal/usa/",
+  "name": "Limitless H1-B Visas for high-skilled workers",
+  "geography": "United States",
+  "geographicLevel": "Federal",
+  "titleBreak": true,
+  "demo": true,
+  "sponsor": {
+    "name": "Marc Benioff, CEO @Salesroce",
+    "img": "/img/marc-beinoff.jpeg",
+    "twitter": "https://twitter.com/Benioff",
+    "linkedin": "https://www.linkedin.com/in/marcbenioff",
+    "wikipedia": "https://en.wikipedia.org/wiki/Marc_Benioff",
+    "thanksText": "Thanks to @Benioff for sponsoring the Limitless H1-B Visas for high-skilled workers in the United States"
+  },
+  "about": {
+    "via": "http://www.mercurynews.com/business/ci_25516535/h-1b-visa-cap-reached-after-just-five",
+    "paragraphs": [
+      "Deeply frustrating Silicon Valley's tech industry, federal officials on Monday announced that the annual cap on the number of H-1B visas for skilled foreign workers has been reached less than a week after applications for the controversial program were accepted.",
+      "Despite criticism that companies often abuse the visas by paying low wages for the temporary workers and not supporting their bids for permanent residency, officials with local corporations and industry groups contend the foreign employees are vital to maintain this country's technological edge. And although Congress has so far balked at increasing the 85,000 visas currently issued, the tech executives vowed to keep pushing lawmakers to expand the program.",
+      "\"We've been advocating on this issue for over 10 years now and our executives are getting to the point where they are wondering whether there is ever going to be any action on this issue,\" said Emily Lam, vice president of federal issues for the Silicon Valley Leadership Group. But she added, \"we're still hopeful,\" noting that \"there's going to be a huge push this summer\" to increase the visas."
+    ]
+  },
+  "learnMore": [
+    "https://twitter.com/benioff/status/506666506034626560",
+    "http://www.redstate.com/2014/06/19/h1b-visas-bad-policy-bad-business/",
+    "http://money.cnn.com/2015/04/13/technology/h1b-cap-visa/",
+    "http://www.mercurynews.com/business/ci_25516535/h-1b-visa-cap-reached-after-just-five",
+    "http://www.nearshoreamericas.com/immigration-reform-tech-companies-h1b-visas/",
+    "http://www.wsj.com/news/articles/SB10001424127887324883604578396680112980530?mod=rss_economy&mg=reno64-wsj"
+  ],
+  "datasets": [
+    "https://blog.chartio.com/blog/the-data-behind-h1b-visas"
+  ]
+}
