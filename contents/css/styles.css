@@ -52364,15 +52364,6 @@ header {
   margin: 1em 0 0.7em 1.8em;
 }
 @media only screen and (max-width: 767px) {
-  #dfa-menu {
-    display: none;
-  }
-  #dfa-slogan {
-    display: none;
-  }
-  #dfa-menu-mobile {
-    display: none;
-  }
   #dfa-slogan {
     font-size: 1em;
     margin: 1em 0;
@@ -52913,8 +52904,6 @@ body.embed {
 }
 #dfa-policy-issues .ui.table td.issue-title {
   width: 50%;
-  font-size: 1.1em;
-  font-weight: bold;
 }
 #dfa-policy-issues .ui.table td.sponsors {
   width: 30%;
@@ -52937,6 +52926,11 @@ body.embed {
 }
 #dfa-policy-issues .ui.table .ui.list > .item > img.image {
   border-radius: 5px;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-policy-issues .ui.table thead {
+    display: none;
+  }
 }
 @media print {
   #dfa-menu-floating {
