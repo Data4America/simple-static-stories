@@ -40,6 +40,7 @@ html(lang='en')
             div.container
               div.logo.item
                 a.logo(href="/")
+              a.item(href="/about/") About
               a.item.dfa-btn-subscribe(href="javascript:;") Subscribe
               a.item(href="/policy-issues/") Issues
               div.ui.dropdown.icon.item
@@ -104,16 +105,12 @@ html(lang='en')
 
       div.ui.container.text(style="margin-bottom:80px;")
         div#dfa-logo-footer
-        div#dfa-menu-footer
-          ul
-            li
-              a.item(href="/about/") ABOUT
-            li
-              a.item(href="/donate/") DONATE
-            li
-              a.item(href="/team/") TEAM
-            li
-              a.item(href="/upload/") SUBMIT
+
+        div#dfa-menu-footer.ui.four.item.main.menu
+          a.item(href="/about/") ABOUT
+          a.item(href="/donate/") DONATE
+          a.item(href="/team/") TEAM
+          a.item(href="/upload/") SUBMIT
 
         div.ui.divider
 
