@@ -84,7 +84,7 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 3
-        |  Your region details
+        |  #[span.regionNameText] details
       div.ui.divider
       div.ui.form
         div.two.fields
@@ -213,7 +213,7 @@ block content
               td Region Name
               td 
                 a.changeStep(href="javascript:;",data-step="4")
-                  #[span#reviewRegionName]
+                  #[span.regionNameText]
             tr
               td Number of adults
               td 
@@ -265,7 +265,7 @@ block content
 
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        h3.ui.header Thank your generating a data model for <span id="regionNameTextEnd"></span>!
+        h3.ui.header Thank your generating a data model for #[span.regionNameText]!
         p Please share it with your friends and family.
         div.ui.grey.email.button.circular.icon
           i.icon.mail

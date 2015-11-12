@@ -121,7 +121,6 @@ function basicIncomeInit() {
     };
 
     var textEls = {
-        reviewRegionName: document.getElementById('reviewRegionName'),
         reviewNumAdults: document.getElementById('reviewNumAdults'),
         reviewGdp: document.getElementById('reviewGdp'),
         reviewTaxAsPercentGdp: document.getElementById('reviewTaxAsPercentGdp'),
@@ -130,7 +129,7 @@ function basicIncomeInit() {
         reviewCutsTaxes: document.getElementById('reviewCutsTaxes'),
         reviewGdpRangeMin: document.getElementById('reviewGdpRangeMin'),
         reviewGdpRangeMax: document.getElementById('reviewGdpRangeMax'),
-        regionNameTextEnd: document.getElementById('regionNameTextEnd')
+        regionNameText: document.getElementsByClassName('regionNameText')
     };
 
     state2form(state, formEls, textEls);
@@ -422,9 +421,6 @@ function basicIncomeInit() {
         }
 
         // Review slide, other text content
-        if (textEls.reviewRegionName) {
-            textEls.reviewRegionName.innerHTML = state.regionName[0];
-        }
         if (textEls.reviewNumAdults) {
             textEls.reviewNumAdults.innerHTML = state.numAdults[0];
         }
@@ -449,8 +445,10 @@ function basicIncomeInit() {
         if (textEls.reviewGdpRangeMax) {
             textEls.reviewGdpRangeMax.innerHTML = state.gdpRangeMax;
         }
-        if (textEls.regionNameTextEnd) {
-            textEls.regionNameTextEnd.innerHTML = state.regionName[0];
+        if (textEls.regionNameText) {
+            for (var i = 0; i < textEls.regionNameText.length; i++) {
+                textEls.regionNameText[i].innerHTML = state.regionName[0];
+            }
         }
     }
 

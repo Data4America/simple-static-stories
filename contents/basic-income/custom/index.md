@@ -10,7 +10,7 @@ child: true
 
 <link rel="stylesheet" type="text/css" href="../basic-income.css">
 
-<h2>Basic income model for <span id="regionNameTextEnd"></span></h2>
+<h2>Basic income model for <span class="regionNameText"></span></h2>
 
 <table class="ui definition table">
   <thead>
