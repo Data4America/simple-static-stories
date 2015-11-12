@@ -20,8 +20,11 @@ block content
             tr
               td.issue-title
                 a(href=issue.url, target="_blank")= issue.name
-              td= issue.geography
+              td
+               h4.ui.header.mobile GEOGRAPHY:
+               = issue.geography
               td.sponsors
+                h4.ui.header.mobile SPONSORED BY:
                 - var sponsor = issue.sponsor
                 div.ui.divided.list
                   div.item

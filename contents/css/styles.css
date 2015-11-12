@@ -52902,6 +52902,9 @@ body.embed {
 #dfa-policy-issues .ui.table .say-thanks {
   font-size: 0.8em;
 }
+#dfa-policy-issues .ui.table .ui.list {
+  margin-top: 0;
+}
 #dfa-policy-issues .ui.table .ui.list > .item > img.image + .content {
   padding-left: 0.2em;
 }
@@ -52914,9 +52917,20 @@ body.embed {
 #dfa-policy-issues .ui.table .ui.list > .item > img.image {
   border-radius: 5px;
 }
+#dfa-policy-issues .ui.header.mobile {
+  display: none;
+}
 @media only screen and (max-width: 767px) {
   #dfa-policy-issues .ui.table thead {
     display: none;
+  }
+  #dfa-policy-issues .ui.header.mobile {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: #767676;
+    font-size: 0.6em;
+    font-weight: normal;
   }
 }
 @media print {
@@ -52932,4 +52946,10 @@ body.embed {
   #dfa-header {
     display: none !important;
   }
+}
+#dfa-coalitions .ui.bulleted.list .item {
+  word-wrap: break-word;
+  font-size: 1em;
+  line-height: 1.6em;
+  font-weight: lighter;
 }
