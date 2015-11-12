@@ -11,6 +11,18 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
+            regionName: ['', ''],
+            numAdults: [0, ''],
+            taxAsPercentGdp: [0, ''],
+            gdp: [0, ''],
+            basicIncome: 7.25 * 40 * 50,
+            basicIncomeType: 'minimumWage',
+            ubiOrNit: 'nit',
+            cutsTaxes: [],
+            gdpRangeMin: -1,
+            gdpRangeMax: 1
+        };
+/*    var defaultState = {
         regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
         numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
         taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
@@ -28,7 +40,7 @@ function basicIncomeInit() {
         ],
         gdpRangeMin: -5,
         gdpRangeMax: 15
-    };
+    };*/
     var updating = false;
 
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
