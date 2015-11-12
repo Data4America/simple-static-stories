@@ -35,3 +35,13 @@
   font-size: 16px !important;
   line-height: 1.6em !important;
 }
+
+#cutsTaxesAdd, .cutsTaxesRemove {
+  cursor: pointer;
+}
+
+.cutsTaxesRemoveContainer {
+  float: left;
+  margin-right: 9px;
+  padding-top: 9px;
+}

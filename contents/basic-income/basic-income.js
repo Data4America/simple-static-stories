@@ -349,7 +349,7 @@ function basicIncomeInit() {
     function cutsTaxesRow(entry, i) {
         entry = entry !== undefined ? entry : ['', '', ''];
 
-        return '<div class="four fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div><div class="field"><a class="cutsTaxesRemove" data-i="' + i + '">Remove</a></div></div>';
+        return '<div class="cutsTaxesRemoveContainer"><a class="cutsTaxesRemove" data-i="' + i + '">X</a></div><div class="three fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div></div>';
     }
 
     function addCutsTaxesRow() {
@@ -414,7 +414,7 @@ function basicIncomeInit() {
             state.cutsTaxes.forEach(function (entry, i) {
                 formEls.cutsTaxesEntries.innerHTML += cutsTaxesRow(entry, i);
             });
-            formEls.cutsTaxesEntries.innerHTML += '<a id="cutsTaxesAdd">Add entry</a>';
+            formEls.cutsTaxesEntries.innerHTML += '<a id="cutsTaxesAdd">+ Add</a>';
             document.getElementById('cutsTaxesAdd').addEventListener('click', addCutsTaxesRow);
             Array.prototype.forEach.call(document.getElementsByClassName('cutsTaxesRemove'), function (removeEl) {
                 removeEl.addEventListener('click', removeCutsTaxesRow);
