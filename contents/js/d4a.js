@@ -140,6 +140,7 @@ $(document).ready(function() {
   });
 
   $('.ui.button.facebook, .dfa-header-article-share.fb').click(function() {
+    console.log(this.dataset.url);
     FB.ui({
         method: 'share',
         href: this.dataset.url
@@ -199,6 +200,8 @@ $(document).ready(function() {
   } else if ($('#dfa-policy-issue').length) {
     var title = $('#dfa-policy-issue').attr('data-title');
     $('.dfa-header-title').html('ISSUE: ' + title);
+  } else if ($('#dfa-policy-issues').length) {
+    $('.dfa-header-title').html('POLICY ISSUES');
   } else {
     $('.dfa-header-article-share').remove();
   }
@@ -264,7 +267,7 @@ $(document).ready(function() {
 
           localStorage.setItem('cosponsor', '');
 
-          $('.dfa-select[name="sponsor_issue"] option[value="' + decodeURI(values[0]) + '"]').prop('selected', true);
+          $('.dfa-select[name="sponsor_issue"] option[value="' + values[0] + '"]').prop('selected', true);
           $('.dfa-button.dfa-step-button[data-step="country"]').trigger('click');
         }
       }
