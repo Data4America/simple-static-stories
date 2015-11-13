@@ -896,20 +896,27 @@ body.embed {
     }
 
     .ui.list > .item > img.image + .content {
-      padding-left: 0.2em;
+      padding-left: 0.5em;
     }
 
     .ui.list > .item {
       padding:0.5em 0;
+      display: table-row;
+    }
+
+    .ui.list > .item .content {
+      display: table-cell;
+    }
+
+    .ui.list > .item > img.image {
+      display: table-cell;
+      border-radius: 5px;
     }
 
     .ui.list > .item .header {
       font-size:0.9em;
     }
 
-    .ui.list > .item > img.image {
-      border-radius: 5px;
-    }
   }
 
   .ui.header.mobile {
@@ -926,6 +933,10 @@ body.embed {
       color: @grey;
       font-size: 0.6em;
       font-weight: normal;
+    }
+
+    .ui.table .ui.list {
+      margin-top:0.5em;
     }
   }
 

@@ -10,6 +10,11 @@ block content
     div.ui.divider
     article.page
       section.content!= typogr(page.html).typogrify()
+      h1 Our Team
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });
       include teamGrid
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.founder || p.boardOfDirectors || p.editorialBoard; });
+      mixin teamGrid(people)
+      h1 Advisors
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.advisor; });
       mixin teamGrid(people)

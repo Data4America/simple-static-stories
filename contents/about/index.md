@@ -11,9 +11,4 @@ Data4America.org is an educational and non-partisan non-profit bringing data sci
 
 Our non-partisan Editorial Board evaluates and votes on the crowdsourced data journalism. Published stories are syndicated to media partners and promoted throughout social media. The underlying data sets and code bases can be open sourced for anyone to use--for free. Published stories include a "Create Your Own" element so anyone can re-generate the story with their own unique data set. Creators of published stories and open data sets receive stipends.
 
-**Learn More:** <a href="http://www.slideshare.net/chrisamccoy/overviewdata4america-53813698" target="_blank">http://www.slideshare.net/chrisamccoy/overviewdata4america-53813698</a>
-
 **Want to get in touch??** Drop us a line to [chris@data4america.org](mailto:chris@data4america.org).
-
-## Board of Directors
-
