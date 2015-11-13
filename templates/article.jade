@@ -46,7 +46,9 @@ block content
 
     div.ui.segment
       include author
-      section.content!= typogr(page.html).typogrify()
+      section.content
+        block actual-content
+          div!= typogr(page.html).typogrify()
 
 block footer
   div.ui.segment.article-footer-links
