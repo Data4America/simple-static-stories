@@ -369,7 +369,10 @@ function basicIncomeInit() {
     function cutsTaxesRow(entry, i) {
         entry = entry !== undefined ? entry : ['', '', ''];
 
-        return '<div class="cutsTaxesRemoveContainer"><a class="cutsTaxesRemove" data-i="' + i + '">X</a></div><div class="three fields"><div class="eight wide field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="two wide field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="six wide field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div></div>';
+console.log(entry[2]);
+        var sourceText = entry[2] === '' ? '+ Add Source' : 'View Source';
+
+        return '<div class="cutsTaxesRemoveContainer"><a class="cutsTaxesRemove" data-i="' + i + '">X</a></div><div class="three fields"><div class="thirteen wide field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="three wide field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div></div><div style="margin-bottom: 12px; margin-left: 18px"><a onclick="(function () { console.log(this); this.parentElement.childNodes[1].style.display = \'block\'; this.style.display = \'none\'; }.bind(this)())">' + sourceText + '</a><input type="text" placeholder="Source URL" name="cutsTaxesSource" value="' + entry[2] + '" style="display: none" /></div></div>';
     }
 
     function addCutsTaxesRow() {
