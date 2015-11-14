@@ -114,6 +114,15 @@ function basicIncomeInit() {
     }
 
     // Initialize UI
+    function initSourceFields() {
+        var els = document.getElementsByClassName('ubiSource');
+        for (var i = 0; i < els.length; i++) {
+            els[i].innerHTML = '<a onclick="(function () { console.log(this); this.parentElement.childNodes[1].style.display = \'block\'; this.style.display = \'none\'; }.bind(this)())">+ Add Source</a><input type="text" placeholder="Source URL" id="' + els[i].dataset.name + '" style="display: none" />';
+        }
+    }
+
+    initSourceFields();
+
     var formEls = {
         regionName: document.getElementById('regionName'),
         regionNameSource: document.getElementById('regionNameSource'),

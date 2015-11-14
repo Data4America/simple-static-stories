@@ -88,20 +88,20 @@ block actual-content
           div.field
             label Number of adults
             input#numAdults(type="text")
-            input#numAdultsSource(type="text", placeholder="Source URL")
+            div.ubiSource(data-name="numAdultsSource")
         div.two.fields
           div.field
             label GDP (trillions)
             div.ui.left.labeled.input
               div.ui.label $
               input#gdp(type="text")
-            input#gdpSource(type="text", placeholder="Source URL")
+            div.ubiSource(data-name="gdpSource")
           div.field
             label
               | Tax revenue (fraction of GDP)
               i.help.icon.circle.ubi-popup(data-html='Add up all the tax revenue in your region and divide it by your region\'s GDP. This quantity <a href="https://en.wikipedia.org/wiki/Hauser%27s_law">tends to remain constant</a>, so it can be used to estimate the effects of basic income-induced GDP changes on total tax revenue.')
             input#taxAsPercentGdp(type="text")
-            input#taxAsPercentGdpSource(type="text", placeholder="Source URL")
+            div.ubiSource(data-name="taxAsPercentGdpSource")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
