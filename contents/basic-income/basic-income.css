@@ -49,3 +49,10 @@
 .ubiSource {
   margin-top: 8px;
 }
+
+@media (max-width: 767px) {
+  #dfa-content .item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
