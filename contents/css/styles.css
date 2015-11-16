@@ -52892,6 +52892,13 @@ body.embed {
 #dfa-policy-issues .ui.table td.issue-title {
   width: 50%;
 }
+#dfa-policy-issues .ui.table tr.category td {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.4em;
+  background-color: #F9FAFB;
+}
 #dfa-policy-issues .ui.table td.sponsors {
   width: 30%;
 }
@@ -52939,6 +52946,9 @@ body.embed {
   }
   #dfa-policy-issues .ui.table .ui.list {
     margin-top: 0.5em;
+  }
+  #dfa-policy-issues .ui.table tr.category {
+    padding: 0;
   }
 }
 @media print {

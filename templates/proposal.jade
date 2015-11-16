@@ -20,11 +20,6 @@ block content
 
   div.ui.segment.attached(style="min-height:400px; overflow:hidden;")
     div.dfa-slide
-      h1.ui.header Request for Content
-      div.ui.divider
-      p Some text here
-
-    div.dfa-slide
       h1.ui.header Environment and Climate Policy - Federal
       div.ui.divider
       p Data4America seeks a non-partisan and verified data tear down of the three big proposals about the environment: Cap and Trade vs. Carbon Tax vs. Do Nothing
@@ -62,7 +57,23 @@ block content
     span.saperator ·
     a(href="https://mail.google.com/mail/?view=cm&fs=1&to=submit@data4america.org&su=QUESTION:", target="_blank", style="color:white; font-weight:bold;") Ask a Question
     span.saperator ·
-    a(href="/sponsorship", target="_blank", style="color:white; font-weight:bold;") Fund this Story
+    a.cosponsor(href="/sponsorship", target="_blank", , data-value="Environment and Climate Policy,Federal", style="color:white; font-weight:bold;") Fund this Story
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+
 
 
 

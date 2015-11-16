@@ -3,7 +3,8 @@
 ##
 # Configuration options
 ##
-STAGING_BUCKET='s3://test.data4america.org/'
+TEST_BUCKET='s3://test.data4america.org/'
+TEST_UX_BUCKET='s3://test-ux.data4america.org/'
 LIVE_BUCKET='s3://stories.data4america.org/'
 SITE_DIR='build/'
 
@@ -12,10 +13,7 @@ SITE_DIR='build/'
 ##
 usage() {
 cat << _EOF_
-Usage: ${0} [staging | live]
-    
-    staging     Deploy to the staging bucket
-    live        Deploy to the live (www) bucket
+Usage: ${0} [test | test-ux | live]
 _EOF_
 }
 
@@ -53,9 +51,12 @@ fi
 if [[ "$1" = "live" ]]; then
     BUCKET=$LIVE_BUCKET
     green 'Deploying to live bucket'
+elif [[ "$1" = "test-ux" ]]; then
+    BUCKET=$TEST_UX_BUCKET
+    green 'Deploying to test-ux bucket'
 else
-    BUCKET=$STAGING_BUCKET
-    green 'Deploying to staging bucket'
+    BUCKET=$TEST_BUCKET
+    green 'Deploying to test bucket'
 fi
 
 

@@ -66,7 +66,6 @@ $(document).ready(function() {
   });
 
   $('.cosponsor').click(function() {
-    console.log('cosponsor');
     localStorage.setItem('cosponsor', $(this).attr('data-value'));
     return true;
   });
