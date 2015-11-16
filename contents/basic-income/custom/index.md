@@ -2,7 +2,7 @@
 title: "Modeling basic income - does it add up?"
 author: jeremy-scheff
 date: 2015-10-29
-template: article.jade
+template: page.jade
 code: https://github.com/Data4America/simple-static-stories/blob/development/contents/basic-income/basic-income.js
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
 child: true
@@ -10,7 +10,7 @@ child: true
 
 <link rel="stylesheet" type="text/css" href="../basic-income.css">
 
-<h2>Basic income model for <span class="regionNameText"></span></h2>
+<h2>Basic income model for <span class="regionNameText"></span> by <span class="personNameText"></span></h2>
 
 <table class="ui definition table">
   <thead>

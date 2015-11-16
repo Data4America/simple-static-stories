@@ -44,15 +44,10 @@ block actual-content
         |  Who are you?
       div.ui.divider
       div.ui.form
-        div.two.fields
-          div.field
-            label First Name
-            div.ui.huge.input
-              input(placeholder="First Name",type="text")
-          div.field
-            label Last Name
-            div.ui.huge.input
-              input(placeholder="Last Name",type="text")
+        div.field
+          label Name
+          div.ui.huge.input
+            input#name(placeholder="Name",type="text")
         div.field
           label Your email address
           div.ui.huge.input

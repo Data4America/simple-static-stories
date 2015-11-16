@@ -11,6 +11,7 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
+        name: '',
         regionName: ['', ''],
         numAdults: [0, ''],
         taxAsPercentGdp: [0, ''],
@@ -95,12 +96,18 @@ function basicIncomeInit() {
 
         var text = 'Check out my basic income model for ' + state.regionName[0];
 
-        document.getElementById('ubiShareTwitter').dataset.url = url;
-        document.getElementById('ubiShareTwitter').dataset.text = text;
-        document.getElementById('ubiShareFacebook').dataset.url = url;
-        document.getElementById('ubiShareFacebook').dataset.text = text;
-        document.getElementById('ubiShareEmail').dataset.url = url;
-        document.getElementById('ubiShareEmail').dataset.text = text;
+        if (document.getElementById('ubiShareTwitter')) {
+            document.getElementById('ubiShareTwitter').dataset.url = url;
+            document.getElementById('ubiShareTwitter').dataset.text = text;
+        }
+        if (document.getElementById('ubiShareFacebook')) {
+            document.getElementById('ubiShareFacebook').dataset.url = url;
+            document.getElementById('ubiShareFacebook').dataset.text = text;
+        }
+        if (document.getElementById('ubiShareEmail')) {
+            document.getElementById('ubiShareEmail').dataset.url = url;
+            document.getElementById('ubiShareEmail').dataset.text = text;
+        }
     }
 
     // Initialize UI
@@ -115,6 +122,7 @@ function basicIncomeInit() {
     }
 
     var formEls = {
+        name: document.getElementById('name'),
         regionName: document.getElementById('regionName'),
         regionNameSource: document.getElementById('regionNameSource'),
         numAdults: document.getElementById('numAdults'),
@@ -141,7 +149,8 @@ function basicIncomeInit() {
         reviewCutsTaxes: document.getElementById('reviewCutsTaxes'),
         reviewGdpRangeMin: document.getElementById('reviewGdpRangeMin'),
         reviewGdpRangeMax: document.getElementById('reviewGdpRangeMax'),
-        regionNameText: document.getElementsByClassName('regionNameText')
+        regionNameText: document.getElementsByClassName('regionNameText'),
+        personNameText: document.getElementsByClassName('personNameText')
     };
 
     state2form(state, formEls, textEls);
@@ -170,6 +179,7 @@ function basicIncomeInit() {
     if (unitedStatesDataLink) {
         unitedStatesDataLink.addEventListener('click', function () {
             state = {
+                name: state.name,
                 regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
                 numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
                 taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
@@ -409,7 +419,7 @@ function basicIncomeInit() {
 
     function state2form(state, formEls, textEls) {
         // Normal inputs
-        var input = ['basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['name', 'basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (formEls[input]) {
                 formEls[input].value = state[input];
@@ -490,11 +500,19 @@ function basicIncomeInit() {
                 textEls.regionNameText[i].innerHTML = state.regionName[0];
             }
         }
+        if (textEls.personNameText) {
+            for (var i = 0; i < textEls.personNameText.length; i++) {
+                textEls.personNameText[i].innerHTML = state.name;
+            }
+        }
 
         initSourceFields();
     }
 
     function form2state(state, formEls) {
+        // Text inputs
+        state.name = escape(formEls.name.value);
+
         // Sourced text inputs
         state.regionName[0] = escape(formEls.regionName.value);
 
