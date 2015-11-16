@@ -52210,6 +52210,12 @@ input::-moz-focus-inner {
   text-transform: none;
 }
 /*-------------------
+     TEXT STYLE
+--------------------*/
+.d4a .f {
+  font-style: italic;
+}
+/*-------------------
       MAIN HEADER
 --------------------*/
 header {
