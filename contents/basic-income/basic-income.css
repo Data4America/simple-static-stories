@@ -36,7 +36,7 @@
   line-height: 1.6em !important;
 }
 
-#cutsTaxesAdd, .cutsTaxesRemove {
+#cutsTaxesAdd, .cutsTaxesRemove, #united-states-data {
   cursor: pointer;
 }
 

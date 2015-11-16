@@ -11,36 +11,17 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
-            regionName: ['', ''],
-            numAdults: [0, ''],
-            taxAsPercentGdp: [0, ''],
-            gdp: [0, ''],
-            basicIncome: 7.25 * 40 * 50,
-            basicIncomeType: 'minimumWage',
-            ubiOrNit: 'nit',
-            cutsTaxes: [],
-            gdpRangeMin: -1,
-            gdpRangeMax: 1
-        };
-/*    var defaultState = {
-        regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
-        numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
-        taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
-        gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
+        regionName: ['', ''],
+        numAdults: [0, ''],
+        taxAsPercentGdp: [0, ''],
+        gdp: [0, ''],
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
-        cutsTaxes: [
-            ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-            ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-            ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
-        ],
-        gdpRangeMin: -5,
-        gdpRangeMax: 15
-    };*/
+        cutsTaxes: [],
+        gdpRangeMin: -1,
+        gdpRangeMax: 1
+    };
     var updating = false;
 
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
@@ -116,12 +97,13 @@ function basicIncomeInit() {
     // Initialize UI
     function initSourceFields() {
         var els = document.getElementsByClassName('ubiSource');
+        var stateEntry, sourceText;
         for (var i = 0; i < els.length; i++) {
-            els[i].innerHTML = '<a onclick="(function () { console.log(this); this.parentElement.childNodes[1].style.display = \'block\'; this.style.display = \'none\'; }.bind(this)())">+ Add Source</a><input type="text" placeholder="Source URL" id="' + els[i].dataset.name + '" style="display: none" />';
+            stateEntry = state[els[i].dataset.name.replace('Source', '')];
+            sourceText = stateEntry[1] === '' ? '+ Add Source' : 'View Source';
+            els[i].innerHTML = '<a onclick="(function () { console.log(this); this.parentElement.childNodes[1].style.display = \'block\'; this.style.display = \'none\'; }.bind(this)())">' + sourceText + '</a><input type="text" placeholder="Source URL" id="' + els[i].dataset.name + '" style="display: none" value="' + stateEntry[1] + '" />';
         }
     }
-
-    initSourceFields();
 
     var formEls = {
         regionName: document.getElementById('regionName'),
@@ -174,6 +156,32 @@ function basicIncomeInit() {
     });
 
     run(state);
+
+    var unitedStatesDataLink = document.getElementById('united-states-data');
+    if (unitedStatesDataLink) {
+        unitedStatesDataLink.addEventListener('click', function () {
+            state = {
+                regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
+                numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
+                taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
+                gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
+                basicIncome: 7.25 * 40 * 50,
+                basicIncomeType: 'minimumWage',
+                ubiOrNit: 'nit',
+                cutsTaxes: [
+                    ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+                    ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+                    ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                    ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                    ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                    ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
+                ],
+                gdpRangeMin: -5,
+                gdpRangeMax: 15
+            };
+            state2form(state, formEls, textEls);
+        });
+    }
 
     // ## Display results
     // -----------------
@@ -473,6 +481,8 @@ function basicIncomeInit() {
                 textEls.regionNameText[i].innerHTML = state.regionName[0];
             }
         }
+
+        initSourceFields();
     }
 
     function form2state(state, formEls) {
