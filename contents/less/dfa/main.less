@@ -182,7 +182,7 @@ header {
 }
 
 #dfa-menu,
-  #dfa-menu-mobile .ui.menu {
+ #dfa-menu-footer {
   z-index: 1;
   border-radius: 0;
   border: none;
@@ -190,48 +190,29 @@ header {
   box-shadow: none;
   margin: 0em 0 1em;
   font-size:1.2em;
+
+  .ui.container {
+    width: 855px;
+  }
+
+  a.item:before {
+    background: none;
+  }
+
+  a.item {
+    border: 0;
+    font-size:0.8em;
+    padding: 0.3em 0;
+    color: #002864;
+  }
+
+  a.item:hover {
+    background: #002864;
+    color:@white;
+  }
+
 }
 
-#dfa-menu .ui.container {
-  width: 855px;
-}
-
-#dfa-menu-mobile .ui.menu {
-  margin: 0;
-}
-
-#dfa-menu a.item:before,
-  #dfa-menu-mobile  a.item:before {
-  background: none;
-}
-
-#dfa-menu-mobile {
-  display: none;
-}
-
-#dfa-menu a.item {
-  border: 0;
-  font-size:0.7em;
-  padding: 0.3em 1.85em;
-  color: #002864;
-}
-
-#dfa-menu-mobile a.item {
-  border: 0;
-  font-size: 1em;
-  padding: 0;
-  color: #002864;
-}
-
-#dfa-menu-mobile .ui.menu.second a.item {
-  padding: 0;
-}
-
-#dfa-menu a.item:hover,
- #dfa-menu-mobile a.item:hover {
-  background: #002864;
-  color:@white;
-}
 
 #dfa-slogan {
   color: @grey;
@@ -243,18 +224,6 @@ header {
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
-  #dfa-menu {
-    display:none;
-  }
-
-  #dfa-slogan {
-    display:none;
-  }
-
-  #dfa-menu-mobile {
-    display:none;
-  }
-
   #dfa-slogan {
     font-size: 1em;
     margin: 1em 0;
