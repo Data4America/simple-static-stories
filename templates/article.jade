@@ -31,15 +31,6 @@ block content
             h1.ui.header= page.title
             div.extra Published on: 
               span= moment.utc(page.date).format('MMMM D, YYYY')
-      div.dfa-share(style="padding-bottom:1em;")
-        div.ui.grey.email.button.circular.icon
-          i.icon.mail
-        div.ui.facebook.button.circular.icon
-          i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon
-          i.ui.twitter.icon
-        a.circular.ui.icon.button.sms.orange(href="javascript:;")
-          i.icon-sms
 
     div.ui.segment
       mixin author(page.metadata.author)
