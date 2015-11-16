@@ -92,6 +92,15 @@ function basicIncomeInit() {
         var baseUrl = window.location.origin + '/basic-income/custom/';
         var url = baseUrl + '#' + encodeURIComponent(state2hash(state));
         document.getElementById('cliptext').value = url;
+
+        var text = 'Check out my basic income model for ' + state.regionName[0];
+
+        document.getElementById('ubiShareTwitter').dataset.url = url;
+        document.getElementById('ubiShareTwitter').dataset.text = text;
+        document.getElementById('ubiShareFacebook').dataset.url = url;
+        document.getElementById('ubiShareFacebook').dataset.text = text;
+        document.getElementById('ubiShareEmail').dataset.url = url;
+        document.getElementById('ubiShareEmail').dataset.text = text;
     }
 
     // Initialize UI
