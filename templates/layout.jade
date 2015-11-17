@@ -38,6 +38,7 @@ html(lang='en')
             div.container
               div.logo.item
                 a.logo(href="/")
+              a.item(href="/about/") About
               a.item.dfa-btn-subscribe(href="javascript:;") Subscribe
               a.item.dfa-btn-share(href="javascript:;") Share
               div.ui.dropdown.icon.item
@@ -63,15 +64,12 @@ html(lang='en')
 
           div#dfa-slogan Bringing Data Science to the understanding of Politics
 
-          div#dfa-menu.ui.main.menu
+          div#dfa-menu.ui.four.item.main.menu
             div.ui.text.container
-              a.item(href="/") STORIES
               a.item(href="/about/") ABOUT
-              a.item(href="/team/") OUR TEAM
               a.item(href="/donate/", style="color:#CC0505; font-weight:bold;") DONATE
-              a.item(href="/upload/") SUBMIT CONTENT
-              a.item(href="http://data.data4america.org/", target="_blank") DATA SETS
-              a.item(href="http://git.data4america.org/", target="_blank") GITHUB
+              a.item(href="/sponsorship/") SPONSOR
+              a.item(href="/upload/") SUBMIT
 
       div#dfa-subscribe-modal.ui.modal.small
         i.close.icon
@@ -103,22 +101,12 @@ html(lang='en')
 
       div.ui.container.text(style="margin-bottom:80px;")
         div#dfa-logo-footer
-        div#dfa-menu-footer
-          ul
-            li
-              a.item(href="/") STORIES
-            li
-              a.item(href="/about/") ABOUT
-            li
-              a.item(href="/team/") OUR TEAM
-            li
-              a.item(href="/donate/") DONATE
-            li
-              a.item(href="/upload/") SUBMIT CONTENT
-            li
-              a.item(href="http://data.data4america.org/") DATA SETS
-            li
-              a.item(href="http://git.data4america.org/") GITHUB
+
+        div#dfa-menu-footer.ui.four.item.main.menu
+          a.item(href="/about/") ABOUT
+          a.item(href="/donate/") DONATE
+          a.item(href="/sponsorship/") SPONSOR
+          a.item(href="/upload/") SUBMIT
 
         div.ui.divider
 
@@ -127,7 +115,7 @@ html(lang='en')
           span.d4a Data
             span.f(style="color:#CC0001") 4
             | America
-          |  publish non-partisan and Editorial Board-approved data science and data visualization stories about politics. 
+          |  publish Editorial Board-approved and non-partisan data visualization about politics. 
           a.dfa-btn-donate(href="javascript:;") Make a donation.
 
       div#dfa-footer(style="display:none;")

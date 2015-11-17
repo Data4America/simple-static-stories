@@ -7,7 +7,7 @@ There are two ways to submit a data story to the Data4America [Editorial Board](
 
 New submissions are reviewed and approved on a rolling basis.
 
-If selected, you’ll receive a $2,500 stipend from the Data4America organization.
+If selected, you’ll receive a $500 stipend from the Data4America organization.
 
 Your content will also be promoted under the Data4America brand with the “created by” attribution going to you. It also may be syndicated to our media partners around the world.
 

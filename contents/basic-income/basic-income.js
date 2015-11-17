@@ -11,23 +11,17 @@ function basicIncomeInit() {
     // ------------
     // These are just default values! The user can change most of them in the UI.
     var defaultState = {
-        regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
-        numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
-        taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
-        gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
+        name: '',
+        regionName: ['', ''],
+        numAdults: [0, ''],
+        taxAsPercentGdp: [0, ''],
+        gdp: [0, ''],
         basicIncome: 7.25 * 40 * 50,
         basicIncomeType: 'minimumWage',
         ubiOrNit: 'nit',
-        cutsTaxes: [
-            ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-            ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-            ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-            ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
-        ],
-        gdpRangeMin: -5,
-        gdpRangeMax: 15
+        cutsTaxes: [],
+        gdpRangeMin: -1,
+        gdpRangeMax: 1
     };
     var updating = false;
 
@@ -99,10 +93,36 @@ function basicIncomeInit() {
         var baseUrl = window.location.origin + '/basic-income/custom/';
         var url = baseUrl + '#' + encodeURIComponent(state2hash(state));
         document.getElementById('cliptext').value = url;
+
+        var text = 'Check out my basic income model for ' + state.regionName[0];
+
+        if (document.getElementById('ubiShareTwitter')) {
+            document.getElementById('ubiShareTwitter').dataset.url = url;
+            document.getElementById('ubiShareTwitter').dataset.text = text;
+        }
+        if (document.getElementById('ubiShareFacebook')) {
+            document.getElementById('ubiShareFacebook').dataset.url = url;
+            document.getElementById('ubiShareFacebook').dataset.text = text;
+        }
+        if (document.getElementById('ubiShareEmail')) {
+            document.getElementById('ubiShareEmail').dataset.url = url;
+            document.getElementById('ubiShareEmail').dataset.text = text;
+        }
     }
 
     // Initialize UI
+    function initSourceFields() {
+        var els = document.getElementsByClassName('ubiSource');
+        var stateEntry, sourceText;
+        for (var i = 0; i < els.length; i++) {
+            stateEntry = state[els[i].dataset.name.replace('Source', '')];
+            sourceText = stateEntry[1] === '' ? '+ Add Source' : 'View Source';
+            els[i].innerHTML = '<a onclick="(function () { console.log(this); this.parentElement.childNodes[1].style.display = \'block\'; this.style.display = \'none\'; }.bind(this)())">' + sourceText + '</a><input type="text" placeholder="Source URL" id="' + els[i].dataset.name + '" style="display: none" value="' + stateEntry[1] + '" />';
+        }
+    }
+
     var formEls = {
+        name: document.getElementById('name'),
         regionName: document.getElementById('regionName'),
         regionNameSource: document.getElementById('regionNameSource'),
         numAdults: document.getElementById('numAdults'),
@@ -121,7 +141,6 @@ function basicIncomeInit() {
     };
 
     var textEls = {
-        reviewRegionName: document.getElementById('reviewRegionName'),
         reviewNumAdults: document.getElementById('reviewNumAdults'),
         reviewGdp: document.getElementById('reviewGdp'),
         reviewTaxAsPercentGdp: document.getElementById('reviewTaxAsPercentGdp'),
@@ -130,7 +149,8 @@ function basicIncomeInit() {
         reviewCutsTaxes: document.getElementById('reviewCutsTaxes'),
         reviewGdpRangeMin: document.getElementById('reviewGdpRangeMin'),
         reviewGdpRangeMax: document.getElementById('reviewGdpRangeMax'),
-        regionNameTextEnd: document.getElementById('regionNameTextEnd')
+        regionNameText: document.getElementsByClassName('regionNameText'),
+        personNameText: document.getElementsByClassName('personNameText')
     };
 
     state2form(state, formEls, textEls);
@@ -154,6 +174,33 @@ function basicIncomeInit() {
     });
 
     run(state);
+
+    var unitedStatesDataLink = document.getElementById('united-states-data');
+    if (unitedStatesDataLink) {
+        unitedStatesDataLink.addEventListener('click', function () {
+            state = {
+                name: state.name,
+                regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
+                numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
+                taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
+                gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
+                basicIncome: 7.25 * 40 * 50,
+                basicIncomeType: 'minimumWage',
+                ubiOrNit: 'nit',
+                cutsTaxes: [
+                    ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+                    ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+                    ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                    ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                    ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                    ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
+                ],
+                gdpRangeMin: -5,
+                gdpRangeMax: 15
+            };
+            state2form(state, formEls, textEls);
+        });
+    }
 
     // ## Display results
     // -----------------
@@ -349,7 +396,9 @@ function basicIncomeInit() {
     function cutsTaxesRow(entry, i) {
         entry = entry !== undefined ? entry : ['', '', ''];
 
-        return '<div class="four fields"><div class="field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div><div class="field">' + '<input type="text" name="cutsTaxesSource" placeholder="Source URL" value="' + entry[2] + '"></div><div class="field"><a class="cutsTaxesRemove" data-i="' + i + '">Remove</a></div></div>';
+        var sourceText = entry[2] === '' ? '+ Add Source' : 'View Source';
+
+        return '<div class="cutsTaxesRemoveContainer"><a class="cutsTaxesRemove" data-i="' + i + '">X</a></div><div class="three fields"><div class="thirteen wide field"><input type="text" name="cutsTaxesName" placeholder="Name" value="' + entry[0] + '"></div><div class="three wide field">' + '<input type="text" name="cutsTaxesAmount" placeholder="Amount (billions of $)" value="' + entry[1] + '"></div></div><div style="margin-bottom: 12px; margin-left: 18px"><a onclick="(function () { console.log(this); this.parentElement.childNodes[1].style.display = \'block\'; this.style.display = \'none\'; }.bind(this)())">' + sourceText + '</a><input type="text" placeholder="Source URL" name="cutsTaxesSource" value="' + entry[2] + '" style="display: none" /></div></div>';
     }
 
     function addCutsTaxesRow() {
@@ -370,7 +419,7 @@ function basicIncomeInit() {
 
     function state2form(state, formEls, textEls) {
         // Normal inputs
-        var input = ['basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
+        var input = ['name', 'basicIncome', 'gdpRangeMin', 'gdpRangeMax'];
         input.forEach(function (input) {
             if (formEls[input]) {
                 formEls[input].value = state[input];
@@ -414,7 +463,7 @@ function basicIncomeInit() {
             state.cutsTaxes.forEach(function (entry, i) {
                 formEls.cutsTaxesEntries.innerHTML += cutsTaxesRow(entry, i);
             });
-            formEls.cutsTaxesEntries.innerHTML += '<a id="cutsTaxesAdd">Add entry</a>';
+            formEls.cutsTaxesEntries.innerHTML += '<a id="cutsTaxesAdd">+ Add</a>';
             document.getElementById('cutsTaxesAdd').addEventListener('click', addCutsTaxesRow);
             Array.prototype.forEach.call(document.getElementsByClassName('cutsTaxesRemove'), function (removeEl) {
                 removeEl.addEventListener('click', removeCutsTaxesRow);
@@ -422,9 +471,6 @@ function basicIncomeInit() {
         }
 
         // Review slide, other text content
-        if (textEls.reviewRegionName) {
-            textEls.reviewRegionName.innerHTML = state.regionName[0];
-        }
         if (textEls.reviewNumAdults) {
             textEls.reviewNumAdults.innerHTML = state.numAdults[0];
         }
@@ -449,12 +495,24 @@ function basicIncomeInit() {
         if (textEls.reviewGdpRangeMax) {
             textEls.reviewGdpRangeMax.innerHTML = state.gdpRangeMax;
         }
-        if (textEls.regionNameTextEnd) {
-            textEls.regionNameTextEnd.innerHTML = state.regionName[0];
+        if (textEls.regionNameText) {
+            for (var i = 0; i < textEls.regionNameText.length; i++) {
+                textEls.regionNameText[i].innerHTML = state.regionName[0];
+            }
         }
+        if (textEls.personNameText) {
+            for (var i = 0; i < textEls.personNameText.length; i++) {
+                textEls.personNameText[i].innerHTML = state.name;
+            }
+        }
+
+        initSourceFields();
     }
 
     function form2state(state, formEls) {
+        // Text inputs
+        state.name = escape(formEls.name.value);
+
         // Sourced text inputs
         state.regionName[0] = escape(formEls.regionName.value);
 

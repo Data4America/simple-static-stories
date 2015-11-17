@@ -3,7 +3,8 @@
     "start": "wintersmith preview",
     "build": "wintersmith build",
     "deploy": "bash scripts/deploy.sh live",
-    "deploy-test": "bash scripts/deploy.sh staging"
+    "deploy-test": "bash scripts/deploy.sh test",
+    "deploy-test-ux": "bash scripts/deploy.sh test-ux"
   },
   "dependencies": {
     "moment": "2.3.x",

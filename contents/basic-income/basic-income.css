@@ -35,3 +35,24 @@
   font-size: 16px !important;
   line-height: 1.6em !important;
 }
+
+#cutsTaxesAdd, .cutsTaxesRemove, #united-states-data {
+  cursor: pointer;
+}
+
+.cutsTaxesRemoveContainer {
+  float: left;
+  margin-right: 9px;
+  padding-top: 9px;
+}
+
+.ubiSource {
+  margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  #dfa-content .item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
