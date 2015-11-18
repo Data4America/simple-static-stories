@@ -1,0 +1,102 @@
+{
+  "name": "Ben Carson",
+  "affiliation": {
+    "name": "Republican Party"
+  },
+  "timelines": [
+    {
+      "decade": 1950,
+      "color": "#d95f02",
+      "milestones": [
+        {
+          "date": "1951",
+          "text": "Born in inner city Detroit, raised by mother who dropped out of school in the 3rd grade.",
+          "link": "http://www.achievement.org/autodoc/page/car1bio-1",
+          "type": "family-relationships"
+        },
+        {
+          "date": "1959",
+          "text": "Parents divorce, Sonya Copeland discovers Robert Carson is bigamist w/ another family; financially devastated.",
+          "link": "http://www.biography.com/people/ben-carson-475422#synopsis",
+          "type": "family-relationships"
+        }
+      ]
+    },
+    {
+      "decade": 1960,
+      "milestones": [
+        {
+          "date": "1961",
+          "text": "Ridiculed by 5th grade classmates, called dumbest kid in the world; inspired to learn about human brain.",
+          "link": "http://www.notablebiographies.com/news/A-Ca/Carson-Benjamin-Solomon.html",
+          "type": "social"
+        },
+        {
+          "date": "1961",
+          "text": "Mom works 2-3 jobs, 5a - 11p; extremely frugal, patch clothes from Goodwill & pick vegetables for food.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-life",
+          "type": "family-relationships"
+        },
+        {
+          "date": "1962",
+          "text": "Reads two books weekly and writes reports, Mom edits; later realizes she was basically illiterate.",
+          "link": "http://www.achievement.org/autodoc/page/car1bio-1",
+          "type": "work-education"
+        },
+        {
+          "date": "1963",
+          "text": "Wait for hours to be seen by hospital interns; fantasizes about hearing Dr. Carson called over PA system.",
+          "link": "http://www.biography.com/people/ben-carson-475422#influential-mother",
+          "type": "social"
+        },
+        {
+          "date": "1969",
+          "text": "Graduates w/ honors from high school, pursues a medical career.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "work-education"
+        }
+      ]
+    },
+    {
+      "decade": 1970,
+      "milestones": [
+        {
+          "date": "1970",
+          "text": "Knocked on doors looking for summer work; from this work and a scholarship, he attended Yale.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "work-education"
+        },
+        {
+          "date": "1973",
+          "text": "Earns a bachelor's degree in psychology from Yale.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "work-education"
+        },
+        {
+          "date": "1973",
+          "text": "First year in medical school at Michigan, intrigued by the field of neurosurgery.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "work-education"
+        },
+        {
+          "date": "1975",
+          "text": "Marries Lacrena \"Candy\" Rustin, they met at Yale.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "family-relationships"
+        },
+        {
+          "date": "1977",
+          "text": "Earns medical degree from the University of Michigan.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "work-education"
+        },
+        {
+          "date": "1977",
+          "text": "Accepted into the residency program in general surgery at Johns Hopkins Hospital.",
+          "link": "http://www.biography.com/people/ben-carson-475422#early-education",
+          "type": "work-education"
+        }
+      ]
+    }
+  ]
+}

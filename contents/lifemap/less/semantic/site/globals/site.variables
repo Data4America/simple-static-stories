@@ -1,0 +1,25 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Roboto Condensed';
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+@googleFontSizes   : '400,300,700,300italic,400italic,700italic';
+
+@importGoogleFonts : true;
+
+/*-------------------
+        Paths
+--------------------*/
+
+/* For source only. Modified in gulp for dist */
+@imagePath : '/lifemap/less/semantic/themes/default/assets/images';
+@fontPath  : '/lifemap/less/semantic/themes/default/assets/fonts';
