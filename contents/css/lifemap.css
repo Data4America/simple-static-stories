@@ -59222,3 +59222,56 @@ html,
 body {
   background: #00B5AD;
 }
+header {
+  position: relative;
+}
+#lf-logo {
+  font-size: 3.2em;
+  line-height: 2em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px #333;
+}
+#lf-header {
+  margin-top: 3em;
+  text-align: center;
+}
+#lf-header img {
+  border: 14px solid #007974;
+  margin: 0 auto;
+}
+#lf-header .ui.header {
+  text-shadow: 1px 1px 2px #333;
+}
+#lf-header h1.ui.header {
+  font-size: 2.4em;
+  margin-bottom: 0;
+}
+#lf-header h2.ui.header {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+#lf-scroll-down {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -30px;
+}
+.lf-decade.ui.header {
+  text-shadow: 1px 1px 2px #000;
+  font-size: 3.8em;
+  margin-top: 1em;
+}
+.lf-timeline .ui.three.column.grid {
+  margin-bottom: 2.5em;
+}
+.lf-milestone.ui.inverted.segment {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.3em;
+}
+.lf-milestone.ui.inverted.segment .ui.header {
+  text-shadow: 1px 1px 2px #000;
+  font-size: 1.3em;
+}

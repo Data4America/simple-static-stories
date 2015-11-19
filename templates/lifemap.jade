@@ -1,6 +1,7 @@
 doctype html
 block vars
   - var bodyclass = null;
+  - var profile = contents.lifemap.json['ben-carson.json'].metadata
 html(lang='en')
   head
     block head
@@ -15,11 +16,34 @@ html(lang='en')
       != nap.css('lifemap')
   body(class=bodyclass)
 
-    div.ui.container
 
       header
-        h1.ui.inverted.header.aligned.center
-          | Lifemap
+        div.ui.container
+          div#lf-logo Lifemap
+
+          div#lf-header(data-sr="")
+            img.ui.medium.circular.image(src="/lifemap/img/#{profile.image}")
+            h1.ui.inverted.header= profile.name
+            h2.ui.inverted.header Presidential Candidate 
+              span.saperator ·
+              |  Republican Party
+
+          span#lf-scroll-down(data-sr="wait 0.5s")
+            i.ui.huge.icon.chevron.inverted.down
+
+      - each item in profile.timeline
+        section.lf-timeline(style="background-color:#{item.color}; border:1px solid #{item.color};")
+          div.ui.container
+            div.ui.grid
+              div.sixteen.wide.column
+                h1.ui.inverted.header.lf-decade(data-sr="wait 0.2s, enter left")= item.decade
+
+            div.ui.three.column.grid.stackable
+              - each milestone in item.milestones
+                div.column
+                  div.ui.inverted.segment.lf-milestone(data-sr="wait 0.2s, enter left")
+                    h4.ui.header= milestone.date
+                    p= milestone.text
 
 
     block js
