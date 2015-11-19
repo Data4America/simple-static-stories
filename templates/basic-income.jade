@@ -3,7 +3,8 @@ extends article
 block actual-content
   link(rel="stylesheet", type="text/css", href="/basic-income/basic-income.css")
 
-  div!= typogr(page.html).typogrify()
+  if page.html
+    div!= typogr(page.html).typogrify()
 
   div.ui.icon.menu.inverted.red.slide-controls.top.attached
     a.item.prev.disabled

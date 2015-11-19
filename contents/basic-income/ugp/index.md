@@ -7,5 +7,3 @@ code: https://github.com/Data4America/simple-static-stories/blob/development/con
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
 child: true
 ---
-
-<span></span>
