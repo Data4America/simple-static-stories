@@ -19,7 +19,7 @@ html(lang='en')
 
       header
         div.ui.container
-          div#lf-logo Lifemap
+          div#lf-logo Lifemap.io
 
           div#lf-header(data-sr="")
             img.ui.medium.circular.image(src="/lifemap/img/#{profile.image}")
@@ -33,17 +33,35 @@ html(lang='en')
 
       - each item in profile.timeline
         section.lf-timeline(style="background-color:#{item.color}; border:1px solid #{item.color};")
-          div.ui.container
-            div.ui.grid
-              div.sixteen.wide.column
-                h1.ui.inverted.header.lf-decade(data-sr="wait 0.2s, enter left")= item.decade
+          div.lf-divider
 
-            div.ui.three.column.grid.stackable
-              - each milestone in item.milestones
+          div.ui.text.container
+            div.lf-header= item.decade
+              | s
+
+            div.ui.two.column.grid.stackable
+              - each milestone, index in item.milestones
                 div.column
-                  div.ui.inverted.segment.lf-milestone(data-sr="wait 0.2s, enter left")
-                    h4.ui.header= milestone.date
-                    p= milestone.text
+                  - if (index % 2 === 0)
+                    div.ui.popup.left.center.lf-milestone(data-sr="wait 0.2s, enter left")
+                      h4.ui.header= milestone.date
+                      p= milestone.text
+                      div.lf-icon.left(type=milestone.type, style="border-color:#{item.color};")
+                      p(style="text-align: right;")
+                        a(href="", target="_blank")
+                          i.ui.icon.twitter.large.square(style="color:#0084B4;")
+                        a(href="", target="_blank")
+                          i.ui.icon.facebook.large.square(style="color:#3B5998;")
+                  - else
+                    div.ui.popup.right.center.lf-milestone(data-sr="wait 0.2s, enter left")
+                      h4.ui.header= milestone.date
+                      p= milestone.text
+                      div.lf-icon.right(type=milestone.type, style="border-color:#{item.color};")
+                      p(style="text-align: right;")
+                        a(href="", target="_blank")
+                          i.ui.icon.twitter.large.square(style="color:#0084B4;")
+                        a(href="", target="_blank")
+                          i.ui.icon.facebook.large.square(style="color:#3B5998;")
 
 
     block js
