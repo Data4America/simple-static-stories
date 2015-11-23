@@ -35,7 +35,7 @@ html(lang='en')
         section.lf-timeline(style="background-color:#{item.color}; border:1px solid #{item.color};")
 
           div.ui.container
-            div.lf-header= item.decade
+            div.lf-header(data-sr="wait 0.2s, enter bottom")= item.decade
               | s
 
             - var chunks = lo.chunk(item.milestones, 3)
@@ -53,6 +53,28 @@ html(lang='en')
                             i.ui.icon.twitter.large.square(style="color:#0084B4;")
                           a(href="", target="_blank")
                             i.ui.icon.facebook.large.square(style="color:#3B5998;")
+
+      section.lf-timeline.final
+        div.overlay
+        div.lf-line
+        div.ui.container
+          div.lf-header(data-sr="wait 0.2s, enter bottom") May 4th, 2015
+          div.lf-text(data-sr="wait 0.2s, enter bottom") Launches official bid for Republican Presidential Nomination.
+          div.lf-share
+            div.ui.equal.width.grid.stackable
+              div.column
+                div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+                  i.icon.mail
+                  span.text Email
+              div.column
+                div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+                  i.ui.facebook.icon
+                  span.text Share
+              div.column
+                div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+                  i.ui.twitter.icon
+                  span.text Tweet
+
 
 
     block js
