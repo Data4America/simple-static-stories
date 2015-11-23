@@ -21,6 +21,12 @@ header, section {
   position: relative;
 }
 
+section svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 #lf-logo {
   font-size: 3.2em;
   line-height: 2em;
@@ -68,25 +74,28 @@ header, section {
     font-size: 1.6em;
     width: 100px;
     border-radius: 45px;
-    margin: 1em auto;
+    margin: 1em auto 2em;
     position: relative;
     box-shadow: 0 0 3px #585858;
     font-weight: bold;
     text-align: center;
   }
 
-  .ui.two.column.grid {
-    margin-bottom: 2.5em;
+  .ui.column.grid {
+    margin-bottom: 4em;
   }
 
 }
 
-.lf-milestone.ui.popup {
+.lf-milestone.ui.segment {
   display:block;
   max-width: 100%;
   position: relative;
   border: none;
   box-shadow: none;
+  height: 170px;
+  width: 350px;
+  margin: 0 auto;
 
   .ui.header {
     font-size: 1.3em;
@@ -94,22 +103,15 @@ header, section {
 
   .lf-icon {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-size: 100%;
     background-color: #fff;
     border-radius: 30px;
     border: 4px solid #D95F02;
-    top: 50%;
-    margin-top: -30px;
-  }
-
-  .lf-icon.left {
-    left: -42px;
-  }
-
-  .lf-icon.right {
-    right: -42px;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -25px;
   }
 
   .lf-icon[type="family-relationships"] {
@@ -141,13 +143,4 @@ header, section {
   }
 
   p { font-size: 1.2em; margin: 0.5em 1.5em; }
-}
-
-.lf-divider {
-  position: absolute;
-  height: 100%;
-  left: 50%;
-  margin-left: -5px;
-  width: 10px;
-  background: rgba(255,255,255,0.5);
 }

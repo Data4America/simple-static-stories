@@ -12,7 +12,8 @@
   "require": {
     "moment": "moment",
     "_": "underscore",
-    "typogr": "typogr"
+    "typogr": "typogr",
+    "lo": "lodash"
   },
   "jade": {
     "pretty": true
@@ -33,7 +34,7 @@
       },
       "js": {
         "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/semantic.js"],
-        "lifemap": ["/js/jquery-2.1.4.min.js", "/lifemap/js/lodash.js", "/lifemap/js/scrollReveal.js", "/lifemap/js/app.js"]
+        "lifemap": ["/js/jquery-2.1.4.min.js", "/lifemap/js/lodash.js", "/lifemap/js/d3.v3.min.js", "/lifemap/js/scrollReveal.js", "/lifemap/js/app.js"]
       }
     }
   }

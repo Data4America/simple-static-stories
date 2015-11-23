@@ -33,35 +33,26 @@ html(lang='en')
 
       - each item in profile.timeline
         section.lf-timeline(style="background-color:#{item.color}; border:1px solid #{item.color};")
-          div.lf-divider
 
-          div.ui.text.container
+          div.ui.container
             div.lf-header= item.decade
               | s
 
-            div.ui.two.column.grid.stackable
-              - each milestone, index in item.milestones
-                div.column
-                  - if (index % 2 === 0)
-                    div.ui.popup.left.center.lf-milestone(data-sr="wait 0.2s, enter left")
-                      h4.ui.header= milestone.date
-                      p= milestone.text
-                      div.lf-icon.left(type=milestone.type, style="border-color:#{item.color};")
-                      p(style="text-align: right;")
-                        a(href="", target="_blank")
-                          i.ui.icon.twitter.large.square(style="color:#0084B4;")
-                        a(href="", target="_blank")
-                          i.ui.icon.facebook.large.square(style="color:#3B5998;")
-                  - else
-                    div.ui.popup.right.center.lf-milestone(data-sr="wait 0.2s, enter left")
-                      h4.ui.header= milestone.date
-                      p= milestone.text
-                      div.lf-icon.right(type=milestone.type, style="border-color:#{item.color};")
-                      p(style="text-align: right;")
-                        a(href="", target="_blank")
-                          i.ui.icon.twitter.large.square(style="color:#0084B4;")
-                        a(href="", target="_blank")
-                          i.ui.icon.facebook.large.square(style="color:#3B5998;")
+            - var chunks = lo.chunk(item.milestones, 3)
+            - var cols = {1: 'one', 2: 'two', 3: 'three' }
+            - each chunk in chunks
+              div.ui.stackable(class=cols[chunk.length] + ' column grid')
+                - each milestone, index in chunk
+                  div.column
+                      div.ui.segment.lf-milestone(data-sr="wait 0.2s, enter left")
+                        h4.ui.header= milestone.date
+                        p= milestone.text
+                        div.lf-icon.left(type=milestone.type, style="border-color:#{item.color};")
+                        p(style="text-align: right;")
+                          a(href="", target="_blank")
+                            i.ui.icon.twitter.large.square(style="color:#0084B4;")
+                          a(href="", target="_blank")
+                            i.ui.icon.facebook.large.square(style="color:#3B5998;")
 
 
     block js
