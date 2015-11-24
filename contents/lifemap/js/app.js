@@ -61,7 +61,7 @@ $(document).ready(function() {
 
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > height) {
-      $('#lf-menu').show();
+      $('#lf-menu').css('display', 'flex');
     } else {
       $('#lf-menu').hide();
     }
