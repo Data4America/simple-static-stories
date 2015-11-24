@@ -59,14 +59,6 @@ $(document).ready(function() {
       .attr('d', path);
   });
 
-  $(window).on('scroll', function() {
-    if ($(window).scrollTop() > height) {
-      $('#lf-menu').css('display', 'flex');
-    } else {
-      $('#lf-menu').hide();
-    }
-  });
-
   $('.dropdown').dropdown();
 
   var isMobile = function() {

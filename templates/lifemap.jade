@@ -16,30 +16,22 @@ html(lang='en')
       != nap.css('lifemap')
   body(class=bodyclass)
 
-      div#lf-menu.ui.top.fixed.menu.inverted.teal
-        div.item.logo Lifemap
-        div.item.profile
-          img.circular.image(src="/lifemap/img/#{profile.image}")
-          span.text Ben Carson
-        a.item.icon.fb(data-url="")
-          i.icon.facebook
-        a.item.icon.tw(data-url="")
-          i.icon.twitter
-        a.item.icon.em(data-url="")
-          i.icon.mail
-        div.menu.right
-          div.item
-            div.dfa-project
-              span A project of 
-              img(src="/lifemap/img/logo-text.png")
+      div#lf-menu.ui.borderless.inverted.main.menu.fixed
+        div.container
+          div.logo.item
+            a.logo(href="/")
+          div.item.lf LifeMap
+          div.item.dfa-header-title Ben Carson
+          a.item.icon.dfa-header-article-share.fb(data-url=locals.url + (page !== undefined ? page.url : '/'))
+            i.icon.facebook
+          a.item.icon.dfa-header-article-share.tw(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
+            i.icon.twitter
+          a.item.icon.dfa-header-article-share.em(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
+            i.icon.mail
+          div.right.menu.social-buttons
 
       header
         div.ui.container
-          div#lf-logo Lifemap
-
-          div.dfa-project
-            span A project of 
-            img(src="/lifemap/img/logo-text.png")
 
           div#lf-header(data-sr="")
             img.ui.medium.circular.image(src="/lifemap/img/#{profile.image}")
@@ -70,7 +62,7 @@ html(lang='en')
                         div.lf-icon.left(type=milestone.type, style="border-color:#{item.color};")
                         div(style="text-align:right; position:absolute; bottom:0.5em; right:0.5em;")
                           div.ui.icon.top.left.pointing.dropdown
-                            i.ellipsis.horizontal.icon.large.grey
+                            i.ellipsis.horizontal.icon.large
                             div.menu
                               a.item(target="_blank", href= milestone.link)
                                 i.external.share.icon
@@ -93,19 +85,39 @@ html(lang='en')
         div.lf-line
         div.ui.container
           div.lf-header(data-sr="wait 0.2s, enter bottom") May 4th, 2015
-          div.lf-text(data-sr="wait 0.2s, enter bottom") Launches official bid for Republican Presidential Nomination.
+          div.lf-text(data-sr="wait 0.2s, enter bottom")
+            span Launches official bid for Republican Presidential Nomination.
+          div(style="text-align: center;")
+            div.ui.icon.top.left.pointing.dropdown
+              i.ellipsis.horizontal.icon.large.inverted
+              div.menu
+                a.item(target="_blank", href="")
+                  i.external.share.icon
+                  | Source URL
+                div.divider
+                div.header Share
+                div.item
+                  i.twitter.icon(style="color:#0084B4;")
+                  | Twitter
+                div.item
+                  i.facebook.icon(style="color:#3B5998;")
+                  | Facebook
+                div.item
+                  i.mail.icon.grey
+                  | Email
+
           div.lf-share
             div.ui.equal.width.grid.stackable
               div.column
-                div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+                div.ui.grey.email.huge.button.fluid(data-url="", data-text="",style="border-radius:0;")
                   i.icon.mail
                   span.text Email
               div.column
-                div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+                div.ui.facebook.huge.fluid.button(data-url="",style="border-radius:0;")
                   i.ui.facebook.icon
                   span.text Share
               div.column
-                div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+                div.ui.twitter.fluid.huge.button(data-url="", data-text="",style="border-radius:0;")
                   i.ui.twitter.icon
                   span.text Tweet
 

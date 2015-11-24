@@ -641,7 +641,7 @@
              Reset
 *******************************/
 /* Border-Box */
-@import url('https://fonts.googleapis.com/css?family=Roboto Condensed:400,300,700,300italic,400italic,700italic&subset=latin');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,300&subset=latin');
 *,
 *:before,
 *:after {
@@ -2024,7 +2024,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
@@ -2038,7 +2038,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.2857em;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   font-weight: bold;
@@ -2880,7 +2880,7 @@ input::selection {
   vertical-align: baseline;
   background: #E0E1E2 none;
   color: rgba(0, 0, 0, 0.6);
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em 0.25em 0em 0em;
   padding: 0.78571429em 1.5em 0.78571429em;
   text-transform: none;
@@ -6728,7 +6728,7 @@ input::selection {
 *******************************/
 /* Text Container */
 .ui.text.container {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   max-width: 700px !important;
   line-height: 1.5;
 }
@@ -9954,7 +9954,7 @@ i.flag.zimbabwe:before {
   border: none;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   padding: 0em 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2857em;
   text-transform: none;
@@ -15294,7 +15294,7 @@ img.ui.bordered.image {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
   line-height: 1.2142em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding: 0.67861429em 1em;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -18412,7 +18412,7 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -23786,7 +23786,7 @@ ol.ui.horizontal.list li:before,
 *******************************/
 /* Title */
 .ui.steps .step .title {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.14285714em;
   font-weight: bold;
 }
@@ -25734,7 +25734,7 @@ ol.ui.horizontal.list li:before,
 .ui.form input[type="time"],
 .ui.form input[type="text"],
 .ui.form input[type="url"] {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em;
   outline: none;
   -webkit-appearance: none;
@@ -29944,7 +29944,7 @@ ol.ui.horizontal.list li:before,
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   font-weight: normal;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -32357,7 +32357,7 @@ Floated Menu / Item
 /* Header */
 .ui.message .header {
   display: block;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: -0.14285em 0em 0rem 0em;
 }
@@ -36076,7 +36076,7 @@ Floated Menu / Item
 .ui.card > .content > .header {
   display: block;
   margin: '';
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.85);
 }
 /* Default Header Size */
@@ -39393,7 +39393,7 @@ a.ui.card:hover,
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.21425em 0em 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
@@ -40440,7 +40440,7 @@ a.ui.card:hover,
 ---------------*/
 .ui.statistics .statistic > .value,
 .ui.statistic > .value {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 4rem;
   font-weight: normal;
   line-height: 1em;
@@ -40453,7 +40453,7 @@ a.ui.card:hover,
 ---------------*/
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
@@ -41557,7 +41557,7 @@ a.ui.card:hover,
 /* Default Styling */
 .ui.accordion .title:not(.ui) {
   padding: 0.5em 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -47269,7 +47269,7 @@ select.ui.dropdown {
 ---------------*/
 .ui.modal > .header {
   display: block;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   margin: 0em;
   padding: 1.25rem 1.5rem;
@@ -49137,7 +49137,7 @@ a.ui.nag {
 }
 .ui.popup > .header {
   padding: 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.125em;
   line-height: 1.2;
   font-weight: bold;
@@ -52166,7 +52166,7 @@ a.ui.nag {
 }
 .ui.search > .results .result .title {
   margin: -0.14285em 0em 0em;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.85);
@@ -52187,7 +52187,7 @@ a.ui.nag {
   padding: 1em 1em;
 }
 .ui.search > .results > .message .header {
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
@@ -52327,7 +52327,7 @@ a.ui.nag {
 .ui.category.search > .results .category > .name {
   width: 100px;
   background: transparent;
-  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   float: 1em;
   float: left;
@@ -59234,21 +59234,6 @@ section svg {
   left: 0;
   top: 0;
 }
-.dfa-project {
-  color: #fff;
-  font-size: 1.1em;
-  font-style: italic;
-  line-height: 1.3em;
-}
-.dfa-project span {
-  vertical-align: middle;
-  text-shadow: 1px 1px 2px #00736E;
-}
-.dfa-project img {
-  height: 18px;
-  vertical-align: middle;
-  margin-left: 0.2em;
-}
 header .container {
   position: relative;
 }
@@ -59264,6 +59249,58 @@ header .dfa-project {
     text-align: center;
   }
 }
+#lf-menu {
+  background: #333;
+  background-size: 900px;
+  border-radius: 0;
+  margin: 0;
+  z-index: 1001;
+  box-shadow: 0 1px 3px #333;
+}
+#lf-menu .item .button {
+  font-size: 0.8em;
+  padding: 0.2em 0.9em 0.1em;
+  line-height: 1.55em;
+  width: 5.8em;
+}
+#lf-menu .item.logo {
+  background: #ddd;
+}
+#lf-menu .item.logo a {
+  background: url(/img/logo-256.png) center center;
+  display: inline-block;
+  background-size: 60px 60px;
+  height: 40px;
+  width: 60px;
+}
+#lf-menu .lf.item {
+  padding: 0.1em 0.8em;
+  font-size: 1.6em;
+  font-weight: 200;
+}
+#lf-menu .item {
+  padding: 0.2em 0.8em;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #CF1A1A;
+}
+#lf-menu .item:focus,
+#lf-menu .item:active {
+  outline: none;
+}
+#lf-menu a.item:hover {
+  background: #133671 !important;
+  color: #ffffff;
+}
+@media only screen and (max-width: 767px) {
+  #lf-menu {
+    background-color: #CF1A1A;
+  }
+  #lf-menu.ui.menu .item {
+    padding: 0.4em 0.65em;
+    font-size: 0.95em;
+  }
+}
 #lf-logo {
   font-size: 3.2em;
   line-height: 2em;
@@ -59271,23 +59308,8 @@ header .dfa-project {
   color: #fff;
   text-shadow: 1px 1px 2px #333;
 }
-#lf-menu {
-  display: none;
-  box-shadow: 0 1px 6px #333;
-}
-#lf-menu .logo {
-  font-size: 2em;
-  text-shadow: 1px 1px 2px #333;
-  padding: 0 1em;
-}
-#lf-menu .profile img {
-  margin-right: 0.5em;
-}
-#lf-menu .profile .text {
-  font-size: 1.5em;
-}
 #lf-header {
-  margin-top: 3em;
+  margin-top: 4em;
   text-align: center;
 }
 #lf-header img {
@@ -59379,7 +59401,11 @@ header .dfa-project {
   background-image: url('/lifemap/img/home.png');
 }
 .lf-milestone.ui.segment p {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.lf-milestone.ui.segment .ellipsis.icon {
+  color: #eee;
 }
 @media only screen and (max-width: 767px) {
   .lf-milestone.ui.segment {
@@ -59415,7 +59441,7 @@ header .dfa-project {
 .lf-timeline.final .lf-text {
   margin-top: 2em;
   color: #fff;
-  font-size: 2.4em;
+  font-size: 2.8em;
   line-height: 1.5em;
   position: relative;
   text-align: center;
