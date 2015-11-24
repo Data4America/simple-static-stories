@@ -31,12 +31,71 @@ section svg {
   top: 0;
 }
 
+.dfa-project {
+  color: #fff;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.3em;
+
+  span {
+    vertical-align: middle;
+    text-shadow: 1px 1px 2px #00736E;
+  }
+
+  img {
+    height: 18px;
+    vertical-align: middle;
+    margin-left: 0.2em;
+  }
+}
+
+header {
+  .container {
+    position: relative;
+  }
+
+  .dfa-project {
+    position: absolute;
+    right: 0;
+    top: 2.6em;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .dfa-project {
+      position: static;
+      display:block;
+      text-align: center;
+    }
+  }
+}
+
+
 #lf-logo {
   font-size: 3.2em;
   line-height: 2em;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 2px #333;
+}
+
+#lf-menu {
+  display: none;
+  box-shadow: 0 1px 6px #333;
+
+  .logo {
+    font-size: 2em;
+    text-shadow: 1px 1px 2px #333;
+    padding: 0 1em;
+  }
+
+  .profile img {
+    margin-right: 0.5em;
+  }
+
+  .profile .text {
+    font-size: 1.5em;
+  }
+
 }
 
 #lf-header {
@@ -60,6 +119,12 @@ section svg {
   h2.ui.header {
     font-size: 1.8em;
     margin-top: 0;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    img {
+      width: 180px;
+    }
   }
 }
 
@@ -148,6 +213,10 @@ section svg {
   }
 
   p { font-size: 1.2em; }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    margin-bottom: 1em;
+  }
 }
 
 .lf-timeline.final {
@@ -184,6 +253,7 @@ section svg {
     margin-top: 2em;
     color: #fff;
     font-size: 2.4em;
+    line-height: 1.5em;
     position: relative;
     text-align: center;
   }
@@ -197,5 +267,14 @@ section svg {
     bottom: 2em;
     position: absolute;
     width: 100%;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    background-size: auto 100%;
+    background-position: top center;
+
+    .lf-share {
+      bottom: 0.5em;
+    }
   }
 }

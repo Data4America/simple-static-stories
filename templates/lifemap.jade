@@ -16,10 +16,30 @@ html(lang='en')
       != nap.css('lifemap')
   body(class=bodyclass)
 
+      div#lf-menu.ui.top.fixed.menu.inverted.teal
+        div.item.logo Lifemap
+        div.item.profile
+          img.circular.image(src="/lifemap/img/#{profile.image}")
+          span.text Ben Carson
+        a.item.icon.fb(data-url="")
+          i.icon.facebook
+        a.item.icon.tw(data-url="")
+          i.icon.twitter
+        a.item.icon.em(data-url="")
+          i.icon.mail
+        div.menu.right
+          div.item
+            div.dfa-project
+              span A project of 
+              img(src="/lifemap/img/logo-text.png")
 
       header
         div.ui.container
-          div#lf-logo Lifemap.io
+          div#lf-logo Lifemap
+
+          div.dfa-project
+            span A project of 
+            img(src="/lifemap/img/logo-text.png")
 
           div#lf-header(data-sr="")
             img.ui.medium.circular.image(src="/lifemap/img/#{profile.image}")
@@ -28,8 +48,8 @@ html(lang='en')
               span.saperator ·
               |  Republican Party
 
-          span#lf-scroll-down(data-sr="wait 0.5s")
-            i.ui.huge.icon.chevron.inverted.down
+        span#lf-scroll-down(data-sr="wait 0.5s")
+          i.ui.huge.icon.chevron.inverted.down
 
       - each item in profile.timeline
         section.lf-timeline(style="background-color:#{item.color}; border:1px solid #{item.color};")
@@ -48,11 +68,25 @@ html(lang='en')
                         h4.ui.header= milestone.date
                         p= milestone.text
                         div.lf-icon.left(type=milestone.type, style="border-color:#{item.color};")
-                        p(style="text-align: right;")
-                          a(href="", target="_blank")
-                            i.ui.icon.twitter.large.square(style="color:#0084B4;")
-                          a(href="", target="_blank")
-                            i.ui.icon.facebook.large.square(style="color:#3B5998;")
+                        div(style="text-align:right; position:absolute; bottom:0.5em; right:0.5em;")
+                          div.ui.icon.top.left.pointing.dropdown
+                            i.ellipsis.horizontal.icon.large.grey
+                            div.menu
+                              a.item(target="_blank", href= milestone.link)
+                                i.external.share.icon
+                                | Source URL
+                              div.divider
+                              div.header Share
+                              div.item
+                                i.twitter.icon(style="color:#0084B4;")
+                                | Twitter
+                              div.item
+                                i.facebook.icon(style="color:#3B5998;")
+                                | Facebook
+                              div.item
+                                i.mail.icon.grey
+                                | Email
+
 
       section.lf-timeline.final
         div.overlay
