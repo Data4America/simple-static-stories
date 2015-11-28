@@ -15,7 +15,7 @@ block content
             th Location
             th Sponsors
         tbody
-          - var cat = { 'Environment': [ 'co2-emissions.json' ], 'Economic Reforms': ['limitless-visas.json', 'tax-incentives.json'], 'Criminal Justice': ['sex-work.json', 'criminal-justice-reform.json'], 'Education': ['universal-access-education.json'] }
+          - var cat = page.metadata.issues
           - for (key in cat)
             tr.category
               td(colspan="3")= key

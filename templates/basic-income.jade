@@ -1,12 +1,10 @@
-extends layout
+extends article
 
-block prepend title
-  | #{ page.title + ' - '}
-
-block content
+block actual-content
   link(rel="stylesheet", type="text/css", href="/basic-income/basic-income.css")
 
-  div!= typogr(page.html).typogrify()
+  if page.html
+    div!= typogr(page.html).typogrify()
 
   div.ui.icon.menu.inverted.red.slide-controls.top.attached
     a.item.prev.disabled
@@ -47,15 +45,10 @@ block content
         |  Who are you?
       div.ui.divider
       div.ui.form
-        div.two.fields
-          div.field
-            label First Name
-            div.ui.huge.input
-              input(placeholder="First Name",type="text")
-          div.field
-            label Last Name
-            div.ui.huge.input
-              input(placeholder="Last Name",type="text")
+        div.field
+          label Name
+          div.ui.huge.input
+            input#name(placeholder="Name",type="text")
         div.field
           label Your email address
           div.ui.huge.input
@@ -77,6 +70,9 @@ block content
         div.field(style="padding: 0.6em; background: #eee; border-radius: 5px;")
           label What is its Wikipedia URL?
           input#regionNameSource(type="text", placeholder="Source URL")
+        p
+          a#united-states-data
+            | Use data for United States
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -84,27 +80,27 @@ block content
     div.dfa-slide
       h2.ui.header
         span.ui.red.label.large 3
-        |  Your region details
+        |  #[span.regionNameText] details
       div.ui.divider
       div.ui.form
         div.two.fields
           div.field
             label Number of adults
             input#numAdults(type="text")
-            input#numAdultsSource(type="text", placeholder="Source URL")
+            div.ubiSource(data-name="numAdultsSource")
         div.two.fields
           div.field
             label GDP (trillions)
             div.ui.left.labeled.input
               div.ui.label $
               input#gdp(type="text")
-            input#gdpSource(type="text", placeholder="Source URL")
+            div.ubiSource(data-name="gdpSource")
           div.field
             label
               | Tax revenue (fraction of GDP)
               i.help.icon.circle.ubi-popup(data-html='Add up all the tax revenue in your region and divide it by your region\'s GDP. This quantity <a href="https://en.wikipedia.org/wiki/Hauser%27s_law">tends to remain constant</a>, so it can be used to estimate the effects of basic income-induced GDP changes on total tax revenue.')
             input#taxAsPercentGdp(type="text")
-            input#taxAsPercentGdpSource(type="text", placeholder="Source URL")
+            div.ubiSource(data-name="taxAsPercentGdpSource")
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
@@ -123,15 +119,15 @@ block content
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="10k", tabindex="0",class="hidden")
-              label $10,000/year
+              label $10,000 per year
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="minimumWage", tabindex="0",class="hidden")
-              label Full time US minimum wage ($14,500/year)
+              label Full time US minimum wage ($14,500 per year)
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="20k", tabindex="0",class="hidden")
-              label $20,000/year
+              label $20,000 per year
           div.field
             div.ui.slider.checkbox
               input(type="radio",name="basicIncomeType", value="custom", tabindex="0",class="hidden")
@@ -213,7 +209,7 @@ block content
               td Region Name
               td 
                 a.changeStep(href="javascript:;",data-step="4")
-                  #[span#reviewRegionName]
+                  #[span.regionNameText]
             tr
               td Number of adults
               td 
@@ -233,7 +229,7 @@ block content
               td Basic Income (per adult)
               td 
                 a.changeStep(href="javascript:;",data-step="6")
-                  $#[span#reviewBasicIncome]/year
+                  $#[span#reviewBasicIncome] per year
             tr
               td UBI or NIT?
               td
@@ -265,16 +261,14 @@ block content
 
       div.ui.divider
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        h3.ui.header Thank your generating a data model for <span id="regionNameTextEnd"></span>!
+        h3.ui.header Thank your generating a data model for #[span.regionNameText]!
         p Please share it with your friends and family.
-        div.ui.grey.email.button.circular.icon
+        div.ui.grey.email.button.circular.icon#ubiShareEmail
           i.icon.mail
-        div.ui.facebook.button.circular.icon
+        div.ui.facebook.button.circular.icon#ubiShareFacebook
           i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon
+        div.ui.twitter.button.circular.icon#ubiShareTwitter
           i.ui.twitter.icon
-        a.circular.ui.icon.button.sms.orange(href="javascript:;")
-          i.icon-sms
       div.ui.action.input.fluid
         input#cliptext(type="text", value="http://data4america.org/basic-income")
         button.copy-button.ui.button(data-clipboard-target="#cliptext")

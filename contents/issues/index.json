@@ -1,0 +1,7 @@
+{
+  "template": "policy-issues.jade",
+  "title": "Policy Issues",
+  "issues": {
+    "Criminal Justice": ["sex-work.json"]
+  }
+}

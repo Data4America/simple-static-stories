@@ -23,11 +23,11 @@ block content
         |  in the 
         span(style="color:#2185D0;")= issue.geography
       div.dfa-share(style="padding-bottom:1em; text-align:center;")
-        div.ui.grey.email.button.circular.icon(data-text=issue.title, data-url=issue.url)
+        div.ui.grey.email.button.circular.icon(data-text=issue.title, data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url)
           i.icon.mail
-        div.ui.facebook.button.circular.icon(data-url=issue.url)
+        div.ui.facebook.button.circular.icon(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url)
           i.ui.facebook.icon
-        div.ui.twitter.button.circular.icon(data-text=issue.title, data-url=issue.url)
+        div.ui.twitter.button.circular.icon(data-text=issue.title, data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url)
           i.ui.twitter.icon
 
     div.ui.segment.sponsor
@@ -56,7 +56,7 @@ block content
               a(href=sponsor.wikipedia, target="_blank")
                 img(src="/img/wikipedia.png", style="width: 21px; height: 21px; display: inline-block;margin-bottom: -0.24em;")
             div(style="line-height: 0.7em; padding-left: 0.15em;")
-              a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=issue.url, style="font-size: 0.6em;") Say Thanks
+              a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, style="font-size: 0.6em;") Say Thanks
 
       p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
         span.d4a Data
@@ -194,15 +194,15 @@ block content
   div.ui.basic.segment.dfa-share
     div.ui.equal.width.grid.stackable
       div.column
-        div.ui.white.email.huge.button.fluid(data-url=issue.url, data-text=issue.title,style="border-radius:0;")
+        div.ui.white.email.huge.button.fluid(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, data-text=issue.title,style="border-radius:0;")
           i.icon.mail
           span.text Email
       div.column
-        div.ui.facebook.huge.fluid.button(data-url=issue.url, style="border-radius:0;")
+        div.ui.facebook.huge.fluid.button(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, style="border-radius:0;")
           i.ui.facebook.icon
           span.text Share
       div.column
-        div.ui.twitter.fluid.huge.button(data-url=issue.url, data-text=issue.title, style="border-radius:0;")
+        div.ui.twitter.fluid.huge.button(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, data-text=issue.title, style="border-radius:0;")
           i.ui.twitter.icon
           span.text Tweet
 

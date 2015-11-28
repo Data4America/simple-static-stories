@@ -5,7 +5,6 @@ var order = [
     'andy-barkett',
     'ceslee-montgomery',
     'benjamin-wellington',
-    'becky-stark',
     'alex-albright',
     'horace-dediu',
     'jessica-kirkpatrick',

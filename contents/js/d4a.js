@@ -158,7 +158,7 @@ $(document).ready(function() {
     var url = this.dataset.url;
     var text = encodeURI(this.dataset.text);
     text = text.replace('#', '%23');
-    var link = 'https://mail.google.com/mail/?view=cm&fs=1&to=&su=' + text + '&body=' + encodeURI(url);
+    var link = 'https://mail.google.com/mail/?view=cm&fs=1&to=&su=' + text + '&body=' + encodeURIComponent(url);
     PopupCenter(link, 'Send an Email', 550,400);
   });
 
@@ -204,7 +204,6 @@ $(document).ready(function() {
   } else {
     $('.dfa-header-article-share').remove();
   }
-
 
   if ($('#dfa-policy-issue').length) {
     $('#dfa-policy-issue .about p.para').each(function() {

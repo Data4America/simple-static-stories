@@ -1,7 +1,7 @@
 ---
 title: "Modeling basic income - does it add up?"
 author: jeremy-scheff
-date: 2015-10-29
+date: 2015-11-12
 template: basic-income.jade
 code: https://github.com/Data4America/simple-static-stories/blob/development/contents/basic-income/basic-income.js
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
@@ -53,4 +53,127 @@ On the other hand, some workers may decide that their basic income revenue is en
 
 Because of this wide range of uncertainty, the form below allows you to enter a range of possible changes in GDP that would result from the implementation of basic income. The model then assumes that tax revenue as a percentage of GDP would remain constant, resulting in additional (or decreased) revenue equal to that rate times the change in the GDP.
 
+## Customize results
 
+<form class="ui form" id="INLINEcustomize-form">
+  <div class="four fields">
+    <div class="field">
+      <label>Basic Income (per adult)</label>
+      <div class="ui left labeled input">
+        <div class="ui left label">$</div>
+        <input type="text" id="INLINEbasicIncome" disabled>
+      </div>
+      <div class="grouped fields">
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="INLINEbasicIncomeType" value="10k">
+            <label>$10k/year</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="INLINEbasicIncomeType" value="minimumWage">
+            <label>Full time minimum wage ($14.5k/year)</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="INLINEbasicIncomeType" value="20k">
+            <label>$20k/year</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="INLINEbasicIncomeType" value="custom">
+            <label>Custom</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>UBI or NIT?</label>
+      <select id="INLINEubiOrNit">
+        <option value="ubi">UBI while keeping taxes the same</option>
+        <option value="nit">Use a NIT or increase taxes on the rich while applying UBI</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Cuts and taxes (billions)</label>
+      <div class="ui left labeled input">
+        <div class="ui label">$</div>
+        <input type="text" id="INLINEcutsTaxes" disabled>
+      </div>
+      <div class="grouped fields">
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesWelfare">
+            <label>$375B - Eliminate redundant welfare <a href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf">[1]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesLoopholes">
+            <label>$740B - Eliminate tax loopholes <a href="http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf">[1]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesDefense">
+            <label>$300B - Cut defense spending in half <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesSocialSecurity">
+            <label>$695B - Eliminate Social Security <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesMedicaid">
+            <label>$290B - Eliminate Medicaid <a href="https://en.wikipedia.org/wiki/2010_United_States_federal_budget">[2]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesOnePercent">
+            <label>$157B - Raise taxes on top 1% to 40% <a href="http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html">[3]</a></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="INLINEcutsTaxesCustom">
+            <label><input type="text" id="INLINEcutsTaxesCustomValue" placeholder="Custom Amount"></checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>GDP Change</label>
+      <div class="ui right labeled input">
+        <input type="text" id="INLINEgdpRangeMin">
+        <div class="ui right label">%</div>
+      </div>
+      <center>to</center>
+      <div class="ui right labeled input">
+        <input type="text" id="INLINEgdpRangeMax">
+        <div class="ui right label">%</div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="ui two column stackable grid">
+  <div class="column">
+    <h4>Distribution of possible costs</h4>
+    <div id="INLINEbiDist"></div>
+  </div>
+  <div class="column">
+    <h4>Average costs/savings by component</h4>
+    <table id="INLINEbiBars" class="biBars"></table>
+  </div>
+</div>
+
+<script type="text/javascript" src="basic-income-inline.js"></script>
+
+## Build your own model
