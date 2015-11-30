@@ -37,6 +37,8 @@ $(document).ready(function() {
     uncheckable: true,
   });
 
+  $('#dfa-policy-issue .accordion').accordion();
+
   $('.dfa-ubi-nit .checkbox').checkbox();
   $('.dfa-tax-cuts .checkbox').checkbox();
 
@@ -63,6 +65,11 @@ $(document).ready(function() {
       .sidebar('toggle');
   });
 
+  $('.cosponsor').click(function() {
+    localStorage.setItem('cosponsor', $(this).attr('data-value'));
+    return true;
+  });
+
   $('#dfa-sidebar-border').height(screen.height);
 
   // If sponsor policy channel
@@ -70,6 +77,11 @@ $(document).ready(function() {
     $('#dfa-sponsorship .ui.grid .column').click(function() {
       var top = $('.dfa-donate').offset().top;
       $("html, body").animate({ scrollTop: top }, 1000);
+
+      var option = $(this).attr('data-option');
+
+      $('.dfa-select[name="sponsor_issue"] option[value="' + option + '"]').prop('selected', true);
+      $('.dfa-button.dfa-step-button[data-step="country"]').trigger('click');
     });
   }
 
@@ -127,14 +139,19 @@ $(document).ready(function() {
   });
 
   $('.ui.button.facebook, .dfa-header-article-share.fb').click(function() {
+    console.log(this.dataset.url);
     FB.ui({
         method: 'share',
         href: this.dataset.url
     }, function () {});
   });
 
-  $('.ui.button.twitter, .dfa-header-article-share.tw').click(function() {
-    PopupCenter('http://twitter.com/intent/tweet?url=' + encodeURIComponent(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&hashtags=d4a&via=data4america', 'Share on Twitter', 550, 400);
+  $('.ui.button.twitter, .dfa-header-article-share.tw, .say-thanks').click(function() {
+    var params = '?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&via=Data4America';
+    if (!$(this).hasClass('say-thanks')) {
+      params = params + '&hashtags=d4a'
+    }
+    PopupCenter('http://twitter.com/intent/tweet' + params, 'Share on Twitter', 550, 400);
   });
 
   $('.ui.button.email, .dfa-header-article-share.em').click(function() {
@@ -167,13 +184,6 @@ $(document).ready(function() {
     }
   });
 
-  if ($('article.article.big').length) {
-    var title = $('.dfa-article-header .ui.header').html();
-    $('.dfa-header-title').html(title);
-  } else {
-    $('.dfa-header-article-share').remove();
-  }
-
   $('#dfa-content p, #dfa-content .ui.header').each(function() {
     var html = $(this).html();
     if (html.search('Data4America') >= 0) {
@@ -182,6 +192,27 @@ $(document).ready(function() {
       $(this).html(html);
     }
   });
+
+  if ($('article.article.big').length) {
+    var title = $('.dfa-article-header .ui.header').html();
+    $('.dfa-header-title').html(title);
+  } else if ($('#dfa-policy-issue').length) {
+    var title = $('#dfa-policy-issue').attr('data-title');
+    $('.dfa-header-title').html('ISSUE: ' + title);
+  } else if ($('#dfa-policy-issues').length) {
+    $('.dfa-header-title').html('POLICY ISSUES');
+  } else {
+    $('.dfa-header-article-share').remove();
+  }
+
+  if ($('#dfa-policy-issue').length) {
+    $('#dfa-policy-issue .about p.para').each(function() {
+      var html = $(this).html();
+      var e = document.createElement('div');
+      e.innerHTML = html;
+      $(this).html(e.childNodes[0].nodeValue);
+    });
+  }
 
   if (window.location.pathname.search("/donate") === 0
       || window.location.pathname.search("/sponsorship") === 0) {
@@ -223,6 +254,20 @@ $(document).ready(function() {
     $.getScript('/js/donate.js', function() {
       if (window.location.pathname.search("/sponsorship") === 0) {
         $('.dfa-link-sponsor').trigger('click');
+
+        var values = localStorage.getItem('cosponsor');
+        if (values && values.length) {
+          console.log(values);
+          values = values.split(',');
+
+          var top = $('.dfa-donate').offset().top + 220;
+          $("html, body").animate({ scrollTop: top }, 1000);
+
+          localStorage.setItem('cosponsor', '');
+
+          $('.dfa-select[name="sponsor_issue"] option[value="' + values[0] + '"]').prop('selected', true);
+          $('.dfa-button.dfa-step-button[data-step="country"]').trigger('click');
+        }
       }
     });
   });

@@ -1,0 +1,10 @@
+{
+  "template": "policy-issues.jade",
+  "title": "Policy Issues",
+  "issues": {
+    "Environment": [ "co2-emissions.json" ],
+    "Economic Reforms": ["limitless-visas.json", "tax-incentives.json"],
+    "Criminal Justice": ["criminal-justice-reform.json"],
+    "Education": ["universal-access-education.json"]
+  }
+}

@@ -279,6 +279,7 @@ header {
   background-size: cover;
   cursor: pointer;
   display:block;
+  -webkit-print-color-adjust: exact;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
@@ -675,14 +676,43 @@ body.embed {
     padding: 0 .6em;
 }
 
-#dfa-supporters .item .header {
-  font-weight: bold;
-}
 
-#dfa-supporters .item .description {
-  font-weight: normal;
-  font-size: 0.9em;
-  color:@grey;
+#dfa-supporters {
+
+  .ui.horizontal.segments > .segment:nth-child(1) {
+    padding: 0;
+  }
+
+  .ui.items > .item > .image:not(.ui) {
+    width: 200px;
+  }
+
+  .ui.items > .item > .image + .content {
+    padding-left: 0.5em;
+  }
+
+  .item .header {
+    margin-top:0.5em;
+    font-weight: bold;
+  }
+
+  .item .description {
+    font-weight: normal;
+    font-size: 0.9em;
+    color:@grey;
+  }
+
+  .ui.list .item {
+    font-size: 0.8em;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.items > .item > .image + .content {
+      padding-left: 0.5em;
+      padding-top: 0;
+    }
+  }
+
 }
 
 #dfa-sponsorship .ui.grid .column {
@@ -736,6 +766,212 @@ body.embed {
 
   .ui.ordered.list > .item:before {
     margin-left: -2em;
+  }
+
+}
+
+#dfa-policy-issue {
+
+  h1.ui.header {
+    font-size:2.3em;
+  }
+
+  h2.ui.header {
+
+    font-family: 'Trasandina';
+    font-size:2em;
+
+    .blue { color: @blue; }
+
+    .red { color: @red; }
+  }
+
+  .ui.statistics {
+    .statistic {
+      margin-bottom: 0;
+    }
+
+    .value {
+      font-size: 1.8rem;
+    }
+
+    .label {
+      text-align: left;
+    }
+  }
+
+  .ui.horizontal.list {
+    margin: 0;
+
+    .ui.avatar.image {
+      width: 4em;
+      height: 4em;
+    }
+
+    .item a { font-size: 0.8em; }
+  }
+
+  .ui.horizontal.list > .item > img.image + .content {
+    padding-left: 0.1em;
+  }
+
+  .ui.bulleted.list {
+
+    .item {
+      word-wrap: break-word;
+      font-size: 1em;
+      line-height: 1.6em;
+    }
+  }
+
+  .reward .grid {
+    position: relative;
+  }
+
+  .reward .column {
+    text-align: center;
+  }
+
+  .reward .ui.statistic .value {
+    font-size: 1.8em;
+    font-weight: bolder;
+    margin-bottom: 0.3em;
+  }
+
+  .reward .ui.statistic .label {
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+  .note {
+    font-size: 0.8em;
+    line-height: 1.4em;
+    color: @grey;
+    margin: 1em 0 0;
+  }
+
+  .ui.styled.accordion {
+    background: rgb(231,238,247);
+  }
+
+  .ui.segment {
+    -webkit-print-color-adjust: exact;
+  }
+
+  .ui.button {
+    -webkit-print-color-adjust: exact;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.segment.sponsor .ui.list .header { display: inline; }
+  }
+
+}
+
+.dfa-share .button {
+  -webkit-print-color-adjust: exact;
+}
+
+#dfa-policy-issues {
+  .ui.segment.dfa-table {
+    padding: 0;
+  }
+
+  .ui.table {
+    border: none;
+
+    td.issue-title {
+      width:50%;
+    }
+
+    tr.category td {
+      font-size: 0.8em;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0.4em;
+      background-color: #F9FAFB;
+    }
+
+    td.sponsors {
+      width: 30%;
+    }
+
+    .saperator { padding: 0 0.4em 0 0.15em; color:@grey; }
+    .say-thanks { font-size: 0.8em; }
+
+    .ui.list {
+      margin-top:0;
+    }
+
+    .ui.list > .item > img.image + .content {
+      padding-left: 0.5em;
+    }
+
+    .ui.list > .item {
+      padding:0.5em 0;
+      display: table-row;
+    }
+
+    .ui.list > .item .content {
+      display: table-cell;
+    }
+
+    .ui.list > .item > img.image {
+      display: table-cell;
+      border-radius: 5px;
+    }
+
+    .ui.list > .item .header {
+      font-size:0.9em;
+    }
+
+  }
+
+  .ui.header.mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.table thead { display: none; }
+
+    .ui.header.mobile {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0;
+      color: @grey;
+      font-size: 0.6em;
+      font-weight: normal;
+    }
+
+    .ui.table .ui.list {
+      margin-top:0.5em;
+    }
+
+    .ui.table tr.category {
+      padding:0;
+    }
+  }
+
+}
+
+@media print {
+  #dfa-menu-floating { display:none; }
+  #dfa-footer { display:none; }
+  #dfa-menu { display:none; }
+  #dfa-header { display:none !important; }
+}
+
+
+#dfa-coalitions {
+
+  .ui.bulleted.list {
+
+    .item {
+      word-wrap: break-word;
+      font-size: 1em;
+      line-height: 1.6em;
+      font-weight: lighter;
+    }
   }
 
 }

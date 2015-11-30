@@ -1,4 +1,4 @@
 ---
 template: proposal.jade
-title: Request for Proposal
+title: Request for Content
 ---
