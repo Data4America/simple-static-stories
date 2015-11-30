@@ -1,0 +1,27 @@
+{
+  "title": "50% reduction of C02 emissions by 2030 in the United States",
+  "url": "/issue/demo/reduction-of-co2-emissions/federal/usa/",
+  "name": "50% reduction of C02 emissions by 2030",
+  "geography": "United States",
+  "geographicLevel": "Federal",
+  "demo": true,
+  "titleBreak": true,
+  "sponsor": {
+    "name": "NextGen Climate",
+    "img": "/img/nextclimate.jpg",
+    "twitter": "https://twitter.com/nextgenclimate",
+    "www": "https://nextgenclimate.org/",
+    "thanksText": "Thanks to @nextgenclimate for sponsoring the 50% reduction of C02 emissions by 2030 in the United States."
+  },
+  "about": {
+    "paragraphs": [
+      "Between his historic climate agreement with China, the Clean Power Plan, and a host of other unprecedented green initiatives, President Obama has set America on a course to lead the world when it comes to clean energy and combatting climate change.",
+      "There are, however, still powerful polluting special interests intent on profiting at any cost — a price that, if left unchecked, will be borne by our children and their children. We believe that the time is now, and while President Obama’s actions are an important first step, we must keep pushing for better solutions and a brighter future. We believe that viable 2016 candidates must, at a minimum, submit a plan for the United States to get over 50 percent of its energy from clean energy by 2030, and on the way to 100 percent by 2050. The rapid development of clean energy is an absolute, non-negotiable necessity — one supported by 72% of Republican voters."
+    ]
+  },
+  "learnMore": [
+    "http://www.theguardian.com/us-news/2015/apr/29/california-new-greenhouse-gas-emissions-goal",
+    "http://www.bafu.admin.ch/dokumentation/medieninformation/00962/index.html?lang=en&msg-id=56394"
+  ],
+  "datasets": []
+}

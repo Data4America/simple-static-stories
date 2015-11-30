@@ -1,0 +1,66 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-policy-issues.ui.segments
+    div.ui.segment.center.aligned
+      h1.ui.header POLICY ISSUES
+    div.ui.segment.dfa-table
+      table.ui.celled.table
+        thead
+          tr
+            th Policy
+            th Location
+            th Sponsors
+        tbody
+          - var cat = page.metadata.issues
+          - for (key in cat)
+            tr.category
+              td(colspan="3")= key
+            - issues = cat[key]
+            - for (var i = 0; i < issues.length; i++)
+              - var issue = contents.issue.json[issues[i]].metadata
+              tr
+                td.issue-title
+                  a(href=issue.url, target="_blank")= issue.name
+                td
+                 h4.ui.header.mobile GEOGRAPHY:
+                 = issue.geography
+                td.sponsors
+                  h4.ui.header.mobile SPONSORED BY:
+                  - var sponsor = issue.sponsor
+                  div.ui.divided.list
+                    div.item
+                      img.ui.avatar.image(src=sponsor.img)
+                      div.content
+                        div.header= sponsor.name
+                        div
+                          if sponsor.twitter
+                            a(href=sponsor.twitter, target="_blank")
+                              i.ui.icon.twitter(style="color:#0084B4;")
+                          if sponsor.linkedin
+                            a(href=sponsor.linkedin, target="_blank")
+                              i.ui.icon.linkedin(style="color:#0077B5;")
+                          if sponsor.www
+                            a(href=sponsor.www, target="_blank")
+                              i.ui.icon.globe(style="color:#666;")
+                          span.saperator ·
+                          a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=issue.url) Say Thanks
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+

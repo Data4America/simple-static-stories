@@ -11,43 +11,43 @@ block content
 
     div.ui.three.column.grid
 
-      div.column
+      div.column(data-option="Environment")
         div.icons.environment
         h3.ui.grey.header Environment
-      div.column
+      div.column(data-option="Military")
         div.icons.military
         h3.ui.grey.header Military
-      div.column
+      div.column(data-option="Race and Gender")
         div.icons.race-gender
         h3.ui.grey.header Race and Gender
 
-      div.column
+      div.column(data-option="Wall Street Reform")
         div.icons.wall-street
         h3.ui.grey.header Wall Street Reform
-      div.column
+      div.column(data-option="Federal spending")
         div.icons.spending
         h3.ui.grey.header Federal Spending
-      div.column
+      div.column(data-option="Drug Legalization")
         div.icons.drugs
         h3.ui.grey.header Drug Legalization
 
-      div.column
+      div.column(data-option="Immigration reform")
         div.icons.immigration
         h3.ui.grey.header Immigration
-      div.column
+      div.column(data-option="Government and Religion")
         div.icons.religion
         h3.ui.grey.header Government and Religion
-      div.column
+      div.column(data-option="Education")
         div.icons.education
         h3.ui.grey.header Education
 
-      div.column
+      div.column(data-option="Entitlement Programs")
         div.icons.entitlement
         h3.ui.grey.header Entitlement Programs
-      div.column
+      div.column(data-option="Taxes")
         div.icons.taxes
         h3.ui.grey.header Taxes
-      div.column
+      div.column(data-option="Foreign Affairs")
         div.icons.foreign
         h3.ui.grey.header Foreign Affairs
 
@@ -56,4 +56,19 @@ block content
       | Choose your own ($10,000 is the minimum donation)
 
     div.body-text.donate-wrapper
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
 

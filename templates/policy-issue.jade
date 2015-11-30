@@ -1,0 +1,208 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+
+block content
+  - var issue = contents.issue.json[page.metadata.json].metadata
+  div#dfa-policy-issue.ui.segments(data-title=issue.title)
+
+    - if(issue.demo)
+      div.ui.inverted.segment.grey(style="background-color: #D4D4D4 !important;font-size: 0.85em;")
+        i.info.circle.icon
+        | This page does not represent an actual sponsored policy issue. It’s for demo purposes-only.
+
+    div.ui.segment
+      h1.ui.header.center.aligned POLICY ISSUE
+      div.ui.divider
+      h2.ui.header.center.aligned
+        span(style="color:#CC0505;")= issue.name
+        - if (issue.titleBreak)
+          br
+        |  in the 
+        span(style="color:#2185D0;")= issue.geography
+      div.dfa-share(style="padding-bottom:1em; text-align:center;")
+        div.ui.grey.email.button.circular.icon(data-text=issue.title, data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url)
+          i.icon.mail
+        div.ui.facebook.button.circular.icon(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url)
+          i.ui.facebook.icon
+        div.ui.twitter.button.circular.icon(data-text=issue.title, data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url)
+          i.ui.twitter.icon
+
+    div.ui.segment.sponsor
+      h3.ui.header Sponsored By:
+      div.ui.horizontal.list.massive
+        - var sponsor = issue.sponsor
+        div.item
+          img.ui.avatar.image(src=sponsor.img, style="border-radius: 4px;")
+          div.content
+            div.header
+              = sponsor.name
+              - if (sponsor.desc)
+                | , 
+                span.desc(style="color: #999; font-size: 0.9em;")
+                  = sponsor.desc
+            if sponsor.twitter
+              a(href=sponsor.twitter, target="_blank")
+                i.ui.icon.twitter(style="color:#0084B4;")
+            if sponsor.linkedin
+              a(href=sponsor.linkedin, target="_blank")
+                i.ui.icon.linkedin(style="color:#0077B5;")
+            if sponsor.www
+              a(href=sponsor.www, target="_blank")
+                i.ui.icon.globe(style="color:#666;")
+            if sponsor.wikipedia
+              a(href=sponsor.wikipedia, target="_blank")
+                img(src="/img/wikipedia.png", style="width: 21px; height: 21px; display: inline-block;margin-bottom: -0.24em;")
+            div(style="line-height: 0.7em; padding-left: 0.15em;")
+              a.say-thanks(href="javascript:;", data-text=sponsor.thanksText, data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, style="font-size: 0.6em;") Say Thanks
+
+      p.note We maintain a strict firewall between editorial and policy issue sponsorships. As a non-partisan group, the principle of 'ideas over politics' guides us. We only publish what the non-partisan 
+        span.d4a Data
+          span.f 4
+          | America
+        |  Editorial Board approves.
+
+    div.ui.segment.about
+      h3.ui.header About this issue:
+      - if(issue.about.via)
+        p(style="font-size: 0.75em; margin-top: -1em; margin-bottom: 0.6em;") (via 
+          a(href=issue.about.via, target="_blank")= issue.about.via
+          | )
+
+      - for (key in issue.about.paragraphs)
+        p.para= issue.about.paragraphs[key]
+
+    div.ui.segment
+      h3.ui.header Learn More:
+      div.ui.bulleted.list
+        - for (key in issue.learnMore)
+          div.item
+            a(href=issue.learnMore[key], target="_blank")= issue.learnMore[key]
+      div.ui.styled.fluid.accordion.submit-source
+        div.title
+          i.dropdown.icon
+          |  Submit a New Source
+        div.content
+          iframe(src="https://docs.google.com/forms/d/1xOK9aOTswAMNKgb7U9NdLJ62kQK3uMEvsnP3xUp7TzI/viewform?embedded=true", width="100%", height="1315", frameborder="0", marginheight="0", marginwidth="0")
+
+    div.ui.segment
+      h3.ui.header Recommended Datasets:
+      - if (issue.datasets.length)
+        div.ui.bulleted.list
+          - for (key in issue.datasets)
+            div.item
+              a(href=issue.datasets[key], target="_blank")= issue.datasets[key]
+      - else
+        div.ui.warning.message
+          i.icon.warning.circle
+          | No datasets exist
+      div.ui.styled.fluid.accordion.submit-dataset
+        div.title
+          i.dropdown.icon
+          |  Submit a New Dataset
+        div.content
+          iframe(src="https://docs.google.com/forms/d/1HXvow45G2LoXs6jh4w2keIMcV2KvHy1BzVDFKKp_iV8/viewform?embedded=true", width="100%", height="1510", frameborder="0", marginheight="0", marginwidth="0")
+
+    div.ui.segment.reward
+      h3.ui.header Reward for Being Published:
+      div.ui.bulleted.list.large
+        div.item $500
+        div.item 
+         span.d4a D
+           span.f(style="color:#CC0001; font-weight:bold;") 4
+           | A 
+         |  tee-shirt
+        div.item Invited to our content creator’s private Slack channel
+
+    div.ui.segment
+      h3.ui.header
+         span.d4a D
+           span.f(style="color:#CC0001;") 4
+           | A
+         |  Published Stories on 
+         = issue.name
+         | :
+      div.ui.info.message
+        i.icon.checkered.flag
+        | Be the first one, submit your data viz: 
+        a(href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=submit@data4america.org&su=&tf=1", target="blank") submit@data4america.org
+
+    div.ui.segment
+      div.ui.accordion.faq
+        div.title
+          i.dropdown.icon
+          |  Read our FAQ
+        div.content FAQ
+
+    div.ui.segment
+      div.ui.accordion.good-stories
+        div.title
+          i.dropdown.icon
+          |  Good Examples
+        div.content
+          div.ui.bulleted.list
+            div.item Pace of social change in U.S. An interactive data viz from Bloomberg: 
+              a(href="http://www.bloomberg.com/graphics/2015-pace-of-social-change/", target="_blank") http://www.bloomberg.com/graphics/2015-pace-of-social-change/
+            div.item Internet lobbyists and their disproportionate impact on legislation. A network analysis of Twitter from 
+              a(href="http://twitter.com/noupside", target="_blank") Renee Diresta
+              | , 
+              a(href="http://www.wired.com/2015/06/antivaxxers-influencing-legislation/", target="_blank") http://www.wired.com/2015/06/antivaxxers-influencing-legislation/
+            div.item Infographic detailing the milestones and events making up the life of Hillary Clinton from 
+              a(href="http://twitter.com/FundersFounders", target="_blank") Funders and Founders
+              | , 
+              a(href="http://fundersandfounders.com/how-hillary-clinton-started/", target="_blank") http://fundersandfounders.com/how-hillary-clinton-started/
+            div.item Map of Uber vs. Taxi use in NYC from Fivethirtyeight, 
+              a(href="http://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/", target="_blank") http://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/
+            div.item Visualized budget for Oakland, CA from Code for America, 
+              a(href="http://openbudgetoakland.org/2015-17-proposed-budget-flow.html", target="_blank") http://openbudgetoakland.org/2015-17-proposed-budget-flow.html
+            div.item Animated map on how religion spread throughout history from Business Insider, 
+              a(href="http://www.businessinsider.com/map-shows-how-religion-spread-around-the-world-2015-6", target="_blank") http://www.businessinsider.com/map-shows-how-religion-spread-around-the-world-2015-6
+            div.item How fire hydrants made NYC $55MM in parking ticket revenue, from 
+              a(href="http://twitter.com/iquantny", target="_blank") I Quant NY
+              | , 
+              a(href="http://iquantny.tumblr.com/post/83770853308/update-single-fire-hydrant-nets-nyc-33000-a", target="_blank") http://iquantny.tumblr.com/post/83770853308/update-single-fire-hydrant-nets-nyc-33000-a
+
+    div.ui.segment
+      div.ui.accordion
+        div.title
+          i.dropdown.icon
+          |  Who Should Submit?
+        div.content
+          div Data4America accepts submissions from anyone and everyone including:
+          div.ui.bulleted.list
+            div.item data scientists
+            div.item data journalists
+            div.item data designers
+            div.item students
+            div.item think tanks
+            div.item political orgs
+            div.item open data enthusiasts
+            div.item government themselves
+          div Our Editorial Board review all submissions, adjusts for quality and perceived bias, helps edit, and the best stories are voted on for publishing through our distribution network. 
+
+    div.ui.segment
+      a.ui.red.button.large(href="/upload", target="_blank") Submit a Story
+      a.ui.white.button.large(href="/sponsorship/", target="_blank") More Issues
+
+    div.ui.segment
+      a.cosponsor(href="/sponsorship", target="_blank", data-value=issue.name + ',' + issue.geographicLevel) Co-Sponsor
+      span.saperator ·
+      a(href="/sponsorship", target="_blank") Sponsor a New Policy Issue
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.white.email.huge.button.fluid(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, data-text=issue.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=(issue.baseUrl ? issue.baseUrl : locals.url) + issue.url, data-text=issue.title, style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+

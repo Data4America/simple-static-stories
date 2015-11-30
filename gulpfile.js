@@ -12,7 +12,10 @@ var gulp = require('gulp'),
 var paths = {
     less: 'contents/less/',
     js: 'contents/js/',
-    css: 'contents/css/'
+    css: 'contents/css/',
+    lifemap: {
+      less: 'contents/lifemap/less/'
+    }
 };
 
 gulp.task('lint', function () {
@@ -43,6 +46,16 @@ gulp.task('less', function () {
         .pipe(gulp.dest(paths.css));
 });
 
+gulp.task('lifemap-less', function () {
+    return gulp.src(paths.lifemap.less + 'styles.less')
+        .pipe(less({
+            paths: [ paths.lifemap.less ]
+        }))
+        .pipe(autoprefixer('last 10 version'))
+        .pipe(rename('lifemap.css'))
+        .pipe(gulp.dest(paths.css));
+});
+
 gulp.task('semantic-js', function(){
     return gulp.src([paths.less + 'semantic/definitions/**/*.js'])
         .pipe(concat('semantic.js'))
@@ -55,4 +68,10 @@ gulp.task('default', function() {
         paths.less + '/**/*.variables',
         paths.less + '/**/*.overrides'
     ], ['less']);
+
+    gulp.watch([
+        paths.lifemap.less + '/**/*.less',
+        paths.lifemap.less + '/**/*.variables',
+        paths.lifemap.less + '/**/*.overrides'
+    ], ['lifemap-less']);
 });

@@ -1,0 +1,32 @@
+{
+  "title": "Reform the Criminal Justice System in the United States",
+  "url": "/issue/demo/reform-criminal-justice/federal/usa/",
+  "name": "Reform the Criminal Justice System",
+  "geography": "United States",
+  "geographicLevel": "Federal",
+  "demo": true,
+  "titleBreak": true,
+  "sponsor": {
+    "name": "Koch Foundation",
+    "img": "https://pbs.twimg.com/profile_images/629737455856386048/hZZG820B_400x400.jpg",
+    "twitter": "https://twitter.com/ckinstitute",
+    "linkedin": "http://www.charleskochinstitute.org/",
+    "thanksText": "Thanks to @ckinstitute for sponsoring the Reform the Criminal Justice System in the United States."
+  },
+  "about": {
+    "via": "http://www.charleskochinstitute.org/why-reform-the-justice-system/",
+    "paragraphs": [
+      "Though we may have arrived at our current criminal justice system through the actions of many well-meaning individuals, far too many of its features run counter to the basic principles of a free society.",
+      "The United States currently incarcerates <a href=\"http://sentencingproject.org/doc/publications/inc_Trends_in_Corrections_Fact_sheet.pdf\" target=\"_blank\">2.2 million people</a>, at a rate of <a target=\"_blank\" href=\"http://sentencingproject.org/doc/publications/inc_Trends_in_Corrections_Fact_sheet.pdf\">over 700 for every 100,000 residents</a>. Somewhere between <a target=\"_blank\" href=\"http://www.sentencingproject.org/doc/publications/cc_HiT_CriminalRecords_profile_1.pdf\">70 million and 100 million</a> Americans have a criminal record, which acts as a barrier to employment and other opportunities following release. Because children who have a parent behind bars are more likely to end up in prison themselves, our system is harming both this generation and the next.",
+      "Many of the system’s flaws begin in the U.S. Code, which contains more laws than anyone could be expected to read or understand. The absence of a clear definition of a “crime” has made counting the number of crimes on the books nearly impossible. The latest count puts the number at <a target=\"_blank\" href=\"http://www.heritage.org/research/reports/2013/04/the-need-for-a-mistake-of-law-defense-as-a-response-to-overcriminalization\">over 4,500</a>. That, of course, does not even include the over <a target=\"_blank\" href=\"http://www.heritage.org/research/reports/2013/04/the-need-for-a-mistake-of-law-defense-as-a-response-to-overcriminalization\">300,000 regulatory violations</a> that carry criminal penalties. Many of those laws do not contain a <em>mens rea</em> requirement, meaning an individual who commits a crime without intending to can be found guilty nonetheless.",
+      "Furthermore, the use of militarized policing tactics and &nbsp;equipment creates deep tensions between law enforcement agents and the communities they police, endangering both and creating a sense of insecurity.&nbsp;Other problems emanate from civil asset forfeiture laws, which sometimes incentivize law enforcement to act in ways that threaten the rights of innocent individuals, and mandatory minimum sentencing laws, which impose unduly harsh and counterproductive punishments, often on nonviolent offenders.",
+      "Overwhelmingly, these policies have led to increased incarceration, which consumes a significant portion of state and federal budgets. Corrections spending represents the <a target=\"_blank\" href=\"http://www.cbpp.org/research/changing-priorities-state-criminal-justice-reforms-and-investments-in-education\">third-largest category of spending</a> for most states, and <a target=\"_blank\" href=\"https://www.themarshallproject.org/2015/02/12/the-cost-of-crime-fighting\">over 20 percent</a> of the Department of Justice’s budget.",
+      "But incarceration is costly in more than just dollars and cents. The collateral consequences of a criminal record make it difficult for ex-offenders to successfully re-enter society. Occupational licensing laws bar ex-offenders from performing certain jobs, regardless of their expertise or experience, and hiring policies discourage employers from hiring ex-offenders. Further, incarceration is an especially expensive public safety solution given that while crime has been falling for the last 25 years, <a target=\"_blank\" href=\"http://cascadepolicy.org/pdf/pub/Reducing_Correction_Costs_2013_PDF.pdf\">less than one-third</a> of that reduction is explained by rising incarceration rates.",
+      "To better understand the key issues involved in engendering such a system, the United States will need to close gaps in research, identify policy solutions, and overcome resistance to reform."
+    ]
+  },
+  "learnMore": [
+    "http://www.charleskochinstitute.org/why-reform-the-justice-system/"
+  ],
+  "datasets": []
+}
