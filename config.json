@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "http://data4america.org",
+    "url": "https://data4america.org",
     "name": "Data4America",
     "development": true
   },
@@ -12,8 +12,7 @@
   "require": {
     "moment": "moment",
     "_": "underscore",
-    "typogr": "typogr",
-    "lo": "lodash"
+    "typogr": "typogr"
   },
   "jade": {
     "pretty": true
