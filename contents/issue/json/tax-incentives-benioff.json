@@ -1,0 +1,35 @@
+{
+  "title": "Tax incentives for companies to have comprehensive cybersecurity plans in place in the United States",
+  "url": "/issue/demo/tax-incentives-cybersecurity/federal/usa/",
+  "name": "Tax incentives for companies to have comprehensive cybersecurity plans in place",
+  "geography": "United States",
+  "geographicLevel": "Federal",
+  "titleBreak": true,
+  "demo": true,
+  "sponsor": {
+    "name": "Marc Benioff",
+    "desc": "CEO @Salesforce",
+    "img": "/img/marc-beinoff.jpeg",
+    "twitter": "https://twitter.com/Benioff",
+    "linkedin": "https://www.linkedin.com/in/marcbenioff",
+    "wikipedia": "https://en.wikipedia.org/wiki/Marc_Benioff",
+    "thanksText": "Thanks to @Benioff for sponsoring the Limitless H1-B Visas for high-skilled workers in the United States"
+  },
+  "about": {
+    "via": "http://fortune.com/2015/01/22/salesforce-ceo-marc-benioff-on-where-big-tech-is-headed/",
+    "paragraphs": [
+      "<strong>Q:</strong> What’s the state of play in cyberterrorism?",
+      "<strong>Marc Benioff:</strong> Well, if you go to my Wikipedia page, you’ll see at the bottom there’s a report that I wrote in 2004 called “Cybersecurity and Crisis Prioritization.” I wrote that for George W. Bush. And you’ll see that we still have a crisis of prioritization regarding cybersecurity because cybersecurity is an oxymoron. And we built an Internet that was inherently insecure and unreliable. That was the nature of the Internet itself when it was built and designed in the ’60s. So there is no finish line when it comes to cybersecurity. Everybody should have security as his or her No. 1 priority because we are in a highly dynamic environment. That is not going to change. By the way, I have zero arrogance when it comes to cybersecurity. I am paranoid all the time because I see all the things that are happening, and I am completely worried every single day about security, and everybody should be.",
+      "The British insurance company Lloyd’s estimates that cyber attacks cost businesses as much as $400 billion a year, which includes direct damage plus post-attack disruption to the normal course of business. Some vendor and media forecasts put the cybercrime figure as high as $500 billion and more.",
+      "The World Economic Forum (WEF) says a significant portion of cybercrime goes undetected, particularly industrial espionage where access to confidential documents and data is difficult to spot.",
+      "Then there’s the hacks and breaches which go unreported by privately held and unregulated companies who are fearful of how cyber incidents will damage their reputations — which can have a negative impact on revenues, company valuation when raising capital, customer acquisition and retention, and their ability to recruit top talent.",
+      "Ginni Rometty, IBM Corp.’s Chairman, President and CEO, had the following to say at the IBM IBM +0.00% Security Summit in New York City earlier this year, when she addressed CISOs (Chief Information  Security Officers), CIOs, and CEOs from 123 companies in 24 industries. – “We believe that data is the phenomenon of our time. It is the world’s new natural resource. It is the new basis of competitive advantage, and it is transforming every profession and industry. If all of this is true – even inevitable – then cyber crime, by definition, is the greatest threat to every profession, every industry, every company in the world.”",
+      "<img src=\"http://cdn.static-economist.com/sites/default/files/imagecache/original-size/images/print-edition/20151128_FBC596.png\" style=\"width:350px\" />"
+    ]
+  },
+  "learnMore": [
+    "http://fortune.com/2015/01/22/salesforce-ceo-marc-benioff-on-where-big-tech-is-headed/",
+    "http://www.forbes.com/sites/stevemorgan/2015/11/24/ibms-ceo-on-hackers-cyber-crime-is-the-greatest-threat-to-every-company-in-the-world/"
+  ],
+  "datasets": []
+}

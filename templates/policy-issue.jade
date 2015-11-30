@@ -72,7 +72,7 @@ block content
           | )
 
       - for (key in issue.about.paragraphs)
-        p.para= issue.about.paragraphs[key]
+        p.para!= issue.about.paragraphs[key]
 
     div.ui.segment
       h3.ui.header Learn More:

@@ -205,15 +205,6 @@ $(document).ready(function() {
     $('.dfa-header-article-share').remove();
   }
 
-  if ($('#dfa-policy-issue').length) {
-    $('#dfa-policy-issue .about p.para').each(function() {
-      var html = $(this).html();
-      var e = document.createElement('div');
-      e.innerHTML = html;
-      $(this).html(e.childNodes[0].nodeValue);
-    });
-  }
-
   if (window.location.pathname.search("/donate") === 0
       || window.location.pathname.search("/sponsorship") === 0) {
     $('#dfa-footer').remove();
