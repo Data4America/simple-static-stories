@@ -3,3 +3,4 @@ build
 *~
 npm-debug.log
 contents/assets
+.DS_Store
