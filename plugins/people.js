@@ -22,7 +22,6 @@ var order = [
     'jeremy-scheff',
     'ganesh-iyer',
     'sarah-levine',
-    'sam-penrose',
     'andrew-trabulsi',
     'sam-drzymala',
     'christopher-nicholson',
