@@ -1,10 +1,10 @@
 {
   "name": "Andy Barkett",
-  "title": "Editorial Board",
+  "title": "Advisor",
   "founder": false,
   "boardOfDirectors": false,
-  "editorialBoard": true,
-  "advisor": false,
+  "editorialBoard": false,
+  "advisor": true,
   "bio": "<span>First-ever CTO of the Republican party. Now&#xA0;</span><span style=\"line-height: 1.4;\">CEO @Getexp.</span><span style=\"line-height: 1.4;\">&#xA0;</span><span style=\"line-height: 1.4;\">Former engineer @Google and @Facebook. MBA. Software nerd. Amateur power forward.</span>",
   "links": [
     {

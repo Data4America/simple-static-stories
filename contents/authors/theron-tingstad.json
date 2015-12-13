@@ -1,10 +1,10 @@
 {
   "name": "Theron Tingstad",
-  "title": "Editorial Board",
+  "title": "Advisor",
   "founder": false,
   "boardOfDirectors": false,
-  "editorialBoard": true,
-  "advisor": false,
+  "editorialBoard": false,
+  "advisor": true,
   "bio": "Biz dev @Green Sheep Water. @University of Chicago Booth School of Business &#x2018;16. @Harvard Kennedy School &#x2018;14. Entrepreneur. Airborne Ranger. All-American boxer.",
   "links": [
     {
