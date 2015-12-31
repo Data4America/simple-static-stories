@@ -27,7 +27,6 @@ var order = [
     'cyan-banister',
     'ramez-naam',
     'tim-urban',
-    'andy-barkett',
     'theron-tingstad',
     'frank-tsai',
     'seth-kaddish',
