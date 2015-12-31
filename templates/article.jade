@@ -39,8 +39,8 @@ block content
       include author
       section.content
         if !page.metadata.published
-          div.ui.raised.segment(style='background: #CC0505; color: #fff')
-            p #[b DISCLAIMER:] This article is not yet approved by the editorial board. Please send feedback to chris@data4america.org
+          div.ui.raised.segment.red.inverted
+            p #[b DISCLAIMER:] This article is not yet approved by the editorial board. Please send us your feedback to #[a(href='mailto:chris@data4america.org', style='color: #c0c0c0; text-decoration: underline') chris@data4america.org]
         block actual-content
           div!= typogr(page.html).typogrify()
 
