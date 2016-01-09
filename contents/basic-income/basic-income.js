@@ -543,7 +543,9 @@ function basicIncomeInit() {
         // Sources
         input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp'];
         input.forEach(function (input) {
-            state[input][1] = escape(formEls[input + 'Source'].value);
+            if (formEls[input + 'Source']) {
+                state[input][1] = escape(formEls[input + 'Source'].value);
+            }
         });
 
         // Radio buttons
