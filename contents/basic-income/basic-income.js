@@ -473,7 +473,7 @@ function basicIncomeInit() {
 
         // Review slide, other text content
         if (textEls.reviewNumAdults) {
-            textEls.reviewNumAdults.innerHTML = state.numAdults[0];
+            textEls.reviewNumAdults.innerHTML = state.numAdults[0].toLocaleString('en-US');
         }
         if (textEls.reviewGdp) {
             textEls.reviewGdp.innerHTML = state.gdp[0];
@@ -482,13 +482,13 @@ function basicIncomeInit() {
             textEls.reviewTaxAsPercentGdp.innerHTML = state.taxAsPercentGdp[0];
         }
         if (textEls.reviewBasicIncome) {
-            textEls.reviewBasicIncome.innerHTML = state.basicIncome;
+            textEls.reviewBasicIncome.innerHTML = state.basicIncome.toLocaleString('en-US');
         }
         if (textEls.reviewUbiOrNit) {
             textEls.reviewUbiOrNit.innerHTML = state.ubiOrNit.toUpperCase();
         }
         if (textEls.reviewCutsTaxes) {
-            textEls.reviewCutsTaxes.innerHTML = cutsTaxesTotal(state.cutsTaxes);
+            textEls.reviewCutsTaxes.innerHTML = cutsTaxesTotal(state.cutsTaxes).toLocaleString('en-US');
         }
         if (textEls.reviewGdpRangeMin) {
             textEls.reviewGdpRangeMin.innerHTML = state.gdpRangeMin;
