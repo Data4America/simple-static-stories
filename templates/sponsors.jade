@@ -1,0 +1,34 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-sponsorship.ui.segment(style="min-height:400px;")
+    h1.ui.header OUR SPONSORS
+    div.ui.divider
+    div.ui.items
+      div.item
+        a.ui.small.image
+          img(src="http://bigdatauniversity.com/bdu-wp/wp-content/themes/bdu/assets/img/bdu-logo.png")
+        div.content
+          a.header(href="http://bigdatauniversity.com/", target="_blank") Big Data University
+          div.description Start your career in data science, attend the free 
+            a(href="http://bigdatauniversity.com/", target="_blank") IBM Data University.
+
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+

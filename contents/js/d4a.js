@@ -37,7 +37,11 @@ $(document).ready(function() {
     uncheckable: true,
   });
 
-  $('#dfa-policy-issue .accordion').accordion();
+  $('#dfa-policy-issue .accordion').accordion({
+    animateChildren: false,
+    onOpen: function() {
+    }
+  });
 
   $('.dfa-ubi-nit .checkbox').checkbox();
   $('.dfa-tax-cuts .checkbox').checkbox();

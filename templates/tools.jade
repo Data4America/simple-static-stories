@@ -1,0 +1,35 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-sponsorship.ui.segment(style="min-height:400px;")
+    h1.ui.header TOOLS WE RECOMMEND
+    div.ui.divider
+    div.ui.items
+      div.item
+        a.ui.small.image
+          img(src="https://developer.ibm.com/bluemix/wp-content/uploads/sites/20/2014/10/watsonLogo.png")
+        div.content
+          a.header(href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/", target="_blank") IBM Watson
+          div.description 
+            a(href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/", target="_blank") IBM Watson
+            |  is a technology platform that uses natural language processing and machine learning to reveal insights from large amounts of unstructured data.
+
+
+  div.ui.basic.segment.dfa-share
+    div.ui.equal.width.grid.stackable
+      div.column
+        div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.icon.mail
+          span.text Email
+      div.column
+        div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+          i.ui.facebook.icon
+          span.text Share
+      div.column
+        div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+          i.ui.twitter.icon
+          span.text Tweet
+
