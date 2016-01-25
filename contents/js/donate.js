@@ -546,7 +546,8 @@
 
     var handler = global.StripeCheckout.configure({
       //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
-      key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
+      //key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
+      key: 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR',
       image: 'https://33.media.tumblr.com/avatar_55d711f733d2_128.png',
       token: function(token) {
 
