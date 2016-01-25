@@ -71,7 +71,7 @@ block actual-content
           label What is its Wikipedia URL?
           input#regionNameSource(type="text", placeholder="Source URL")
         p
-          a#united-states-data
+          a.united-states-data
             | Use data for United States
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
@@ -101,6 +101,9 @@ block actual-content
               i.help.icon.circle.ubi-popup(data-html='Add up all the tax revenue in your region and divide it by your region\'s GDP. This quantity <a href="https://en.wikipedia.org/wiki/Hauser%27s_law">tends to remain constant</a>, so it can be used to estimate the effects of basic income-induced GDP changes on total tax revenue.')
             input#taxAsPercentGdp(type="text")
             div.ubiSource(data-name="taxAsPercentGdpSource")
+        p(style="margin-top: 0")
+          a.united-states-data
+            | Use data for United States
         div.field.right.slide-controls(style="text-align:left;")
           div.ui.white.button.prev.large Back
           div.ui.red.button.next.large Next
