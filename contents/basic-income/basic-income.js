@@ -175,31 +175,32 @@ function basicIncomeInit() {
 
     run(state);
 
-    var unitedStatesDataLink = document.getElementById('united-states-data');
-    if (unitedStatesDataLink) {
-        unitedStatesDataLink.addEventListener('click', function () {
-            state = {
-                name: state.name,
-                regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
-                numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
-                taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
-                gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
-                basicIncome: 7.25 * 40 * 50,
-                basicIncomeType: 'minimumWage',
-                ubiOrNit: 'nit',
-                cutsTaxes: [
-                    ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-                    ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
-                    ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-                    ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-                    ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
-                    ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
-                ],
-                gdpRangeMin: -5,
-                gdpRangeMax: 15
-            };
-            state2form(state, formEls, textEls);
-        });
+    function addUnitedStatesData() {
+        state = {
+            name: state.name,
+            regionName: ['USA', 'https://en.wikipedia.org/wiki/United_States'],
+            numAdults: [245000000, 'http://quickfacts.census.gov/qfd/states/00000.html'],
+            taxAsPercentGdp: [0.243, 'http://www.taxpolicycenter.org/taxfacts/displayafact.cfm?Docid=307&Topic2id=95'],
+            gdp: [17.4, 'http://data.worldbank.org/indicator/NY.GDP.MKTP.CD?order=wbapi_data_value_2014+wbapi_data_value+wbapi_data_value-last&sort=desc'],
+            basicIncome: 7.25 * 40 * 50,
+            basicIncomeType: 'minimumWage',
+            ubiOrNit: 'nit',
+            cutsTaxes: [
+                ['Eliminate redundant welfare', '375', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+                ['Eliminate tax loopholes', '740', 'http://www.usbig.net/papers/144-Sheahen-RefundableTaxCredit.pdf'],
+                ['Cut defense spending in half', '300', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                ['Eliminate Social Security', '695', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                ['Eliminate Medicaid', '290', 'https://en.wikipedia.org/wiki/2010_United_States_federal_budget'],
+                ['Raises taxes on top 1% to 40%', '157', 'http://www.nytimes.com/2015/10/17/business/putting-numbers-to-a-tax-increase-for-the-rich.html']
+            ],
+            gdpRangeMin: -5,
+            gdpRangeMax: 15
+        };
+        state2form(state, formEls, textEls);
+    }
+    var unitedStatesDataLinks = document.getElementsByClassName('united-states-data');
+    for (var i = 0; i < unitedStatesDataLinks.length; i++) {
+        unitedStatesDataLinks[i].addEventListener('click', addUnitedStatesData);
     }
 
     // ## Display results
@@ -472,7 +473,7 @@ function basicIncomeInit() {
 
         // Review slide, other text content
         if (textEls.reviewNumAdults) {
-            textEls.reviewNumAdults.innerHTML = state.numAdults[0];
+            textEls.reviewNumAdults.innerHTML = state.numAdults[0].toLocaleString('en-US');
         }
         if (textEls.reviewGdp) {
             textEls.reviewGdp.innerHTML = state.gdp[0];
@@ -481,13 +482,13 @@ function basicIncomeInit() {
             textEls.reviewTaxAsPercentGdp.innerHTML = state.taxAsPercentGdp[0];
         }
         if (textEls.reviewBasicIncome) {
-            textEls.reviewBasicIncome.innerHTML = state.basicIncome;
+            textEls.reviewBasicIncome.innerHTML = state.basicIncome.toLocaleString('en-US');
         }
         if (textEls.reviewUbiOrNit) {
             textEls.reviewUbiOrNit.innerHTML = state.ubiOrNit.toUpperCase();
         }
         if (textEls.reviewCutsTaxes) {
-            textEls.reviewCutsTaxes.innerHTML = cutsTaxesTotal(state.cutsTaxes);
+            textEls.reviewCutsTaxes.innerHTML = cutsTaxesTotal(state.cutsTaxes).toLocaleString('en-US');
         }
         if (textEls.reviewGdpRangeMin) {
             textEls.reviewGdpRangeMin.innerHTML = state.gdpRangeMin;
@@ -543,7 +544,9 @@ function basicIncomeInit() {
         // Sources
         input = ['regionName', 'numAdults', 'taxAsPercentGdp', 'gdp'];
         input.forEach(function (input) {
-            state[input][1] = escape(formEls[input + 'Source'].value);
+            if (formEls[input + 'Source']) {
+                state[input][1] = escape(formEls[input + 'Source'].value);
+            }
         });
 
         // Radio buttons

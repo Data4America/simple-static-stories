@@ -34,7 +34,7 @@ var order = [
     'britt-crawford',
     'waylin-ross',
     'susan-gentz',
-    'chris-belsky'
+    'peter-drennan'
 ];
 
 function sortObjective(p) {
