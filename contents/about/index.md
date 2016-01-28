@@ -3,8 +3,7 @@ template: about.jade
 title: About Data4America
 ---
 
-What is Data4America?
-A non-profit, educational initiative bringing data science to the understanding of politics.
+**What is Data4America?** A non-profit, educational initiative bringing data science to the understanding of politics.
 
 1/ We bring together some of the brightest in the data science, government, and technology communities to serve the non-profit sector: http://data4america.org/team
 
