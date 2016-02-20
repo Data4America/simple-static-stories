@@ -1,0 +1,28 @@
+{
+  "name": "Abhi Nemani",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": true,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Board @OpenGov Foundation, First-ever Chief Data Officer @City of Los Angeles, Co-Founder @CodeforAmerica",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/abhinemani"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/abhinemani"
+    },
+    {
+      "type": "www",
+      "url": "https://medium.com/@abhinemani"
+    },
+    {
+      "type": "www",
+      "url": "https://github.com/abhinemani"
+    }
+  ],
+  "id": "abhi-nemani"
+}

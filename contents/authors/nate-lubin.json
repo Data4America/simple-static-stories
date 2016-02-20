@@ -1,11 +1,11 @@
 {
   "name": "Nate Lubin",
-  "title": "Editorial Board",
+  "title": "Board of Directors",
   "founder": false,
-  "boardOfDirectors": false,
+  "boardOfDirectors": true,
   "editorialBoard": true,
   "advisor": false,
-  "bio": "<span>Former Director of the Office of Digital Strategy at the White House and Director of Digital Marketing at Obama for America. Political Science @Harvard.&#xA0;</span>",
+  "bio": "Former Director of the Office of Digital Strategy at the White House and Director of Digital Marketing at Obama for America. Political Science @Harvard.",
   "links": [
     {
       "type": "twitter",
