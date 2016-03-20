@@ -372,6 +372,11 @@ $(document).ready(function() {
       }
     }
   }
+
+  if ($('#dfa-lifemap').length) {
+    $('#dfa-lifemap .card .image.hoverable')
+      .dimmer({ on: 'hover' });
+  }
 });
 
 function hideEmailForm() {

@@ -1,6 +1,7 @@
 extends layout
 
 block content
+
   include author
   each article in articles
     if locals.development || article.metadata.published
