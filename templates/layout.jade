@@ -10,10 +10,18 @@ html(lang='en')
       title
         block title
           = locals.name
+      block metatags
+        meta(property="og:title", content=locals.name)
+      meta(property="og:site_name", content="data4america.org")
+      meta(property="og:description", content="Bringing Data Science to the understanding of Politics")
+      meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
+
       link(rel='icon', href=contents['favicon.png'].url)
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
       != nap.css('main')
   body(class=bodyclass)
+
+    div.nothing
 
     div.dimmed.pusher
 

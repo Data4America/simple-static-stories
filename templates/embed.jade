@@ -4,12 +4,12 @@ block prepend title
   | #{ page.title + ' - '}
 
 block metatags
-  meta(property="og:title", content="Data4America | Donate")
+  meta(property="og:title", content=page.title)
 
 block content
-  div.ui.segment
+
+  div.ui.segment.dfa-about
     h1.ui.header.aligned.center= page.title
     div.ui.divider
     article.page
-      section.content
-        div.body-text.donate-wrapper
+      section.content!= typogr(page.html).typogrify()

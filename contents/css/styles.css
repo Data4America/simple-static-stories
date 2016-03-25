@@ -52215,6 +52215,14 @@ input::-moz-focus-inner {
 .d4a .f {
   font-style: italic;
 }
+.dfa-text {
+  font-family: 'Trasandina';
+  color: #002768;
+}
+.dfa-text .f {
+  font-style: italic;
+  color: #CC0001;
+}
 /*-------------------
       MAIN HEADER
 --------------------*/
@@ -52970,4 +52978,34 @@ body.embed {
   font-size: 1em;
   line-height: 1.6em;
   font-weight: lighter;
+}
+#dfa-unplugged iframe {
+  position: absolute;
+  left: -1000px;
+}
+#dfa-unplugged .ui.items .content {
+  padding: 0 1em 0;
+  font-size: 1.1em;
+}
+#dfa-unplugged .ui.items .image {
+  position: relative;
+  height: 125px;
+}
+#dfa-unplugged .ui.items p {
+  font-size: 0.8em;
+}
+#dfa-unplugged .ui.items .image .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: 0;
+  color: #eee;
+  font-size: 4em;
+  text-shadow: 0 0 2px #000;
+  margin-left: -39px;
+  margin-top: -32px;
+  opacity: 0.9;
+}
+#dfa-unplugged .ui.items .image:hover .icon {
+  color: #fff;
 }

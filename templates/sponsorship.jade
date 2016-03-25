@@ -3,6 +3,9 @@ extends layout
 block prepend title
   | #{ page.title + ' - '}
 
+block metatags
+  meta(property="og:title", content="Data4America | Sponsor a Policy Channel")
+
 block content
   div#dfa-sponsorship.ui.segment
     h1.ui.header Sponsor a Policy Channel
