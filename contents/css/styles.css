@@ -53009,3 +53009,19 @@ body.embed {
 #dfa-unplugged .ui.items .image:hover .icon {
   color: #fff;
 }
+@media only screen and (max-width: 767px) {
+  #dfa-unplugged .ui.items .image {
+    height: auto;
+  }
+  #dfa-unplugged .ui.items .content {
+    padding: 0.5em 0.5em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #dfa-unplugged-header {
+    font-size: 0.8em;
+  }
+  #dfa-unplugged-header .ui.header {
+    font-size: 1.8em;
+  }
+}
