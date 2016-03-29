@@ -52994,18 +52994,6 @@ body.embed {
 #dfa-unplugged .ui.items p {
   font-size: 0.8em;
 }
-#dfa-unplugged .ui.items .image .icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: 0;
-  color: #eee;
-  font-size: 4em;
-  text-shadow: 0 0 2px #000;
-  margin-left: -39px;
-  margin-top: -32px;
-  opacity: 0.9;
-}
 #dfa-unplugged .ui.items .image:hover .icon {
   color: #fff;
 }
@@ -53015,6 +53003,45 @@ body.embed {
   }
   #dfa-unplugged .ui.items .content {
     padding: 0.5em 0.5em;
+  }
+}
+.dfa-unplugged-actions {
+  background: #f6f6f6;
+  display: inline-block;
+  float: right;
+  padding: 0.5em;
+  width: 200px;
+  border-radius: 5px;
+}
+.dfa-unplugged-actions .icon.video.play {
+  opacity: 0.8;
+  cursor: pointer;
+  margin-right: 0 !important;
+  font-size: 2.4em;
+}
+.dfa-unplugged-actions .icon.video.play:hover {
+  opacity: 1;
+}
+.dfa-unplugged-actions .ui.text.menu {
+  margin: 0;
+}
+.dfa-unplugged-actions .ui.menu .item.links {
+  font-size: 0.9em;
+  line-height: 1.6em;
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  .dfa-unplugged-actions {
+    float: none;
+    width: 260px;
+    margin: 0 auto 1em;
+    display: block;
+  }
+  .dfa-unplugged-actions .icon.video.play {
+    font-size: 3em;
+  }
+  .dfa-unplugged-actions .ui.menu .item.links {
+    font-size: 1.2em;
   }
 }
 @media only screen and (max-width: 767px) {

@@ -1007,19 +1007,6 @@ body.embed {
     font-size: 0.8em;
   }
 
-  .ui.items .image .icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: 0;
-    color: #eee;
-    font-size: 4em;
-    text-shadow: 0 0 2px #000;
-    margin-left: -39px;
-    margin-top: -32px;
-    opacity: 0.9;
-  }
-
   .ui.items .image:hover .icon {
     color: #fff;
   }
@@ -1033,6 +1020,54 @@ body.embed {
       padding: 0.5em 0.5em;
     }
 
+  }
+}
+
+.dfa-unplugged-actions {
+  background: #f6f6f6;
+  display: inline-block;
+  float:right;
+  padding: 0.5em;
+  width: 200px;
+  border-radius: 5px;
+
+  .icon.video.play {
+    opacity: 0.8;
+    cursor: pointer;
+    margin-right: 0 !important;
+    font-size: 2.4em;
+  }
+
+  .icon.video.play:hover {
+    opacity: 1;
+  }
+
+  .links {
+  }
+
+  .ui.text.menu {
+    margin: 0;
+  }
+
+  .ui.menu .item.links {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    display: block;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    float: none;
+    width: 260px;
+    margin: 0 auto 1em;
+    display: block;
+
+    .icon.video.play {
+      font-size: 3em;
+    }
+
+    .ui.menu .item.links {
+      font-size: 1.2em;
+    }
   }
 }
 

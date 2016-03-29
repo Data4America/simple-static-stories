@@ -118,9 +118,8 @@
   }
 
   function bindEvents() {
-    console.log('bindEvents');
 
-    $elem.find('a').click(function() {
+    $elem.find('.play').click(function() {
       $player.transition('vertical flip');
 
       var url = $(this).parents('.item').attr('data-url');
