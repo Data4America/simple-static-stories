@@ -22,7 +22,7 @@ block content
       iframe(width="100", height="100", scrolling="no", frameborder="no")
       div.ui.divided.items
         div.lf-podcast.item(data-url="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255684440&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false")
-          a.image.small.play(href="/unplugged/episode-1-greg-ferenstein")
+          a.image.small.play(href="javascript:;")
             img(src="/img/unplugged-gregferenstein.jpg")
           div.content
 
@@ -42,7 +42,7 @@ block content
                     | iTunes
                   br
 
-            a.header(href="/unplugged/episode-1-greg-ferenstein") Greg Ferenstein
+            a.header(href="javascript:;") Greg Ferenstein
             div.meta
               span.cinema Episode #1
             div.description
@@ -62,3 +62,18 @@ block content
                 i.icon.red.bookmark
                 | Article: 
                 a(href="http://www.theatlantic.com/politics/archive/2013/02/former-political-scientist-to-congress-please-defund-political-science/273060/", target="_blank") Former Political Scientist to Congress: Please Defund Political Science 
+
+      div.ui.divider
+      h2.ui.header Transcript
+      - var transcript = page.metadata.transcript
+      table.ui.very.basic.collapsing.celled.table
+        tbody
+          each item in transcript
+            tr.top.aligned
+              td.disabled.right.aligned= item.time
+              td
+                if item.narrator
+                  strong= item.narrator + ': '
+                = item.text
+
+

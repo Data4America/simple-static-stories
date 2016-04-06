@@ -1,0 +1,446 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Uplugged Episode 1: Greg Ferenstein",
+  "json": "sex-work.json",
+  "transcript": [
+    {
+      "time": ":00",
+      "text": "[data4america theme]"
+    },
+    {
+      "time": ":28",
+      "narrator": "Chris",
+      "text": "Hi! This is Chris McCoy, the executive director at Data4America. Welcome to Unplugged—where we sit down with leaders, academics, entrepreneurs and politicians to explore the intersection of data technology, government and the future. Today's session is with Greg Ferenstein—editor of The Ferenstein Wire, author of The Age of Optimists, previously a journalist at TechCrunch, and has mostly dedicated his career to understanding politics in Silicon Valley. Let's get it started. Good to chat with you, Greg."
+    },
+    {
+      "time": "1:00",
+      "narrator": "Greg",
+      "text": "Good to chat with you, too, Chris."
+    },
+    {
+      "time": "1:01",
+      "narrator": "CM",
+      "text": "You focus a lot on technology and politics. What led you to [inaudible] interest?"
+    },
+    {
+      "time": "1:09",
+      "narrator": "GF",
+      "text": "I was originally studying highly democratic organizations around the world—I worked in a school where children made all of the rules, I lived in Switzerland, which has kind of a famous democratic system, and then I began studying open-source culture—kind of looking at an online version of this. And from open-source culture, I was kind of led into the general philosophy of what Silicon Valley stood for— meritocracy experimentation—things like this. And I began to become fascinated more and more with Silicon Valley. I mean, that's when I kind of picked up technology—but it was through studying management first."
+    },
+    {
+      "time": "2:00",
+      "narrator": "CM",
+      "text": "Where are you from originally?"
+    },
+    {
+      "time": "2:01",
+      "narrator": "GF",
+      "text": "So my background is—and I'm from Omaha, Nebraska—I got a Masters Degree in Mathematical Behavioral Sciences from the University of California, Irvine, and then I left a PhD program to be a journalistic kind of study (Silicon Valley), and eventually Silicon Valley politics."
+    },
+    {
+      "time": "2:28",
+      "narrator": "CM",
+      "text": "Wow! That's a big career fork."
+    },
+    {
+      "time": "2:29",
+      "narrator": "GF",
+      "text": "Yeah. Interested readers can learn a bit more about why I made that decision. I wrote a pretty scathing op-ed in The Atlantic when I left graduate school, accusing political science of being more or less a giant waste of time (after I had come to realize that I had wasted four years of my life in a discipline that had no interest in making a difference in the world). The title of The Atlantic article was \"Political Scientists Ask Congress To Defund Political Science\"—or something like that."
+    },
+    {
+      "time": "2:59",
+      "narrator": "CM",
+      "text": "I like that! I haven't read that one. I'm going to dive into that after the call here and we'll dive into a few more questions and get into the guts about what you've been writing about as of late."
+    },
+    {
+      "time": "3:10",
+      "narrator": "GF",
+      "text": "Sure. I guess these days I'm kind of on book promotion politics, so I wrote a book called The Age of Optimists. It was a data visualization series on Silicon Valley's political endgame where I kind of dispelled the myth that Silicon Valley is Libertarian. I argue that they're a completely new type of political category within the Democratic Party that is very pro-capitalism, anti-regulation; but pro-government in a sort of an investor sense. So they like the government to invest in education, they like immigration, and they like free-trade; everything the government can do to make people the best versions of themselves."
+    },
+    {
+      "time": "3:51",
+      "narrator": "CM",
+      "text": "And you call that a \"Civicrat,\" correct?"
+    },
+    {
+      "time": "3:55",
+      "narrator": "GF",
+      "text": "Yeah. It’s not a term that's probably going to stick, but in the book I called them \"Civicrats\" because the agent of change under the Silicon Valley model is the citizen. So, whether it's a parent-run charter school, someone using their car to carpool instead of using public transit, or citizen watchdogs looking at police data for potential racial bias, their solutions always try to empower citizens directly."
+    },
+    {
+      "time": "4:29",
+      "narrator": "CM",
+      "text": "Yeah. I understand—I think it's clever moniker. And who are they? I know you've interviewed many folks–"
+    },
+    {
+      "time": "4:39",
+      "narrator": "GF",
+      "text": "I tried to focus a sample on startup founders because those are the big influencers in the Valley. Because eventually, startup founders become big tech CEOs. So I wanted to kind of figure out what they believed in the beginning of their pursuits, and then I kind of matched that up with some interviews with elite people who had founded, you know, very large companies."
+    },
+    {
+      "time": "5:04",
+      "narrator": "CM",
+      "text": "And so—give us some examples of specific people."
+    },
+    {
+      "time": "5:08",
+      "narrator": "GF",
+      "text": "I tried to spin the range of household names—so Eric Schmidt, Sean Parker. Reid Hoffman—who else did I have in like the sample?—Chris Hughes, also founder of Facebook. I'd have to go back and look, but there was a...  I tried to have a sizable sample of elites just to make sure that the ideology matched up at the billionaire level."
+    },
+    {
+      "time": "5:38",
+      "narrator": "CM",
+      "text": "It makes a lot of sense. And is there a conservative version of the “Civicrat?”"
+    },
+    {
+      "time": "5:41",
+      "narrator": "GF",
+      "text": "Well, that was the argument. There is no conservative version of the “Civicrat.”  Silicon Valley is overwhelmingly Democratic; in the 2012 election, 83% of employees from top tech companies gave to Obama versus Romney; 63% of all donations since 2008 have gone to Democrats.  In my sample, only 3–7% of startup founders identify as Republican."
+    },
+    {
+      "time": "6:07",
+      "narrator": "CM",
+      "text": "Last night, I saw you tweet out big ideas—a call for big ideas—for policy. So I want to put that question to you. What is sort of a utopian policy idea that you think would make the country a better place? But maybe it's politically impossible…"
+    },
+    {
+      "time": "6:28",
+      "narrator": "GF",
+      "text": "I'm actually trying to pass the Easter ballot initiative, so I have about three or four. One, I think we need to fix the housing crisis. By one MIT economist's estimate, housing is the entirety of growing income equality over the last thirty years. So if we don't find a way to build more—a lot more—especially in our cities, we're not going to stop growing income equality. We need to solve, once and for all, housing affordability in the country. I think it would be a great idea to try out a basic minimum income, at least for a class of workers in select cities around the country. I would love if we could get vocational education into schools so that every student in the country should be able to take Udacity or Coursera and be on their way to a tech job for very, very little money—and be able to use that for high school graduation."
+    },
+    {
+      "time": "7:40",
+      "narrator": "CM",
+      "text": "How about local ideas?"
+    },
+    {
+      "time": "7:43",
+      "narrator": "GF",
+      "text": "Uh—those are all local. I'm going to try those as a San Francisco ballot measure or a study (of) how those could be done through a San Francisco ballot measure. I think they'd first have to start at the local level. It's difficult to think how anything could pass Congress."
+    },
+    {
+      "time": "7:58",
+      "narrator": "CM",
+      "text": "I had read where you were working on some tactics to get issues on the ballot. Tell us a little bit about your strategy there."
+    },
+    {
+      "time": "8:08",
+      "narrator": "GF",
+      "text": "So the current thought is (because we’e going to try a few different ways because none of them are mutually exclusive) but one of the plans is to basically force the city of San Francisco to come up with an economic liability plan for all of these laws—and then actually write them. And if the city and the legislators won't pass them, they could be adopted by ballot measure next year."
+    },
+    {
+      "time": "8:39",
+      "narrator": "CM",
+      "text": "Interesting and have you made any progress on this?"
+    },
+    {
+      "time": "8:44",
+      "narrator": "GF",
+      "text": "Uh, no. Because we haven't submitted to the Secretary of State to collect signatures yet. In 2016—it is still illegal to collect ballot signatures digitally!"
+    },
+    {
+      "time": "8:55",
+      "narrator": "CM",
+      "text": "Wow."
+    },
+    {
+      "time": "8:58",
+      "narrator": "GF",
+      "text": "There is quite a racket of paid signature-gatherers; and they (and probably other reasons) have prevented the state of California from legalizing digital signatures. So first, we have to submit to the Secretary of State, and then we have to collect about 15,000 physical signatures, and then—if we get on the ballot—then the campaign starts."
+    },
+    {
+      "time": "9:21",
+      "narrator": "CM",
+      "text": "Ah—very nice. What do you think the odds (are) of the Secretary of State giving the go ahead?"
+    },
+    {
+      "time": "9:26",
+      "narrator": "GF",
+      "text": "Well, I mean—they’d be legal. It’s just a matter (of) if we have to collect signatures at a pretty accelerated pace. So if any of your listeners want to help us out and volunteer, we're looking for a hundred people people to collect a hundred signatures."
+    },
+    {
+      "time": "9:39",
+      "narrator": "CM",
+      "text": "And where can they go?"
+    },
+    {
+      "time": "9:42",
+      "narrator": "GF",
+      "text": "They contact me. So just my email—greg@gregferenstein.com. Contact me directly. I'm setting it up now. It's pretty analog. We may get some more sophisticated-like campaign style websites going, but not yet. Here—hold on one second."
+    },
+    {
+      "time": "10:09",
+      "narrator": "CM",
+      "text": "Yep."
+    },
+    {
+      "time": "10:10",
+      "narrator": "GF",
+      "text": "Oh, sorry about that. There was someone playing bass guitar in San Francisco."
+    },
+    {
+      "time": "10:16",
+      "narrator": "CM",
+      "text": "Is that right?"
+    },
+    {
+      "time": "10:18",
+      "narrator": "GF",
+      "text": "It's always interesting in San Francisco—you never know what you're going to run into. This is a strange city—and I love it—but it is certainly a strange city! On my old block in the Mission District there used to be a guy dressed in a gorilla outfit who regularly played the bass guitar; and that was just like an everyday thing."
+    },
+    {
+      "time": "10:39",
+      "narrator": "CM",
+      "text": "[Laughs] Do you have kind of a vision for what Silicon Valley looks like five—ten—fifteen years out?"
+    },
+    {
+      "time": "10:49",
+      "narrator": "GF",
+      "text": "What do I say? Tactically, I don't know what they look like fifteen years out. I do know how they're already influencing the democratic party; and when I say Silicon Valley, I'm using that kind of as a moniker for high-scaled industries, and more generally—skilled workers in cities. So if you want to think about the demographic profile of the \"Civicrats,\" it's basically most people with a college degree living in a city—they tend to be liberal. And people with a college degree tend to be more “pro” free trade, high skilled immigrant, etc. That is an increasingly influential demographic, not just in terms of the money they give, but also—so around—was it 2004? —2006? —Democrats with a college degree outstripped those without a college degree."
+    },
+    {
+      "time": "11:44",
+      "narrator": "CM",
+      "text": "Mhm."
+    },
+    {
+      "time": "11:46",
+      "narrator": "GF",
+      "text": "And so it's not a question of when they take power—they already have taken power—on every single major conflict between, say, traditional labor unions and the communications industry. The communications industry has gotten the support of the Democratic leadership. That includes charter schools, high-skilled immigrants free-trade and increasingly on the sharing economy. So it's not a matter of IF they take power—they are in power—it's a matter of what they DO with their power when they begin to realize they're a separate faction and start doing things that are distinctly extreme for what it means to have this ideology."
+    },
+    {
+      "time": "12:32",
+      "narrator": "CM",
+      "text": "What are some ideas that you have around that scenario?"
+    },
+    {
+      "time": "12:37",
+      "narrator": "GF",
+      "text": "The issues that I'm trying to pass ballot measures on are in San Francisco, so I think urbanization is a signature belief of Silicon Valley and this ideology, generally. Cities for six thousand years have been in the heart of major innovation; and at least one Silicon Valley person, the CEO of Zappos, has spent 300 million dollars of his own money (in) figuring out how to create model cities around the world—starting in downtown Las Vegas."
+    },
+    {
+      "time": "13:08",
+      "narrator": "CM",
+      "text": "Mhm."
+    },
+    {
+      "time": "13:10",
+      "narrator": "GF",
+      "text": "This is one reason why folks out here are so concerned with affordable housing. It’s not just a measure of equality, but it is an essential ingredient in economic growth and innovation."
+    },
+    {
+      "time": "13:23",
+      "narrator": "CM",
+      "text": "Yes."
+    },
+    {
+      "time": "13:24",
+      "narrator": "GF",
+      "text": "So I suspect you'll begin to see urbanization as a top-tier voting issue soon."
+    },
+    {
+      "time": "13:31",
+      "narrator": "CM",
+      "text": "That's cool. Now going back to the Silicon Valley focus, who are some of the leaders within kind of the federal level with policy in Silicon Valley?"
+    },
+    {
+      "time": "13:41",
+      "narrator": "GF",
+      "text": "I would say—let's see, who are the most—it's kind of hard to say how the elites are influential. I mean, certainly Reid Hoffman, Mark Zuckerberg, Eric Schmidt, Tim Cook (now that he is doing more direct lobbying, especially on cyber security), anyone that you'd see on these Obama roundtables who would get directly invited to speak with him and advise."
+    },
+    {
+      "time": "14:18",
+      "narrator": "CM",
+      "text": "Makes sense, yeah. Now, let's move it—looking at the 2016 race—what's Silicon Valley's take on Hillary?"
+    },
+    {
+      "time": "14:25",
+      "narrator": "GF",
+      "text": "You know, I think like most of the country, they have a pretty disappointed outlook I will say—or I will say reluctant support. I think they’re going to give more money to her than anyone else. I’ve done some polling on presidential candidate preference and Hillary captures by far the majority of support in the Valley. (In my start-up poll she got about 50%, Bernie Sanders is like 26%, and Republicans were a rounding error.) But when you talk to—in private conversations—when you talk to the folks who really supported Obama, (folks) who gave a lot of money, I haven't talked to a single person in the Valley who is excited about Hillary’s presidency."
+    },
+    {
+      "time": "15:19",
+      "narrator": "CM",
+      "text": "Yeah, I've met a few, but…"
+    },
+    {
+      "time": "15:20",
+      "narrator": "GF",
+      "text": "In fact, they're all pretty negative on her."
+    },
+    {
+      "time": "15:24",
+      "narrator": "CM",
+      "text": "Well, I've met a few. It's definitely not the same level of excitement as the president."
+    },
+    {
+      "time": "15:30",
+      "narrator": "GF",
+      "text": "No, not even close."
+    },
+    {
+      "time": "15:35",
+      "narrator": "CM",
+      "text": "Now, here's a question for you: If you think the valley could draft a president from the private sector—heck, even the public sector—who would the valley draft as president and vice president candidate?"
+    },
+    {
+      "time": "15:48",
+      "narrator": "GF",
+      "text": "I mean, they tried. They tried to draft Mark Bloomberg. I mean, they were very, very rich investors who said—you know, one I think…(I can't remember his name), but he was going to drop out of his VC just to help Bloomberg run. So, yeah. They tried to draft someone—it didn't work.  And now, given the Trump phenomenon they are likely to get behind Hillary in full support—much more so had Trump not been a factor."
+    },
+    {
+      "time": "16:24",
+      "narrator": "CM",
+      "text": "So let's dive into some of the issues about San Francisco. You’ve written quite a lot around issues with housing “supply and demand” problem. How do you frame the problem today and what do you think happens to it?"
+    },
+    {
+      "time": "16:40",
+      "narrator": "GF",
+      "text": "You mean—the housing problem? Well, it's simple. Housing has reached a crisis point in San Francisco. Average rents—or median rents—are well above $3500. People are spending over 30% of their income on rent as far as affording a house. Affordable houses are inaccessible to 92% of San Franciscans. I think you have to make about $250,000 a year to be able to afford a home here."
+    },
+    {
+      "time": "17:19",
+      "narrator": "CM",
+      "text": "Yeah."
+    },
+    {
+      "time": "17:20",
+      "narrator": "GF",
+      "text": "It's—and I say this as I got evicted—people are getting beat(en) systematically. (They are being) evicted from their homes through loopholes and rent laws. Communities are being torn apart. Teachers can't afford to live in the city where they work. It is the single biggest issue in San Francisco—it’s a crisis point for the entire industry, which is spending God knows how many millions of dollars in increased worker wages just so workers can have a relatively short commute to the office (which today, is like 90 minutes)."
+    },
+    {
+      "time": "18:00",
+      "narrator": "CM",
+      "text": "Yeah, absolutely. And, you know, in your opinion—what's causing it and is there a solution?"
+    },
+    {
+      "time": "18:08",
+      "narrator": "GF",
+      "text": "So there is a single cause and a solution. The cause is a crazy amount of regulation. It can take years to approve a project. Neighborhood associations, which control the zoning laws around the city, are very anti-condo. They want to keep their kind of suburban single-family homes and they have delayed or denied many projects. And that's why the city grows about 5000 people a year—and it only builds about 1200 units. I've been (working on) that for a very, very long time. The solution is very simply just to bulldoze all of the regulations on density, height and the lengthy public approval process; but it will have to be done through a ballot measure because, for whatever reason, the city legislatures are absolutely terrified to take it on."
+    },
+    {
+      "time": "19:10",
+      "narrator": "CM",
+      "text": "And these are some of the ballot measures that you're working on?"
+    },
+    {
+      "time": "19:13",
+      "narrator": "GF",
+      "text": "Yes. So these are some of the ballot measures I'm working on now. Right now, I’m working on one that forces the city to kind of develop a plan that it was otherwise afraid to talk about publicly. And very soon, I’ll likely be doing one that actually takes on the regulations themselves. I don't have a lot of confidence in the city to follow through on the study and so I'm going to write the laws (myself) to basically ban the regulations—and see if we can pass it that way."
+    },
+    {
+      "time": "19:48",
+      "narrator": "CM",
+      "text": "I love it. I like that—that's bold! Now, within the current lineup of folks that are either running for office or a position of leadership today, is there hope for that set of people to make these changes?"
+    },
+    {
+      "time": "20:02",
+      "narrator": "GF",
+      "text": "Yeah—I’ve just lost a lot of faith in representative democracy. Congress isn't doing much, the San Francisco legislature won't pass anything bold, and California state legislature is no more interesting. Right now, I've focused all of my efforts on ballot measures where I know that when a majority of citizens want something they can get it passed—they don't have to ask for permission. You know, I always encourage progressive people to run for office and certainly, you know, in a generation, that will be important. But I want to change laws now—and so right now, I just don't see the representative system as a way to enact democratically popular laws."
+    },
+    {
+      "time": "20:45",
+      "narrator": "CM",
+      "text": "Yeah. It makes sense. I have a few folks after this call I'll connect you with. I think you'll enjoy talking to them later with some of these issues. What’s your take on the battle [inaudible] by Apple and the likely endgame there?"
+    },
+    {
+      "time": "21:00",
+      "narrator": "GF",
+      "text": "You know, I don't really have a good opinion on that because security isn't something I understand very well. I will say that this isn't the first time that this battle has happened. It happened in the 1990's with something called the “clipper chip” when the Clinton administration wanted to put kind of a backdoor listening device on cell phones around the country. And then, the kind-of-a tech powerhouse at the time, Microsoft, teamed up with the industry generally and got the “clipper chip” squashed. So there is a history of government officials trying to do exactly this (related to encryption technologies) and losing."
+    },
+    {
+      "time": "21:57",
+      "narrator": "CM",
+      "text": "Mhm—got it. That’s interesting. And so, for yourself I mean, what’s next for you?"
+    },
+    {
+      "time": "22:02",
+      "narrator": "GF",
+      "text": "Politics! We're going to see if I can actually do a lot of the stuff that I've been talking about for years. It's not going to be easy, but I've decided that writing, alone, isn't going to change anything. And so, we're going to try to pass the ballot measures."
+    },
+    {
+      "time": "22:21",
+      "narrator": "CM",
+      "text": "Do you see yourself running for office?"
+    },
+    {
+      "time": "22:23",
+      "narrator": "GF",
+      "text": "Oh, no. No—no—no!"
+    },
+    {
+      "time": "22:29",
+      "narrator": "CM",
+      "text": "[Inaudible] help to get this content into the laps of voters within the area."
+    },
+    {
+      "time": "22:31",
+      "narrator": "GF",
+      "text": "Yeah, no—that would be great. Like I said, there's no point in running for office. Even if someone handed me the mayorship, I don't know if I would take it, just because I see how hamstrung elected officials are by interest groups."
+    },
+    {
+      "time": "22:51",
+      "narrator": "CM",
+      "text": "So you've touched a little bit on robots and automation, [inaudible] written extensively on it from what I've seen, but what's your view on robots in automation as it relates to—as we go from farms to factories—and now, to kind of information age to a much more technology-driven age."
+    },
+    {
+      "time": "23:07",
+      "narrator": "GF",
+      "text": "I have written a bit about this. I wrote an Atlantic article about what people are doing with their leisure time as automation gives them more of it. I think we're entering into both very optimistic and dangerous territory. Optimistically, I think robots will give us unprecedented amounts of leisure time, dramatically raise consumption of quality, allow people to live like kings and queens. And robots will do all sorts of stuff we never wanted to (do) and so we're trending towards a life that is much like college, but permanently. The problem with that is that income inequality at the same time is probably going to rise. And so we need to make sure that people are using their time productively; otherwise, you’re going to get more of this populace stuff, like Trumpism, because people are laid off work and they have nothing to do."
+    },
+    {
+      "time": "24:01",
+      "narrator": "CM",
+      "text": "Yeah, absolutely. It’s been definitely a kind of a race to the intellectual bottom of the pool trying to project this stuff. You get folks like Trump—"
+    },
+    {
+      "time": "24:10",
+      "narrator": "GF",
+      "text": "Oh, yeah. Sure."
+    },
+    {
+      "time": "24:12",
+      "narrator": "CM",
+      "text": "—and their solution. So the last question for you is: You just wrote a book—where can folks to buy that book or download that book?"
+    },
+    {
+      "time": "24:19",
+      "narrator": "GF",
+      "text": "They can go to TheAgeOfOptimists.com."
+    },
+    {
+      "time": "24:22",
+      "narrator": "CM",
+      "text": "What are they going to learn when they read your book?"
+    },
+    {
+      "time": "24:26",
+      "narrator": "GF",
+      "text": "They're going to learn all about Silicon Valley's political endgame."
+    },
+    {
+      "time": "24:29",
+      "narrator": "CM",
+      "text": "That's good! Well, I'm going to go to TheAgeOfOptimists.com after our call here and download it myself. [Laughs] I love your writing, Greg. You're one of my favorite thinkers at the intersection of these topics—it’s kind of opaque for folks who don't live and breathe this stuff. It means a lot for you to take your time and share your experiences, visions, and ideas of the future—and it's promising! (It) gives me hope that you're getting your hands dirty in helping some of these ideas come alive. That's the type of leadership that not only the Bay Area needs, but the country needs. And, you know, I like the idea of… I’ve been fascinated by watching my friends in the writing business turn into metro capitalists, thought you're the first one that I can say will have turned into—bringing thought to action in the world of politics. So that’s exciting [inaudible]."
+    },
+    {
+      "time": "25:24",
+      "narrator": "GF",
+      "text": "Well, hopefully, I will do you proud and actually accomplish something. It's been good talking to you, Chris."
+    },
+    {
+      "time": "25:29",
+      "narrator": "CM",
+      "text": "You got it man. We'll get a small group together one of these times and grab some coffee and share more ideas."
+    },
+    {
+      "time": "25:35",
+      "narrator": "GF",
+      "text": "For sure. Yes—email me."
+    },
+    {
+      "time": "25:39",
+      "narrator": "CM",
+      "text": "I really enjoyed that interview with Greg Ferenstein. Since we've launched Data4America in July, Greg's been top of our list of someone we wanted to get involved with our mission to bring data science and data visualization to the understanding of politics. We have a number of esteemed guests lined up, and it's an honor to have Greg as our first official guest on Data4America/Unplugged. I hope you enjoyed it as much as I did. If you did enjoy it, I would love if you’d share this podcast with your friends: email it to them, share it on your messaging platforms, push it on Twitter, push it on Facebook. It means a lot when you do share—and to make it easy, you can send your friends to Data4America.org/Unplugged. As we said, we have a roster lined up with more guests and also more interviewers. If you have ideas of people you’d like to have on the show (discussing the intersection of technology and government in the future), just send me an email to Chris@data4america.org and we'll be in touch. I want to give a special shout-out to our donors, Data4America, our board of directors, and to the many people who have helped build this from ground zero. We're still in the first inning—and it's a very inspiring mission. Until next time…"
+    }
+  ]
+}

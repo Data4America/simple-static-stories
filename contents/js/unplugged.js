@@ -122,7 +122,7 @@
     $elem.find('.play').click(function() {
       $player.transition('vertical flip');
 
-      var url = $(this).parents('.item').attr('data-url');
+      var url = $(this).parents('.lf-podcast').attr('data-url');
 
       initPlayer(url);
     });
