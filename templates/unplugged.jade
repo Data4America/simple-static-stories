@@ -21,32 +21,39 @@ block content
     div#dfa-unplugged(style="margin:1em;")
       iframe(width="100", height="100", scrolling="no", frameborder="no")
       div.ui.divided.items
-        div.lf-podcast.item(data-url="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255684440&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false")
+        div.lf-podcast.item(data-url="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257528552&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true")
           a.image.small.play(href="/unplugged/episode-1-greg-ferenstein")
             img(src="/img/unplugged-gregferenstein.jpg")
           div.content
 
             div.dfa-unplugged-actions
-              div.ui.text.menu
-                div.item
-                  i.ui.big.olive.video.play.icon
-                div.item.links
-                  div.play-on-heading Play on:
-                  a(href="https://soundcloud.com/data4america/1-greg-ferenstein", target="_blank")
-                    i.ui.orange.icon.soundcloud
-                    span.play-on Play on 
-                    | SoundCloud
-                  a(href="javascript:;", target="_blank")
-                    i.ui.grey.icon.apple
-                    span.play-on Play on 
-                    | iTunes
-                  br
+              div.play-on-heading Play on:
+              a.play-on-d4a(href="javascript:;")
+                i.ui.red.icon.video.play
+                span.play-on Play on 
+                span.dfa-text DATA
+                  span.f 4
+                  | AMERICA
+              a(href="https://soundcloud.com/data4america/1-greg-ferenstein", target="_blank")
+                i.ui.orange.icon.soundcloud
+                span.play-on Play on 
+                |  SoundCloud
+              a(href="javascript:;", target="_blank")
+                i.ui.grey.icon.apple
+                span.play-on R
+                |  iTunes
+              div.ui.divider
+              a(href="/unplugged/episode-1-greg-ferenstein#transcript")
+                | Read Transcript
 
-            a.header(href="/unplugged/episode-1-greg-ferenstein") Greg Ferenstein
-            div.meta
-              span.cinema Episode #1
+            a.header(href="/unplugged/episode-1-greg-ferenstein") Episode #1: Greg Ferenstein
             div.description
-              p Editor @Ferenstein Wire // Author of @The Age Of Optimists // Former journalist at TechCrunch // 
+              p Editor 
+                a(href="https://medium.com/the-ferenstein-wire", target="_blank")@Ferenstein Wire 
+                |  // Author of 
+                a(href="https://medium.com/the-ferenstein-wire/silicon-valley-s-political-endgame-summarized-1f395785f3c1?ref=producthunt#.qjsd7pxu0", target="_blank") @The Age Of Optimists
+                |  // Former journalist 
+                a(href="http://techcrunch.com/", target="_blank") @TechCrunch
               p 
                 i.icon.twitter(style="color:#1DA1F2;")
                 | Twitter: 
@@ -62,3 +69,10 @@ block content
                 i.icon.red.bookmark
                 | Article: 
                 a(href="http://www.theatlantic.com/politics/archive/2013/02/former-political-scientist-to-congress-please-defund-political-science/273060/", target="_blank") Former Political Scientist to Congress: Please Defund Political Science 
+              p(style="margin-top:1em; text-align:right; position:absolute; right:0; bottom: 0;")
+                i.red.check.icon
+                | Approved by the 
+                span.dfa-text DATA
+                  span.f 4
+                  | AMERICA
+                |  editorial board on 04/08/2016

@@ -994,9 +994,13 @@ body.embed {
   }
 
   .ui.items .content {
-    padding: 0 1em 0;
+    padding: 0 0 0 1em;
     font-size: 1.1em;
     position: relative;
+  }
+
+  .lf-podcast {
+    min-height: 305px;
   }
 
   .ui.items .image {
@@ -1005,7 +1009,7 @@ body.embed {
   }
 
   .ui.items p {
-    font-size: 0.8em;
+    font-size: 0.72em;
   }
 
   .ui.items .image:hover .icon {
@@ -1034,35 +1038,16 @@ body.embed {
   position: absolute;
   top: 133px;
   left: -125px;
+  font-size:0.8em;
 
-  .ui.text.menu {
-    flex-direction: column;
-  }
-
-  .icon.video.play {
-    opacity: 0.8;
-    cursor: pointer;
-    margin-right: 0 !important;
-    font-size: 2.4em;
-  }
-
-  .icon.video.play:hover {
-    opacity: 1;
-  }
-
-  .ui.text.menu {
-    margin: 0;
-  }
-
-  .ui.menu .item.links {
-    font-size: 0.95em;
-    line-height: 1.8em;
+  a {
     display: block;
-    padding: 0;
-    margin:0;
-
-    .play-on { display: none; }
+    margin: 0.2em;
+    white-space: nowrap;
   }
+
+  .play-on { display: none; }
+
 
   @media only screen and (max-width: @largestMobileScreen) {
     float: none;
@@ -1072,21 +1057,10 @@ body.embed {
     position: inherit;
     left: inherit;
     top: inherit;
+    font-size: 1.1em;
 
-    .icon.video.play {
-      font-size: 3em;
-    }
-
-    .ui.text.menu {
-      flex-direction: row;
-    }
-
-    .ui.menu .item.links {
-      font-size: 1.15em;
-
-      .play-on-heading { display: none; }
-      .play-on { display: inline; }
-    }
+    .play-on-heading { display: none; }
+    .play-on { display: inline; }
   }
 }
 

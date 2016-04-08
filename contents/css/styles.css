@@ -52984,16 +52984,19 @@ body.embed {
   left: -1000px;
 }
 #dfa-unplugged .ui.items .content {
-  padding: 0 1em 0;
+  padding: 0 0 0 1em;
   font-size: 1.1em;
   position: relative;
+}
+#dfa-unplugged .lf-podcast {
+  min-height: 305px;
 }
 #dfa-unplugged .ui.items .image {
   position: relative;
   height: 125px;
 }
 #dfa-unplugged .ui.items p {
-  font-size: 0.8em;
+  font-size: 0.72em;
 }
 #dfa-unplugged .ui.items .image:hover .icon {
   color: #fff;
@@ -53016,34 +53019,14 @@ body.embed {
   position: absolute;
   top: 133px;
   left: -125px;
+  font-size: 0.8em;
 }
-.dfa-unplugged-actions .ui.text.menu {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.dfa-unplugged-actions .icon.video.play {
-  opacity: 0.8;
-  cursor: pointer;
-  margin-right: 0 !important;
-  font-size: 2.4em;
-}
-.dfa-unplugged-actions .icon.video.play:hover {
-  opacity: 1;
-}
-.dfa-unplugged-actions .ui.text.menu {
-  margin: 0;
-}
-.dfa-unplugged-actions .ui.menu .item.links {
-  font-size: 0.95em;
-  line-height: 1.8em;
+.dfa-unplugged-actions a {
   display: block;
-  padding: 0;
-  margin: 0;
+  margin: 0.2em;
+  white-space: nowrap;
 }
-.dfa-unplugged-actions .ui.menu .item.links .play-on {
+.dfa-unplugged-actions .play-on {
   display: none;
 }
 @media only screen and (max-width: 767px) {
@@ -53055,24 +53038,12 @@ body.embed {
     position: inherit;
     left: inherit;
     top: inherit;
+    font-size: 1.1em;
   }
-  .dfa-unplugged-actions .icon.video.play {
-    font-size: 3em;
-  }
-  .dfa-unplugged-actions .ui.text.menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .dfa-unplugged-actions .ui.menu .item.links {
-    font-size: 1.15em;
-  }
-  .dfa-unplugged-actions .ui.menu .item.links .play-on-heading {
+  .dfa-unplugged-actions .play-on-heading {
     display: none;
   }
-  .dfa-unplugged-actions .ui.menu .item.links .play-on {
+  .dfa-unplugged-actions .play-on {
     display: inline;
   }
 }

@@ -119,7 +119,7 @@
 
   function bindEvents() {
 
-    $elem.find('.play').click(function() {
+    $elem.find('.play-on-d4a').click(function() {
       $player.transition('vertical flip');
 
       var url = $(this).parents('.lf-podcast').attr('data-url');
