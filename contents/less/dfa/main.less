@@ -1016,6 +1016,10 @@ body.embed {
     color: #fff;
   }
 
+  .approved-by {
+    text-align:right; position:absolute; right:0; bottom: 0;
+  }
+
   @media only screen and (max-width: @largestMobileScreen) {
     .ui.items .image {
       height: auto;
@@ -1025,6 +1029,15 @@ body.embed {
       padding: 0.5em 0.5em;
     }
 
+    .approved-by {
+      display: block;
+      position: relative;
+      right: inherit;
+      bottom: inherit;
+      text-align: center;
+      white-space: nowrap;
+      margin-bottom: 1.4em;
+    }
   }
 }
 
