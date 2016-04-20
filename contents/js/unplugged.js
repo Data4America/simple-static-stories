@@ -7,9 +7,12 @@
   var $elem,
     $player,
     $iframe,
-    widget,
-    loaded = false,
-    audioLength = 0;
+    player,
+    checkInterval  = 50.0,
+    lastPlayPos    = 0,
+    currentPlayPos = 0,
+    bufferingDetected = false,
+    duration = 0;
 
   function init() {
     $elem = $('#dfa-unplugged');
@@ -26,7 +29,8 @@
       return;
     }
 
-    loadScript();
+    bindEvents();
+    loadAudio();
   }
 
   function msToTime(s) {
@@ -40,26 +44,65 @@
     return mins + ':' + (secs < 10 ? '0' + secs : secs);
   }
 
-  function updateTimer(time) {
-    $player.find('.time').html(msToTime(time));
+  function formatSecondsAsTime(secs) {
+    var hr  = Math.floor(secs / 3600);
+    var min = Math.floor((secs - (hr * 3600))/60);
+    var sec = Math.floor(secs - (hr * 3600) -  (min * 60));
+
+    if (min < 10){
+      min = "0" + min;
+    }
+    if (sec < 10){
+      sec  = "0" + sec;
+    }
+
+    return min + ':' + sec;
   }
 
-  function updateProgressBar(point) {
-    $player.find('.progress-bar .progress').css('width', (point * 100) + '%');
+  function loadAudio() {
+    var url = $('.lf-podcast:eq(0)').attr('data-url');
+    var content = '' +
+      '<audio id="unpluggedPlayer" controls="controls" style="position: absolute; top: -1000px; left: -1000px;">' +
+      ' <source src="' + url + '" type="audio/mpeg" />' +
+      '</audio>';
+
+    $('body').append(content);
+
+    player = document.getElementById('unpluggedPlayer');
+
+    initPlayer();
   }
 
-  function loadScript() {
-    $.getScript('https://w.soundcloud.com/player/api.js', function() {
-      bindEvents();
-    });
-  }
+  function initPlayer() {
 
-  function initPlayer(url) {
 
-    $iframe.attr('src', url);
+    player.addEventListener("timeupdate", timeUpdate, false);
 
-    widget = SC.Widget($iframe[0]);
+    player.addEventListener("canplaythrough", function () {
+      console.log(msToTime(player.duration));
+      duration = player.duration;
+    }, false);
 
+    player.addEventListener("playing", function() {
+      playerState('playing');
+    }, false);
+
+    player.addEventListener("canplay", function() {
+      setInterval(checkBuffering, checkInterval);
+    }, false);
+
+    player.addEventListener("pause", function() {
+      playerState('paused');
+    }, false);
+
+    player.addEventListener("waiting", function(e) {
+      console.log('waiting');
+    }, false);
+
+    player.addEventListener("timeupdate", function(e) {
+      updateTimer(e.target.currentTime);
+    }, false);
+    /*
     widget.bind(SC.Widget.Events.READY, function() {
       loaded = true;
 
@@ -77,7 +120,6 @@
     });
 
     widget.bind(SC.Widget.Events.PLAY, function() {
-      playerState('playing');
     });
 
     widget.bind(SC.Widget.Events.SEEK, function() {
@@ -100,6 +142,7 @@
     widget.bind(SC.Widget.Events.FINISH, function() {
       playerState('paused');
     });
+    */
   }
 
   function playerState(state) {
@@ -117,22 +160,65 @@
     }
   }
 
+  function timeUpdate() {
+    var playPercent = 100 * (player.currentTime / duration);
+    updateProgressBar(playPercent);
+  }
+
+  function updateTimer(time) {
+    $player.find('.time').html(formatSecondsAsTime(time));
+  }
+
+  function updateProgressBar(percent) {
+    $player.find('.progress-bar .progress').css('width', percent + '%');
+  }
+
+  function checkBuffering() {
+    currentPlayPos = player.currentTime
+
+    // checking offset, e.g. 1 / 50ms = 0.02
+    var offset = 1 / checkInterval
+
+    // if no buffering is currently detected,
+    // and the position does not seem to increase
+    // and the player isn't manually paused...
+    if (
+            !bufferingDetected 
+            && currentPlayPos < (lastPlayPos + offset)
+            && !player.paused
+        ) {
+        //console.log("buffering")
+        playerState('loading');
+        bufferingDetected = true
+    }
+
+    // if we were buffering but the player has advanced,
+    // then there is no buffering
+    if (
+        bufferingDetected 
+        && currentPlayPos > (lastPlayPos + offset)
+        && !player.paused
+        ) {
+        playerState('playing');
+        bufferingDetected = false
+    }
+    lastPlayPos = currentPlayPos
+  }
+
   function bindEvents() {
 
     $elem.find('.play-on-d4a').click(function() {
       $player.transition('vertical flip');
-
       var url = $(this).parents('.lf-podcast').attr('data-url');
-
-      initPlayer(url);
+      player.play();
     });
 
     $player.find('.lf-pause').click(function() {
-      widget.pause();
+      player.pause();
     });
 
     $player.find('.lf-play').click(function() {
-      widget.play();
+      player.play();
     });
 
     $player.find('.progress-bar .bar').click(function(e) {
