@@ -45,12 +45,14 @@ $(document).ready(function() {
   // Initialize the header Menu
   $('#dfa-menu-floating').dropdown();
 
-  $('#dfa-header .ui.dropdown').dropdown({
+  $('#dfa-menu .dropdown, #dfa-menu-footer .dropdown, #dfa-header .ui.dropdown').dropdown({
     onShow: function() {
       if (isMobile()) {
-        var left = $('#dfa-header .ui.dropdown').offset().left;
-        console.log(left);
-        $('#dfa-header .ui.dropdown .menu').css('left', -left + 'px');
+        var left = $(this).offset().left;
+        $(this).find('.menu').css({
+          left:  -left + 'px',
+          width: screen.width,
+        });
       }
     }
   });

@@ -212,24 +212,34 @@ header {
     width: 855px;
   }
 
-  a.item:before {
+  .item:before {
     background: none;
   }
 
-  a.item {
+  .item {
     border: 0;
     font-size:0.8em;
     padding: 0.3em 0;
     color: #002864;
   }
 
-  a.item:hover {
+  .item:hover {
     background: #002864;
     color:@white;
   }
 
-}
+  .dropdown .menu {
+    min-width: 250px;
+    font-size: 1.1em;
+  }
 
+  @media only screen and (max-width: @largestMobileScreen) {
+    .dropdown .menu {
+      font-size: 1.3em;
+    }
+  }
+
+}
 
 #dfa-slogan {
   color: @grey;
@@ -1168,4 +1178,140 @@ body.embed {
       margin: 0 !important;
     }
   }
+}
+
+#pgx {
+  margin: 2em auto;
+
+  .ui.header {
+    margin: 2em 0;
+  }
+
+  .ui.header.title {
+    font-size: 2.6em;
+    margin: 1em 0;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.list > .item > .icon + .content {
+      line-height: 1.4em;
+      font-size: 1.1em;
+    }
+
+    .ui.header {
+      margin: 1em 0;
+    }
+  }
+}
+
+#pgx-hiw {
+  margin: 0;
+
+  .steps {
+    display:flex;
+  }
+
+  .steps > .step {
+    width: 18.5%;
+    position: relative;
+  }
+
+  .steps > .step.end {
+    width: 3.5%;
+  }
+
+  .line {
+    height: 100px;
+    width: 10px;
+    position: absolute;
+    background: #3E7BC7;
+    top: 0;
+  }
+
+  .line.left {
+    left: 0;
+  }
+
+  .line.right {
+    right: 0;
+  }
+
+  .line-through {
+    width: 100%;
+    position: absolute;
+    height: 10px;
+    background: #3E7BC7;
+    top: 45px;
+  }
+
+  .circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 1000px;
+    background: #3E7BC7;
+    line-height: 100px;
+    font-size: 3em;
+    color: #fff;
+    margin: 0 auto;
+  }
+
+  .text {
+    padding: 0.5em;
+    font-size: 1.25em;
+    line-height: 1.2em;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    margin: 0 0.5em;
+
+    .steps {
+      flex-direction: column;
+    }
+
+    .steps > .step, .steps > .step.end {
+      width: 100%;
+    }
+
+    .steps > .step.end {
+      height: 20px;
+    }
+
+    .line-through {
+      width: 10px;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -5px;
+    }
+
+    .line {
+      height: 5px;
+      width: 100%;
+    }
+
+    .line.left {
+      left: inherit;
+      top: 0;
+    }
+
+    .line.right {
+      right: inherit;
+      bottom: 0;
+      top: inherit;
+    }
+
+    .text {
+      background: #fff;
+      position: relative;
+      margin: 0.1em 0 2em;
+      border: 1px solid #3E7BC7;
+      border-radius: 5px;
+      font-size: 1.4em;
+    }
+
+  }
+
 }

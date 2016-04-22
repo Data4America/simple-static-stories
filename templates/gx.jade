@@ -1,0 +1,85 @@
+doctype html
+block vars
+  - var bodyclass = null;
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title Project GX
+      meta(property="og:title", content="Project GX")
+      meta(property="og:site_name", content="data4america.org")
+      meta(property="og:description", content="Bringing Data Science to the understanding of Politics")
+      meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
+
+      link(rel='icon', href=contents['favicon.png'].url)
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
+      != nap.css('main')
+  body(class=bodyclass)
+
+    div#pgx.ui.container
+      div.ui.segment
+        h1.ui.header.center.aligned.title Project
+          span(style="font-style: italic; color: #3877C5;") GX
+        div.ui.divider
+        h1.ui.header.center.aligned RULES
+        div.ui.stackable.grid
+          div.three.wide.column
+          div.ten.wide.column
+            div.huge.ui.list
+              div.item
+                i.green.check.icon
+                div.content For 9th graders-only
+              div.item
+                i.green.check.icon
+                div.content For private school and public school students
+              div.item
+                i.green.check.icon
+                div.content $5 for an A, $1 for a B
+              div.item
+                i.green.check.icon
+                div.content All payments made via Square Cash
+              div.item
+                i.green.check.icon
+                div.content You're responsible for claiming the payments on Square Cash.
+          div.three.wide.column
+        h1.ui.header.center.aligned HOW IT WORKS
+        div#pgx-hiw
+          div.steps
+            div.step.end
+              div.line.left
+              div.line-through
+            div.step
+              div.line-through
+              div.circle 1
+              div.text Upload your report card, share your teacher's email address. You can upload a report card for each semester, quarter, etc.
+            div.step
+              div.line-through
+              div.circle 2
+              div.text Once your teacher verifies the grade, we'll send you $5. Your teacher receives a one-time payment of $100.
+            div.step
+              div.line-through
+              div.circle 3
+              div.text Once your parent verifies the grade, we'll send them a one-time payment of $100. 
+            div.step
+              div.line-through
+              div.circle 4
+              div.text If you participated in the project, three years later, upload your report card for the 12th grade
+            div.step
+              div.line-through
+              div.circle 5
+              div.text We'll publish the results and write new federal education policy on top of them
+            div.step.end
+              div.line.right
+              div.line-through
+
+
+
+
+    block js
+      != nap.js('main')
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','//connect.facebook.net/en_US/fbevents.js'); fbq('init', '810448618996739'); fbq('track', "PageView");</script>

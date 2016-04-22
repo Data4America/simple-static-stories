@@ -78,7 +78,13 @@ html(lang='en')
             div.ui.text.container
               a.item(href="/about/") ABOUT
               a.item(href="/donate/", style="color:#CC0505; font-weight:bold;") DONATE
-              a.item(href="/") STORIES
+              div.ui.dropdown.item
+                | PODCASTS
+                i.dropdown.icon
+                div.menu
+                  a.item(href="/unplugged/episode-1-greg-ferenstein")
+                    img.ui.avatar.image(src="/img/unplugged-gregferenstein.jpg")
+                    | Episode #1: Greg Ferenstein
               a.item(href="http://lifemap.io", target="_blank") LIFEMAP
 
       div#dfa-subscribe-modal.ui.modal.small
@@ -115,7 +121,13 @@ html(lang='en')
         div#dfa-menu-footer.ui.four.item.main.menu
           a.item(href="/about/") ABOUT
           a.item(href="/donate/") DONATE
-          a.item(href="/") STORIES
+          div.ui.dropdown.item
+            | PODCASTS
+            i.dropdown.icon
+            div.menu
+              a.item(href="/unplugged/episode-1-greg-ferenstein")
+                img.ui.avatar.image(src="/img/unplugged-gregferenstein.jpg")
+                | Episode #1: Greg Ferenstein
           a.item(href="http://lifemap.io", target="_blank") LIFEMAP
 
         div.ui.divider

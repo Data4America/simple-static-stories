@@ -537,7 +537,7 @@
       { name: 'Environment', options: [ 'Environment', 'Food policy', 'Air quality', 'Global warming', 'Environment and Climate Policy', '50% reduction of C02 emissions by 2030' ] },
       { name: 'Government Operations', options: [ 'Federal spending', 'Term limits for Congress', 'Campaign finance reform', 'Government privatization' ] },
       { name: 'Health', options: [ 'Health insurance', 'Medicare/Medicade', 'Immigration health', 'Euthanasia', 'Mandates for birth control', 'Drug Legalization', 'Patient Protection and Affordable Care Act (Obamacare)' ] },
-      { name: 'Social Welfare', options: [ 'Entitlement Programs', 'Social Security', 'Welfare', 'Welfare drug tests', 'Basic Income proposal', 'Basic Jobs proposal' ] },
+      { name: 'Social Welfare', options: [ 'Safety Net Programs', 'Social Security', 'Welfare', 'Welfare drug tests', 'Basic Income proposal', 'Basic Jobs proposal' ] },
       { name: 'Foreign Affairs', options: [ 'Foreign Affairs', 'Military', 'Military spending', 'Open data', 'Technology', 'War on ISIS', 'Support of Israel', 'Deal with Iran', 'United Nations membership', 'Drone policy', 'NSA Surveillance' ] },
       { name: 'Other', options: [] },
     ];
