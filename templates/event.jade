@@ -1,0 +1,135 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-event
+
+    div.cover
+      div.text
+        h1.ui.inverted.header Future of Encryption, Housing, and Regulation
+        h3.ui.inverted.header Blake Masters Q&A with Keith Rabois and Kim-Mai Cutler Q&A with Scott Weiner
+
+    div.ui.grid.stackable
+      div.eleven.wide.column
+
+        h3.ui.top.attached.header Event Details
+        div.ui.attached.segment
+
+          h3.ui.header Two fireside chats:
+          div.ui.ordered.list
+            a.item Keith Rabois with Blake Masters hosting
+            a.item Scott Weiner with Kim-Mai Cutler hosting
+
+          h3.ui.header Format
+          p The event will feature two fireside chats along with a networking reception. Blake Masters will host the discussion with Keith Rabois. Kim-Mai Culter will moderate a conversations with Scott Weiner.
+
+          h3.ui.header Funds Raised Benefit:
+          p Data4America an educational non-profit bringing data science and data visualization to the understanding of politics. 
+          p We publish 
+            a(href="http://lifemap.io/", target="_blank") Lifemap
+            | , 
+            a(href="http://data4america.org/unplugged", target="_blank") Podcasts
+            | , 
+            a(href="https://data4america.org/basic-income/", target="_blank") User-Generated Policy
+            | , 
+            a(href="https://data4america.org/geography-american-jobs/", target="_blank") crowdsourced data journalism
+            | , and 
+            a(href="https://data4america.org/issues/", target="_blank") Sponsored Policy Issues
+            | . Our non-partisan 
+            a(href="https://data4america.org/team/", target="_blank") Editorial Board
+            |  evaluates and votes on all content before it's published. 
+            strong
+              a(href="http://data4america.org", target="_blank") http://data4america.org
+
+          h3.ui.header About Lincoln
+          p Lincoln Initiative, formerly known as Lincoln Labs, was born from the optimistic view that when technology and public policy meet, under the right conditions and with the right tools, both worlds win. Through hackathons, meetups and online engagement, we provide opportunities for the entrepreneurial community to come together and both collaborate on and learn about market-based, tech-powered solutions to our nation's biggest problems.
+
+          h3.ui.header Fireside Chat with Scott Weiner
+          p San Francisco is among the hardest hit by the urban housing crisis. While tech companies do not control city policy, they are feeling pressure to find a solution that both allows them to bring in more tech workers and also does not push out existing residents. 
+          p Opinions on how to deal with housing--and inequality more generally--differ sharply in the Bay Area. Some just want tech companies to relocate elsewhere. Others want tech companies to pay heavy fees to subsidize affordable housing. And, both of these solutions are challenged by suburban neighborhood associations that don't want to see their quaint homes disturbed by high-rise condos for tech workers. 
+          p The political gridlock is harming the economy, too. Berkeley Economist Enrico Moretti estimates that housing regulation alone in three major cities has stunted US GDP by about 10%. 
+          p What is the solution? Should tech companies become politically involved or is there a more constructive role for them to play in addressing the housing crisis?
+
+          h3.ui.header Fireside Chat with Keith Rabois
+          p The highly anticipated Apple vs. FBI court battle was abruptly halted. After insisting that Apple’s help would be the only way to access data stored on the device, the FBI was able to circumvent the phone’s security features via an undisclosed third-party solution.
+          p Although temporarily resolved, this was clearly the first scuffle in what will be an on-going encryption and data privacy battle. On one side, there is a national security argument - strong encryption makes it harder for law enforcement to do their job. On the other, there’s the obligation to protect consumer data - weaker encryption make consumers susceptible to hackers. Do both of these arguments hold up to scrutiny or are they based on flawed premises? What happens next in the battle of encryption? How can civil liberties be preserved amid the ever evolving world of terrorism, which increasingly relies on technology to coordinate attacks? Can the government force cooperation from an unwilling company? 
+
+          h3.ui.header Schedule of events
+          p 6:30-7 Doors open - drinks reception and small bites
+          p 7:00 - Fireside chat with Keith Rabois
+          p 8:00 - Fireside chat with Scott Weiner
+
+          h3.ui.header About the speakers:
+          p
+            strong Kim-Mai Cutler
+            |  is founder of Roam and a tech journalist. She contributes to TechCrunch and has worked for Bloomberg, VentureBeat, and The Wall Street Journal.
+          p
+            strong Keith Rabois
+            |  is a tech entrepreneur and investor. He was a part of the early team at PayPal and has held executive positions at LinkedIn, Slide, and Square.
+          p
+            strong Scott Weiner
+            |  is a member of the San Francisco Board of Supervisors and current candidate for the California State Senate.
+          p
+            strong Blake Masters
+            |  is the co-author of Peter Thiel’s “Zero to One” book and the president of the Peter Thiel Foundation.
+
+          div.disclaimer
+            | Data4America welcomes your donation to further its mission of bringing data science and data viz to the understanding of politics. Data4America is in the process of obtaining its 501(c)(3) status from the IRS. While Data4America is waiting for this process to be completed, Silicon Valley Community Foundation has agreed to act as Data4America’s fiscal sponsor and accept gifts on its behalf. Donations will be processed by SVCF, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records
+
+
+      div.five.wide.column
+
+        h3.ui.top.attached.header When & Where
+        div.ui.attached.segment
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.565282314287!2d-122.41859418468222!3d37.77679017975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6cbe6673%3A0xe3d868354944c30d!2s1355+Market+St+%23488%2C+San+Francisco%2C+CA+94103!5e0!3m2!1sen!2s!4v1462507396870", width="100%", height="300", frameborder="0", style="border:0", allowfullscreen)
+
+          div.address
+            h4.ui.header RUNWAY 
+            p 1355 Market Street 
+            p 4th Floor 
+            p San Francisco, CA 94103
+
+          div.time
+            p Wednesday, June 8, 2015 from 6:30 PM to 9:00 PM (PDT)
+
+          p(style="font-size:1.3em;")
+            a(href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Future%20of%20Encryption,%20Housing,%20and%20Regulation&dates=20160608T013000Z/20160608T040000Z&details=For+details,+link+here:+https://data4america.org/event&location=RUNWAY+-+1355+Market+Street+-+4th+Floor+-+San+Francisco,+CA+94103&t=AKUaPmYY1i3fA1iGUo9sB5iArckcqqgwGrXioBIzG15xoSEEEwLhvlF6reV9cwKN-h3YqRyYiivf9cyz0_XrerKW_ZLB7mAWbg%3D%3D&sf=true&output=xml#eventpage_6", target="_blank")
+              i.calendar.icon
+              |  Add to Calendar
+
+        h3.ui.top.attached.header Organizers
+        div.ui.attached.segment.organizers
+          h4.ui.header Data4America
+          img.ui.fluid.image(src="https://data4america.org/img/logo-256.png", style="max-width:150px;")
+          p A non-profit, educational initiative bringing data science to the understanding of politics.
+          p
+            a(href="http://data4america.org/")
+              i.globe.icon
+              |  data4america.org
+          p
+            a(href="https://www.facebook.com/data4america/", target="_blank")
+              i.facebook.icon
+              |  facebook.com/data4america
+          p
+            a(href="https://twitter.com/data4america", target="_blank")
+              i.twitter.icon
+              |  twitter.com/data4america
+
+          h4.ui.header Lincoln Initiative
+          img.ui.fluid.image(src="http://lincolninitiative.com/img/lincoln_init_v.png", style="max-width:125px;")
+          p Lincoln Initiative, formerly known as Lincoln Labs, was born from the optimistic view that when technology and public policy meet, under the right conditions and with the right tools, both worlds win. 
+          p
+            a(href="http://lincolninitiative.com/", target="_blank")
+              i.globe.icon
+              |  lincolninitiative.com
+          p
+            a(href="https://www.facebook.com/lincinitiative/", target="_blank")
+              i.facebook.icon
+              |  facebook.com/lincinitiative
+          p
+            a(href="https://twitter.com/lincoinitiative", target="_blank")
+              i.twitter.icon
+              |  twitter.com/lincoinitiative
+

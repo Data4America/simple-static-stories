@@ -186,6 +186,10 @@ $(document).ready(function() {
     }
   });
 
+  if ($('#dfa-event').length) {
+    $('#dfa-content > .container').removeClass('text');
+  }
+
 // Commented out because it breaks links with Data4America in the URL
 /*  $('#dfa-content p, #dfa-content .ui.header').each(function() {
     var html = $(this).html();
