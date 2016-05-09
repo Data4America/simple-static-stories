@@ -1,0 +1,24 @@
+{
+  "name": "Antone Johnson",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": true,
+  "editorialBoard": false,
+  "advisor": false,
+  "bio": "Startup lawyer @Bottom Line Law Group, former VP Counsel @eHarmony, Original Counsel @MySpace, Guest Contributor @TechCrunch, @WSJ, @Forbes",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/antonejohnson"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/antonejohnson"
+    },
+    {
+      "type": "www",
+      "url": "http://bottomlinelawgroup.com/"
+    }
+  ],
+  "id": "antone-johnson"
+}

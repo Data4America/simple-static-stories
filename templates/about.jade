@@ -19,8 +19,11 @@ block content
       h1 Our Team
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });
       include teamGrid
-      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.founder || p.boardOfDirectors || p.editorialBoard; });
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.founder || p.boardOfDirectors || p.editorialBoard || p.team; });
       mixin teamGrid(people)
       h1 Advisors
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.advisor; });
+      mixin teamGrid(people)
+      h1 Staff
+      - var people = env.helpers.getPeople(contents).filter(function (p) { return p.staff; });
       mixin teamGrid(people)

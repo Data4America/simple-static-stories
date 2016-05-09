@@ -3,9 +3,9 @@
   "title": "",
   "founder": false,
   "boardOfDirectors": false,
-  "editorialBoard": false,
+  "editorialBoard": true,
   "advisor": false,
-  "staff": true,
+  "staff": false,
   "staffTitle": "Operations",
   "bio": "Founder @ParaLobby.com. Economics professor @NVCC. Director of Advocacy & Legislative Affairs @NationalUrbanLeagueYP.",
   "links": [

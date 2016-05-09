@@ -1,0 +1,16 @@
+{
+  "name": " Scott Adelson",
+  "title": "Media Advisor",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
+  "bio": "Award-winning communicator @Adelson & Associates, Co-Founder/CGO @Flypside, Co-Founder/President @Signal Media Project, @Columnist, EcoSalon.",
+  "links": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/scottadelson"
+    }
+  ],
+  "id": "scott-adelson"
+}

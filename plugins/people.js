@@ -1,6 +1,7 @@
 var order = [
     'chris-mccoy',
     'renee-diresta',
+    'garrett-johnson',
     'abhi-nemani',
     'nate-lubin',
     'ceslee-montgomery',
@@ -11,6 +12,7 @@ var order = [
     'abe-stanway',
     'robert-manduca',
     'craig-montuori',
+    'antone-johnson',
     'tatsiana-maskalevich',
     'jay-wacker',
     'david-chudzicki',
@@ -22,6 +24,7 @@ var order = [
     'ganesh-iyer',
     'sarah-levine',
     'andrew-trabulsi',
+    'waylin-ross',
     'sam-drzymala',
     'christopher-nicholson',
     'blake-masters',
@@ -33,9 +36,10 @@ var order = [
     'seth-kaddish',
     'kyle-wiley',
     'britt-crawford',
-    'waylin-ross',
     'susan-gentz',
-    'peter-drennan'
+    'scott-adelson',
+    'peter-drennan',
+    'ryan-cooper'
 ];
 
 function sortObjective(p) {
@@ -44,8 +48,10 @@ function sortObjective(p) {
            (p.boardOfDirectors ? 1e8 : 0) + 
            (p.editorialBoard ? 1e7 : 0) + 
            (p.advisor ? 1e6 : 0) +
+           (p.team ? 1e5 : 0) +
            (order.length - order.indexOf(p.id)) * 1e4 +
-           -p.id.split('-')[1][0].charCodeAt(); //
+           //-p.id.split('-')[1][0].charCodeAt(); //
+           order.indexOf(p.id);
 }
 
 module.exports = function(env, callback) {

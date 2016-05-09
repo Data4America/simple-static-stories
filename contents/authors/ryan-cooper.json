@@ -1,0 +1,25 @@
+{
+  "name": "Ryan Cooper",
+  "title": "Sound Engineer",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": false,
+  "team": true,
+  "bio": "Podcast Producer @Data4america, Composer for @Catholic Charities of Santa Clara County, Bachelor's Degree in Audio Engineering from @Expression College '14.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/soundslikecoop"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/rcoopersound"
+    },
+    {
+      "type": "www",
+      "url": "http://Coopersounds.com"
+    }
+  ],
+  "id": "ryan-cooper"
+}

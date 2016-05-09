@@ -3,7 +3,7 @@
   "title": "Board of Directors",
   "founder": false,
   "boardOfDirectors": true,
-  "editorialBoard": true,
+  "editorialBoard": false,
   "advisor": false,
   "bio": "Partner @Venture Politics, Executive Director @Global EIR Coalition, Engineering &amp; Applied Science (Aerospace) @Caltech. Craig fixes visa problems for founders.",
   "links": [

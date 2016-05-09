@@ -3,7 +3,7 @@
   "title": "Board of Directors",
   "founder": false,
   "boardOfDirectors": true,
-  "editorialBoard": true,
+  "editorialBoard": false,
   "advisor": false,
   "bio": "Former Director of the Office of Digital Strategy at the White House and Director of Digital Marketing at Obama for America. Political Science @Harvard.",
   "links": [

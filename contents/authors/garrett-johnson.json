@@ -1,0 +1,24 @@
+{
+  "name": "Garrett Johnson",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": true,
+  "editorialBoard": false,
+  "advisor": false,
+  "bio": "Co-founder of YCombinator-backed @SendHub, Co-founder of the non-profit @Lincoln Initiative, helped architect @Startup Visa Act, Professional staff member @U.S. Senate Foreign Relations Committee, Rhodes Scholar @Oxford, 2006 NCAA Indoor and Outdoor Shot Put Championship @Florida State",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/GarrettJohnson"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/garrettwjohnson"
+    },
+    {
+      "type": "www",
+      "url": "http://lincolninitiative.com/"
+    }
+  ],
+  "id": "garrett-johnson"
+}

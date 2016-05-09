@@ -3,7 +3,7 @@
   "title": "Board of Directors",
   "founder": false,
   "boardOfDirectors": true,
-  "editorialBoard": true,
+  "editorialBoard": false,
   "advisor": false,
   "bio": "Board @OpenGov Foundation, First-ever Chief Data Officer @City of Los Angeles, Co-Founder @CodeforAmerica",
   "links": [
