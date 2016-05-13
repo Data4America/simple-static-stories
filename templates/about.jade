@@ -26,4 +26,4 @@ block content
       mixin teamGrid(people)
       h1 Staff
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.staff; });
-      mixin teamGrid(people)
+      mixin teamGrid(people, "staff")
