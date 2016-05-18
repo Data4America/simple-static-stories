@@ -997,104 +997,73 @@ body.embed {
 }
 
 #dfa-unplugged {
+  margin: 2em 0;
 
   iframe {
-    position:absolute;
-    left: -1000px;
+    /*position:absolute;*/
+    /*left: -1000px;*/
   }
 
-  .ui.items .content {
-    padding: 0 0 0 1em;
-    font-size: 1.1em;
-    position: relative;
-  }
 
-  .lf-podcast {
-    min-height: 305px;
-  }
+  .podcast {
+    text-align: center;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.31);
+    padding: 1em 0 2em;
 
-  .ui.items .image {
-    position: relative;
-    height: 125px;
-  }
-
-  .ui.items p {
-    font-size: 0.72em;
-  }
-
-  .ui.items .image:hover .icon {
-    color: #fff;
-  }
-
-  .approved-by {
-    text-align:right;
-    position:absolute;
-    right:0;
-    bottom: 0;
-    background: #E9F4FF;
-    padding: 0.5em;
-    border-radius: 4px;
-  }
-
-  @media only screen and (max-width: @largestMobileScreen) {
-    .ui.items .image {
-      height: auto;
+    a.image img {
+      width: 175px;
+      height: 175px;
+      border-radius: 5px;
+      box-shadow: 0 0 6px #989595;
     }
 
-    .ui.items .content {
-      padding: 0.5em 0.5em;
+    .title {
+      font-weight: 200;
+      margin-top: 0.5em;
+      font-size: 1.5em;
+    }
+
+    .sub-title {
+      font-weight: 200;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .space {
+      margin: 0 0.5em;
+      color: #7B7B7B;
+    }
+
+    .links {
+      font-size: 0.8em;
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
 
     .approved-by {
-      display: block;
-      position: relative;
-      right: inherit;
-      bottom: inherit;
-      text-align: center;
-      margin-bottom: 1.4em;
-      font-size: 1.1em !important;
-      line-height: 1.2em;
+      display:none;
+      background: #FFF1EA;
+      padding: 0.5em;
+      border-radius: 4px;
+      font-size: 0.6em;
+      /*display: inline-block;*/
+    }
+
+    .embed {
+      margin-top: 0.9em;
     }
   }
-}
 
-.dfa-unplugged-actions {
-  background: #f6f6f6;
-  display: inline-block;
-  float:right;
-  padding: 0.5em;
-  width: 125px;
-  border-radius: 5px;
-  position: absolute;
-  top: 133px;
-  left: -125px;
-  font-size:0.8em;
-
-  a {
-    display: block;
-    margin: 0.2em;
-    white-space: nowrap;
-  }
-
-  .play-on { display: none; }
-
-
-  @media only screen and (max-width: @largestMobileScreen) {
-    float: none;
-    width: 260px;
-    margin: 0 auto 1em;
-    display: block;
-    position: inherit;
-    left: inherit;
-    top: inherit;
-    font-size: 1.1em;
-
-    .play-on-heading { display: none; }
-    .play-on { display: inline; }
-  }
 }
 
 #dfa-unplugged-header {
+  padding: 2em 0;
+  border-bottom: 1px solid #ccc;
 
   @media only screen and (max-width: @largestMobileScreen) {
     font-size: 0.8em;
