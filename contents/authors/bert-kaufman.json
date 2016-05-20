@@ -1,0 +1,24 @@
+{
+  "name": "Bert Kaufman",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Former Senior Advisor @CommerceGov; Co-Founder @BusinessForward; Founding Board Member @PressPassMentor",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/BertKaufman"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/bertkaufman"
+    },
+    {
+      "type": "www",
+      "url": "http://www.doc.gov/PAGE"
+    }
+  ],
+  "id": "bert-kaufman"
+}

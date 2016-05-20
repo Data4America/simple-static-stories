@@ -1,0 +1,20 @@
+{
+  "name": "Charles Belle",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "PolicyHacker & Raumdeuter, Founder @StartupPolicy Work w/startups+ .Gov to support innovation NonRez Fellow @StanfordCIS & @CTSPBerkeley http://GovDex.org",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/charlesbelle"
+    },
+    {
+      "type": "www",
+      "url": "www.startuppolicylab.org"
+    }
+  ],
+  "id": "charles-belle"
+}

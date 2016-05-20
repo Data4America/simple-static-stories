@@ -1,0 +1,24 @@
+{
+  "name": "Jesse Thomas",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "VP of Product @Crowdpac. @BarackObama alumn 2008/2012, Former Digital Director @NextGenClimate and Deputy Director of Interactive @USAID.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/jcathan"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/jessethomas1"
+    },
+    {
+      "type": "www",
+      "url": "http://www.marystable.org"
+    }
+  ],
+  "id": "jesse-thomas"
+}

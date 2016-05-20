@@ -1,0 +1,14 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block metatags
+  meta(property="og:title", content="Data4America | Sponsor a Policy Channel")
+
+block content
+  div#dfa-sponsorship.ui.segment
+    h1.ui.header Join the Data4America team
+    div.ui.divider
+    <iframe src="https://docs.google.com/forms/d/1K-DL_rvUJ3--sj41rxL9Q6wd2zUfWKzR-uUfjUqwC4w/viewform?embedded=true" width="100%" height="1760" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+

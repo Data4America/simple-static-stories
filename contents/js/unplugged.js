@@ -60,7 +60,7 @@
   }
 
   function loadAudio() {
-    var url = $('.lf-podcast:eq(0)').attr('data-url');
+    var url = $('.podcast:eq(0)').attr('data-url');
     var content = '' +
       '<audio id="unpluggedPlayer" controls="controls" style="position: absolute; top: -1000px; left: -1000px;">' +
       ' <source src="' + url + '" type="audio/mpeg" />' +

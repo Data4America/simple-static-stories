@@ -52993,10 +52993,6 @@ body.embed {
 #dfa-unplugged {
   margin: 2em 0;
 }
-#dfa-unplugged iframe {
-  /*position:absolute;*/
-  /*left: -1000px;*/
-}
 #dfa-unplugged .podcast {
   text-align: center;
   border-bottom: 1px solid rgba(204, 204, 204, 0.31);
@@ -53025,7 +53021,7 @@ body.embed {
   color: #7B7B7B;
 }
 #dfa-unplugged .podcast .links {
-  font-size: 0.8em;
+  font-size: 0.95em;
 }
 #dfa-unplugged .podcast .links a:hover {
   text-decoration: underline;
@@ -53036,10 +53032,29 @@ body.embed {
   padding: 0.5em;
   border-radius: 4px;
   font-size: 0.6em;
-  /*display: inline-block;*/
 }
 #dfa-unplugged .podcast .embed {
   margin-top: 0.9em;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-unplugged .podcast a.image img {
+    width: 90%;
+    height: 90%;
+  }
+  #dfa-unplugged .podcast p {
+    font-size: 1.2em;
+  }
+  #dfa-unplugged .podcast p .line {
+    display: block;
+  }
+  #dfa-unplugged .podcast .links {
+    font-size: 1.2em;
+  }
+  #dfa-unplugged .podcast .links .space {
+    height: 1px;
+    overflow: hidden;
+    display: block;
+  }
 }
 #dfa-unplugged-header {
   padding: 2em 0;
