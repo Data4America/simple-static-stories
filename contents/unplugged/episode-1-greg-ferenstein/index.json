@@ -1,7 +1,34 @@
 {
   "template": "unplugged-episode.jade",
   "title": "Uplugged Episode 1: Greg Ferenstein",
-  "json": "sex-work.json",
+  "profile": {
+    "guest": "Greg Ferenstein",
+    "session": 1,
+    "artwork": "/img/unplugged-gregferenstein.jpg",
+    "link": "/unplugged/episode-1-greg-ferenstein",
+    "desc": [
+      "Editor <a href=\"https://medium.com/the-ferenstein-wire\" target=\"_blank\">@Ferenstein Wire</a>",
+      "Author of <a href=\"https://medium.com/the-ferenstein-wire/silicon-valley-s-political-endgame-summarized-1f395785f3c1?ref=producthunt#.qjsd7pxu0\" target=\"_blank\">@The Age Of Optimists</a>",
+      "Former journalist <a href=\"http://techcrunch.com/\" target=\"_blank\">@TechCrunch</a>"
+    ],
+    "twitter": "ferenstein",
+    "email": "greg@gregferenstein.com",
+    "book": {
+      "name": "Age of Optimists book: Early draft",
+      "url": "https://medium.com/the-ferenstein-wire/silicon-valley-s-political-endgame-summarized-1f395785f3c1?ref=producthunt#.qjsd7pxu0"
+    },
+    "article": {
+      "name": "Former Political Scientist to Congress: Please Defund Political Science",
+      "url": "http://www.theatlantic.com/politics/archive/2013/02/former-political-scientist-to-congress-please-defund-political-science/273060/"
+    },
+    "mp3": "https://s3-us-west-2.amazonaws.com/media.data4america.org/Podcast1_GregFerenstein_finalMIX2.mp3",
+    "iframe": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257528552&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false&amp;color=CF1A1A"
+  },
+  "desc": [
+    "Editor <a href=\"https://medium.com/the-ferenstein-wire\" target=\"_blank\">@Ferenstein Wire</a>",
+    "Author of <a href=\"https://medium.com/the-ferenstein-wire/silicon-valley-s-political-endgame-summarized-1f395785f3c1?ref=producthunt#.qjsd7pxu0\" target=\"_blank\">@The Age Of Optimists</a>",
+    "Former journalist <a href=\"http://techcrunch.com/\" target=\"_blank\">@TechCrunch</a>"
+  ],
   "transcript": [
     {
       "time": ":00",
