@@ -29,7 +29,7 @@ function basicIncomeInit() {
     var stateId = window.location.search.slice(1);
     var state;
     if (stateId) {
-        $.get("http://d4a-bi-store.dumbmatter.com/", {id: parseInt(stateId, 10)}, function (response) {
+        $.get("https://d4a-bi-store.dumbmatter.com/", {id: parseInt(stateId, 10)}, function (response) {
                 console.log(response);
                 if (response.success) {
                     console.log("success");
@@ -108,7 +108,7 @@ function basicIncomeInit() {
         var hash = state2hash(state);
 
         document.getElementById('cliptext').value = 'Saving data, please wait...';
-        $.post("http://d4a-bi-store.dumbmatter.com/", {data: hash}, function (response) {
+        $.post("https://d4a-bi-store.dumbmatter.com/", {data: hash}, function (response) {
                 console.log(response);
                 if (response.success) {
                     var shortUrl = baseUrl + '?' + response.id;
