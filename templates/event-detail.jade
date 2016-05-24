@@ -1,0 +1,171 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-event
+
+    div.cover
+      div.text
+        h1.ui.inverted.header The Future of Encryption, Housing, and Regulation
+        h3.ui.inverted.header Blake Masters Q&A with Keith Rabois and Kim-Mai Cutler Q&A with Scott Weiner
+
+    div.ui.grid.stackable
+      div.eleven.wide.column
+
+        div(style="width:100%;")
+          iframe(src="//eventbrite.com/tickets-external?eid=24882458102&ref=etckt", frameborder="0", height="288", width="100%", vspace="0", hspace="0", marginheight="5", marginwidth="5", scrolling="auto", allowtransparency="true")
+
+        h3.ui.top.attached.header(style="margin-top:0;") Event Details
+        div.ui.attached.segment
+
+          p Join 
+            a(href="/") Data4America
+            |  for a memorable evening with some of the smartest minds in policy and technology. Hear from entrepreneur and legendary investor Keith Rabois, interviewed by the President of the Thiel Foundation, Blake Masters. Also hear from California State Senate candidate, Scott Weiner, interviewed by former TechCrunch writer Kim-Mai Cutler. Light bites and beverages will be provided during the welcome networking reception.
+
+          p
+            strong Date:
+            |  Wednesday, June 8th
+          p
+            strong Time:
+            |  6:30 - 9pm
+          p
+            strong Where:
+            |  Runway @ Twitter Building - 1355 Market St #488, San Francisco, CA 94103
+          p
+            strong Format:
+            |  The event will feature two fireside chats along with a networking reception. Blake Masters will host the discussion with Keith Rabois. Kim-Mai Culter will moderate a conversations with Scott Weiner.
+
+          h3.ui.header SCHEDULE OF EVENTS
+          p
+            strong 6:30-7pm
+            |  Doors open - drinks reception and small bites
+          p
+            strong 7:00pm
+            |  - Fireside chat with Keith Rabois
+          p
+            strong 8:00pm
+            |  - Fireside chat with Scott Weiner
+
+          h3.ui.header ABOUT THE HOST
+          img.ui.small.left.floated.image(src="/img/logo.png")
+          p An educational non-profit bringing data science and data visualization to the understanding of politics.
+          p We publish Lifemap, Podcasts, User-Generated Policy, crowdsourced data journalism, and Sponsored Policy Issues. Our non-partisan Editorial Board evaluates and votes on all content before it's published. http://data4america.org
+
+          div(style="text-align: center;")
+            a.ui.huge.blue.button(href="http://data4america.org/donate", target="_blank") Donate
+
+          h3.ui.header FIRESIDE CHAT WITH SCOTT WEINER
+          img.ui.small.left.floated.image(src="https://pbs.twimg.com/profile_images/602349486371778560/pfTsLab__400x400.jpg")
+          p San Francisco is among the cities hardest hit by the worsening urban housing crisis in America today. While tech companies with operations in San Francisco do not control city housing policies, they are feeling pressure to find a solution that both allows them to bring in more tech workers and also does not push out existing residents.
+          p Opinions on how to deal with housing--and inequality more generally--differ sharply in the Bay Area. Some just want tech companies to relocate elsewhere. Others want tech companies to pay heavy fees to subsidize affordable housing. And both of these solutions are challenged by suburban neighborhood associations that don't want to see their homes disturbed by high-rise condos for tech workers.
+          p The political gridlock is harming the economy, too. UC Berkeley economist Enrico Moretti estimates that housing regulation alone in three major cities has stunted US GDP by about 10%.
+          p What is the solution? Should tech companies become politically involved or is there a more constructive role for them to play in addressing the housing crisis?
+
+          h3.ui.header FIRESIDE CHAT WITH KEITH RABOIS
+          img.ui.small.left.floated.image(src="https://pbs.twimg.com/profile_images/96463735/PR_black___White.jpg")
+          p The highly anticipated Apple vs. FBI court battle was abruptly halted. After insisting that Apple’s help would be the only way to access data stored on the device, the FBI was able to circumvent the phone’s security features via an undisclosed third party solution.
+          p Although temporarily resolved, this was clearly the first scuffle in what will be an on-going encryption and data privacy battle. On one side, there is a national security argument - strong encryption makes it harder for law enforcement and intelligence agencies to do their job. On the other, there’s the obligation to protect consumer data - weaker encryption make consumers susceptible to hackers. Do both of these arguments hold up to scrutiny or are they based on flawed premises? What happens next in the battle of encryption? How can civil liberties be preserved amid the ever-evolving world of terrorism, which increasingly relies on advanced communications technology to coordinate attacks? Can the U.S. government reasonably force cooperation on these issues from a dominant American tech corporation such as Apple?
+
+          h3.ui.header ABOUT THE SPEAKERS
+          div.ui.items
+            div.item
+              a.ui.tiny.image
+                img(src="https://pbs.twimg.com/profile_images/2115305409/Screen_Shot_2012-04-13_at_9.02.14_PM_400x400.png")
+              div.content
+                div.description
+                  p 
+                    strong Kim-Mai Cutler
+                    |  is founder of Roam and a tech journalist. She contributes to TechCrunch and has worked for Bloomberg, VentureBeat, and The Wall Street Journal.
+            div.item
+              a.ui.tiny.image
+                img(src="https://pbs.twimg.com/profile_images/96463735/PR_black___White.jpg")
+              div.content
+                div.description
+                  p 
+                    strong Keith Rabois
+                    |  is a tech entrepreneur and investor. He was a part of the early team at PayPal and has held executive positions at LinkedIn, Slide, and Square.
+            div.item
+              a.ui.tiny.image
+                img(src="https://pbs.twimg.com/profile_images/602349486371778560/pfTsLab__400x400.jpg")
+              div.content
+                div.description
+                  p 
+                    strong Scott Weiner
+                    |  is a member of the San Francisco Board of Supervisors and current candidate for the California State Senate.
+            div.item
+              a.ui.tiny.image
+                img(src="https://pbs.twimg.com/profile_images/511399985384931328/cbGbxXGj_400x400.jpeg")
+              div.content
+                div.description
+                  p 
+                    strong Blake Masters
+                    |  is the co-author of Peter Thiel’s “Zero to One” book and the president of the Peter Thiel Foundation. 
+            div.item
+              a.ui.tiny.image
+                img(src="https://pbs.twimg.com/profile_images/615365304269418497/4n5wss6k_400x400.jpg")
+              div.content
+                div.description
+                  p 
+                    strong Chris McCoy
+                    |  is the Founder and Executive Director of Data4America. He's also building Footprint, a messaging platform for franchise businesses.
+
+          h3.ui.header EVENT SPONSORS
+          div.ui.items
+            div.item
+              a.ui.tiny.image
+                img(src="https://pbs.twimg.com/profile_images/692057000193069056/l-NJ0fPt.png")
+              div.content
+                div.header Lincoln Initiative
+                div.description
+                  p Lincoln Initiative, formerly known as Lincoln Labs, was born from the optimistic view that when technology and public policy meet, under the right conditions and with the right tools, both worlds win. Through hackathons, meetups and online engagement, we provide opportunities for the entrepreneurial community to come together and both collaborate on and learn about market-based, tech-powered solutions to our nation's biggest problems.
+            div.item
+              a.ui.tiny.image
+                img(src="https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1446683274/vfbmpsw0xywzsyap48ty.png")
+              div.content
+                div.header Startup Policy Lab
+                div.description
+                  p Startup Policy Lab (SPL) is an independent nonprofit think tank connecting government officials and startups to address cutting edge issues in technology driving public policy. Learn more at 
+                    a(href="http://www.startuppolicylab.org/", target="_blank") startuppolicylab.org.
+
+          div.disclaimer Data4America welcomes your donation to further its mission of bringing data science and data viz to the understanding of politics. Data4America is in the process of obtaining its 501(c)(3) status from the IRS. While Data4America is waiting for this process to be completed, Silicon Valley Community Foundation has agreed to act as Data4America’s fiscal sponsor and accept gifts on its behalf. Donations will be processed by SVCF, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.
+
+
+      div.five.wide.column
+
+        h3.ui.top.attached.header When & Where
+        div.ui.attached.segment
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.565282314287!2d-122.41859418468222!3d37.77679017975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6cbe6673%3A0xe3d868354944c30d!2s1355+Market+St+%23488%2C+San+Francisco%2C+CA+94103!5e0!3m2!1sen!2s!4v1462507396870", width="100%", height="300", frameborder="0", style="border:0", allowfullscreen)
+
+          div.address
+            h4.ui.header RUNWAY 
+            p 1355 Market Street 
+            p 4th Floor 
+            p San Francisco, CA 94103
+
+          div.time
+            p Wednesday, June 8, 2015 from 6:30 PM to 9:00 PM (PDT)
+
+          p(style="font-size:1.3em;")
+            a(href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Future%20of%20Encryption,%20Housing,%20and%20Regulation&dates=20160608T013000Z/20160608T040000Z&details=For+details,+link+here:+https://data4america.org/event&location=RUNWAY+-+1355+Market+Street+-+4th+Floor+-+San+Francisco,+CA+94103&t=AKUaPmYY1i3fA1iGUo9sB5iArckcqqgwGrXioBIzG15xoSEEEwLhvlF6reV9cwKN-h3YqRyYiivf9cyz0_XrerKW_ZLB7mAWbg%3D%3D&sf=true&output=xml#eventpage_6", target="_blank")
+              i.calendar.icon
+              |  Add to Calendar
+
+        h3.ui.top.attached.header Organizers
+        div.ui.attached.segment.organizers
+          h4.ui.header Data4America
+          img.ui.fluid.image(src="https://data4america.org/img/logo-256.png", style="max-width:150px;")
+          p A non-profit, educational initiative bringing data science to the understanding of politics.
+          p
+            a(href="http://data4america.org/")
+              i.globe.icon
+              |  data4america.org
+          p
+            a(href="https://www.facebook.com/data4america/", target="_blank")
+              i.facebook.icon
+              |  facebook.com/data4america
+          p
+            a(href="https://twitter.com/data4america", target="_blank")
+              i.twitter.icon
+              |  twitter.com/data4america

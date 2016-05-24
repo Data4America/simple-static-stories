@@ -1,0 +1,30 @@
+{
+  "title": "Federal legalization on the the use and sale of marijuana",
+  "url": "/issue/demo/federal-legalization-sale-marijuana/federal/usa/",
+  "name": "Legalization on the the use and sale of marijuana",
+  "geography": "United States",
+  "geographicLevel": "Federal",
+  "sponsor": {
+    "name": "Cyan Banister",
+    "img": "/img/cyan.jpg",
+    "twitter": "https://twitter.com/cyantist",
+    "linkedin": "https://www.linkedin.com/in/cyanb",
+    "thanksText": "Thanks to @cyantist for sponsoring the Legalize Sex Work in United States"
+  },
+  "about": {
+    "paragraphs": [
+      "This policy channel calls for the United States to legalize the recreational use of marijuana.",
+      "Currently twenty-four states have enacted laws that allow recreational and/or medical use, and many states have decriminalized the possession of small amounts. In 2014, fifty percent (95,800) of inmates in federal prison were being held for drug-related crimes. Incarceration costs the U.S. $20,000 more per inmate per year than drug treatment."
+    ]
+  },
+  "learnMore": [
+    "http://www.drugpolicy.org/drug-war-statistics",
+    "http://ssdp.org/resources/facts-and-statistics/",
+    "http://www.bjs.gov/index.cfm?ty=pbdetail&iid=5387",
+    "http://www.drugwarfacts.org/cms/Prisons_and_Drugs#sthash.bzxAowXe.S0u032aN.dpbs",
+    "http://www.justicepolicy.org/images/upload/10-06_FAC_ForImmediateRelease_PS-AC.pdf"
+  ],
+  "datasets": [
+    "http://norml.org/data"
+  ]
+}

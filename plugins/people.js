@@ -39,6 +39,7 @@ var order = [
     'seth-kaddish',
     'kyle-wiley',
     'britt-crawford',
+    'gina-cooper',
     'susan-gentz',
     'scott-adelson',
     'peter-drennan',

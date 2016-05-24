@@ -4,9 +4,13 @@ block prepend title
   | #{ page.title + ' - '}
 
 block metatags
-  meta(property="og:title", content="Data4America | Unplugged")
+  meta(property="og:title", content='Data4America Unplugged: ' + page.metadata.profile.guest)
+
+block metaImage
+  meta(property="og:image", content="https://data4america.org" + page.metadata.profile.artwork)
 
 block content
+  - var podcast = page.metadata.profile
   div
     div#dfa-unplugged-header
       h1.ui.header.center.aligned
@@ -19,11 +23,11 @@ block content
       p(style="text-align:center; font-size:1.2em;") A podcast exploring the intersection of government, technology, and the future.
 
     div#dfa-unplugged
-      - var podcast = page.metadata.profile
-      div.podcast(data-url=(podcast.mp3 ? podcast.mp3 : ''))
+      div.podcast(data-url=(podcast.mp3 ? podcast.mp3 : ''), data-guest=podcast.guest)
         a.image(href=podcast.link)
           img(src=podcast.artwork)
-        h1.ui.header.title=podcast.guest
+        h1.ui.header.title Uplugged: 
+          =podcast.guest
         h3.ui.header.sub-title Session 
           =podcast.session
         div.description
@@ -79,8 +83,9 @@ block content
                     span.f 4
                     | AMERICA
             span.space!='&#183;'
-          i.ui.grey.apple.icon
-          a(href="", target="_blank") Play on iTunes
+          if podcast.itunes
+            i.ui.grey.apple.icon
+            a(href="", target="_blank") Play on iTunes
 
         h2.ui.header#transcript Transcript
         - var transcript = page.metadata.transcript

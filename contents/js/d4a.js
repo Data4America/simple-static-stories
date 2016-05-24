@@ -211,9 +211,8 @@ $(document).ready(function() {
   } else if ($('#dfa-unplugged').length) {
     var path = window.location.pathname;
     if (path.search('/unplugged/episode') === 0) {
-      var $item = $('#dfa-unplugged .lf-podcast:eq(0)');
-      $('.dfa-header-title').html('Data4America Unplugged ' +
-        $item.find('.content > .header').html());
+      $('.dfa-header-title').html('Data4America Unplugged: ' +
+        $('.podcast').attr('data-guest'));
     } else {
       $('.dfa-header-title').html('Data4America Unplugged');
     }

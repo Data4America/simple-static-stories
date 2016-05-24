@@ -14,7 +14,8 @@ html(lang='en')
         meta(property="og:title", content=locals.name)
       meta(property="og:site_name", content="data4america.org")
       meta(property="og:description", content="Bringing Data Science to the understanding of Politics")
-      meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
+      block metaImage
+        meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
 
       link(rel='icon', href=contents['favicon.png'].url)
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
@@ -84,7 +85,13 @@ html(lang='en')
                 div.menu
                   a.item(href="/unplugged/episode-1-greg-ferenstein")
                     img.ui.avatar.image(src="/img/unplugged-gregferenstein.jpg")
-                    | Episode #1: Greg Ferenstein
+                    | Session 1: Greg Ferenstein
+                  a.item(href="/unplugged/episode-2-ramez-naam")
+                    img.ui.avatar.image(src="/img/unplugged-rameez.jpg")
+                    | Session 2: Ramez Naam
+                  a.item(href="/unplugged/episode-3-michael-gibson")
+                    img.ui.avatar.image(src="/img/unplugged-michael.jpg")
+                    | Session 3: Michael Gibson
               div.ui.dropdown.item
                 | LIFEMAP
                 i.dropdown.icon(style="margin-left: 0.4em;")
@@ -154,7 +161,13 @@ html(lang='en')
             div.menu
               a.item(href="/unplugged/episode-1-greg-ferenstein")
                 img.ui.avatar.image(src="/img/unplugged-gregferenstein.jpg")
-                | Episode #1: Greg Ferenstein
+                | Session 1: Greg Ferenstein
+              a.item(href="/unplugged/episode-2-ramez-naam")
+                img.ui.avatar.image(src="/img/unplugged-rameez.jpg")
+                | Session 2: Ramez Naam
+              a.item(href="/unplugged/episode-3-michael-gibson")
+                img.ui.avatar.image(src="/img/unplugged-michael.jpg")
+                | Session 3: Michael Gibson
           div.ui.dropdown.item
             | LIFEMAP
             i.dropdown.icon(style="margin-left: 0.4em;")

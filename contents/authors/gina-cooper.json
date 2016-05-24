@@ -1,0 +1,26 @@
+{
+  "name": "Gina Cooper",
+  "title": "Events",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": false,
+  "staff": true,
+  "staffTitle": "Events",
+  "bio": "Founder, advises startups @CooperStrategies. Chief Strategic Relationships @CoreDriven. Advisor @CivicMakers. Board, founder @NetrootsNation.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/ginacooper"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/ginacooper"
+    },
+    {
+      "type": "www",
+      "url": "http://www.cooperstrategies.com/"
+    }
+  ],
+  "id": "gina-cooper"
+}
