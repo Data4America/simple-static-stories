@@ -2,12 +2,12 @@
  * Unplugged
  */
 (function (window, document, $) {
-  'use strict';
 
   var $elem,
     $player,
     $iframe,
     player,
+    interval,
     checkInterval  = 50.0,
     lastPlayPos    = 0,
     currentPlayPos = 0,
@@ -29,8 +29,26 @@
       return;
     }
 
+    $elem.find('.play-on-d4a').click(function() {
+      var $podcast = $(this).parents('.podcast'),
+          url = $podcast.attr('data-url'),
+          image = $podcast.find('.image img').attr('src'),
+          title = $podcast.find('.title').html(),
+          subTitle = $podcast.find('.sub-title').html();
+
+      if ($player.css('display') === 'none') {
+        $player.transition('vertical flip');
+      }
+
+      var $profile = $player.find('.list .item');
+      $profile.find('img').attr('src', image);
+      $profile.find('.content .header').html(title);
+      $profile.find('.content .description').html(subTitle);
+
+      loadAudio(url);
+    });
+
     bindEvents();
-    loadAudio();
   }
 
   function msToTime(s) {
@@ -59,23 +77,38 @@
     return min + ':' + sec;
   }
 
-  function loadAudio() {
-    var url = $('.podcast:eq(0)').attr('data-url');
-    var content = '' +
-      '<audio id="unpluggedPlayer" controls="controls" style="position: absolute; top: -1000px; left: -1000px;">' +
-      ' <source src="' + url + '" type="audio/mpeg" />' +
-      '</audio>';
+  function loadAudio(url) {
+    if (player) {
+      player.pause();
 
-    $('body').append(content);
+      setTimeout(function() {
+        playerState('loading');
+        lastPlayPos    = 0;
+        currentPlayPos = 0;
+        bufferingDetected = false;
+        duration = 0;
+        player.currentTime = 0;
+        player.setAttribute('src', url);
+        player.load();
+        player.play();
+      }, 50);
+    } else {
+      var content = '' +
+        '<audio id="unpluggedPlayer" controls="controls" style="position: absolute; top: -1000px; left: -1000px;">' +
+        ' <source src="' + url + '" type="audio/mpeg" />' +
+        '</audio>';
 
-    player = document.getElementById('unpluggedPlayer');
+      $('body').append(content);
 
-    initPlayer();
+      player = document.getElementById('unpluggedPlayer');
+
+      initPlayer();
+    }
   }
 
   function initPlayer() {
-
-
+    console.log('playing');
+    player.play();
     player.addEventListener("timeupdate", timeUpdate, false);
 
     player.addEventListener("canplaythrough", function () {
@@ -88,7 +121,7 @@
     }, false);
 
     player.addEventListener("canplay", function() {
-      setInterval(checkBuffering, checkInterval);
+      //interval = setInterval(checkBuffering, checkInterval);
     }, false);
 
     player.addEventListener("pause", function() {
@@ -102,51 +135,9 @@
     player.addEventListener("timeupdate", function(e) {
       updateTimer(e.target.currentTime);
     }, false);
-    /*
-    widget.bind(SC.Widget.Events.READY, function() {
-      loaded = true;
-
-      widget.getDuration(function(duration) {
-        audioLength = duration;
-      });
-
-      if ($player.css('display') === 'block') {
-        widget.play();
-      }
-    });
-
-    widget.bind(SC.Widget.Events.LOAD_PROGRESS, function() {
-
-    });
-
-    widget.bind(SC.Widget.Events.PLAY, function() {
-    });
-
-    widget.bind(SC.Widget.Events.SEEK, function() {
-      playerState('playing');
-    });
-
-    widget.bind(SC.Widget.Events.LOAD_PROGRESS, function() {
-      playerState('loading');
-    });
-
-    widget.bind(SC.Widget.Events.PLAY_PROGRESS, function(stats) {
-      updateTimer(stats.currentPosition);
-      updateProgressBar(stats.relativePosition);
-    });
-
-    widget.bind(SC.Widget.Events.PAUSE, function() {
-      playerState('paused');
-    });
-
-    widget.bind(SC.Widget.Events.FINISH, function() {
-      playerState('paused');
-    });
-    */
   }
 
   function playerState(state) {
-    console.log(state);
     $player.find('.icons').hide();
     $player.find('.lf-pause').hide();
     $player.find('.lf-play').hide();
@@ -174,6 +165,7 @@
   }
 
   function checkBuffering() {
+    console.log('interval');
     currentPlayPos = player.currentTime
 
     // checking offset, e.g. 1 / 50ms = 0.02
@@ -190,6 +182,7 @@
         //console.log("buffering")
         playerState('loading');
         bufferingDetected = true
+        console.log('loading');
     }
 
     // if we were buffering but the player has advanced,
@@ -201,17 +194,12 @@
         ) {
         playerState('playing');
         bufferingDetected = false
+        console.log('playing');
     }
     lastPlayPos = currentPlayPos
   }
 
   function bindEvents() {
-
-    $elem.find('.play-on-d4a').click(function() {
-      $player.transition('vertical flip');
-      var url = $(this).parents('.lf-podcast').attr('data-url');
-      player.play();
-    });
 
     $player.find('.lf-pause').click(function() {
       player.pause();

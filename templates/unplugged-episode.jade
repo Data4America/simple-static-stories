@@ -34,9 +34,8 @@ block content
           p 
             each item, i in podcast.desc
               span.line
-                =(i > 0 ? '// ' : '')
                 !=item
-                |  
+                =(i < (podcast.desc.length - 1) ? ', ' : '')
 
           p.links
             if podcast.twitter
@@ -75,15 +74,15 @@ block content
             |  editorial board on 04/25/16
         div.embed
           iframe(width="100%", height="110", scrolling="no", frameborder="no", src!=podcast.iframe)
-        p.links
+        p.media
           if podcast.mp3
             a.play-on-d4a(href="javascript:;")
               span.play-on Play on 
                   span.dfa-text DATA
                     span.f 4
                     | AMERICA
-            span.space!='&#183;'
           if podcast.itunes
+            span.space!='&#183;'
             i.ui.grey.apple.icon
             a(href="", target="_blank") Play on iTunes
 

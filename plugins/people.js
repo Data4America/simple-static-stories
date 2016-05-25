@@ -13,6 +13,7 @@ var order = [
     'robert-manduca',
     'jesse-thomas',
     'craig-montuori',
+    'patrick-ruffini',
     'antone-johnson',
     'bert-kaufman',
     'tatsiana-maskalevich',
@@ -55,8 +56,8 @@ function sortObjective(p) {
            (p.advisor ? 1e6 : 0) +
            (p.team ? 1e5 : 0) +
            (order.length - order.indexOf(p.id)) * 1e4 +
-           //-p.id.split('-')[1][0].charCodeAt(); //
-           order.indexOf(p.id);
+           -p.id.split('-')[1][0].charCodeAt(); //
+           //order.indexOf(p.id);
 }
 
 module.exports = function(env, callback) {
