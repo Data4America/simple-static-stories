@@ -26,11 +26,25 @@ function basicIncomeInit() {
     var updating = false;
 
     // Allow overriding the default values, based on parameters supplied in the URL. These will automatically be updated when the form is submitted.
-    var hash = decodeURIComponent(window.location.hash);
-    if (hash) {
-        var state = hash2state(hash.slice(1)); // Get rid of # before passing to function
+    var stateId = window.location.search.slice(1);
+    var state;
+    if (stateId) {
+        $.get("https://d4a-bi-store.dumbmatter.com/", {id: parseInt(stateId, 10)}, function (response) {
+                console.log(response);
+                if (response.success) {
+                    console.log("success");
+                    state = hash2state(response.data);
+                    firstRunOnly();
+                } else {
+                    console.log("Error 1 retrieving data");
+                }
+            }, "json")
+            .fail(function () {
+                console.log("Error 2 retrieving data");
+            });
     } else {
-        var state = defaultState;
+        state = defaultState;
+        setTimeout(firstRunOnly, 0);
     }
 
     // I can hear you already! Maybe you don't want to cut all the programs I just proposed to cut. Maybe you want to cut some things that I didn't cut, such as defense spending. Here's the beauty of this model: [it's simple and it's open source](https://github.com/dumbmatter/basic-income-basic-job). With a little bit of programming knowledge, you can change these assumptions and see how it adds up. For example, you could keep Medicaid by cutting defense spending by 50%. The important thing is to do the math.
@@ -91,23 +105,37 @@ function basicIncomeInit() {
     function updateUrl() {
         // Do this instead of directly setting window.location.hash to prevent adding extra history entries
         var baseUrl = window.location.origin + '/basic-income/custom/';
-        var url = baseUrl + '#' + encodeURIComponent(state2hash(state));
-        document.getElementById('cliptext').value = url;
+        var hash = state2hash(state);
 
-        var text = 'Check out my basic income model for ' + state.regionName[0];
+        document.getElementById('cliptext').value = 'Saving data, please wait...';
+        $.post("https://d4a-bi-store.dumbmatter.com/", {data: hash}, function (response) {
+                console.log(response);
+                if (response.success) {
+                    var shortUrl = baseUrl + '?' + response.id;
 
-        if (document.getElementById('ubiShareTwitter')) {
-            document.getElementById('ubiShareTwitter').dataset.url = url;
-            document.getElementById('ubiShareTwitter').dataset.text = text;
-        }
-        if (document.getElementById('ubiShareFacebook')) {
-            document.getElementById('ubiShareFacebook').dataset.url = url;
-            document.getElementById('ubiShareFacebook').dataset.text = text;
-        }
-        if (document.getElementById('ubiShareEmail')) {
-            document.getElementById('ubiShareEmail').dataset.url = url;
-            document.getElementById('ubiShareEmail').dataset.text = text;
-        }
+                    document.getElementById('cliptext').value = shortUrl;
+
+                    var text = 'Check out my basic income model for ' + state.regionName[0];
+
+                    if (document.getElementById('ubiShareTwitter')) {
+                        document.getElementById('ubiShareTwitter').dataset.url = shortUrl;
+                        document.getElementById('ubiShareTwitter').dataset.text = text;
+                    }
+                    if (document.getElementById('ubiShareFacebook')) {
+                        document.getElementById('ubiShareFacebook').dataset.url = shortUrl;
+                        document.getElementById('ubiShareFacebook').dataset.text = text;
+                    }
+                    if (document.getElementById('ubiShareEmail')) {
+                        document.getElementById('ubiShareEmail').dataset.url = shortUrl;
+                        document.getElementById('ubiShareEmail').dataset.text = text;
+                    }
+                } else {
+                    document.getElementById('cliptext').value = 'Saving model failed';
+                }
+            }, "json")
+            .fail(function () {
+                document.getElementById('cliptext').value = 'Saving model failed';
+            });
     }
 
     // Initialize UI
@@ -153,7 +181,6 @@ function basicIncomeInit() {
         personNameText: document.getElementsByClassName('personNameText')
     };
 
-    state2form(state, formEls, textEls);
     $("#customize-form").on('change', 'input', function() {
         if (!updating) {
             updating = true;
@@ -167,13 +194,20 @@ function basicIncomeInit() {
     // Run the simulations when lastSlide becomes visible
     $(document).on('lastSlide', function () {
         run(state);
+
+        // Only update at end, to limit traffic to server
+        updateUrl();
     });
 
     $('.ubi-popup').popup({
         on: 'click'
     });
 
-    run(state);
+    function firstRunOnly() {
+        state2form(state, formEls, textEls);
+
+        run(state);
+    }
 
     function addUnitedStatesData() {
         state = {
@@ -210,8 +244,6 @@ function basicIncomeInit() {
         bars('biBars', biAmounts);
 
         distribution('biDist', biTotal, biTotalStddev);
-
-        updateUrl();
     }
 
     // The distribution needs to be re-rendered when the size of the window changes, otherwise it won't fit in the window correctly
