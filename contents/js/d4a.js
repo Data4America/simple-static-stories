@@ -229,6 +229,23 @@ $(document).ready(function() {
     });
   }
 
+  if ($('#dfa-unplugged').length) {
+    $('.more-link a').click(function() {
+      $(this).find('i').removeClass('chevron down icon');
+      if ($(this).hasClass('less')) {
+        $(this).removeClass('less')
+        $(this).parent().prev('.links').addClass('hidden');
+        $(this).find('i').addClass('chevron down icon');
+        $(this).find('span').html('More');
+      } else {
+        $(this).addClass('less')
+        $(this).parent().prev('.links').removeClass('hidden');
+        $(this).find('i').addClass('chevron up icon');
+        $(this).find('span').html('Less');
+      }
+    });
+  }
+
   if (window.location.pathname.search("/donate") === 0
       || window.location.pathname.search("/sponsorship") === 0) {
     $('#dfa-footer').remove();

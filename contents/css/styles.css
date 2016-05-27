@@ -53020,11 +53020,17 @@ body.embed {
   margin: 0 0.5em;
   color: #7B7B7B;
 }
+#dfa-unplugged .podcast .more-link a {
+  color: #CF1A1A;
+}
 #dfa-unplugged .podcast .links {
   font-size: 0.95em;
 }
 #dfa-unplugged .podcast .links a:hover {
   text-decoration: underline;
+}
+#dfa-unplugged .podcast .links.hidden {
+  display: none;
 }
 #dfa-unplugged .podcast .approved-by {
   display: none;

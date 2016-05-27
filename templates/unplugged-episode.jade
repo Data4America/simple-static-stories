@@ -37,7 +37,7 @@ block content
                 !=item
                 =(i < (podcast.desc.length - 1) ? ', ' : '')
 
-          p.links
+          p.links.hidden
             if podcast.twitter
               i.icon.twitter(style="color:#1DA1F2;")
               a(href='https://twitter.com/' + podcast.twitter, target="_blank")='@' + podcast.twitter
@@ -64,6 +64,11 @@ block content
               br
               i.icon.red.bookmark
               a(href=podcast.article.url, target="_blank")=podcast.article.name
+
+          div.more-link
+            a(href="javascript:;")
+              i.chevron.down.icon
+              span More
 
           p.approved-by
             i.red.check.icon
