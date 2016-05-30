@@ -236,12 +236,10 @@ $(document).ready(function() {
         $(this).removeClass('less')
         $(this).parent().prev('.links').addClass('hidden');
         $(this).find('i').addClass('chevron down icon');
-        $(this).find('span').html('More');
       } else {
         $(this).addClass('less')
         $(this).parent().prev('.links').removeClass('hidden');
         $(this).find('i').addClass('chevron up icon');
-        $(this).find('span').html('Less');
       }
     });
   }
