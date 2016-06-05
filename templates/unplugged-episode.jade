@@ -37,6 +37,14 @@ block content
                 !=item
                 =(i < (podcast.desc.length - 1) ? ', ' : '')
 
+          p
+            strong Hosted by: 
+            |  Chris McCoy 
+            a(href="https://twitter.com/chrisamccoy", target="_blank")
+              i.ui.twitter.square.icon(style="color:#00ABF1;")
+            a(href="https://www.linkedin.com/in/chrisamccoy", target="_blank")
+              i.ui.linkedin.square.icon
+
           p.links.hidden
             if podcast.twitter
               i.icon.twitter(style="color:#1DA1F2;")

@@ -53012,9 +53012,11 @@ body.embed {
 #dfa-unplugged .podcast .sub-title {
   font-weight: 200;
   margin-top: 0;
+  margin-bottom: 1.4em;
 }
 #dfa-unplugged .podcast p {
   font-size: 1em;
+  margin-bottom: 1.4em;
 }
 #dfa-unplugged .podcast .space {
   margin: 0 0.5em;
