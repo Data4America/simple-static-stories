@@ -2,5 +2,6 @@
   "template": "policy-issues.jade",
   "title": "Policy Issues",
   "issues": {
+    "Criminal Justice": ["legalization-marijuana.json", "sex-work.json"]
   }
 }

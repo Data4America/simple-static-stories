@@ -28,10 +28,19 @@ block content
           img(src=podcast.artwork)
         h1.ui.header.title Uplugged: 
           =podcast.guest
+          if podcast.twitter
+            a(href='https://twitter.com/' + podcast.twitter, target="_blank")
+              i.ui.twitter.square.icon(style="color:#00ABF1; margin-right:0px; margin-left:5px;")
+          if podcast.linkedin
+            a(href=podcast.linkedin, target="_blank")
+              i.ui.linkedin.square.icon(style="margin-right:0px;")
+          if podcast.www
+            a(href=podcast.www, target="_blank")
+              i.ui.world.icon(style="margin-right:0px;")
         h3.ui.header.sub-title Session 
           =podcast.session
         div.description
-          p 
+          p
             each item, i in podcast.desc
               span.line
                 !=item
