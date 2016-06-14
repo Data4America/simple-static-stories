@@ -53146,6 +53146,9 @@ body.embed {
     bottom: 38px;
     padding: 0.5em;
   }
+  #dfa-unplugged-player .avatar {
+    display: none;
+  }
   #dfa-unplugged-player .ui.container {
     margin: 0 !important;
   }
