@@ -1,0 +1,20 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Uplugged Live: Scott Wiener",
+  "profile": {
+    "guest": "Scott Wiener",
+    "session": "LIVE",
+    "artwork": "/img/live-weiner-cutler-600.jpg",
+    "link": "/unplugged/episode-1-greg-ferenstein",
+    "desc": [
+      "Scott is member of the San Francisco Board of Supervisors and current candidate for the California State Senate."
+    ],
+    "twitter": "Scott_Wiener",
+    "host": {
+      "name": "Kim-Mai Cutler",
+      "twitter": "https://twitter.com/kimmaicutler"
+    },
+    "mp3": "https://s3-us-west-2.amazonaws.com/media.data4america.org/5.+Kim_Scott.mp3",
+    "iframe": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270272600&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false&amp;color=CF1A1A"
+  }
+}

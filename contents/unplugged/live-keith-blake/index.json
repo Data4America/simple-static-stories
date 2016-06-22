@@ -1,0 +1,331 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Uplugged Live: Keith Rabois",
+  "profile": {
+    "guest": "Keith Rabois",
+    "session": "LIVE",
+    "artwork": "/img/live-rabois-masters-600.jpg",
+    "link": "/unplugged/episode-1-greg-ferenstein",
+    "desc": [
+      "Keith is a tech entrepreneur and venture capitalist Khosla Ventures. He was a part of the early team at PayPal and has held executive positions at Linkedin, Slide, and Square."
+    ],
+    "host": {
+      "name": "Blake Masters",
+      "twitter": "https://twitter.com/bgmasters"
+    },
+    "twitter": "rabois",
+    "mp3": "https://s3-us-west-2.amazonaws.com/media.data4america.org/4.+Blake_Keith.mp3",
+    "iframe": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270271404&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false&amp;color=CF1A1A"
+  },
+  "transcript": [
+    {
+      "time": ":00",
+      "text": "[data4america theme]"
+    },
+    {
+      "time": ":05",
+      "narrator": "Chris McCoy",
+      "text": "Hi! This is Chris McCoy, the executive director at Data4America. Welcome to our first-ever Data4America Live! event, where we bring in a studio audience to sit down with some of the most interesting people in America to discuss ideas at the intersection of data, technology, government, and the future. Our first-ever session was hosted by Peter Thiel's Thiel Foundation President Blake Masters, and our guest was legendary venture capitalist Keith Rabois of Khosla Ventures. <br />This wouldn't be possible without the Board of Directors and the Editorial Board at Data4America - thank you for greenlighting this project. Thank you to our major sponsor, the Lincoln Initiative, and Garrett Johnson. Thank you to Caileens.com, to Elmaudio, to our volunteers, and, of course, to our audience. <br />I hope you enjoy this first session. It was an explosive conversation, and the audience Q&A was phenomenal. "
+    },
+    {
+      "time": "1:02",
+      "narrator": "CM",
+      "text": "Welcome, everyone. It's good to see everyone tonight. Welcome to Data4America Live!, cohosted by our sponsor and friend Lincoln Initiative. I'm Chris McCoy, the founder and executive director at Data4America. <br />About a year ago, I had a problem. I worked for 32 years on sports networks and social systems. I wanted to understand how the world works, so I started to read speeches and watch documentaries. But there was too much noise - too much partisan bias. I needed a new way to expedite my learning. I thought, \"What if I could build data models underlying some of these political ideas that people had, like healthcare and energy?\" <br />So I started to do it. I showed some friends - technologists and data scientists - and they loved it. I thought, \"Why not make something happen with this?\" So I went to Washington, D.C., and I spent two weeks talking to people who work on open data initiatives and politicians. Blake Masters and I golfed with Rand Paul. I saw that there wasn't just interest from folks here in Silicon Valley - there was interest from folks in Washington, D.C. I thought, \"Let's do something about it.\" <br />That's how Data4America was born. We saw a clear need to create a platform to bridge Silicon Valley and Washington, D.C. A platform where ideas could actually be explored. Tonight is actually our first-ever event. This is our launch party. It means a lot that every single one of you are here to celebrate with us. We started on a couch in San Mateo. We're here now in Runway. This beautiful building inside the Twitter Building is our headquarters. This event wouldn't be possible without the following people: Garrett Johnson and the team at Lincoln Initiative - thank you so much for standing behind us. <br />Thank you to our event sponsors: Charles Bell at Startup Policy Lab, Caileen Viehweg - if you haven't discovered the magical treats in the back, she provided those - Michael Clifford, our sound engineer, elmaudio.com, and our donors tonight. Cathy and Craig Viehweg, also our bartenders, donated the wine; thank you Kathy, thank you Craig. We have quite an operations team, so I want to let you know who they are. First off, this event wouldn't be possible without Gina Cooper - a force of nature, a tremendous person. Stella Monroe and Alex Quinn - thank you for helping Data4America get our first event off the ground. Paul Martino and Basha Moore from Lincoln - thank you for helping bring this to life. <br />Our volunteers, my fiancée, my copilot: Ciara Viehweg, you met her at the bottom. Chris Belsky and Richard Granbruno. We're a 501c3 on our way, we've had just a few donors. Said Bannisters, he's a friend and a big believer. Sam Penrose is also here - thank you, Sam, for believing in us. We have our fiscal sponsor, the Silicon Valley Community Foundation, and our Board of Directors. Our founding board is Renee Diresta and Craig Montuori. Also on our board is Nate Lubin, Patrick Ruffini, Antone Johnson, Abhi Nemani, and Garrett Johnson. We have an editorial board, folks who have been on our podcast, folks who have created content for us, a staff. I want to thank everyone here for being a part of our story. <br />If you couldn't tell, Data4America is really about exploring ideas. We're not a political organization. At this event, we have libertarians, conservatives, liberals, and independents sharing ideas about the future of government, technology, and data, live and unplugged. Our ethos that we stand by is ideas - not politics. As part of our nonprofit program, we've launched a podcast series called Unplugged, and if you haven't listened to one, we encourage you to go to http://data4america.org/unplugged. <br />When you do listen, it'd mean a lot to me and the team if you shared it via Twitter or Facebook. If you have people that you'd like to hear on the show, just email me – chris at data4america dot org - and we'll make it happen. We started out as an organization that crowdsourced data visualization and data science from the technology, academic, and data science communities. Here's our first piece, created by Robert Manduca, Ph.D at Harvard. He took every job in the United States of America and represented it with a dot on this map. We'll be publishing more of these crowdsourced stories as we move through 2017. <br />This is Lifemap, one of our inventions and products: history in 100 characters or less. We see Lifemap as a reimagining of Wikipedia where verified history can be told in an easily digestible, social media-friendly format. Our vision for Lifemap is that in ten years, when you go to the polls, instead of a bio, you see a rich representation of the history of the people you're voting for: the good, bad, ugly, beautiful, and neutral. We think visualization can make elections smarter. We are a nonprofit, so if you believe the same things that we do - that data science and data visualization can help the understanding of politics - consider donating. Your donation will be tax-deductible through our nonprofit sponsor, the Silicon Valley Community Foundation. You can do that at http://data4america.org/donate. <br />Finally, we've said that Data4America is a platform for interesting ideas from people. We'd like to present one today from a friend: our first podcast guest, Greg Ferenstein. Greg?"
+    },
+    {
+      "time": "8:23",
+      "narrator": "GF",
+      "text": "I'm Greg Ferenstein, editor of the Ferenstein Wire, a syndicated column that goes out to places like the Washington Post, the Guardian, and Fast Company. I love San Francisco. On my street in the Mission District, there is a guy that dresses in a giant gorilla suit and plays the guitar almost every day. In any other city, he would be laughed at or ignored. But every Saturday, when he plays, there's a giant party. Everyone loves it. I think it's the only city where an adult reasonably needs a onesie because there's that many pajama parties. <br />I'm going to do a little experiment and tell you about the law I'm proposing. Raise your hand if you love San Francisco - the diversity, everything about it. Keep your hand up if the one thing you hate about San Francisco is that it's just too damn expensive. This is the key question: if turning San Francisco into something more like Manhattan or Paris, which is denser and taller, where you have to put a six story building on every block, made the city affordable for everyone - artists, teachers, and tech people - how many of you would actually support something like that? A few months ago I was told that was crazy. That no one would in the city would support something that radical. So I proposed a ballot measure to do exactly that: allow San Francisco to be taller and denser, built much quicker, and more affordable to everyone. The only way that I can get the 10,000 signatures to put it up for vote this November is if I can get 100 people to collect 100 signatures. On the 25th, we're going to blanket the city, put it on the ballot, and fundamentally change how this city approaches housing. <br />My ask is this: go to http://affordablesanfrancisco.com - like right now. On that website is a link explaining the law, and the signup sheet where you can give me your email - just me - and you can sign up to canvas with us. We will put the most pro-housing measure that the city has ever seen up for a vote."
+    },
+    {
+      "time": "11:32",
+      "narrator": "CM",
+      "text": "Thank you, Greg. I want to introduce our co-sponsor and board member, Garrett Johnson, to introduce our speakers."
+    },
+    {
+      "time": "11:44",
+      "narrator": "GJ",
+      "text": "Well, thank you all for being here. We're excited to see so many people here interested in thoughtful policy discussions. As mentioned, I am one of the cofounders of Lincoln and I also have the pleasure of being on the board of Data4America. Chris is doing a fantastic job, so I really hope you guys support him as well. We are a community of technology professionals who advocate for more economic and individual liberty. We think that by bringing thoughtful people into a space to have important conversations, we can keep people informed. <br />This next conversation really ties in with individual liberty: the topic is going to be on encryption. The controversy between Apple and the FBI became front page news around the country. Tech is mainstream - what happens in Silicon Valley impacts every city around the world. The conversations that happen and the technology that's built here really matter. The two people speaking on this topic are both lawyers, entrepreneurs, and generally good people: Blake Masters and Keith Rabois. Blake Masters, as you all know, is the coauthor of a book called Zero to One with Peter Thiel and is the current president of the Thiel Foundation. Keith Rabois is a serial entrepreneur. He was on the early team at PayPal and is currently the founder of OpenDoor. He was an investor at OpenVentures and former COO of Square. They will be able to bring their entrepreneurial perspective and training as lawyers to this conversation on the role of government as it relates to our private, intimate data. Please join me in welcoming Keith and Blake."
+    },
+    {
+      "time": "14:04",
+      "narrator": "KR",
+      "text": "I recently introduced Peter to speak somewhere. Peter was also a lawyer; we both went to law school, clerked for federal judges, and worked at the same law firm. Peter quit after three months and three days; He usually introduces me by saying that it took me three years and three months to figure out how bad law was, so it's a major character fault. I was doing this interview with Peter, and Al Gore was speaking next - he was watching from the side. When Al Gore comes onstage, he says, \"You know what? I see this kind of ego competition thing between Keith and Peter about this law stuff, and I've got to tell you, I win. I dropped out after my second year of law school.\""
+    },
+    {
+      "time": "15:04",
+      "narrator": "BM",
+      "text": "I kept waiting for the day in law school where you actually learn how to be a lawyer. It never came."
+    },
+    {
+      "time": "15:08",
+      "narrator": "KR",
+      "text": "You can go to different law schools, though. It depends on the school, truthfully. At elite law schools they don't teach you anything about actually practicing law. If you go to the 20th-40th best law schools, it's a bit more practical."
+    },
+    {
+      "time": "15:32",
+      "narrator": "BM",
+      "text": "I guess we're supposed to talk about regulation, encryption, and stuff like that. Let’s get it out of the way early - then we can get to the fun stuff. Obviously, you're famous for being part of the PayPal Mafia. PayPal is one of the early disruptive companies: you set out to create a new world currency. You failed at that, but built a pretty interesting payments business in the process. I think the latest example of a company that gets so big so fast and flips people from the political spectrum over to your side before the regulators can catch up is Uber. It seems like regulators are paying a lot more attention now. <br />On February 11, 2016, you tweeted something like, \"Yo, if you are pursuing this kind of disruptive arbitrage strategy, you better be sure that your output is directly tied to consumer benefit.\" One of the great Twitter satirists, @ModestProposal, tweeted back, \"Gee, sounds like we've really moved into the era of 'move slow and never break anything.'\" You gave him some snark back and said, \"Nope, wrong lesson.\" What's the right lesson in mid-2016? Should people be taking the safe route? What's the path forward?"
+    },
+    {
+      "time": "16:57",
+      "narrator": "KR",
+      "text": "True story: Peter coined the term \"too big to fail\" back in the PayPal days. This was our strategy: grow as fast as possible. We needed to have a lot of users before regulators interfered with our business. That was the strategy. It was coherent across the product strategy, the marketing strategy, the press strategy, and the legal strategy that I drove some of. <br />As an example of this, on the precipice of going public, in February 2002, the state of Louisiana, spurred by the press, decided that we were practicing banking without a license in the state of Louisiana. So we did what one does in that situation: we called up all these fancy Louisiana lawyers and hired them. We had a very small window in which to go public for a variety of accounting reasons, and I had this epiphany. I said to Jeremy - he's the CEO of Yelp now - \"How many users do we actually have in Louisiana?\" He ran a query, because back then you didn't have all these software tools that can tell you this - especially not people like me - and it was 54,000. I said, \"That's a lot of voters in Louisiana. Why don't we tell all these regulators that we'll just send voters to their email, and if they want, they’ll call their cellphones?\" We delivered that message, and the next day, they said, \"You know what? Your legal arguments have a lot more merit than we thought. Congratulations!\" And we went public. <br />If we had 54,000 users in the state of New York, it would've been irrelevant, but that was 54,000 people in Louisiana who were going to be deprived of a living. That was how they earned their money - selling on eBay. We were the only way they could feed their family, and they were going to be very unhappy. The lesson from that was that when you're small and cute, nobody really cares; when you're a little startup, regulators generally don't pay much attention. Then you're in this precarious middle zone where people know about you. The media knows about you. Large, incumbent competitors know about you. Regulators start finding out about you. But, you don't have enough traction to defend yourself yet. You don't have enough money to pay for lobbyists. You have to close this gap from small to too big to fail as fast as humanly possible. That's the basic strategy that most startups have followed. It's not accidental. "
+    },
+    {
+      "time": "19:38",
+      "narrator": "BM",
+      "text": "Do you think that's more science or luck? Can you always close the gap in one of these businesses? "
+    },
+    {
+      "time": "19:45",
+      "narrator": "KR",
+      "text": "Not always, but you want to close the gap as fast as possible because you're really exposed. If something goes wrong, you don't have enough users that love you. You need users who don't just like you, but love you, and will interrupt their day and do things if your service is strident. That's true of Uber. There are a lot of people who love Uber - not everyone, obviously - but Uber clearly saves people from drunken driving deaths. There are people whose lives depend on Uber now. Uber got in a fight in D.C., all of that goodwill was brought to bear on local government, and they caved instantly. Every service needs to create scale and love, and those two things are usually in some tension. There's not many products and services that people truly love at massive scale. "
+    },
+    {
+      "time": "20:45",
+      "narrator": "BM",
+      "text": "Do you care about net neutrality? Should we talk about it? "
+    },
+    {
+      "time": "20:47",
+      "narrator": "KR",
+      "text": "I dunno. It's a loaded term, it's kind of old. "
+    },
+    {
+      "time": "20:51",
+      "narrator": "BM",
+      "text": "It's going to come back this year because all these cases are winding through the courts. The telecoms are suing the FCC. The argument has nothing to do with internet policy. It all has to do with an obscure technical congressional delegation. "
+    },
+    {
+      "time": "21:05",
+      "narrator": "KR",
+      "text": "When you see a regulatory battle, it's almost never head to head on the actual subject. You pay lawyers to find clever ways that you have a high ground above someone else, and the art is picking the legal argument correctly: what's the right tool to use to reframe it? When I was a clerk and a litigator, all my time would go into writing the first paragraph of my brief. It was 80-90% of the work. Once that paragraph was written, it was easy, and I could finish it without thinking. But that first paragraph - that first sentence that the judge would read - it had to make them say \"Ah! Of course Keith is right! I have no doubt that this is true.\" The art is narrowing all the possible arguments down to the one where you're on the right side of history, so to speak."
+    },
+    {
+      "time": "22:06",
+      "narrator": "BM",
+      "text": "Do you have a hot take on Apple vs. the FBI? Were they fronting when they were obviously cooperating with the government behind the scenes? "
+    },
+    {
+      "time": "22:13",
+      "narrator": "KR",
+      "text": "I don't necessarily know. As an ex-litigator, I got quoted as saying - and I think this is true - that I think Apple picked the wrong case. One of the first things you learn in law school is that bad facts make bad law. In this particular case, the facts are not particularly exciting to fight in courts about. It's obviously a case of a dead terrorist where they didn't own the device. It's not the right battle to pick. Part of the art of litigation is that you have a lot of different cases and have to choose the right one to fight on. You pick the facts that are most on your side. I was kind of annoyed that Apple made a major mistake. If you fight that battle and lose, that precedent will swamp everything else. Everybody's rights will be subject to this one precedent established on very poor facts. You could pick something much more sob story-oriented that felt like someone's privacy was really being aggrieved, and the government was overreaching, and litigate that case. "
+    },
+    {
+      "time": "23:22",
+      "narrator": "BM",
+      "text": "Speaking of privacy being aggrieved and picking cases with the right facts, Peter Thiel and Hulk Hogan vs. Gawker? "
+    },
+    {
+      "time": "23:30",
+      "narrator": "KR",
+      "text": "Peter followed this strategy right down the middle. "
+    },
+    {
+      "time": "23:33",
+      "narrator": "BM",
+      "text": "I don't want to say anything about this, but I'm hoping you will. You only have a few possible beliefs here because if you read the press... "
+    },
+    {
+      "time": "23:41",
+      "narrator": "KR",
+      "text": "You're either a media journalist, or... "
+    },
+    {
+      "time": "23:44",
+      "narrator": "BM",
+      "text": "This is either really horrible or it's the most horrible thing on the planet. Which is it? [laughter]  "
+    },
+    {
+      "time": "23:53",
+      "narrator": "KR",
+      "text": "I have weird views on this. My first principal view from my litigation days is that I don't think people should be able to fund other people's lawsuits at all. That's my policy view. "
+    },
+    {
+      "time": "24:17",
+      "narrator": "BM",
+      "text": "This would destroy every piece of leftwing environmental litigation."
+    },
+    {
+      "time": "24:22",
+      "narrator": "KR",
+      "text": "I don't believe it's a good idea. Journalists are very inconsistent when you ask them about it - they're like, \"Oh, it's okay for left-wing groups to do it, but not someone else.\" So I don't believe that you should be allowed to do this ever. That said, if there is a law that allows someone to fund other people's lawsuits, anyone's entitled to do that. My personal view on this is slightly different than the general media coverage. I've yet to hear a single person articulate what's different about Peter funding this than raising $27 from everyone this room to fund it. I cannot find an intellectual distinction between a crowdfunded campaign of $27 Bernie donations and Peter writing one check. There's absolutely no difference between those two things, as far as anyone on Twitter seems to think. <br />Another point: if Gawker's lawyers had done their job, there's a 90% chance they'd have found this out. When I was a lawyer, there's a set of questions we'd ask when we took depositions, and if they had asked that litany of normal questions, it would've probably raised some yellow, possibly red flags, and they would've known. They skipped over those questions. Many lawyers do, but I never did. <br />The first set of questions would include, \"Tell me every single person you've talked to about this.\" I'd ask for a copy of the agreement between the client and their counsel. There's a portion of that information that's privileged, but a lot of it's not. 99% of the time, those answers are really boring - you'd spend ten minutes of the deposition finding out they'd talked to their mom about the case, or another person who wasn't protected by privilege, so we'd ask them to tell us everything they'd told that person. I think they were a little sloppy, but Peter might've been a little sloppy too. It is very possible to discover this if you're paying attention. "
+    },
+    {
+      "time": "27:29",
+      "narrator": "BM",
+      "text": "I think I would not like to be deposed by you."
+    },
+    {
+      "time": "27:32",
+      "narrator": "KR",
+      "text": "Deposing's kind of fun. Being deposed is not fun at all. Defending depositions is not fun at all. When I would defend a deposition, after eight hours, I'd never been more drained in my life. You're 100% focused for eight hours straight. You’re trying to guess the next question, to figure out what to advise your client, and when to interrupt. It was mentally exhausting."
+    },
+    {
+      "time": "28:04",
+      "narrator": "CM",
+      "text": "Hi, this is executive director Chris McCoy. We’re going to move now to some audience questions - I will annotate. <br />Question 1: Do you think there’s a chilling effect from this lawsuit?"
+    },
+    {
+      "time": "28:14",
+      "narrator": "KR",
+      "text": "The chilling effect is in tort law. The National Enquirer has been around for a long time. They've published some edgy stuff, some of which has been newsworthy. They actually have some of the best litigators on the planet working for them. They use Williams and Connolly, David Kendall, who’s Hillary's lawyer - he became famous defending the National Enquirer. We have a very healthy system. The Enquirer has lost some cases over the years, many they probably should've, and they've won a lot of cases. They have very good defense counsel, so they don't deal with a lot of frivolous lawsuits. There's a very healthy First Amendment tort law that's been well-established, and I don't think this changes that at all."
+    },
+    {
+      "time": "29:02",
+      "narrator": "CM",
+      "text": "Question 2: what about the bias of Facebook?"
+    },
+    {
+      "time": "29:08",
+      "narrator": "BM",
+      "text": "Can I parlay that into my next question: Facebook censoring conservative news: are you horrified?"
+    },
+    {
+      "time": "29:13",
+      "narrator": "KR",
+      "text": "I don't think it's a big deal. Do they have a right to decide what's on their product? Sure. I think there's a fraud claim you could make. If they tell people it's neutral and it's not, there's a tort there. If they have the intellectual candor to say, \"We prefer x over y,\" fine. They have the right to do that. They're a public company, but they're not regulated in what they publish. If they mislead people, just like in any other business, there's a set of claims you could bring. I don't know if this is true or false; I've heard reasonably good inside people tell me it's not crazy, that much of this is true. "
+    },
+    {
+      "time": "30:28",
+      "narrator": "BM",
+      "text": "We live in San Francisco, so clearly your newsfeed looks exactly like mine. It's 80% Feel the Bern, 19% Hillary. Anything Facebook's doing is already going to be much more right of status quo, at least in my newsfeed. "
+    },
+    {
+      "time": "30:42",
+      "narrator": "CM",
+      "text": "Question 3: What are the barriers that keep Facebook from punishment in the market?"
+    },
+    {
+      "time": "30:49",
+      "narrator": "KR",
+      "text": "They did see punishment. There was a dramatic change in conservative use of Facebook after this broke. Someone had public data and it was very clear: there was a market correction. "
+    },
+    {
+      "time": "31:11",
+      "narrator": "CM",
+      "text": "Why can’t someone create a conversationally neutral alternative?"
+    },
+    {
+      "time": "31:19",
+      "narrator": "KR",
+      "text": "They can if there's demand for that. In the UK, every media publication has a bias, and everybody knows what it is. You buy what you like, and that's the way the media there works. It's not clear to me that everybody wants a neutral publication. What I might start instead is something that's more a way for conservatives to get the news, views, and data they want. <br />Maybe that exists already. I think Twitter does a good job of allowing you to curate your own newsfeed. You can get access to any views anywhere in the world. I think there are alternatives. That's why I think it's fine that Facebook does this so long as they're transparent about it. People who disagree will find ways to get their news and information and data. They'll spend less time on Facebook, which will affect Facebook’s revenue. If 20% of the US population stops spending time on Facebook because they need to scour the universe - to read the Drudge Report or whatever - that's going to hurt Facebook's advertising. I think that's truthfully why Facebook, at the senior level, reacted very quickly. They're building an advertising platform, and if users go somewhere else 20% of the time, that hurts their revenue and ultimately their net worth. "
+    },
+    {
+      "time": "32:45",
+      "narrator": "CM",
+      "text": "Question 5: What impact do you think the government should have in cases like this? "
+    },
+    {
+      "time": "32:49",
+      "narrator": "KR",
+      "text": "I don't think the government should have any impact whatsoever other than employing standard anticompetitive law, which is pretty well settled. I think it's pretty clear what you can and can't do. I think unless the government confers a monopoly to you - cable services, telephone services, railroads – then, the obligations are different, but if you're a free-market monopoly - Google, for example - you should do whatever you want, subject to standard antitrust law, securities law, and all the standard principles. I don't think you have a unique obligation, just because you have a 72% market share, to act differently. "
+    },
+    {
+      "time": "32:49",
+      "narrator": "KR",
+      "text": "I don't think the government should have any impact whatsoever other than employing standard anticompetitive law, which is pretty well settled. I think it's pretty clear what you can and can't do. I think unless the government confers a monopoly to you - cable services, telephone services, railroads – then, the obligations are different, but if you're a free-market monopoly - Google, for example - you should do whatever you want, subject to standard antitrust law, securities law, and all the standard principles. I don't think you have a unique obligation, just because you have a 72% market share, to act differently. "
+    },
+    {
+      "time": "33:32",
+      "narrator": "CM",
+      "text": "Question 6: What do you think about Donald Trump’s statements on libel law?  "
+    },
+    {
+      "time": "33:37",
+      "narrator": "KR",
+      "text": "Like many things Mr. Trump says, I don't think he knows what's he's talking about. I think he's a sociopath. He actually believes what he's saying at the time; I don't think he's calculating. I think the libel law in the US works well. That said, I did spend some time in the nineties as a libel reader in the UK. <br />The legal regime in the UK is very different. They don't have a First Amendment, and that means the burden of proof is on the media. Being a libel reader working for the publication, we'd sit in the newsroom and have to read these stories before they went to print. You had to have the evidence supporting the story there before you published. We'd ask questions: \"What do we know? What don't we know?\" It was a really hard job, actually, but the lesson I took away from it is that if you follow the press in the UK, those people are crazy. They do not hold back despite having a legal regime that doesn't protect them very well. <br />I started to wonder from that how much of our First Amendment protections are really true, since you cannot argue really that the US media is much more aggressive on most topics than the UK media is. There's a couple exceptions, like national security, but if you take that away, in an A/B test, you couldn't tell which story was published by a UK tabloid and which was by the New York Times."
+    },
+    {
+      "time": "35:29",
+      "narrator": "CM",
+      "text": "Question 7: What does Donald Trump's nomination mean for the Republican party?"
+    },
+    {
+      "time": "35:34",
+      "narrator": "KR",
+      "text": "We'll find out. The Republican party elite definitely didn't satisfy the demands of the people voting for them over the last 15 years. We had Bill Gates speak recently to a bunch of our founders, and Bill made a really good point, which is worth talking about in the case of Trump: we intentionally do not have a direct democracy. We have representative democracy. <br />One of the things that the Republican elites have favored against their voters is free trade. Free trade exists mostly as US policy for the last 30 years because Republicans have disavowed what their voters want them to do. Lots of people think free trade is a good thing. If you study it, you can easily make the argument that free trade's good for everybody. <br />That said, it’s the kind of thing where ignoring their voters created the momentum and opportunity for Trump. That's a neutral one to talk about because lots of people are like, \"Yeah, of course I want free trade,\" but it's explicitly stamping out the views of most Republican party voters. If you do that too often, you end up with a counter-reaction. If you build products and ignore all your users, they're eventually going to find a different alternative, even if you think you have a monopoly. The Republican party is going through a bit of major disconnect between what the Republicans going to Washington believe and what the people sending them there believe. Social media allows people to highlight that gap and get a voice where the mainstream media would tend to stamp these things out. It's an open debate now. I don't think anybody knows what to do about it. No one has a great solution."
+    },
+    {
+      "time": "37:51",
+      "narrator": "BM",
+      "text": "What do you think the chance is of a President Trump?"
+    },
+    {
+      "time": "37:57",
+      "narrator": "KR",
+      "text": "I've been so right in the primaries that I probably shouldn't give odds on this. I have no idea."
+    },
+    {
+      "time": "38:08",
+      "narrator": "CM",
+      "text": "Question 8: If social media highlights the gap, isn't that its own solution? Won't the values of the party eventually align with the values of conservative constituents? "
+    },
+    {
+      "time": "38:19",
+      "narrator": "KR",
+      "text": "That's if you believe direct democracy is a good thing. I don't know if I believe that's true. Representative democracy has proven to be very stable, mostly successful, and insulated against popular whims. There's a tension; it's hard to put the genie back in the bottle, and the more products and services people build that allow direct access to bigger audiences, the more it's going to continue. This is mostly a good thing; getting rid of middlemen is what Twitter and other things do. There's no more filter. The consequence is that direct democracy may trump representative democracy at some point, and that's a little scary. "
+    },
+    {
+      "time": "38:58",
+      "narrator": "CM",
+      "text": "Question 9: What are the arguments against direct democracy?"
+    },
+    {
+      "time": "39:03",
+      "narrator": "KR",
+      "text": "There's some topics that are actually useful to study. If we were to build a nuclear power plant, we wouldn't pick ten people off the street to do it. Not every topic can be figured out in 5 seconds. There are some things where your opinion is as good as anyone else's, but there are also topics that are complicated. Some people should get paid to study them, reflect on them, and have a view. You expect your CEO to not wing things all day long. There are obviously biases, but do you really want to just poll everybody every day and have that be your policy? "
+    },
+    {
+      "time": "40:01",
+      "narrator": "BM",
+      "text": "It's impossible, logistically."
+    },
+    {
+      "time": "40:07",
+      "narrator": "KR",
+      "text": "You could do it. You could have an app, but then you'd have to give everyone free iPhones."
+    },
+    {
+      "time": "40:26",
+      "narrator": "BM",
+      "text": "One constitutional amendment that would give us the most bang for the buck - what's your recommendation? "
+    },
+    {
+      "time": "40:38",
+      "narrator": "KR",
+      "text": "I don't think we should slap it on the Constitution, but I think all regulation should just sunset automatically. You could renew them, but they should have a ten-year lifespan so we can revisit things. The other thing I think we clearly should do is have an age cap on the Supreme Court. It structurally makes no sense. "
+    },
+    {
+      "time": "41:01",
+      "narrator": "BM",
+      "text": "What should it be?"
+    },
+    {
+      "time": "41:02",
+      "narrator": "KR",
+      "text": "Good question. I could say 75? I just talked to a journalist today, and the two leading candidates for president are 69 and 70 years old. That's exactly the age of my parents. I do not want my parents running for president. They don't even have stressful jobs, but they're not ready to be president of the United States right now. They're not as sharp or as fast as they used to be. We have a country run by older people."
+    },
+    {
+      "time": "41:36",
+      "narrator": "BM",
+      "text": "The justices are whip-smart."
+    },
+    {
+      "time": "41:39",
+      "narrator": "KR",
+      "text": "Just study science. Your brain declines. And they have a political incentive to stay forever because of the consequences of leaving, since it triggers these battles. "
+    },
+    {
+      "time": "42:14",
+      "narrator": "BM",
+      "text": "Round of applause for Keith. "
+    },
+    {
+      "time": "42:24",
+      "narrator": "CM",
+      "text": "Let’s give another round of applause to two of Silicon Valley’s finest, smartest, and most provocative: Keith Rabois and Blake Masters. That was electric. Follow Keith on Twitter @rabois. Thank you."
+    }
+  ]
+}

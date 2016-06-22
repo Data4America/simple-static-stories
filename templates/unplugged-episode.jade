@@ -17,7 +17,7 @@ block content
         span.dfa-text DATA
           span.f 4
           | AMERICA
-        |   
+        !='&nbsp;'
         span(style="font-weight:200;") Un
         span plugged
       p(style="text-align:center; font-size:1.2em;") A podcast exploring the intersection of government, technology, and the future.
@@ -26,7 +26,8 @@ block content
       div.podcast(data-url=(podcast.mp3 ? podcast.mp3 : ''), data-guest=podcast.guest)
         a.image(href=podcast.link)
           img(src=podcast.artwork)
-        h1.ui.header.title Uplugged: 
+        h1.ui.header.title Uplugged:
+          !='&nbsp;'
           =podcast.guest
           if podcast.twitter
             a(href='https://twitter.com/' + podcast.twitter, target="_blank")
@@ -37,8 +38,7 @@ block content
           if podcast.www
             a(href=podcast.www, target="_blank")
               i.ui.world.icon(style="margin-right:0px;")
-        h3.ui.header.sub-title Session 
-          =podcast.session
+        h3.ui.header.sub-title=podcast.session
         div.description
           p
             each item, i in podcast.desc
@@ -46,60 +46,59 @@ block content
                 !=item
                 =(i < (podcast.desc.length - 1) ? ', ' : '')
 
-          p
-            strong Hosted by: 
-            |  Chris McCoy 
-            a(href="https://twitter.com/chrisamccoy", target="_blank")
-              i.ui.twitter.square.icon(style="color:#00ABF1;")
-            a(href="https://www.linkedin.com/in/chrisamccoy", target="_blank")
-              i.ui.linkedin.square.icon
+          if podcast.host
+            p
+              strong Hosted by:
+              !="&nbsp;"
+              =podcast.host.name
+              !="&nbsp;"
+              if podcast.host.twitter
+                a(href=podcast.host.twitter, target="_blank")
+                  i.ui.twitter.square.icon(style="color:#00ABF1;")
+              if podcast.host.linkedin
+                a(href=podcast.host.linkedin, target="_blank")
+                  i.ui.linkedin.square.icon
 
-          p.links.hidden
-            if podcast.twitter
-              i.icon.twitter(style="color:#1DA1F2;")
-              a(href='https://twitter.com/' + podcast.twitter, target="_blank")='@' + podcast.twitter
-            if podcast.email
-              span.space!='&#183;'
-              i.icon.grey.mail
-              a(href='https://mail.google.com/mail/?view=cm&fs=1&to=' + podcast.email + '&su=&body=', target="_blank")=podcast.email
-            if podcast.book
-              span.space!='&#183;'
-              i.icon.orange.book
-              a(href=podcast.book.url, target="_blank")=podcast.book.name
-            if podcast.articleInline
-              span.space!='&#183;'
-              i.icon.red.bookmark
-              a(href=podcast.articleInline.url, target="_blank")=podcast.articleInline.name
-            if podcast.books
-              br
-              each book, i in podcast.books
+          if podcast.moreLinks
+            p.links.hidden
+              if podcast.twitter
+                i.icon.twitter(style="color:#1DA1F2;")
+                a(href='https://twitter.com/' + podcast.twitter, target="_blank")='@' + podcast.twitter
+              if podcast.email
+                span.space!='&#183;'
+                i.icon.grey.mail
+                a(href='https://mail.google.com/mail/?view=cm&fs=1&to=' + podcast.email + '&su=&body=', target="_blank")=podcast.email
+              if podcast.book
+                span.space!='&#183;'
                 i.icon.orange.book
-                a(href=book.url, target="_blank")=book.name
-                if i === 0
-                  span.space!='&#183;'
-            if podcast.article
-              br
-              i.icon.red.bookmark
-              a(href=podcast.article.url, target="_blank")=podcast.article.name
+                a(href=podcast.book.url, target="_blank")=podcast.book.name
+              if podcast.articleInline
+                span.space!='&#183;'
+                i.icon.red.bookmark
+                a(href=podcast.articleInline.url, target="_blank")=podcast.articleInline.name
+              if podcast.books
+                br
+                each book, i in podcast.books
+                  i.icon.orange.book
+                  a(href=book.url, target="_blank")=book.name
+                  if i === 0
+                    span.space!='&#183;'
+              if podcast.article
+                br
+                i.icon.red.bookmark
+                a(href=podcast.article.url, target="_blank")=podcast.article.name
 
-          div.more-link
-            a(href="javascript:;")
-              i.chevron.down.icon
-              span More Details
+            div.more-link
+              a(href="javascript:;")
+                i.chevron.down.icon
+                span More Details
 
-          p.approved-by
-            i.red.check.icon
-            | Approved by the 
-            span.dfa-text DATA
-              span.f 4
-              | AMERICA
-            |  editorial board on 04/25/16
         div.embed
           iframe(width="100%", height="110", scrolling="no", frameborder="no", src!=podcast.iframe)
         p.media
           if podcast.mp3
             a.play-on-d4a(href="javascript:;")
-              span.play-on Play on 
+              span.play-on Play on
                   span.dfa-text DATA
                     span.f 4
                     | AMERICA
@@ -108,20 +107,19 @@ block content
             i.ui.grey.apple.icon
             a(href="", target="_blank") Play on iTunes
 
-        h2.ui.header#transcript Transcript
-        - var transcript = page.metadata.transcript
-        table.ui.very.basic.table
-          tbody
-            each item in transcript
-              tr.top.aligned
-                td.disabled.right.aligned= item.time
-                td
-                  if item.narrator
-                    strong=item.narrator + ': '
-                  !=item.text
-                  if item.text2
-                    br
-                    br
-                    =item.text2
-
-
+        if page.metadata.transcript
+          h2.ui.header#transcript Transcript
+          - var transcript = page.metadata.transcript
+          table.ui.very.basic.table
+            tbody
+              each item in transcript
+                tr.top.aligned
+                  td.disabled.right.aligned= item.time
+                  td
+                    if item.narrator
+                      strong=item.narrator + ': '
+                    !=item.text
+                    if item.text2
+                      br
+                      br
+                      =item.text2
