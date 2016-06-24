@@ -16,5 +16,251 @@
     },
     "mp3": "https://s3-us-west-2.amazonaws.com/media.data4america.org/5.+Kim_Scott.mp3",
     "iframe": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/270272600&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false&amp;color=CF1A1A"
-  }
+  },
+  "transcript": [
+    {
+      "time": ":00",
+      "text": "[data4america theme]"
+    },
+    {
+      "time": ":08",
+      "narrator": "Chris McCoy",
+      "text": "Hi! This is Chris McCoy, the executive director at Data4America. Welcome to Data4America Live!, where we bring in some of the most interesting people in America to discuss ideas at the intersection of data, technology, government, and the future. Today’s session was in front of 75+ people in the Runway headquarters of Data4America and hosted by TechCrunch columnist Kim-Mai Cutler. Our guest was San Francisco supervisor Scott Weiner. They discuss the future of housing, technology, and government in Silicon Valley and the Bay Area. The part I enjoyed the most about this conversation was the audience Q&A. Let’s go in. "
+    },
+    {
+      "time": "0:53",
+      "narrator": "CM",
+      "text": "Please take your seats. Welcome to Data4America Live! Round 2. Again, this is Chris McCoy, the founder and executive director at Data4America. I’d like to give another round of applause to Blake and Keith for sharing their ideas at the intersection of technology, encryption, and the government. For part two, our founding board member  Renee DiResta will introduce our next speakers. Give it up for Renee. "
+    },
+    {
+      "time": "1:35",
+      "narrator": "RD",
+      "text": "Hi, everybody. It’s great to see you all tonight, and we’re excited to have our first event and such fantastic speakers. Kim-Mai Cutler is a longtime reporter with TechCrunch. She's written really fantastic, in-depth articles about housing policy and real estate. She also wrote a great one about vomiting anarchists and some burrowing owls;  Google it. Scott Weiner is a member of the board of supervisors of San Francisco and is currently running for state Senate. I'm excited to hear the conversation between them."
+    },
+    {
+      "time": "2:24",
+      "narrator": "KC",
+      "text": "Scott, you’re running for state Senate against Jane Kim. When is the next debate between both of you?"
+    },
+    {
+      "time": "3:12",
+      "narrator": "SW",
+      "text": "There is not one scheduled yet. We had five leading up to the primary; I suspect the next one will be either July or September."
+    },
+    {
+      "time": "3:20",
+      "narrator": "KC",
+      "text": "I strongly encourage you all to go. Both of them are a delight to watch. I kind of wanted to start with the elections yesterday; you came out ahead, but by about one point something percent."
+    },
+    {
+      "time": "3:38",
+      "narrator": "SW",
+      "text": "Two percent. It went up to 2.2% today with the late ballots."
+    },
+    {
+      "time": "3:40",
+      "narrator": "KC",
+      "text": "What's your read on that? What does it mean for November?"
+    },
+    {
+      "time": "3:51",
+      "narrator": "SW",
+      "text": "The state Senate race is a competitive race, and I'm running against a strong opponent, for sure. It's a spirited contest. We're debating a lot of issues around housing, for example, and I think we always knew it was going to be a close race. My opponent got a little bit of a boost near the end - she basically became Bernie Sanders' running mate in San Francisco and followed him around everywhere. He raised a bunch of money for her. We were able to withstand that tidal wave with some great grassroots pro-housing support and came in ahead. We're really proud of the effort, but it's going to be a really robust race in November."
+    },
+    {
+      "time": "4:48",
+      "narrator": "KC",
+      "text": "Since I'm not sure how closely people follow local elections, can you just go over the basics at first? What are some of the differences in your positions? Why do you think you're a better-qualified candidate for this seat?"
+    },
+    {
+      "time": "5:03",
+      "narrator": "SW",
+      "text": "I think state government doesn't get enough attention. People focus on local government because it gets juices flowing, but state government is where a lot of the fundamental decisions are made that affect people's lives. They decide what we're going to invest in public schools - and if our schools are going to be well-funded, who gets to access healthcare - and who doesn't, the entire water system, and the energy system. They decide if we invest in public transportation the way we need to. They don't get a lot of attention, but they are incredibly impactful. <br /><br />We have the governor and the state assembly, which has 80 members, plus the state Senate, which has 40 senators representing the eighth largest economy in the world, and really 26 Democrats who run the place. One senator represents almost a million people - more than a member of Congress - in our case, all of San Francisco and northern San Mateo County. One senator can have a big impact. <br /><br />Supervisor Jane Kim and I came onto the Board of Supervisors at the same time. She represents this district here, South of Market, the Tenderloin, and Mission Bay. I represent the Castro, Noe Valley, Glen Park, Diamond Heights, and parts of the Mission. I have the honor of representing Dolores Park, the most fun and the most dramatic part of the district. We came onto the board together, and we actually have a really good personal working relationship. We get along with each other, but there are some real differences around housing, for example. Jane Kim supported the Mission Housing Moratorium - she coauthored and campaigned for it. I was probably its most vocal critic and opponent in City Hall. I'm very much of the view that if we're ever going to address our housing crisis, we have to have more housing. We need subsidized, below market-rate housing for lower income people, but public subsidies are never going to solve the housing crisis. We've been growing and not creating enough housing. <br /><br />Supervisor Kim has not been great about that. I actually wrote a piece a year and a half ago entitled \"Yes, supply and demand apply to housing, even in San Francisco,\" which is a controversial thing to say here. "
+    },
+    {
+      "time": "8:21",
+      "narrator": "KC",
+      "text": "She focuses a lot on making the percentages of subsidized inclusionary housing higher, which is different from what you're proposing: building more housing in general."
+    },
+    {
+      "time": "8:32",
+      "narrator": "SW",
+      "text": "I want to have a lot more subsidized, affordable housing; I think Supervisor Kim gets caught up in the percentage. The percentage does not determine who gets housing -  the number of affordable units does. We can say that 75% of a development is going to be affordable, but that means you'll get 0 units built because 75% of 0 is 0. It's not about the percentage. It's about the number of units and having thoughtful policy that will maximize the number of overall housing units. I authored the legislation to allow for micro units for smaller studios. She was very oppositional to that. I'm the leading transit advocate in City Hall; I represent us regionally on transit bodies. She has not focused on transit. "
+    },
+    {
+      "time": "9:56",
+      "narrator": "KC",
+      "text": "The Board of Supervisors, 10-0, voted to put in stricter regulations on short-term rentals and hosting platforms. You passed a piece of legislation that will fine hosting platforms for unregistered listings by $1000/day. It's really interesting to see a 10-0 vote, which makes it impossible for the mayor to veto it. Tell us a little about the backstory of that."
+    },
+    {
+      "time": "10:39",
+      "narrator": "SW",
+      "text": "I've been a pretty vocal supporter of short-term rentals. I opposed Proposition F, which would've dramatically undermined them. A lot of people rely on short-term rentals, but we need to have good regulation and enforcement so we're not cannibalizing our housing stock. In terms of legislation, which is required to be listed, we created a registry so that we could have rules and oversight in place. Even though the number of units or hosts that are registering has gone up, 80% of the units on these platforms are still not registered. The legislation will require registration in order to be listed. The legislation was going to pass regardless and the mayor did not give indication that he was going to veto it. At some point, you decide, \"Am I going to try to make the legislation better, or am I going to oppose it?\" I put an amendment into the legislation to simplify the registration process, since right now it's too cumbersome and complicated. That's how I chose to proceed. Had I voted against it, I'm not confident the mayor would have vetoed it. "
+    },
+    {
+      "time": "12:23",
+      "narrator": "KC",
+      "text": "Airbnb has opposed it on the grounds that it maybe violates their right to free speech on the internet. I think there was some concern that they could sue the city or run their own ballot initiative. What's the recourse from this?"
+    },
+    {
+      "time": "12:39",
+      "narrator": "SW",
+      "text": "Had the mayor vetoed it, we would've had another big ballot fight. They have taken the position that it violates the Communications Decency Act. I think there is a disagreement about that - I think our city attorney does not agree with that. They may sue, and it will be litigated, and that's fine. There are times when you have to resolve issues in the courts - that’s why the courts are there."
+    },
+    {
+      "time": "13:15",
+      "narrator": "KC",
+      "text": "Let's talk about California. After many years of not really saying much on the housing issue, governor Jerry Brown, in the midst of the budget discussion, put forward a bill that would make housing as of right in cities across California if it matches current zoning codes. In the city of San Francisco, even if you match the plan people spent several years making for a neighborhood, it can still be contested and sued. Governor Brown said he wants housing as of right. Can you give a little context on that and what your position is?"
+    },
+    {
+      "time": "14:01",
+      "narrator": "SW",
+      "text": "Yes, absolutely. I am really thrilled that the governor is stepping up and injecting himself into this housing problem / crisis that we have in California. Zoning is local in California, and I'm not advocating that change, but the problem is that we have a process issue. For example, in the district I represent, there's a project at Valencia and Hill Street. 1050 Valencia - a 12 unit project. Two of the units were onsite affordable housing, it has no parking and it's 100% within zoning and the area plan. It's exactly the kind of transit-oriented project we want, and it took six years to get approved. The developer initially had proposed 16 units - I think he reduced it to 12 - and the opponents continued to fight it. We got it to the Board of Supervisors, we approved it on a 6-5 vote, and ultimately the Board of Permit Appeals chopped off the top story at the last minute, which reduced it to nine units. This brought it under our inclusionary housing threshold, so two of the three units eliminated were the affordable housing units. It's a terrible situation - a poster child for what's wrong with housing in San Francisco. <br /><br />The state has a role in setting parameters. They have to say that you can't ignore your own parameters and zoning. If you set the zoning, you have to allow people to build to that. I'm supportive of the state saying that if your zoning allows for 50 units in this project, you can't then say, \"We're just going to let you build 18 because there are people down the block who don't want you to build.\" The governor's legislation, which has never really been vetted in a public setting, goes beyond that. It has some problematic parts; it'd make it easier, we think, to demolish rent-controlled housing, which is not something I think we should be doing in San Francisco. It makes it very hard to do even basic design review; we all value good design in San Francisco. I would like to see this legislation really focus on saying, \"You can't arbitrarily reduce the number of units that you zone for.\" And that should be as of right - that you get the number of units that the zoning allows. "
+    },
+    {
+      "time": "17:09",
+      "narrator": "KC",
+      "text": "My understanding is that Mark Leno, whose seat you're running for, raised some concerns about it. There's one assemblymember from Santa Monica who is supportive of this legislation. Everyone else is concerned about local control being overriden."
+    },
+    {
+      "time": "17:33",
+      "narrator": "SW",
+      "text": "I think the reason that the governor introduced this as part of the budget bill is because he has a lot more authority and power in the budget than in just a normal bill. If it were introduced and went through the process, it would struggle, so I think the governor is using his leverage to get it through. I suspect that something will pass, though I don't know what that will be. "
+    },
+    {
+      "time": "18:06",
+      "narrator": "CM",
+      "text": "Hi! This is Chris McCoy, executive director at Data4America. We’re going to take some audience questions, and I’m going to annotate. <br /><br />Question one: In your estimation, what is the impact of new residents who have moved here in the last few years? Have they had an impact on the groundswell of community housing, as opposed to older residents and development opponents? "
+    },
+    {
+      "time": "18:25",
+      "narrator": "SW",
+      "text": "We've been going by about ten thousand people a year. The numbers I've seen are that about 60,000 people a year are coming here and 50,000 people are leaving - it's a significant change. Our newer arrivals, our younger residents, are wondering, \"What is my future in this city?\" People who oppose housing call it a development scheme. And yes, someone builds housing and they do make money from it, but we all live in a housing unit that at some point was built by a developer. I'm glad we have that housing. When I'm at a neighborhood meeting where people are concerned about housing going into a neighborhood, I start by saying, \"Raise your hand if your kids are going to be able to afford to live in San Francisco.\" No one ever raises their hand, which is a sad state of affairs.  <br /><br />I do think that yes, there is that growing momentum. One of the challenges, of course, is that younger people are less likely to vote, to be politically engaged; that tends to happen as we get older. When I'm out campaigning, especially at MUNI and BART stops, a ton of young people - 25-35 year olds - say, \"Oh, no, I'm registered in Ohio. My vote's more valuable there.\" I say, \"But you live in San Francisco. This is your community now. Be engaged here. Vote here.\" We have to work to get people registered here, since that's how you get power. "
+    },
+    {
+      "time": "19:06",
+      "narrator": "CM",
+      "text": "Question two: as a state senator, would you be happy with how the state collects revenue? "
+    },
+    {
+      "time": "20:53",
+      "narrator": "SW",
+      "text": "I think we need tax reform in California. We continually shoot ourselves in the foot in terms of revenue. I'm not going to sit here and say the state is run perfectly, but fundamentally, this is the eighth largest economy in the world, yet we don't have a real rail system, our roads and highways are literally falling apart, and BART is falling apart. We have a 19th-century water system. One in four Californians, with the costs of living taken into account, lives in poverty. We don't have enough subsidized childcare. UC and CSU have gotten more expensive. We’re languishing in the 40s, of the fifty states in the US, when it comes to per-people spending on education. It's not how a state with as much wealth as California should be operating. <br /><br />We have Prop 13, which caps property taxes, which applies to commercial properties. The Bank of America Building gets the same Prop 13 tax protection that the retiree living in his or her home in the Sunset gets. <br /><br />Prop 13 is a ballot measure adopted in 1978 under Jerry Brown, who opposed it. Basically, in the ‘70s, there was a real estate boom in California. You had real estate getting more expensive, so people like seniors on fixed income had their property taxes escalating as their homes became more valuable. Then they'd have to sell their homes because they couldn't afford to pay the property taxes. At the same time, the state was accumulating huge surpluses, so there was a revolt by the anti-tax groups; this was the precursor to the Ronald Reagan revolution. They rolled back property taxes six or eight years and capped it to say you can't raise it more than 2% a year unless you sell the property, and then it can be re-assessed to market. <br /><br />Prop 13, when it was passed, immediately wreaked havoc on local governments, school funding, etc. It applies to both residential and commercial, so the Bank of America building actually gets more protection than a single family home because you can structure the sale of commercial property to not trigger a reassessment; you can't do that with a residential home. We should be taking large commercial properties outside of Prop 13. <br /><br />We have a vehicle license fee in California going back to the 1950s - 2% of the value of the car - a very stable source of revenue. It was progressive: if you have a Mercedes SUV, you pay more than someone driving an old Honda Civic. Arnold Schwarzenegger, in his first act in office, slashed the vehicle license fee by 2/3, which has deprived the state of California of $6-8 billion a year ever since. It was the worst thing he did. Those two, combined, are responsible for $15 billion a year, every year, that the state does not get in revenue. Things like that need to be fixed."
+    },
+    {
+      "time": "24:50",
+      "narrator": "KC",
+      "text": "I had a breakfast not too long ago with one of the former deputy treasurers of the state of California. We were talking about pensions, and he made a comment to me that the only politically feasible way to increase revenue in the state of California also increases revenue volatility. There was this presentation that Governor Brown made a few weeks ago with the budget revised, and he has all of his charts. He shows state revenue, which is fairly stable in the seventies and eighties, then, beginning in the nineties - the first tech boom - state revenue is going crazy and becomes unpredictable. Because property taxes are so low per million dollars of real estate value - they're actually very high in terms of sales tax, which is regressive, and they're also very high in terms of income capital gains, they produce a state revenue structure that will just deviate by $20-30 billion, plus or minus, from a peak to a recession. It just seems completely unworkable."
+    },
+    {
+      "time": "26:16",
+      "narrator": "SW",
+      "text": "There's a reason why historically, property taxes have been the foundation of government taxation, particularly for local and state government. They are incredibly stable; there's some variation, but it's a rock solid foundation. When you move away from property taxes, as we have done in California, you become reliant on sales taxes and income and capital gains taxes on higher earners. You have this explosion of revenue, but then we quickly go into a major recession. The solution is always to raise income taxes and sales taxes, and I've supported both, but we just don't have a rational, balanced tax structure in California."
+    },
+    {
+      "time": "27:07",
+      "narrator": "Audience",
+      "text": "My understanding is that California already has the highest taxes in the United States. "
+    },
+    {
+      "time": "27:10",
+      "narrator": "KC",
+      "text": "Yes, it has the highest income tax in the United States."
+    },
+    {
+      "time": "27:23",
+      "narrator": "Audience",
+      "text": "How can we get away from this model? "
+    },
+    {
+      "time": "27:26",
+      "narrator": "SW",
+      "text": "In California, we look at how we're spending money. A lot of things are pretty important. We spend money to invest in transportation systems. We're very committed to making sure that we have a strong social safety net so that the many people who are living in poverty, many of whom are working, have access to health care and other needs. When you look at our public school system, it's gone up recently - the per people spending is now about $11,500 in California - but that still puts us in the 40s. I'm not saying that there are not reforms that could help us in California, but our tax structure is dysfunctional. It causes us to be overly reliant on increasing income taxes on higher earners, and that's the most unstable form of revenue."
+    },
+    {
+      "time": "28:33",
+      "narrator": "CM",
+      "text": "Question three: What do you think needs to be done about pension obligations? Why did Governor Brown open up a wider dialogue about the rider to the budget bill? In order to create income stability, if you’re going to make changes to property taxes, wouldn’t you also want to forfeit some of those high-margin tax breaks on people in the upper-middle class, who are paying some of the highest taxes in the United States? "
+    },
+    {
+      "time": "28:57",
+      "narrator": "SW",
+      "text": "In terms of pensions and pension reforms, we in San Francisco have done it pretty effectively. We had a developing major unfunded pension liability and unfunded retiree healthcare liability in San Francisco. We went to the ballot three times to reform both, and we did it in a collaborative way where labor, business, and city hall worked together. We are actually on track to eliminate both of our unfunded liabilities. The state hasn't gone in that direction yet, and they should. I think it's in everyone's interest - the taxpayers' interest, the public's interest - to have stable, funded pension funds. It's in the interest of retirees and current workers. It's in everyone's interest not to have instability in the system."
+    },
+    {
+      "time": "30:00",
+      "narrator": "Audience",
+      "text": "Were you able to accomplish that without issuing obligation bonds? "
+    },
+    {
+      "time": "30:10",
+      "narrator": "SW",
+      "text": "We didn’t issue pension obligation bonds. "
+    },
+    {
+      "time": "30:12",
+      "narrator": "KC",
+      "text": "My understanding is that once somebody starts their first day as a teacher or other public worker in the state of California, you've made a promise to them and you cannot renege on that promise. In changing any types of pension benefits, the actual financial savings that you'd see from that wouldn't show up until 15-20 years into the future, once part of the workforce has phased out and a new workforce with those benefits has been phased in. The only way to get out of those obligations is bankruptcy, so either the city or state would have to go bankrupt. "
+    },
+    {
+      "time": "30:50",
+      "narrator": "SW",
+      "text": "Vallejo, Stockton, and Detroit went bankrupt."
+    },
+    {
+      "time": "30:55",
+      "narrator": "KC",
+      "text": "Otherwise, those are obligations that we owe our workers."
+    },
+    {
+      "time": "31:00",
+      "narrator": "CM",
+      "text": "Question four: What do you think an optimal housing tax policy is? How would you expand the housing supply?"
+    },
+    {
+      "time": "31:06",
+      "narrator": "SW",
+      "text": "To me, it should be driven entirely by what the needs of the housing population are. I don’t think the purpose of creating housing is generating tax revenue. That’s something it does, and it does it to support the public services and hopefully infrastructure needed to support that housing. That’s why we need to make sure we’re doing housing in a smart way. "
+    },
+    {
+      "time": "31:49",
+      "narrator": "KC",
+      "text": "The way that property tax works in the state of California, in many cases, in cities across the state, property tax in the state of California makes residential development lose revenue to Californian cities. There was a story in the New York Times that explained that every time San Jose builds a single family home, it loses the city $255 because the costs of providing police, fire and schools are more than what it makes in tax revenue. Basically, the previous generation paid into the tax code to make residential a money-losing thing unless you get above a certain density, which is something like forty units per acre. It's more important to stress that this is a law baked into the California Constitution. It cannot be changed without a mass popular vote, and it adds a lot of complexity to the problem of adding affordable housing. When you look at New York, they have a very complex tax abatement system in which if you're a landlord, New York can offer you kind of a tax break in order to take that on. In California, it works the opposite way. Everyone has whatever their tax is based on when they bought the property, which creates a lot of disincentives. When you have anything that increases property value in this state - an economic boom, a job boom, an entity or a city paying a landowner to acquire land for public or low-income housing - all of the income generated accrues to the preexisting landlord. Any type of capital that we try to push for land, whether it's publicly intentioned or privately driven, is mostly captured by the previous landowner, which is very distinct from how other states work and function. "
+    },
+    {
+      "time": "33:45",
+      "narrator": "CM",
+      "text": "Would you be willing to propose reducing other marginal tax breaks to bring up the property tax?"
+    },
+    {
+      "time": "33:53",
+      "narrator": "SW",
+      "text": "No, I think when you're talking about comprehensive tax reform, there's going to be adjustments up and down. To be very clear, I do think that we have a lot of public services in California that are extremely underfunded. A few examples: one in three Californians relies on Medical to access healthcare. Our reimbursement rates are incredibly low, and as a result we have a lot of working poor who cannot access healthcare. We don't adequately fund transportation - we see it in the lack of rail, the condition of BART, and our freeways. We see it in our schools. I don't want to give the impression that our current level of investment is sufficient; it's not."
+    },
+    {
+      "time": "35:08",
+      "narrator": "KC",
+      "text": "Given the stress that job creation and capital investment is taking on the region here, and its unintended consequences, what do you think are the responsibilities of the tech community leaders on the broader Bay Area?"
+    },
+    {
+      "time": "35:37",
+      "narrator": "SW",
+      "text": "The two most glaring challenges facing the Bay Area are the cost of housing and the challenge of getting around. Both of those things have resulted from policy choices made in this region for many, many years. San Francisco has 200,000 more people than we had in 1980, the Bay Area has 2.5 million more people than we had in 1980, yet we've built very little housing. We did this visionary, miraculous thing by opening up the BART system and the Market Street Subway nearly 40 years ago, but because of that we have not opened up a single additional inch of subway capacity in San Francsico. We've allowed BART to atrophy, we've allowed Caltrain to maintain a 1950s train system, and now we are where we are. <br /><br />It's our responsibility as a region - government, business, everyone - to fix these problems, make it easier to build sustainable, transit-oriented housing, and dramatically increase our investment in transit by shoring up our systems and expanding them so people don't have to drive everywhere. That’s what we have to do as a region. It is politically so easy to say, \"This is tech's fault. Let's have tech solve it and pay for it,\" without realizing this is not tech's fault. We've always had a tech sector in the Bay Area, though it's gone gangbusters and grown a lot."
+    },
+    {
+      "time": "37:44",
+      "narrator": "KC",
+      "text": "Do you think the people who run these companies should be out there? Should they be making contributions?"
+    },
+    {
+      "time": "37:53",
+      "narrator": "SW",
+      "text": "This whole notion that tech is responsible is a complete red herring that undermines actual efforts to fix policy here. I do think that the tech sector needs to be more engaged in politics to make sure that we have the right people in office who are pro-housing and pro-transit, in supporting organizations that advocate in a good way, and that people need to vote. It's that kind of engagement, not saying, “This industry is responsible for all of our problems and you need to pay to fix it.” "
+    },
+    {
+      "time": "38:40",
+      "narrator": "CM",
+      "text": "Let's give a big round of applause to Supervisor Weiner and Kim-Mai Cutler. We encourage you to continue this conversation with Scott and Kim on Twitter - they’re both very active exchanging ideas. To our sponsors, thank you to Caileens.com, to Michael at Elm Audio. To the attendees, it means the world to my team and me personally for coming here. We’ve got one more thing, we’re working on another event: basic income. We’ll have some of the sharpest thinkers at the intersection of sociology, economics, and welfare. Garrett and I are putting this together, and it’s where we’ll introduce our next project: User Generated Policy. Safe travels, everyone. Thank you! "
+    }
+  ]
 }
