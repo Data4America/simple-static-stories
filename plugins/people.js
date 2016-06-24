@@ -45,6 +45,7 @@ var order = [
     'scott-adelson',
     'peter-drennan',
     'ryan-cooper',
+    'shreyas-chandrashekaran',
     'christopher-belsky'
 ];
 

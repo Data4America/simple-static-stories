@@ -208,14 +208,14 @@ $(document).ready(function() {
     $('.dfa-header-title').html('ISSUE: ' + title);
   } else if ($('#dfa-policy-issues').length) {
     $('.dfa-header-title').html('POLICY ISSUES');
-  } else if ($('#dfa-unplugged').length) {
-    var path = window.location.pathname;
-    if (path.search('/unplugged/episode') === 0) {
-      $('.dfa-header-title').html('Data4America Unplugged: ' +
-        $('.podcast').attr('data-guest'));
-    } else {
-      $('.dfa-header-title').html('Data4America Unplugged');
+  } else if ($('#dfa-unplugged.episode').length) {
+    $('.dfa-header-title').html('Data4America Unplugged: ' +
+      $('.podcast').attr('data-guest'));
+    if (window.location.hash === '#play') {
+      $('.play-on-d4a').trigger('click');
     }
+  } else if ($('#dfa-unplugged').length) {
+    $('.dfa-header-title').html('Data4America Unplugged');
   } else {
     $('.dfa-header-article-share').remove();
   }

@@ -22,7 +22,7 @@ block content
         span plugged
       p(style="text-align:center; font-size:1.2em;") A podcast exploring the intersection of government, technology, and the future.
 
-    div#dfa-unplugged
+    div#dfa-unplugged.episode
       div.podcast(data-url=(podcast.mp3 ? podcast.mp3 : ''), data-guest=podcast.guest)
         a.image(href=podcast.link)
           img(src=podcast.artwork)
@@ -38,7 +38,8 @@ block content
           if podcast.www
             a(href=podcast.www, target="_blank")
               i.ui.world.icon(style="margin-right:0px;")
-        h3.ui.header.sub-title=podcast.session
+        if podcast.session
+          h3.ui.header.sub-title=podcast.session
         div.description
           p
             each item, i in podcast.desc

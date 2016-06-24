@@ -1,0 +1,22 @@
+{
+  "name": "Shreyas Chandrashekaran",
+  "title": "",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": false,
+  "staff": true,
+  "staffTitle": "",
+  "bio": "VP of Competitions @HarkerDECA, Student @TheHarkerSchool, Top 100 U16 @USATableTennis, Researcher @HarkerLabs",
+  "links": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/shreyas-chandrashekaran-216273107"
+    },
+    {
+      "type": "www",
+      "url": "http://harkeraquila.com/31303/news/harker-holds-11th-annual-research-symposium/"
+    }
+  ],
+  "id": "shreyas-chandrashekaran"
+}
