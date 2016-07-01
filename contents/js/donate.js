@@ -727,7 +727,7 @@
       $secCheque.hide();
       $memberCheque.hide();
 
-      $input.val("");
+      $input.val('');
       $input.removeAttr('readonly');
       $input.attr('type', 'number');
 
@@ -1115,7 +1115,19 @@
 
     $('.dfa-amount-input').focus();
 
-    $($priceOptions[1]).trigger('click');
+    if (window.location.hash.length) {
+      var price = parseInt(window.location.hash.replace('#', '')),
+          $option = $priceOptions.filter('[data-value="' + price + '"]');
+
+      if ($option.length) {
+        $option.trigger('click');
+      } else {
+        $input.val(price);
+        $input.trigger('input');
+      }
+    } else {
+      $($priceOptions[1]).trigger('click');
+    }
 
     populateIssues();
 
