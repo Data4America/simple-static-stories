@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.10.5//EN
+N:;;;;
+FN:Data4America
+ORG:Data4America;
+EMAIL;type=INTERNET;type=pref:chris@data4america.org
+ADR;type=pref:;;1388 Market Street\, Suite 488;San Francisco;CA;94103;USA
+URL;type=pref:http://data4america.org
+URL:https://twitter.com/data4america
+URL:https://www.facebook.com/data4america
+X-ABShowAs:COMPANY
+UID:a98feb0c-327c-4cff-a337-39d1308985be
+X-ABUID:A98FEB0C-327C-4CFF-A337-39D1308985BE:ABPerson
+END:VCARD
