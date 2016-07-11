@@ -232,10 +232,24 @@ header {
     min-width: 250px;
     font-size: 1.1em;
   }
+  .lifemap {
+    .menu {
+      min-width:360px;
+      a.item {
+        display: inline-block;
+        width:50%;
+      }
+    }
+  }
 
   @media only screen and (max-width: @largestMobileScreen) {
-    .dropdown .menu {
-      font-size: 1.3em;
+    .lifemap {
+      .menu {
+        width:100%;
+        a.item {
+          width:50%;
+        }
+      }
     }
   }
 
@@ -1396,5 +1410,3 @@ body.embed {
   }
 
 }
-
-
