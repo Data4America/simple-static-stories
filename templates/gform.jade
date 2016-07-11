@@ -1,0 +1,11 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-data-page.ui.segments
+    div.ui.segment.center.aligned
+      h1.ui.header= page.title
+    div.ui.segment
+      iframe(src=page.metadata.iframe, width="100%", height=page.metadata.height, frameborder="0", marginheight="0", marginwidth="0")
