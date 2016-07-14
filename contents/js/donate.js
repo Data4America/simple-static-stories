@@ -213,7 +213,7 @@
     '     <td>' +
     '       <a class="dfa-link-donate" style="display:none;" href="javascript:;">Make a one-time donation</a>' +
     '       <a class="dfa-link-sponsor" href="javascript:;">Sponsor a Policy Issue</a>' +
-    '       <a class="dfa-link-member" href="javascript:;">Become a founding member</a>' +
+    //'       <a class="dfa-link-member" href="javascript:;">Become a founding member</a>' +
     '     </td>' +
     '   </tr>' +
     '   <tr>' +
