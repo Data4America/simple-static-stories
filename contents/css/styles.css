@@ -52100,6 +52100,19 @@ header {
   display: inline-block;
   width: 50%;
 }
+#dfa-menu .lifemap .menu img,
+#dfa-menu-footer .lifemap .menu img {
+  margin-top: -18px;
+}
+#dfa-menu .lifemap .menu p,
+#dfa-menu-footer .lifemap .menu p {
+  display: inline-block;
+  line-height: 1;
+}
+#dfa-menu .lifemap .menu p span,
+#dfa-menu-footer .lifemap .menu p span {
+  font-size: 0.5em;
+}
 @media only screen and (max-width: 767px) {
   #dfa-menu .lifemap .menu,
   #dfa-menu-footer .lifemap .menu {
