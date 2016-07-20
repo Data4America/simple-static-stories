@@ -5,9 +5,9 @@ title: Join Network
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	#mc_embed_signup{background:#fff; clear:left; }
 </style>
-<div id="mc_embed_signup">
+<div id="mc_embed_signup" style="font-size: 0.9em;margin: 0 auto;max-width: 350px;">
 <form action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=a2505b6bb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 	<h2>Subscribe to our mailing list</h2>

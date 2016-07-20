@@ -1,0 +1,20 @@
+{
+  "name": "Kim-Mai Cutler",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": true,
+  "editorialBoard": false,
+  "advisor": false,
+  "bio": "Technology Journalist, TechCrunch, public policy and tech wonk",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://www.twitter.com/kimmaicutler"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/kimmaicutler"
+    }
+  ],
+  "id": "kimmai-cutler"
+}
