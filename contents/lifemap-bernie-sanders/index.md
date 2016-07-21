@@ -4,7 +4,7 @@ author: chris-mccoy
 date: 2016-07-20
 template: article.jade
 description: "We have created a lifemap for Bernie Sanders."
-article: true
+article: false
 published: false
 ---
 

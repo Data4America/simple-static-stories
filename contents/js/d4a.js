@@ -216,6 +216,8 @@ $(document).ready(function() {
     }
   } else if ($('#dfa-unplugged').length) {
     $('.dfa-header-title').html('Data4America Unplugged');
+  } else if ($('.dfa-email-container').length) {
+    $('.dfa-header-title').html($('.dfa-email-container').attr('title'));
   } else {
     $('.dfa-header-article-share').remove();
   }

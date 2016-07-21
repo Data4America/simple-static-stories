@@ -4,7 +4,7 @@ author: chris-mccoy
 date: 2016-07-20
 template: article.jade
 description: "Winner of @Phillip K Dick Award, Author @Nexus trilogy, Author @The Infinite Resource: The Power of Ideas on a Finite Planet., Teacher @Singularity U., Energy innovation advocate"
-article: true
+article: false
 published: false
 ---
 <p><span class="line">Winner of <a href="http://www.philipkdickaward.org/" target="_blank">@Phillip K Dick Award</a>, </span><span class="line">Author <a href="http://rameznaam.com/nexus//" target="_blank">@Nexus trilogy</a>, </span><span class="line">Author <a href="http://www.amazon.com/gp/product/161168255X/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=161168255X&amp;linkCode=as2&amp;tag=infiniteresource-20" target="_blank">@The Infinite Resource: The Power of Ideas on a Finite Planet.</a>, </span><span class="line">Teacher <a href="http://singularityu.org/" target="_blank">@Singularity U.</a>, </span><span class="line">Energy innovation advocate</span></p>
