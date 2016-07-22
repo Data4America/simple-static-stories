@@ -97,8 +97,10 @@ $(document).ready(function() {
 
     $('.dfa-donate-modal .close.icon').remove();
 
-    $('.dfa-header-title').remove();
-    $('.dfa-header-article-share').remove();
+    if (!$('.dfa-email-container').length) {
+      $('.dfa-header-title').remove();
+      $('.dfa-header-article-share').remove();
+    }
 
     // If sponsor policy channel
     if ($('#dfa-sponsorship').length) {

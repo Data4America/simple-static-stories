@@ -15,7 +15,7 @@ html(lang='en')
       link(rel='icon', href=contents['favicon.png'].url)
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
       != nap.css('main')
-      link(href='/assets/css/email.css', rel='stylesheet', type='text/css')
+      link(href='/css/email.css', rel='stylesheet', type='text/css')
   body(class=bodyclass)
 
     div.dimmed.pusher
@@ -27,9 +27,9 @@ html(lang='en')
             div.container
               div.logo.item
                 a.logo(href="/")
-              a.item(href="/about/") About
-              a.item.dfa-btn-subscribe(href="javascript:;") Subscribe
-              a.item(href="/") Stories
+              a.item.hide(href="/about/") About
+              a.item.hide.dfa-btn-subscribe(href="javascript:;") Subscribe
+              a.item.hide(href="/") Stories
               div.ui.dropdown.icon.item
                 | Menu
                 i.big.sidebar.icon

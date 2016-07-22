@@ -1,6 +1,6 @@
 ---
 template: email.jade
-title: Data4America Updates - July 2016
+title: July 2016 Update
 ---
 
 <center>

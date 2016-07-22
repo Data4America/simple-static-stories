@@ -1,0 +1,405 @@
+	#outlook a{
+			padding:0;
+		}
+		body{
+			width:100% !important;
+		}
+		body{
+			-webkit-text-size-adjust:none;
+		}
+		body{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:none;
+			font-size:14px;
+			font-weight:bold;
+			height:auto;
+			line-height:100%;
+			outline:none;
+			text-decoration:none;
+			text-transform:capitalize;
+		}
+		#backgroundTable{
+			height:100% !important;
+			margin:0;
+			padding:0;
+			width:100% !important;
+		}
+	/*
+	@tab Page
+	@section background color
+	@tip Set the background color for your email. You may want to choose one that matches your company's branding.
+	@theme page
+	*/
+		body,.backgroundTable{
+			/*@editable*/background-color:#FAFAFA;
+		}
+	/*
+	@tab Page
+	@section email border
+	@tip Set the border for your email.
+	*/
+		#templateContainer{
+			/*@editable*/border:1px solid #DDDDDD;
+		}
+	/*
+	@tab Page
+	@section heading 1
+	@tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+	@theme heading1
+	*/
+		h1,.h1{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-size:34px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			margin-bottom:10px;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Page
+	@section heading 2
+	@tip Set the styling for all second-level headings in your emails.
+	@theme heading2
+	*/
+		h2,.h2{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-size:30px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			margin-bottom:10px;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Page
+	@section heading 3
+	@tip Set the styling for all third-level headings in your emails.
+	@theme heading3
+	*/
+		h3,.h3{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-size:26px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:22px;
+			margin-bottom:15px;
+			/*@editable*/text-align:center;
+		}
+		h4,.h4{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-size:18px;
+			/*@editable*/font-weight:normal;
+			/*@editable*/line-height:28px;
+			margin-bottom:15px;
+			/*@editable*/text-align:center;
+		}
+		h5,.h5{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-size:12px;
+			/*@editable*/font-weight:normal;
+			/*@editable*/line-height:20px;
+			margin:15px 0;
+			/*@editable*/text-align:center;
+		}
+	/*
+	@tab Header
+	@section preheader style
+	@tip Set the background color for your email's preheader area.
+	@theme page
+	*/
+		#templatePreheader{
+			/*@editable*/background-color:#FAFAFA;
+		}
+	/*
+	@tab Header
+	@section preheader text
+	@tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+	*/
+		.preheaderContent div{
+			/*@editable*/color:#505050;
+			/*@editable*/font-size:9px;
+			/*@editable*/line-height:100%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Header
+	@section preheader link
+	@tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+	*/
+		.preheaderContent div a:link,.preheaderContent div a:visited{
+			/*@editable*/color:#336699;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:underline;
+		}
+		.preheaderContent div img{
+			text-align:center;
+			height:auto;
+			max-width:600px;
+		}
+	/*
+	@tab Header
+	@section header style
+	@tip Set the background color and border for your email's header area.
+	@theme header
+	*/
+		#templateHeader{
+			/*@editable*/background-color:#FFFFFF;
+			/*@editable*/border-bottom:0;
+		}
+	/*
+	@tab Header
+	@section header text
+	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+	*/
+		.headerContent{
+			/*@editable*/color:#202020;
+			/*@editable*/font-size:34px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			/*@editable*/padding:0;
+			/*@editable*/text-align:center;
+			/*@editable*/vertical-align:middle;
+			background:#ddd;
+		}
+	/*
+	@tab Header
+	@section header link
+	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+	*/
+		.headerContent a:link,.headerContent a:visited{
+			/*@editable*/color:#336699;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:underline;
+		}
+		#headerImage{
+			height:auto;
+			max-width:600px !important;
+		}
+	/*
+	@tab Body
+	@section body style
+	@tip Set the background color for your email's body area.
+	*/
+		#templateContainer,.bodyContent{
+			/*@editable*/background-color:#FDFDFD;
+		}
+	/*
+	@tab Body
+	@section body text
+	@tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+	@theme main
+	*/
+		.bodyContent div{
+			/*@editable*/color:#505050;
+			/*@editable*/font-size:14px;
+			/*@editable*/line-height:150%;
+			/*@editable*/text-align:left;
+		}
+		.bodyContent p{
+			/*@editable*/color:#505050;
+			/*@editable*/font-size:14px;
+			/*@editable*/line-height:150%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Body
+	@section body link
+	@tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+	*/
+		.bodyContent div a:link,.bodyContent div a:visited{
+			/*@editable*/color:#336699;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:none;
+		}
+		.bodyContent img{
+			display:inline;
+			margin-bottom:10px;
+		}
+	/*
+	@tab Footer
+	@section footer style
+	@tip Set the background color and top border for your email's footer area.
+	@theme footer
+	*/
+		#templateFooter{
+			/*@editable*/background-color:#FDFDFD;
+			/*@editable*/border-top:0;
+		}
+	/*
+	@tab Footer
+	@section footer text
+	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+	@theme footer
+	*/
+		.footerContent div{
+			/*@editable*/color:#707070;
+			/*@editable*/font-size:12px;
+			/*@editable*/line-height:125%;
+			/*@editable*/text-align:center;
+		}
+	/*
+	@tab Footer
+	@section footer link
+	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+	*/
+		.footerContent div a:link,.footerContent div a:visited{
+			/*@editable*/color:#336699;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:underline;
+		}
+		.footerContent img{
+			display:inline;
+		}
+	/*
+	@tab Footer
+	@section social bar style
+	@tip Set the background color and border for your email's footer social bar.
+	*/
+		#social{
+			/*@editable*/background-color:#FAFAFA;
+			/*@editable*/border:1px solid #F5F5F5;
+		}
+	/*
+	@tab Footer
+	@section social bar style
+	@tip Set the background color and border for your email's footer social bar.
+	*/
+		#social div{
+			/*@editable*/text-align:center;
+		}
+	/*
+	@tab Footer
+	@section utility bar style
+	@tip Set the background color and border for your email's footer utility bar.
+	*/
+		#utility{
+			/*@editable*/background-color:#FDFDFD;
+			/*@editable*/border-top:1px solid #F5F5F5;
+		}
+	/*
+	@tab Footer
+	@section utility bar style
+	@tip Set the background color and border for your email's footer utility bar.
+	*/
+		#utility div{
+			/*@editable*/text-align:center;
+		}
+		#monkeyRewards img{
+			max-width:160px;
+		}
+		.segment{
+			background:#fff;
+			border:1px solid #ddd;
+			padding:15px;
+		}
+		.segment div.h1{
+			font-size:24px;
+			line-height:34px;
+			color:#333;
+			margin-bottom:20px;
+			text-align:center;
+		}
+		.segment div{
+			font-size:14px;
+			line-height:24px;
+			text-align:left;
+		}
+		a:link,a:visited{
+			color:#336699;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.segment div.footnote{
+			margin:20px 10px 10px;
+			font-weight:normal;
+			color:#777;
+			line-height:19px;
+			font-size:11px;
+		}
+		.segment.center,.segment.center div{
+			text-align:center;
+		}
+		.segment .ruler{
+			margin:10px 0 15px;
+			height:1px;
+			border-top:1px solid #CCC;
+		}
+		.segment.podcasts .link-play-d4a{
+			line-height:24px;
+		}
+		.segment.podcasts .link-play-d4a img{
+			height:21px;
+			width:140px;
+			vertical-align:middle;
+		}
+		.segment.podcasts .link-read-transcript{
+			line-height:24px;
+		}
+		.segment.podcasts .link-read-transcript img{
+			height:21px;
+			width:116px;
+			vertical-align:middle;
+		}
+		.segment.podcasts .h5.host{
+			line-height:16px;
+		}
+		.segment.podcasts a:link,.podcasts a:visited{
+			text-decoration:none;
+		}
+		.segment.podcasts .title{
+			font-size:28px;
+		}
+		.segment.podcasts .subtitle{
+			font-size:18px;
+		}
+		.segment.donate{
+			text-align:center;
+		}
+		.segment.donate .text{
+			font-size:11px;
+			text-align:center;
+			margin:15px 0 5px;
+		}
+		a.donate-button{
+			display:inline-block;
+			text-decoration:none;
+			color:#FFF;
+			background:#1279c0;
+			padding:10px 35px;
+			text-align:center;
+			max-width:200px;
+			font-size:18px;
+		}
+	@media only screen and (max-width: 600px){
+		#templateContainer,#templatePreheader,#templateSegments{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.podcastCover img{
+			max-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.headerContent img{
+			max-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.lf-logo img{
+			max-width:100% !important;
+		}
+}
+
+#dfa-header { display: block !important; }
+.dfa-email-container { margin-top: 72px; }
+
+@media only screen and (max-width: 767px) {
+  #dfa-header .hide { display: none !important; }
+}
