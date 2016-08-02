@@ -40,7 +40,7 @@ title: July 2016 Update
                                 1/ We hosted our first-ever Data4America LIVE event. 190+ <a href="https://data4america.org/event/fireside-chats-june-8-2016/">registered</a>.
                                 <br>
 								<br>
-Our next LIVE will be hosted by <a href="https://twitter.com/karaswisher">Kara Swisher</a> of Recode with guests <a href="https://twitter.com/albertwenger">Albert Wenger</a> of Union Square Ventures and more. We'll explore the future of jobs, automation, and ideas around basic income.
+Our next LIVE will be hosted by <a href="https://twitter.com/NellieBowles">Nellie Bowles</a> of HBO/Vice with guests <a href="https://twitter.com/albertwenger">Albert Wenger</a> of Union Square Ventures and more. We'll explore the future of jobs, automation, and ideas around basic income.
                                 <br>
 								<br>
                                 <a href="https://data4america.org/9-21event/">RSVP</a> for an early invite. We expect this one to be over-subscribed. Sponsorships are also <a href="https://data4america.org/eventsponsor/">available</a>. 
