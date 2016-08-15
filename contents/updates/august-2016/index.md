@@ -1,6 +1,6 @@
 ---
 template: email.jade
-title: July 2016 Update
+title: August 2016 Update
 ---
 
 <center>
