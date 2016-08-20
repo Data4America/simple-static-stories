@@ -4,6 +4,8 @@ author: chris-mccoy
 date: 2016-07-20
 template: article.jade
 description: "We have created a lifemap for Bernie Sanders."
+noFooter: true
+isLifemap: true
 article: false
 published: false
 ---
@@ -17,7 +19,7 @@ published: false
 <p>
    We have created his LifeMap that captures the newsworthy highlights. <a href="http://lifemap.io/berniesanders/" target="_blank">View Here</a>.
 </p>
-
+---
 <a href="http://lifemap.io/berniesanders/" target="_blank">
 <img class="ui medium image" style="width:500px; margin: 0 auto;" src="/img/lifemap-berniesanders.jpg" />
 </a>

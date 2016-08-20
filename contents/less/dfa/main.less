@@ -1439,3 +1439,28 @@ body.embed {
   }
 
 }
+
+#dfa-updates {
+  margin: 0;
+
+  .ui.vertical.menu {
+    width: auto;
+  }
+
+  .ui.icon.message {
+    font-size: 0.9em;
+    align-items: flex-start;
+  }
+
+  .ui.message .header:not(.ui) {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.icon.message > .icon:not(.close) {
+      font-size: 2em;
+    }
+  }
+}
+

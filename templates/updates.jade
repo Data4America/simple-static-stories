@@ -1,0 +1,62 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div#dfa-updates.ui.grid.stackable
+    div.four.wide.column
+      div.ui.vertical.menu
+        div.header.item By Date
+        a.item(href="#august-2016") August 2016
+    div.twelve.wide.column
+      div.ui.segment
+        h2#august-2016.ui.dividing.header August 2016
+          span(style="float:right;")
+            a(href="/updates/august-2016/", target="_blank")
+              i.small.external.icon
+
+        div.ui.teal.icon.message
+          i.calendar.icon
+          div.content
+            div.header On September 6th, Data4America will micro-host a discussion on “The Potential of Artificial Intelligence and Universal Basic Income”
+            ul.list
+              li D4A Board Member Kim-Mai Cutler will moderate the discussion.
+              li On the panel will be Palantir co-founder Joe Lonsdale, author Niall Ferguson, Y Combinator, and the non-profit GiveDirectly.
+              li
+                a(href="") RSVP here.
+
+        div.ui.teal.icon.message
+          i.calendar.icon
+          div.content
+            div.header On 9/21, we’ll host a discussion on the Future of Jobs and Basic Income
+            ul.list
+              li Guest is Albert Wenger from Union Square Ventures.
+              li Nellie Bowles from HBO/Vice will host.
+              li
+                a(href="") RSVP here.
+
+        div.ui.blue.icon.message
+          i.announcement.icon
+          div.content
+            div.header Unplugged Podcast
+            ul.list
+              li We launched our Podcast called
+                a(href="https://data4america.org/unplugged/") Unplugged.
+              li Our first guest is Ramez Naam. Hosted by Chris McCoy.
+              li All podcasts are fully transcribed.
+
+        div.ui.yellow.icon.message
+          i.flag.checkered.icon
+          div.content
+            div.header Goals Unlocked
+            ul.list
+              li We’ve grown our team to 25+!
+              li Our Editorial Board published 
+                a(href="http://localhost:8080/geography-american-jobs/") “One Job, One Dot: Every job in America, on a map”.
+              li We opened sourced the 
+                a(href="https://github.com/Data4America/jobmaps") code
+                | , the 
+                a(href="https://datahub.io/dataset/where-are-the-jobs") data
+                | , and 
+                a(href="https://data4america.org/geography-american-jobs/how-to/") instructions for re-creation. 

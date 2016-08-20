@@ -51311,11 +51311,8 @@ input::-moz-focus-inner {
     max-height: none !important;
   }
   .dfa-article-header .ui.items > .item > .image {
-    max-height: 200px !important;
+    max-height: 250px !important;
     overflow: hidden;
-  }
-  .dfa-article-header .ui.items > .item > .image > img {
-    margin-top: -3.5em;
   }
   .dfa-article-header .ui.items > .item > .content > .header {
     text-align: center;
@@ -53369,4 +53366,26 @@ body.embed {
 #dfa-event .time {
   font-size: 1.2em;
   margin: 1em 0;
+}
+#dfa-updates {
+  margin: 0;
+}
+#dfa-updates .ui.vertical.menu {
+  width: auto;
+}
+#dfa-updates .ui.icon.message {
+  font-size: 0.9em;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#dfa-updates .ui.message .header:not(.ui) {
+  font-size: 1em;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-updates .ui.icon.message > .icon:not(.close) {
+    font-size: 2em;
+  }
 }
