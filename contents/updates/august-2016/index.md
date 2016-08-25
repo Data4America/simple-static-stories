@@ -31,43 +31,37 @@ title: August 2016 Update
                   <table border="0" cellpadding="10" cellspacing="0" width="100%" id="templateBody">
                     <tr>
                       <td valign="top" class="bodyContent">
-                        
+
                         <!-- // Begin Module: Standard Content \\ -->
                         <table border="0" cellpadding="10" cellspacing="0" width="100%">
                           <tr>
                             <td valign="top">
                               <div style="padding:20px;">
-                                1/ On September 6th, Data4America will micro-host a discussion on "The Potential of Artificial Intelligence and Universal Basic Income".
-D4A Board Member <a target="_blank" href="https://twitter.com/kimmaicutler">Kim-Mai Cutler</a> will moderate the discussion. On the panel will be Palantir co-founder <a target="_blank" href="https://www.linkedin.com/in/lonsdalejoe">Joe Lonsdale</a>, author <a target="_blank" href="https://twitter.com/nfergus">Niall Ferguson</a>, Y Combinator, and the non-profit GiveDirectly. <a target="_blank" href="https://www.eventbrite.com/e/lincoln-network-presents-man-vs-machine-tickets-26908134956">RSVP here.</a>.
-								<br>
-                                <br>
-                              	2/ On 9/21, we'll host a discussion on the Future of Jobs and Basic Income with <a target="_blank" href="https://twitter.com/albertwenger
-">Albert Wenger</a> from Union Square Ventures. <a target="_blank" href="https://twitter.com/NellieBowles
-">Nellie Bowles</a> from HBO/Vice will host. <a target="_blank" href="https://data4america.org/">RSVP here</a>.
+                                1/ On September 6th, Data4America will sponsor a discussion at Galvanize in San Francisco on "The Potential of Artificial Intelligence and Universal Basic Income". Data4America Board Member <a href="https://twitter.com/kimmaicutler">Kim-Mai Cutler</a> will moderate the panel with Palantir co-founder <a href="https://www.linkedin.com/in/lonsdalejoe">Joe Lonsdale</a>, author <a href="https://twitter.com/nfergus">Niall Ferguson</a>, Y Combinator, and the non-profit GiveDirectly. <a href="https://www.eventbrite.com/e/lincoln-network-presents-man-vs-machine-tickets-26908134956"><strong>Buy a ticket here</strong></a>.
                                 <br>
                                 <br>
-                              	3/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
-<br>
-								<br>
-4/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
-<br>
-								<br>
-5/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
+                                2/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
                                 <br>
                                 <br>
-                                6/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
-								<br>
+                                3/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
                                 <br>
-                                7/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
+                                <br>
+                                4/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
+                                <br>
+                                <br>
+                                5/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
+                                <br>
+                                <br>
+                                6/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
                                 <br>
                                 <br>
                                 We opened sourced the <a target="_blank" href="https://github.com/Data4America/jobmaps">code</a>, the <a target="_blank" href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a target="_blank" href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
                                 <br>
                                 <br>
-                                8/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
-								<br>
+                                7/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
                                 <br>
-If published, we'll syndicate you to our social media, through email, through Huffington Post, and more. 
+                                <br>
+                                If published, we'll syndicate you to our social media, through email, through Huffington Post, and more. 
                                 <br>
                                 <br>
                                 Now, onto our second season! 
@@ -76,7 +70,6 @@ If published, we'll syndicate you to our social media, through email, through Hu
                                 - Your friends at <a target="_blank" href="https://data4america.org">Data4America</a>
                                 <br>
                               </div>
-                              
                             </td>
                           </tr>
                         </table>
@@ -303,13 +296,19 @@ To help get there, we're looking for syndication partners. This includes publish
       		</tr>
       		<tr>
           		<td class="segment" bgcolor="#fff">
-					<div class="h1">One More Thing</div>
-                    <div>1/ Our Executive Director (<a target="_blank" href="https://twitter.com/chrisamccoy">Chris McCoy</a>)  was invited by Arianna Huffington to write on the Huffington Post. We'll be syndicating D<span style="font-style:italic; color:blue;">4</span>A content there. Here's his <a target="_blank" href="http://www.huffingtonpost.com/entry/the-leader-of-my-life-my-grandpa-jack-from-october_us_57741e87e4b0ac648ac7940b">first entry</a>.
+			<div class="h1">One More Thing</div>
+                    <div>
+                    1/ Our Executive Director (<a target="_blank" href="https://twitter.com/chrisamccoy">Chris McCoy</a>) was invited by Arianna Huffington to write on the Huffington Post. We'll be syndicating D<span style="font-style:italic; color:blue;">4</span>A content there.
                     <br><br>
-                    2/ We launched Lifemap, history in <a target="_blank" href="http://lifemap.io/">100 characters or less</a>. Check out <a target="_blank" href="http://lifemap.io/donaldtrump/">Donald Trump</a>, <a target="_blank" href="http://lifemap.io/berniesanders/">Bernie Sanders</a>, <a target="_blank" href="http://lifemap.io/sherylsandberg">Sheryl Sandberg</a>, <a target="_blank" href="http://lifemap.io/markcuban">Mark Cuban</a>, and <a target="_blank" href="http://lifemap.io/">more</a>. </div>
-                    <br>
+                    2/ We launched Lifemap, history in <a target="_blank" href="http://lifemap.io/">100 characters or less</a>. Check out <a target="_blank" href="http://lifemap.io/donaldtrump/">Donald Trump</a>, <a target="_blank" href="http://lifemap.io/berniesanders/">Bernie Sanders</a>, <a href="http://lifemap.io/sherylsandberg">Sheryl Sandberg</a>, <a href="http://lifemap.io/markcuban">Mark Cuban</a>, and <a href="http://lifemap.io/">more</a>.
+                    <br><br>
                     <div class="lf-logo" style="text-align:center;">
                     <img src="http://lifemap.io/img/lifemap.png" style="max-width:400px;">
+                    </div>
+                    <br>
+                    3/ Here's the Lifemap on HuffPo: <a target="_blank" href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2">Hillary Clinton</a>, <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-sheryl-sandberg_us_57a572e4e4b0ccb023725e61?m5cjkz3qctzqia4i">Sheryl Sandberg</a>, and <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-the-history-of-bernie-sanders-in-100-characters_us_579e9e6ce4b00e7e269fcd31?qoo3i9mj4c1cvunmi">Bernie Sanders</a>. 
+					<br><br>
+					4/ HuffPo is <a target="_blank" href="https://twitter.com/HuffPostPol/status/768534447536898048">tweeting</a> Lifemap out to their 860,000 followers!
                     </div>
           		</td>
       		</tr>

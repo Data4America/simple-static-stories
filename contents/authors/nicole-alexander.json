@@ -1,0 +1,20 @@
+{
+  "name": "Nicole Alexander",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Founder @Promoteleadership, Major @USArmy, UW Husky alumni, Working Mom and believer in the power of collaboration and networks to attack complex problems",
+  "links": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/nicole-alexander-22a751122"
+    },
+    {
+      "type": "www",
+      "url": "http://www.promoteleadership.org"
+    }
+  ],
+  "id": "nicole-alexander"
+}

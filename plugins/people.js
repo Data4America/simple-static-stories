@@ -10,6 +10,7 @@ var order = [
     'alex-albright',
     'horace-dediu',
     'jessica-kirkpatrick',
+    'nicole-alexander',
     'abe-stanway',
     'robert-manduca',
     'jesse-thomas',

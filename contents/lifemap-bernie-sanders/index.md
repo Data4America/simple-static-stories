@@ -1,6 +1,6 @@
 ---
 title: LifeMap Bernie Sanders
-author: chris-mccoy
+author: data-for-america
 date: 2016-07-20
 template: article.jade
 description: "We have created a lifemap for Bernie Sanders."
@@ -21,5 +21,5 @@ published: false
 </p>
 ---
 <a href="http://lifemap.io/berniesanders/" target="_blank">
-<img class="ui medium image" style="width:500px; margin: 0 auto;" src="/img/lifemap-berniesanders.jpg" />
+<img class="ui medium image" style="width:500px; margin: 0 auto;" src="/img/lifemap/berniesanders.jpg" />
 </a>

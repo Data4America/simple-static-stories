@@ -338,17 +338,28 @@ header {
 --------------------*/
 #dfa-cover {
   height: 340px;
-  background: url(/img/cover.jpg) center center;
+  background: url(/img/bg.jpg) center center;
   background-size: cover;
   cursor: pointer;
   display:block;
   -webkit-print-color-adjust: exact;
+
+  img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
   #dfa-cover {
-    height: 190px;
+    height: 200px;
     background-size: 150%;
+  }
+
+  #dfa-cover.updates {
+    height: 270px;
   }
 }
 
@@ -1447,19 +1458,12 @@ body.embed {
     width: auto;
   }
 
-  .ui.icon.message {
-    font-size: 0.9em;
-    align-items: flex-start;
-  }
+  a.text {
+    color: #000;
 
-  .ui.message .header:not(.ui) {
-    font-size: 1em;
-    line-height: 1.5;
-  }
-
-  @media only screen and (max-width: @largestMobileScreen) {
-    .ui.icon.message > .icon:not(.close) {
-      font-size: 2em;
+    span {
+      display: block;
+      margin: 1em 0;
     }
   }
 }

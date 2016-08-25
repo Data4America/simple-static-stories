@@ -1,0 +1,18 @@
+{
+  "name": "Data4America",
+  "title": "Founder · Executive Director",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": false,
+  "staff": false,
+  "staffTitle": "Executive Director",
+  "bio": "CEO @<a href=\"https://footprintlabs.co\" target=\"_blank\">Footprint</a>. Inventor @<a href=\"http://yoursports.com\" target=\"_blank\">YourSports</a>. Co-Founder @<a href=\"http://ilovebaseball.org\" target=\"_blank\">I Love Baseball Foundation</a>. Former elected National President @<a href=\"http://deca.org\" target=\"_blank\">DECA.org</a>. @<a href=\"https://depts.washington.edu/foster/yoursports-connecting-the-world-online-through-sports/\" target=\"_blank\">Univ of Washington ‘06</a> &#x2018;06.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/data4america"
+    }
+  ],
+  "id": "data-for-america"
+}

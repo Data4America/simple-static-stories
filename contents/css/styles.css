@@ -52444,16 +52444,25 @@ header {
 --------------------*/
 #dfa-cover {
   height: 340px;
-  background: url(/img/cover.jpg) center center;
+  background: url(/img/bg.jpg) center center;
   background-size: cover;
   cursor: pointer;
   display: block;
   -webkit-print-color-adjust: exact;
 }
+#dfa-cover img {
+  display: block;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
 @media only screen and (max-width: 767px) {
   #dfa-cover {
-    height: 190px;
+    height: 200px;
     background-size: 150%;
+  }
+  #dfa-cover.updates {
+    height: 270px;
   }
 }
 /*-------------------
@@ -53373,19 +53382,10 @@ body.embed {
 #dfa-updates .ui.vertical.menu {
   width: auto;
 }
-#dfa-updates .ui.icon.message {
-  font-size: 0.9em;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+#dfa-updates a.text {
+  color: #000;
 }
-#dfa-updates .ui.message .header:not(.ui) {
-  font-size: 1em;
-  line-height: 1.5;
-}
-@media only screen and (max-width: 767px) {
-  #dfa-updates .ui.icon.message > .icon:not(.close) {
-    font-size: 2em;
-  }
+#dfa-updates a.text span {
+  display: block;
+  margin: 1em 0;
 }
