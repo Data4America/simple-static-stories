@@ -235,17 +235,27 @@ header {
 
   .lifemap {
     .menu {
-      width:500px;
+      width:550px;
 
       a.item {
+        position: relative;
         display: inline-block;
         width:50%;
       }
 
-      img {
+      .ui.avatar {
         margin-top:-18px;
         height: 3.5em;
         max-height: 3.5em;
+      }
+
+      .badge {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        height: 40px;
+        width: 40px;
+        max-height: none;
       }
 
       p {
@@ -265,10 +275,16 @@ header {
       .menu {
         width:100%;
 
-        img {
+        .ui.avatar {
           margin-top:-18px;
           height: 2em;
           max-height: 2em;
+        }
+
+        .badge {
+          top: 6px;
+          height: 30px;
+          width: 30px;
         }
 
         p {

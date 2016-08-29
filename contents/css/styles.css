@@ -52354,18 +52354,28 @@ header {
 }
 #dfa-menu .lifemap .menu,
 #dfa-menu-footer .lifemap .menu {
-  width: 500px;
+  width: 550px;
 }
 #dfa-menu .lifemap .menu a.item,
 #dfa-menu-footer .lifemap .menu a.item {
+  position: relative;
   display: inline-block;
   width: 50%;
 }
-#dfa-menu .lifemap .menu img,
-#dfa-menu-footer .lifemap .menu img {
+#dfa-menu .lifemap .menu .ui.avatar,
+#dfa-menu-footer .lifemap .menu .ui.avatar {
   margin-top: -18px;
   height: 3.5em;
   max-height: 3.5em;
+}
+#dfa-menu .lifemap .menu .badge,
+#dfa-menu-footer .lifemap .menu .badge {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  max-height: none;
 }
 #dfa-menu .lifemap .menu p,
 #dfa-menu-footer .lifemap .menu p {
@@ -52382,11 +52392,17 @@ header {
   #dfa-menu-footer .lifemap .menu {
     width: 100%;
   }
-  #dfa-menu .lifemap .menu img,
-  #dfa-menu-footer .lifemap .menu img {
+  #dfa-menu .lifemap .menu .ui.avatar,
+  #dfa-menu-footer .lifemap .menu .ui.avatar {
     margin-top: -18px;
     height: 2em;
     max-height: 2em;
+  }
+  #dfa-menu .lifemap .menu .badge,
+  #dfa-menu-footer .lifemap .menu .badge {
+    top: 6px;
+    height: 30px;
+    width: 30px;
   }
   #dfa-menu .lifemap .menu p,
   #dfa-menu-footer .lifemap .menu p {
