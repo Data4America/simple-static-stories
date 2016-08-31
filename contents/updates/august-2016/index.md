@@ -37,28 +37,25 @@ title: August 2016 Update
                           <tr>
                             <td valign="top">
                               <div style="padding:20px;">
-                                1/ On September 6th, Data4America will sponsor a discussion at Galvanize in San Francisco on "The Potential of Artificial Intelligence and Universal Basic Income". Data4America Board Member <a href="https://twitter.com/kimmaicutler">Kim-Mai Cutler</a> will moderate the panel with Palantir co-founder <a href="https://www.linkedin.com/in/lonsdalejoe">Joe Lonsdale</a>, author <a href="https://twitter.com/nfergus">Niall Ferguson</a>, Y Combinator, and the non-profit GiveDirectly. <a href="https://www.eventbrite.com/e/lincoln-network-presents-man-vs-machine-tickets-26908134956"><strong>Buy a ticket here</strong></a>.
+                                1/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
                                 <br>
                                 <br>
-                                2/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
+                                2/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
                                 <br>
                                 <br>
-                                3/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
+                                3/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
                                 <br>
                                 <br>
-                                4/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
+                                4/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
                                 <br>
                                 <br>
-                                5/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
-                                <br>
-                                <br>
-                                6/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
+                                5/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
                                 <br>
                                 <br>
                                 We opened sourced the <a target="_blank" href="https://github.com/Data4America/jobmaps">code</a>, the <a target="_blank" href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a target="_blank" href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
                                 <br>
                                 <br>
-                                7/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
+                                6/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
                                 <br>
                                 <br>
                                 If published, we'll syndicate you to our social media, through email, through Huffington Post, and more. 
