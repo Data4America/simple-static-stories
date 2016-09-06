@@ -1,7 +1,7 @@
 ---
 title: LifeMap Bernie Sanders
 author: data-for-america
-date: 2016-07-20
+date: 2015-12-08
 template: article.jade
 description: "We have created a lifemap for Bernie Sanders."
 noFooter: true

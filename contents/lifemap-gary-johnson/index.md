@@ -1,7 +1,7 @@
 ---
 title: LifeMap Gary Johnson
 author: data-for-america
-date: 2016-07-20
+date: 2016-07-25
 template: article.jade
 description: "We have created a lifemap for Gary Johnson."
 noFooter: true

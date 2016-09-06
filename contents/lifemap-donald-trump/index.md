@@ -1,7 +1,7 @@
 ---
 title: LifeMap Donald Trump
 author: data-for-america
-date: 2016-07-20
+date: 2016-02-16
 template: article.jade
 description: "We have created a lifemap for Donald Trump."
 noFooter: true
