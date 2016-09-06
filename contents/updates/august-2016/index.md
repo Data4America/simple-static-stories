@@ -299,13 +299,13 @@ To help get there, we're looking for syndication partners. This includes publish
                     <br><br>
                     2/ We launched Lifemap, history in <a target="_blank" href="http://lifemap.io/">100 characters or less</a>. Check out <a target="_blank" href="http://lifemap.io/donaldtrump/">Donald Trump</a>, <a target="_blank" href="http://lifemap.io/berniesanders/">Bernie Sanders</a>, <a href="http://lifemap.io/sherylsandberg">Sheryl Sandberg</a>, <a href="http://lifemap.io/markcuban">Mark Cuban</a>, and <a href="http://lifemap.io/">more</a>.
                     <br><br>
-                    <div class="lf-logo" style="text-align:center;">
-                    <img src="http://lifemap.io/img/lifemap.png" style="max-width:400px;">
-                    </div>
-                    <br>
                     3/ Here's the Lifemap on HuffPo: <a target="_blank" href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2">Hillary Clinton</a>, <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-sheryl-sandberg_us_57a572e4e4b0ccb023725e61?m5cjkz3qctzqia4i">Sheryl Sandberg</a>, and <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-the-history-of-bernie-sanders-in-100-characters_us_579e9e6ce4b00e7e269fcd31?qoo3i9mj4c1cvunmi">Bernie Sanders</a>. 
 					<br><br>
 					4/ HuffPo is <a target="_blank" href="https://twitter.com/HuffPostPol/status/768534447536898048">tweeting</a> Lifemap out to their 860,000 followers!
+                                                            <br><br>
+                    <div class="lf-logo" style="text-align:center;">
+                    	<img style="max-width:400px;" src="http://lifemap.io/img/lifemap.png" />
+                    </div>
                     </div>
           		</td>
       		</tr>
