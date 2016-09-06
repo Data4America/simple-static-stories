@@ -6,12 +6,12 @@ template: article.jade
 description: "We have created a lifemap for Bernie Sanders."
 noFooter: true
 isLifemap: true
-article: false
-published: false
+article: true
+published: true
 ---
 
 <p>
-   Senator Bernie Sanders is America's longest-serving independent politician in Congress and sought the Democratic nomination for president in 2016. 
+   Senator Bernie Sanders is America's longest-serving independent politician in Congress and sought the Democratic nomination for president in 2016.
 </p>
 <p>
 <img class="ui medium image" style="margin: 0 auto;" src="http://lifemap.io/img/berniesanders.gif" />

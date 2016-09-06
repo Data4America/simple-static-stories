@@ -325,6 +325,10 @@ $(document).ready(function() {
     });
   });
 
+  $('#fixed-btn').click(function() {
+    $('#dfa-share-modal').modal('show');    
+  });
+
   $('.dfa-btn-subscribe').click(function() {
     $('#dfa-subscribe-modal').modal('show');
   });
@@ -410,7 +414,21 @@ $(document).ready(function() {
     $('#dfa-lifemap .card .image.hoverable')
       .dimmer({ on: 'hover' });
   }
+
+  showFixedButton();
 });
+
+function showFixedButton() {
+  var scrollCount = 0;
+  var contentTop = $(window).height();
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 10) {
+      $('#fixed-btn').show();
+    } else {
+      $('#fixed-btn').hide();
+    }
+  });
+}
 
 function hideEmailForm() {
   if ($('#dfa-email').css('display') === 'block') {
