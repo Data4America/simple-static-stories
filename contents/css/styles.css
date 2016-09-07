@@ -51963,6 +51963,7 @@ header {
   background: #FAFAFA;
 }
 #fixed-btn {
+  z-index: 100;
   position: fixed;
   right: 0px;
   bottom: 20%;
@@ -51973,6 +51974,11 @@ header {
 }
 #fixed-btn i {
   margin: 0px;
+}
+@media only screen and (max-width: 767px) {
+  #fixed-btn {
+    font-size: 1rem;
+  }
 }
 #fixed-btn:hover {
   background: #b80000;
@@ -52197,6 +52203,46 @@ header {
 }
 #dfa-menu-footer li a {
   color: #7c7d7e;
+}
+#dfa-as-seen-in {
+  border-top: 1px solid #e1e1e1;
+  position: relative;
+  margin: 2em 0px;
+}
+#dfa-as-seen-in p {
+  display: inline-block;
+  background-color: #fafafa;
+  position: absolute;
+  top: -21px;
+  line-height: 2em;
+  font-size: 1.2em;
+  width: 90px;
+}
+#dfa-as-seen-in img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+#dfa-as-seen-in .column {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#dfa-as-seen-in .column a {
+  cursor: pointer;
+}
+#dfa-as-seen-in .column.facebook-live img {
+  width: 160px;
+}
+#dfa-as-seen-in .column.huffington-post img {
+  width: 160px;
+}
+#dfa-as-seen-in .ui.three.column.grid {
+  margin: 1em -3em;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-as-seen-in .ui.three.column.grid {
+    margin: 1em 0em !important;
+  }
 }
 #dfa-logo-footer {
   background: url(/img/logo-256.png) center center;
