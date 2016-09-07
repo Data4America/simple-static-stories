@@ -1,0 +1,10 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  div.ui.segment
+    h1.ui.aligned.center.header Press Posts
+    div.ui.divider
+    a(href="https://www.facebook.com/chrisamccoy/posts/10105494115270858", target="_blank") WIRED
