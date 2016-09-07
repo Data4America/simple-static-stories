@@ -33,6 +33,8 @@ block footer
       if prevPage
         a(href=prevPage.url) « Newer
       else
+        | 
         a(href='/archive') « Archive
       if nextPage
-        a(href=nextPage.url) Next page »
+        | 
+        a(href=nextPage.url, style="float:right;") Next page »

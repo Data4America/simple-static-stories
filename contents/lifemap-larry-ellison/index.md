@@ -1,7 +1,7 @@
 ---
 title: LifeMap Larry Ellison
 author: data-for-america
-date: 2016-07-20
+date: 2016-08-24
 template: article.jade
 description: "We have created a lifemap for Larry Ellison."
 noFooter: true

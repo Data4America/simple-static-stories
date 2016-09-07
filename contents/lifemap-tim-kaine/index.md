@@ -1,7 +1,7 @@
 ---
 title: LifeMap Tim Kaine
 author: data-for-america
-date: 2016-07-20
+date: 2016-08-16
 template: article.jade
 description: "We have created a lifemap for Tim Kaine."
 noFooter: true

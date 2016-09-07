@@ -1,7 +1,7 @@
 ---
 title: LifeMap Hillary Clinton
 author: data-for-america
-date: 2016-07-20
+date: 2016-07-28
 template: article.jade
 description: "We have created a lifemap for Hillary Clinton."
 noFooter: true

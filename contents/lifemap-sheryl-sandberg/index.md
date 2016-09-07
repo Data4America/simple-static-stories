@@ -1,7 +1,7 @@
 ---
 title: LifeMap Sheryl Sandberg
 author: data-for-america
-date: 2016-07-20
+date: 2016-01-30
 template: article.jade
 description: "We have created a lifemap for Sheryl Sandberg."
 noFooter: true

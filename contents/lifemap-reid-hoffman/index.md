@@ -1,7 +1,7 @@
 ---
 title: LifeMap Reid Hoffman
 author: data-for-america
-date: 2016-07-20
+date: 2016-06-11
 template: article.jade
 description: "We have created a lifemap for Reid Hoffman."
 noFooter: true

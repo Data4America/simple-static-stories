@@ -1,7 +1,7 @@
 ---
 title: LifeMap Marco Rubio
 author: data-for-america
-date: 2016-07-20
+date: 2016-01-31
 template: article.jade
 description: "We have created a lifemap for Marco Rubio."
 noFooter: true

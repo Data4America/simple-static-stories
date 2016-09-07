@@ -1,7 +1,7 @@
 ---
 title: LifeMap Steve Ballmer
 author: data-for-america
-date: 2016-07-20
+date: 2016-05-03
 template: article.jade
 description: "We have created a lifemap for Steve Ballmer."
 noFooter: true
