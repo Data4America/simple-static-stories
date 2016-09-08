@@ -37,25 +37,28 @@ title: August 2016 Update
                           <tr>
                             <td valign="top">
                               <div style="padding:20px;">
-                                1/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
+                                1/ WIRED magazine <a target="_blank" href="http://www.wired.com/2016/09/gary-johnson-looks-perfectly-ease-vr-headset-face">covered</a> our Facebook LIVE and Unplugged <a target="_blank" href=" https://www.facebook.com/chrisamccoy/media_set?set=a.10105475097881858.1073741838.10707725&type=3">with</a> Governor Gary Johnson. We were joined by Data4America supporter <a target="_blank" href="https://twitter.com/cyantist">Cyan Banister</a>. Here's the <a target="_blank" href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364">full interview</a>.
                                 <br>
                                 <br>
-                                2/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
+                                2/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
                                 <br>
                                 <br>
-                                3/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
+                                3/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
                                 <br>
                                 <br>
-                                4/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
+                                4/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
                                 <br>
                                 <br>
-                                5/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
+                                5/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
+                                <br>
+                                <br>
+                                6/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
                                 <br>
                                 <br>
                                 We opened sourced the <a target="_blank" href="https://github.com/Data4America/jobmaps">code</a>, the <a target="_blank" href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a target="_blank" href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
                                 <br>
                                 <br>
-                                6/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
+                                7/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
                                 <br>
                                 <br>
                                 If published, we'll syndicate you to our social media, through email, through Huffington Post, and more. 

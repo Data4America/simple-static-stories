@@ -52238,6 +52238,7 @@ header {
   border-radius: 5px 0 0 5px;
   font-size: 1.7em;
   padding: 0.6em;
+  z-index: 2;
 }
 #fixed-btn i {
   margin: 0px;
@@ -52396,8 +52397,8 @@ header {
 #dfa-menu .lifemap .menu .badge,
 #dfa-menu-footer .lifemap .menu .badge {
   position: absolute;
-  right: 0;
-  top: 8px;
+  left: 48px;
+  bottom: 8px;
   height: 25px;
   width: 25px;
   max-height: none;
@@ -52425,10 +52426,9 @@ header {
   }
   #dfa-menu .lifemap .menu .badge,
   #dfa-menu-footer .lifemap .menu .badge {
-    top: 10px;
-    height: 25px;
-    width: 25px;
-    right: -6px;
+    height: 15px;
+    width: 15px;
+    left: 32px;
   }
   #dfa-menu .lifemap .menu p,
   #dfa-menu-footer .lifemap .menu p {
