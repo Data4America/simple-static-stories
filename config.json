@@ -31,7 +31,7 @@
         "main": ["/css/styles.css"]
       },
       "js": {
-        "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/unplugged.js", "/js/semantic.js"]
+        "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/emailwall.js", "/js/unplugged.js", "/js/semantic.js"]
       }
     }
   }
