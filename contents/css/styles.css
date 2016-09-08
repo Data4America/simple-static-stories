@@ -51957,6 +51957,188 @@ input::-moz-focus-inner {
   color: #CC0001;
 }
 /*-------------------
+     on lock
+--------------------*/
+.locked {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+/*-------------------
+     email wall
+--------------------*/
+#transcript-section .wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+#dfa-email-wall {
+  padding: 3em 0 4em;
+  position: relative;
+}
+#dfa-email-wall .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#dfa-email-wall .ui.segment {
+  border: none;
+  box-shadow: 1px 1px 10px #103658;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-email-wall .ui.middle.aligned.grid > .eight.wide.column .lifemap {
+    width: 100% !important;
+  }
+  #dfa-email-wall .ui.middle.aligned.grid > .eight.wide.column .lifemap .font {
+    font-size: 2.5em !important;
+    line-height: 1.2em;
+  }
+}
+#dfa-email-wall .ui.segment > .header {
+  background: #051e35;
+  margin: -0.5em -0.5em 0 -0.5em;
+  border: none;
+  padding: 0;
+  color: #fff;
+  box-shadow: 0 0 5px #103658;
+  position: relative;
+}
+#dfa-email-wall .ui.segment > .header .lifemap {
+  width: auto;
+  display: none;
+}
+#dfa-email-wall .ui.segment > .header .text {
+  font-size: 0.9em;
+  padding: 0.5em 0;
+  background-color: #CF1A1A;
+}
+#dfa-email-wall .ui.segment > .header::before {
+  left: -1px;
+  border-width: 15px 0 0 15px;
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #b80000 transparent transparent transparent;
+  bottom: -15px;
+  visibility: visible;
+}
+#dfa-email-wall .ui.segment > .header::after {
+  right: -1px;
+  border-width: 15px 15px 0 0px;
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #b80000 transparent transparent transparent;
+  bottom: -15px;
+  visibility: visible;
+}
+#dfa-email-wall h1.mobile {
+  display: none;
+}
+#dfa-email-wall .grid > .column > .lifemap {
+  width: 300px;
+}
+#dfa-email-wall .grid > .column > .lifemap .bar {
+  height: 10px;
+}
+#dfa-email-wall .grid > .column > .lifemap .bar > div {
+  height: 10px;
+}
+#dfa-email-wall .grid > .column > .lifemap .font {
+  font-size: 3em;
+}
+#dfa-email-wall .ui.segment > .ui.grid {
+  margin: 1em;
+}
+#dfa-email-wall .ui.grid {
+  min-height: 240px;
+}
+#dfa-email-wall .close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -22px;
+  right: -40px;
+  background: #000;
+  font-size: 22px;
+  line-height: 46px;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3;
+}
+#dfa-email-wall .close:hover {
+  background: #c40606;
+}
+#dfa-email-wall .close .icon {
+  color: #fff;
+  font-size: 2em;
+  margin: 0;
+}
+#dfa-email-wall .note {
+  margin-top: 0.5em;
+  font-size: 0.7em;
+}
+#dfa-email-wall .footer {
+  display: block;
+  padding: 0.8em 0;
+  background: #c40606;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95em;
+  position: absolute;
+  bottom: -46px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 1px 2px 2px #12416b;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-email-wall {
+    margin: 0px 0.7em;
+    padding: 3em 0.5em 5.5em 0.5em;
+  }
+  #dfa-email-wall .ui.segment > .header .text {
+    font-size: 1.6rem;
+    padding: 0.5em 2em;
+  }
+  #dfa-email-wall .footer {
+    width: 280px;
+    height: 50px;
+    bottom: -50px;
+    margin-left: -140px;
+  }
+  #dfa-email-wall .ui.segment > .ui.grid {
+    margin: 0;
+  }
+  #dfa-email-wall .close {
+    top: -21px;
+    right: -20px;
+    height: 40px;
+    width: 40px;
+    font-size: 1em;
+    box-shadow: 1px 2px 5px #333;
+  }
+  #dfa-email-wall .close .icon {
+    margin-top: -0.1em;
+  }
+}
+/*-------------------
       MAIN HEADER
 --------------------*/
 header {

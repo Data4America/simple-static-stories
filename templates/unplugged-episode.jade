@@ -109,18 +109,42 @@ block content
             a(href="", target="_blank") Play on iTunes
 
         if page.metadata.transcript
-          h2.ui.header#transcript Transcript
-          - var transcript = page.metadata.transcript
-          table.ui.very.basic.table
-            tbody
-              each item in transcript
-                tr.top.aligned
-                  td.disabled.right.aligned= item.time
-                  td
-                    if item.narrator
-                      strong=item.narrator + ': '
-                    !=item.text
-                    if item.text2
-                      br
-                      br
-                      =item.text2
+          div#dfa-email-wall
+            div.overlay
+            div.ui.container
+              div.ui.segment
+                div.close
+                  i.icon.cancel
+                h1.ui.center.aligned.header
+                  div.text Enter your email to continue reading the full transcript.
+                div.ui.middle.aligned.center.aligned.stackable.grid
+                  div.eight.wide.column
+                    div.lifemap
+                      div.font
+                        span.dfa-text DATA
+                          span.f 4
+                          | AMERICA
+                  div.eight.wide.column
+                    div.ui.fluid.huge.input
+                      input(type="text", placeholder="Your email")
+                    br
+                    button.fluid.ui.orange.huge.button Yes, I want access!
+                    div.note Receive our e-newsletter to never miss a Data4America LifeMap again. We publish on Politicians, Business Leaders, and Policy History.
+                a.footer(href="https://data4america.org/donate", target="blank") Donate to support Data4America
+                    
+          section#transcript-section
+            h2.ui.header#transcript Transcript
+            - var transcript = page.metadata.transcript
+            table.ui.very.basic.table
+              tbody
+                each item in transcript
+                  tr.top.aligned
+                    td.disabled.right.aligned= item.time
+                    td
+                      if item.narrator
+                        strong=item.narrator + ': '
+                      !=item.text
+                      if item.text2
+                        br
+                        br
+                        =item.text2
