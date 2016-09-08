@@ -52669,7 +52669,7 @@ header {
   width: 90px;
 }
 #dfa-as-seen-in img {
-  width: 100%;
+  width: 60%;
   display: block;
   margin: 0 auto;
 }
@@ -52681,10 +52681,10 @@ header {
   cursor: pointer;
 }
 #dfa-as-seen-in .column.facebook-live img {
-  width: 160px;
+  width: 100px;
 }
 #dfa-as-seen-in .column.huffington-post img {
-  width: 160px;
+  width: 110px;
 }
 #dfa-as-seen-in .ui.three.column.grid {
   margin: 1em -3em;
