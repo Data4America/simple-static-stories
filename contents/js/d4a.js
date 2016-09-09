@@ -57,6 +57,8 @@ $(document).ready(function() {
     }
   });
 
+  $('#dfa-press .menu .item').tab({ context: $('#dfa-press') });
+
   // Initialize Sidebar click
   $('.dfa-sidebar-tap, .ui.sidebar .angle.double.left').click(function() {
     $('.ui.sidebar')
@@ -326,7 +328,7 @@ $(document).ready(function() {
   });
 
   $('#fixed-btn').click(function() {
-    $('#dfa-share-modal').modal('show');    
+    $('#dfa-share-modal').modal('show');
   });
 
   $('.dfa-btn-subscribe').click(function() {
@@ -416,6 +418,7 @@ $(document).ready(function() {
   }
 
   showFixedButton();
+
 });
 
 function showFixedButton() {

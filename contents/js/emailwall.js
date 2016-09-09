@@ -20,11 +20,24 @@
       return;
     }
 
-    $('#transcript-section')
-      .addClass('locked')
-      .append('<div class="wall"></div>');
+    var $transcript = $('#transcript-section');
 
-    $elem.insertAfter('.media');
+    var numOfRows = parseInt($transcript.find('tr').length / 4);
+    var topDistance = $transcript.find('tr:eq('+ numOfRows +')').offset().top
+
+    var countRows = 0;
+    $transcript.find('tr').each(function(){
+      countRows++;
+      window.console.log(countRows,numOfRows)
+      if (countRows >= numOfRows) {
+        $(this).addClass('locked');
+      }
+    });
+
+    topDistance = $transcript.find('tr.locked:eq(1)').offset().top;
+    topDistance = topDistance - $transcript.offset().top - 350;
+
+    $elem.css('top', topDistance);
 
     $elem.find('.close').click(subscribed);
 
