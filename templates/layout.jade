@@ -19,6 +19,7 @@ html(lang='en')
 
       link(rel='icon', href=contents['favicon.png'].url)
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
+      link(href='//cdn-images.mailchimp.com/embedcode/classic-10_7.css', rel='stylesheet', type='text/css')
       != nap.css('main')
 
   body(class=bodyclass)
@@ -31,9 +32,37 @@ html(lang='en')
 
           a#dfa-cover(href="/")
             img(src="/img/logo-large.png")
-            
-          a#fixed-btn.ui.huge.primary.button
-            i.plus.icon
+
+          div#fixed-share-btn
+            a.fixed-btn.ui.huge.primary.button
+              i.plus.icon
+            .ui.flowing.popup.top.left.transition.hidden
+              .fb-like(data-href='https://data4america.org', data-layout='box_count', data-action='like', data-size='large', data-show-faces='true', data-share='true')
+              .ui.divider
+
+              a.twitter-follow-button(href='https://twitter.com/data4america', data-size='large', data-show-screen-name='false', data-show-count='false') Follow
+              .ui.divider
+
+              .ui.red.fluid.button.subscribe Subscribe
+          
+          #dfa-subscribe-modal.ui.small.modal
+            i.close.icon
+            div#mc_embed_signup
+              form#mc-embedded-subscribe-form.validate(action='//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&id=219ac0990b', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                #mc_embed_signup_scroll
+                  h2 Subscribe to our mailing list
+                  .mc-field-group
+                    label(for='mce-EMAIL')
+                      | Email Address  
+                      span.asterisk *
+                    input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+                  #mce-responses.clear
+                    #mce-error-response.response(style='display:none')
+                    #mce-success-response.response(style='display:none')
+                  div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                    input(type='text', name='b_72207b8a0819659d0b69c1f9c_219ac0990b', tabindex='-1', value='')
+                  .clear
+                    input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
 
           div#dfa-menu-floating.ui.inverted.icon.right.pointing.dropdown
             i.big.sidebar.icon
@@ -111,6 +140,10 @@ html(lang='en')
                     img.ui.avatar.left.floated.image(src="/img/live-weiner-cutler-600.jpg")
                     | Live: Scott Wiener
                     div(style="font-size: 0.85em; padding-top: 0.3em; color: #999;") Hosted by: Kim-Mai Cutler
+                  a.item(href="/unplugged/live-gary-johnson")
+                    img.ui.avatar.left.floated.image(src="/img/unplugged-garyjohnson-800.jpg")
+                    | Live: Gary Johnson
+                    div(style="font-size: 0.85em; padding-top: 0.3em; color: #999;") Hosted by: Chris McCoy
               div.ui.right.dropdown.item.lifemap
                 | LIFEMAP
                 i.dropdown.icon(style="margin-left: 0.4em;")
@@ -190,29 +223,6 @@ html(lang='en')
                     img.ui.avatar.image(src="http://lifemap.io/img/larryellison/age-74.jpg")
                     p Larry Ellison <br />
                       span Co-founder & CEO, Orcale
-
-      div#dfa-subscribe-modal.ui.modal.small
-        i.close.icon
-        div.content
-          div.ui.two.column.grid
-            div.column
-              h3.ui.header Like us on Facebook
-              div.fb-like(data-href='https://www.facebook.com/data4america', data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
-            div.column
-              h3.ui.header Follow us on Twitter
-              a.twitter-follow-button(href='https://twitter.com/data4america', data-show-count='true', data-show-screen-name='false') Follow
-          div.ui.horizontal.divider OR
-          h3.ui.header Send me Data4America stories by email
-          div#mc_embed_signup
-            form.ui.form.validate#mc-embedded-subscribe-form(action="//data4ameria.us11.list-manage.com/subscribe/post?u=72207b8a0819659d0b69c1f9c&amp;id=219ac0990b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
-              div#mc_embed_signup_scroll
-                div.field
-                  <input type="email" value="" name="EMAIL" placeholder="Your Email Address" class="required email form-control" id="mce-EMAIL">
-                div.clear#mce-responses
-                  <div class="response text-danger" id="mce-error-response" style="display:none; margin-bottom: 1em"></div>
-                  <div class="response text-success" id="mce-success-response" style="display:none; margin-bottom: 1em"></div>
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_72207b8a0819659d0b69c1f9c_219ac0990b" tabindex="-1" value=""></div>
-                button.ui.button.primary#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
 
       div#dfa-content
         div.ui.text.container
@@ -378,28 +388,28 @@ html(lang='en')
         div.content
           div.body-text
 
-      div#dfa-share-modal.ui.small.modal
-        i.close.icon
-        div.header Share
-        div.content
-          div.description
-            div.dfa-share
-              div.container
-                div.fb-like(data-href="https://www.facebook.com/data4america" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true")
-                div.twitter-follow
-                  a.twitter-follow-button(href="https://twitter.com/data4america" data-size="large" data-show-count="false") Follow @data4america
-                div.dfa-subscribe
-                  a.ui.small.red.button(href="/subscribe") Subscribe
-
-              div.container.mobile(style="display:none;")
-                div.fb-like(data-href="https://www.facebook.com/data4america" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true")
-                div.twitter-follow
-                  a.twitter-follow-button(href="https://twitter.com/data4america" data-size="large" data-show-count="false") Follow @data4america
-                div.dfa-subscribe
-                  a.ui.small.red.button(href="/subscribe") Subscribe
-
-        div.actions
-          div.ui.cancel.button Cancel
+      //- div#dfa-share-modal.ui.small.modal
+      //-   i.close.icon
+      //-   div.header Share
+      //-   div.content
+      //-     div.description
+      //-       div.dfa-share
+      //-         div.container
+      //-           div.fb-like(data-href="https://www.facebook.com/data4america" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true")
+      //-           div.twitter-follow
+      //-             a.twitter-follow-button(href="https://twitter.com/data4america" data-size="large" data-show-count="false") Follow @data4america
+      //-           div.dfa-subscribe
+      //-             a.ui.small.red.button(href="/subscribe") Subscribe
+      //- 
+      //-         div.container.mobile(style="display:none;")
+      //-           div.fb-like(data-href="https://www.facebook.com/data4america" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true")
+      //-           div.twitter-follow
+      //-             a.twitter-follow-button(href="https://twitter.com/data4america" data-size="large" data-show-count="false") Follow @data4america
+      //-           div.dfa-subscribe
+      //-             a.ui.small.red.button(href="/subscribe") Subscribe
+      //- 
+      //-   div.actions
+      //-     div.ui.cancel.button Cancel
 
     block js
       != nap.js('main')

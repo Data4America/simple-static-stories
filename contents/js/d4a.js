@@ -327,8 +327,20 @@ $(document).ready(function() {
     });
   });
 
-  $('#fixed-btn').click(function() {
-    $('#dfa-share-modal').modal('show');
+  // $('#fixed-btn').click(function() {
+  //   $('#dfa-share-modal').modal('show');
+  // });
+  var $fixedShare = $('#fixed-share-btn');
+  $fixedShare.find('.fixed-btn')
+    .popup({
+      position   : 'left center',
+      hoverable  : true,
+      setFluidWidth : true
+    })
+  ;
+
+  $fixedShare.find('.subscribe').click(function(){
+    $('#dfa-subscribe-modal').modal({ observeChanges : true }).modal('show');
   });
 
   $('.dfa-btn-subscribe').click(function() {
@@ -426,9 +438,9 @@ function showFixedButton() {
   var contentTop = $(window).height();
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 10) {
-      $('#fixed-btn').show();
+      $('#fixed-share-btn').show();
     } else {
-      $('#fixed-btn').hide();
+      $('#fixed-share-btn').hide();
     }
   });
 }

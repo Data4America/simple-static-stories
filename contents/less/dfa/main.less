@@ -105,6 +105,9 @@ html, body {
   }
 }
 #dfa-press {
+  .ui.vertical.menu {
+    width:100%;
+  }
   .ui.tab.segment {
     padding-top:0px;
     margin:0px;
@@ -325,31 +328,38 @@ header {
   background: #FAFAFA;
 }
 
-#fixed-btn {
+#fixed-share-btn {
+  text-align: center;
   z-index: 100;
   position:fixed;
   right:0px;
-  bottom:20%;
+  bottom:30%;
   margin:0px;
-  padding:1em;
   display: none;
-  background:#CF1A1A;
-  border-radius: 5px 0 0 5px;
   font-size: 1.7em;
-  padding: 0.6em;
-  z-index: 2;
+  width:150px;
 
-  i {
-    margin: 0px;
-    color: #fff;
+  .fixed-btn {
+    float: right;
+    background:#CF1A1A;
+    border-radius: 5px 0 0 5px;
+    padding: 0.6em;
+    margin:0px;
+    i {
+      margin: 0px;
+      color: #fff;
+    }
   }
-
   @media only screen and (max-width: @largestMobileScreen) {
-    font-size: 1rem;
+    bottom:50%;
+    .fixed-btn {
+      font-size: 1rem;
+    }
   }
 }
 
-#fixed-btn:hover {
+
+#fixed-share-btn .fixed-btn:hover {
   background :#b80000;
 }
 
@@ -1279,45 +1289,45 @@ body.embed {
 
 }
 
-.dfa-share {
-  text-align:center;
-  .dfa-subscribe {
-    display:inline-block;
-    position:relative;
-    width:100px;
-    height:30px;
-    a.button {
-      position: absolute;
-      left: 0px;
-      line-height: 0.7;
-      top: 2px;
-    }
-  }
-  .fb-like {
-    line-height:0.8;
-    margin:0px 0.5em;
-  }
-  .twitter-follow {
-    display: inline-block;
-    margin:0px 0.5em;
-  }
-  .button {
-   -webkit-print-color-adjust: exact;
- }
- @media only screen and (max-width: @largestMobileScreen) {
-   .fb-like, .twitter-follow {
-     margin:0.5em 0px;
-   }
-   .dfa-subscribe {
-     display: block;
-     margin: 0 auto;
-     margin-top: -0.3em;
-     a.button {
-       position: inherit;
-     }
-   }
- }
-}
+// .dfa-share {
+//   text-align:center;
+//   .dfa-subscribe {
+//     display:inline-block;
+//     position:relative;
+//     width:100px;
+//     height:30px;
+//     a.button {
+//       position: absolute;
+//       left: 0px;
+//       line-height: 0.7;
+//       top: 2px;
+//     }
+//   }
+//   .fb-like {
+//     line-height:0.8;
+//     margin:0px 0.5em;
+//   }
+//   .twitter-follow {
+//     display: inline-block;
+//     margin:0px 0.5em;
+//   }
+//   .button {
+//    -webkit-print-color-adjust: exact;
+//  }
+//  @media only screen and (max-width: @largestMobileScreen) {
+//    .fb-like, .twitter-follow {
+//      margin:0.5em 0px;
+//    }
+//    .dfa-subscribe {
+//      display: block;
+//      margin: 0 auto;
+//      margin-top: -0.3em;
+//      a.button {
+//        position: inherit;
+//      }
+//    }
+//  }
+// }
 
 
 #dfa-policy-issues {
@@ -1847,3 +1857,5 @@ body.embed {
     }
   }
 }
+
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }

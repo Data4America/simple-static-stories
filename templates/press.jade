@@ -7,13 +7,13 @@ block content
   div.ui.segment
     h1.ui.aligned.center.header Press Posts
     div.ui.divider
-    div#dfa-press.ui.grid
+    div#dfa-press.ui.grid.stackable
       div.four.wide.column
         div.ui.secondary.vertical.menu
           a.item.active(data-tab="press-release")
             | Press Releases
           a.item(data-tab="news-stories")
-            | New Stories     
+            | News Stories     
       div.twelve.wide.column
         div.ui.tab.segment.active(data-tab="press-release")
           h2.ui.header Press Releases
@@ -24,7 +24,7 @@ block content
                 .header
                   | Sep 7 2016
                 .description
-                  p
+                  p 
                   | Gary Johnson LIVE from Data4America was the first of hopefully many raw deep dives into the life history of America's political, business, and civic leaders.
                 .extra
                   a.ui.right.floated.button(href="https://www.facebook.com/chrisamccoy/posts/10105494115270858" target="_blank")
@@ -35,10 +35,29 @@ block content
         div.ui.tab.segment(data-tab="news-stories")
           h2.ui.header News Stories
           div.ui.divider
-          .ui.icon.message
-            i.warning.circle.icon
-            .content
-              .header
-                | No News Stories.
+          .ui.items
+            .item
+              .middle.aligned.content
+                .header
+                  | Sep 7 2016
+                .description
+                  img.ui.image.fluid(src="https://www.wired.com/wp-content/uploads/2016/09/Slack-for-iOS-Upload-9.jpg")
+                  p 
+                  | Wired Magazine covered our Facebook LIVE and Unplugged--using our Lifemap product--with Governor Gary Johnson:
+                  br
+                  a(href='http://www.wired.com/2016/09/gary-johnson-looks-perfectly-ease-vr-headset-face') http://www.wired.com/2016/09/gary-johnson-looks...
+                  br
+                  br
+                  |  The stream itself received over 253,000 views and was seen by over 1,000,000 through Facebook notifications. Here it is:
+                  br 
+                  a(href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364") https://www.facebook.com/gov...
+                  br
+                  br 
+                  | Here's the photo album from the event: 
+                  br
+                  a(href="https://www.facebook.com/media/set/?set=a.10105475097881858.1073741838.10707725&type=3") https://www.facebook.com/media/set...
+            div.ui.divider      
+            
+
 
           

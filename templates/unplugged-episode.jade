@@ -93,9 +93,13 @@ block content
               a(href="javascript:;")
                 i.chevron.down.icon
                 span More Details
-
-        div.embed
-          iframe(width="100%", height="110", scrolling="no", frameborder="no", src!=podcast.iframe)
+        if podcast.iframe
+          div.embed
+            iframe(width="100%", height="110", scrolling="no", frameborder="no", src!=podcast.iframe)
+            
+        if podcast.viframe
+          div.embed
+            iframe(width="100%", height="400", style="border:none;overflow:hidden", scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true", src!=podcast.viframe)
         p.media
           if podcast.mp3
             a.play-on-d4a(href="javascript:;")
@@ -131,7 +135,7 @@ block content
                         input(type="text", placeholder="Your email")
                       br
                       button.fluid.ui.orange.huge.button Yes, I want access!
-                      div.note You'll receive our e-newsletter to never miss a Data4America podcasts, Lifemaps, original content, and more.
+                      div.note You'll never miss a podcast, Lifemap, or other original content from Data4America again.
                   a.footer(href="https://data4america.org/donate", target="blank") Donate to support Data4America
                 
             h2.ui.header#transcript Transcript

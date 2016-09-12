@@ -22,7 +22,7 @@
 
     var $transcript = $('#transcript-section');
 
-    var numOfRows = parseInt($transcript.find('tr').length / 4);
+    var numOfRows = parseInt($transcript.find('tr').length / 2);
     var topDistance = $transcript.find('tr:eq('+ numOfRows +')').offset().top
 
     var countRows = 0;

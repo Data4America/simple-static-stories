@@ -51977,6 +51977,9 @@ input::-moz-focus-inner {
   height: 100%;
   z-index: 200;
 }
+#dfa-press .ui.vertical.menu {
+  width: 100%;
+}
 #dfa-press .ui.tab.segment {
   padding-top: 0px;
   margin: 0px;
@@ -52148,30 +52151,37 @@ input::-moz-focus-inner {
 header {
   background: #FAFAFA;
 }
-#fixed-btn {
+#fixed-share-btn {
+  text-align: center;
   z-index: 100;
   position: fixed;
   right: 0px;
-  bottom: 20%;
+  bottom: 30%;
   margin: 0px;
-  padding: 1em;
   display: none;
+  font-size: 1.7em;
+  width: 150px;
+}
+#fixed-share-btn .fixed-btn {
+  float: right;
   background: #CF1A1A;
   border-radius: 5px 0 0 5px;
-  font-size: 1.7em;
   padding: 0.6em;
-  z-index: 2;
+  margin: 0px;
 }
-#fixed-btn i {
+#fixed-share-btn .fixed-btn i {
   margin: 0px;
   color: #fff;
 }
 @media only screen and (max-width: 767px) {
-  #fixed-btn {
+  #fixed-share-btn {
+    bottom: 50%;
+  }
+  #fixed-share-btn .fixed-btn {
     font-size: 1rem;
   }
 }
-#fixed-btn:hover {
+#fixed-share-btn .fixed-btn:hover {
   background: #b80000;
 }
 #dfa-header {
@@ -52952,46 +52962,6 @@ body.embed {
     display: inline;
   }
 }
-.dfa-share {
-  text-align: center;
-}
-.dfa-share .dfa-subscribe {
-  display: inline-block;
-  position: relative;
-  width: 100px;
-  height: 30px;
-}
-.dfa-share .dfa-subscribe a.button {
-  position: absolute;
-  left: 0px;
-  line-height: 0.7;
-  top: 2px;
-}
-.dfa-share .fb-like {
-  line-height: 0.8;
-  margin: 0px 0.5em;
-}
-.dfa-share .twitter-follow {
-  display: inline-block;
-  margin: 0px 0.5em;
-}
-.dfa-share .button {
-  -webkit-print-color-adjust: exact;
-}
-@media only screen and (max-width: 767px) {
-  .dfa-share .fb-like,
-  .dfa-share .twitter-follow {
-    margin: 0.5em 0px;
-  }
-  .dfa-share .dfa-subscribe {
-    display: block;
-    margin: 0 auto;
-    margin-top: -0.3em;
-  }
-  .dfa-share .dfa-subscribe a.button {
-    position: inherit;
-  }
-}
 #dfa-policy-issues .ui.segment.dfa-table {
   padding: 0;
 }
@@ -53437,4 +53407,9 @@ body.embed {
 #dfa-updates a.text span {
   display: block;
   margin: 1em 0;
+}
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
 }
