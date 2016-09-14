@@ -122,7 +122,7 @@ block content
                   div.close
                     i.icon.cancel
                   h1.ui.center.aligned.header
-                    div.text Share your email to continue reading the full transcript.
+                    div.text Share your email to continue reading the full transcript
                   div.ui.middle.aligned.center.aligned.stackable.grid
                     div.eight.wide.column
                       div.lifemap
@@ -135,7 +135,7 @@ block content
                         input(type="text", placeholder="Your email")
                       br
                       button.fluid.ui.orange.huge.button Yes, I want access!
-                      div.note You'll never miss a podcast, Lifemap, or other original content from Data4America again.
+                      div.note You'll never miss another podcast, Lifemap, or original content published by Data4America again
                   a.footer(href="https://data4america.org/donate", target="blank") Donate to support Data4America
                 
             h2.ui.header#transcript Transcript
@@ -153,3 +153,45 @@ block content
                         br
                         br
                         =item.text2
+                        
+        if page.metadata.transcript
+                    
+          section#transcript-section
+            div#dfa-email-wall
+              div.overlay
+              div.ui.container
+                div.ui.segment
+                  div.close
+                    i.icon.cancel
+                  h1.ui.center.aligned.header
+                    div.text Share your email to continue reading the full transcript
+                  div.ui.middle.aligned.center.aligned.stackable.grid
+                    div.eight.wide.column
+                      div.lifemap
+                        div.font
+                          span.dfa-text DATA
+                            span.f 4
+                            | AMERICA
+                    div.eight.wide.column
+                      div.ui.fluid.huge.input
+                        input(type="text", placeholder="Your email")
+                      br
+                      button.fluid.ui.orange.huge.button Yes, I want access!
+                      div.note You'll never miss another podcast, Lifemap, or original content published by Data4America again
+                  a.footer(href="https://data4america.org/donate", target="blank") Donate to support Data4America
+                
+            h2.ui.header#transcript2 Transcript
+            - var transcript = page.metadata.transcript
+            
+            div.ui.items
+              each item in transcript
+                div.item(style="margin:1em 0px;")
+                  div.content
+                    if item.heading
+                      div.ui.header=item.heading
+                    if item.narrator
+                      div.ui.header.left.aligned(style="font-size:1.5em;display:block")=item.narrator
+                      p(style="text-align:left;margin:0px;")=item.time
+                      div.description(style="text-align:left;margin:0px;")!=item.text
+                div.ui.divider
+                      

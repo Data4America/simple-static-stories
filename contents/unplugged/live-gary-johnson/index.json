@@ -16,5 +16,532 @@
     "twitter": "GovGaryJohnson",
     "mp3": "",
     "viframe": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgovgaryjohnson%2Fvideos%2F10153312003129364%2F&show_text=0&width=400"
-  }
+  },
+  "transcript": [
+     {
+        "narrator":"Chris McCoy",
+        "time":"[0:00]",
+        "text":"This is Chris McCoy, I’m the Founder and Director at Data4America. We are a nonprofit dedicated to bringing data science and data visualization to the understanding of politics with the idea of making the complex world simpler. We’re here today on a tremendous milestone for our organization – the launch of LIVE+Unplugged. I couldn’t be more excited to be with our guest.<br><br>Before we kick it off, I want to introduce our founding donor and major supporter, Cyan Banister, to introduce our guest."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:00:37.21]",
+        "text":"We’re here today with Gary Johnson, who I’m extraordinarily excited to be sitting next to. I’m not going to say much about your history because we’re going to get into, but Gary Johnson was the former governor of New Mexico and he is the presidential nominee of the Libertarian Party. Thank you so much for doing this."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:00:56.20]",
+        "text":"Thank you both."
+     },
+     {
+       "heading":"On parents, growing up, and how Albuquerque surprised him as a teen",
+       "time":"[00:00:58.15]"
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:00:58.15]",
+        "text":"I guess I want to get started with early Gary Johnson. You grew up in Minot, North Dakota, to teachers - we share that in common. Can you tell us a little about your parents and what it was like growing up with them?<br><br>Milestone 1, 1/1/1953: Gary Earl Johnson is born in Minot, ND to Earl (teacher) &amp; Lorraine (Bureau of Indian Affairs)."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "text": "Well, my father sold tires. He was ex-World War II. Saving Private Ryan, Band of Brothers, that's my father in the war. He paratrooped into Normandy before D-Day. He was also a 14 letterman in college. He came back from the war and met my mother.",
+        "time": "[00:01:19.06]"
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:01:50.23]",
+        "text":"And she worked for the Bureau of Indian Affairs?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:01:51.24]",
+        "text":"She did, but that was later on. Growing up, she was a mom."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:02:02.03]",
+        "text":"And a wonderful mom."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:02:04.24]",
+        "text":"Your dad's like Captain America."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:02:07.26]",
+        "text":"He grew up as an athlete, so he was always competitive. My father always told me that if I beat him in anything, I'd know I'd really beaten him because he was out to win all the time. The first thing I beat my father in was chess.<br><br>Milestone 2, 1971, Age 17: Gary graduates from Sandia High School in Albuquerque, New Mexico where he was on the track team."
+     },
+     {
+       "time": "[00:02:31.28]",
+       "heading": "On athletics, education, building businesses, and where they all intersect"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:02:31.28]",
+        "text":"Let's fast-forward. You're seventeen years old, you live in New Mexico. Tell us about moving to New Mexico, what life was like at Sandia High School, and your track accolades."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:02:41.15]",
+        "text":"My mom did become employed by the Bureau of Indian Affairs in Aberdeen, South Dakota. They consolidated all of their six regional accounting offices to Albuquerque.<br><br>My father, who was an Eagle Scout and Boy Scout, came to New Mexico when he was thirteen years old. He went to Philmont, which was the National Jamboree. He fell in love with New Mexico, and he was always trying to angle a way back. When my mother got transferred, that was the ticket.<br><br>Growing up in New Mexico was really, really, really different than Aberdeen, South Dakota. In Aberdeen, you had to travel in lines in school. You got monitor slips. It was very strict discipline; when I got to New Mexico, none of that existed."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:03:43.20]",
+        "text":"Was Albuquerque a metropolis in comparison?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:03:48.28]",
+        "text":"A big time metropolis in comparison. Kids were a lot bigger, a lot faster, and a lot more grown up, though a lot of that’s because they were thirteen years old and that's just what happens when you're thirteen."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:04:03.08]",
+        "text":"Did you develop your love for athletics around that time?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:04:05.23]",
+        "text":"No, I grew up doing every sport. I played football, basketball, and baseball. I wrestled, did track, swam - you name it."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:04:35.19]",
+        "text":"Very cool. So, high school athlete - did you win any state championships?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:04:41.25]",
+        "text":"I was on the all-city track team, the all-district track team, and a pole vaulter in high school. I took up skiing and that became a driving passion in my life."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:04:56.02]",
+        "text":"Ski racer?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:04:57.27]",
+        "text":"I took it up so late, and I did pursue ski racing in a really big way, but I came to recognize the difference between really good and being the best. The best is a whole other category unto itself."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:05:14.27]",
+        "text":"All athletes have that moment where we realize we're not going to get there."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:05:22.25]",
+        "text":"When I ran for governor, the first thing that they said about me was \"Gary Johnson the triathlete is running for governor.\" I thought it was really cool because of all of the conjecture. \"What does a triathlete know about running government? Nothing!\"<br><br>But, there was a recognition that that's who I was, and it was something I worked at really hard. When it came to triathlons, I've always said I was mediocre in all these sports, but when I put them together in a triathlon, things worked pretty well.<br><br>Milestone 3: 1971, Age 18: Johnson enrolls in University of New Mexico and joins the Sigma Alpha Epsilon fraternity."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:06:04.05]",
+        "text":"You went to the University of New Mexico and joined a fraternity. I've never been to a university - I don't know if you know that about me or not - but can you describe to me what it was like?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:06:17.28]",
+        "text":"I’ve paid for everything I've had since I was 17 years old. Although my parents would loan me money, I always paid them back. In college, I worked all the time. I joined a fraternity, which was something I didn't think I would do. I was burning the candle at both ends working to put money in my pocket and pay for school. Coupling that with actually getting an education, skiing, athletics, hanging out, and having a few beers ... I remember being tired all the time."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:07:21.22]",
+        "text":"I can relate. I was in a fraternity and started a business in college. I would be at Starbucks until four in the morning, then up at nine or 10 to go to class. It was 18-hour days - it was nonstop. &nbsp;It was bit of survival and a bit of my belief in entrepreneurship.<br><br>One of my favorite things about your career is that you're a big time entrepreneur. It started in college, where in 1976, you're 22 years old, and you take your handyman job and call it Big J Enterprises.<br><br>Milestone 5: 1976, Age 22: Johnson turns his college handyman job into Big J Enterprises, a mechanical contracting business."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:07:53.19]",
+        "text":"It was in '74 that I started my one-man handyman business, and in '76 I made it official. I registered it and started paying taxes. When I was 17 years old, I started working construction jobs because those were the highest paying jobs. I got to be able to build a house on my own, then applied those skills to my handyman business."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:08:22.10]",
+        "text":"So you worked that job through college - was that your primary job while you were in school?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:08:30.28]",
+        "text":"For two years, I was working for other people, and when I was a junior in college, I had an epiphany.<br><br>I came home one day, and there was a circular on the doorstep. It said, \"Hey, we're a couple of kids who live in the neighborhood. We'll wash your car, rake leaves, or do whatever you want.\"<br><br>I thought, \"Hey, I could do this for my construction business,\" and it became \"College Student Needs Work: I'll do carpentry, painting, cement. Anything and everything. Satisfaction guaranteed. No obligation.\"<br><br>My cardiothoracic surgeon brother looked at the numbers, and every time I handed out 100 circulars, I ended up getting six jobs. I basically tripled my income in a very short amount of time, then I was off and running with my own business. I worked harder than ever, but then my senior year of college was the first year that I didn't have to work during the school year because I'd made enough money being in business.<br><br>Milestone 6: 1977, Age 23: Gary marries his college sweetheart, Denise \"Dee\" Simms."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:09:53.09]",
+        "text":"So you graduate from college, then start a family and become a dad. You have a daughter and a son?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:10:03.10]",
+        "text":"A daughter and a son. After college, I spent two winters in northern Idaho skiing - it's a 125-day season. I taught skiing for four years in Red River, New Mexico, and then I went to Sandpoint - Schweitzer Ski Basin - and taught there. I came to this epiphany that maybe there was more to life than riding a chairlift, though I can say today that no, it is the pinnacle of life.<br><br>Milestone 7: 1979, Age 26: Gary &amp; Dee welcome daughter Seah into world; she will join him on Mt. Everest climb 24 years later."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:10:53.14]",
+        "text":"So you were 25 when you had your daughter Seah.<br><br>Milestone 8: 1982, Age 27: Gary and Dee's family grows with the addition of son, Erik."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:11:00.19]",
+        "text":"I was 26 when my daughter, Seah, was born. Two years later, my son, Erik was born. My business was growing the whole time, and they're the two best kids of all time."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:11:19.02]",
+        "text":"Are they part of your career now?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:11:22.16]",
+        "text":"Seah was valedictorian of the University of Colorado, Boulder, out of 9000 students. When I ran in 2012 for president, Erik quit his well-paying job to be with me for two years, unpaid, because he couldn't miss it.<br><br>Now, Erik and his wife Lauren have a daughter - my granddaughter - Cora. He went back to school and got his degree in Oriental Medicine. He's an acupuncturist and herbologist extraordinaire."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:11:58.06]",
+        "text":"What is the origin of the name Seah?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:11:59.08]",
+        "text":"Seah was my wife's great-grandmother's name. It was spelled differently, but it was a cool name.<br><br>Milestone 9: 1986, Age 32: Gary's business, Big J, lands job for Intel plant expansion; revenue grows from $1.5M to $38M."
+     },
+     {
+       "time":"[00:12:21.28]",
+       "heading":"On going big - and staying healthy while burning the candle at both ends"
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:12:21.28]",
+        "text":"You had Erik, and your business lands a job for an Intel plant expansion. It grows from having revenue of $1.5 million to $38 million."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:12:32.27]",
+        "text":"A big break. Of course, you make your own luck, but one of the things I recognized early on in construction is that when you tell the truth, keep your word, do good by other people and guarantee your work, it's exponential. Everybody recommends you, and it continues to grow and grow.<br><br>One day I noticed early on that any time I had to subcontract out an electrician or a plumber or sheet metal, things didn't run as smoothly. I made an early decision to have all those trades in-house: mechanical, plumbing, general contracting.<br><br>I became Intel's Facilities Contractor in 1985. In 1987, the 286 chip happened, and when IBM announced that the first PC was going to be Microsoft and Intel processors, there was no looking back. The Intel facility in Rio Rancho was their flagship facility - it looks like it may be mothballed now because of the PC being dead - but they have about $35 billion in the facility."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:14:13.28]",
+        "text":"So you had ten steady years of entrepreneurship. You're 33, you have a couple of kids, you're beating your body up. Our Editorial Board found that there was a point in your life where you were overwhelmed with growth, then decided to be healthy and disciplined about exercise for the rest of your life.<br><br>Milestone 10, 1987, Age 33: Overwhelmed with growth of Big J, Gary commits to life-long healthy lifestyle and exercise regiment."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:14:36.24]",
+        "text":"I like to think I was very disciplined prior to 1987 when it comes to fitness, but in '87 I made a commitment to myself to be as fit as I could possibly be every day of my life. I've held to that ever since. Right now, as I am as fit as I could possibly be? Well, tomorrow I could ride 300 miles on my bicycle. It would probably get dark and then light, but I could do it.<br><br>Running for president is a 6 AM til midnight gig every single day. I do well because I am fit.<br><br>Milestone 11, 1993, Age 39: Gary commits to run for public office; settles on Governor of NM bid after early aim on US Senate."
+     },
+     {
+       "time":"[00:15:26.25]",
+       "heading":"On becoming a public servant while running a multimillion-dollar company"
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:15:26.25]",
+        "text":"So you have this long career starting a company, and you decide to become a public servant. Why?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:15:38.21]",
+        "text":"That goes way back to the fourth grade. Out of the blue, my fourth-grade grade teacher says to our class, \"Okay, we're going to have an election right now. Who among your classmates would you vote for to be President of the United States?\"<br><br>This wasn't announced. There was no campaign or anything. There was no nomination. But I was the next President of the United States in the fourth grade. I've always viewed politics as a high calling - the notion that you could actually be in a position to do good by others. I hesitate to use that term because good could be very different for somebody else, but that was always my intention.<br><br>I also came to grips early on, having gotten my degree in political science, with the fact that you can't succeed in politics without money. I also came to this epiphany that I didn't want to run for lower office because I thought it would involve having to solicit contributions, be in debt, or try to do things quid pro quo. I thought, maybe I should wait until I have the money myself, so then there wouldn’t be any sense of, \"This guy's for sale.\"<br><br>Milestone 12: 1994, Age 40: Gary's $500K investment and People before Politics slogan wins gubernatorial election (50%-40%).<br><br>I did do that. In my first campaign for Governor, in the primary, this is going to sound incredibly inexpensive, but I spent $540,000 - $510,000 was mine, and $30,000 came in the door in the last few days because it actually looked like I was going to win."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:17:37.10]",
+        "text":"So you financed it almost to the very end."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:17:42.06]",
+        "text":"Yeah. Once I won the nomination, I was just going to the mailbox and picking up checks, since there was a certain amount of contributions that came with that. But there was no quid pro quo, and I think people recognized that I wasn't for sale. I was about good government."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:18:01.25]",
+        "text":"It's inspiring. When you ran for governor, what were you going to do if you didn't win?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:18:08.25]",
+        "text":"In life, we're all in search of zen. I will describe zen as being in the moment - there's nothing more important than just being in the present. With regard to athletics, I find myself in the moment. I tell people that whatever it is that lets you find that state of zen - if it's golf, athletics, music, painting, or playing a musical instrument - you should find it and spend as much time there as you possibly can.<br><br>My time as Governor of New Mexico was very in the moment. It was magical.<br><br>Milestone 13: 1995, Age 41: Gary vetoes 200 of 424 bills passed by legislature in 1st 6 months in office; named Governor Veto.<br><br>Milestone 14: 1995, Age 41: Gary's 1st budget includes $0.06/gal gas tax cut; other proposed tax cuts are denied by legislature."
+     },
+     {
+       "time":"[00:19:05.03]",
+       "heading":"On his time as Governor of New Mexico - and winning reelection as a Republican in a predominantly Democratic state"
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:19:05.03]",
+        "text":"So your first budget included a 6 cent per gallon gas tax cut, and other tax cuts were denied by legislature. Maybe you can talk about your first acts as governor and what you learned in that first year?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:21:56.15]",
+        "text":"Milestone 16: 1998, Age 44: Johnson re-elected as Governor of NM (54.5%-45.5%); makes school voucher program his hallmark issue."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:22:08.00]",
+        "text":"My popularity went up, and I think one of the significant factors of running for reelection was that I controlled the debate process the second time. The first time, I debated my incumbent opponent a couple of times.<br><br>When I controlled the debate process, I debated my opponent, who I think was the strongest Democrat that they could've fielded, 28 times, which I think speaks volumes to the fact that people really want to see the process. Who knew better the job that I was seeking reelection for than me?"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:22:50.00]",
+        "text":"You made the school voucher issue your hallmark issue. How did it go?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:23:37.26]",
+        "text":"Milestone 18: 1999, Age 45: Gary becomes the highest ranking elected official in US to call for legalization of marijuana."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:27:10]",
+        "text":"Milestone 19: 1999, Age 45: Johnson sells Big J Enterprises, his construction company which made him a millionaire."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:27:23.22]",
+        "text":"A couple of factors made me sell it.<br><br>We were not getting the work we should've gotten. Being Governor of New Mexico was not a plus for business. I remember being a low bidder in a blind trust - there are varying degrees of blind trust, I'm not involved in the day-to-day but I do recognize what is happening - for a substation for a public service company in New Mexico, and we didn't get the job.<br><br>We had 500 people employed at the time. Not to say I would've done anything differently if I was PNM, but I wouldn't've wanted to be on the front page of the newspaper saying I was giving the governor of the state's company a contract. We also had a couple of big losses when I was serving as governor. I now recognize how these losses take place. I saw others involved in the construction business, and they really have a bite taken out of them at some point.<br><br>There are a couple of key components to being an entrepreneur: sharing the profits, what a formula that is! Sharing the profits when you get everybody pulling in the same direction is a magic formula to grow the pie. You get a smaller piece of the pie as the owner, but the pie is much, much bigger.<br><br>I also learned about hiring and firing. It's really easy to hire and nothing is harder than firing, but if you don't fire, you end up out of business. I think that's actually the difference between the private and the public sector. We elect people who have never hired and fired; they find it extremely easy to hire and impossible to fire.<br><br>When you fire somebody, it isn't that they're not working out; it's a mutual thing. It's not the job for them. You may be as much responsible for that as they are.<br><br>[00:30:29] Milestone 20: 1999, Age 45: Gary resists Libertarian recruitment for 2000 presidential bid; reaffirms Republican affiliation."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:30:40.16]",
+        "text":"In '99, I was a Republican governor in New Mexico. There are some realities about being in office and being in a party. You owe an allegiance to your party, but what I saw growing in 1999 that has just gotten worse is that I would always have to defend myself being a Republican and being socially liberal.<br><br>I happen to think that most Republicans are socially inclusive. Conservative, liberal, who cares? If your issue is smaller government, that was the Republican party that I joined and what interested me. More and more often, I was finding myself having to defend my not being a social conservative. That's become a Republican dogma of sorts; I think it's a turn off. It's not reflective of what most people think today; it's okay to not be reflective of what most people think, but how about being tolerant and inclusive as opposed to my way or the highway?<br><br>Milestone 22: 2002, Age 48: Gary and Dee both represent New Mexico in the World Ironman Triathlon in Hawaii."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:32:13.22]",
+        "text":"How did you work out and stay in shape as governor?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:32:27.20]",
+        "text":"Four AM, every morning! Maybe it was five AM, but it was a very strict regimen of getting up really early and working out for a couple of hours every single day. I was fortunate enough to do Hawaiian Ironman, the world championship, four times.<br><br>Milestone 24: 2003, Age 50: Gary, a world-class mountain climber, reaches the Summit of Mount Everest despite frostbitten toes."
+     },
+     {
+       "time": "[00:32:50.17]",
+       "heading": "On climbing Everest, the injury that changed his life, and his medical marijuana discovery"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:32:50.17]",
+        "text":"In 2003, you're 50 years old, and you do Everest with your daughter."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:33:02.23]",
+        "text":"She made it to base camp. My wife, Dee, almost did, but she had some issues. In 1993, a couple buddies and I climbed the summit of Denali - Mt. McKinley - in Alaska. We thought, \"We should do the Seven Summits\" - the highest mountains on each continent.<br><br>I read the book by Dick Bass, who was the first to do that, and I thought, when I read that in the late eighties, \"This would be a wonderful way to see the planet.\" It has worked out that way.<br><br>I've had the good fortune to climb the highest mountain on each continent. Everest was #2., During my reelection campaign in '98, my mom said, \"Please elect Gary for another term so he won't climb Everest.\""
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:34:13.01]",
+        "text":"Milestone 23: 2002, Age 48: Term-limited, Gary resigns from public office after 14 tax cuts, balanced NM budget and 750+ vetoes."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:34:16.12]",
+        "text":"My term came to an end."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:34:19.09]",
+        "text":"How did that feel?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:34:22.12]",
+        "text":"I knew that it was coming, and I thought, \"I survived this!\" Good government was easy. I think I did a really good job. I wrote my perfect epitaph."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:34:40.03]",
+        "text":"Did you miss it?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:34:40.03]",
+        "text":"Well, no, because I knew that eight years was the most that I could serve.<br><br>Milestone #26: 2005, Age 51: Gary is involved in near-death paragliding accident; uses medicinal marijuana for pain management."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:35:06.13]",
+        "text":"Tell us how that accident shaped your worldview today."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:35:12.26]",
+        "text":"I was involved in paragliding in a really big way. I was going to fly to the sun. In retrospect, paragliding didn't scare me - I loved it. It was unbelievable, but in 2005, I had been flying in Hawaii for a couple of weeks. On that particular morning in October, I took off first - they say not to take off first, but I took off first about half the time I was there - and then I took off from a really tight spot, which didn't allow for air, but I did that about half the time, too.<br><br>Anyway, I take off, then immediately realize I'm flying into the trees that for two weeks I'd been flying over. My harness got on top of the tree, and all I could think about was how tangled my wings were going to get in the tree, then how I was going to be tangled up also.<br><br>My harness sticks to the top of the tree, the wing stalls and collapses, and I just basically fall a straight 50 feet onto my back. I broke six ribs. I had a fracture of my 12T vertebrae. I'm an inch and a half shorter as a result. I tore my ACL. Those were the things that were identifiable, but everything got screwed up."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:36:53.13]",
+        "text":"How many years did you rehab for?"
+     },
+     {
+       "time": "[00:37:20.19]",
+       "heading": "On the worst things in life - and getting through them"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:37:20.19]",
+        "text":"Milestone 25: 2005, Age 51: Johnson announces divorce from wife of 28 years, Denise \"Dee\" Simms.<br><br>Milestone 26: 2006, Age 52: Gary's ex-wife, Dee, is found dead (from heart disease) in her Taos Ski Valley home."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:37:45.08]",
+        "text":"That was the worst thing in my life. It wasn't supposed to happen. The biggest casualty of my time as governor was that Dee and I grew apart. After we divorced, she died - cardiac failure - and that wasn't supposed to happen. It was horrible.<br><br>Milestone 28: 2008, Age 54: Gary meets real estate agent Kate Prusack during a bike race in Santa Fe; the couple begins dating."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:38:10.04]",
+        "text":"You meet Kate later in life."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:38:13.22]",
+        "text":"We meet in 2005, and we get together in 2008."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:38:23.26]",
+        "text":"You met on a bike race?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:38:26.24]",
+        "text":"We met on a bike ride in 2005, but we share the same passion. We've been together since 2008 - I'm in love. We've been engaged for seven years - maybe one of these days ..."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:38:45.00]",
+        "text":"When you're in the White House, the Lifemap will update with your marriage photos.<br><br>Milestone 29, 2008, Age 54: Gary endorses Ron Paul in 2008 Replublican Presidential nomination."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:39:04.08]",
+        "text":"I called up, asked about it, and said, \"Yes, of course.\" I went and spoke for him in Minnesota at the Ron Paul Convention, and there was no question about doing that.<br><br>Milestone 32: 2010, Age 56: Gary joins Advocacy Council to the nonprofit group Students for Sensible Drug Policy.<br><br>Milestone 34: 2011, Age 57: Gary joins Bd. of Directors on Students of Liberty, an American libertarian non-profit organization."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:39:39.15]",
+        "text":"Are there any other organizations you joined around that time?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:39:50.20]",
+        "text":"I actually joined that much earlier. I've been on the board of Students for Sensible Drug Policy since 2000, maybe even 1999, as well as the Marijuana Policy Project. After having been governor, I could be an honorary member of both of those boards, as well as Ethan Nadelmann's group, Drug Policy Alliance. They're very, very helpful."
+     },
+     {
+       "time": "[00:40:59.16]",
+       "heading": "On being pushed away from the Republican Party - and the power of the Libertarian movement"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:40:59.16]",
+        "text":"At this point, you're starting to get recruited back into politics. What was that like?<br><br>Milestone 35: 2011, Age 57: Johnson announces (via Twitter) his intent to run for the 2012 Republican presidential nomination."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:41:19.13]",
+        "text":"I started the process to run as a Republican in 2009, announced in 2011, and in December changed to run for the Libertarian Party. I really felt that I was unfairly excluded from the process, and it was the Republican National Committee that didn't stand up for my not being included in the polls that determined who was in the debates.<br><br>In the 2012 cycle, I was the only social liberal on the stage. I do say socially inclusive, but I am socially liberal. I don't care what anybody is so long as you don't force it on me, but it led me to finally realize that I didn't have a place in the Republican Party.<br><br>Milestone 36: 2011, Age 57: Gary abandons Republican campaign to seek Libertarian Party nomination; secures nom. 6 months later.<br><br>Milestone 38: 2012, Age 58: Gary's 0.99% voteshare in pres. election misses 5% goal needed to benefit future Lib. candidates."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:42:33.28]",
+        "text":"In 2012, I was the Libertarian candidate for president. I ended up getting 1% of the vote, which I was really disappointed in. We weren't running any polling or anything, but I thought it'd be more votes than that. That was 1.3 million votes, and to come from completely outside of presidential politics and have that happen as a third party candidate was very significant - it was something that could be built on.<br><br>Fast forward to this cycle. I thought Hillary Clinton was going to be the nominee for sure, but if you go back 10 months, I really thought that Donald Trump wasn’t going to be the nominee. Back then, he'd said 50 things that disqualified him from being president. Now he's said 150 that would disqualify anyone else.<br><br>I didn’t connect the dots on pay to play and the Clinton Foundation until just a few weeks ago. I'm convinced that they did sell access, as former president Bill Clinton did with his speaking fees. I always thought that was payola for his having been president, but it was also access to Hillary as Secretary of State.<br><br>I have not received one penny from politics.<br><br>It's about life, and if you did everything in your life you could possibly do when you're on your deathbed - \"Did I do it all right?\" I'm thinking I'm going to feel really good about that.<br><br>I haven't mentioned this before, but I don't owe anybody any money. I don't have a home mortgage. I don't owe anyone anything. It doesn't take much money to achieve that, but I have achieved that - my liberty, my freedom. I always try to stress that to people - don't borrow money. When it comes to a home, I understand, but when it comes to a car, even - for a thousand dollars you can buy a car. Why not do that until you can buy a new one?"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:45:32.10]",
+        "text":"You run in 2012 as a Libertarian. You're running today as a Libertarian. What are some of the takeaways from running your campaign?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:46:24.00]",
+        "text":"Milestone 39: 2013, Age 59: Gary cites lack of transparency in US government and failure to properly manage NSA."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:46:45.03]",
+        "text":"My understanding, as I sit here right now, is that the NSA was an executive order signed by Truman. If that's really the case, I'm going to turn the satellites away from you and I as US citizens. If there's a terrorist suspect, to me there is due process, and courts can be presented with evidence that we want to monitor said individual.<br><br>To me, due process is not a FISA court granting access to 110 million Verizon users. I don't think any of us are aware of any of that data collection resulting in a thwarted terrorist attack of any kind. When Edward Snowden asked Putin if Russia was engaged in spying on its citizens, the response was that they couldn't afford to do something like that. We can't afford to do it either - not from a dollar standpoint, but because this is not what America is.<br><br>[00:48:31.00] Milestone 41: 2013, Age 59: Gary founds Our America Initiative PAC which will support libertarian-minded causes."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:48:49.15]",
+        "text":"I really believe this is the death knell for Republicans. I think they've lost touch. For future Republicans, this is what's going to happen: both parties have become so polarized that the Libertarian Party is now occupying a six-lane highway down the middle of what Trump and Clinton are offering, and speaking very broadly of being fiscally conservative, socially inclusive, and being skeptical of regime change.<br><br>I can't think of one example in my lifetime in which regime change has resulted in things being better.<br><br>[00:49:38.00] Milestone 42: 2014, Age 60: Gary appointed CEO of Cannabis Sativa Inc., a NV-based company selling medical cannabis products."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:51:52.00]",
+        "text":"Milestone 43: 2014, Age 60: Johnson reaffirms his intention to run for the 2016 Libertarian presidential nomination.<br><br>Milestone 44: 2014, Age 60: Gary reaches summit of Mt. Vinson in Antarctica, the last of the highest point on all 7 continents."
+     },
+     {
+       "time":"[00:53:30]",
+       "heading":"On running mate Bill Weld, his vision for the White House, and open partnership"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:53:30]",
+        "text":"Milestone 45: 2016: Age 62: Johnson resigns as CEO of Cannabis Sativa Inc.; speculation over presidential run rises.<br><br>Milestone 46: 2016: Age 62: Gary launches Libertarian presidential bid; announces former MA Governor Bill Weld as running mate."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:53:52.12]",
+        "text":"Bill Weld was a political role model for me as governor. In his first term, he had the highest grade that Cato had, and I really view them as the Libertarian think tank. At Cato, a lot of people are very practically dedicated to libertarian thought. In 1997, Bill Weld accepts from Bill Clinton the nomination to be ambassador to Mexico. In 1997, Jesse Helms blocks BIll Weld's nomination because Bill Weld is pro-choice, he's pro-gay rights, he's pro-medical marijuana. This is 1997.<br><br>In 1997, this was how I wanted to end up at some point. When I became a registered libertarian for the first time in my life, it was like I'd had this burden taken off my shoulders. I can be who I am. Interestingly, when Bill Weld registered as a libertarian to run as the vice presidential nominee, he said the same thing.<br><br>When I became governor, Bill Weld was known as the smartest governor in the room, and that's who I saw. I saw humility behind being really, really smart. Bill Weld, governor of Massachusetts, is all about smaller government in a state that's four-to-one democrat. On his first day in office, he furloughs 8000 state employees, and he never gets any real criticism over it because in his words, they weren't really doing anything.<br><br>Neither of us held office prior to becoming governors, so we had the same experience. We didn't know that there were sacred cows, so we both thrived doing what was best for citizens. I think it speaks volumes running for president and vice president, that we'll be able to deliver on what we say we're going to do."
+     },
+     {
+        "narrator":"Cyan Banister",
+        "time":"[00:57:02.27]",
+        "text":"You’ve announced that you're going to run government together, share staff, and share expenses."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:57:10.07]",
+        "text":"An open partnership. Another pledge I'm making as president is that I'm going to be the most frugal president in our lifetimes. When the president travels anywhere, it's in a 747, and traffic gets snarled wherever he goes. It seems like there ought to be a much smarter way to travel, and if there's not a smarter way, why travel?"
+     },
+     {
+       "time": "[00:57:52.03]",
+       "heading": "On life lessons, America, and honesty"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:57:52.03]",
+        "text":"Take it back to your 20-year-old self. What's your biggest takeaway from that time in your life?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:58:05.23]",
+        "text":"How hard I worked. I worked my fingers to the bone, and it paid off, but it was really, really hard. I did a lot of things that set the stage for my sitting here today, and set a lot of goals for myself, and I believed that ultimately I was going to come out of the equation on top - all this hard work was going to pay off - and it did. I know that a lot of hard work often doesn't lead to success - it's just a lot of hard work - but I don't think you can get there without it."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[00:59:00.04]",
+        "text":"Reid Hoffman says that entrepreneurship is like jumping off a cliff and trying to assemble the airplane on the way down."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[00:59:12.02]",
+        "text":"That's a good analogy. As an entrepreneur, you don't know how you're going to get to the end. You've got your hands on something that you know is very successful, then it becomes an issue of resources, will, work, and all of that. Oftentimes, it doesn't turn out like it should.<br><br>I always tell people to apply whatever they know entrepreneurially. You'll never regret potentially succeeding by creating your own job - and jobs for others.<br><br>Has life ever been better in this country? We get along better with one another, we communicate better, our kids are smarter than ever. We've got issues right now. All lives matter, but black lives matter for a reason. Blacks are getting shot at a rate six times higher than whites. If you're arrested for a drug related crime, you're four times more likely to go to prison. It shows up in our arrest rates. We have the highest incarceration rates of any country in the world. It's a big issue facing all of us right now, but I think we're going to work through this issue quicker and more efficiently than we would've even a handful of years from now."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[01:01:22.24]",
+        "text":"You're 100 years old, you're about to..."
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[01:01:25.29]",
+        "text":"Unless I die of impact, I think I'm going to live that long."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[01:01:29.25]",
+        "text":"What do you want the world to remember you for and by?"
+     },
+     {
+        "narrator":"Gary Johnson",
+        "time":"[01:01:30.07]",
+        "text":"Just that this was one honest character. Whether you agreed or disagreed with him, he had a compass, he wasn't a hypocrite, he never said one thing and did another. There was certainty to everything he did. <br><br>When it comes to me, I hope people get this as a takeaway: be certain that I'm genuinely going to look at these issues, analyze them, and make a decision of whether or not to support legislation - or oppose it - based on if it makes things better. If it makes things better, even incrementally, I'm there."
+     }
+  ]
 }
