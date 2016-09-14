@@ -17,7 +17,11 @@
     "mp3": "",
     "viframe": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgovgaryjohnson%2Fvideos%2F10153312003129364%2F&show_text=0&width=400"
   },
-  "transcript": [
+  "transcript2": [
+     {
+       "heading":"On parents, growing up, and how Albuquerque surprised him as a teen",
+       "time":"[00:00:58.15]"
+     },
      {
         "narrator":"Chris McCoy",
         "time":"[0:00]",
@@ -32,10 +36,6 @@
         "narrator":"Gary Johnson",
         "time":"[00:00:56.20]",
         "text":"Thank you both."
-     },
-     {
-       "heading":"On parents, growing up, and how Albuquerque surprised him as a teen",
-       "time":"[00:00:58.15]"
      },
      {
         "narrator":"Cyan Banister",
@@ -63,6 +63,10 @@
         "text":"And a wonderful mom."
      },
      {
+       "time": "[00:02:31.28]",
+       "heading": "On athletics, education, building businesses, and where they all intersect"
+     },
+     {
         "narrator":"Chris McCoy",
         "time":"[00:02:04.24]",
         "text":"Your dad's like Captain America."
@@ -71,10 +75,6 @@
         "narrator":"Gary Johnson",
         "time":"[00:02:07.26]",
         "text":"He grew up as an athlete, so he was always competitive. My father always told me that if I beat him in anything, I'd know I'd really beaten him because he was out to win all the time. The first thing I beat my father in was chess.<br><br>Milestone 2, 1971, Age 17: Gary graduates from Sandia High School in Albuquerque, New Mexico where he was on the track team."
-     },
-     {
-       "time": "[00:02:31.28]",
-       "heading": "On athletics, education, building businesses, and where they all intersect"
      },
      {
         "narrator":"Chris McCoy",
