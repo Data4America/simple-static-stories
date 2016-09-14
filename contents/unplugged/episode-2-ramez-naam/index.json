@@ -31,11 +31,11 @@
       "name": "Citizens Led on Gay Marriage and Pot. We Can on Climate Change Too.",
       "url": "http://rameznaam.com/2015/07/15/citizens-can-lead-on-climate-change-in-wa-and-then-nationwide/"
     },
-    "host": {
+    "host": [{
       "name": "Chris McCoy",
       "twitter": "https://twitter.com/chrisamccoy",
       "linkedin": "https://www.linkedin.com/in/chrisamccoy"
-    },
+    }],
     "iframe": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/265029163&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false&amp;color=CF1A1A",
     "mp3": "https://s3-us-west-2.amazonaws.com/media.data4america.org/2.Ramez+Naam2__finalbounce.mp3",
     "moreLinks": true
