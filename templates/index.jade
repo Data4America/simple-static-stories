@@ -3,29 +3,22 @@ extends layout
 block content
 
   include author
-  each article in articles
-    if locals.development || article.metadata.published
-      article.article.ui.segments
-        div.ui.segment.dfa-article-header
-          div.ui.items
-            div.item
-              div.image
+  div.dfa-feed.ui.three.column.stackable.grid
+    each article in articles
+      div.column.center.aligned
+        if locals.development || article.metadata.published
+          div.dfa-feed-item.ui.segment.basic
+            div.image.dfa-feed-image
+              a(href=article.url)
                 img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
-              div.content
-                h1.ui.header
-                  a(href=article.url).article-title-link= article.title
-                div.extra Published on: 
-                  span= moment.utc(article.date).format('MMMM D, YYYY')
-
-        div.ui.segment
-          mixin author(article.metadata.author)
-
-        div.ui.segment
-          if article.intro.length > 0
-            != typogr(article.intro).typogrify()
-          if article.hasMore
-            p.more
-              a(href=article.url) more
+            h1.ui.large.header
+              a(href=article.url).article-title-link= article.title
+                
+            mixin author(article.metadata.author) 
+            div.extra 
+              span(style="color:#a9a9a9;")= moment.utc(article.date).format('MMMM D, YYYY')                   
+            div.ui.clearing.divider
+                
 
 block footer
   div.ui.segment

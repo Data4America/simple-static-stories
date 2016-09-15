@@ -13,8 +13,8 @@
 
 @import (multiple) 'semantic/theme.config';
 
-html, body {
-  background: #FAFAFA;
+html, body, header {
+  background: #FFFFFF;
 }
 
 @import "donate.less";
@@ -348,9 +348,6 @@ html, body {
 /*-------------------
       MAIN HEADER
 --------------------*/
-header {
-  background: #FAFAFA;
-}
 
 #fixed-share-btn {
   text-align: center;
@@ -705,7 +702,7 @@ header {
     COVER
 --------------------*/
 #dfa-cover {
-  height: 340px;
+  height: 260px;
   background: url(/img/bg.jpg) center center;
   background-size: cover;
   cursor: pointer;
@@ -803,7 +800,53 @@ header {
 
 #dfa-content {
   padding: 0 0 20px;
-  background: #FAFAFA;
+  background: #FFFFFF;
+  .dfa-feed {
+    .dfa-feed-item {
+      .ui.large.header a {
+        transition: all 0.5s ease;
+        color:#000000;
+        font-weight: 300;
+      }
+      .image.dfa-feed-image {
+        transition: all 0.5s ease;
+        opacity:1;
+      }
+    }
+    .dfa-feed-item:hover {
+      .ui.large.header a {
+        color:#CF1A1A;
+      }
+      .image.dfa-feed-image {
+        opacity:0.5;
+      }
+    }
+  }
+}
+
+.dfa-article {
+  max-width: 700px;
+  margin: 0 auto !important;
+  .header {
+    font-size:4em !important;
+  }
+  .extra {
+    display: inline-block !important;
+    width: auto !important;
+    margin-left: 1em !important;
+    line-height: 0.9;
+  }
+  section.content{
+    font-size: 1.5em;
+  }
+  @media only screen and (max-width: @largestMobileScreen) {
+    section.content {
+      font-size: 1.2em;
+    }
+    .header {
+      font-size:3em !important;
+    }
+  }
 }
 
 #dfa-content p {

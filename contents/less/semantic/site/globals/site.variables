@@ -6,13 +6,13 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Lato';
+@fontName          : 'Roboto Condensed';
 @fontSmoothing     : antialiased;
 
 @headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 @pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
-@googleFontSizes   : '300,400,700,300italic,400italic,700italic';
+@googleFontSizes   : '400,400i,700';
 
 @importGoogleFonts : true;
 
