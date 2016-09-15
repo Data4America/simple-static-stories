@@ -42,10 +42,11 @@ block content
           h3.ui.header.sub-title=podcast.session
         div.description
           p
-            each item, i in podcast.desc
-              span.line
-                !=item
-                =(i < (podcast.desc.length - 1) ? ', ' : '')
+            if podcast.desc
+              each item, i in podcast.desc
+                span.line
+                  !=item
+                  =(i < (podcast.desc.length - 1) ? ', ' : '')
 
           if podcast.host
             p
@@ -186,4 +187,3 @@ block content
                       div.ui.header.left.aligned(style="font-size:1.5em;display:block")=item.narrator
                       p(style="text-align:left;margin:0px;")=item.time
                       div.description(style="text-align:left;margin:0px;")!=item.text
-

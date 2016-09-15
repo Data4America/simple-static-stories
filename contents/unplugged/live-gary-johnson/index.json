@@ -6,19 +6,6 @@
     "session": "LIVE",
     "artwork": "/img/unplugged-garyjohnson-600.jpg",
     "link": "/unplugged/episode-1-greg-ferenstein",
-    "desc": [
-      "Gary Earl Johnson is an American businessman, author, politician, and the Libertarian Party nominee for President of the United States in the 2016 election."
-    ],
-    "host": [
-      {
-        "name": "Chris McCoy",
-        "twitter": "https://twitter.com/chrisamccoy"
-      },
-      {
-        "name": "Cyan Bannister",
-        "twitter": "https://twitter.com/cyantist"
-      }
-    ],
     "twitter": "GovGaryJohnson",
     "viframe": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgovgaryjohnson%2Fvideos%2F10153312003129364%2F&show_text=0&width=400"
   },
