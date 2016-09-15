@@ -22,7 +22,7 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 10
+    "perPage": 12
   },
   "baseUrl": "/",
   "nap": {
