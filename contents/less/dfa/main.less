@@ -20,6 +20,8 @@ html, body {
 @import "donate.less";
 @import "article.less";
 @import "sponsorship.less";
+@import "slick.less";
+@import "slick-theme.less";
 
 /*-------------------
       FONTS
@@ -139,6 +141,12 @@ html, body {
     box-shadow:none;
     .header {
       color: #0096DB;
+    }
+  }
+  .ui.items {
+    margin-top:0px;
+    .ui.small.image {
+      margin-bottom:1em;
     }
   }
 }
@@ -350,6 +358,40 @@ html, body {
 --------------------*/
 header {
   background: #FAFAFA;
+}
+
+.dfa-slider {
+  background-color:#000000;
+  margin:4em 0px;
+  .dfa-slider-image {
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    background-repeat: no-repeat;
+  }
+  button {
+    height:40px;
+    width:40px;
+  }
+  button.slick-prev {
+    left: 10px;
+    z-index: 10;
+  }
+  button.slick-next {
+    right: 10px;
+    z-index: 10;
+  }
+  button.slick-prev:before {
+    font-size: 40px;
+  }
+  button.slick-next:before {
+    font-size: 40px;
+  }
+  @media only screen and (max-width: @largestMobileScreen) {
+    .dfa-slider-image {
+      height: 240px;
+    }
+  }
 }
 
 #fixed-share-btn {

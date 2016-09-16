@@ -102,6 +102,12 @@ block content
             
         if podcast.viframe
           div.embed <div class="fb-video" data-href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/" data-show-text="false"><blockquote cite="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/"></a><p>Coming to you LIVE from San Francisco with Data4America talking about my life story!</p>Posted by <a href="https://www.facebook.com/govgaryjohnson/">Gary Johnson</a> on Wednesday, August 31, 2016</blockquote></div>
+        
+        if podcast.images
+          div.dfa-slider
+            each image in podcast.images
+              div.dfa-slider-image(style="background-image:url("+ image +");")
+        
         p.media
           if podcast.mp3
             a.play-on-d4a(href="javascript:;")
@@ -175,13 +181,12 @@ block content
                 div.item(style="margin:1em 0px;")
                   div.content
                     if item.heading
+                      div.ui.header.section-heading(id='sec-' + index)
+                        =item.heading
                       if index !== 0
-                        div.ui.divider
                         a(href="#transcript")
                           i.angle.up.icon
                           |  Back to Top
-                      div.ui.header.section-heading(id='sec-' + index)
-                        =item.heading
                     else
                       div.ui.divider
                       div.ui.header.left.aligned(style="font-size:1.5em;display:block")=item.narrator
