@@ -3,7 +3,7 @@ title: LifeMap Hillary Clinton
 author: data-for-america
 date: 2016-07-28
 template: article.jade
-description: "We have created a lifemap for Hillary Clinton."
+description: "Hillary Diane Rodham Clinton is an American politician and the nominee of the Democratic Party for President of the United States in the 2016 election."
 noFooter: true
 isLifemap: true
 article: true

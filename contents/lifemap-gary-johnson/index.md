@@ -3,7 +3,7 @@ title: LifeMap Gary Johnson
 author: data-for-america
 date: 2016-07-25
 template: article.jade
-description: "We have created a lifemap for Gary Johnson."
+description: "Gary Earl Johnson is an American businessman, author, politician and the Libertarian Party nominee for President of the United States in the 2016 election."
 noFooter: true
 isLifemap: true
 article: true

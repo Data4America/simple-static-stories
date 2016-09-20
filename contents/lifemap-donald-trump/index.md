@@ -3,7 +3,7 @@ title: LifeMap Donald Trump
 author: data-for-america
 date: 2016-02-16
 template: article.jade
-description: "We have created a lifemap for Donald Trump."
+description: "Donald John Trump is an American businessman, television personality, author, politician, and the Republican Party nominee for President of the United States in the 2016 election."
 noFooter: true
 isLifemap: true
 article: true

@@ -3,7 +3,7 @@ title: LifeMap Bernie Sanders
 author: data-for-america
 date: 2015-12-08
 template: article.jade
-description: "We have created a lifemap for Bernie Sanders."
+description: "Senator Bernie Sanders is America's longest-serving independent politician in Congress and sought the Democratic nomination for president in 2016."
 noFooter: true
 isLifemap: true
 article: true
