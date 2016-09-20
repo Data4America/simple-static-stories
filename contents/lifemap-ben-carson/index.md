@@ -3,7 +3,7 @@ title: LifeMap Ben Carson
 author: data-for-america
 date: 2015-12-04
 template: article.jade
-description: "We have created a lifemap for Ben Carson."
+description: "Benjamin Solomon \"Ben\" Carson, Sr. is an American retired neurosurgeon and former candidate for President of the United States."
 noFooter: true
 isLifemap: true
 article: true

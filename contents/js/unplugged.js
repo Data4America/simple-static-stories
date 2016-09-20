@@ -175,7 +175,7 @@
     // and the position does not seem to increase
     // and the player isn't manually paused...
     if (
-            !bufferingDetected 
+            !bufferingDetected
             && currentPlayPos < (lastPlayPos + offset)
             && !player.paused
         ) {
@@ -188,7 +188,7 @@
     // if we were buffering but the player has advanced,
     // then there is no buffering
     if (
-        bufferingDetected 
+        bufferingDetected
         && currentPlayPos > (lastPlayPos + offset)
         && !player.paused
         ) {
@@ -225,7 +225,7 @@
       }
       //get parent element position in document
       if (obj.offsetParent){
-          do{ 
+          do{
               e_posx += obj.offsetLeft;
               e_posy += obj.offsetTop;
           } while (obj = obj.offsetParent);

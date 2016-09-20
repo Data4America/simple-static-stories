@@ -38,21 +38,21 @@ html(lang='en')
             a.fixed-btn.ui.huge.primary.button
               i.plus.icon
             div.ui.flowing.popup.top.left.transition.hidden
-              div.ui.header
-                p Connect with
-                  br
-                  span.dfa-text
-                    | DATA
-                    span.f 4
-                    | AMERICA
+              p.ui.header Connect with
+                span.dfa-text
+                  |  D
+                  span.f 4
+                  | A
 
-              div.fb-like(data-href='https://www.facebook.com/data4america', data-layout='button_count', data-action='like', data-size='large', data-show-faces='true', data-share='true')
+              div.fb-like(data-href='https://www.facebook.com/data4america', data-layout='button_count', data-action='like', data-size='large', data-show-faces='true')
               div.ui.divider
 
               a.twitter-follow-button(href='https://twitter.com/data4america', data-size='large', data-show-count='false') Follow @data4america
               div.ui.divider
 
-              div.ui.red.fluid.button.subscribe Email Subscribe
+              div.ui.red.fluid.button.subscribe
+                i.send.outline.icon
+                | Email Subscribe
           
           #dfa-subscribe-modal.ui.small.modal
             i.close.icon
@@ -244,8 +244,6 @@ html(lang='en')
           block footer
 
       div.ui.container.text(style="margin-bottom:80px;")
-          
-        div#dfa-logo-footer
 
         div#dfa-menu-footer.ui.four.item.main.menu
           a.item(href="/about/") ABOUT
@@ -348,6 +346,8 @@ html(lang='en')
             | America 
           |  publish Editorial Board-approved data science and data visualization about politics. 
           a.dfa-btn-donate(href="javascript:;") Make a donation.
+          
+        div#dfa-logo-footer
           
         div#dfa-as-seen-in
           div.as-seen-in-header

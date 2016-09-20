@@ -430,6 +430,7 @@ $(document).ready(function() {
   }
 
   showFixedButton();
+  initSlider();
 
 });
 
@@ -448,5 +449,15 @@ function showFixedButton() {
 function hideEmailForm() {
   if ($('#dfa-email').css('display') === 'block') {
     $('#dfa-email').transition('slide up');
+  }
+}
+
+function initSlider() {
+  var $dfaSlider = $('.dfa-slider');
+  if ($dfaSlider) {
+      $dfaSlider.slick({
+        dots: true,
+        adaptiveHeight: true
+      });
   }
 }

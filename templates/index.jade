@@ -5,20 +5,20 @@ block content
   include author
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
-      div.column.center.aligned
+      div.column
         if locals.development || article.metadata.published
-          div.dfa-feed-item.ui.segment.basic
-            div.image.dfa-feed-image
-              a(href=article.url)
+          div.dfa-feed-item
+            a.item-link(href=article.url)
+              div.item-image
                 img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
-            h1.ui.large.header
-              a(href=article.url).article-title-link= article.title
-                
-            mixin author(article.metadata.author) 
-            div.extra 
-              span(style="color:#a9a9a9;")= moment.utc(article.date).format('MMMM D, YYYY')                   
-            div.ui.clearing.divider
-                
+              div.item-meta
+                h1.ui.large.header.item-title= article.title
+                div.item-text!= article.metadata.description
+
+                mixin author(article.metadata.author)
+                div.extra 
+                  span(style="color:#a9a9a9;")= moment.utc(article.date).format('MMMM D, YYYY')
+
 
 block footer
   div.ui.segment

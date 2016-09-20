@@ -3,7 +3,7 @@ title: LifeMap Jill Stein
 author: data-for-america
 date: 2016-08-27
 template: article.jade
-description: "We have created a lifemap for Jill Stein."
+description: "Jill Ellen Stein is an American physician, activist, politician, and perennial candidate. She is the Green Party's nominee for President of the United States in the 2016 election."
 noFooter: true
 isLifemap: true
 article: true
@@ -11,7 +11,7 @@ published: true
 ---
 
 <p>
-  Jill Ellen Stein is an American physician, activist, politician, and perennial candidate. She is the Green Party's nominee for President of the United States in the 2016 election.
+  
 </p>
 ---
 <p>

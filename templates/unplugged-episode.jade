@@ -24,11 +24,7 @@ block content
 
     div#dfa-unplugged.episode
       div.podcast(data-url=(podcast.mp3 ? podcast.mp3 : ''), data-guest=podcast.guest)
-        a.image(href=podcast.link)
-          img(src=podcast.artwork)
-        h1.ui.header.title Uplugged:
-          !='&nbsp;'
-          =podcast.guest
+        h1.ui.header.title=podcast.guest
           if podcast.twitter
             a(href='https://twitter.com/' + podcast.twitter, target="_blank")
               i.ui.twitter.square.icon(style="color:#00ABF1; margin-right:0px; margin-left:5px;")
@@ -38,14 +34,31 @@ block content
           if podcast.www
             a(href=podcast.www, target="_blank")
               i.ui.world.icon(style="margin-right:0px;")
+              
+        if podcast.subtitle
+          h3.ui.header.sub-title=podcast.subtitle
         if podcast.session
           h3.ui.header.sub-title=podcast.session
+          
+        if podcast.sponsor  
+          a.dfa-sponsor(href='https://www.wired.com/2016/09/gary-johnson-looks-perfectly-ease-vr-headset-face/', target='_blank')
+            span AS FEATURED ON
+            img.ui.image.small(src='/img/wired-logo.png', alt='Wired')
+          
+        if podcast.transcriptLink
+          a(href="#transcript", style="font-size:1.1em; display:block; margin:1em 0px;")
+            i.ui.blue.text.file.outline.icon
+            |  Read Transcript
+            
+        a.image(href=podcast.link)
+          img(src=podcast.artwork)
         div.description
           p
-            each item, i in podcast.desc
-              span.line
-                !=item
-                =(i < (podcast.desc.length - 1) ? ', ' : '')
+            if podcast.desc
+              each item, i in podcast.desc
+                span.line
+                  !=item
+                  =(i < (podcast.desc.length - 1) ? ', ' : '')
 
           if podcast.host
             p
@@ -95,12 +108,25 @@ block content
               a(href="javascript:;")
                 i.chevron.down.icon
                 span More Details
+
         if podcast.iframe
           div.embed
             iframe(width="100%", height="110", scrolling="no", frameborder="no", src!=podcast.iframe)
-            
+
         if podcast.viframe
+          h1.ui.header
+           a(href=podcast.videoTitle.link)
+             img(style="display:inline-block;" src=podcast.videoTitle.image).ui.tiny.image
+             span(style="margin:0 0 0 0.2em;")=podcast.videoTitle.text
+           
           div.embed <div class="fb-video" data-href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/" data-show-text="false"><blockquote cite="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/"></a><p>Coming to you LIVE from San Francisco with Data4America talking about my life story!</p>Posted by <a href="https://www.facebook.com/govgaryjohnson/">Gary Johnson</a> on Wednesday, August 31, 2016</blockquote></div>
+
+        if podcast.images
+          h1.ui.header Photos from Unplugged
+          div.dfa-slider
+            each image in podcast.images
+              div.dfa-slider-image(style="background-image:url("+ image +");")
+
         p.media
           if podcast.mp3
             a.play-on-d4a(href="javascript:;")
@@ -158,7 +184,7 @@ block content
         if page.metadata.transcript2
 
           section#transcript-section.two
-            h2.ui.header#transcript Transcript
+            h1.ui.header#transcript Transcript
             - var transcript = page.metadata.transcript2
 
             div.ui.list.section-toc
@@ -174,16 +200,14 @@ block content
                 div.item(style="margin:1em 0px;")
                   div.content
                     if item.heading
+                      div.ui.header.section-heading(id='sec-' + index)
+                        =item.heading
                       if index !== 0
-                        div.ui.divider
                         a(href="#transcript")
                           i.angle.up.icon
                           |  Back to Top
-                      div.ui.header.section-heading(id='sec-' + index)
-                        =item.heading
                     else
                       div.ui.divider
                       div.ui.header.left.aligned(style="font-size:1.5em;display:block")=item.narrator
                       p(style="text-align:left;margin:0px;")=item.time
                       div.description(style="text-align:left;margin:0px;")!=item.text
-
