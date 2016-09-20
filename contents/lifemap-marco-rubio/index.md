@@ -1,9 +1,9 @@
 ---
-title: LifeMap Marco Rubio
+title: "LifeMap: Marco Rubio"
 author: data-for-america
 date: 2016-01-31
 template: article.jade
-description: "We have created a lifemap for Marco Rubio."
+description: "Marco Antonio Rubio is an American politician and attorney, and the junior United States Senator from Florida."
 noFooter: true
 isLifemap: true
 article: true

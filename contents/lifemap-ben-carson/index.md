@@ -1,5 +1,5 @@
 ---
-title: LifeMap Ben Carson
+title: "LifeMap: Ben Carson"
 author: data-for-america
 date: 2015-12-04
 template: article.jade

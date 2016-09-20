@@ -1,9 +1,9 @@
 ---
-title: LifeMap Mike Pence
+title: "LifeMap: Mike Pence"
 author: data-for-america
 date: 2016-08-17
 template: article.jade
-description: "We have created a lifemap for Mike Pence."
+description: "Michael Richard \"Mike\" Pence is an American politician, attorney and Governor of Indiana."
 noFooter: true
 isLifemap: true
 article: true

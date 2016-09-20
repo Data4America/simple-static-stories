@@ -1,5 +1,5 @@
 ---
-title: LifeMap Larry Ellison
+title: "LifeMap: Larry Ellison"
 author: data-for-america
 date: 2016-08-24
 template: article.jade

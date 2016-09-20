@@ -1,9 +1,9 @@
 ---
-title: LifeMap Sheryl Sandberg
+title: "LifeMap: Sheryl Sandberg"
 author: data-for-america
 date: 2016-01-30
 template: article.jade
-description: "We have created a lifemap for Sheryl Sandberg."
+description: "Sheryl Kara Sandberg is an American technology executive, activist, and author."
 noFooter: true
 isLifemap: true
 article: true

@@ -1,5 +1,5 @@
 ---
-title: LifeMap Hillary Clinton
+title: "LifeMap: Hillary Clinton"
 author: data-for-america
 date: 2016-07-28
 template: article.jade

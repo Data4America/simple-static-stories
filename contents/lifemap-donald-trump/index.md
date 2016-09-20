@@ -1,5 +1,5 @@
 ---
-title: LifeMap Donald Trump
+title: "LifeMap: Donald Trump"
 author: data-for-america
 date: 2016-02-16
 template: article.jade

@@ -1,9 +1,9 @@
 ---
-title: LifeMap Rand Paul
+title: "LifeMap: Rand Paul"
 author: data-for-america
 date: 2016-01-18
 template: article.jade
-description: "We have created a lifemap for Rand Paul."
+description: "Randal Howard \"Rand\" Paul is an American politician and physician. Since 2011, Paul has served in the United States Senate as a member of the Republican Party representing Kentucky."
 noFooter: true
 isLifemap: true
 article: true

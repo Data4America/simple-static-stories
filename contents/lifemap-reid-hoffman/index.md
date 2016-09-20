@@ -1,9 +1,9 @@
 ---
-title: LifeMap Reid Hoffman
+title: "LifeMap: Reid Hoffman"
 author: data-for-america
 date: 2016-06-11
 template: article.jade
-description: "We have created a lifemap for Reid Hoffman."
+description: "Reid Garrett Hoffman is an American internet entrepreneur, venture capitalist and author."
 noFooter: true
 isLifemap: true
 article: true

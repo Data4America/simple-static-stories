@@ -1,5 +1,5 @@
 ---
-title: LifeMap Jill Stein
+title: "LifeMap: Jill Stein"
 author: data-for-america
 date: 2016-08-27
 template: article.jade

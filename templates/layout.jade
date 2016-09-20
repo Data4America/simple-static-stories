@@ -31,8 +31,33 @@ html(lang='en')
       header
         block header
 
-          a#dfa-cover(href="/")
-            img(src="/img/logo-large.png")
+          div#masthead
+            div.ui.large.secondary.menu
+              div.ui.container
+                div.item
+                  div.ui.logo.shape
+                    img.ui.image.small(src="/img/logo-large.png")
+                a.view-ui.item
+                  i.sidebar.icon
+                  |  Menu
+
+                div.right.menu
+                  a.item(href="/about/") About
+                  a.item(href="/donate/", style="color:#CC0505;") Donate
+                  a.item(href="/podcast/") Podcast
+                  a.item(href="http://lifemap.io") Lifemap
+
+            div.ui.large.secondary.menu.mobile
+              div.item
+                div.ui.logo.shape
+                  img.ui.image.small(src="/img/logo-large.png")
+              div.right.menu
+                a.item
+                  i.grid.layout.large.red.icon
+
+            div#dfa-slogan
+              div Bringing Data Science to the understanding of Politics
+
 
           div#fixed-share-btn
             a.fixed-btn.ui.huge.primary.button
@@ -53,7 +78,7 @@ html(lang='en')
               div.ui.red.fluid.button.subscribe
                 i.send.outline.icon
                 | Email Subscribe
-          
+
           #dfa-subscribe-modal.ui.small.modal
             i.close.icon
             div.ui.header.center.aligned E-Mail Subscribe to
@@ -127,8 +152,6 @@ html(lang='en')
               a.item.icon.dfa-header-article-share.em(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
                 i.icon.mail
               div.right.menu.social-buttons
-
-          div#dfa-slogan Bringing Data Science to the understanding of Politics
 
           div#dfa-menu.ui.four.item.main.menu
             div.ui.text.container

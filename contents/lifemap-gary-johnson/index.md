@@ -1,5 +1,5 @@
 ---
-title: LifeMap Gary Johnson
+title: "LifeMap: Gary Johnson"
 author: data-for-america
 date: 2016-07-25
 template: article.jade

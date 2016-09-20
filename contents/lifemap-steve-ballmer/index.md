@@ -1,9 +1,9 @@
 ---
-title: LifeMap Steve Ballmer
+title: "LifeMap: Steve Ballmer"
 author: data-for-america
 date: 2016-05-03
 template: article.jade
-description: "We have created a lifemap for Steve Ballmer."
+description: "Steven Anthony \"Steve\" Ballmer is an American businessman who was the chief executive officer of Microsoft from January 2000 to February 2014, and is the owner of the Los Angeles Clippers."
 noFooter: true
 isLifemap: true
 article: true

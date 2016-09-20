@@ -1,9 +1,9 @@
 ---
-title: LifeMap Marc Benioff
+title: "LifeMap: Marc Benioff"
 author: data-for-america
 date: 2016-06-01
 template: article.jade
-description: "We have created a lifemap for Marc Benioff."
+description: "Marc Russell Benioff is an American internet entrepreneur, author and philanthropist."
 noFooter: true
 isLifemap: true
 article: true

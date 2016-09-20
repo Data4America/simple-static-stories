@@ -1,5 +1,5 @@
 ---
-title: LifeMap Bernie Sanders
+title: "LifeMap: Bernie Sanders"
 author: data-for-america
 date: 2015-12-08
 template: article.jade

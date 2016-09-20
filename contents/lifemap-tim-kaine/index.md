@@ -1,9 +1,9 @@
 ---
-title: LifeMap Tim Kaine
+title: "LifeMap: Tim Kaine"
 author: data-for-america
 date: 2016-08-16
 template: article.jade
-description: "We have created a lifemap for Tim Kaine."
+description: "Timothy Michael \"Tim\" Kaine is an American attorney and politician serving as the junior United States Senator from Virginia."
 noFooter: true
 isLifemap: true
 article: true
