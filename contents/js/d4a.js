@@ -42,21 +42,6 @@ $(document).ready(function() {
   $('.dfa-ubi-nit .checkbox').checkbox();
   $('.dfa-tax-cuts .checkbox').checkbox();
 
-  // Initialize the header Menu
-  $('#dfa-menu-floating').dropdown();
-
-  $('#dfa-menu .dropdown, #dfa-menu-footer .dropdown, #dfa-header .ui.dropdown').dropdown({
-    onShow: function() {
-      if (isMobile()) {
-        var left = $(this).offset().left;
-        $(this).find('.menu').css({
-          left:  -left + 'px',
-          width: screen.width,
-        });
-      }
-    }
-  });
-
   $('#dfa-press .menu .item').tab({ context: $('#dfa-press') });
 
   // Initialize Sidebar click
@@ -74,6 +59,8 @@ $(document).ready(function() {
     return true;
   });
 
+  initMobileMenu();
+
   $('#dfa-sidebar-border').height(screen.height);
 
   // If sponsor policy channel
@@ -90,10 +77,6 @@ $(document).ready(function() {
   }
 
   if (isMobile()) {
-    $('#dfa-header.ui.menu .ui.dropdown .menu').width(screen.width);
-
-    $('#dfa-sidebar').width(screen.width);
-
     $('.dfa-share .container:not(.mobile)').hide();
     $('.dfa-share .container.mobile').show();
 
@@ -433,6 +416,26 @@ $(document).ready(function() {
   initSlider();
 
 });
+
+function initMobileMenu() {
+  $masthead = $('#masthead');
+  $link = $masthead.find('.menu.mobile .nav-link');
+  $menu = $masthead.find('.nav-mob');
+
+  $link.click(function() {
+    if ($link.hasClass('active')) {
+      $link.removeClass('active');
+      $menu.css('display', 'none');
+    } else {
+      $link.addClass('active');
+      $menu.css({
+        top:     $('#masthead').height(),
+        height:  window.innerHeight - $('#masthead').height(),
+        display: 'block'
+      });
+    }
+  });
+}
 
 function showFixedButton() {
   var scrollCount = 0;

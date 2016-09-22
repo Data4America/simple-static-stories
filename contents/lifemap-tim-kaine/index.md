@@ -1,5 +1,6 @@
 ---
 title: "LifeMap: Tim Kaine"
+link: "http://lifemap.io/timkaine"
 author: data-for-america
 date: 2016-08-16
 template: article.jade

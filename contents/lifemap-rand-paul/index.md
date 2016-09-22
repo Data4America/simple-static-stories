@@ -1,5 +1,6 @@
 ---
 title: "LifeMap: Rand Paul"
+link: "http://lifemap.io/randpaul"
 author: data-for-america
 date: 2016-01-18
 template: article.jade

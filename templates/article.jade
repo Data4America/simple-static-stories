@@ -16,50 +16,46 @@ block append vars
 block prepend title
   | #{ page.title + ' - '}
 
-block content
-  article.dfa-article.article.big
-    div.ui.segment.basic.dfa-article-header
-      div.ui.items
-        div.item
-          div.ui.small.image
-            if page.metadata.child
-              - var thumbnailPath = '../';
-            else
-              - var thumbnailPath = page.url;
-            img(src=thumbnailPath + 'thumbnail.png', srcset=thumbnailPath + 'thumbnail.png 1x, ' + thumbnailPath + 'thumbnail-256.png 2x')
-          div.content
-            h1.header= page.title
-            div
-              mixin author(page.metadata.author, (page.metadata.isPodcast) ? 'Hosted by: ' : null, (page.metadata.isPodcast || page.metadata.isLifemap) ? ['twitter'] : null)
-              span.extra | 
-              span.extra Published on: 
-                span= moment.utc(page.date).format('MMMM D, YYYY')
-      
-      include author
-      section.content
-        if page.metadata.article && !page.metadata.published
-          div.ui.raised.segment.red.inverted
-            p #[b DISCLAIMER:] This article is not yet approved by the editorial board. Please send us your feedback to #[a(href='mailto:chris@data4america.org', style='color: #c0c0c0; text-decoration: underline') chris@data4america.org]
-        block actual-content
-          div!= typogr(page.html).typogrify()
-        
-      div.ui.basic.segment.dfa-share
-        div.ui.equal.width.grid.stackable
-          div.column
-            div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
-              i.icon.mail
-              span.text Email
-          div.column
-            div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
-              i.ui.facebook.icon
-              span.text Share
-          div.column
-            div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
-              i.ui.twitter.icon
-              span.text Tweet
 
-      div.ui.segment
-        div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px") 
+block content
+
+  include author
+
+  article.dfa-article.article.big
+    div.ui.items.article-header
+      div.item
+        div.ui.small.image
+          if page.metadata.child
+            - var thumbnailPath = '../';
+          else
+            - var thumbnailPath = page.url;
+          img(src=thumbnailPath + 'thumbnail.png', srcset=thumbnailPath + 'thumbnail.png 1x, ' + thumbnailPath + 'thumbnail-256.png 2x')
+        div.content
+          h1.article-title= page.title
+          div.article-meta
+            div.article-publisher
+              mixin author(page.metadata.author, (page.metadata.isPodcast) ? 'Hosted by: ' : null, (page.metadata.isPodcast || page.metadata.isLifemap) ? ['twitter'] : null)
+            div.article-date= moment.utc(page.date).format('MMMM D, YYYY')
+
+    div.article-content!= typogr(page.html).typogrify()
+
+    div.article-actions
+      div.ui.equal.width.grid.stackable
+        div.column
+          div.ui.grey.email.huge.button.fluid(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+            i.icon.mail
+            span.text Email
+        div.column
+          div.ui.facebook.huge.fluid.button(data-url=locals.url,style="border-radius:0;")
+            i.ui.facebook.icon
+            span.text Share
+        div.column
+          div.ui.twitter.fluid.huge.button(data-url=locals.url + page.url, data-text=page.title,style="border-radius:0;")
+            i.ui.twitter.icon
+            span.text Tweet
+
+    div.article-comments
+      div.fb-comments(data-href=locals.url + page.url, data-numposts=5, data-width="100%", style="margin: -8px") 
 
 block footer
   if !page.metadata.noFooter

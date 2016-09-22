@@ -1,5 +1,6 @@
 ---
 title: "LifeMap: Mike Pence"
+link: "http://lifemap.io/mikepence"
 author: data-for-america
 date: 2016-08-17
 template: article.jade

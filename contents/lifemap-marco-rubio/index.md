@@ -1,5 +1,6 @@
 ---
 title: "LifeMap: Marco Rubio"
+link: "http://lifemap.io/marcorubio"
 author: data-for-america
 date: 2016-01-31
 template: article.jade

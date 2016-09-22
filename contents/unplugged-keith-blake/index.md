@@ -10,3 +10,7 @@ noFooter: false
 article: true
 published: true
 ---
+
+<p>
+  Reid Garrett Hoffman is an American internet entrepreneur, venture capitalist and author.
+</p>

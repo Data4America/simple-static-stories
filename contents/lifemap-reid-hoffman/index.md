@@ -1,5 +1,6 @@
 ---
 title: "LifeMap: Reid Hoffman"
+link: "http://lifemap.io/reidhoffman"
 author: data-for-america
 date: 2016-06-11
 template: article.jade

@@ -1,5 +1,6 @@
 ---
 title: "LifeMap: Marc Benioff"
+link: "http://lifemap.io/marcbenioff"
 author: data-for-america
 date: 2016-06-01
 template: article.jade
