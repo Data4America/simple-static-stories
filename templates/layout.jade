@@ -36,15 +36,240 @@ html(lang='en')
               div.ui.container
                 a.item.logo(href="/")
                   img.ui.image.small(src="/img/logo-large.png")
-                a.view-ui.item
+                a#dfa-menu-item.view-ui.item
                   i.sidebar.icon
                   |  Menu
 
                 div.right.menu
                   a.item(href="/about/") About
                   a.item(href="/donate/", style="color:#CC0505;") Donate
-                  a.item(href="/podcast/") Podcast
-                  a.item(href="http://lifemap.io") Lifemap
+                  a#dfa-podcast-item.item Podcast
+                    i.angle.down.icon
+                  a#dfa-lifemap-item.item Lifemap
+                    i.angle.down.icon
+                  
+                div#dfa-menu-menu.ui.segment.view-ui-menu
+                  div.ui.three.column.divided.grid
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        a.item(href="/") All Stories
+                        a.item(href="/syndicated-posts") Syndicated Posts
+                        a.item(href="/updates") What's New
+                        a.item(href="/press") Press
+                        a.item(href="/supporters/") Our Supporters
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        a.item(href="/sponsorship/") Sponsorships
+                        a.item(href="/about/") About Data4America
+                        a.item(href="/unplugged/") Unplugged Podcast
+                        a.donate.item(href="/donate/") Donate
+                        a.item(href="/upload/") Submit Content
+                    div.column
+                      div.ui.secondary.vertical.menu        
+                        a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+                        a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+                        a.item(href="/request-government-data") Request Data
+                        
+                div#dfa-lifemap-menu.ui.segment.view-ui-menu
+                  div.ui.three.column.divided.grid
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        .ui.link.items
+                          a.item(href="http://lifemap.io/hillaryclinton/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/hillaryclinton/age-68.jpg')
+                            .middle.aligned.content
+                              .header Hillary Clinton
+                              .meta
+                                span.price Pres. Candidate, Democratic Party
+                                
+                          a.item(href="http://lifemap.io/donaldtrump/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/donald-trump.jpg')
+                            .middle.aligned.content
+                              .header Donald Trump
+                              .meta
+                                span.price Pres. Candidate, Republican Party
+                                
+                          a.item(href="http://lifemap.io/garyjohnson/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/garyjohnson/age-63.jpg')
+                            .middle.aligned.content
+                              .header Gary Johnson
+                              .meta
+                                span.price Pres. Candidate, Libertarian Party
+                                
+                          a.item(href="http://lifemap.io/jillstein/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/jillstein/age-66.jpg')
+                            .middle.aligned.content
+                              .header Jill Stein
+                              .meta
+                                span.price Pres. Candidate, Green Party
+                                
+                          a.item(href="http://lifemap.io/mikepence")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/mikepence/age-53.jpg')
+                            .middle.aligned.content
+                              .header Mike Pence 
+                              .meta
+                                span.price VP Nominee, Republican Party
+                                
+                          a.item(href="http://lifemap.io/timkaine")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/timkaine/age-58.jpg')
+                            .middle.aligned.content
+                              .header Tim Kaine 
+                              .meta
+                                span.price VP Nominee, Democratic Party
+
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        .ui.link.items
+                          a.item(href="http://lifemap.io/ben-carson/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/ben-carson.jpg')
+                            .middle.aligned.content
+                              .header Ben Carson 
+                              .meta
+                                span.price Pres. Candidate, Republican Party
+                                
+                          a.item(href="http://lifemap.io/berniesanders/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/bernie-sanders.jpeg')
+                            .middle.aligned.content
+                              .header Bernie Sanders 
+                              .meta
+                                span.price Pres. Candidate, Democratic Party
+                                
+                          a.item(href="http://lifemap.io/marcorubio/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/marco-rubio.jpg')
+                            .middle.aligned.content
+                              .header Marco Rubio 
+                              .meta
+                                span.price Pres. Candidate, Republican Party
+                                
+                          a.item(href="http://lifemap.io/randpaul/")
+                            .ui.tiny.circular.image
+                              img(src='https://pbs.twimg.com/profile_images/681152691461042177/_PrgDgFA.jpg')
+                            .middle.aligned.content
+                              .header Rand Paul 
+                              .meta
+                                span.price Pres. Candidate, Republican Party
+                                
+                          a.item(href="http://lifemap.io/markcuban/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/mark-cuban.jpg')
+                            .middle.aligned.content
+                              .header Mark Cuban  
+                              .meta
+                                span.price Owner, Dallas Mavericks
+                                
+                          a.item(href="http://lifemap.io/steveballmer/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/steveballmer.png')
+                            .middle.aligned.content
+                              .header Steve Ballmer   
+                              .meta
+                                span.price Owner, Los Angeles Clippers
+                                
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        .ui.link.items
+                                
+                          a.item(href="http://lifemap.io/sherylsandberg/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/sheryl-sandberg.jpg')
+                            .middle.aligned.content
+                              .header Sheryl Sandberg  
+                              .meta
+                                span.price Chief Operating Officer, Facebook
+                                
+                          a.item(href="http://lifemap.io/marcbenioff/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/marcbenioff.jpg')
+                            .middle.aligned.content
+                              .header Marc Benioff  
+                              .meta
+                                span.price Chairman & CEO, Salesforce
+                                
+                          a.item(href="http://lifemap.io/reidhoffman/")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/reidhoffman/age-49.jpg')
+                            .middle.aligned.content
+                              .header Reid Hoffman  
+                              .meta
+                                span.price Co-founder & Chairman, LinkedIn
+                                
+                          a.item(href="http://lifemap.io/ariannahuffington")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/ariannahuffington/age-66.jpg')
+                            .middle.aligned.content
+                              .header Arianna Huffington   
+                              .meta
+                                span.price Co-founder/Editor-in-chief,
+                              .meta
+                                span.price Huffington Post
+                                
+                          a.item(href="http://lifemap.io/larryellison")
+                            .ui.tiny.circular.image
+                              img(src='http://lifemap.io/img/larryellison/age-74.jpg')
+                            .middle.aligned.content
+                              .header Larry Ellison    
+                              .meta
+                                span.price Co-founder & CEO, Orcale
+                          
+                div#dfa-podcast-menu.ui.segment.view-ui-menu
+                  div.ui.three.column.divided.grid
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        .ui.link.items
+                          a.item(href="/unplugged/episode-2-ramez-naam")
+                            .ui.tiny.circular.image
+                              img(src='/img/unplugged-rameez.jpg')
+                            .middle.aligned.content
+                              .header Session 1: Ramez Naam
+                              .meta
+                                span.price Hosted by: Chris McCoy
+                                
+                          a.item(href="/unplugged/episode-3-michael-gibson")
+                            .ui.tiny.circular.image
+                              img(src='/img/unplugged-michael.jpg')
+                            .middle.aligned.content
+                              .header Session 2: Michael Gibson 
+                              .meta
+                                span.price Hosted by: Chris McCoy
+                                
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        .ui.link.items
+                          a.item(href="/unplugged/live-keith-blake")
+                            .ui.tiny.circular.image
+                              img(src='/img/live-rabois-masters-600.jpg')
+                            .middle.aligned.content
+                              .header Live: Keith Rabois
+                              .meta
+                                span.price Hosted by: Blake Masters
+                                
+                          a.item(href="/unplugged/live-scott-kim")
+                            .ui.tiny.circular.image
+                              img(src='/img/live-weiner-cutler-600.jpg')
+                            .middle.aligned.content
+                              .header Live: Scott Wiener 
+                              .meta
+                                span.price Hosted by: Kim-Mai Cutler
+                                
+                    div.column
+                      div.ui.secondary.vertical.menu        
+                        .ui.link.items
+                          a.item(href="/unplugged/live-gary-johnson")
+                            .ui.tiny.circular.image
+                              img(src='/img/unplugged-garyjohnson-800.jpg')
+                            .middle.aligned.content
+                              .header Live: Gary Johnson
+                              .meta
+                                span.price Hosted by: Chris McCoy         
 
             div.ui.large.secondary.menu.mobile
               a.item.logo(href="/")
@@ -53,9 +278,168 @@ html(lang='en')
                 a.item.nav-link
                   i.content.red.icon
 
-            div.nav-mob MOBILE CONTENT
+            div.nav-mob.ui.menu.stackable.inverted
+              a.item(href="/about/") About
+              a.item(href="/updates") What's New
+              a.item(href="/syndicated-posts") Syndicated Posts
+              a.item(href="/press") Press
+              a.donate.item(href="/donate/", style="background:#cc0001;width:100% !important;") Donate
+            
+              div.ui.header.inverted.center.aligned Lifemap
+              div.nav-slider.lifemap-slider
+                div.ui.card
+                  a.image(href="http://lifemap.io/hillaryclinton/")
+                    img(src='http://lifemap.io/img/hillaryclinton/age-68.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/hillaryclinton/") Hillary Clinton
+                    
+                div.ui.card
+                  a.image(href="http://lifemap.io/donaldtrump/")
+                    img(src='http://lifemap.io/img/donald-trump.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/donaldtrump/") Donald Trump
 
+                div.ui.card
+                  a.image(href="http://lifemap.io/garyjohnson/")
+                    img(src='http://lifemap.io/img/garyjohnson/age-63.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/garyjohnson/") Gary Johnson
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/jillstein/")
+                    img(src='http://lifemap.io/img/jillstein/age-66.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/jillstein/") Jill Stein
+                    
+                div.ui.card
+                  a.image(href="http://lifemap.io/mikepence")
+                    img(src='http://lifemap.io/img/mikepence/age-53.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/mikepence") Mike Pence
+                    
+                div.ui.card
+                  a.image(href="http://lifemap.io/timkaine")
+                    img(src='http://lifemap.io/img/timkaine/age-58.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/timkaine") Tim Kaine
 
+                div.ui.card
+                  a.image(href="http://lifemap.io/ben-carson/")
+                    img(src='http://lifemap.io/img/ben-carson.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/ben-carson/") Ben Carson
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/berniesanders/")
+                    img(src='http://lifemap.io/img/bernie-sanders.jpeg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/berniesanders/") Bernie Sanders
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/marcorubio/")
+                    img(src='http://lifemap.io/img/marco-rubio.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/marcorubio/") Marco Rubio
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/randpaul/")
+                    img(src='https://pbs.twimg.com/profile_images/681152691461042177/_PrgDgFA.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/randpaul/") Rand Paul
+                    
+                div.ui.card
+                  a.image(href="http://lifemap.io/markcuban/")
+                    img(src='http://lifemap.io/img/mark-cuban.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/markcuban/") Mark Cuban
+                    
+                div.ui.card
+                  a.image(href="http://lifemap.io/steveballmer/")
+                    img(src='http://lifemap.io/img/steveballmer.png')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/steveballmer/") Steve Ballmer
+                    
+                div.ui.card
+                  a.image(href="http://lifemap.io/sherylsandberg/")
+                    img(src='http://lifemap.io/img/sheryl-sandberg.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/sherylsandberg/") Sheryl Sandberg
+
+                div.ui.card
+                  a.image(href="http://lifemap.io/marcbenioff/")
+                    img(src='http://lifemap.io/img/marcbenioff.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/marcbenioff/") Marc Benioff
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/reidhoffman/")
+                    img(src='http://lifemap.io/img/reidhoffman/age-49.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/reidhoffman/") Reid Hoffman
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/ariannahuffington")
+                    img(src='http://lifemap.io/img/ariannahuffington/age-66.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/ariannahuffington") Arianna Huffington
+                  
+                div.ui.card
+                  a.image(href="http://lifemap.io/larryellison")
+                    img(src='http://lifemap.io/img/larryellison/age-74.jpg')
+                  div.content
+                    a.header.center.aligned(href="http://lifemap.io/larryellison") Larry Ellison
+                    
+              div.ui.header.inverted.center.aligned Unplugged
+              div.nav-slider.unplugged-slider
+                div.ui.card
+                  a.image(href="/unplugged/episode-2-ramez-naam")
+                    img(src='/img/unplugged-rameez.jpg')
+                  div.content
+                    a.header.center.aligned(href="/unplugged/episode-2-ramez-naam") Ramez Naam
+                    
+                div.ui.card
+                  a.image(href="/unplugged/episode-3-michael-gibson")
+                    img(src='/img/unplugged-michael.jpg')
+                  div.content
+                    a.header.center.aligned(href="/unplugged/episode-3-michael-gibson") Michael Gibson
+
+                div.ui.card
+                  a.image(href="/unplugged/live-keith-blake")
+                    img(src='/img/live-rabois-masters-600.jpg')
+                  div.content
+                    a.header.center.aligned(href="/unplugged/live-keith-blake") Keith Blake
+                  
+                div.ui.card
+                  a.image(href="/unplugged/live-scott-kim")
+                    img(src='/img/live-weiner-cutler-600.jpg')
+                  div.content
+                    a.header.center.aligned(href="/unplugged/live-scott-kim") Scott Kim
+                    
+                div.ui.card
+                  a.image(href="/unplugged/live-gary-johnson")
+                    img(src='/img/unplugged-garyjohnson-800.jpg')
+                  div.content
+                    a.header.center.aligned(href="/unplugged/live-gary-johnson") Gary Johnson
+                    
+              a.item(href="/supporters/") Our Supporters
+              a.item(href="/sponsorship/") Sponsorships
+              a.item(href="/upload/") Submit Content
+              a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+              a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+              a.item(href="/request-government-data") Request Data
+              div.item
+                a(href="http://facebook.com/data4america", target="_blank").ui.icon.button.fluid
+                  i.facebook.f.icon
+                a(href="https://twitter.com/data4america", target="_blank").ui.icon.button.fluid
+                  i.twitter.f.icon
+                a(href="https://www.linkedin.com/company/data4america", target="_blank").ui.icon.button.fluid
+                  i.linkedin.f.icon
+                a(href="https://github.com/Data4America", target="_blank").ui.icon.button.fluid
+                  i.github.f.icon
+                
+              div.item 
+                h4.ui.header.center.aligned.inverted ©2016 Data4America. All Rights Reserved
+              
           div#fixed-share-btn
             a.fixed-btn.ui.huge.primary.button
               i.plus.icon

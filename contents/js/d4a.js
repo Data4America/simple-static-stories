@@ -31,6 +31,34 @@ var isMobile = function() {
 }
 
 $(document).ready(function() {
+  $('.nav-slider .ui.card img').each(function(){
+    var url = $(this).attr('src');
+    preloadImage(url);
+  });
+  showFixedButton();
+  initSlider();
+
+  $('#dfa-menu-item').click(function(){
+    $('#masthead .item').removeClass('active');
+    $('.view-ui-menu').hide();
+    $(this).toggleClass('active');
+    $('#dfa-menu-menu').toggle();
+  });
+
+  $('#dfa-podcast-item').click(function(){
+    $('#masthead .item').removeClass('active');
+    $('.view-ui-menu').hide();
+    $(this).toggleClass('active');
+    $('#dfa-podcast-menu').toggle();
+  });
+
+  $('#dfa-lifemap-item').click(function(){
+    $('#masthead .item').removeClass('active');
+    $('.view-ui-menu').hide();
+    $(this).toggleClass('active');
+    $('#dfa-lifemap-menu').toggle();
+  });
+
   $('.ui.form .ui.dropdown').dropdown();
 
   $('.dfa-bi-checkboxes .checkbox').checkbox({
@@ -412,27 +440,39 @@ $(document).ready(function() {
       .dimmer({ on: 'hover' });
   }
 
-  showFixedButton();
-  initSlider();
-
 });
 
 function initMobileMenu() {
-  $masthead = $('#masthead');
-  $link = $masthead.find('.menu.mobile .nav-link');
-  $menu = $masthead.find('.nav-mob');
+  var $masthead = $('#masthead'),
+      $link = $masthead.find('.menu.mobile .nav-link'),
+      $menu = $masthead.find('.nav-mob'),
+      $icon = $masthead.find('.menu.mobile .nav-link .icon'),
+      loadSlider = false;
 
   $link.click(function() {
     if ($link.hasClass('active')) {
+      $icon.removeClass('remove');
+      $icon.addClass('content');
       $link.removeClass('active');
       $menu.css('display', 'none');
+      document.body.style.overflow = 'scroll';
     } else {
+      $icon.removeClass('content');
+      $icon.addClass('remove');
       $link.addClass('active');
+      document.body.style.overflow = 'hidden';
       $menu.css({
         top:     $('#masthead').height(),
         height:  window.innerHeight - $('#masthead').height(),
         display: 'block'
       });
+
+      if (!loadSlider) {
+        $('.nav-mob .nav-slider.unplugged-slider, .nav-mob .nav-slider.lifemap-slider').slick({
+          slidesToShow: 2,
+        });
+        loadSlider = true;
+      }
     }
   });
 }
@@ -463,4 +503,20 @@ function initSlider() {
         adaptiveHeight: true
       });
   }
+}
+
+function initLifemapSlider(){
+  $('.nav-mob .nav-slider.lifemap-slider').slick({
+    slidesToShow: 2
+  });
+}
+
+function initUnpluggedSlider(){
+
+}
+
+function preloadImage(url)
+{
+    var img=new Image();
+    img.src=url;
 }
