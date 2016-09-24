@@ -1,6 +1,6 @@
 ---
 title: "Unplugged Live: Gary Johnson"
-author: chris-mccoy
+author: "chris-mccoy,cyan-banister"
 date: 2016-09-01
 template: article.jade
 link: "/unplugged/live-gary-johnson"

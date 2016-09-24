@@ -4,7 +4,7 @@ block content
 
   include author
 
-  h1.ui.horizontal.divider.header.red(style="margin:2em 0 1.5em") ARTICLES
+  h1.ui.horizontal.divider.header.red(style="margin:2em 0 1.5em") ORIGINALS
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
       if article.metadata.isStandard
@@ -23,9 +23,11 @@ block content
               div.item-details
                 mixin authorName(article.metadata.author)
                 div.item-bottom
+                  if article.metadata.isVerified
+                    <span style="float:left; margin-top:1em;"><i style="color: #C00;font-size: 0.9em;" class="icon inverted checkmark box large"></i><img src="/img/logo-text.png" style="vertical-align: middle;height: 11px;"></span>
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
-  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 1.5em") UNPLUGGED
+  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 1.5em") PODCAST
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
       if article.metadata.isPodcast
@@ -38,11 +40,11 @@ block content
                 div.item-image
                   img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
                 div.item-meta
-                  h1.ui.large.header.item-title= article.title
                   div.item-text!= article.metadata.description
 
               div.item-details
-                mixin authorName(article.metadata.author)
+                mixin podcastAuthor(article.metadata.author)
+
                 div.item-bottom
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
@@ -60,9 +62,11 @@ block content
                   img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
                 div.item-meta
                   h1.ui.large.header.item-title= article.title
-                  div.item-text!= article.metadata.description
 
               div.item-details
                 mixin authorName(article.metadata.author)
+                div(style="font-size: 0.9em; color: #aaa;") LAST EDIT: 
+                  = moment.utc(article.date).format('MMMM D, YYYY')
                 div.item-bottom
+                  <span style="float:left; margin-top:1em;"><i style="color: #C00;font-size: 0.9em;" class="icon inverted checkmark box large"></i><img src="/img/logo-text.png" style="vertical-align: middle;height: 11px;"></span>
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')

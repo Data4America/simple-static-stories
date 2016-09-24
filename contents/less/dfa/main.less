@@ -613,51 +613,20 @@ html, body, header {
     MASTHEAD
 --------------------*/
 #masthead {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1003;
   background: url(/img/bg.jpg) center center;
   background-size: 60%;
   border-bottom: 1px solid #c1c0c0;
 
-  #dfa-podcast-menu, #dfa-lifemap-menu {
-    .item{
-      margin:0.5em 0px;
-      padding:0px;
-      .image{
-        display: inline-block;
-      }
-      .content {
-        vertical-align: inherit;
-        display: inline-block;
-        .header {
-          font-size: 1em;
-        }
-        .meta .price {
-          font-size: 0.9em;
-        }
-      }
-    }
-  }
-
-  .view-ui-menu {
-    display:none;
-    width: 1127px;
-    position: absolute;
-    top: 62px;
-    z-index: 10;
-    .menu {
-      width:100%;
-      .item {
-        height:auto !important;
-      }
-    }
-  }
-
   & > .menu {
     margin-bottom: 0;
 
-
     .item {
       font-weight: 700;
-      height: 74px;
+      height: 60px;
       border-radius: 0;
       text-transform: uppercase;
       font-family: 'Trasandina';
@@ -665,7 +634,7 @@ html, body, header {
     }
 
     .item.logo {
-      padding: 0.2em;
+      padding: 2px;
       img { width: auto; height: 100%; }
     }
   }
@@ -679,6 +648,59 @@ html, body, header {
     .icon { font-size: 2em; margin-right: 0; }
   }
 
+  #dfa-podcast-menu, #dfa-lifemap-menu {
+    .item{
+      margin: 0.5em 0px;
+      padding: 0.2em;
+      border-radius: 5px;
+
+      .image{
+        display: inline-block;
+        border-radius: 5px;
+      }
+
+      .content {
+        vertical-align: inherit;
+        display: inline-block;
+        padding-left: 0.4em;
+        padding-top: 0.5em;
+
+        .header {
+          font-size: 1em;
+        }
+
+        .meta .price {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+
+  .view-ui-menu {
+    display:none;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 61px;
+    margin: 0;
+    z-index: 10;
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+
+    & > .ui.grid { margin: 0; }
+    .ui.tiny.image { width: 54px; }
+    .ui.grid > .column:not(.row), .ui.grid > .row > .column { padding: 0.5em; }
+
+    .menu {
+      width: 100%;
+      margin: 0;
+
+      .item { height:auto !important; }
+    }
+  }
+
+
   .nav-mob {
     display: none;
     position: absolute;
@@ -689,6 +711,7 @@ html, body, header {
     z-index: 400;
     margin:0px !important;
     overflow-x: scroll;
+    border-radius: 0;
 
     a.item {
       text-align: center;
@@ -704,9 +727,22 @@ html, body, header {
       color:#ffffff !important;
     }
 
+    .nav-header {
+      background: #222;
+      margin: 0;
+      padding: 1em;
+      font-size: 1.7em;
+      line-height: 0.1em;
+      text-transform: uppercase;
+    }
+
     .nav-slider {
       border-bottom: 1px solid #434343;
+      background: #222;
+
       .ui.card {
+        margin: 0;
+
         box-shadow : none;
         border-radius: 0px;
         background:transparent;
@@ -833,7 +869,7 @@ html, body, header {
 --------------------*/
 
 #dfa-content {
-  padding: 0 0 20px;
+  margin-top: 82px;
 }
 
 .dfa-feed {
@@ -876,7 +912,7 @@ html, body, header {
     .item-meta {
       position: relative;
       margin: 0 auto;
-      padding: 26px 30px 0px;
+      padding: 26px 20px 0px;
       background-color: #fff;
       transform: translate3d(0, 0, 0);
       transition-property: all;
@@ -914,7 +950,7 @@ html, body, header {
 
     .item-details {
       margin: 0 auto;
-      width: 86%;
+      width: 90%;
       background-color: #fff;
       overflow: hidden;
       text-transform: uppercase;
@@ -945,14 +981,19 @@ html, body, header {
     }
 
     .item-date {
-      float: right;
       margin: 1em 0;
       color: grey;
+      float: right;
+      display: inline-block;
+    }
+
+    .item-date.left {
+      float: left;
     }
 
     .author {
       display: block;
-      margin: 1em 0.5em;
+      margin: 1em 0;
       font-size:0.9em;
 
       a { color: #004f81; font-weight:bold; }
@@ -982,6 +1023,31 @@ html, body, header {
 
   @media only screen and (max-width: @largestMobileScreen) {
     margin: 0 1em !important;
+  }
+}
+
+.dfa-feed-item.podcast, .dfa-feed-item.lifemap {
+  .item-image {
+    position: relative;
+    overflow: auto;
+    padding-bottom: 0;
+    height: auto;
+
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate3d(0, 0, 0) scale(1);
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &:hover {
+    .item-image img {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
   }
 }
 

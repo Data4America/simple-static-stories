@@ -33,21 +33,21 @@ html(lang='en')
 
           div#masthead
             div.ui.large.secondary.menu
-              div.ui.container
+              div.ui.container(style="position: relative;")
                 a.item.logo(href="/")
                   img.ui.image.small(src="/img/logo-large.png")
-                a#dfa-menu-item.view-ui.item
+                a.dfa-menu-item.view-ui.item(data-menu="dfa-menu-menu")
                   i.sidebar.icon
                   |  Menu
 
                 div.right.menu
                   a.item(href="/about/") About
                   a.item(href="/donate/", style="color:#CC0505;") Donate
-                  a#dfa-podcast-item.item Podcast
+                  a.dfa-menu-item.item(data-menu="dfa-podcast-menu") Podcast
                     i.angle.down.icon
-                  a#dfa-lifemap-item.item Lifemap
+                  a.dfa-menu-item.item(data-menu="dfa-lifemap-menu") Lifemap
                     i.angle.down.icon
-                  
+
                 div#dfa-menu-menu.ui.segment.view-ui-menu
                   div.ui.three.column.divided.grid
                     div.column
@@ -69,7 +69,7 @@ html(lang='en')
                         a.item(href="http://data.data4america.org/", target="_blank") Submit Data
                         a.item(href="http://git.data4america.org/", target="_blank") Submit Software
                         a.item(href="/request-government-data") Request Data
-                        
+
                 div#dfa-lifemap-menu.ui.segment.view-ui-menu
                   div.ui.three.column.divided.grid
                     div.column
@@ -82,7 +82,7 @@ html(lang='en')
                               .header Hillary Clinton
                               .meta
                                 span.price Pres. Candidate, Democratic Party
-                                
+
                           a.item(href="http://lifemap.io/donaldtrump/")
                             .ui.tiny.circular.image
                               img(src='http://lifemap.io/img/donald-trump.jpg')
@@ -90,7 +90,7 @@ html(lang='en')
                               .header Donald Trump
                               .meta
                                 span.price Pres. Candidate, Republican Party
-                                
+
                           a.item(href="http://lifemap.io/garyjohnson/")
                             .ui.tiny.circular.image
                               img(src='http://lifemap.io/img/garyjohnson/age-63.jpg')
@@ -284,8 +284,14 @@ html(lang='en')
               a.item(href="/syndicated-posts") Syndicated Posts
               a.item(href="/press") Press
               a.donate.item(href="/donate/", style="background:#cc0001;width:100% !important;") Donate
+              a.item(href="/supporters/") Our Supporters
+              a.item(href="/sponsorship/") Sponsorships
+              a.item(href="/upload/") Submit Content
+              a.item(href="http://data.data4america.org/", target="_blank") Submit Data
+              a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+              a.item(href="/request-government-data") Request Data
             
-              div.ui.header.inverted.center.aligned Lifemap
+              div.nav-header.ui.header.inverted.center.aligned Lifemap
               div.nav-slider.lifemap-slider
                 div.ui.card
                   a.image(href="http://lifemap.io/hillaryclinton/")
@@ -389,7 +395,7 @@ html(lang='en')
                   div.content
                     a.header.center.aligned(href="http://lifemap.io/larryellison") Larry Ellison
                     
-              div.ui.header.inverted.center.aligned Unplugged
+              div.nav-header.ui.header.inverted.center.aligned Unplugged
               div.nav-slider.unplugged-slider
                 div.ui.card
                   a.image(href="/unplugged/episode-2-ramez-naam")
@@ -421,24 +427,18 @@ html(lang='en')
                   div.content
                     a.header.center.aligned(href="/unplugged/live-gary-johnson") Gary Johnson
                     
-              a.item(href="/supporters/") Our Supporters
-              a.item(href="/sponsorship/") Sponsorships
-              a.item(href="/upload/") Submit Content
-              a.item(href="http://data.data4america.org/", target="_blank") Submit Data
-              a.item(href="http://git.data4america.org/", target="_blank") Submit Software
-              a.item(href="/request-government-data") Request Data
               div.item
                 a(href="http://facebook.com/data4america", target="_blank").ui.icon.button.fluid
-                  i.facebook.f.icon
+                  i.facebook.large.icon
                 a(href="https://twitter.com/data4america", target="_blank").ui.icon.button.fluid
-                  i.twitter.f.icon
+                  i.twitter.large.icon
                 a(href="https://www.linkedin.com/company/data4america", target="_blank").ui.icon.button.fluid
-                  i.linkedin.f.icon
+                  i.linkedin.large.icon
                 a(href="https://github.com/Data4America", target="_blank").ui.icon.button.fluid
-                  i.github.f.icon
+                  i.github.large.icon
                 
               div.item 
-                h4.ui.header.center.aligned.inverted ©2016 Data4America. All Rights Reserved
+                h4.ui.header.center.aligned.inverted(style="display: block; width: 100%;") ©2016 Data4America. All Rights Reserved
               
           div#fixed-share-btn
             a.fixed-btn.ui.huge.primary.button

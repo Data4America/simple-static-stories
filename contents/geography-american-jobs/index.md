@@ -7,6 +7,7 @@ code: https://github.com/Data4America/jobmaps
 data: http://datahub.io/dataset/where-are-the-jobs
 description: "The American economy is now host to 142,288,000 jobs. But where are these jobs located, exactly?"
 isStandard: true
+isVerified: true
 article: true
 published: true
 ---
