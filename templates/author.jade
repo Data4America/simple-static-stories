@@ -1,25 +1,26 @@
 mixin author(authorName, prefix, links)
-  - var author = contents.authors[authorName + '.json'];
-  span.author
-    = prefix ? prefix : 'Created by: '
-    b
-      a(href='mailto:' + author.metadata.email)= author.metadata.name
+  - var authors = authorName.split(',').map(function(a) { return contents.authors[a + '.json'] });
+  each author in authors
+    span.author
+      = prefix ? prefix : 'Created by: '
+      b
+        a(href='mailto:' + author.metadata.email)= author.metadata.name
 
-    img.ui.avatar.image(src='/authors/' + author.metadata.id + '.jpg', style="margin-left: 4px;")
+      img.ui.avatar.image(src='/authors/' + author.metadata.id + '.jpg', style="margin-left: 4px;")
 
-    - var seenWww = false;
-    if links
-      each link in author.metadata.links
-        if links.indexOf(link.type) >= 0
+      - var seenWww = false;
+      if links
+        each link in author.metadata.links
+          if links.indexOf(link.type) >= 0
+            a(href=link.url, target='_blank')
+              img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
+      else
+        each link in author.metadata.links
           a(href=link.url, target='_blank')
-            img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
-    else
-      each link in author.metadata.links
-        a(href=link.url, target='_blank')
-          if link.type !== 'www' || !seenWww
-            img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
-            if link.type === 'www'
-              - seenWww = true;
+            if link.type !== 'www' || !seenWww
+              img.mini-logo(src='/img/mini-logos/' + link.type + '.png')
+              if link.type === 'www'
+                - seenWww = true;
 
 mixin authorName(authorID)
   - var author = contents.authors[authorID + '.json'];

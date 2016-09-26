@@ -893,7 +893,7 @@ html, body, header {
       background-color: #263640;
       height: 0;
 
-      img {
+      & > img {
         display: block;
         position: absolute;
         top: 50%;
@@ -1001,7 +1001,7 @@ html, body, header {
   }
 
   .dfa-feed-item:hover {
-    .item-image img {
+    .item-image > img {
       transform: translate3d(-50%, -55%, 0) scale(1);
     }
 
@@ -1033,7 +1033,7 @@ html, body, header {
     padding-bottom: 0;
     height: auto;
 
-    img {
+    & > img {
       position: relative;
       top: 0;
       left: 0;
@@ -1045,7 +1045,7 @@ html, body, header {
   }
 
   &:hover {
-    .item-image img {
+    .item-image > img {
       transform: translate3d(0, 0, 0) scale(1);
     }
   }
