@@ -1,6 +1,6 @@
 ---
 title: "Unplugged Live: Keith Rabois"
-author: chris-mccoy
+author: blake-masters
 date: 2016-08-11
 template: article.jade
 link: "/unplugged/live-keith-blake"

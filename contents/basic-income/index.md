@@ -5,6 +5,7 @@ date: 2015-11-12
 template: basic-income.jade
 code: https://github.com/Data4America/simple-static-stories/blob/development/contents/basic-income/basic-income.js
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
+links: "Download the code for this visualization|https://github.com/Data4America/jobmaps, Download The Data|https://datahub.io/dataset/where-are-the-jobs, Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
 isStandard: true
 article: true
 published: false
@@ -48,7 +49,7 @@ Unfortunately, basic income would cost much more than that, so you might want to
 
 Economic models fall largely into two categories: [static and dynamic](https://en.wikipedia.org/wiki/Static_analysis). Dynamic models attempt to assess how the economy will respond to a change. That may seem like a good thing, but it is a possible source of bias. For example, cutting taxes may lead to economic growth, but how much? If an answer is uncertain, a dynamic model may just represent the bias of whoever designed it. From that perspective, static models are more conservative.
 
-However, with a policy as large as basic income, static analysis may be unrealistic. Just consider the economic implications. Poor people would have much more money to spend, which could have [a stimulatory effect similar to food stamps](http://money.cnn.com/2008/01/29/news/economy/stimulus_analysis/). People who were previously unable to work due to ill-concieved government regulation like [welfare cliffs](https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/) could start working. [The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.](http://apps.npr.org/unfit-for-work/) Some of them would start working again if they recieved a basic income. 
+However, with a policy as large as basic income, static analysis may be unrealistic. Just consider the economic implications. Poor people would have much more money to spend, which could have [a stimulatory effect similar to food stamps](http://money.cnn.com/2008/01/29/news/economy/stimulus_analysis/). People who were previously unable to work due to ill-concieved government regulation like [welfare cliffs](https://www.illinoispolicy.org/reports/modeling-potential-income-and-welfare-assistance-benefits-in-illinois/) could start working. [The number of Americans on disability has been rising too, at least partially due to people who want to work but make more money on disability.](http://apps.npr.org/unfit-for-work/) Some of them would start working again if they recieved a basic income.
 
 On the other hand, some workers may decide that their basic income revenue is enough for them and quit their jobs or work less. That would have a negative impact on the economy. So maybe the effect of basic income would actually be negative!
 

@@ -22,7 +22,17 @@ block content
 
               div.item-details
                 mixin authorName(article.metadata.author)
+                div.ui.bulleted.list
+                  if article.metadata.links
+                    - var links = article.metadata.links.split(',')
+                    each link in links
+                      - var texturl = link.split('|')
+                      div.item
+                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
+                    
                 div.item-bottom
+                  if !article.metadata.published
+                    span.ui.basic.red.label Not Approved
                   if article.metadata.isVerified
                     <span style="float:left; margin-top:1em;"><i style="color: #C00;font-size: 0.9em;" class="icon inverted checkmark box large"></i><img src="/img/logo-text.png" style="vertical-align: middle;height: 11px;"></span>
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
@@ -44,8 +54,17 @@ block content
 
               div.item-details
                 mixin podcastAuthor(article.metadata.author)
+                div.ui.bulleted.list
+                  if article.metadata.links
+                    - var links = article.metadata.links.split(',')
+                    each link in links
+                      - var texturl = link.split('|')
+                      div.item
+                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
 
                 div.item-bottom
+                  if article.metadata.lifemap
+                    img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
   h1.ui.horizontal.divider.header.blue(style="margin:2em 0 1.5em") LIFEMAP
@@ -59,6 +78,10 @@ block content
             div.dfa-feed-item.lifemap
               a.item-link(href=url, target=ext ? '_blank' : '_self')
                 div.item-image
+                  if article.metadata.featured
+                    div.dfa-sponser
+                      span AS FEATURED ON
+                        img(src="/img/huffington-post-logo.jpg")
                   img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
                 div.item-meta
                   h1.ui.large.header.item-title= article.title

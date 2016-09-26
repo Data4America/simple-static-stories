@@ -9,6 +9,8 @@ isPodcast: true
 noFooter: false
 article: true
 published: true
+lifemap: true
+links: "Read about it in wired|https://www.wired.com/2016/09/gary-johnson-looks-perfectly-ease-vr-headset-face/"
 ---
 
 <p>

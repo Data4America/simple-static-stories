@@ -6,6 +6,8 @@ template: page.jade
 code: https://github.com/Data4America/simple-static-stories/blob/development/contents/basic-income/basic-income.js
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
 child: true
+published: false
+extra: "Download the code for this visualization|https://github.com/Data4America/jobmaps, Download The Data|https://datahub.io/dataset/where-are-the-jobs, Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
 ---
 
 <link rel="stylesheet" type="text/css" href="../basic-income.css">

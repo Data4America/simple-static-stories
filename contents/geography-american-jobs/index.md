@@ -1,7 +1,7 @@
 ---
 title: The Geography of American Jobs
 author: robert-manduca
-date: 2015-09-30
+date: 2015-11-30
 template: article.jade
 code: https://github.com/Data4America/jobmaps
 data: http://datahub.io/dataset/where-are-the-jobs
