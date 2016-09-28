@@ -425,27 +425,44 @@ $(document).ready(function() {
 function initMobileMenu() {
   var $masthead = $('#masthead'),
       $link = $masthead.find('.menu.mobile .nav-link'),
-      $menu = $masthead.find('.nav-mob'),
-      $icon = $masthead.find('.menu.mobile .nav-link .icon'),
+      $menus = $('.nav-mob'),
+      $menu = $masthead.find('.nav-mob-menu'),
+      $updateMenu = $masthead.find('.nav-mob-update'),
       loadSlider = false;
 
   $link.click(function() {
-    if ($link.hasClass('active')) {
-      $icon.removeClass('remove');
-      $icon.addClass('content');
-      $link.removeClass('active');
+    var $this = $(this),
+        $icon = $(this).find('.icon'),
+        $menu = $(this).hasClass('update') ?
+                  $menus.filter('.nav-mob-update') :
+                  $menus.filter('.nav-mob-menu');
+
+    $menus.css('display','none');
+    $link.filter('.active').not(this)
+          .removeClass('active')
+          .find('.icon')
+            .removeClass('remove')
+            .addClass($this.hasClass('update') ? 'content' : 'refresh');
+
+    if ($this.hasClass('active')) {
+      $this.removeClass('active');
       $menu.css('display', 'none');
+      $icon.removeClass('remove')
+           .addClass($this.hasClass('update') ? 'refresh' : 'content');
       document.body.style.overflow = 'scroll';
     } else {
-      $icon.removeClass('content');
-      $icon.addClass('remove');
-      $link.addClass('active');
       document.body.style.overflow = 'hidden';
+      $this.addClass('active');
+      $icon.addClass('remove')
+            .removeClass('content refresh');
+
       $menu.css({
         top:     $('#masthead').height(),
         height:  window.innerHeight - $('#masthead').height(),
         display: 'block'
       });
+
+      if ($(this).hasClass('update')) return;
 
       if (!loadSlider) {
         $('.nav-mob .nav-slider.unplugged-slider, .nav-mob .nav-slider.lifemap-slider').slick({

@@ -10,6 +10,7 @@ isLifemap: true
 article: true
 published: true
 featured: true
+isVerified: true
 ---
 
 <p>

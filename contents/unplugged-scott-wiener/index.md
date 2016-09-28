@@ -9,6 +9,7 @@ isPodcast: true
 noFooter: false
 article: true
 published: true
+unplugged: true
 ---
 
 <p>

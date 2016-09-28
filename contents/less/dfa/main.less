@@ -644,7 +644,12 @@ html, body, header {
     width: 100%;
     margin: 0;
 
-    .item { height: 60px; }
+    .item {
+      height: 60px;
+    }
+    .right.menu .item {
+      padding: 1em 0.5em;
+    }
     .icon { font-size: 2em; margin-right: 0; }
   }
 
@@ -700,6 +705,16 @@ html, body, header {
     }
   }
 
+  .nav-mob-update {
+    display: none;
+    a {
+      color:#fff;
+      span {
+        display: block;
+        margin:1em 0px;
+      }
+    }
+  }
 
   .nav-mob {
     display: none;
@@ -873,6 +888,20 @@ html, body, header {
 }
 
 .dfa-feed {
+  .dfa-approved-image {
+    text-align:center;
+    margin-top:0.4em;
+    span {
+      padding:0.5em;
+      background: #fff;
+      i {
+        font-size: 0.9em;
+      }
+      .dfa-text, .dfa-text .f {
+        padding: 0px;
+      }
+    }
+  }
 
   .dfa-feed-item {
     background: white;
@@ -882,7 +911,6 @@ html, body, header {
       height: 100%;
       background-color: #fff;
       color: #004f81;
-
     }
 
     .item-image {
@@ -994,6 +1022,11 @@ html, body, header {
       .lifemap-image {
         display: inline-block;
         margin-top: 0.5em;
+      }
+      .unplugged-image {
+        display: inline-block;
+        margin-top: 0.9em;
+        text-transform: none;
       }
     }
 

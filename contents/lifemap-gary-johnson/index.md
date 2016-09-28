@@ -9,6 +9,7 @@ noFooter: true
 isLifemap: true
 article: true
 published: true
+isVerified: true
 ---
 
 <p>

@@ -276,10 +276,35 @@ html(lang='en')
               a.item.logo(href="/")
                 img.ui.image.small(src="/img/logo-large.png")
               div.right.menu
+                a.item.nav-link.update
+                  i.refresh.red.icon
                 a.item.nav-link
                   i.content.red.icon
 
-            div.nav-mob.ui.menu.stackable.inverted
+            div.nav-mob.nav-mob-update.ui.segment.inverted
+              h2#august-2016.ui.dividing.header.inverted
+                a(href="/updates/august-2016/", target="_blank") Updates - August 2016
+
+              a.text(href="/updates/august-2016/", target="_blank")
+                span 1/ WIRED magazine covered our Facebook LIVE and Unplugged with Governor Gary Johnson. We were joined by Data4America supporter Cyan Banister. Here's the full interview.
+
+                span 2/ We launched our Podcast called Unplugged. 
+
+                span 3/ We turned LIVE into a podcast
+
+                span 4/ All podcasts are fully transcribed. 
+
+                span 5/ We’ve grown our team to 25+! 
+
+                span 6/ Our Editorial Board published “One Job, One Dot: Every job in America, on a map”. 
+
+                span We opened sourced the code, the data, and instructions for re-creation. 
+
+                span 7/ Join our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board. 
+
+                span If published, we’ll syndicate you to our social media, through email, through Huffington Post, and more. 
+            
+            div.nav-mob.nav-mob-menu.ui.menu.stackable.inverted
               a.item(href="/about/") About
               a.item(href="/updates") What's New
               a.item(href="/syndicated-posts") Syndicated Posts
@@ -305,7 +330,7 @@ html(lang='en')
                     img(src='http://lifemap.io/img/donald-trump.jpg')
                   div.content
                     a.header.center.aligned(href="http://lifemap.io/donaldtrump/") Donald Trump
-
+            
                 div.ui.card
                   a.image(href="http://lifemap.io/garyjohnson/")
                     img(src='http://lifemap.io/img/garyjohnson/age-63.jpg')
@@ -329,7 +354,7 @@ html(lang='en')
                     img(src='http://lifemap.io/img/timkaine/age-58.jpg')
                   div.content
                     a.header.center.aligned(href="http://lifemap.io/timkaine") Tim Kaine
-
+            
                 div.ui.card
                   a.image(href="http://lifemap.io/ben-carson/")
                     img(src='http://lifemap.io/img/ben-carson.jpg')
@@ -371,7 +396,7 @@ html(lang='en')
                     img(src='http://lifemap.io/img/sheryl-sandberg.jpg')
                   div.content
                     a.header.center.aligned(href="http://lifemap.io/sherylsandberg/") Sheryl Sandberg
-
+            
                 div.ui.card
                   a.image(href="http://lifemap.io/marcbenioff/")
                     img(src='http://lifemap.io/img/marcbenioff.jpg')
@@ -409,7 +434,7 @@ html(lang='en')
                     img(src='/img/unplugged-michael.jpg')
                   div.content
                     a.header.center.aligned(href="/unplugged/episode-3-michael-gibson") Michael Gibson
-
+            
                 div.ui.card
                   a.image(href="/unplugged/live-keith-blake")
                     img(src='/img/live-rabois-masters-600.jpg')
@@ -427,6 +452,15 @@ html(lang='en')
                     img(src='/img/unplugged-garyjohnson-800.jpg')
                   div.content
                     a.header.center.aligned(href="/unplugged/live-gary-johnson") Gary Johnson
+              
+              div.item(style="height:auto;")
+                h4.ui.header.inverted.center.aligned
+                  | Help 
+                  span.d4a Data
+                    span.f(style="color:#CC0001") 4
+                    | America 
+                  |  publish Editorial Board-approved data science and data visualization about politics. 
+                  a.dfa-btn-donate(href="javascript:;") Make a donation.                    
                     
               div.item
                 a(href="http://facebook.com/data4america", target="_blank").ui.icon.button.fluid
