@@ -9,6 +9,7 @@ noFooter: true
 isLifemap: true
 article: true
 published: true
+weight: 4
 ---
 
 <p>

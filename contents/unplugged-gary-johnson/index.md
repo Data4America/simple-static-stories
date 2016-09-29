@@ -12,6 +12,7 @@ published: true
 lifemap: true
 isEvent: true
 links: "Read about it in wired|https://www.wired.com/2016/09/gary-johnson-looks-perfectly-ease-vr-headset-face/"
+wired: true
 ---
 
 <p>

@@ -33,9 +33,6 @@
 	@tip Set the background color for your email. You may want to choose one that matches your company's branding.
 	@theme page
 	*/
-		body,.backgroundTable{
-			/*@editable*/background-color:#FAFAFA;
-		}
 	/*
 	@tab Page
 	@section email border
