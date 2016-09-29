@@ -888,17 +888,20 @@ html, body, header {
 }
 
 .dfa-feed {
+
   .dfa-approved-image {
-    text-align:center;
-    margin-top:0.4em;
+    text-align: center;
+
     span {
-      padding:0.5em;
+      padding: 0.2em 0.5em;
+      border-radius: 0 0 5px 5px;
       background: #fff;
       i {
         font-size: 0.9em;
       }
       .dfa-text, .dfa-text .f {
         padding: 0px;
+        font-weight:bold;
       }
     }
   }
@@ -1098,12 +1101,17 @@ html, body, header {
     .item-bottom::before { background-color: #f28e1e; }
   }
 
+  .dfa-feed-item.event {
+    .item-meta::before { background-color: #6435c9; }
+    .item-bottom::before { background-color: #6435c9; }
+  }
+
   @media only screen and (max-width: @largestMobileScreen) {
     margin: 0 1em !important;
   }
 }
 
-.dfa-feed-item.podcast, .dfa-feed-item.lifemap {
+.dfa-feed-item.podcast, .dfa-feed-item.lifemap .dfa-feed-item.podcast, .dfa-feed-item.event {
   .item-image {
     position: relative;
     overflow: auto;

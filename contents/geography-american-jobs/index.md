@@ -10,8 +10,8 @@ isStandard: true
 isVerified: true
 article: true
 published: true
-links: "Employment Data|http://lehd.ces.census.gov/data/#lodes, US Census Block shapefiles|https://www.census.gov/geo/maps-data/data/tiger-line.html,
-Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
+icon: "yellow certificate"
+links: "Employment Data|http://lehd.ces.census.gov/data/#lodes, US Census Block shapefiles|https://www.census.gov/geo/maps-data/data/tiger-line.html,Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
 ---
 
 The latest employment numbers show that non-farm employment in America increased [by 173,000](http://www.bls.gov/news.release/pdf/empsit.pdf). The American economy is now host to [142,288,000 jobs](https://research.stlouisfed.org/fred2/series/PAYEMS/). That's a lot of jobs! But where are these jobs located, exactly?
