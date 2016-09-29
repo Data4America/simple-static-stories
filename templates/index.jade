@@ -125,7 +125,7 @@ block content
   div.dfa-feed.ui.three.column.stackable.grid
 
     div.column
-      div.dfa-feed-item.event
+      div.dfa-feed-item.event.disable
         a.item-link(href="javascript:;")
           div.item-meta
             h1.ui.large.header.item-title 9/30: Basic Income discussion with Albert Wenger
@@ -134,22 +134,22 @@ block content
             p.item-date= moment.utc('2016-09-30').format('MMMM D, YYYY')
 
     div.column
-      div.dfa-feed-item.event
+      div.dfa-feed-item.event.disable
         a.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 12/1: Basic Income discussion with Charles Murray
+            h1.ui.large.header.item-title 12/7: Basic Income discussion with Charles Murray
         div.item-details
           div.item-bottom
-            p.item-date= moment.utc('2016-12-01').format('MMMM D, YYYY')
+            p.item-date= moment.utc('2016-12-07').format('MMMM D, YYYY')
 
     div.column
-      div.dfa-feed-item.event
+      div.dfa-feed-item.event.disable
         a.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 9/30: Basic Income discussion with Albert Wenger
+            h1.ui.large.header.item-title 12/11 - Basic Income discussion with Niall Ferguson, Joe Lonsdale, GiveDirectly, and YCombinator
         div.item-details
           div.item-bottom
-            p.item-date= moment.utc('2016-12-12').format('MMMM D, YYYY')
+            p.item-date= moment.utc('2016-12-11').format('MMMM D, YYYY')
 
     each article in articles
       if article.metadata.isEvent
@@ -159,8 +159,6 @@ block content
           if locals.development || article.metadata.published
             div.dfa-feed-item.event
               a.item-link(href=url, target=ext ? '_blank' : '_self')
-                div.item-image
-                  img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
                 div.item-meta
                   h1.ui.large.header.item-title= article.title
                   div.item-text!= article.metadata.description
