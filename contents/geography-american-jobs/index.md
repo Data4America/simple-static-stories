@@ -11,7 +11,7 @@ isVerified: true
 article: true
 published: true
 icon: "yellow certificate"
-links: "Download The Data|http://lehd.ces.census.gov/data/#lodes, Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
+links: "Download The Data|http://lehd.ces.census.gov/data/#lodes, Fork the code | https://github.com/Data4America/jobmaps, Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
 originals: true
 ---
 

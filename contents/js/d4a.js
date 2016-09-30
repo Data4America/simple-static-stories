@@ -37,6 +37,7 @@ $(document).ready(function() {
   });
   showFixedButton();
   initSlider();
+  initContentEmail();
 
   $('.ui.form .ui.dropdown').dropdown();
 
@@ -516,6 +517,28 @@ function preloadImage(url)
 {
     var img=new Image();
     img.src=url;
+}
+
+function validateEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function initContentEmail() {
+  var $elem = $('#dfa-email-content');
+  $elem.find('.button').click(function() {
+    var email = $elem.find('input').val();
+
+    if (validateEmail(email)) {
+      $(this).addClass('loading');
+      $.getScript('https://dev.data4america.org/subscribe.php?email=' + email);
+    }
+  });
+}
+
+window.subscribed = function(){
+  $('#dfa-email-content').hide();
+  $('#subscribed-message').show();
 }
 
 function initMenu() {

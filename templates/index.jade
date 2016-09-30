@@ -3,7 +3,19 @@ extends layout
 block content
 
   include author
-
+  
+  div.ui.info.message
+    div.header Three things:
+    ul.list
+      li We're publishing Lifemap on the 
+        a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2") HuffPo 
+        | The history of policy and the people who shape it, in 100 characters or less. See them all 
+        a(href="https://wwww.lifemap.io") here.
+      li If you're interested in a tax-deductible gift to D4A, check out our 
+        a(href="/donate") page.
+      li The Gary Johnson Live and Unplugged interview is 
+        a(href="/unplugged/live-gary-johnson") here.
+          
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data science to the understanding of politics
   div.dfa-feed.ui.three.column.stackable.grid
@@ -14,6 +26,8 @@ block content
         div.column
           if locals.development || article.metadata.published
             div.dfa-feed-item.article
+              if article.metadata.isVerified
+                img.ui.image.small.item-approved-badge(src='/img/badge.png')
               a.item-link(href=url, target=ext ? '_blank' : '_self')
                 div.item-image
                   img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
@@ -37,15 +51,28 @@ block content
                   if article.metadata.ugp
                     img.ui.small.image.unplugged-image(src="/img/ugp.png")                    
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
-
-            if article.metadata.isVerified
-              div.dfa-approved-image
-                span
-                  i.icon.checkmark.box.red
-                  span.dfa-text
-                    | DATA
-                    span.f 4
-                    | AMERICA
+    
+    div.column
+      div.ui.yellow.segment.inverted
+        div#dfa-email-content.ui.form
+          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-style:italic;") Join a bunch of others and have new D4A content emailed to you
+          div.field
+            input(type='email', name='email', placeholder='Email Address')
+          button.ui.button.primary.fluid Send Me Content
+        
+        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
+          i.send.icon
+          | Thank you for subscribing.
+          
+      div.ui.segment
+        button.ui.facebook.button.fluid
+          i.facebook.icon
+          |   Like Us On Facebook
+        button.ui.twitter.button.fluid(style="margin-top:1em;")
+          i.twitter.icon
+          |   Follow Us On Twitter
+        h2.ui.header.center.aligned(style="font-weight:300; font-style:italic;") Help us reach our $250,000 funding goal by December 30th. Make tax-deductible donation.
+        button.ui.button.red.fluid Donate
                     
   h1.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data visualization to the understanding of politics
@@ -58,34 +85,27 @@ block content
       div.column
         if locals.development || article.metadata.published
           div.dfa-feed-item.lifemap
+            if article.metadata.isVerified
+              img.ui.image.small.item-approved-badge(src='/img/badge.png')
             a.item-link(href=url, target=ext ? '_blank' : '_self')
               div.item-image
-                if article.metadata.featured
-                  div.dfa-sponser
-                    span AS FEATURED ON
-                      img(src="/img/huffington-post-logo.jpg")
+                //- if article.metadata.featured
+                //-   div.dfa-sponser
+                //-     span AS FEATURED ON
+                //-       img(src="/img/huffington-post-logo.jpg")
                 img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
               div.item-meta
                 h1.ui.large.header.item-title= article.title
 
             div.item-details
               mixin authorName(article.metadata.author)
-              div(style="font-size: 0.9em; color: #aaa;") LAST EDIT: 
-                = moment.utc(article.date).format('MMMM D, YYYY')
               div.item-bottom
                 img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
-                p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
+                p.item-date LAST EDIT: 
+                  = moment.utc(article.date).format('MMMM D, YYYY')
 
-          if article.metadata.isVerified
-            div.dfa-approved-image
-              span
-                i.icon.checkmark.box.red
-                span.dfa-text
-                  | DATA
-                  span.f 4
-                  | AMERICA
-
-  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 1.5em") PODCAST
+  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") PODCAST
+  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
       if article.metadata.isPodcast
@@ -109,8 +129,8 @@ block content
                       - var texturl = link.split('|')
                       div.item
                         a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
-                if article.metadata.wired
-                  img.ui.small.image(src='/img/wired-logo.png')
+                          if article.metadata.wired
+                            img.ui.small.mini(src='/img/wired-logo.png', style="margin-left:5px; width: 70px !important; height: 15px !important;")
 
                 div.item-bottom
                   if article.metadata.lifemap
@@ -126,63 +146,61 @@ block content
 
     div.column
       div.dfa-feed-item.event.disable
-        a.item-link(href="javascript:;")
+        div.item-link(href="javascript:;")
           div.item-meta
             h1.ui.large.header.item-title 9/30: Basic Income discussion with Albert Wenger
+              a(target="_blank" href="https://www.twitter.com/albertwenger")
+                i.twitter.icon.blue
         div.item-details
+          span.author
+            | Hosted by: 
+            b
+              span Nellie Bowles
+              a(href='https://twitter.com/NellieBowles', target='_blank', style='color:#4099FF;')
+                i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
           div.item-bottom
             p.item-date= moment.utc('2016-09-30').format('MMMM D, YYYY')
 
     div.column
       div.dfa-feed-item.event.disable
-        a.item-link(href="javascript:;")
+        div.item-link(href="javascript:;")
           div.item-meta
             h1.ui.large.header.item-title 12/7: Basic Income discussion with Charles Murray
+              a(target="_blank" href="https://www.twitter.com/charlesmurray")
+                i.twitter.icon.blue
         div.item-details
+          span.author
+            | Hosted by: 
+            b
+              span  Katie Bieber
+              a(href='https://twitter.com/katiebiber', target='_blank', style='color:#4099FF;')
+                i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
           div.item-bottom
             p.item-date= moment.utc('2016-12-07').format('MMMM D, YYYY')
 
     div.column
       div.dfa-feed-item.event.disable
-        a.item-link(href="javascript:;")
+        div.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 12/11 - Basic Income discussion with Niall Ferguson, Joe Lonsdale, GiveDirectly, and YCombinator
+            h1.ui.large.header.item-title 12/11 - Basic Income discussion with Niall Ferguson
+              a(target="_blank" href="https://www.twitter.com/nfergus")
+                i.twitter.icon.blue
+              | , Joe Lonsdale
+              a(target="_blank" href="https://www.twitter.com/jtlonsdale")
+                i.twitter.icon.blue
+              | , GiveDirectly
+              a(target="_blank" href="https://www.twitter.com/ycombinator")
+                i.twitter.icon.blue
+              | , and YCombinator
+              a(target="_blank" href="https://www.twitter.com/Give_Directly")
+                i.twitter.icon.blue
+                
         div.item-details
+          span.author
+            | Hosted by: 
+            b
+              span  Kim-Mai Cutler
+              a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
+                i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
           div.item-bottom
             p.item-date= moment.utc('2016-12-11').format('MMMM D, YYYY')
-
-    each article in articles
-      if article.metadata.isEvent
-        - url = article.metadata.link ? article.metadata.link : article.url
-        - ext = article.metadata.link ? true : false
-        div.column
-          if locals.development || article.metadata.published
-            div.dfa-feed-item.event
-              a.item-link(href=url, target=ext ? '_blank' : '_self')
-                div.item-meta
-                  h1.ui.large.header.item-title= article.title
-                  div.item-text!= article.metadata.description
-
-              div.item-details
-                mixin podcastAuthor(article.metadata.author)
-                div.ui.bulleted.list
-                  if article.metadata.links
-                    - var links = article.metadata.links.split(',')
-                    each link in links
-                      - var texturl = link.split('|')
-                      div.item
-                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
-
-                div.item-bottom
-                  if !article.metadata.published
-                    span.ui.basic.red.label Not Approved
-                  p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
-
-            if article.metadata.isVerified
-              div.dfa-approved-image
-                span
-                  i.icon.checkmark.box.red
-                  span.dfa-text
-                    | DATA
-                    span.f 4
-                    | AMERICA
