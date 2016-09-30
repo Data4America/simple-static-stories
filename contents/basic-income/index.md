@@ -5,7 +5,7 @@ date: 2015-11-12
 template: basic-income.jade
 code: https://github.com/Data4America/simple-static-stories/blob/development/contents/basic-income/basic-income.js
 description: "Mathematical modeling of the impact of basic income, allowing users to interactively customize the model and see if they can make the numbers add up."
-links: "Download The Data|https://datahub.io/dataset/where-are-the-jobs, Fork the code |https://github.com/Data4America/jobmaps, Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
+links: "Download the Data|https://datahub.io/dataset/where-are-the-jobs, Fork the code |https://github.com/Data4America/jobmaps, Learn how we did it|https://data4america.org/geography-american-jobs/how-to/"
 isStandard: true
 article: true
 icon: "red university"
