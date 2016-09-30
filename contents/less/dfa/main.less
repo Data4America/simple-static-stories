@@ -1107,6 +1107,16 @@ html, body, header {
     .item-bottom::before { background-color: #6435c9; }
   }
 
+  .dfa-feed-item.disable {
+     cursor: default;
+
+     .item-link { cursor: default; }
+     .item-title { color: #333; }
+
+    .item-meta::before { background-color: #f1f1f1 !important; }
+    .item-bottom::before { background-color: #f1f1f1 !important; }
+  }
+
   @media only screen and (max-width: @largestMobileScreen) {
     margin: 0 1em !important;
   }
