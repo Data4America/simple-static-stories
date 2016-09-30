@@ -4,17 +4,20 @@ block content
 
   include author
   
-  div.ui.info.message
+  div.ui.message
     div.header Three things:
     ul.list
-      li We're publishing Lifemap on the 
-        a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2") HuffPo 
-        | The history of policy and the people who shape it, in 100 characters or less. See them all 
-        a(href="https://wwww.lifemap.io") here.
-      li If you're interested in a tax-deductible gift to D4A, check out our 
-        a(href="/donate") page.
-      li The Gary Johnson Live and Unplugged interview is 
+      li We're publishing 
+        a(href="https://lifemap.io") Lifemap
+        |  on the 
+        a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2") Huffington Post. 
+        | Lifemap is the history of policy and the people who shape it in 100 characters or less.
+      li We're publishing Podcasts. The Gary Johnson Facebook Live interview is 
         a(href="/unplugged/live-gary-johnson") here.
+      li We just finished 
+        a(href="/updates/august-2016/") Season One.
+        |  We're raising support for Season Two. You can give a tax-deductible gift 
+        a(href="/donate") here.
           
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data science to the understanding of politics
@@ -55,7 +58,7 @@ block content
     div.column
       div.ui.yellow.segment.inverted
         div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-style:italic;") Join a bunch of others and have new D4A content emailed to you
+          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-style:italic;") Join a bunch of others and have new D4A content emailed to you.
           div.field
             input(type='email', name='email', placeholder='Email Address')
           button.ui.button.primary.fluid Send Me Content
@@ -65,13 +68,15 @@ block content
           | Thank you for subscribing.
           
       div.ui.segment
-        button.ui.facebook.button.fluid
+        a(href="https://www.facebook.com/data4america").ui.facebook.button.fluid
           i.facebook.icon
           |   Like Us On Facebook
-        button.ui.twitter.button.fluid(style="margin-top:1em;")
+        a(href="https://www.twitter.com/data4america").ui.twitter.button.fluid(style="margin-top:1em;")
           i.twitter.icon
           |   Follow Us On Twitter
-        h2.ui.header.center.aligned(style="font-weight:300; font-style:italic;") Help us reach our $250,000 funding goal by December 30th. Make tax-deductible donation.
+          
+        div.ui.divider
+        h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make tax-deductible donation.
         button.ui.button.red.fluid Donate
                     
   h1.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
@@ -104,7 +109,7 @@ block content
                 p.item-date LAST EDIT: 
                   = moment.utc(article.date).format('MMMM D, YYYY')
 
-  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") PODCAST
+  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
@@ -141,7 +146,8 @@ block content
 
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
-  h1.ui.horizontal.divider.header.violet(style="margin:2em 0 1.5em") EVENTS
+  h1.ui.horizontal.divider.header.violet(style="margin:2em 0 1.5em") LIVE
+  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Fireside chats, roundtable discussions, and live events to explore the government in the 21st Century.
   div.dfa-feed.ui.three.column.stackable.grid
 
     div.column
@@ -155,8 +161,8 @@ block content
           span.author
             | Hosted by: 
             b
-              span Nellie Bowles
-              a(href='https://twitter.com/NellieBowles', target='_blank', style='color:#4099FF;')
+              span  Kim-Mai Cutler
+              a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
           div.item-bottom
             p.item-date= moment.utc('2016-09-30').format('MMMM D, YYYY')
