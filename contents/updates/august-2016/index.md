@@ -98,7 +98,32 @@ title: August 2016 Update
                     <div class="subtitle" style="color: #000000 !important;">Live audience fireside chats and panels-- hosted by leading figures in media, government, education, and tech.</div>
                     <div class="ruler"></div>
                     <table width="100%">
-                    	<tr>
+                          <tr>
+                           <td class="podcastCover" style="padding:10px 0;text-align:center;">
+                                <img style="max-width:400px;" src="https://data4america.org/img/unplugged-garyjohnson-600.jpg" alt="unplugged-garyjohnson-600.jpg">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
+                                <div class="h1">
+                                  <a href="https://twitter.com/rabois" target="_blank">Gary Johnson</a>
+                                </div>
+                                <div class="h5">"Gary Johnson LIVE from Data4America was the first of hopefully many raw deep dives into the life history of America's political, business, and civic leaders.</div>
+                                <div class="h5 host">
+                                  Host: <strong><a href="https://twitter.com/bgmasters" target="_blank">Chris McCoy</a>, <a href="https://twitter.com/cyantist" target="_blank">Cyan Banister</a></strong>
+                                </div>
+                                <div>
+                                  <a class="link-play-d4a" href="https://data4america.org/unplugged/live-gary-johnson">
+                                    <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
+                                  </a>
+                                  <span style="vertical-align: middle;">·</span>
+                                  <a class="link-read-transcript" href="https://data4america.org/unplugged/live-gary-johnson#transcript">
+                                    <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
+                                  </a>
+                                </div>
+                              </td>
+                            </tr>
+                          <tr>
                            <td class="podcastCover" style="padding:10px 0;text-align:center;">
                                 <img style="max-width:400px;" src="https://data4america.org/img/live-rabois-masters-600.jpg" alt="live-rabois-masters-600.jpg">
                               </td>

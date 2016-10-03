@@ -8,16 +8,16 @@ block content
     div.header Three things:
     ul.list
       li We're publishing 
-        a(href="https://lifemap.io") Lifemap
+        a(href="http://lifemap.io", target="_blank") Lifemap
         |  on the 
-        a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2") Huffington Post. 
+        a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2", target="_blank") Huffington Post. 
         | Lifemap is the history of policy and the people who shape it in 100 characters or less.
       li We're publishing Podcasts. The Gary Johnson Facebook Live interview is 
-        a(href="/unplugged/live-gary-johnson") here.
+        a(href="/unplugged/live-gary-johnson", target="_blank") here.
       li We just finished 
-        a(href="/updates/august-2016/") Season One.
+        a(href="/updates/august-2016/", target="_blank") Season One.
         |  We're raising support for Season Two. You can give a tax-deductible gift 
-        a(href="/donate") here.
+        a(href="/donate", target="_blank") here.
 
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data science to the understanding of politics
@@ -54,30 +54,30 @@ block content
                   if article.metadata.ugp
                     img.ui.small.image.unplugged-image(src="/img/ugp.png")                    
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
-    
+
     div.column
-      div.ui.yellow.segment.inverted
+      div.ui.yellow.segment.inverted(style="max-width:258px; margin:0 auto;")
         div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-style:italic;") Join a bunch of others and have new D4A content emailed to you.
+          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;") Join a bunch of others and have new D4A content emailed to you.
           div.field
             input(type='email', name='email', placeholder='Email Address')
           button.ui.button.primary.fluid Send Me Content
-        
+
         h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
           i.send.icon
           | Thank you for subscribing.
-          
-      div.ui.segment
-        a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.huge.fluid
+
+      div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
+        a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
           i.facebook.icon
           |   Like us on Facebook
-        a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.huge.fluid(style="margin-top:1em;")
+        a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.fluid(style="margin-top:1em;")
           i.twitter.icon
           |   Follow us on Twitter
 
         div.ui.divider
-        h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make tax-deductible donation.
-        button.dfa-btn-donate.huge.ui.button.red.fluid Donate
+        h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
+        button.dfa-btn-donate.large.ui.button.red.fluid Donate
 
   h1.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data visualization to the understanding of politics
@@ -110,7 +110,7 @@ block content
                   = moment.utc(article.date).format('MMMM D, YYYY')
 
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
-  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") A podcast exploring the intersection of government, technology, and the future.
+  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  Fireside chats, roundtable discussions, and live events to explore government in the 21st Century.
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
       if article.metadata.isPodcast
