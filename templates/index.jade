@@ -3,7 +3,7 @@ extends layout
 block content
 
   include author
-  
+
   div.ui.message
     div.header Three things:
     ul.list
@@ -18,7 +18,7 @@ block content
         a(href="/updates/august-2016/") Season One.
         |  We're raising support for Season Two. You can give a tax-deductible gift 
         a(href="/donate") here.
-          
+
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data science to the understanding of politics
   div.dfa-feed.ui.three.column.stackable.grid
@@ -68,17 +68,17 @@ block content
           | Thank you for subscribing.
           
       div.ui.segment
-        a(href="https://www.facebook.com/data4america").ui.facebook.button.fluid
+        a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.huge.fluid
           i.facebook.icon
-          |   Like Us On Facebook
-        a(href="https://www.twitter.com/data4america").ui.twitter.button.fluid(style="margin-top:1em;")
+          |   Like us on Facebook
+        a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.huge.fluid(style="margin-top:1em;")
           i.twitter.icon
-          |   Follow Us On Twitter
-          
+          |   Follow us on Twitter
+
         div.ui.divider
         h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make tax-deductible donation.
-        button.ui.button.red.fluid Donate
-                    
+        button.dfa-btn-donate.huge.ui.button.red.fluid Donate
+
   h1.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data visualization to the understanding of politics
   div.dfa-feed.ui.three.column.stackable.grid

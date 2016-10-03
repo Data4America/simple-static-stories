@@ -136,7 +136,7 @@ $(document).ready(function() {
     }, 1000);
   });
 
-  $('.ui.button.facebook, .dfa-header-article-share.fb').click(function() {
+  $('.article-actions .ui.button.facebook, .dfa-header-article-share.fb').click(function() {
     console.log(this.dataset.url);
     FB.ui({
         method: 'share',
@@ -144,7 +144,7 @@ $(document).ready(function() {
     }, function () {});
   });
 
-  $('.ui.button.twitter, .dfa-header-article-share.tw, .say-thanks').click(function() {
+  $('.article-actions .ui.button.twitter, .dfa-header-article-share.tw, .say-thanks').click(function() {
     var params = '?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&via=Data4America';
     if (!$(this).hasClass('say-thanks')) {
       params = params + '&hashtags=d4a'
@@ -152,7 +152,7 @@ $(document).ready(function() {
     PopupCenter('http://twitter.com/intent/tweet' + params, 'Share on Twitter', 550, 400);
   });
 
-  $('.ui.button.email, .dfa-header-article-share.em').click(function() {
+  $('.article-actions .ui.button.email, .dfa-header-article-share.em').click(function() {
     var url = this.dataset.url;
     var text = encodeURI(this.dataset.text);
     text = text.replace('#', '%23');
