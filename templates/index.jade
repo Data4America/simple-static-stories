@@ -12,11 +12,13 @@ block content
         |  on the 
         a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2", target="_blank") Huffington Post. 
         | Lifemap is the history of policy and the people who shape it in 100 characters or less.
-      li We're publishing Podcasts. The Gary Johnson Facebook Live interview is 
+      li We're producing a Podcast called 
+        a(href="/unplugged" , target="_blank") Unplugged. 
+        |  The Gary Johnson Facebook Live interview is 
         a(href="/unplugged/live-gary-johnson", target="_blank") here.
       li We just finished 
-        a(href="/updates/august-2016/", target="_blank") Season One.
-        |  We're raising support for Season Two. You can give a tax-deductible gift 
+        a(href="/updates/august-2016/", target="_blank") Season One
+        |  at Data4America. We're raising support for Season Two and 20% there. You can give a tax-deductible gift 
         a(href="/donate", target="_blank") here.
 
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
@@ -56,12 +58,12 @@ block content
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
     div.column
-      div.ui.yellow.segment.inverted(style="max-width:258px; margin:0 auto;")
+      div.ui.red.segment.inverted(style="max-width:258px; margin:0 auto;")
         div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;") Join a bunch of others and have new D4A content emailed to you.
+          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
           div.field
             input(type='email', name='email', placeholder='Email Address')
-          button.ui.button.primary.fluid Send Me Content
+          button.ui.button.orange.fluid Send Me Content
 
         h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
           i.send.icon
@@ -110,7 +112,7 @@ block content
                   = moment.utc(article.date).format('MMMM D, YYYY')
 
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
-  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  Fireside chats, roundtable discussions, and live events to explore government in the 21st Century.
+  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
     each article in articles
       if article.metadata.isPodcast
