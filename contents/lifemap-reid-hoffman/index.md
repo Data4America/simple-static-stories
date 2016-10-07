@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Reid Hoffman"
+title: "Reid Hoffman"
 link: "http://lifemap.io/reidhoffman"
 author: data-for-america
 date: 2016-06-11

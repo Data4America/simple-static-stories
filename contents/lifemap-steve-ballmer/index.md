@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Steve Ballmer"
+title: "Steve Ballmer"
 link: "http://lifemap.io/steveballmer"
 author: data-for-america
 date: 2016-05-03

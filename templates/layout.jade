@@ -32,13 +32,22 @@ html(lang='en')
         block header
 
           div#masthead
-            div.ui.large.secondary.menu
+            div.ui.large.secondary.menu.desktop-menu
               div.ui.container(style="position: relative;")
                 a.item.logo(href="/")
                   img.ui.image.small(src="/img/logo-large.png")
                 a.dfa-menu-item.view-ui.item(data-menu="dfa-menu-menu")
                   i.sidebar.icon
                   |  Menu
+                if page
+                  div.dfa-menu-item.view-ui.item.title-item
+                    p=page.title
+                      a.dfa-header-article-share.fb(data-url=locals.url + (page !== undefined ? page.url : '/'))
+                        i.icon.facebook.inverted
+                      a.dfa-header-article-share.tw(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
+                        i.icon.twitter.inverted
+                      a.dfa-header-article-share.em(data-url=locals.url + (page !== undefined ? page.url : '/'), data-text=(page !== undefined ? page.title : locals.name))
+                        i.icon.mail.inverted
 
                 div.right.menu
                   a.item(href="/about/") About
@@ -586,7 +595,7 @@ html(lang='en')
             div.one.wide.column
               div.time 0:00
 
-      div#dfa-donate-modal.ui.modal(style="min-height:1200px;")
+      div#dfa-donate-modal.ui.modal(style="min-height:650px;")
         i.close.icon
         div.content
           div.body-text

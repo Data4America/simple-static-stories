@@ -621,6 +621,57 @@ html, body, header {
   background-size: 60%;
   border-bottom: 1px solid #c1c0c0;
 
+  .desktop-menu {
+    position: relative;
+    .title-item {
+      position: absolute;
+      left:225px;
+      background:#CC0507;
+      color:#ffffff;
+      opacity: 0;
+      width:0px;
+      padding-top:1.1em;
+      -webkit-transition: width 0.5s, opacity 0.5s;
+      transition: width 0.5s, opacity 0.5s;
+      p {
+        width:500px;
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        a {
+          margin: 0px 0px 0px 1em;
+        }
+      }
+    }
+
+    .title-item.show-item {
+      display:block;
+      width:500px;
+      opacity:1;
+      overflow: hidden;
+      -webkit-transition: width 0.5s, opacity 0.5s;
+      transition: width 0.5s, opacity 0.5s;
+      p {
+        opacity: 1;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+      }
+    }
+    .right.menu{
+      opacity:1;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
+    }
+    .right.menu.remove-menu {
+      opacity: 0;
+      overflow: hidden;
+      width:0px;
+      -webkit-transition: opacity 0.5s, width 0.5s;
+      transition: opacity 0.5s, width 0.5s;
+    }
+  }
+
   & > .menu {
     margin-bottom: 0;
 
@@ -1360,6 +1411,7 @@ hr {
 #dfa-donate-modal {
   width:482px;
   background:none;
+  margin: 0em 0em 0em -230px;
 }
 
 #dfa-donate-modal .content {

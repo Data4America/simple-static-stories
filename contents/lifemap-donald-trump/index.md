@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Donald Trump"
+title: "Donald Trump"
 link: "http://lifemap.io/donaldtrump"
 author: data-for-america
 date: 2016-02-16

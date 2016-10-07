@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Larry Ellison"
+title: "Larry Ellison"
 link: "http://lifemap.io/larryellison"
 author: data-for-america
 date: 2016-08-24

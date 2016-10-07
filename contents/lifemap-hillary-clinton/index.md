@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Hillary Clinton"
+title: "Hillary Clinton"
 link: "http://lifemap.io/hillaryclinton"
 author: data-for-america
 date: 2016-07-28

@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Mark Cuban"
+title: "Mark Cuban"
 link: "http://lifemap.io/markcuban"
 author: data-for-america
 date: 2016-02-08

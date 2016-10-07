@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Jill Stein"
+title: "Jill Stein"
 link: "http://lifemap.io/jillstein"
 author: data-for-america
 date: 2016-08-27

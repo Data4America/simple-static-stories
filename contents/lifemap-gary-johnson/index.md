@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Gary Johnson"
+title: "Gary Johnson"
 link: "http://lifemap.io/garyjohnson"
 author: data-for-america
 date: 2016-07-25

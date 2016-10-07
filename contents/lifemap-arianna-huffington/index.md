@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Arianna Huffington"
+title: "Arianna Huffington"
 link: "http://lifemap.io/ariannahuffington"
 author: data-for-america
 date: 2015-08-15

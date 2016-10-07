@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Ben Carson"
+title: "Ben Carson"
 link: "http://lifemap.io/bencarson"
 author: data-for-america
 date: 2015-12-04

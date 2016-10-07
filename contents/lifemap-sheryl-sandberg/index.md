@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Sheryl Sandberg"
+title: "Sheryl Sandberg"
 link: "http://lifemap.io/sherylsandberg"
 author: data-for-america
 date: 2016-01-30

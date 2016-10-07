@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Marc Benioff"
+title: "Marc Benioff"
 link: "http://lifemap.io/marcbenioff"
 author: data-for-america
 date: 2016-06-01

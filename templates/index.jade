@@ -3,6 +3,11 @@ extends layout
 block content
 
   include author
+  
+  .ui.stackable.center.aligned.grid.container
+    .fourteen.wide.column
+      h1.ui.icon.header(style="color:#CC0505;")
+        | A non-profit, educational initiative bringing data science to politics
 
   div.ui.message
     div.header Three things:
@@ -18,8 +23,45 @@ block content
         a(href="/unplugged/live-gary-johnson", target="_blank") here.
       li We just finished 
         a(href="/updates/august-2016/", target="_blank") Season One
-        |  at Data4America. We're raising support for Season Two and 20% there. You can give a tax-deductible gift 
+        |  at Data4America. We're raising support for Season Two and 20% there. You can help us with a tax-deductible gift 
         a(href="/donate", target="_blank") here.
+        
+  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
+  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
+  div.dfa-feed.ui.three.column.stackable.grid
+    each article in articles
+      if article.metadata.isPodcast
+        - url = article.metadata.link ? article.metadata.link : article.url
+        - ext = article.metadata.link ? true : false
+        div.column
+          if locals.development || article.metadata.published
+            div.dfa-feed-item.podcast
+              a.item-link(href=url, target=ext ? '_blank' : '_self')
+                div.item-image
+                  img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
+                div.item-meta
+                  div.item-text!= article.metadata.description
+
+              div.item-details
+                mixin podcastAuthor(article.metadata.author)
+                div.ui.bulleted.list
+                  if article.metadata.links
+                    - var links = article.metadata.links.split(',')
+                    each link in links
+                      - var texturl = link.split('|')
+                      div.item
+                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
+                          if article.metadata.wired
+                            img.ui.small.mini(src='/img/wired-logo.png', style="margin-left:5px; width: 70px !important; height: 15px !important;")
+
+                div.item-bottom
+                  if article.metadata.lifemap
+                    img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
+
+                  if article.metadata.unplugged  
+                    img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
+
+                  p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data science to the understanding of politics
@@ -102,7 +144,9 @@ block content
                 //-       img(src="/img/huffington-post-logo.jpg")
                 img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
               div.item-meta
-                h1.ui.large.header.item-title= article.title
+                h1.ui.large.header.item-title
+                  span(style="color:grey;") Lifemap: 
+                  = article.title
 
             div.item-details
               mixin authorName(article.metadata.author)
@@ -111,42 +155,6 @@ block content
                 p.item-date LAST EDIT: 
                   = moment.utc(article.date).format('MMMM D, YYYY')
 
-  h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
-  h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
-  div.dfa-feed.ui.three.column.stackable.grid
-    each article in articles
-      if article.metadata.isPodcast
-        - url = article.metadata.link ? article.metadata.link : article.url
-        - ext = article.metadata.link ? true : false
-        div.column
-          if locals.development || article.metadata.published
-            div.dfa-feed-item.podcast
-              a.item-link(href=url, target=ext ? '_blank' : '_self')
-                div.item-image
-                  img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
-                div.item-meta
-                  div.item-text!= article.metadata.description
-
-              div.item-details
-                mixin podcastAuthor(article.metadata.author)
-                div.ui.bulleted.list
-                  if article.metadata.links
-                    - var links = article.metadata.links.split(',')
-                    each link in links
-                      - var texturl = link.split('|')
-                      div.item
-                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
-                          if article.metadata.wired
-                            img.ui.small.mini(src='/img/wired-logo.png', style="margin-left:5px; width: 70px !important; height: 15px !important;")
-
-                div.item-bottom
-                  if article.metadata.lifemap
-                    img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
-
-                  if article.metadata.unplugged  
-                    img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
-
-                  p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
   h1.ui.horizontal.divider.header.violet(style="margin:2em 0 1.5em") LIVE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Fireside chats, roundtable discussions, and live events to explore the government in the 21st Century.

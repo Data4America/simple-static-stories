@@ -1,5 +1,5 @@
 ---
-title: "LifeMap: Marco Rubio"
+title: "Marco Rubio"
 link: "http://lifemap.io/marcorubio"
 author: data-for-america
 date: 2016-01-31
