@@ -3,6 +3,7 @@ title: "Larry Ellison"
 link: "http://lifemap.io/larryellison"
 author: data-for-america
 date: 2016-08-24
+lastEdit: 2016-09-03
 template: article.jade
 description: "We have created a lifemap for Larry Ellison."
 noFooter: true

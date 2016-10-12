@@ -3,6 +3,7 @@ title: "Bernie Sanders"
 link: "http://lifemap.io/berniesanders"
 author: data-for-america
 date: 2015-12-08
+lastEdit: 2016-07-12
 template: article.jade
 description: "Senator Bernie Sanders is America's longest-serving independent politician in Congress and sought the Democratic nomination for president in 2016."
 noFooter: true

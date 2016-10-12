@@ -3,6 +3,7 @@ title: "Mark Cuban"
 link: "http://lifemap.io/markcuban"
 author: data-for-america
 date: 2016-02-08
+lastEdit: 2016-02-08
 template: article.jade
 description: "Mark Cuban is an American businessman and investor."
 noFooter: true

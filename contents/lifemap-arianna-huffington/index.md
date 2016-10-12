@@ -3,6 +3,7 @@ title: "Arianna Huffington"
 link: "http://lifemap.io/ariannahuffington"
 author: data-for-america
 date: 2015-08-15
+lastEdit: 2016-07-25
 template: article.jade
 description: "Benjamin Solomon \"Ben\" Carson, Sr. is an American retired neurosurgeon and former candidate for President of the United States."
 noFooter: true

@@ -3,6 +3,7 @@ title: "Tim Kaine"
 link: "http://lifemap.io/timkaine"
 author: data-for-america
 date: 2016-08-16
+lastEdit: 2016-08-16
 template: article.jade
 description: "Timothy Michael \"Tim\" Kaine is an American attorney and politician serving as the junior United States Senator from Virginia."
 noFooter: true

@@ -3,6 +3,7 @@ title: "Rand Paul"
 link: "http://lifemap.io/randpaul"
 author: data-for-america
 date: 2016-01-18
+lastEdit: 2016-01-08
 template: article.jade
 description: "Randal Howard \"Rand\" Paul is an American politician and physician. Since 2011, Paul has served in the United States Senate as a member of the Republican Party representing Kentucky."
 noFooter: true

@@ -3,6 +3,7 @@ title: "Ben Carson"
 link: "http://lifemap.io/bencarson"
 author: data-for-america
 date: 2015-12-04
+lastEdit: 2015-12-14
 template: article.jade
 description: "Benjamin Solomon \"Ben\" Carson, Sr. is an American retired neurosurgeon and former candidate for President of the United States."
 noFooter: true

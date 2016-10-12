@@ -3,6 +3,7 @@ title: "Marco Rubio"
 link: "http://lifemap.io/marcorubio"
 author: data-for-america
 date: 2016-01-31
+lastEdit: 2016-01-31
 template: article.jade
 description: "Marco Antonio Rubio is an American politician and attorney, and the junior United States Senator from Florida."
 noFooter: true

@@ -3,6 +3,7 @@ title: "Reid Hoffman"
 link: "http://lifemap.io/reidhoffman"
 author: data-for-america
 date: 2016-06-11
+lastEdit: 2016-09-11
 template: article.jade
 description: "Reid Garrett Hoffman is an American internet entrepreneur, venture capitalist and author."
 noFooter: true

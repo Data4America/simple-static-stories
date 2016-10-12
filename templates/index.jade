@@ -6,7 +6,7 @@ block content
   
   .ui.stackable.center.aligned.grid.container
     .fourteen.wide.column
-      h1.ui.icon.header(style="color:#CC0505;")
+      h2.ui.icon.header(style="color:#CC0505; font-weight:300; font-style:italic;")
         | A non-profit, educational initiative bringing data science to politics
 
   div.ui.message
@@ -23,7 +23,7 @@ block content
         a(href="/unplugged/live-gary-johnson", target="_blank") here.
       li We just finished 
         a(href="/updates/august-2016/", target="_blank") Season One
-        |  at Data4America. We're raising support for Season Two and 20% there. You can help us with a tax-deductible gift 
+        |  at Data4America. We're raising support for Season Two. You can help us with a tax-deductible gift 
         a(href="/donate", target="_blank") here.
         
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
@@ -153,7 +153,7 @@ block content
               div.item-bottom
                 img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
                 p.item-date LAST EDIT: 
-                  = moment.utc(article.date).format('MMMM D, YYYY')
+                  = moment.utc(article.lastEdit).format('MMMM D, YYYY')
 
 
   h1.ui.horizontal.divider.header.violet(style="margin:2em 0 1.5em") LIVE

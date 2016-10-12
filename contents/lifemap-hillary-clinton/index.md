@@ -3,6 +3,7 @@ title: "Hillary Clinton"
 link: "http://lifemap.io/hillaryclinton"
 author: data-for-america
 date: 2016-07-28
+lastEdit: 2016-09-03
 template: article.jade
 description: "Hillary Diane Rodham Clinton is an American politician and the nominee of the Democratic Party for President of the United States in the 2016 election."
 noFooter: true
