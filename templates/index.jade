@@ -29,39 +29,68 @@ block content
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
+    - var count = 0
     each article in articles
-      if article.metadata.isPodcast
-        - url = article.metadata.link ? article.metadata.link : article.url
-        - ext = article.metadata.link ? true : false
+      if count == 2
         div.column
-          if locals.development || article.metadata.published
-            div.dfa-feed-item.podcast
-              a.item-link(href=url, target=ext ? '_blank' : '_self')
-                div.item-image
-                  img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
-                div.item-meta
-                  div.item-text!= article.metadata.description
+          div.ui.red.segment.inverted(style="max-width:258px; margin:0 auto;")
+            div#dfa-email-content.ui.form
+              h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
+              div.field
+                input(type='email', name='email', placeholder='Email Address')
+              button.ui.button.orange.fluid Send Me Content
 
-              div.item-details
-                mixin podcastAuthor(article.metadata.author)
-                div.ui.bulleted.list
-                  if article.metadata.links
-                    - var links = article.metadata.links.split(',')
-                    each link in links
-                      - var texturl = link.split('|')
-                      div.item
-                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
-                          if article.metadata.wired
-                            img.ui.small.mini(src='/img/wired-logo.png', style="margin-left:5px; width: 70px !important; height: 15px !important;")
+            h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
+              i.send.icon
+              | Thank you for subscribing.
 
-                div.item-bottom
-                  if article.metadata.lifemap
-                    img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
+          div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
+            a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
+              i.facebook.icon
+              |   Like us on Facebook
+            a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.fluid(style="margin-top:1em;")
+              i.twitter.icon
+              |   Follow us on Twitter
 
-                  if article.metadata.unplugged  
-                    img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
+            div.ui.divider
+            h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
+            button.dfa-btn-donate.large.ui.button.red.fluid Donate
+            - count++
+            
+      else 
+        if article.metadata.isPodcast
+          - url = article.metadata.link ? article.metadata.link : article.url
+          - ext = article.metadata.link ? true : false
+          div.column
+            if locals.development || article.metadata.published
+              div.dfa-feed-item.podcast
+                a.item-link(href=url, target=ext ? '_blank' : '_self')
+                  div.item-image
+                    img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
+                  div.item-meta
+                    div.item-text!= article.metadata.description
 
-                  p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
+                div.item-details
+                  mixin podcastAuthor(article.metadata.author)
+                  div.ui.bulleted.list
+                    if article.metadata.links
+                      - var links = article.metadata.links.split(',')
+                      each link in links
+                        - var texturl = link.split('|')
+                        div.item
+                          a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
+                            if article.metadata.wired
+                              img.ui.small.mini(src='/img/wired-logo.png', style="margin-left:5px; width: 70px !important; height: 15px !important;")
+
+                  div.item-bottom
+                    if article.metadata.lifemap
+                      img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
+
+                    if article.metadata.unplugged  
+                      img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
+
+                    p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
+          - count++
 
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data science to the understanding of politics
@@ -98,30 +127,6 @@ block content
                   if article.metadata.ugp
                     img.ui.small.image.unplugged-image(src="/img/ugp.png")                    
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
-
-    div.column
-      div.ui.red.segment.inverted(style="max-width:258px; margin:0 auto;")
-        div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
-          div.field
-            input(type='email', name='email', placeholder='Email Address')
-          button.ui.button.orange.fluid Send Me Content
-
-        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
-          i.send.icon
-          | Thank you for subscribing.
-
-      div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
-        a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
-          i.facebook.icon
-          |   Like us on Facebook
-        a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.fluid(style="margin-top:1em;")
-          i.twitter.icon
-          |   Follow us on Twitter
-
-        div.ui.divider
-        h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
-        button.dfa-btn-donate.large.ui.button.red.fluid Donate
 
   h1.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data visualization to the understanding of politics

@@ -39,7 +39,7 @@ $(document).ready(function() {
   initSlider();
   initContentEmail();
   changeTopNav();
-  scrollOnBottom();
+  // scrollOnBottom();
 
   $('.ui.form .ui.dropdown').dropdown();
 

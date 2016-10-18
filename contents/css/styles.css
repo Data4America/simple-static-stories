@@ -52894,9 +52894,15 @@ input::-moz-focus-inner {
   cursor: pointer;
   z-index: 2;
 }
+.body-text.donate-wrapper {
+  display: none;
+}
 @media only screen and (max-width: 767px) {
   .dfa-sidebar-tap {
     top: 120px;
+  }
+  .body-text.donate-wrapper {
+    display: block;
   }
 }
 .ui.sidebar .dfa-sidebar-tap {
