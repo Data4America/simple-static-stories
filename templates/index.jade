@@ -158,7 +158,7 @@ block content
               div.item-bottom
                 img.ui.tiny.image.lifemap-image(src="/img/lifemap-logo.png")
                 p.item-date LAST EDIT: 
-                  = moment.utc(article.lastEdit).format('MMMM D, YYYY')
+                  = moment.utc(article.metadata.lastEdit).format('MMMM D, YYYY')
 
 
   h1.ui.horizontal.divider.header.violet(style="margin:2em 0 1.5em") LIVE
