@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-07-25
 lastEdit: 2016-10-04
 template: article.jade
+category: Presidential Candidate
 description: "Gary Earl Johnson is an American businessman, author, politician and the Libertarian Party nominee for President of the United States in the 2016 election."
 noFooter: true
 isLifemap: true

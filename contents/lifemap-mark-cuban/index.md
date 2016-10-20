@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-02-08
 lastEdit: 2016-02-08
 template: article.jade
+category: Tech Luminaries
 description: "Mark Cuban is an American businessman and investor."
 noFooter: true
 isLifemap: true

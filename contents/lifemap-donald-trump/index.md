@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-02-16
 lastEdit: 2016-09-21
 template: article.jade
+category: Presidential Candidate
 description: "Donald John Trump is an American businessman, television personality, author, politician, and the Republican Party nominee for President of the United States in the 2016 election."
 noFooter: true
 isLifemap: true

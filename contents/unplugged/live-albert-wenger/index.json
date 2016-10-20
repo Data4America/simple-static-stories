@@ -1,0 +1,62 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Uplugged Live: Albert Wenger",
+  "profile": {
+    "guest": "Albert Wenger",
+    "artwork": "/img/unplugged-albertwenger-600.jpg",
+    "link": "/unplugged/live-albert-wenger",
+    "desc": [
+      "Roundtable discussion on the future of Jobs, Automation, and Basic Income with Albert Wenger, author of World After Capital and VC at Union Square Ventures."
+    ],
+    "host": [{
+      "name": "Kim-Mai Cutler",
+      "twitter": "https://twitter.com/kimmaicutler"
+    }],
+    "images" : [ "/img/live-albert-wenger/1.jpg", "/img/live-albert-wenger/2.jpg", "/img/live-albert-wenger/3.jpg",
+                 "/img/live-albert-wenger/4.jpg"
+    ],
+    "panel":[
+      {
+        "name" : "William Eden",
+        "image" : "/img/william_eden.jpg",
+        "title" : "Vice President @ThielCapitan",
+        "twitterLink": "https://twitter.com/ThielCapitan"
+      },
+      {
+        "name" : "Chad Grillis",
+        "image" : "/img/chad_grillis.jpg",
+        "title" : "Founder @The Misson",
+        "twitterLink": "https://twitter.com/TheMission"
+      },
+      {
+        "name" : "Tyler Willis",
+        "image" : "/img/tyler_willis.jpeg",
+        "title" : "Entrepreneur and Investor"
+      },
+      {
+        "name" : "Chris McCoy",
+        "image" : "/img/chris_mccoy.jpg",
+        "title" : "Executive Director @Data4America",
+        "twitterLink": "https://twitter.com/Data4AMerica"
+      },
+      {
+        "name" : "Jim Pugh",
+        "image" : "/img/jim_pugh.jpg",
+        "title" : "Co-Founder @Universal Income Project",
+        "twitterLink": "https://twitter.com/UniversalIncomeProject"
+      },
+      {
+        "name" : "Sandhya Anantharaman",
+        "image" : "/img/sandhya_anantharaman.jpeg",
+        "title" : "Co-Founder @Universal Income Project",
+        "twitterLink": "https://twitter.com/UniversalIncomeProject"
+      }
+    ],
+    "twitter": "albertwenger",
+    "viframe" : {
+      "link": "https://www.facebook.com/data4america/videos/1698643560462194/",
+      "image": "/img/facebook-live-logo-colored.png",
+      "text": "with Albert Wenger"
+    }
+  }
+}

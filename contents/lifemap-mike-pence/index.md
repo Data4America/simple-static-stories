@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-08-17
 lastEdit: 2016-08-17
 template: article.jade
+category: Politicians
 description: "Michael Richard \"Mike\" Pence is an American politician, attorney and Governor of Indiana."
 noFooter: true
 isLifemap: true

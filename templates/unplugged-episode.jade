@@ -74,6 +74,8 @@ block content
                   a(href=host.linkedin, target="_blank")
                     i.ui.linkedin.square.icon
                 !="&nbsp;"
+                
+                
 
           if podcast.moreLinks
             p.links.hidden
@@ -108,6 +110,27 @@ block content
               a(href="javascript:;")
                 i.chevron.down.icon
                 span More Details
+        
+        if podcast.panel        
+          div.panel
+            h1.ui.header Panels
+            div.ui.items
+              each member in podcast.panel
+                div.item
+                  div.ui.tiny.image
+                    img(src=member.image)
+                  div.middle.aligned.content
+                    div.header=member.name
+                    div.description
+                      p=member.title
+                    
+            //- div.ui.two.column.padded.celled.grid
+            //-   each member in podcast.panel
+            //-     .column
+            //-       img.ui.tiny.image(src=member.image)
+            //-       div.member-bio
+            //-         h3.ui.header=member.name
+            //-         p=member.title
 
         if podcast.iframe
           div.embed
@@ -115,11 +138,14 @@ block content
 
         if podcast.viframe
           h1.ui.header
-           a(href=podcast.videoTitle.link)
-             img(style="display:inline-block;" src=podcast.videoTitle.image).ui.tiny.image
-             span(style="margin:0 0 0 0.2em;")=podcast.videoTitle.text
+           a(href=podcast.viframe.link)
+             img(style="display:inline-block;" src=podcast.viframe.image).ui.tiny.image
+             span(style="margin:0 0 0 0.2em;")=podcast.viframe.text
            
-          div.embed <div class="fb-video" data-href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/" data-show-text="false"><blockquote cite="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364/"></a><p>Coming to you LIVE from San Francisco with Data4America talking about my life story!</p>Posted by <a href="https://www.facebook.com/govgaryjohnson/">Gary Johnson</a> on Wednesday, August 31, 2016</blockquote></div>
+          div.embed 
+            div.fb-video(data-href=podcast.viframe.link, data-show-text='false')
+              blockquote.fb-xfbml-parse-ignore(cite=podcast.viframe.link)
+                a(href=podcast.viframe.link)
 
         if podcast.images
           h1.ui.header Photos from Unplugged

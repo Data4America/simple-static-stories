@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-01-30
 lastEdit: 2016-01-30
 template: article.jade
+category: Tech Luminaries
 description: "Sheryl Kara Sandberg is an American technology executive, activist, and author."
 noFooter: true
 isLifemap: true

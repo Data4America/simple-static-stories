@@ -5,6 +5,7 @@ author: data-for-america
 date: 2015-12-04
 lastEdit: 2015-12-14
 template: article.jade
+category: Politicians
 description: "Benjamin Solomon \"Ben\" Carson, Sr. is an American retired neurosurgeon and former candidate for President of the United States."
 noFooter: true
 isLifemap: true

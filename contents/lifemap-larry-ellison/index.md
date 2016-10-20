@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-08-24
 lastEdit: 2016-09-03
 template: article.jade
+category: Tech Luminaries
 description: "We have created a lifemap for Larry Ellison."
 noFooter: true
 isLifemap: true

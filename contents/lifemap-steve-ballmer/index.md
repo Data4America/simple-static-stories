@@ -5,6 +5,7 @@ author: data-for-america
 date: 2016-05-03
 lastEdit: 2016-07-16
 template: article.jade
+category: Tech Luminaries
 description: "Steven Anthony \"Steve\" Ballmer is an American businessman who was the chief executive officer of Microsoft from January 2000 to February 2014, and is the owner of the Los Angeles Clippers."
 noFooter: true
 isLifemap: true

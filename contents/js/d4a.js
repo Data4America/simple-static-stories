@@ -39,6 +39,7 @@ $(document).ready(function() {
   initSlider();
   initContentEmail();
   changeTopNav();
+  lifemapCategories();
   // scrollOnBottom();
 
   $('.ui.form .ui.dropdown').dropdown();
@@ -46,6 +47,8 @@ $(document).ready(function() {
   $('.dfa-bi-checkboxes .checkbox').checkbox({
     uncheckable: true,
   });
+
+  $('#dfa-data-viz-tab').sticky();
 
   $('#dfa-policy-issue .accordion').accordion();
 
@@ -547,6 +550,31 @@ function preloadImage(url)
 function validateEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
+}
+
+function lifemapCategories() {
+  var $dataVizTab = $('#dfa-data-viz-tab');
+  var $dataVizTabItem = $dataVizTab.find('.item[category]');
+  var $dfaFeed = $('.dfa-feed');
+  $dataVizTab.find('.ui.selection.dropdown').dropdown();
+  $dataVizTabItem.click(function (){
+    $('html, body').animate({
+      scrollTop: $('#dfa-data-viz-header').offset().top + 10
+    });
+    var $this = $(this);
+    $dataVizTabItem.removeClass('active');
+    $this.addClass('active');
+    $dfaFeed.find('.column[category]').addClass('col-disabled');
+    if ($this.attr('category') == '1') {
+      $dfaFeed.find('.column[category="1"]').removeClass('col-disabled');
+    } else if ($this.attr('category') == '2') {
+      $dfaFeed.find('.column[category="2"]').removeClass('col-disabled');
+    } else if ($this.attr('category') == '3') {
+      $dfaFeed.find('.column[category="3"]').removeClass('col-disabled');
+    } else {
+      $dfaFeed.find('.column[category]').removeClass('col-disabled');
+    }
+  });
 }
 
 function initContentEmail() {

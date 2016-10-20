@@ -128,15 +128,35 @@ block content
                     img.ui.small.image.unplugged-image(src="/img/ugp.png")                    
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
-  h1.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
+  h1#dfa-data-viz-header.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data visualization to the understanding of politics
+  
+  div#dfa-data-viz-tab.ui.sticky
+  
+    div.ui.fluid.selection.dropdown
+      input(type='hidden', name='data')
+      i.dropdown.icon
+      div.default.text All
+      div.menu(style="max-height:auto")
+        a.item.selected(category="0") All
+        a.item(category="1") Presidential Candidates
+        a.item(category="2") Politicians
+        a.item(category="3") Tech Luminaries
+          
+    div.ui.four.item.fluid.pointing.huge.inverted.menu(style="margin:0px;")
+      a.item(category="0").active All
+      a.item(category="1") Presidential Candidates
+      a.item(category="2") Politicians
+      a.item(category="3") Tech Luminaries
+      
+      
   div.dfa-feed.ui.three.column.stackable.grid
     - var lifemaps = articles.filter(function(article){ return article.metadata.isLifemap; })
     - lifemaps.sort(function(a,b){ return parseInt(b.metadata.weight) - parseInt(a.metadata.weight) })
     each article in lifemaps 
       - url = article.metadata.link ? article.metadata.link : article.url
       - ext = article.metadata.link ? true : false
-      div.column
+      div.column(category=(article.metadata.category == 'Presidential Candidate' ? "1" : (article.metadata.category == 'Politicians' ? "2" : "3" )))
         if locals.development || article.metadata.published
           div.dfa-feed-item.lifemap
             if article.metadata.isVerified
