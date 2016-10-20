@@ -150,7 +150,7 @@ block content
       a.item(category="3") Tech Luminaries
       
       
-  div.dfa-feed.ui.three.column.stackable.grid
+  div#dfa-feed-viz.dfa-feed.ui.three.column.stackable.grid
     - var lifemaps = articles.filter(function(article){ return article.metadata.isLifemap; })
     - lifemaps.sort(function(a,b){ return parseInt(b.metadata.weight) - parseInt(a.metadata.weight) })
     each article in lifemaps 

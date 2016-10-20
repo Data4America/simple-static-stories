@@ -48,7 +48,9 @@ $(document).ready(function() {
     uncheckable: true,
   });
 
-  $('#dfa-data-viz-tab').sticky();
+  $('#dfa-data-viz-tab').sticky({
+    offset: 60,
+  });
 
   $('#dfa-policy-issue .accordion').accordion();
 

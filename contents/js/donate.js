@@ -1113,7 +1113,7 @@
 
     $btnProceed.on('click', submitData);
 
-    $('.dfa-amount-input').focus();
+    //$('.dfa-amount-input').focus();
 
     if (window.location.hash.length) {
       var price = parseInt(window.location.hash.replace('#', '')),
@@ -1126,7 +1126,7 @@
         $input.trigger('input');
       }
     } else {
-      $($priceOptions[1]).trigger('click');
+      //$($priceOptions[1]).trigger('click');
     }
 
     populateIssues();
