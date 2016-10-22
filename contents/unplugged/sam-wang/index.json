@@ -1,0 +1,296 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Uplugged Live: Sam Wang",
+  "profile": {
+    "guest": "Dr. Sam Wang",
+    "artwork": "/img/unplugged-samwang-600.jpg",
+    "link": "/unplugged/sam-wang",
+    "host": [{
+      "name": "Chris McCoy",
+      "twitter": "https://twitter.com/chrismccoy"
+    },
+    {
+      "name": "Patrick Ruffini",
+      "twitter": "https://twitter.com/PatrickRuffini"
+    }]
+  },
+  "transcript2": [
+     {
+        "narrator":"Chris McCoy",
+        "time":"[0:16]",
+        "text":"Hi, this is Chris McCoy, the Executive Director at Data4America, and welcome to Unplugged, our podcast where we explore the intersection of government, technology, data, and the future. Today’s session was electric. Hosted by Data4America board member Patrick Ruffini, cofounder at Echelon Insights, one of the leading analysts and pollsters in America. Our guest was Sam Wang, cofounder at the Princeton Election Consortium. I was mostly a fly on the wall learning how the sausage was made in American politics, meanwhile Patrick conducted the interview with Sam. Again, it was electric. I would say I learned a lot, I hope you learn a lot listening. We talk about Trump, Clinton, what may happen leading up to the election, and how elections are modeled.<br><br>If you enjoy this podcast, please help us out. You can share it on Twitter, on Facebook, through text messaging. Every share helps, and it means a lot to our entire time. Again, we’re a nonprofit bringing data science and data visualization to the understanding of politics. If you want to support our work, you can donate at http://data4america.org/donate. Let’s go in."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[1:33]",
+        "text":"Here we are with Data4America board member Patrick Ruffini, cofounder at Echelon Insights. He's speaking with Sam Wang, professor of neuroscience at Princeton University and cofounder of the Princeton Election Consortium. Turning it over to you, Patrick."
+     },
+     {
+       "heading":"On the intersection between neuroscience and predicting elections",
+       "time":"[1:54]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[1:54]",
+        "text":"It's great to be here with you guys. Sam, I am really curious to ask you - how does a neuroscientist get into forecasting election results?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[2:06]",
+        "text":"As a neuroscientist, I deal with complex quantitative data all the time. We do things like imaging brain circuitry and large scale data analysis. We constantly deal with lots of data points that individually might be a bit noisy, and somehow we have to come up with a coherent picture out of the whole dataset. That's what I do in my research day job, more or less.<br><br>I see data produced by individual pollsters as an interesting problem. A typical news approach is to do, what I as a scientist, consider to be a weird striptease: one data point is revealed at a time.<br><br>To my thinking, there's an opportunity here to take all of those data points to create a single coherent snapshot that tells us where things are at. The assumption is that since there are pollsters doing high quality work, could one apply data analytics to create a smart snapshot of what's going on?<br><br>When I started doing this 12 years ago, in 2004, it seemed like an opportunity, and there appeared to be an appetite for it."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "text": "I'm glad you mentioned 2004. That was a campaign that I had worked on.",
+        "time": "[3:37]"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[3:43]",
+        "text":"I remember."
+     },
+     {
+       "heading":"On the emergence of predictions and the ever-growing field",
+       "time":"[3:45]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[3:45]",
+        "text":"I remember religiously checking the RealClearPolitics average, and that being the advent; it was the first year we really had this idea of poll averaging. Now, you have Nate Silver's model, the New York Times and The Upshot doing their models. There's PredictWise using predictions to assess where the race is. How do you think these models improve upon simply averaging all of the polls?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[4:27]",
+        "text":"It seems like a lot now, but even in 2008, there were lots of aggregators collecting data - it was a hobbyist activity. I think a lot of value comes from looking at averages to get some feeling for the data; my own preference is to take the median because you don't want outlying data points to tilt things too much.<br><br>What value comes out of it? If you do a good job of aggregating, then one possibility is to come up with a single really sharp snapshot. For instance, RealClearPolitics gives you the most likely outcome in each individual state, but it doesn't give a probabilistic view of the midpoint of all possible outcomes. I think a site like the Princeton site, or obviously FiveThirtyEight and the Upshot, can give you that.<br><br>There's something else that I think comes from it: for citizens watching it, it's not just a sporting event. If you're an activist and you care about the outcome, one piece of value that comes out of it is knowing what the sensitive point is where you can make a difference, whether it’s giving money, volunteering time, or getting out the vote. It's helpful to know whether your efforts are lost in the wind or you're getting some leverage, and these analytics help campaign professionals and individuals alike. It's not just like being a sports guy. It helps you know when you can get on the field and do it yourself."
+     },
+     {
+       "heading":"On the tipping points of this election",
+       "time":"[6:31]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[6:31]",
+        "text":"There's the concept of tipping point states - that not all votes are as valuable as each other, and certain states are more likely to decide the election. What state is that, looking at the polls and data analytics you're doing right now?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[6:56]",
+        "text":"At the presidential level, I'm gonna pull a Sarah Palin and say \"all of them.\" Right now, the race has gotten to a place where there's no single tipping point. Honestly, the presidential race is all but over at this point. We're at a pick between Virginia, North Carolina, Wisconsin, and Ohio - there's too many paths for Hillary Clinton. The tipping point is Senate races and who's going to be controlling the Senate next year."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[7:32]",
+        "text":"Where would you say there? What states hang in the balance on election night?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[7:42]",
+        "text":"The races I'm going to be watching very closely are New Hampshire, Nevada, North Carolina, Pennsylvania, Missouri, and Ohio. Out of those six races, four of the Democratic candidates are women - there's one woman on the Republican side. Those races are almost certainly going to be what determines control of the Senate, and right now, the more likely outcome - very slightly more likely - is Democratic control, but that's definitely an outcome that could go either way. I'm going to be watching North Carolina super closely; if you're a political junkie, you know North Carolina is a super interesting state this year."
+     },
+     {
+       "heading":"On polarization, and the shifting political landscape",
+       "time":"[8:28]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[8:28]",
+        "text":"Behind the scenes, even if you think Hillary Clinton is going to win - even by the same margin than Barack Obama did in 2012 or better - it's clear that their coalitions are very different. Trump could potentially outperform with white working class voters relative to Mitt Romney, while Clinton is doing extremely well with highly educated white voters in places like the Philadelphia suburbs. It's very interesting to look at this going into future elections.<br><br>You keep track of state by state probabilities. If Trump were anything approaching a capable candidate, which state would we have a chance of flipping, assuming a closer election than we have right now?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[9:53]",
+        "text":"Florida, Colorado, Ohio; those would be my answers. Let me back up a little bit, though. I think that when you cite that story, there's a bigger picture that's lost there. You talked about how college educated voters and non-college educated voters are splitting differently than 2012, but I think there's a bigger picture being missed. At the macro level, voters are so polarized that the pattern of voting in the United States is closer to the previous presidential election than any pair of elections since the 1960s. There may be these demographic shifts, but what we really are is polarized and ossified in place.<br><br>In some ways, Trump is basically Mitt Romney-lite - there's an amazing concordance between blue states and red states now and four years ago. There are very few demographics that are evenly divided, and everybody in some sense is choosing a side. I see that as being a big story."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[11:44]",
+        "text":"From a certain point of view, if you take up the polarization on one set of variables, like education, that's going to mean that another variable, like party affiliation, is less important. If I am a white, educated woman in the Philadelphia suburbs, which seem to be shifting pretty strongly to Hillary Clinton, I am more conflicted in years past if I'm typically a person who always votes for the Republican candidate. I may end up probabilistically voting for Trump, but I'm only 65% likely to vote for Trump, whereas I might be 85% likely to vote for a typical Republican candidate like Mitt Romney.<br><br>To some degree, we are polarized, but we have states like Utah for example. Some polls are showing that Utah is close, and it used to be the most Republican state in the union - it has been for several election cycles, only trading that title with states like Wyoming or Idaho. Really, the electoral deck has been reshuffled, but I don't necessarily know if that's what's driving Hillary Clinton right now. We could see a very similar outcome to four years ago."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[13:30]",
+        "text":"Reshuffled is such a general term. In the case of Utah, Romney won it by 48 points, McCain by 28 points. Even now, I'd be pretty dang surprised if Trump were to lose Utah. I think the story there is not so much individual demographics, but that Donald Trump is underperforming in deep red states.<br><br>Polarization is strong and people will stick with their party either because they like their party's issue stance or they really don't like their opponent's issue stance, but in states like Kansas or Utah or Wyoming, normal, decent people are Republicans. There are states like Massachusetts and New York where most people live in communities where normal, decent people are mostly Democrats. If you're a regular person in Utah or Kansas, you might find Donald Trump to be unsavory. He might be icky. That might not be the kind of guy you want to vote for. If you take a look, the states where he underperforms are deep red states where from a social standpoint, regular people are Republicans. It turns out that regular people look at this reality TV show star and see a lot of things that they're not used to seeing in a president."
+     },
+     {
+       "heading":"On how forecast models differ",
+       "time":"[15:10]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[15:10]",
+        "text":"What do you think is most misunderstood about these forecast models? I remember seeing on Twitter when people said, \"Trump got over 50% on one of FiveThirtyEight's models! He's now more likely to win the election!\" even though they have a couple of other models that they suggest are the ones you want to look at. It seems like these forecast models - yours, Nate Silver's, a whole bunch of them - are subject to potential misinterpretation. What is the misconception you want to knock down the most?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[16:05]",
+        "text":"I think one thing that's really tough is to define what each individual aggregator means by probability. I take a pretty technical view of probability where I'm pretty serious about extracting the maximum value out of the data. I like to take individual data points, collect them all in one place, and see how that single snapshot varies over time. That does a good job of capturing all the ways that various data points depend on each other.<br><br> When I look at election.princeton.edu, I really mean that when I say the probability is 95-97%  for Hillary Clinton, it means that 95 or 97 times out of 100, a prediction like that will come true. There are times when it won't come true - 3-5 out of 100 - but my perception is that different aggregators have different ideas of what they mean by probability. I think individuals mistake probability for a polling margin, so people go, \"Oh, 60% means that it's really overwhelming for that candidate,\" and I think that the FiveThirtyEight forecast is in some ways highly hedged and qualified to make the probability not really be probability, but to appeal to people's gut feelings about probability.<br><br>My idea is to give what I think is a true probability, and I think their hedged thing is between a real world probability and something that's somewhat under-confident. My own view is that it's probably better to put these things in units of margin and say, \"Well, we think that Clinton is going to win between 2 and 9 percentage points. That's going to happen 90% of the time,\" but that's a mouthful. People really want probabilities. To be honest with you, I'm a little bit uncomfortable disseminating probabilities in a world where there's not a clear understanding of the concept or a universal agreement of what people mean by probability."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[18:21]",
+        "text":"You mentioned your margin - your likelihood of a Clinton win. I think I looked on your site this morning and you had your expected margin for Clinton as being up by 4.9 percentage points and a 95% chance that she will become the next president as a result of that. FiveThirtyEight has Clinton up by the same margin in terms of their models - 5% - but she only has an 83% chance. This kind of varies depending which of their models you've looked at, but it's between 83% and 87%; they're very solid numbers, but not quite 95%.<br><br>You can kind of look at this both ways; from a certain gut, intuitive sense, some people could say that based on how Trump is behaving, his institutional support from the Republican party, and what's happening to him on a daily basis, he should have a 0% chance. There's another point of view that says five points isn't a lot - polling has been wrong by more than five points pretty frequently. It was wrong by that amount in 2014, and even in 2012 it was wrong by about three points in the direction of Mitt Romney; people expected the election to be much closer than it was. You also have the fact that we're more than three weeks out from the election. What is to say that Trump doesn't have a chance of overcoming that margin in the next few weeks?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[20:18]",
+        "text":"It's true that national polls can make an error as they did with Mitt Romney, where they were on average a couple points off. The track record of state polls in the general election and in primaries is pretty good. In 2012, 2008, and 2004, state polls missed maybe one out of 150 races at this point when aggregated properly. The first thing I would say is that state polls do a good job. Midterms are a different story because turnout is lower; one has to be careful because there can be an error of a few points.<br><br>A margin of five points for Hillary Clinton over Donald Trump - my metamargin right now - that number doesn't change very much. It only changed by plus or minus three points in Obama vs. Romney, and it's only changed by about two points this year. There's a big phenomenon here, and that’s polarization. I realize that people don't want a political science seminar here, but it is really the case that presidential races have become less and less variable starting in about 1996. Even though five points is not necessarily a large margin in terms of numbers of people, it is a pretty solid margin in terms of the amount of variability. I think the deep phenomena in US politics today is people at the national level choosing sides and being unwilling to cross over; I can't emphasize this enough.<br><br>No matter what people think of Donald Trump - his personal life or his statements about prosecuting his political opponents - these are acceptable statements to 42% of American voters because they think the other side is so anathema that, \"You know what? He's our guy, and furthermore, he's not the other person.\" Polarization makes the five point margin, which seems small, not actually that small. It's like horseshoes - there's no almost. Only one person becomes president."
+     },
+     {
+       "heading":"On the impact of Trump’s videotape and impulsive behavior",
+       "time":"[23:15]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[23:15]",
+        "text":"So much to unpack."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[23:18]",
+        "text":"It was an unusual weekend."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[23:26]",
+        "text":"On one hand, you had Republicans acting instinctively to un-endorse Trump - some of them are now walking it back - but they did it without any polling. Polling isn't that fast - you have polls that get collected over a three or four-day period, sometimes over a week, but you can't get a poll into the field that quickly, and people were releasing statements that morning. Lo and behold, the first poll that comes out - a Morning Consult poll - shows that Republicans did not want their elected officials to unendorse Trump - they want them to support the nominee. There was a certain number of them - enough to probably hurt him in the general election - who did. How do you factor in vulnerabilities, like there being another terrorist attack and people preferring Trump's approach to Clinton's? Do we have to accept the limitation of polling - that the polls today don't necessarily fully capture everything that might still happen in the course of this election?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[25:30]",
+        "text":"I would characterize polls as being like a thermometer or a rickety timepiece - they are one measure of what's going on, but not the only one. One possibility is that Republican leaders exerted moral leadership and finally realized that he's beyond the pale and they can't possibly support him, but I'm going to make a contrary point: there was a change in the wind beforehand.<br><br>I'd characterize these leaders as being more like a herd of wildebeests where something's not quite right, the storm clouds are coming, they can sense it, then there's a thunderclap and they all go running. There's an analysis I haven't published yet that shows that the biggest change in the last month has not been the videotape, and it's not been Hillary's collapse, but a change that happened almost immediately after the first debate - a move of about four percentage points toward Clinton away from Trump. That change has been in the air, and in some sense the videotape is the thunderclap.<br><br>If you look at what little data's been available since the videotape, the data does not suggest there's been that much change yet. There may be a change if, for example, house Republicans panic, become a divided caucus, and become a divided ticket because they can't get their act together and decide if they like Trump or hate Trump. Purely measured in terms of Clinton vs. Trump, that change happened on September 26, not the day the videotape came out."
+     },
+     {
+       "heading":"On this year’s Congressional races",
+       "time":"[27:33]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[27:33]",
+        "text":"You also have a Senate model. I think it's really interesting to see how the probabilities for that move in tandem with the presidential top of the ticket as opposed to how they're separate. It's been more consistent: if Trump is moving up, Senate Republicans are also moving up. This could create problems for downticket Republicans hoping to create a separation and a greater distinction between them and Trump. What have you seen in the data that addresses this question?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[28:35]",
+        "text":"You put your finger on a very important point. We saw something like this at the Democratic National Convention, where the message was something like, \"You can be a good Republican and not support Trump.\" It was almost an explicit strategy to sever the presidential race from downticket races. On a longer time scale, over the last 20 years, there's been a real alignment in how people vote in Senate races, in congressional races, and how they vote in presidential years at the top of the ticket - all these things move together. I have a generic congressional aggregate that I keep at election.princeton.edu and I have a Senate aggregate; these have been moving together with the presidential metamargin. It turns out that Senate races are polled less frequently, so there's time left for the other shoe to drop in some of these races. However, between Labor Day and election day, the average movement in Senate polls is three or four points in the direction of whoever wins the presidency. If I were a Republican, I'd find that to be kind of ominous"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[29:59]",
+        "text":"In almost all of these elections, the Republican candidate is outperforming Trump in these states, but the margin to which they're doing it may not be enough to overcome the fact that voters are turned off by Donald Trump, and it might not be enough to get them to vote for Republicans downballot. That would be very worrying if I were a Republican strategist - which I am - and the margin between Donald Trump and these Senate candidates is very critical for Republican hopes of retaining the Senate. You generally would tend to find that movement in the last few weeks of a campaign is, generally speaking, unified party movement. Even if there's overperformance at the top of the ticket, underperformance by one set of candidates generally means that another set of candidates will underperform, even if they're facing different dynamics."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[31:34]",
+        "text":"The videotape is kind of a weapon that Democrats can use to separate Republicans. If you were advising a Republican candidate, what's your defense against that weapon?"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[31:54]",
+        "text":"I think the defense is what we saw this weekend: \"You can't tie me to Trump anymore because I'm not endorsing him.\" Right up to then, in most campaigns we've had this uneasy tension between supporting Donald Trump but not appearing with him at rallies, or not endorsing him. Given the attacks they're already facing, that was not a tenable distinction, and it comes at the risk of alienating Trump voters.<br><br>The data shows that a lot of the Republican base is ... I don't know if upset is the right term, but even if Trump gets 75% of the Republican vote, that would be a disaster in terms of his chances of beating Hillary Clinton. If you are an elected official who wants to side with the 25%, it puts you in quite a bind. I think the threat that arises out of this situation is to what extent these candidates are trading Trump voters for non-Trump voters at the top of the ticket, and if that nets positively or negatively."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[33:29]",
+        "text":"Purely from a battle point of view, there's a sector of the Republican base that has been really activated and unified in the last 20 years, and Trump is really the personification of people who have beliefs about Obama's birthplace, or whether Hillary Clinton ought to be prosecuted for whatever she did. At some level, it's undeniable that the person with the biggest megaphone in U.S. politics right now is Donald Trump. He was attacking Hillary Clinton, but now there's this spectacle in the House Republican Conference with Ryan telling people that they can do whatever they need to do. At that point, the megaphone is now directed at Republicans, and that strikes me as a pretty dangerous situation for any Republican - to have the presidential nominee going on to the Republican base about disloyal members of the caucus. Trump's approval ratings may not be great nationally, but among Republicans, he's at +30 in terms of approval - that's a pretty good rating."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[34:51]",
+        "text":"That's a relatively poor rating when you're looking at Clinton being +57 among Democrats, right?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[34:59]",
+        "text":"Sure."
+     },
+     {
+       "heading":"On the big picture - and why this year’s election really isn’t that different",
+       "time":"[35:05]"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[35:05]",
+        "text":"Even though they haven't done horse race polling this year, Gallup has tracked every candidate's favorability rating, which has been a real public service. There's been a real decline particularly tied to the first debate - not to the tape - which reinforced people's existing beliefs about Trump, rather than creating this new deluge of people who are reconsidering.<br><br>This year seems like it should be really different. On one side, we have a candidate who is really different from past candidates who represents an entirely different coalition, but in terms of what you're seeing, there's still a lot of stability in the electorate - the margin hasn't shifted by a whole lot. It's a lot less volatile, even, than a lot of other elections have been. Maybe it's more volatile than 2012 was, but by historical standards it's a very stable electorate. What do you think is going on with that? To what extent do you see the turmoil around Trump as radically different, and how is it more of the same?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[36:32]",
+        "text":"There's a big picture here. As strange as it is to say, I think Donald Trump is the realization - the physical and mental embodiment - of trends that have been at work for 20 years. What we've really seen in the last 20 years is a purification of beliefs. In the 1960s, it was possible to be a Southern Democrat and a segregationist, or a Northern Democrat in favor of integration, yet they could come together for the New Deal.<br><br>In the 1960s, there was ideological purification on racial issues in the form of the Civil Rights Act, and likewise, I think in the last 20 years, if you look back to Newt Gingrich and the takeover of the House and the Senate, there was a nationalized platform in the mid-‘90s and efficient means of communication - Rush Limbaugh, Fox News - there were ways to find likeminded people across really long distances.<br><br>These forces that help us find people we agree with also lead to polarization - they lead us to information about how the other side is unthinkable, about how they can't possibly be left in charge. That polarization is the big story. Even though Trump and Romney are two people as individually and stylistically different as possible … I travel in different communities, and in academic and business communities, Romney is recognized as someone who is admired and liked at a personal level. Trump is not.<br><br>Despite that, voters view them as being similar to one another, so we have to ask ourselves, \"Whose point of view is important here?\" Is it the Republican actors at the elected level, or is it the voters, who have pretty different views about what they want? I think the weird thing about this year is how different it is stylistically, but how similar it is electorally. That's a big question that people are going to be asking about when they look back on this year's campaign."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[38:50]",
+        "text":"There won't be the same blowouts you saw in 1984, as much as people expect that based on the things Trump is saying and doing. He's paying a fairly large penalty, but not an ahistorically large one. The sense is that he could still outperform a recent Republican nominee like John McCain who was seen as fairly reasonable. He had the economic crisis going against him, but he was seen as a moderate. It's interesting from that perspective.<br><br>To your point about trends in conservative media that have been taking place over the last 20 years, Trump is the embodiment not only of them from a leadership perspective - you can kind of view the things he is saying and doing as him being part of this - he is acting like a voter in this cohort and responding in ways that seem to be reminiscent of someone who isn't necessarily trying to channel this outrage into some kind of productive or more palatable viewpoint. He is actually one of these people who'd been kind of consuming this media and believing conspiracy theories. That, you could argue, is why he was so successful, and why he could connect with those voters on a visceral level. I think that's something that's been misunderstood in this whole process."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[40:35]",
+        "text":"I think it's very much the case. That wing of the Republican base raised up one of their own. McCain and Romney may have come with baggage that other voters didn't want, but Trump himself is the baggage. He speaks for them and represents them in a very direct sort of way.<br><br>If you go back to the Federalist Papers, the Founding Fathers thought that republican government was a government in which the passions of the people could be contained by electing representatives who would go to the capital city, think about what was best for everyone, deliberate, and filter. That may have been true in the time of Federalist #10 by James Madison, but now with long-distance communication and instant connection between voters and candidates, we have a situation where the bets made 200 years ago are off. We have a direct representation of what a large sector of the voting public wants."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[41:49]",
+        "text":"I couldn't agree more. It's a worry that's been expressed. The founders worried about demagoguery; the boundaries are being tested in new ways this year. I do believe that in the end, you will likely see a Hillary Clinton victory nonetheless - that's the correction that's going to happen in regards to this. But there's a lot of interesting questions in how the Republican Party will come to terms with this result."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[42:42]",
+        "text":"There are some very good outcomes in terms of reunifying and getting past this. There are also outcomes that would come from remaining divided. There's one wing of the party that used to be a powerful force to drive the party forward, and now the risk to Republicans is that this wing is turning onto the party itself."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[43:16]",
+        "text":"That was a fascinating discussion. Thank you so much. A few questions for the both of you. Around the future of data science-driven polling and analysis within this field: is there anything we learned in 2016 that you see as being a breakthrough in the science and the field itself, and if so, what may that be?"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[43:44]",
+        "text":"From my perspective, polling is a relatively old science by now. We've had polls since the 1930s, essentially, and there are threats to polling - people cutting landlines, for example, makes them harder to reach, so there's been a lot of innovation in the online polling space as a result. I think that what we are really seeing in the work we're doing is the increasing unification of polling and data analytics. Before, you'd have pollsters who are grizzled political operatives and veterans who understand how to ask the right questions to find out what voters believe. That's still such an important part of polling.<br><br>What we're seeing now, even in traditional polling, is that data science is taking over. People are trying to understand what's really moving voters behind the scenes. If somebody switches in the context of several polls or within a single poll, we want to know which question it was that made them go from one position to another. We're using voter files more and more, to Sam's point about why state polls are more accurate than national polls ... internal polls are being collected and used off of state-based voter file samples in which rules across the state are very similar in terms of party registration and demographic patterns, so it's possible to really get to know the electorate really well in those states.<br><br>National polling can be a little bit more challenging, so the key to making accurate predictions around the electorate is really kind of having a good sense of what the electorate is going to look like based on all the data shows us about what the electorate looks like in these types of elections historically. That requires all sorts of analytics on the voter file and the ability to score people based on how likely they are to turn out. That merging of polling and data analytics isn't a new thing this year, but people are recognizing how important that is."
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[46:50]",
+        "text":"When I hear about all the advances in data analytics, there's some data nerd in me that's filled with admiration, but at the same time, I'm going to step back and put on the idealist mask for a second. There are ways it can be quite powerful for understanding what people as a body are thinking, but what stays with me is whether this is going to be used to lead people to a better place or to follow them? This is going to sound horribly detached from reality, but if there's some way to use these tools to make the nation better or make the nation stronger, that'd be a little bit better than figuring out what's going to get them to vote. It's double-edged: the weapon is more powerful than ever based on the kinds of things you're doing, but there's the question of what you're doing with it."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[48:00]",
+        "text":"Looking forward at the House and Senate races, Sam, what do you see happening in the next several cycles?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[48:10]",
+        "text":"This cycle is probably heading toward a closely divided Senate, most likely under Democratic control. We're looking at a closely divided House that’s probably Republican. Two years from now, if the Republicans can get past the deep division that happened this year, typically, they’ll gain seats. The president's party will lose seats typically, so what I'd guess would happen, assuming there's a patch up, is that it’ll be a normal expectation for both houses of Congress to end up under Republican control.<br><br>I think the best outcome for the Democrats possible is maybe both houses of Congress and the White House for two years, then a return to divided government. But that gets into the question of economic conditions and some of the great forces pulling at one of the two major parties. We don't know what's going to happen to Democrats four years from now. There's a lot of unknowables."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[49:30]",
+        "text":"What is the future of the Republican Party in your opinion, and how does that relate to winning presidential elections versus the stronghold that the GOP has at the state and congressional level?"
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[49:56]",
+        "text":"We've seen a pattern in the last few elections where there's been a predictable oscillation between midterm elections and presidential elections. I wouldn't say it's conventional wisdom, but certainly a theory out there suggests that Republicans, because of their structural advantages in midterm elections - we're moving into a polarization along the lines of education level in this election - there still remains deep polarization along age lines. Young voters have gone Democratic by increasing margins, older voters have gone Republican by increasing margins, and it's created a dynamic in which it's virtually impossible for Democrats to win in midterm environments - the way the last two elections were structured - but it's almost equally difficult for Republicans in a presidential year.<br><br>Like Sam, I do also wonder what's out there that's going to break that pattern? That's not going to keep going forever. It's very easy for us to say that these trends are just going to keep going and Trumpism is going to be a force, but it's just as likely that some of this might dissipate and new dynamics might take place. Ask me again on November 15th or 20th and see to what degree people feel misled, to see if they thought Trump was going to do better than he did.<br><br>Perhaps the worst outcome is for Trump to lose by a narrow margin where he can then muddy the waters and say it was Ryan who caused him to lose. Regardless of the factual basis of that, I think that argument will be a lot more powerful, and the party will be more divided, if he loses narrowly than if it's a knockout, and he's dragged down, and made an example of by losing by almost double digits.<br><br>Again, it's difficult to assess in the heat of the campaign, but you do have to put your game theory hat on here a little bit. There are such conditional probabilities around that you have to assign to each scenario here. I think part of it is determined by what the margin of victory is, not just who wins the election."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[53:04]",
+        "text":"If anyone but Donald Trump ran against Hillary Clinton, would she lose this election?"
+     },
+     {
+        "narrator":"Sam Wang",
+        "time":"[53:15]",
+        "text":"My view is that she'd be narrowly favored to lose."
+     },
+     {
+        "narrator":"Patrick Ruffini",
+        "time":"[53:23]",
+        "text":"Any other Republican would likely be winning this election."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[53:30]",
+        "text":"That was a great discussion. Thank you for taking the time this morning to dive in."
+     }
+   ]
+}

@@ -1,7 +1,7 @@
 (function(global, $) {
   var content = '' +
     '<div style="text-align:center;">' +
-    '<div class="dfa-donate">' +
+    '<div class="dfa-donate" style="width:100%;">' +
     ' <div id="dfa-loading">' +
     '   <div class="loader">Loading</div>' +
     '   <h2 class="">Processing your information...</h2>' +
@@ -11,9 +11,9 @@
     ' <table>' +
     '   <tr>' +
     '     <td>' +
-    '       <h4 class="dfa-header-text donate" style="font-size: 1em; margin-bottom: 0;">' +
-    '         Help us bring data science to politics. ' +
-    '         <a href="javascript:;" class="dfa-link-learn-more">Learn More</a>' +
+    '       <h4 class="dfa-header-text donate" style="margin-bottom: 0; font-size: 0.95em;">' +
+    '         Help Data<span style="color:#CC0001; font-style:italic;">4</span>America publish Editorial Board-approved data science and data visualization about politics.' +
+    '         <a href="javascript:;" class="dfa-link-learn-more">Make a donation.</a>' +
     '       </h4>' +
     '       <h4 class="dfa-header-text sponsor" style="display:none; margin: 0; font-size: 1.4em;">' +
     '         Sponsor a Policy Issue' +

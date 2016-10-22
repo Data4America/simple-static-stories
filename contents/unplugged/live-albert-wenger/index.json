@@ -15,48 +15,566 @@
     "images" : [ "/img/live-albert-wenger/1.jpg", "/img/live-albert-wenger/2.jpg", "/img/live-albert-wenger/3.jpg",
                  "/img/live-albert-wenger/4.jpg"
     ],
-    "panel":[
-      {
-        "name" : "William Eden",
-        "image" : "/img/william_eden.jpg",
-        "title" : "Vice President @ThielCapitan",
-        "twitterLink": "https://twitter.com/ThielCapitan"
-      },
-      {
-        "name" : "Chad Grillis",
-        "image" : "/img/chad_grillis.jpg",
-        "title" : "Founder @The Misson",
-        "twitterLink": "https://twitter.com/TheMission"
-      },
-      {
-        "name" : "Tyler Willis",
-        "image" : "/img/tyler_willis.jpeg",
-        "title" : "Entrepreneur and Investor"
-      },
-      {
-        "name" : "Chris McCoy",
-        "image" : "/img/chris_mccoy.jpg",
-        "title" : "Executive Director @Data4America",
-        "twitterLink": "https://twitter.com/Data4AMerica"
-      },
-      {
-        "name" : "Jim Pugh",
-        "image" : "/img/jim_pugh.jpg",
-        "title" : "Co-Founder @Universal Income Project",
-        "twitterLink": "https://twitter.com/UniversalIncomeProject"
-      },
-      {
-        "name" : "Sandhya Anantharaman",
-        "image" : "/img/sandhya_anantharaman.jpeg",
-        "title" : "Co-Founder @Universal Income Project",
-        "twitterLink": "https://twitter.com/UniversalIncomeProject"
-      }
-    ],
     "twitter": "albertwenger",
     "viframe" : {
       "link": "https://www.facebook.com/data4america/videos/1698643560462194/",
       "image": "/img/facebook-live-logo-colored.png",
       "text": "with Albert Wenger"
     }
-  }
+  },
+  "transcript2": [
+     {
+        "narrator":"Chris McCoy",
+        "time":"[0:17]",
+        "text":"Hi, this is Chris McCoy, the executive director at Data4America. Welcome to our podcast, Unplugged, where we unpack the intersection of data, government, technology, and the future with some of America's best thinkers. Today is our first-ever roundtable: we brought together six people in a single room to discuss the future of jobs, automation, basic income, and what that means for America. It was hosted by Data4America board member Kim-Mai Cutler, and our special guest was venture capitalist and author Albert Wenger from Union Square Ventures. I recommend you download and read his book, World After Capital, at http://worldaftercapital.org. <br><br>Our panelists and guests ranged across the aisle throughout Silicon Valley and beyond, including Chad Grills from The Mission, venture capitalist Will Eden from Thiel Capital, Tyler Willis, entrepreneur and investor, myself, and Jim Pugh and Sandhya Anantharaman from the Universal Income Project. We also had France 2 there, one of the top TV networks in all of Europe - 3.5 million people watch their show every night. They recorded it and will hopefully broadcast it shortly. <br><br>If you like this roundtable discussion, share it with your friends on Twitter, Facebook, and Product Hunt. Help us get distribution, and if you support our work of bringing data science and visualization to the understanding of policy, we'd greatly appreciate it if you donated to help us. With that said, let's go in."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[1:54]",
+        "text":"Hello, this is Chris McCoy, I am the executive director and founder at Data4America. We're here today for our first ever roundtable discussion with leaders in technology from New York City, California, and France 2, one of the largest media companies in Europe. I want to thank everyone for joining us. I'd like to introduce our host, Kim-Mai Cutler, who's a board member at Data4America, a journalist at TechCrunch, and one of the most well-respected thinkers at the intersection of society and technology. Kim?"
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[2:32]",
+        "text":"Thank you so much for having me here, Chris. The topic we're going to be discussing today is universal basic income, which is an idea that has caught some kind of flight in Silicon Valley amid concerns about job automation, income inequality, and changes that are going to come about with the reemergence of artificial intelligence after a long winter. We’re exploring how society is going to cope with that in terms of figuring out programs that enable people, rather than dislocate them as this change potentially happens over the next generation.<br><br>We have a whole circle of people with us here today: Tyler Wallace who's a founder here, Albert Wenger from Union Square Ventures, Chad who runs The Mission, which is a publication that covers technology, Will from Thiel Capital, who invest in early stage life science companies, and Jim and Sandhya from the Universal Income Project. I think I want to start off by giving people a basic understanding and overview, and I'm going to turn to you guys. Tell us a little bit about what universal basic income is, how it works, and where the idea originated from."
+     },
+     {
+       "heading":"what universal basic income is, what it means, and what it can - and can’t - do",
+       "time":"[3:47]"
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[3:47]",
+        "text":"Universal basic income is a pretty simple concept, actually. It's the idea that we as a country can start providing everyone with enough money to cover their basic needs. Rather than having a patchwork quilt of different social programs, and having to figure out what's right for what situation, you have one program that guarantees you're going to bring people up to the level where they're actually able to get by - cover food, cover housing, and be able to make it from there."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "text": "And it's not a new idea, right? It's been discussed before, even as far back as Richard Nixon and Milton Friedman. Can you explain a little about the history of the idea?",
+        "time": "[4:21]"
+     },
+     {
+        "narrator":"Sandhya Anantharaman",
+        "time":"[4:36]",
+        "text":"Yeah, absolutely. The first time that I think it came to prominence in the United States in the last century was again, as you said in the '60s and '70s. Martin Luther King actually talked about a guaranteed minimum income as what he saw as the next step in terms of increasing equity. You also had conservative economists like Milton Friedman discuss this as a better way to make sure that people had a base floor of income. In fact, there were four state experiments looking at the the effect of replacing welfare programs, food stamps, energy subsidies, equities, with cash. There was definitely a concerted movement toward this idea in the sixties and seventies before it died out."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[5:21]",
+        "text":"Tell us a little bit about how it's come back into play over the last five or so years. Jim, can you talk about that? I want to ask you about your book afterwards."
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[5:34]",
+        "text":"Yeah. I think over the last few years, there's been a pretty massive surge in interest. There's a couple of big drivers of that: one is that inequality has gotten a lot worse, and there's a lot of strain on the system we have today. There's concern that if we don't figure out good ways to address this and bring everyone up to a sufficient level, the repercussions on our society as a whole could be very negative.<br><br>Beyond that, I think it's become much more visible what impact advances in automation may have in our society - not in the distant future, but in just a few years, certainly in the next 10 or 20 - and that could really change the way our job and labor markets work. It could flip the idea that everyone should have a long term, full time job on its head and force us to recognize that we need some radical new programs that actually guarantee that everyone is going to have that floor."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[6:33]",
+        "text":"Albert, you wrote a book recently, World After Capital. Can you explain a little bit about the thesis behind your book and why you've been a supporter of basic income for the last several years?"
+     },
+     {
+       "heading":"on World After Capital, The Uncoupling, and universal income as seed money for people",
+       "time":"[6:46]"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[6:46]",
+        "text":"The book's online in draft form at http://worldaftercapital.org. I came to this about four or five years ago when I started looking into some large-scale statistical data on what's happening with GDP growth and the distribution of GDP. There's a famous chart called the Uncoupling Chart, which shows that around twenty years ago, GDP continued to grow, but the distribution of GDP shifted between labor and capital. What was happening was that the labor component of GDP was almost flat.<br><br>I started thinking about it, and I started writing about it, and a lot of people come at it from saying this is sort of a terrible thing. There's fear of future job losses and further deterioration, and that was my early thinking about this as well. Now, I think of it much more as a great opportunity. It is an opportunity for almost anybody to be much freer in their allocation of time, and for a long time we had tied up a lot of people in things that aren't great to do.<br><br>There's two different ways of looking at the uncoupling: one is to say it's terrible, jobs are going away, work is going to go away, and we need to figure out how to get back to full employment and everybody having a job. Because the world has revolved so much around capital in the industrial era, the way we're thinking - the way policymakers are thinking about doing this - is, \"Let's make capital cheap. Let's have quantitative easing, more capital deployed, and that'll create jobs.\"<br><br>But what's happening is that capitalists become this amazing substitute for labor. If you still continue on this path - the path that we're currently on - then the substitution's bad. If you figure out how to use this as a way of freeing everybody, to help them truly be able to decide what to do with their time, it becomes a very positive thing. How do you flip that switch? Universal basic income is the way. As a VC, I've been calling it seed capital for the people. Why does an entrepreneur need seed capital? So she can work on her startup. If everybody had some amount of seed capital, they could work on the things of interest to them."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[9:29]",
+        "text":"One tension that I see a lot in Silicon Valley in general is that you talk to all these thinkers and visionaries creating all these big, broad ideas, but in the world of institutions and systems and politics, it's one thing to have a grand theory of change and it's another to do the hard work of education, awareness, advocacy, institution building, organizing, and having some kind of effective change that comes out of law.<br><br>When I hear the idea of universal basic income, it sounds very appealing, but then you look at the history of American culture and its orientation toward who constitutes the deserving poor vs. the undeserving poor - a concept rooted in American puritanical ethics. That cultural attitude has obviated and negated attempts at having broad-based social programs. How do you overcome this deeply-rooted cultural attitude we have in this country, where everyone should have income regardless of who they are or what their background is?"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[10:50]",
+        "text":"Let's get this out of the way first: I'm not sure if I'm a good person to answer this question. I think that something way worse than communism happened in America. I think that it started happening around 1928, 1930, and if I had to define it I would call it hedonistic communism. Just yesterday, I came back from the Oslo Freedom Forum here in San Francisco - an amazing event. I'm getting to see women - I can call them founders, but visionaries who are taking immense personal risks for freedom to build their companies.<br><br>For example, one of the journalists from Charlie Hebdo was there, has three full-time security guards, gets constant death threats, constant threats of fatwa, and I find it so hard that here in America we're talking about universal basic income. We don't have any money. Certain people have a lot of money, but the question remains very open as to how we're going to reallocate that capital. I think universal basic income is a wonderful concept rooted in some wonderful humanitarian beliefs and aesthetics, but I worry about how we're going to get there."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[12:03]",
+        "text":"So the genesis of this roundtable is Albert's book, World After Capital, and Albert breaks down this shift in what is scarce in American society. I'd love to have Albert talk more about that, and also to dive into the analogy that you gave around making a pizza, and how the internet drives marginal costs to zero, and how that creates an abundance of time."
+     },
+     {
+       "heading":"on disruptive growth - and how it doesn’t always show up in GDP",
+       "time":"[12:25]"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[12:25]",
+        "text":"Let me try and react to the comment that was just made. I think that one of the fundamental changes that's occurring is that much of the benefit we're unlocking from technology is not occurring in the form of traditional GDP growth. When you take, as an example, Encyclopedia Britannica, and replace it with Wikipedia, you have reduced the amount of GDP that goes around, but you have also massively increased access.<br><br>I think if we try to get to the question of affordability of basic income by thinking about taking the existing pie and slicing it differently, I think we're already stuck in a mistake of thinking about the change in the economy. That's the reaction that I have. Tying it back to Chris's question, the fundamental difference about digital technology compared to what's come before is that it has zero marginal cost and it has universality, which makes it different from analog technology. A tractor is a wonderful way of ploughing fields and it replaces many horse-drawn or ox-drawn ploughs, but it can't also forecast the weather.<br><br>Computer programs can carry out any computation, and they can carry it out at zero marginal cost. I think as long as we get caught in this trap of counting dollar product output, we are going to be caught in the trap of saying there's not enough money to go around to pay for this. I believe we live in a fundamentally deflationary world and we could essentially print much of this money without causing inflation the way it occurs traditionally. More people should chime in on this."
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[14:38]",
+        "text":"I just wanted to follow up on Albert's point. I thought you made a great point in the book in looking at the resources we actually need to get by and recognizing that there's enough already. We have enough food to feed everyone, enough housing to go around, all the things we need for people. It's just a matter of finding the right ways to access them. As we are progressing with technology that's creating value all around, we should figure out a system that actually frees that up and allows us to continue to pursue that."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[15:07]",
+        "text":"When you look at inflation of different segments of goods and services in the U.S. economy over the last generation, it's true that software and technology has effectively deflated the cost of many parts of the economy. However, there are a couple sectors - namely healthcare, education, and housing - that have become externally much more expensive. At least from my personal experience of California, it feels like because of this abundance of capital, capital is getting absorbed or soaked into very scarce, legally-protected and government-subsidized assets like real estate and housing. How do you explain or account for that, and what kinds of reforms could you create that would adjust some of those spaces where there isn't a deflationary effect that's obvious?"
+     },
+     {
+       "heading":"on cultural shifts and barriers to progress",
+       "time":"[16:13]"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[16:13]",
+        "text":"I would make two arguments. The first is that we have yet to see the full impact of digital technology on education and healthcare. These are systems with a huge amount of inertia. At the edges, we are seeing them. There's Khanacademy, there are amazing educational resources on YouTube. They're all free, but because the system has so many interlocking parts - how companies are hiring, how you get into a good college, what nursery school you go to - that system will take a long time to change.<br><br>If you look at current trend lines, we're very much at the inflection point where healthcare and education - you should talk about healthcare investing - are going to decrease.<br><br>When it comes to real estate, one of the truly amazing things about universal basic income is that it doesn't force you to live in a particular place. Another way to think about what universal basic income lets you do is that it's a walk away option. It's a walk away option from a bad job, a bad city, a bad spouse. One of those predictions - that by 2050, everybody is going to live in cities - is entirely predicated on this idea that you take the existing trend line and extrapolate it. Why are people moving to cities? Because it's the only place where you can earn a living."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[17:40]",
+        "text":"Yeah. I would say housing, healthcare, and education all have different things going on, and it's very relevant to separate these out. The housing point is largely cities; cities are becoming vastly more expensive, and more people live in cities. There are different ways to tackle this problem; in my view, if we're paying someone a guaranteed minimum income, it's not a guarantee that they're going to get to live in San Francisco, and it's not a guarantee that they're going to get to live in San Francisco if ten times as many people want to live there as can fit in that given space, so there is this question of certain things actually being scarce - some aren't - and there are different ways to alleviate that scarcity.<br><br>In San Francisco, for example, it's been very hard to actually develop more housing, and housing prices don't have to be increasing as fast as they are if other things in the system change. That does sort of get to your point about how we can try the basic income thing, but if there are a lot of these other factors that aren't budging, does all that gain get eaten up in various places? With housing, there's the big problem of there not being enough housing stock, particularly in urban areas, and housing's very heterogeneous. It's not like we're seeing increases in housing prices across the entire United States. We're seeing it in San Francisco and Boston.<br><br>In terms of education, that's a complicated one. There are certain absolute things and relative things. With education, you certainly can always teach yourself something, and that's very valuable, and that can stay with you forever and impact your life. There's also a large component of education that is actually chasing a positional status good. If only 2000 people can make it into Harvard, those people are going to spend increasing amounts of resources not just going to Harvard, but also the prep schools that get you into Harvard, test prep, whatever. As long as you have these limited spots, people are always going to try to chase them, so that can drive education prices a lot.<br><br>Healthcare is very complicated. Almost every other developed country in the world has moved to rationing and fixing the price of healthcare. In the US it's a very different system where we actually can chase nearly arbitrary prices increases, and particularly in healthcare, when you look at where additional spending is coming from, it's from end of life care. The vast majority of medical expenses are spent at the very, very end of life to generally eke out literally months - if you're a cancer patient with most available therapies, it's extra months of life for hundreds of thousands of dollars per treatment. We could ration that. It ends up being this very contentious problem; when Obamacare was proposed, a lot of the conversation was around death panels, which would tell you, \"No, you can't get this treatment because it's too expensive.\"<br><br>So then you can talk about drug pricing - should we be doing something there? It ends up being this very complicated, hairy problem that in theory you could attack from a lot of different directions, but if we're going to talk basic income, again, just like you don't get to necessarily live in San Francisco, you also don't get the $300,000 cancer treatment on your basic income. Is there enough food to go around? Yes, if you're willing to eat rice and beans rather than caviar every day. Is there enough housing to go around? Yes, if you live in Memphis, not San Francisco. Is there enough medical care to go around? Yes, if you're not getting $300,000 new cancer treatments."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[21:25]",
+        "text":"My question comes back to political will. If you want to have major systemic change, you have to build capacity that over time gets people into power to change the rules of the system itself. How are you strategizing around that?"
+     },
+     {
+        "narrator":"Sandhya Anantharaman",
+        "time":"[21:50]",
+        "text":"The biggest thing right now in the next couple of years is raising Awareness. In the United States, we're at 25%, 30% Awareness; I think the Swiss referendum last year did a lot to spark the conversation. There were tons of media articles and people debating the idea back and forth, but it's not an idea that's gotten into the consciousness of most of the country. At the same time, it's one that we're ready for. We're having a lot of difficult conversations about income inequality, about equity, about access. Is your zip code going to be the definition of where you go in life?<br><br>We have this opportunity, with more visible forms of automation coming in the next few years, to discuss what an income floor looks like. I think that's one thing these discussions do. But we're really still just at the education phase right now. Once we get to a place where people are actually starting to think about how this would affect them, and their communities, and how people interact with each other, we then have an opportunity to move to things like state-level experiments, and see what that looks like in this country.<br><br>We have Y Combinator doing experiments here and we'll see results from the Give Directly experiments in Kenya over the next couple of years, so we'll really see a ramp up then of conversations about how we can implement forms of this idea."
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[23:23]",
+        "text":"One quick thing to add: in the Journal of Economic Growth, two economists built a model that showed that if federal regulations would have stayed at 1960 levels, right now we would have a GDP that would be around $57 trillion."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[23:36]",
+        "text":"What kind of regulations?"
+     },
+     {
+       "heading":"on arguments against universal income and the necessity for radical change",
+       "time":"[23:38]"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[23:38]",
+        "text":"Federal spending on regulations, introducing new regulations, regulations of all kinds. Any time a new regulation is introduced, there's a cost of compliance that business owners, whether they're small businesses or technologists or founders, have to pay to comply. The growth of federal regulations has actually grown at a staggering pace. In 1960, it was around $1 billion. Today, it's estimated to be about $60 billion."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[24:05]",
+        "text":"On regulatory compliance? At the federal, state, or local level?"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[24:10]",
+        "text":"On all levels, basically. They estimated that GDP would be around $57 trillion, or the average American family would have a household income of about $277,000."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[24:24]",
+        "text":"Who's the person who stated this?"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[24:28]",
+        "text":"It was in the Journal of Economic Growth. Two economists, one at the North Carolina University and another in the Midwest. It's a fascinating study - food for thought. Abundance is here, but if we tax movement at a certain point, creators are going to stop. Unfortunately, a lot of the language feels like a lapse in human agency - when people have so much more power than we give them credit for."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[24:55]",
+        "text":"Do you think Bill Gates would have started Microsoft if the marginal tax rate were 70%?"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[25:05]",
+        "text":"I think the marginal tax rate was around 70% when he started Microsoft, is that correct?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[25:08]",
+        "text":"Yes, exactly. [laughter]"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[25:11]",
+        "text":"I think creators will always do their thing, but it's really important that we don't treat those in our country as victims. Extending programs, like offering jobs to people, is an amazing thing, so I think increasing access of things like Udacity ... I would be a much stauncher advocate of getting Udacity into the public consciousness than a monthly check. I think monthly checks are very dangerous, as the welfare state can show."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[25:40]",
+        "text":"How does the welfare state show that?"
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[25:43]",
+        "text":"I don't see any shining success stories of folks who have endured welfare for a long period of time and made it out. They exist, but they're few and far between. I don't know many happy lottery winners. I don't know many happy people who have inherited their wealth. Americans are in the top 1% in the world in terms of income, resources, opportunities, and it just blows my mind how many opportunities there are to make money. Uber's a great example. Somebody with little to no experience and no capital can start making money immediately."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[26:32]",
+        "text":"Until the self-driving car decimates those jobs. All studies of direct cash transfers show that if you give people just a little more money, they do very good things with it. They take better care of their health, they take better care of their children, they educate themselves better. Any conclusion from looking at traditional welfare programs of the restricted type does not apply to direct cash transfers. I think it would be a huge mistake to look at existing restrictive programs - in-kind programs with all sorts of administrative overhead and restrictions – and draw any conclusions from them, as you are doing, about the effectiveness of a cash transfer program."
+     },
+     {
+        "narrator":"France 2",
+        "time":"[27:08]",
+        "text":"There is no doubt, when I listen to you about the long-term advantage of the basic income, but who pays for it? If you want to give it to a whole country, it requires a huge amount of money. Who pays for that? Not the state. Not here, not in Europe, not in Africa."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[23:38]",
+        "text":"The head of CBBP, which is a generally center-left leaning think tank in Washington, has been working on welfare policy for the last 20 years. He wrote an argument against universal basic income where he said that he wanted to give every American $10,000 a year. It would cost $3 trillion - 75% of the current federal government's outlays - and would require massive tax increases that have no precedent in American history. On top of that, he was concerned that basic income would kind of wipe away a lot of imperfect, but highly targeted programs focused on poverty and extreme poverty in America. How do you respond to that?"
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[28:34]",
+        "text":"I think there's no question that implementing basic income would be a radical change, but I think it's a mistake to get bogged down too early in the details. I think we need to recognize that where we're headed may require radical change of some sort. This isn't something where we can just nibble around the edges; we need to think big about what these changes are and recognize that what seems like limitations may shift over time.<br><br>We may be able to think about things differently a few years down the road. It's not a question of if we're going to enact basic income tomorrow, it's a question of where we're headed and what we need to do, what conversations we need to have, and what experiments we need to run in order to better understand and be ready for pursuing a bigger change."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[29:26]",
+        "text":"Let me double down on that. We today live by comparison better than the kings of yore lived. If you had asked somebody how to redistribute the existing wealth at the time, you would've come to the conclusion that it couldn't be done. I think all the sort of partial equilibrium, static analysis of basic income is completely, utterly flawed.<br><br>Still, taking it at face value for a moment, Bob's analysis is wrong on many different counts, and people like Scott Santens have done a good job of taking it apart. For instance, it doesn't take into account that at present in the US, very people pay few federal income taxes. Why is that? Because they live below the federal poverty line. Bob was counting the gross transfer as opposed to the net transfer, and that's the simplest and most obvious mistake in Bob's calculation. Even when you take the static, partial equilibrium analysis approach, which is totally wrong, even then you should at least get it right – and he didn't get it right.<br><br>Coming back to this notion that the world is deflationary, which I will defend - including in healthcare - I think there are many structural problems in healthcare and it will take us a long time to overcome those structural problems, but if you take those end of life treatments, the cost of the actual pill, the marginal cost of making the pill is next to nothing. We have to figure out a way to decouple research from the funding of research through the making and selling of pills, or we will always end up in the scenario where we're spending a lot on end of life care. The idea that our only two choices are spending a lot or rationing is a false dichotomy, and it is not the only option for how we can make healthcare cheap in the future."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[31:32]",
+        "text":"Do you want to talk a little bit about if you believe this zero-pie, zero-sum pie metaphor is incorrect, how do we fund something like that? Is it through taxation?"
+     },
+     {
+        "narrator":"Alber Wenger",
+        "time":"[31:48]",
+        "text":"I think it will be through a mix of different things. We have a global tax problem. If you look at companies, they're moving their intellectual property to low tax countries, then using transfer pricing to move profits to those countries. We need to solve this problem globally. The US has the lowest tax rate incidence and tax base it's basically had over a very, very long period of time, both at the corporate and personal level.<br><br>I do think more taxes are okay, but monetary policy can play a big role. Today, we have money creation through fractional reserve banking. It would be entirely possible to shift money creation to the central banks, directly to the people. The money would get into circulation just as well, and that's why Jim's point is so important. If we hone in on how we'd do this in the existing system, just moving two parameters, that's trying to square the circle. You've got to create the circle, not try to get there from the square."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[32:54]",
+        "text":"I think I want to speak a little bit to this point. I'm also of the belief that it's totally feasible to do today if you assume zero growth. One point briefly on monetary policy; if you run the envelope of calculations, you can't fund the whole of basic income through monetary policy. I also do happen to be on board with making monetary policy more effective by making it more widely distributed, so there we totally agree. I also agree that you can't fund all of it through that means."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[33:28]",
+        "text":"How would you structure that? The concern right now with policies and rates where they are today is that if there is a shock, central banks don't have a lot of ammunition to address it. If there is a shock from the EU or China..."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[33:42]",
+        "text":"Absolutely. When they're busy pushing on a string to inject more money into a financial system that has nowhere to put the money, of course the central bank has no ammunition there. It's like saying we just fired off all the bullets in our handgun and we're leaving the AK47 laying on the ground and the rocket launcher strapped to our back. There's plenty of ammunition; the question is how they actually deploy that. As long as they're stuck trying to change what amounts to leverage in a financial system that doesn't want to make any loans and has nowhere to actually deploy that capital, then yes, they don't have ammunition.<br><br>If you're willing to just cut a flat check to every man, woman, and child in the country, that will produce inflation, guaranteed. The Fed currently doesn't have authorization to do that from Congress, and there are all sorts of political questions, independent of the Fed, many rabbit holes we could go down. My point is that I don't think the Fed is out of ammo by any means whatsoever, first of all, and second of all, it just isn't going to work to fund a basic income purely through monetary policy.<br><br>If you look at the levels of basic income that have been proposed, they quite modest, actually; they're really a fraction of the average income in our country. Maybe a quarter or a third. No doubt in my mind, frankly, that I would want basic income to replace a bunch of stuff that's already on the government's budget. If you introduced it on top of a bunch of other programs, you still have all of the poor economic incentive structures created by other programs."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[35:18]",
+        "text":"What programs are you thinking of?"
+     },
+     {
+       "heading":"on the history of social programs and the psychology of poverty",
+       "time":"[35:23]"
+     },
+     {
+        "narrator":"Willam Eden",
+        "time":"[35:23]",
+        "text":"Everything combined. Social Security, welfare, Medicare, Medicaid, you name it. I do think a guaranteed income plus markets can solve quite a few of these problems. I don't think we need targeted aid in quite that way; I think the flat check goes a long way to solve a lot of those problems. It's better and less distortionary.<br><br>Now, there's a lot of talk of how high the welfare cliff is; you can get marginal tax rates that are well above 100%, and it's just because we have this patchwork of programs. Again, this does take a lot of political will, and I don't think it's there, certainly not today - maybe not ever - so there is an implementation question here, but the idea that it isn't feasible is completely wrong."
+     },
+     {
+        "narrator":"Tyler Willis",
+        "time":"[36:25]",
+        "text":"I want to go back to something you said a second ago. One of the things that triggers me when I hear the phrase \"replace social safety net\" is what receiving a quarter of the income across the country would do a lot of people. However, there are a lot of people with healthcare or medical issues who do require hundreds of thousands of dollars a year.<br><br>I think that if you replace the safety net for those folks, I get very nervous. I understand that we can replace someone being displaced as an Uber driver, and replace their salary and let them work on something beneficial, but I worry about what we're doing to folks more at risk in society. You all have thought more about this than I have, but this seems important to talk about. Is there a good answer to this question?"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[37:18]",
+        "text":"I grew up on food stamps and free lunch, and I still have family on them. I understand the psychology that goes around walking up to the food stamps office and in the free lunch line to get your benefits, and how it impacts what you think is possible in the world. I have family today taking a large percentage of the safety net – more so than some of my friends - and I look at the 42 programs that we provide federally, and I don't know what you cut, but I don't think you cut everything.<br><br>To Albert's point, what's inspirational about basic income is this concept of seed funding. I have friends and family back home in Kelso, Washington, where if they received basic income, the optionality they would have to move, travel, do art, would change their psychology. It's something I've struggled with in my own world, but how do you rationalize intrinsic vs. extrinsic motivation? Some folks have never had intrinsic motivation because they're merely surviving and existing. I think basic income can create a spark that would be fascinating; Will, we’ve talked about this, and Kim, you did some work in this space, but let's assume there is a basic income, and ten of us get together and decide to live together. What happens when we decide to purchase products? Do we get to negotiate against the retailer for a group buy? What's the future look like if it does exist?"
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[39:00]",
+        "text":"I think we've learned a lot more about this over the last decade or two, but in terms of the actual trauma of poverty - the amount of space that it takes up in your brain when you can't think past the next week, when you're spending all your time making extremely thin budget decisions, it really takes away ... I think you'd made a point earlier about not thinking that people really have that interest or agency, and I don't think it's that. It's that when I go to the grocery store, I don't have to decide if I'm going to spend 50 extra cents on really small purchases. If we're able end the decision fatigue that happens when you live in poverty, and free up that mental space, there are a lot of ways people can use basic income to do a lot better for themselves. They’d use it as a launchpad, not as an end."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[39:58]",
+        "text":"Yeah. I think there are a bunch of different kinds of mental space. Someone who is living on a pretty minimal basic income might still have to make decisions about how to ration their spending, but there's one decision that they don't have to make, which is, \"What am I going to have to do if I lose my job? Where am I going to find my next job, what am I going to do, how am I going to support myself?\" That is a major, major, major psychological toll. If the alternative is having to ration sometimes when they don't have a job, versus living in fear that they might not, especially when times are hard, I think that's a massive, massive cost that is instantly gone the moment we start this program."
+     },
+     {
+       "heading":"on San Francisco’s homeless problem",
+       "time":"[40:45]"
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[40:45]",
+        "text":"One question I want to bring up in response to what you said: there are certain kinds of practical realities when you work in social services in a city and are dealing with a varied population with a lot of different needs. For example, San Francisco has 6,800 homeless people who live here. They are of all different backgrounds and capacities. Some people are conditionally homeless, have just lost their job, and can integrate back into the system.<br><br>We have another 2,000 people who are chronically homeless. Within that subgroup, there's an even smaller subgroup called the HUMS - High Users of Multiple Services - and they cost about $80,000 a year because we treat them through the emergency room. Just to give you a really specific case example, two weeks ago an older man asked me for some money, so I took him out to lunch. It turned out he was a Persian Gulf War veteran in his fifties with severe short-term memory loss. He was actually housed in a veterans' homeless supportive housing building, and because of his neurological issues, he had wandered out of the building several months ago even though he had housing.<br><br>I called them, they had a record of him, and they said that because he was away so long, they marked his unit as abandoned and gave it to someone else. I had to go through this process where I contacted the VA nonprofit. I said, \"Here's this guy, he's sleeping at this intersection.\" He didn't like using tents because it reminded him of serving in the military. They had to send a case worker out to do an intake, figure out his situation, and get him rehoused.<br><br>There's this kind of naive assumption that you can just give everyone income. For a lot of people, if they're young and able and want to work, that can genuinely serve as seed funding, but there's this other reality that we have a vast, rapidly aging population where people is so old, they're probably not going to be able to work in the system anymore, and the case management to track them down, find them, and rehouse them is intensive but also necessary from a governmental perspective. I'm wondering how you respond to that distribution of need and ability there."
+     },
+     {
+        "narrator":"Albert Winger",
+        "time":"[43:32]",
+        "text":"I would start with the beautiful part of the story: everything you did. I think there are more people who have the same instincts, but they're either too busy in their jobs or they can't afford to actually pursue any kind of what most people would call volunteer work. Coming back to Tyler's point, I'm certainly not of the opinion that there's no role for government in running programs. The government runs the military and should be running programs for vets; this is not a question.<br><br>But I do think we're looking at certain things like care for the elderly, the environment, and we're sort of saying, \"Nobody's doing it.\" It's really hard for a lot of people to do the thing you did. If you're holding down two jobs at McDonald's, you don't have the time. It will be some combination of the ability of more people to act on this kind of impulse and having some programs that make sense."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[44:48]",
+        "text":"Yeah, I think my one sentence reply is something like, \"I'm okay if a guaranteed minimum income solves 98% of our problems instead of 100% - I don't think that's a reason not to do it.\""
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[45:02]",
+        "text":"Just the Medicaid, Social Security, extreme poverty end. People who need people to help them stay housed, there's a role for government or a public program there."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[45:23]",
+        "text":"Absolutely. Something like Social Security, though, is not a targeted program - that's everyone over a certain age. It's absolutely not the kind of thing you're talking about. There's also a question of what level of government that should be. Should it be a state thing, or a local thing? There's tons of questions there. In terms of the homeless problem, you can look at a state like Utah, which is successfully, as a much lower cost, housed."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[45:53]",
+        "text":"San Francisco was Housing First before Utah, it's just that our cost of land and level funding is prohibitive. People have been practicing Housing First, but we just don't have enough money to do it for everyone."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[46:07]",
+        "text":"Right, and then it's a question of should we be trying to house people in San Francisco?"
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[46:12]",
+        "text":"Which is a legitimate question that people on City Council do think about. I'm glad that you brought up Housing First, since that's one of the programs that I don't think anyone argues basic income would solve. I think these big issues - mental health issues, people struggling with addictions and other issues - what basic income does do is provide people stability to deal with the bigger problems. When you are trying to get over drug addiction or mental illness, you can't do that when you don't know where you're sleeping at night.<br><br>Something we see with these Housing First policies that basic income does well is to provide that level of stability, that level of, \"I can go home so I can deal with the radical change I'm trying to make in my life.\""
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[47:08]",
+        "text":"To add to that point, folks that grow up in poverty's brains don't wire the same way as people whose brains grow up in surplus. Because your cycles and energy are wired for survival, your cognitive ability, your ability to learn is lower. A benefit of a direct payment system to enable families to do things like extracurricular summer camps, to not have to worry about whether it's McDonald's or Kraft Macaroni and Cheese five days a week, again, we go back to the concept of optionality, which we all strive for on some level. Many folks don't have it, and they don't experience what they want to be. It's structural, and that's where basic income could play a role."
+     },
+     {
+       "heading":"on changing mindsets and major cultural shifts",
+       "time":"[48:06]"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[48:06]",
+        "text":"I wanted to come back to a question Kim asked earlier that I don't think we answered - the question about the mode of change and how we get there when so many people believe that work is purpose, and if you don't work you are not deserving. I think those are important questions because I do think that we're so determined by the things we remember from our lifetime and our parents' lifetime.<br><br>It's very hard for us to sort of recognize if your lens is only the last 100 years, you will think about how different human life can be very differently than if your lens is 10,000 years. I think we take a lot of things for granted. They've seeped into the culture, into religion, into everyday language, and all of those have tied the worthiness of a person to the work they do in a very profound way. I think this is a long term change that will take generations to work through, much like it took generations to get out of the agrarian and into the industrial age.<br><br>It's easy to forget, but people tied their worth to the land that they lived on and cared for. They felt very dislocated when they lived in cities. So I do believe this is not something that's going to happen overnight, or even over a decade. This is a very long term process. I'm very optimistic where we can get to, but I'm somewhat pessimistic about how we get there. If you think about how we got from the agrarian age to the industrial age, it was through a series of revolutions and two world wars.<br><br>The biggest problem was that at the end of the agrarian period, the people who were politically in charge were the people who came from the land. When they saw what industry could do, they saw the ability to build tanks and battleships to get more land. Now, the people in charge politically have been brought up in a world where it is all about capital, and they see that they can capture people's attention and use that to have more capital and higher stock prices. That is no longer the problem, but we're still looking at it through this lens, and we're not experimenting through the bigger changes that are going to be needed. As long as we cling to this model - and this is what is happening in all industrialized economies - they are trying to patch the industrial model, and like Wile E. Coyote, we're running out further and further off a cliff, and we're going to fall that much harder when the system ultimately collapses."
+     },
+     {
+       "heading":"on universal basic income experiments here and abroad",
+       "time":"[51:03]"
+     },
+     {
+        "narrator":"Tyler Willis",
+        "time":"[51:03]",
+        "text":"There's something that Jim and Albert both said, which is an emphasis on running the right experiments. Are there experiments you see out there that give you some hope about how we're going to make this change, or that we should be putting more effort toward?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[51:20]",
+        "text":"I think experiments come in a lot of different forms here. We're starting to see very serious international movement on the issue, and we can look to those countries to get a sense of what the ramifications might be if we were to do it in the U.S.<br><br>Closer to home, you have the Y Combinator pilot that's going to happen in Oakland, and we'll actually see what happens when you give people a basic income. I know they're planning potentially on doing a larger experiment following that. I think there are examples that are already in the works, and at the same time I thought it would be a very smart idea if we could start doing more of that, passing state-level policies that move us in that direction, private and governmental interests that help to fund more controlled experimentations. Seeing what happens there from both from an economic and human perspective is going to be very informative here."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[52:18]",
+        "text":"Something I wanted to bring up in light of the Y Combinator experiment: 2016 is also the 20th anniversary of welfare reform in America and temporary assistance for needy families. In the 20th century of history cash transfers, discussions around it were heavily racialized; I'm thinking of Ronald Reagan and the welfare queen with the Cadillac.<br><br>As Y Combinator goes into a city with a strong racial history that was very much shaped by racial practices in the Bay Area, one of the critiques around it was that they kind of went in and announced this experiment, and the mayor's office didn't really know about it. There were concerns over if it should've been operated in partnership with local institutions that have been in those neighborhoods for years and decades.<br><br>Coming around to the question I want to ask you, given that history, how are you building a movement that operates in recognition of that history and also includes a lot of economically and racially diverse constituents?"
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[53:37]",
+        "text":"Great question. As we start to talk more about this and explore it, we need to make sure that all of the people that are going to be affected are included in the conversation. I think we're still figuring it out. Y Combinator is talking to a lot of folks now to figure out what the pilot looks like so everyone feels good about it. Going forward, it is important to make sure we're hearing from people in the social services space, in the labor space, and all over the spectrum, getting their input and thinking this through in a much more holistic way."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[54:20]",
+        "text":"A big part of what makes universal income appealing is the universal part. Any time you're talking about one of these small-scale experiments, you're not making it universal; it's targeted, whether it's geographically targeted or to particular individuals, and you're losing a lot of what makes it so appealing.<br><br>There's just so much less stigma if every single person gets a check. You don't people saying, \"Oh, I'm on welfare.\" All of that gets avoided if it's universal, and that's not being captured by those sorts of experiments, either."
+     },
+     {
+       "heading":"on alternative ideas and their viability",
+       "time":"[54:55]"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[54:55]",
+        "text":"Is basic income the right idea? If it is the right idea, is there an idea that can sit alongside it? Why can't I be a 16-year-old student in Lubbock, Texas, and why can't an investor invest in me - not my company - and why can't that give me the same effects as, or be on top of, my basic income? They generate an interest percentage on the income I generate over a lifetime, and I can have the opportunity to buy them out. How can we make capital work better in America?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[55:33]",
+        "text":"We're doing some of that. The most beautiful form of that to me is Kickstarter and Patreon; I give money on both, and there's a lot of people who are hacking their own basic income. I support Dustin Sandlin, who does Smarter Every Day, these amazing, super-educational YouTube videos, Scott Santens, who writes about basic income.<br><br>With regards to investors buying into individuals with a return expectation, I think that creates all sorts of new issues of financial dependency. One of the big issues to think about as we think about a transition to the basic income economy is what happens to existing personal debt. There's a huge amount of student debt, for instance, in the U.S., and if you're going to be getting basic income to pay off student debt, that's a problem.<br><br>I believe there are interesting ways that go above and beyond government transfers to do individual, voluntary transfers. With basic income, more people could participate in those programs. It might be easier, if you had a basic income, to support your favorite artist for $5 a month. I actually think the potential for that kind of voluntary redistribution increases very substantially with a basic income program."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[57:05]",
+        "text":"To take that idea, to say I live in Lubbock, Texas and I own a McDonald's and I have some extra income, could I put some money into the top 100 graduating seniors at a local high school every year, and could 100 other people do the same thing to make our capital go to work into the most precious resource in America - our people - and do the same thing as basic income with a capitalism component vs. a safety net component?"
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[57:43]",
+        "text":"I'm going to go out on a limb here and say no, it can't exactly replicate it. Some of what's so nice about universal basic income is that it's completely unconditional. You get the check no matter what, whereas if we talk about counting on profit-minded equity investors investing enough in every person to reach a basic income-like thing?<br><br>Some of why we need a basic income is this concern about automation. That actually maybe not everyone is going to be able to have a job if the economy looks radically different than it does today - or even as the economy looks today. There's a lot of talk about the unemployment rate, but not a lot of talk about the employment to population ratio, and you have a bunch of people dropping out of the labor force, going on disability, social security, all of these other programs."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[58:38]",
+        "text":"Playing video games."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[58:40]",
+        "text":"Some of them, sure."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[58:41]",
+        "text":"That's the latest study."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[58:42]",
+        "text":"I saw that today, yes"
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[58:45]",
+        "text":"So there's this question of how much people can actually adapt. If you're talking about a model in which VCs put money into individual people, I'll bet they only want to put money into 1%, 5%, 10%, 20%? 30%?"
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[59:02]",
+        "text":"Not VCs. Local folks."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[59:07]",
+        "text":"I think this brings up an interesting question: how do we deserve this? People ask, “How does a person deserve this?” To this, I say, \"How do you deserve to be born in the 20th or 21st century? How did you deserve to not be born during the Crusades, or not in the U.S.?\"<br><br>We have to radically re-examine this notion of deserving. One component of universal basic income is the knowledge dividend. All the generations of humans that came before us that created all this amazing knowledge, and our generation that's hopefully adding to it, makes it possible for us to have this."
+     },
+     {
+       "heading":"on why policy doesn’t age gracefully - and why universal income could",
+       "time":"[1:00:00]"
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[1:00:00]",
+        "text":"One question I have is about political institution design. A lot of the programs that we've talked about today are maybe not the most up to date or contemporary programs we could offer. At the time they were formed, Medicaid and Social Security were radical changes. Whenever you offer an action, a subsidy, or an entitlement of any sort, an entire constituency forms around it and will aggressively defend it, even if it no longer makes sense, given economic and demographic realities.<br><br>If you're offering something like universal basic income, if and when things change generations from now, how do you make sure this entitlement isn't so large that it destroys itself - the basic funding questions we're asking about social security right now?"
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[1:01:00]",
+        "text":"I do agree that there's a difficult political economy question here. There's always going to be an incentive for voters to want to increase the basic income. That's absolutely a problem, and there's a question of how this interacts with the political system, and if there's even the political will to eliminate programs and make a basic income. These are fundamental questions of political economy and no one currently has that answer, I would argue."
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[1:01:37]",
+        "text":"I would add that the size of the basic income aside, something that attracts a lot of people to the idea is the lack of paternalism. It's the fact that you're not prescribing goods or services, you're saying, \"Here's money, you figure out what's the best use for it.\" While there is a valid question of how much we should be giving, when you look at programs that are dated, you see that what they're providing makes much less sense in the age we're in today. Just providing them with cash, which they can use on whatever they need, has a much lower risk of not making sense in the future."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[1:02:15]",
+        "text":"One of the things I also want to say in favor of the basic income is that it's based upon much more universal basic economic principles that are much more likely to hold up across time and space than a lot of these contingent programs. A lot of these things were developed in response to an acute problem we're facing in the moment, whereas I think some of basic income's appeal - and why it may not ever come to pass - is because it's based upon very simple, deep principles. I think that's why a lot of people have started to like it, particularly more engineering minded folks you find in Silicon Valley. It very much appeals to a particular type of mindset and has a lot of features that will hold up under circumstances other programs can't."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[1:03:20]",
+        "text":"Part of the requirements for joining the roundtable was to read Albert's book, World After Capital. Part of what makes Albert so special to the ecosystem of ideas we're generating for the future is that Albert's at the forefront of funding the companies of the future, and he's good at it. He's one of the best in the world.<br><br>He's given deep thought to society and automation to the point that he's writing a book on it, and it's captured the imaginations of a lot of technologists and covers a lot of themes. I'd like to give everyone a chance to ask Albert a question about his thinking, and then we'll bring France 2, who'll ask some questions and we'll wrap it up."
+     },
+     {
+        "narrator":"Tyler Willis",
+        "time":"[1:04:18]",
+        "text":"I want to respond to the question that was biggest on my mind at the end of the book. It seems you wrote it with something of a politician in mind, trying to push this knowledge into our broader political discussion, where we have this problem of what our political will is. I want to ask if you actually had any interactions with politicians out of this, how that's gone, and what they're thinking about this."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:04:49]",
+        "text":"I've had some interactions. The biggest takeaway is that a lot of people on the political sphere are really stuck in trying to fix the industrial system. They think that it's just going to take a few small changes, and we'll be back up. They're heavily influenced by economists like Larry Summers, who really think that if we strip some regulation, we'll be back up and growth will be fine. The willingness to say this time it's really different is nonexistent across the political spectrum."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[1:05:35]",
+        "text":"Couldn't agree more with that."
+     },
+     {
+        "narrator":"Chad Grills",
+        "time":"[1:05:40]",
+        "text":"Albert, contrary to what people might think, I did enjoy the book. You kind of hinted around the issue that we need to completely rethink things like the Department of Education, or education in general. I love that approach to thinking about IT. You mention in the book that it would be okay to tax companies like Uber - do you worry that self-driving has hit a wall now at level three autonomy, and taxing Uber would prevent us from getting to level four or level five?"
+     },
+     {
+       "heading":"on power laws, intellectual property, and how to rebuild the world for everyone",
+       "time":"[1:06:16]"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:06:16]",
+        "text":"What I said about taxation is that in a largely digital economy, you tend to get power laws. I think it's perfectly fine to tax the winners of the power laws pretty heavily at the individual and corporate level, and that won't change the amount of economic activity. Everybody, when they set out, thinks they're going to be the winner, and if you're the winner in a power law, even if you pay more taxes, it will be piddley compared to the rest, which will be an order or two of magnitude smaller.<br><br>The other thing I said in the book was that concentration of economic activity in large platforms is a problem for the economy. Right now, regulators are approaching these large platforms using the old regulatory tool book of antitrust law, which came from the industrial economy, so they're thinking about things like telling them they can only behave in a certain way - direct behavioral regulation - and I think that's very bad.<br><br>You can think about trying to split things up, but you want things to be large networks; it'd be bad if there were two Facebooks, and if I'm on the wrong one, I can't talk to you - that's a silly idea. But there are other types of regulation that will shift power from the center out to the edge in computing, and they have to deal with who can access what information. Right now, for instance, if I took Uber's app or Facebook's app and decompiled it, extracted the encryption keys so I could create an API that other people could program against, I would be breaking like three different laws. We have a lot of laws that concentrate power of computation in few hands, and that's probably a bad thing."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[1:08:20]",
+        "text":"You talk about a number of interlinked solutions in the book. We've focused a lot on the idea of some kind of guaranteed minimum income, but that's one of three main platforms in your book. Some of what I'm wondering is how much you think just the basic income gets us? Is that really only a third of it? 90%? Almost nothing, with the other planks of your suggested solution?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:08:49]",
+        "text":"In the book, I talk about three different freedoms: economic freedom, informational freedom, and psychological freedom. Economic freedom is by and large basic income, informational freedom is putting more power into the edge - that means reducing copyright, the patterns of systems, dialing back what companies can do with their terms of service, etc. The psychological freedom part is how much we are beholden to concepts like having work to have self worth, constantly refreshing our Twitter feeds, and worrying about people criticizing thngs we publish, being devastated, and never publishing again. There's a lot of things we need to work on ourselves.<br><br>I think that talking about basic income, in the absence of talking about large, systematic change of how we live, is flawed. I don't think basic income can succeed on its own; I don't think it's either a necessary or a sufficient condition for the kind of world that we need to create."
+     },
+     {
+        "narrator":"William Eden",
+        "time":"[1:10:00]",
+        "text":"I think basically my challenge to you comes down to that I agree on the economic point, and the necessity of developing a new culture. When you talk about information freedoms, that seems the most like behavioral regulations that you've been trained to avoid - they sort of seem like the old industrial economy and trying to control that."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:10:27]",
+        "text":"Behavioral regulation of Facebook would be to tell them what feed algorithm they should run; I'd consider that behavioral regulation. To make it so that anybody could create a consumer API to Facebook I don’t think is a behavioral regulation."
+     },
+     {
+        "narrator":"Jim Pugh",
+        "time":"[1:10:48]",
+        "text":"Thinking specifically about psychological freedom, you talk about differences in mentality that you thought would be useful - shifting away from the scarcity mindset, recognizing the difference between wants and needs. To get widespread adoption on that would be a very large undertaking, and I'm curious if you have any thoughts on how best to approach something like that."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:11:13]",
+        "text":"Much like startups that have a big vision, it's one step at a time. The first draft of the book is maybe not even the MVP version of all the thinking, but I think of it as starting, having these kinds of conversations, people having related conversations all around the world, and just like startups, you have to start.<br><br>The difference between ideas and getting ideas into the world is having the idea in your head vs. having the idea on paper and talking about it. I'm taking the step of putting it out there on the internet - that's how ideas get liberated and start to travel."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[1:12:06]",
+        "text":"You mention that you like to describe basic income as seed money for everyone. One of the most common criticisms or roadblocks I've heard people mention is that they don't believe people will have agency to do what they want. I'm curious to hear your response is to the idea that people won't work, or won't be interested in working."
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:12:30]",
+        "text":"I do very much think that there's lots of evidence that suggests people are born with a huge amount of interest in the world. There are all these great studies, for instance, about how many questions children ask. There are so many great studies about how children explore and discover the world, and then we basically wind up sending them into a school system that trains most of that curiosity out over a course of 12 years. I very much believe that we can create a world where we maintain our natural curiosity, where many more people have the opportunity to maintain it."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[1:13:16]",
+        "text":"You talk about bots and APIs. We don't make money on Facebook - it's downstream income if we do for celebrities and selling ads into our streams and such - but do you see a world where regulators acquire these natural data monopolies or giant machines, requiring them to open up APIs so that human creativity can be monetized?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:13:48]",
+        "text":"I believe the reason to open up APIs is not to monetize it. It's to shift where the power resides. Once you shift where power resides, then monetization follows, or decreases. As long as it's very difficult for anybody to shift their activity away from an existing network because there's no threat point of shifting en masse, it puts a lot of power in the hands of the network operator, which the operator will use to extract value from the network.<br><br>I think more fundamentally we need to get away from received notions of productivity where we take output measured in dollars and divide it by people. I think the reason Larry has things upside down on the economy is because he wonders why there isn't more output per person at a time when that's just the wrong thing to measure. We've always known that GDP was a very bad measurement because it doesn't consider negative externalities. If I sell you cigarettes, that's part of GDP. If I later sell you cancer treatments, that's also part of GDP.<br><br>Now, we live in a world of positive externalities. If I publish a song or book for free and put it on the internet, there's no GDP but there's huge consumer benefit. As long as we're stuck on dividing GDP by people to measure the economy, we've already lost."
+     },
+     {
+        "narrator":"Chris McCoy",
+        "time":"[1:15:16]",
+        "text":"What we'll do now is wrap this up and turn this over to France 2 to finish the discussion.<br>Thank you, friends - this was excellent."
+     },
+     {
+        "narrator":"France 2",
+        "time":"[1:15:33]",
+        "text":"You said that technology is destroying a lot of jobs. Don't you fear the end of work?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:15:44]",
+        "text":"I think humans are not here on this planet to work. The reason we can sit here right now and have this discussion is because we're not hunting and gathering or plowing the fields. We've created machines that do that for us. As long as we're stuck on the notion that work is why we're here, again, we will fear automation as opposed to recognizing that our history is one of automation.<br><br>We have to figure out how to substitute different purpose. In my book, one of the key purposes of humanity is knowledge, very broadly defined to include art, music, and lots of other things. I don't fear the end of work; I would like to hasten the end of work."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"[1:16:49]",
+        "text":"When we've made previous transitions - agricultural to industrial - they weren't peaceful. They were violent. Even in the 19th century, the movement of the United States from 6% urban to 40% urban, the Gilded Age, which sounded nice but had many financial panics and crises that put people out of work, and then of course the progressive era, in which we instituted labor reforms, The Federal Reserve, that was a multi-decade process. It was ultimately the Great Depression and a war that gave rise to the industrial, Fordist model. Is there a way that we get through this peaceably, or is it going to require something potentially as destructive as what I just described?"
+     },
+     {
+        "narrator":"Albert Wenger",
+        "time":"[1:17:54]",
+        "text":"All I can say is that I sure as hell hope so. I really feel that if we haven't learned from the past transition that if we wait, things will get very, very bad. Why are we seeing democracies being rolled back around the world? It's because we're not addressing the fundamental breakdown of the industrial system. Electing someone like Duterte or Putin happens because industrial systems are breaking down and democracies are not solving the problem. That is a very, very grave threat that's a clear and present danger to our political process, including in the United States, where there's a danger of electing someone who does not form part of the democratic process."
+     },
+     {
+        "narrator":"Kim-Mai Cutler",
+        "time":"1:18:53",
+        "text":"Thank all of you so much, and I want to thank France 2 for being here, too."
+     }
+  ]
 }

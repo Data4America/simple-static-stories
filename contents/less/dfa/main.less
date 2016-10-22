@@ -163,16 +163,23 @@ html, body, header {
   margin:1em 0em;
   box-shadow: 2px 2px 10px #332520;
 
-  .ui.inverted.menu {
-    background: #008e5c !important;
-    .item:after {
-      background: #269f74 !important;
+  .ui.inverted.grey.menu {
+    .active.item {
+      background-color: #004f81 !important;
+    }
+    .active.item:after {
+      background-color: #004f81 !important;
     }
   }
 
   .ui.selection.dropdown .menu > .item {
     color: white !important;
-    border-color: #008e5c !important;
+    border-color: #767676 !important;
+  }
+
+  .ui.selection.dropdown .menu > .item.selected {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
   }
 
   .ui.selection.visible.dropdown > .text:not(.default) {
@@ -181,11 +188,14 @@ html, body, header {
 
   .ui.selection.dropdown {
     display: none;
-    background: #008e5c;
+    background: #004f81;
     color: white !important;
     .menu {
-      background: #008e5c !important;
+      background: #767676 !important;
       max-height: inherit !important;
+    }
+    .text {
+      color:white;
     }
   }
 
@@ -634,6 +644,7 @@ html, body, header {
   }
 
   @media only screen and (max-width: @largestMobileScreen) {
+    margin:3em 0px 2em;
     .ui.three.column.grid {
       margin:1em 0em !important;
     }
@@ -1956,7 +1967,7 @@ body.embed {
 
     a.image img {
       width: 450px;
-      height: 450px;
+      height: auto;
       border-radius: 5px;
       box-shadow: 0 0 6px #989595;
       margin-top: 1em;
@@ -1974,6 +1985,11 @@ body.embed {
       font-size: 1.2em;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin: 1em;
     }
 
     p {
