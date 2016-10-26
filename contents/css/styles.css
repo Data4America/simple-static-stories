@@ -52297,6 +52297,13 @@ input::-moz-focus-inner {
     display: none;
   }
 }
+.dfa-check input {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.dfa-check label:before {
+  line-height: 1.2rem !important;
+}
 #dfa-email-wall {
   position: absolute;
   width: 100%;
@@ -52986,6 +52993,9 @@ input::-moz-focus-inner {
 }
 .dfa-feed .column.col-disabled[category] {
   display: none !important;
+}
+.dfa-feed .column.column-width {
+  width: 64% !important;
 }
 .dfa-feed .dfa-approved-image {
   text-align: center;

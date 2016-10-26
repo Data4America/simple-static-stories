@@ -50,8 +50,6 @@ block content
             i.ui.blue.text.file.outline.icon
             |  Read Transcript
             
-        a.image(href=podcast.link)
-          img(src=podcast.artwork)
         div.description
           p
             if podcast.desc
@@ -59,6 +57,8 @@ block content
                 span.line
                   !=item
                   =(i < (podcast.desc.length - 1) ? ', ' : '')
+          if podcast.subDesc
+            p.ui.header(style="font-style:italic;")=podcast.subDesc
 
           if podcast.host
             p
@@ -74,8 +74,9 @@ block content
                   a(href=host.linkedin, target="_blank")
                     i.ui.linkedin.square.icon
                 !="&nbsp;"
-                
-                
+            
+        a.image(href=podcast.link)
+          img(src=podcast.artwork)    
 
           if podcast.moreLinks
             p.links.hidden

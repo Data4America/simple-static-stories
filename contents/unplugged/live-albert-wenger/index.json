@@ -1,13 +1,14 @@
 {
   "template": "unplugged-episode.jade",
-  "title": "Uplugged Live: Albert Wenger",
+  "title": "Roundtable: Albert Wenger",
   "profile": {
     "guest": "Albert Wenger",
     "artwork": "/img/unplugged-albertwenger-600.jpg",
     "link": "/unplugged/live-albert-wenger",
     "desc": [
-      "Roundtable discussion on the future of Jobs, Automation, and Basic Income with Albert Wenger, author of World After Capital and VC at Union Square Ventures."
+      "Roundtable with Albert Wenger, author of World After Capital and venture capitalist at Union Square Ventures."
     ],
+    "subDesc" : "Future of Jobs, Automation, and Basic Income.",
     "host": [{
       "name": "Kim-Mai Cutler",
       "twitter": "https://twitter.com/kimmaicutler"

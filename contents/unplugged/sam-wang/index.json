@@ -5,13 +5,17 @@
     "guest": "Dr. Sam Wang",
     "artwork": "/img/unplugged-samwang-600.jpg",
     "link": "/unplugged/sam-wang",
+    "session" : "Co-Founder @Princeton Election Consortium",
+    "desc": [
+      "A discussion on the 2016 Presidential election, data science in polling, and more"
+    ],
     "host": [{
-      "name": "Chris McCoy",
-      "twitter": "https://twitter.com/chrismccoy"
-    },
-    {
       "name": "Patrick Ruffini",
       "twitter": "https://twitter.com/PatrickRuffini"
+    },
+    {
+      "name": "Chris McCoy",
+      "twitter": "https://twitter.com/chrismccoy"
     }]
   },
   "transcript2": [

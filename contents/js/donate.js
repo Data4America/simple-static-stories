@@ -13,7 +13,7 @@
     '     <td>' +
     '       <h4 class="dfa-header-text donate" style="margin-bottom: 0; font-size: 0.95em;">' +
     '         Help Data<span style="color:#CC0001; font-style:italic;">4</span>America publish Editorial Board-approved data science and data visualization about politics.' +
-    '         <a href="javascript:;" class="dfa-link-learn-more">Make a donation.</a>' +
+    '         <a href="/supporters" class="dfa-link-learn-more">See our donors.</a>' +
     '       </h4>' +
     '       <h4 class="dfa-header-text sponsor" style="display:none; margin: 0; font-size: 1.4em;">' +
     '         Sponsor a Policy Issue' +
