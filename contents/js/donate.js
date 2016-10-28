@@ -13,7 +13,7 @@
     '     <td>' +
     '       <h4 class="dfa-header-text donate" style="margin-bottom: 0; font-size: 0.95em;">' +
     '         Help Data<span style="color:#CC0001; font-style:italic;">4</span>America publish Editorial Board-approved data science and data visualization about politics.' +
-    '         <a href="/supporters" class="dfa-link-learn-more">See our donors.</a>' +
+    '         <a class="dfa-link-learn-more" style="cursor:pointer;">See our donors.</a>' +
     '       </h4>' +
     '       <h4 class="dfa-header-text sponsor" style="display:none; margin: 0; font-size: 1.4em;">' +
     '         Sponsor a Policy Issue' +
@@ -817,9 +817,16 @@
       }
     }
 
+    // function learnMore() {
+    //   $modLearnMore.show();
+    //   $formDonate.hide();
+    // }
+
     function learnMore() {
-      $modLearnMore.show();
-      $formDonate.hide();
+      console.log('hi');
+      $('html, body').animate({
+        scrollTop: $('#dfa-supporters').offset().top - 65
+      });
     }
 
     function showBudget() {

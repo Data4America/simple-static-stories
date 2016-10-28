@@ -1,13 +1,16 @@
 {
   "template": "unplugged-episode.jade",
-  "title": "Uplugged Live: Sam Wang",
+  "title": "Uplugged: Sam Wang",
   "profile": {
     "guest": "Dr. Sam Wang",
     "artwork": "/img/unplugged-samwang-600.jpg",
     "link": "/unplugged/sam-wang",
     "session" : "Co-Founder @Princeton Election Consortium",
     "desc": [
-      "A discussion on the 2016 Presidential election, data science in polling, and more"
+      "A podcast with Dr. Sam Wang <a href='https://twitter.com/SamWangPhD'><i class='blue twitter icon'></i></a> of the Princeton Election Consortium. Co-hosted by Patrick Ruffini <a href='https://twitter.com/PatrickRuffini'><i class='blue twitter icon'></i></a> and Chris McCoy <a href='https://twitter.com/chrismccoy'><i class='blue twitter icon'></i></a> from Data4America."
+    ],
+    "subDesc": [
+      "The future of data science in polling, the 2016 Presidential Election, and more."
     ],
     "host": [{
       "name": "Patrick Ruffini",

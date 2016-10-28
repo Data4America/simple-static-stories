@@ -53072,6 +53072,9 @@ input::-moz-focus-inner {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
+.dfa-feed .dfa-feed-item .item-meta a i.twitter {
+  color: #4099ff !important;
+}
 .dfa-feed .dfa-feed-item .item-meta::before {
   position: absolute;
   top: -2px;
@@ -53822,6 +53825,9 @@ body.embed {
 #dfa-unplugged .podcast .description {
   font-size: 1.2em;
   margin: 1em;
+}
+#dfa-unplugged .podcast .description .line a i.twitter {
+  color: #00abf1 !important;
 }
 #dfa-unplugged .podcast p {
   font-size: 1em;

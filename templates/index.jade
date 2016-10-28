@@ -127,9 +127,11 @@ block content
                 a.item-link(href=url, target=ext ? '_blank' : '_self')
                   div.item-image
                     img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
+                    
+                div.item-link
                   div.item-meta
                     div.item-text!= article.metadata.description
-
+                
                 div.item-details
                   mixin podcastAuthor(article.metadata.author)
                   div.ui.bulleted.list
