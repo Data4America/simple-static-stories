@@ -4,7 +4,7 @@ author: chris-mccoy
 date: 2016-07-20
 template: article.jade
 link: "/unplugged/episode-2-ramez-naam"
-description: "Winner of @Phillip K Dick Award, Author @Nexus trilogy, Author @The Infinite Resource: The Power of Ideas on a Finite Planet., Teacher @Singularity U., Energy innovation advocate"
+description: "Winner of @Phillip K Dick Award, Author @Nexus trilogy, Author @The Infinite Resource: The Power of Ideas on a Finite Planet. and more"
 isPodcast: true
 noFooter: false
 article: true

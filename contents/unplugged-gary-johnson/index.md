@@ -4,7 +4,7 @@ author: "≈"
 date: 2016-09-01
 template: article.jade
 link: "/unplugged/live-gary-johnson"
-description: "Gary Johnson LIVE from Data4America was the first of hopefully many raw deep dives into the life history of America's political, business, and civic leaders."
+description: "An oral history of his life using http://lifemap.io/garyjohnson"
 isPodcast: true
 noFooter: false
 article: true

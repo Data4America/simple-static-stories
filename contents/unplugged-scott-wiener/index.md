@@ -4,7 +4,7 @@ author: kimmai-cutler
 date: 2016-07-20
 template: article.jade
 link: "/unplugged/live-scott-kim"
-description: "Scott Wiener is member of the San Francisco Board of Supervisors and current candidate for the California State Senate."
+description: "The future of Bay Area housing and transportation."
 isPodcast: true
 noFooter: false
 article: true
