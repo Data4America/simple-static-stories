@@ -51,14 +51,14 @@ block content
             |  Read Transcript
             
         div.description
+          if podcast.subDesc
+            p.ui.header(style="font-style:italic;")=podcast.subDesc
           p
             if podcast.desc
               each item, i in podcast.desc
                 span.line
                   !=item
                   =(i < (podcast.desc.length - 1) ? ', ' : '')
-          if podcast.subDesc
-            p.ui.header(style="font-style:italic;")=podcast.subDesc
 
           if podcast.host
             p

@@ -4,7 +4,7 @@ author: "kimmai-cutler"
 date: 2016-09-30
 template: article.jade
 link: "/unplugged/live-albert-wenger"
-description: "A roundtable discussion with Albert Wenger <a href='https://twitter.com/albertwenger'><i class='blue twitter icon'></i></a>, the author of World After Capital and a venture capitalist at Union Square Ventures. Hosted by Kim-Mai Cutler <a href='https://twitter.com/kimmaicutler'><i class='blue twitter icon'></i></a> from Data4America."
+description: "Future of Jobs, Automation, and Basic Income. Our first-ever Roundtable."
 isPodcast: true
 noFooter: false
 article: true

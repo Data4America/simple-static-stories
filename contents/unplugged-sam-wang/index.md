@@ -4,7 +4,7 @@ author: "chris-mccoy,patrick-ruffini"
 date: 2016-10-05
 template: article.jade
 link: "/unplugged/sam-wang"
-description: "A podcast with Dr. Sam Wang <a href='https://twitter.com/SamWangPhD'><i class='blue twitter icon'></i></a> of the Princeton Election Consortium. Co-hosted by Patrick Ruffini <a href='https://twitter.com/PatrickRuffini'><i class='blue twitter icon'></i></a> and Chris McCoy <a href='https://twitter.com/chrismccoy'><i class='blue twitter icon'></i></a> from Data4America."
+description: "The future of data science in polling, the 2016 Presidential Election, and more."
 isPodcast: true
 noFooter: false
 article: true

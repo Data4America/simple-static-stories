@@ -823,7 +823,7 @@
     // }
 
     function learnMore() {
-      console.log('hi');
+      $('#dfa-supporters').show();
       $('html, body').animate({
         scrollTop: $('#dfa-supporters').offset().top - 65
       });
