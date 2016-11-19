@@ -3,7 +3,7 @@ extends layout
 block content
 
   include author
-  
+
   .ui.stackable.center.aligned.grid.container
     .fourteen.wide.column
       h2.ui.icon.header(style="color:#CC0505; font-weight:300; font-style:italic;")
@@ -53,15 +53,14 @@ block content
                     each link in links
                       - var texturl = link.split('|')
                       div.item
-                        a.ui.basic.label(href=texturl[1], target='_blank')= texturl[0]
-
+                        a.ui.basic.label(href=texturl[1], target='_blank')=texturl[0]
                 div.item-bottom
                   if article.metadata.originals
-                    img.ui.tiny.image.unplugged-image(src="/img/originals.png")  
+                    img.ui.tiny.image.unplugged-image(src="/img/originals.png")
                   if article.metadata.ugp
-                    img.ui.small.image.unplugged-image(src="/img/ugp.png")                    
-                  p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
-                  
+                    img.ui.small.image.unplugged-image(src="/img/ugp.png")
+                  p.item-date=moment.utc(article.date).format('MMMM D, YYYY')
+
     div.column
       div.ui.red.segment.inverted(style="max-width:258px; margin:0 auto;")
         div#dfa-email-content.ui.form
@@ -85,7 +84,7 @@ block content
         div.ui.divider
         h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
         button.dfa-btn-donate.large.ui.button.red.fluid Donate
-        
+
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
@@ -100,11 +99,11 @@ block content
               a.item-link(href=url, target=ext ? '_blank' : '_self')
                 div.item-image
                   img(src=article.url + 'thumbnail.png', srcset=article.url + 'thumbnail.png 1x, ' + article.url + 'thumbnail-256.png 2x')
-                  
+
               div.item-link
                 div.item-meta
                   div.item-text!= article.metadata.description
-              
+
               div.item-details
                 mixin podcastAuthor(article.metadata.author)
                 div.ui.bulleted.list
@@ -124,13 +123,13 @@ block content
                   if article.metadata.unplugged  
                     img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
 
-                    p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
+                  p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
 
   h1#dfa-data-viz-header.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Bringing data visualization to the understanding of politics
-  
+
   div#dfa-data-viz-tab.ui.sticky
-  
+
     div.ui.fluid.selection.dropdown
       input(type='hidden', name='data')
       i.dropdown.icon
