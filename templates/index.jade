@@ -88,7 +88,7 @@ block content
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
-    - var count = 0
+
     each article in articles
       if article.metadata.isPodcast
         - url = article.metadata.link ? article.metadata.link : article.url

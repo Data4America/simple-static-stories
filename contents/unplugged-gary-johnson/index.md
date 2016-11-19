@@ -1,7 +1,7 @@
 ---
 title: "Unplugged Live: Gary Johnson"
 author: "chris-mccoy,cyan-banister"
-date: "2016-09-01"
+date: 2016-09-01
 template: article.jade
 link: "/unplugged/live-gary-johnson"
 description: "An oral history of his life using http://lifemap.io/garyjohnson"
