@@ -15,7 +15,7 @@ title: August 2016 Update
                   <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                     <tr>
                       <td class="headerContent">
-                        
+
                         <!-- // Begin Module: Standard Header Image \\ -->
                         <img src="https://data4america.org/img/email-updates.jpg" style="max-width:600px;" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="" alt="Data4America">
                         <!-- // End Module: Standard Header Image \\ -->
@@ -37,38 +37,49 @@ title: August 2016 Update
                           <tr>
                             <td valign="top">
                               <div style="padding:20px;">
-                                1/ WIRED magazine <a target="_blank" href="http://www.wired.com/2016/09/gary-johnson-looks-perfectly-ease-vr-headset-face">covered</a> our Facebook LIVE and Unplugged <a target="_blank" href=" https://www.facebook.com/chrisamccoy/media_set?set=a.10105475097881858.1073741838.10707725&type=3">with</a> Governor Gary Johnson. We were joined by Data4America supporter <a target="_blank" href="https://twitter.com/cyantist">Cyan Banister</a>. Here's the <a target="_blank" href="https://www.facebook.com/govgaryjohnson/videos/10153312003129364">full interview</a>.
+                                0/ We launched Data4America from our couch and coffee table in the summer of 2015.
                                 <br>
                                 <br>
-                                2/ We launched our Podcast called <a target="_blank" href="https://data4america.org/unplugged/">Unplugged</a>.
+
+                                1/ We just finished our first season at Data4America, where with the help of our fiscal sponsor -- the Silicon Valley Community Foundation -- we raised $45,000 from our <a href="http://data4america.org/supporters">founding donors</a>.
                                 <br>
                                 <br>
-                                3/ We turned <a target="_blank" href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below). 
+
+                                2/ We launched our Podcast called <a href="https://data4america.org/unplugged/">Unplugged</a>.
                                 <br>
                                 <br>
-                                4/ All podcasts are fully <a target="_blank" href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
+
+                                3/ We turned <a href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below).
                                 <br>
                                 <br>
-                                5/ We've grown our <a target="_blank" href="https://data4america.org/about/">team</a> to 25+!
+
+                                4/ All podcasts are fully <a href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
                                 <br>
                                 <br>
-                                6/ Our Editorial Board <a target="_blank" href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
+
+                                5/ We've grown our <a href="https://data4america.org/about/">team</a> to 25 staff and editorial board members!
                                 <br>
                                 <br>
-                                We opened sourced the <a target="_blank" href="https://github.com/Data4America/jobmaps">code</a>, the <a target="_blank" href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a target="_blank" href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
+
+                                6/ Our Editorial Board <a href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
                                 <br>
                                 <br>
-                                7/ <a target="_blank" href="https://data4america.org/joinnetwork">Join</a> our invite-only Content Network for an opportunity to get published by the Data4America Editorial Board.
+
+                                We opened sourced the <a href="https://github.com/Data4America/jobmaps">code</a>, the <a href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
                                 <br>
                                 <br>
-                                If published, we'll syndicate you to our social media, through email, through Huffington Post, and more. 
+
+                                7/ We've recorded multiple podcasts and Roundtables to explore the intersection of data, technology, government, and the future. We're planning many more for 2017.
                                 <br>
                                 <br>
-                                Now, onto our second season! 
+
+                                Now, onto our second season!
                                 <br>
                                 <br>
-                                - Your friends at <a target="_blank" href="https://data4america.org">Data4America</a>
+
+                                - Your friends at <a href="https://data4america.org">Data4America</a>
                                 <br>
+                                
                               </div>
                             </td>
                           </tr>
@@ -85,13 +96,13 @@ title: August 2016 Update
           </tr>
         </table>
         <br>
-      
-    
+
+
     <tr>
     	<td>
     	<table id="templateSegments" border="0" cellpadding="0" cellspacing="0" width="600" align="center">
           <tbody>
-          	
+
 			<tr>
             	<td class="segment center podcasts" bgcolor="#fff">
                 	<div class="h1 title">LIVE</div>
@@ -201,7 +212,7 @@ title: August 2016 Update
                               <div class="h5 host">
                                 Host: <strong><a target="_blank" href="https://twitter.com/chrisamccoy" target="_blank">Chris McCoy</a>, Data4America</strong>
                               </div>
-                              
+
                               <div>
                                 <a class="link-play-d4a" target="_blank" href="https://data4america.org/unplugged/episode-2-ramez-naam/#play">
                                   <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
@@ -270,7 +281,7 @@ title: August 2016 Update
 						4/ Subscribe others to Data4America at the link <a target="_blank" href="https://data4america.org/subscribe">http://data4america.org/subscribe</a>.
 						<br>
                         <br>
-                        5/ We're looking for part-time and volunteer full-stack developers, designers, product managers, data scientists, d3.js enthusiasts, data analysts, policy researchers, online marketers, and development+fundraising specialists to help us bring new data-driven content to the public. 
+                        5/ We're looking for part-time and volunteer full-stack developers, designers, product managers, data scientists, d3.js enthusiasts, data analysts, policy researchers, online marketers, and development+fundraising specialists to help us bring new data-driven content to the public.
 <br>
 <br>
 						Please pass any direct leads to <a target="_blank" href="mailto:chris@data4america.org">chris@data4america.org</a>.
@@ -286,7 +297,7 @@ To help get there, we're looking for syndication partners. This includes publish
           	<tr>
     			<td>&nbsp;</td>
       		</tr>
-            
+
           	<tr>
             	<td class="segment center" bgcolor="#fff">
                 	<div class="h4" style="color:#002767; font-size:15px; margin:10px 0;">Want to nominate someone for Unplugged or LIVE, including yourself? Reply to this email and tell us why they'd help the world understand the future.</div>
@@ -314,7 +325,7 @@ To help get there, we're looking for syndication partners. This includes publish
                       Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.
                     			</div>
               </td>
-              
+
             </tr>
             <tr>
     			<td>&nbsp;</td>
@@ -327,7 +338,7 @@ To help get there, we're looking for syndication partners. This includes publish
                     <br><br>
                     2/ We launched Lifemap, history in <a target="_blank" href="http://lifemap.io/">100 characters or less</a>. Check out <a target="_blank" href="http://lifemap.io/donaldtrump/">Donald Trump</a>, <a target="_blank" href="http://lifemap.io/berniesanders/">Bernie Sanders</a>, <a href="http://lifemap.io/sherylsandberg">Sheryl Sandberg</a>, <a href="http://lifemap.io/markcuban">Mark Cuban</a>, and <a href="http://lifemap.io/">more</a>.
                     <br><br>
-                    3/ Here's the Lifemap on HuffPo: <a target="_blank" href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2">Hillary Clinton</a>, <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-sheryl-sandberg_us_57a572e4e4b0ccb023725e61?m5cjkz3qctzqia4i">Sheryl Sandberg</a>, and <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-the-history-of-bernie-sanders-in-100-characters_us_579e9e6ce4b00e7e269fcd31?qoo3i9mj4c1cvunmi">Bernie Sanders</a>. 
+                    3/ Here's the Lifemap on HuffPo: <a target="_blank" href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2">Hillary Clinton</a>, <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-sheryl-sandberg_us_57a572e4e4b0ccb023725e61?m5cjkz3qctzqia4i">Sheryl Sandberg</a>, and <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-the-history-of-bernie-sanders-in-100-characters_us_579e9e6ce4b00e7e269fcd31?qoo3i9mj4c1cvunmi">Bernie Sanders</a>.
 					<br><br>
 					4/ HuffPo is <a target="_blank" href="https://twitter.com/HuffPostPol/status/768534447536898048">tweeting</a> Lifemap out to their 860,000 followers!
                                                             <br><br>
