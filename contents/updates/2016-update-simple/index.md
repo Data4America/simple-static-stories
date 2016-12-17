@@ -1,6 +1,6 @@
 ---
-template: email.jade
-title: 2016 Update
+template: email-empty.jade
+title: August 2016 Update
 ---
 
 <center>
@@ -37,44 +37,45 @@ title: 2016 Update
                           <tr>
                             <td valign="top">
                               <div style="padding:20px;">
-                              1/ We just finished our first season at Data4America, where with the help of our fiscal sponsor the Silicon Valley Community Foundation we published 26 pieces of original content -- powered by $45,000 from our <a href="http://data4america.org/supporters">founding donors</a>.
-                              <br>
-              								<br>
 
-                            	2/ We launched our Podcast called <a href="https://data4america.org/unplugged/">Unplugged</a>.
-                              <br>
-              								<br>
+                                1/ We just finished our first season at Data4America, where with the help of our fiscal sponsor the Silicon Valley Community Foundation we published 26 pieces of original content -- powered by $45,000 from our <a href="http://data4america.org/supporters">founding donors</a>.
+                                <br>
+                                <br>
 
-                              3/ We turned <a href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below).
-                              <br>
-              								<br>
+                                2/ We launched our Podcast called <a href="https://data4america.org/unplugged/">Unplugged</a>.
+                                <br>
+                                <br>
 
-                              4/ All podcasts are fully <a href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
-                              <br>
-                              <br>
+                                3/ We turned <a href="https://data4america.org/unplugged/">LIVE</a> into a podcast <br>(🎧 below).
+                                <br>
+                                <br>
 
-                              5/ We've grown our <a href="https://data4america.org/about/">team</a> to 25 staff and editorial board members!
-              								<br>
-                              <br>
+                                4/ All podcasts are fully <a href="https://data4america.org/unplugged/live-keith-blake/#transcript">transcribed</a>.
+                                <br>
+                                <br>
 
-                              6/ Our Editorial Board <a href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
-                              <br>
-                              <br>
+                                5/ We've grown our <a href="https://data4america.org/about/">team</a> to 25 staff and editorial board members!
+                                <br>
+                                <br>
 
-                              We opened sourced the <a href="https://github.com/Data4America/jobmaps">code</a>, the <a href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
-                              <br>
-                              <br>
+                                6/ Our Editorial Board <a href="https://data4america.org/geography-american-jobs/">published</a> "One Job, One Dot: Every job in America, on a map".
+                                <br>
+                                <br>
 
-                              7/ We've recorded multiple podcasts and Roundtables to explore the intersection of data, technology, government, and the future. We're planning many more for 2017.
-              								<br>
-                              <br>
+                                We opened sourced the <a href="https://github.com/Data4America/jobmaps">code</a>, the <a href="https://datahub.io/dataset/where-are-the-jobs">data</a>, and <a href="https://data4america.org/geography-american-jobs/how-to/">instructions</a> for re-creation.
+                                <br>
+                                <br>
 
-                              Now, onto our second season!
-                              <br>
-                              <br>
-                              - Your friends at <a href="https://data4america.org">Data4America</a>
-                              <br>
+                                7/ We've recorded multiple podcasts and Roundtables to explore the intersection of data, technology, government, and the future. We're planning many more for 2017.
+                                <br>
+                                <br>
 
+                                Now, onto our second season!
+                                <br>
+                                <br>
+
+                                - Your friends at <a href="https://data4america.org">Data4America</a>
+                                <br>
                               </div>
                             </td>
                           </tr>
@@ -104,12 +105,63 @@ title: 2016 Update
                     <div class="subtitle" style="color: #000000 !important;">Live audience fireside chats and panels-- hosted by leading figures in media, government, education, and tech.</div>
                     <div class="ruler"></div>
                     <table width="100%">
+                      <tr>
+                         <td class="podcastCover" style="padding:10px 0;text-align:center;">
+                            <img style="max-width:400px;" src="https://data4america.org/img/unplugged-samwang-600.jpg" alt="unplugged-samwang-600.jpg">
+                         </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
+                          <div class="h1">
+                            <a href="https://twitter.com/SamWangPhD" target="_blank">Dr. Sam Wang</a>
+                          </div>
+                          <div class="h5">A podcast with Dr. Sam Wang of the Princeton Election Consortium.</div>
+                          <div class="h5 host">
+                            Host: <strong><a href="https://twitter.com/PatrickRuffini" target="_blank">Patrick Ruffini</a>, <a href="https://twitter.com/chrismccoy" target="_blank">Chris McCoy</a></strong>
+                          </div>
+                          <div>
+                            <a class="link-play-d4a" href="https://data4america.org/unplugged/sam-wang">
+                              <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
+                            </a>
+                            <span style="vertical-align: middle;">·</span>
+                            <a class="link-read-transcript" href="https://data4america.org/unplugged/sam-wang#transcript">
+                              <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                         <td class="podcastCover" style="padding:10px 0;text-align:center;">
+                            <img style="max-width:400px;" src="https://data4america.org/img/unplugged-header-albertwenger-600.jpg" alt="unplugged-header-albertwenger-600.jpg">
+                         </td>
+                      </tr>
                           <tr>
+                            <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
+                              <div class="h1">
+                                <a href="https://twitter.com/albertwenger" target="_blank">Albert Wenger</a>
+                              </div>
+                              <div class="h5">A roundtable discussion with Albert Wenger , the author of World After Capital and a venture capitalist at Union Square Ventures.</div>
+                              <div class="h5 host">
+                                Host: <strong><a href="https://twitter.com/kimmaicutler" target="_blank">Kim-Mai Cutler</a></strong>
+                              </div>
+                              <div>
+                                <a class="link-play-d4a" href="https://data4america.org/unplugged/live-albert-wenger">
+                                  <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
+                                </a>
+                                <span style="vertical-align: middle;">·</span>
+                                <a class="link-read-transcript" href="https://data4america.org/unplugged/live-albert-wenger#transcript">
+                                  <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                        <tr>
+                      <tr>
                            <td class="podcastCover" style="padding:10px 0;text-align:center;">
                                 <img style="max-width:400px;" src="https://data4america.org/img/unplugged-garyjohnson-600.jpg" alt="unplugged-garyjohnson-600.jpg">
                               </td>
-                            </tr>
-                            <tr>
+                      </tr>
+                      <tr>
                               <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
                                 <div class="h1">
                                   <a href="https://twitter.com/rabois" target="_blank">Gary Johnson</a>
@@ -119,17 +171,17 @@ title: 2016 Update
                                   Host: <strong><a href="https://twitter.com/bgmasters" target="_blank">Chris McCoy</a>, <a href="https://twitter.com/cyantist" target="_blank">Cyan Banister</a></strong>
                                 </div>
                                 <div>
-                                  <a class="link-play-d4a" href="https://data4america.org/unplugged/live-gary-johnson">
+                                  <a class="link-play-d4a" href="https://data4america.org/unplugged/live-gary-johnson" target="_blank">
                                     <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
                                   </a>
                                   <span style="vertical-align: middle;">·</span>
-                                  <a class="link-read-transcript" href="https://data4america.org/unplugged/live-gary-johnson#transcript">
+                                  <a class="link-read-transcript" href="https://data4america.org/unplugged/live-gary-johnson#transcript" target="_blank">
                                     <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
                                   </a>
                                 </div>
                               </td>
-                            </tr>
-                          <tr>
+                        </tr>
+                        <tr>
                            <td class="podcastCover" style="padding:10px 0;text-align:center;">
                                 <img style="max-width:400px;" src="https://data4america.org/img/live-rabois-masters-600.jpg" alt="live-rabois-masters-600.jpg">
                               </td>
@@ -169,11 +221,11 @@ title: 2016 Update
                                   Host: <strong><a target="_blank" href="https://twitter.com/kimmaicutler" target="_blank">Kim-Mai Cutler</a>, TechCrunch</strong>
                                 </div>
                                 <div>
-                                  <a class="link-play-d4a" target="_blank" href="https://data4america.org/unplugged/live-scott-kim/#play">
+                                  <a class="link-play-d4a" target="_blank" href="https://data4america.org/unplugged/live-scott-kim/#play" target="_blank">
                                     <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
                                   </a>
                                   <span style="vertical-align: middle;">·</span>
-                                  <a class="link-read-transcript" target="_blank" href="https://data4america.org/unplugged/live-scott-kim/#transcript">
+                                  <a class="link-read-transcript" target="_blank" href="https://data4america.org/unplugged/live-scott-kim/#transcript" target="_blank">
                                     <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
                                   </a>
                                 </div>
@@ -329,13 +381,11 @@ To help get there, we're looking for syndication partners. This includes publish
           		<td class="segment" bgcolor="#fff">
 			<div class="h1">One More Thing</div>
                     <div>
-                    1/ Our Executive Director (<a target="_blank" href="https://twitter.com/chrisamccoy">Chris McCoy</a>) was invited by Arianna Huffington to write on the Huffington Post. We'll be syndicating D<span style="font-style:italic; color:blue;">4</span>A content there.
+                    1/ Our Executive Director (<a target="_blank" href="https://twitter.com/chrisamccoy">Chris McCoy</a>) was invited by Arianna Huffington to write on the Huffington Post. We're be syndicating D<span style="font-style:italic; color:blue;">4</span>A content there.
                     <br><br>
                     2/ We launched Lifemap, history in <a target="_blank" href="http://lifemap.io/">100 characters or less</a>. Check out <a target="_blank" href="http://lifemap.io/donaldtrump/">Donald Trump</a>, <a target="_blank" href="http://lifemap.io/berniesanders/">Bernie Sanders</a>, <a href="http://lifemap.io/sherylsandberg">Sheryl Sandberg</a>, <a href="http://lifemap.io/markcuban">Mark Cuban</a>, and <a href="http://lifemap.io/">more</a>.
                     <br><br>
-                    3/ Here's the Lifemap on HuffPo: <a target="_blank" href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2">Hillary Clinton</a>, <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-sheryl-sandberg_us_57a572e4e4b0ccb023725e61?m5cjkz3qctzqia4i">Sheryl Sandberg</a>, and <a target="_blank" href="http://www.huffingtonpost.com/entry/lifemap-the-history-of-bernie-sanders-in-100-characters_us_579e9e6ce4b00e7e269fcd31?qoo3i9mj4c1cvunmi">Bernie Sanders</a>.
-					<br><br>
-					4/ HuffPo is <a target="_blank" href="https://twitter.com/HuffPostPol/status/768534447536898048">tweeting</a> Lifemap out to their 860,000 followers!
+					3/ HuffPo is <a target="_blank" href="https://twitter.com/HuffPostPol/status/768534447536898048">tweeting</a> Lifemap out to their 860,000 followers!
                                                             <br><br>
                     <div class="lf-logo" style="text-align:center;">
                     	<img style="max-width:400px;" src="http://lifemap.io/img/lifemap.png" />
@@ -352,53 +402,7 @@ To help get there, we're looking for syndication partners. This includes publish
     </tr>
     <tr>
       <td class="footerContent" style="text-align:center;">
-        <div style="margin:20px 20px 0;font-weight:normal;color:#777;line-height:19px;font-size:12px;">
-        <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=*|ARCHIVE|*" style="text-decoration:none;">
-        <img src="https://data4america.org/img/facebook-circular-outline.png" width="24" height="24" style="vertical-align:middle">
-        Share
-        </a>
-        <a target="_blank" href="http://twitter.com/intent/tweet?url=*|ARCHIVE|*" style="text-decoration:none; margin-left:10px;">
-        <img src="https://data4america.org/img/twitter-circular-outline.png" width="24" height="24" style="vertical-align:middle">
-        Tweet
-        </a>
-        <br>
-        <br>
-        <a target="_blank" href="http://facebook.com/data4america" style="text-decoration:none;">
-        <img src="https://data4america.org/img/facebook-circular.png" width="24" height="24" style="vertical-align:middle">
-        Like us on Facebook
-        </a>
-        <br>
-        <br>
-        <a target="_blank" href="http://twitter.com/data4america" style="text-decoration:none;">
-        <img src="https://data4america.org/img/twitter-circular.png" width="24" height="24" style="vertical-align:middle">
-        Follow us on Twitter
-        </a>
-        <br>
-        <br>
-        <a target="_blank" href="https://data4america.org/subscribe" style="text-decoration:none;">
-        <img src="https://data4america.org/img/email-circular.png" width="24" height="24" style="vertical-align:middle">
-        Subscribe friends to our content network
-        </a>
-        <br>
-        <br>
-          <strong style="color:#333 !important; font-weight:900;">Our mailing address is:</strong>
-          <br>
-          Data4America<br>
-		  1355 Market Street, Suite 488<br>
-		  San Francisco, CA 94103<br>
-          <br>
-          <a target="_blank" href="https://data4america.org/img/d4a.vcf">Add us to your address book to ensure you receive our content in the future</a>
-          <br>
-          <br>
-          <img src="https://dev.data4america.org/assets/images/logo-256.png" style="height: 80px; width: 80px;" alt="logo-256.png">
-          <br>
-          <br>
-          You are receiving this email because you are a friend of Data4America, a friend of a friend, or we are interested in your work+thoughts.
-          <br>
-          <br>
-        </div>
 
-        </div>
       </td>
     </tr>
 </table>

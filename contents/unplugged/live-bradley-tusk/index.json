@@ -1,0 +1,18 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Unplugged Live: Bradley Tusk",
+  "profile": {
+    "guest": "Bradley Tusk",
+    "artwork": "/img/unplugged-bradley-tusk-600.jpg",
+    "link": "/unplugged/live-bradley-tusk",
+    "desc": [
+      "Founder and CEO of Tusk Holdings, Campaign Manager for Michael Bloomberg 2009 NYC Mayor, Campaign Manager for Uber vs. NYC in 2011."
+    ],
+    "subDesc" : "Technology and regulation, basic income, self-driving cars, Bloomberg vs. Kalanick and more.",
+    "host": [{
+      "name": "Chris McCoy",
+      "twitter": "https://twitter.com/chrismccoy"
+    }],
+    "twitter": "bradleytusk"
+  }
+}
