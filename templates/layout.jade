@@ -62,23 +62,24 @@ html(lang='en')
                   div.ui.three.column.divided.grid
                     div.column
                       div.ui.secondary.vertical.menu
-                        a.item(href="/") All Stories
-                        a.item(href="/syndicated-posts") Syndicated Posts
+                        a.item(href="/about/") About
+                        a.item(href="/about/") Team
                         a.item(href="/updates") What's New
-                        a.item(href="/press") Press
                         a.item(href="/supporters/") Our Supporters
+                        a.donate.item(href="/donate/") Donate
                     div.column
                       div.ui.secondary.vertical.menu
-                        a.item(href="/sponsorship/") Sponsorships
-                        a.item(href="/about/") About Data4America
+                        a.item(href="/subscribe/") Subscribe
                         a.item(href="/unplugged/") Unplugged Podcast
-                        a.donate.item(href="/donate/") Donate
-                        a.item(href="/upload/") Submit Content
-                    div.column
-                      div.ui.secondary.vertical.menu        
-                        a.item(href="http://data.data4america.org/", target="_blank") Submit Data
-                        a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+                        a.item(href="http://lifemap.io") Lifemap
                         a.item(href="/request-government-data") Request Data
+                        a.item(href="/press") Press  
+                    div.column
+                      div.ui.secondary.vertical.menu
+                        //- a.item(href="/press") Contact        
+                        a.item(href="http://git.data4america.org/", target="_blank") Submit Software
+                        a.item(href="/syndicated-posts") Syndicated Posts
+                        a.item(href="/sponsorship/") Sponsorships
 
                 div#dfa-lifemap-menu.ui.segment.view-ui-menu
                   div.ui.three.column.divided.grid
@@ -278,6 +279,14 @@ html(lang='en')
                               .meta
                                 span.price Hosted by: Kim-Mai Cutler
                                 
+                          a.item(href="/unplugged/live-bradley-tusk")
+                            .ui.tiny.circular.image
+                              img(src='/img/unplugged-bradley-tusk-600.jpg')
+                            .middle.aligned.content
+                              .header LIVE: Bradley Tusk
+                              .meta
+                                span.price Hosted by: Chris McCoy
+                                
                     div.column
                       div.ui.secondary.vertical.menu        
                         .ui.link.items
@@ -333,12 +342,12 @@ html(lang='en')
             
             div.nav-mob.nav-mob-menu.ui.menu.stackable.inverted
               a.item(href="/about/") About
-              //- a.item(href="/updates") What's New
               //- a.item(href="/syndicated-posts") Syndicated Posts
               a.item(href="/team/") Team
+              a.item(href="/updates") What's New
+              a.item(href="/supporters/") Our Supporters
               a.donate.item(href="/donate/", style="background:#cc0001;width:100% !important;") Donate
               a.item(href="/data/") Open Data Sets
-              //- a.item(href="/supporters/") Our Supporters
               //- a.item(href="/sponsorship/") Sponsorships
               a.item(href="/upload/") Submit Content
               a.item(href="http://data.data4america.org/", target="_blank") Submit Data

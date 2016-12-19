@@ -1,0 +1,22 @@
+{
+  "name": "Mathew Martyr",
+  "title": "",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": false,
+  "staff": true,
+  "staffTitle": "Sound Engineer",
+  "bio": "Founder & Lead Producer at Alpha Radio Podcast Network. Producer of This Damn World, @Bawdy Storytelling, and @Data4America podcasts. Co-founder of Project Nomad.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/matthewmartyr"
+    },
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/matthewmartyr"
+    }
+  ],
+  "id": "mathew-martyr"
+}
