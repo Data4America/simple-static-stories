@@ -1,0 +1,7 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  iframe(src='https://docs.google.com/forms/d/e/1FAIpQLSfPeIpCtisYeI4miHRi_obfJ06zLbxAyz2pY6CvhPlcws80pQ/viewform?embedded=true', width='100%', height='1000', frameborder="0", marginheight="0", marginwidth="0")

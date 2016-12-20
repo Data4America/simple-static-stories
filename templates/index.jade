@@ -182,8 +182,73 @@ block content
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;") Fireside chats, roundtable discussions, and live events to explore government in the 21st Century.
   div.dfa-feed.ui.three.column.stackable.grid
 
+    div(style="display: block; width: 100%; text-align: center; margin:2em 0px 0px;")
+      h1.ui.header Upcoming Events 
+      div.ui.segment(style="border-radius:0px; border:0px; box-shadow:none;")
+       p We have several events brewing around the topics of education and cybsecurity.
+       p We're looking for partners, sponsors, and speakers. Email us with your recommendations. 
+         a(href="mailto:chris@data4america.org") chris@data4america.org
+         
+    div(style="display: block; width: 100%; text-align: center; margin:2em 0px 0px;")
+      h1.ui.header Past Events 
+
     div.column
-      div.dfa-feed-item.event.disable
+      div.dfa-feed-item.event
+        div.item-link(href="javascript:;")
+          div.item-meta
+            h1.ui.large.header.item-title 
+              | 6/8/16: Discussion with Kim-Mai Cutler
+              a(target="_blank" href="https://www.twitter.com/kimmaicutler")
+                i.twitter.icon.blue
+              | and Scott Wiener 
+              a(target="_blank" href="https://twitter.com/Scott_Wiener")
+                i.twitter.icon.blue
+              | on housing.
+              
+        div.item-details
+          span.author
+            | Hosted by: 
+            b
+              span  Kim-Mai Cutler
+              a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
+                i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
+          
+          a.ui.tiny.right.labeled.icon.button(href='/unplugged/live-scott-kim', target='_blank')
+            i.caret.right.icon
+            | Learn More
+          
+          div.item-bottom
+            p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')
+
+    div.column
+      div.dfa-feed-item.event
+        div.item-link(href="javascript:;")
+          div.item-meta
+            h1.ui.large.header.item-title 
+              | 6/8/16: Discussion with Blake Masters
+              a(target="_blank" href="https://www.twitter.com/bgmasters")
+                i.twitter.icon.blue
+              | and Keith Rabois 
+              a(target="_blank" href="https://twitter.com/rabois")
+                i.twitter.icon.blue
+              | on Trump, cybersecurity, and D.C./Silicon Valley.
+        div.item-details
+          span.author
+            | Hosted by: 
+            b
+              span  Blake Masters
+              a(href='https://twitter.com/bgmasters', target='_blank', style='color:#4099FF;')
+                i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
+                
+          a.ui.tiny.right.labeled.icon.button(href='/unplugged/live-keith-blake', target='_blank')
+            i.caret.right.icon
+            | Learn More
+            
+          div.item-bottom
+            p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')
+                    
+    div.column
+      div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
             h1.ui.large.header.item-title 9/30: Basic Income discussion with Albert Wenger
@@ -196,11 +261,16 @@ block content
               span  Kim-Mai Cutler
               a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
+                
+          a.ui.tiny.right.labeled.icon.button(href='/unplugged/live-albert-wenger', target='_blank')
+            i.caret.right.icon
+            | Learn More
+                  
           div.item-bottom
             p.item-date= moment.utc('2016-09-30').format('MMMM D, YYYY')
 
     div.column
-      div.dfa-feed-item.event.disable
+      div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
             h1.ui.large.header.item-title 12/7: Basic Income discussion with Charles Murray
@@ -213,11 +283,16 @@ block content
               span  Katie Bieber
               a(href='https://twitter.com/katiebiber', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
+                
+          a.ui.tiny.right.labeled.icon.button(href='http://joinlincoln.org/events/2016/innovation-automation-and-future-of-work', target='_blank')
+            i.caret.right.icon
+            | Learn More
+            
           div.item-bottom
             p.item-date= moment.utc('2016-12-07').format('MMMM D, YYYY')
 
     div.column
-      div.dfa-feed-item.event.disable
+      div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
             h1.ui.large.header.item-title 12/11 - Basic Income discussion with Niall Ferguson
@@ -240,5 +315,10 @@ block content
               span  Kim-Mai Cutler
               a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
+                
+          a.ui.tiny.right.labeled.icon.button(href='http://joinlincoln.org/events/2016/man-vs-machine', target='_blank')
+            i.caret.right.icon
+            | Learn More
+            
           div.item-bottom
             p.item-date= moment.utc('2016-12-11').format('MMMM D, YYYY')

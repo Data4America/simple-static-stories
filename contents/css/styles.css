@@ -53194,8 +53194,11 @@ input::-moz-focus-inner {
 .dfa-feed .dfa-feed-item.podcast .item-bottom::before {
   background-color: #f28e1e;
 }
+.dfa-feed .dfa-feed-item.event .item-title {
+  color: #333;
+}
 .dfa-feed .dfa-feed-item.event .item-meta::before {
-  background-color: #6435c9;
+  background-color: #f1f1f1;
 }
 .dfa-feed .dfa-feed-item.event .item-bottom::before {
   background-color: #6435c9;
