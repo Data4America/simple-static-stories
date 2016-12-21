@@ -10,7 +10,7 @@ noFooter: false
 article: true
 published: true
 isEvent: true
-columnSize: true
+columnSize: false
 ---
 
 <p>

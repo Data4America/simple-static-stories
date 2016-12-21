@@ -52304,6 +52304,14 @@ input::-moz-focus-inner {
 .dfa-check label:before {
   line-height: 1.2rem !important;
 }
+#dfa-donate-form .dfa-header-text {
+  font-size: 0.95em;
+}
+@media only screen and (max-width: 767px) {
+  #dfa-donate-form .dfa-header-text {
+    font-size: 0.776em;
+  }
+}
 #dfa-email-wall {
   position: absolute;
   width: 100%;
