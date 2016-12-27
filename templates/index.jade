@@ -19,8 +19,8 @@ block content
         | Lifemap is the history of policy and the people who shape it in 100 characters or less.
       li We're producing a Podcast called 
         a(href="/unplugged" , target="_blank") Unplugged. 
-        |  You can listen 
-        a(href="/unplugged", target="_blank") here.
+        //- |  You can listen 
+        //- a(href="/unplugged", target="_blank") here.
       li We just finished 
         a(href="/updates/august-2016/", target="_blank")  Season One
         |  at Data4America where we published over 26 pieces of original content. We're now raising support for Season Two. You can help us with a tax-deductible gift 
@@ -72,18 +72,33 @@ block content
         h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
           i.send.icon
           | Thank you for subscribing.
+          
+      div.ui.segment.inverted(style="max-width:260px; background-color:#004f81; margin:1em auto 0px; border-radius:0px;")
+        h1.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th.
+        h2.ui.header.center.aligned(style="font-size:1.2em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
+        
+      div.ui.segment(style="max-width:260px; margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center;")
+        h1.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; font-style:italic; margin-top:0px;") Quick Donate.
+        h2.ui.header.center.aligned(style="font-size:1.1em; font-weight:300; margin-top:0px;") Chip and get a D4A laptop sticker!
+        
+        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $25
+        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $50
+        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $100
+        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $250
+        button.ui.fluid.button.blue.dfa-btn-donate(style="margin:auto;margin-top:0.5em; width:92%; background-color:#004f81;") Donate
 
-      div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
-        a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
-          i.facebook.icon
-          |   Like us on Facebook
-        a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.fluid(style="margin-top:1em;")
-          i.twitter.icon
-          |   Follow us on Twitter
 
-        div.ui.divider
-        h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
-        button.dfa-btn-donate.large.ui.button.red.fluid Donate
+      //- div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
+      //-   a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
+      //-     i.facebook.icon
+      //-     |   Like us on Facebook
+      //-   a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.fluid(style="margin-top:1em;")
+      //-     i.twitter.icon
+      //-     |   Follow us on Twitter
+      //- 
+      //-   div.ui.divider
+      //-   h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
+      //-   button.dfa-btn-donate.large.ui.button.red.fluid Donate          
 
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0px 1em;")  A podcast exploring the intersection of government, technology, and the future.
@@ -185,8 +200,8 @@ block content
     div(style="display: block; width: 100%; text-align: center; margin:2em 0px 0px;")
       h1.ui.header Upcoming Events 
       div.ui.segment(style="border-radius:0px; border:0px; box-shadow:none;")
-       p We have several events brewing around the topics of education and cybsecurity.
-       p We're looking for partners, sponsors, and speakers. Email us with your recommendations. 
+       p We have several events brewing around education, foreign policy, and cybersecurity.
+       p We're looking for partners, sponsors, and speakers for these events and beyond. Help us out by email us with your recommendations and introductions. 
          a(href="mailto:chris@data4america.org") chris@data4america.org
          
     div(style="display: block; width: 100%; text-align: center; margin:2em 0px 0px;")
@@ -196,7 +211,7 @@ block content
       div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 
+            div.item-text 
               | 6/8/16: Discussion with 
               a(target="_blank" href="https://www.twitter.com/kimmaicutler") Kim-Mai Cutler
               |  and 
@@ -211,18 +226,19 @@ block content
               a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
           
-          a.ui.tiny.right.labeled.icon.button(href='/unplugged/live-scott-kim', target='_blank')
-            i.caret.right.icon
-            | Learn More
+          p.item-text(style="height:auto; margin:0px; font-size:1em;")
+            a(href='/unplugged/live-scott-kim', target='_blank')
+              | Learn More
           
           div.item-bottom
+            img.ui.tiny.image.dfa-live-image(src='/img/d4a-live-logo.png')
             p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')
 
     div.column
       div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 
+            div.item-text 
               | 6/8/16: Discussion with 
               a(target="_blank" href="https://www.twitter.com/bgmasters") Blake Masters
               |  and  
@@ -236,18 +252,19 @@ block content
               a(href='https://twitter.com/bgmasters', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
                 
-          a.ui.tiny.right.labeled.icon.button(href='/unplugged/live-keith-blake', target='_blank')
-            i.caret.right.icon
-            | Learn More
+          p.item-text(style="height:auto; margin:0px; font-size:1em;")      
+            a(href='/unplugged/live-keith-blake', target='_blank')
+              | Learn More
             
           div.item-bottom
+            img.ui.tiny.image.dfa-live-image(src='/img/d4a-live-logo.png')
             p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')
                     
     div.column
       div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 9/30: Basic Income discussion with 
+            div.item-text 9/30: Basic Income discussion with 
               a(target="_blank" href="https://www.twitter.com/albertwenger") Albert Wenger
         div.item-details
           span.author
@@ -257,18 +274,19 @@ block content
               a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
                 
-          a.ui.tiny.right.labeled.icon.button(href='/unplugged/live-albert-wenger', target='_blank')
-            i.caret.right.icon
-            | Learn More
+          p.item-text(style="height:auto; margin:0px; font-size:1em;")
+            a(href='/unplugged/live-albert-wenger', target='_blank')
+              | Learn More
                   
           div.item-bottom
-            p.item-date= moment.utc('2016-09-30').format('MMMM D, YYYY')
+            img.ui.tiny.image.dfa-live-image(src='/img/d4a-live-logo.png')
+            p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')
 
     div.column
       div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 12/7: Basic Income discussion with 
+            div.item-text 12/7: Basic Income discussion with 
               a(target="_blank" href="https://www.twitter.com/charlesmurray") Charles Murray
         div.item-details
           span.author
@@ -277,19 +295,20 @@ block content
               span  Katie Bieber
               a(href='https://twitter.com/katiebiber', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
-                
-          a.ui.tiny.right.labeled.icon.button(href='http://joinlincoln.org/events/2016/innovation-automation-and-future-of-work', target='_blank')
-            i.caret.right.icon
-            | Learn More
+          
+          p.item-text(style="height:auto; margin:0px; font-size:1em;")      
+            a(href='http://joinlincoln.org/events/2016/innovation-automation-and-future-of-work', target='_blank')
+              | Learn More
             
           div.item-bottom
-            p.item-date= moment.utc('2016-12-07').format('MMMM D, YYYY')
+            img.ui.tiny.image.dfa-live-image(src='/img/d4a-live-logo.png')
+            p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')
 
     div.column
       div.dfa-feed-item.event
         div.item-link(href="javascript:;")
           div.item-meta
-            h1.ui.large.header.item-title 12/11 - Basic Income discussion with 
+            div.item-text 12/11 - Basic Income discussion with 
               a(target="_blank" href="https://www.twitter.com/nfergus") Niall Ferguson
               | , 
               a(target="_blank" href="https://www.twitter.com/jtlonsdale") Joe Lonsdale
@@ -306,9 +325,10 @@ block content
               a(href='https://twitter.com/kimmaicutler', target='_blank', style='color:#4099FF;')
                 i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
                 
-          a.ui.tiny.right.labeled.icon.button(href='http://joinlincoln.org/events/2016/man-vs-machine', target='_blank')
-            i.caret.right.icon
-            | Learn More
+          p.item-text(style="height:auto; margin:0px; font-size:1em;")
+            a(href='http://joinlincoln.org/events/2016/man-vs-machine', target='_blank')
+              | Learn More
             
           div.item-bottom
-            p.item-date= moment.utc('2016-12-11').format('MMMM D, YYYY')
+            img.ui.tiny.image.dfa-live-image(src='/img/d4a-live-logo.png')
+            p.item-date= moment.utc('2016-08-16').format('MMMM D, YYYY')

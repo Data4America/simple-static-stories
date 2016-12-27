@@ -50,6 +50,7 @@ $(document).ready(function() {
 
   $('#dfa-data-viz-tab').sticky({
     offset: 60,
+    context : '#dfa-feed-viz'
   });
 
   $('#dfa-policy-issue .accordion').accordion();

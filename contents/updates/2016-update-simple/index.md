@@ -105,6 +105,31 @@ title: August 2016 Update
                     <div class="subtitle" style="color: #000000 !important;">Live audience fireside chats and panels-- hosted by leading figures in media, government, education, and tech.</div>
                     <div class="ruler"></div>
                     <table width="100%">
+                        <tr>
+                           <td class="podcastCover" style="padding:10px 0;text-align:center;">
+                              <img style="max-width:400px;" src="https://data4america.org/img/unplugged-bradley-tusk-600.jpg" alt="unplugged-bradley-tusk-600.jpg">
+                           </td>
+                        </tr>
+                            <tr>
+                              <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
+                                <div class="h1">
+                                  <a href="https://twitter.com/bradleytusk" target="_blank">Bradley Tusk</a>
+                                </div>
+                                <div class="h5">Founder and CEO of Tusk Holdings, Campaign Manager for Michael Bloomberg 2009 NYC Mayor, Campaign Manager for Uber vs. NYC in 2011.</div>
+                                <div class="h5 host">
+                                  Host: <strong><a href="https://twitter.com/chrismccoy" target="_blank">Chris McCoy</a></strong>
+                                </div>
+                                <div>
+                                  <a class="link-play-d4a" href="https://data4america.org/unplugged/live-bradley-tusk">
+                                    <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
+                                  </a>
+                                  <span style="vertical-align: middle;">·</span>
+                                  <a class="link-read-transcript" href="https://data4america.org/unplugged/live-bradley-tusk#transcript">
+                                    <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
+                                  </a>
+                                </div>
+                              </td>
+                            </tr>
                       <tr>
                          <td class="podcastCover" style="padding:10px 0;text-align:center;">
                             <img style="max-width:400px;" src="https://data4america.org/img/unplugged-samwang-600.jpg" alt="unplugged-samwang-600.jpg">
