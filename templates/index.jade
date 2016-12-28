@@ -62,7 +62,7 @@ block content
                   p.item-date=moment.utc(article.date).format('MMMM D, YYYY')
 
     div.column
-      div.ui.red.segment.inverted(style="max-width:258px; margin:0 auto;")
+      div.ui.red.segment.inverted(style="margin:0 auto;")
         div#dfa-email-content.ui.form
           h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
           div.field
@@ -73,19 +73,29 @@ block content
           i.send.icon
           | Thank you for subscribing.
           
-      div.ui.segment.inverted(style="max-width:260px; background-color:#004f81; margin:1em auto 0px; border-radius:0px;")
-        h1.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th.
-        h2.ui.header.center.aligned(style="font-size:1.2em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
+      div.ui.segment.inverted(style="background-color:#004f81; margin:1em auto 0px; border-radius:0px;")
+        h1.ui.header.center.aligned(style="font-size:1.8em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th.
+        h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
         
-      div.ui.segment(style="max-width:260px; margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center;")
-        h1.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; font-style:italic; margin-top:0px;") Quick Donate.
-        h2.ui.header.center.aligned(style="font-size:1.1em; font-weight:300; margin-top:0px;") Chip and get a D4A laptop sticker!
+      div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center;")
+        h1.ui.header.center.aligned(style="font-size:3em; font-weight:300; font-style:italic; margin-top:0px;") Quick Donate.
+        h2.ui.header.center.aligned(style="font-size:1.6em; font-weight:300; margin-top:0px;") Chip and get a D4A laptop sticker!
         
-        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $25
-        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $50
-        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $100
-        button.ui.button.red.dfa-btn-donate(style="width:45%; margin-top:0.5em;") $250
-        button.ui.fluid.button.blue.dfa-btn-donate(style="margin:auto;margin-top:0.5em; width:92%; background-color:#004f81;") Donate
+        div.ui.equal.width.center.aligned.padded.grid
+          div.row(style="padding: 0.5em 0px;")
+            div.column
+              button.ui.fluid.button.red.huge.dfa-btn-donate $25
+            div.column
+              button.ui.fluid.button.red.huge.dfa-btn-donate $50
+          div.row(style="padding: 0.5em 0px;")
+            div.column
+              button.ui.fluid.button.red.huge.dfa-btn-donate $100
+            div.column
+              button.ui.fluid.button.red.huge.dfa-btn-donate $250
+              
+          div.row(style="padding: 0.5em 0px;")
+            div.column
+              button.ui.fluid.button.blue.huge.dfa-btn-donate(style="background-color:#004f81;") Donate
 
 
       //- div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
