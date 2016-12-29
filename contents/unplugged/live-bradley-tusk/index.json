@@ -19,679 +19,679 @@
   "transcript2": [
     {
        "narrator":"Chris McCoy",
-       "time":"[0:00]",
+       "time":"[0:11]",
        "text":"This is Chris McCoy, the Executive Director at Data4America. Welcome to Unplugged, where we explore the intersection of data science, technology, government, and the future. Today’s session was recorded in New York City – our first one on the road – with Bradley Tusk, the CEO of Tusk Ventures. In 2009, Bradley ran Michael Bloomberg’s campaign for mayor. In 2011, Uber hired Bradley to run a campaign against New York City to enable Uber to work alongside taxis – Bradley won.<br><br>That kicked off his regulatory arbitrage practice. Now, Bradley is one of the most interesting people at the intersection of working with governments and technology companies. This was a fascinating discussion and probably my favorite to date.<br><br>If you enjoy it as much as I did, please share it on Twitter, on Facebook, on email. If you have ideas for folks you’d like us to interview in the future, just email me – chris at data4america dot org. Let’s go in!"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:00:05.23]",
+      "time": "[1:13]",
       "text": "You grew up in Sheepsheads Bay, then lived on Long Island, and now you live in New York City. What's that journey been like?"
     },
     {
       "heading":"On his unique journey into politics and technology",
-      "time":"[00:00:19.26]"
+      "time":"[1:23]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:00:19.26]",
+      "time": "[1:23]",
       "text": "I've had kind of a weird, somewhat itinerant journey. My career didn't follow a totally linear path, and I think that ended up being helpful because the kind of business that I started - and run now - depended on that weird set of experiences.<br><br>I really loved government when I was a kid. I got started in politics in 1992, when the Democratic convention was here at Madison Square Garden - it was Bill Clinton's election year. I'm a first-generation American, and we didn't really know anybody, but my dad had a friend who was a lawyer for the carpenters' union. He says, \"Hey, I can get you a one-day pass to the Democratic convention. Do you want to go?\" because he knew I liked politics. I said, \"Yeah, I'd love that!\""
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:01:09.00]",
+      "time": "[2:13]",
       "text": "How old were you?"
     },
     {
-      "heading":"On the big wins that led to Tusk Ventures",
-      "time":"[00:01:09.29]"
-    },
-    {
       "narrator" : "Bradley Tusk",
-      "time": "[00:01:09.29]",
+      "time": "[2:14]",
       "text": "I was 18. If you look at the newspaper, it says the convention is from noon to midnight. Now, anyone who's been to a convention knows it's [really from] 8PM to 11PM, but I'm this gullible kid - I don't know that.<br><br>So I show up at noon at Madison Square Garden. It's totally deserted. There's two guys running for state representative of Montana on the stage and no one else, but Ed Rendell - who was the mayor of Philadelphia, and went on to be governor of Pennsylvania - was sitting in the audience by himself.<br><br>He’s this very gregarious, friendly guy. I said to myself, \"Look, he's the mayor of Philly,\" and I just finished my freshman year at Penn, so I say, \"Hey, I go to school in Philly.\" He's actually from New York and so am I, so I think, \"What's the worst that could happen?\"<br><br>So I go up to him and he's super friendly, because that's just how he is, and we talked for 10, 15 minutes. I realized my time should be up, I say, \"Thanks so much, I really appreciate talking to you,\" and he says, \"Are you busy after school?\"<br><br>I said, \"No, not really,\" and he said, \"Do you want an internship?\"<br><br>I said that'd be great, and he said, \"Send me a note, we'll set it up.\"<br><br>I'm very excited. I go home, I write a letter. Every day, I open the mailbox, and there's no reply. What I know now but didn't know then is that correspondence is like the black hole of government. Everything goes in, nothing comes out.<br><br>I get back to school, but I'm still kind of interested in doing this. I had this weird thought that I'd go see him.<br><br>I go to City Hall - it's a decade before 9/11, so security's not what it is today - and I get not to his secretary, but to the outer office. I walk up and ask, \"Is the mayor here?\"<br><br>Now that I'm an adult, in retrospect, that's a crazy question. You can't just walk up and ask to see the mayor. But I was so young and naive that they kind of took pity on me. I wasn't protesting anything and I wasn't crazy, I was just sort of this nice young kid that didn't realize that you can't just ask to see the mayor of Philadelphia.<br><br>They said, \"He's a little busy,\" so I said, \"Is it okay if I leave a note?\" and they said sure. I write a note and get back on the subway to go back to my dorm, and I’m thinking, \"You idiot, what's wrong with you? You can't do that.\" I thought I'd blown that chance and it was never going to happen. Then I'm sitting in my dorm room about twenty minutes later and the phone rings. \"Hold for the mayor.\"<br><br>He says, \"When are you coming to work?\" I said, \"I'll be right there!\"<br><br>And that was how I got started. Since then, I ended up working in multiple levels of government: city government for Rendell when I was in college, for the New York City Parks Department when I was out of college, and then for Mike Bloomberg at City Hall and running his mayoral campaign in 2009.<br><br>In state government, I spent four years as Deputy Governor of Illinois and two years on the Hill as Chuck Schumer's communications director. I also spent about two years at Lehman Brothers creating and running a group to privatize state lotteries, which had the impact of having me in every state capital about five days a week going from capital to capital. The net effect of all of that was that I ended up on this weird journey in New York, DC, Chicago, and Philly - and traveling constantly – and really understanding state, federal, and local government, but especially state and local government all over the country.<br><br>When I started my first business, which was a consulting firm, the idea was that we were going to run campaigns for big companies in multiple jurisdictions. No one was doing anything like that before. People would either work nationally or they had a specific skillset - they were a pollster or an ad maker - or they would do a lot of things in one market, like DC or Albany. I said I was just going to run campaigns, since it's what I'm good at, but I'm going to do it everywhere. And it worked.<br><br>So I'm doing this for the usual suspects: AT&T, Wal-Mart, Comcast, Pepsi, and so on. The pivot tack that brought us here was the day the phone rang and someone said, \"Hey, there's a guy with a small transportation startup having some regulatory problems. Would you mind talking to him?\"<br><br>This is early 2011, so I become Uber's first consultant that day, and I get even luckier when Travis [Kalanick] calls me and says, \"Hey, I can't afford your fee. Would you take equity?\" and thank God I said yes. He had a particular problem in New York. We solved that problem, and he said, \"Can you do this everywhere else?\" and I said yes, then we did it in Boston, Philly, Chicago, DC, Miami - the whole country. That's how I got started in tech - being Travis's political consultant. We built a big in-house team. I still work with Uber, but there's obviously a lot of people there to do most of the work now, so I just give my opinions and go on TV and talk about things, and that's fine.<br><br>About a year and a half ago, the mayor of New York City, Bill de Blasio, had this very ill-conceived idea to put a cap on Uber's growth of 1%. One of his biggest donors is the taxi industry, and they literally wrote the bill and handed it to him, then he submitted it to the city council.<br><br>I remember sitting in the Dallas airport. The phone rings, it's Travis, and he says,\"Did you see what just happened?\"<br><br>I say, \"No, I'm stuck at DFW, it's raining, my flight's canceled, whatever.\"<br><br>He says, \"Check it out and call me back.\"<br><br>So I go online, see what happened, and call him back. I say, \"I have two questions: is there anything I can't do, and how much can I spend?\"<br><br>To his great credit, he said, \"Whatever you need to do and spend, just make sure we win.\"<br><br>We ran this very fucking vicious campaign, going after de Blasio incredibly hard from the left. We had drivers and passengers saying it was racist to take these opportunities away, we put a de Blasio mode on the app with a 25 minute wait time, we made it possible to click to contact City Hall."
     },
     {
+      "heading":"On the big wins that led to Tusk Ventures",
+      "time":"[7:46]"
+    },
+    {
       "narrator" : "Chris McCoy",
-      "time": "[00:06:43.24]",
+      "time": "[7:46]",
       "text": "Whose idea was that?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:06:44.02]",
+      "time": "[7:47]",
       "text": "It was a young woman named Caitlin who worked at Uber at the time. It was a great idea. We ran the most multifaceted, aggressive campaign you could imagine, and at the end of it, they called and basically waved the white flag. There's that adage that you can't fight City Hall, but we did and we won.<br><br>When you win campaigns you're not supposed to win, you get maximum attention, and we got a lot of attention. This was an opportunity for me to take what I really loved doing - working with startups - and expand significantly.<br><br>We launched Tusk Ventures, which is a business that works with lots of pre-IPO companies in regulated industries to solve problems in return for equity, such as FanDuel - we're working on passing legislation regulating fantasy sports in dozens of states - or Handy - we're trying to create a new form of worker classification - or for Eaze - we're trying to rationalize cannabis delivery laws - or Altschool - we're trying to figure out how their model could fit into charter schools and parochial schools and things like that. Lots of different companies and sectors, but the main idea is to protect innovation and prevent intrinsic interests from using political power to stifle new startups before they can get started."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:08:01.26]",
+      "time": "[9:04]",
       "text": "A few things - Jobs showed up at City Hall and made a call to either Bill Hewlett or David Packard when he was a young kid..."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:08:15.06]",
+      "time": "[9:16]",
       "text": "Yeah, I'd say whatever I did was one one-millionth of what he did. [laughs]"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:08:19.29]",
+      "time": "[9:22]",
       "text": "There's patterns, though. Folks who just pick up the phone and show up..."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:08:22.18]",
+      "time": "[9:26]",
       "text": "Sometimes it's being so naive that you don't know what you don't know."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:08:27.06]",
+      "time": "[9:29]",
       "text": "You have anybody show up to your office?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:08:30.07]",
+      "time": "[9:31]",
       "text": "I did tell the same story on Kara's podcast, and we joked that people would start showing up. Instead, I get endless LinkedIn requests and emails with the same questions. In today's day and age, no one goes anywhere - they just do things digitally, which a lot of people have. Someone did tweet at me, \"Hey, can I have an internship?\" and we looked at their resume, and it was pretty good, so we hired them. It pays to be aggressive!"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:09:02.21]",
+      "time": "[10:05]",
       "text": "I remember when Twitter was just getting going. I was at a sports conference, and their head of platform at the time was getting all these tweets, and he was so excited. I asked what was going on, and he said, \"Someone's launched a campaign on Twitter to get us to hire them, and they're having all their friends tweet at us.\""
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:09:24.07]",
+      "time": "[10:22]",
       "text": "Did he get the job?"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:09:24.15]",
+      "time": "[10:24]",
       "text": "I don’t know, but the different ways you can use platforms is fascinating - even the analog ones."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:09:30.15]",
+      "time": "[10:32]",
       "text": "Totally."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:09:33.13]",
+      "time": "[10:34]",
       "text": "I was just listening to a podcast with Mark Cuban, and Mark's big mantra is hustle nonstop. In any industry, it works."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:09:40.25]",
+      "time": "[10:43]",
       "text": "There's no scenario where you can be successful without working your ass off. You can be really smart, really creative, really this, and really that, and all those things are required - hustle, street smarts, instincts, character, communication skills - but if you don't have the basic work ethic you can't succeed."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:10:02.19]",
+      "time": "[11:03]",
       "text": "Table stakes. I tell my younger brother, \"Hard work works.\" It sounds cheesy, but put it on your door, hit it, and go to work."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:10:14.03]",
+      "time": "[11:16]",
       "text": "When I went to work for Mike Bloomberg, I read his autobiography, and he said the way he was successful was that he was the first one in and the last one out. Now, he did a lot of other things, too - he's Mike Bloomberg - but I made sure that when I started working at City Hall, I was there before he got there and I was out last."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:10:32.28]",
+      "time": "[11:37]",
       "text": "Fast forward - you work with Schumer and hustle your way in - it's an amazing story. What was the relationship with Mayor Bloomberg?"
     },
     {
       "heading":"On working with Michael Bloomberg - and what makes him truly unique",
-      "time":"[00:10:45.00]"
+      "time":"[11:45]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:10:45.00]",
+      "time": "[11:45]",
       "text": "Like a lot of things, it was [being in] the right place at the right time. A buddy of mine was the press secretary on the mayoral campaign. There was no expectation that they could win, and then 9/11 happens and the world literally turns upside down. Mike Bloomberg is the Republican nominee in a very Democratic town, but all of a sudden New York says that they need someone who's really smart and on top of things that can keep us safe and together. They ran a really good campaign, and Rudy did a really good job - I think he's been lionized for it, he's had some challenges since - of running the city. He endorsed Mike, and it was all enough for him to win by two points. They win, and my friend asks if I can join them at City Hall.<br><br>I'm still working for Chuck at the time, and when you work for Chuck, it's like being in the military. It's a two-year commitment and you can't get out before it. I say I'll be there in August, and I was. I got to know Mike really well and have been lucky to work with him ever since."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:11:47.07]",
+      "time": "[12:52]",
       "text": "What were some of your biggest takeaways from working with him?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:11:50.14]",
+      "time": "[12:54]",
       "text": "If you were to say to me, \"What's Mike Bloomberg's greatest accomplishment as mayor?\" even if I named 100 different policy accomplishments, of which there were over 12 years, it's not any one of those specifically. It was the culture and approach to hiring that really did it. What Mike did that was so radical was that he solely hired people based on merit and talent. He didn't care about politics, who sent him, or if it could help his re-election. Even more importantly, he told all his direct reports that they had to do the same thing.<br><br>As a result, you had 12 years of a couple thousand people in city government who normally wouldn't work in city government. He created a culture that thought big, had big ideas, and would try them, and failure was okay if you worked hard, were honest, and did things for the right reason. Some things failed - the attempt to win the Olympics for New York didn't happen, the attempt to put tolls on the East River bridges didn't happen. But for every two failures, 20 things worked, and it adds up over time.<br><br>He ended up radically transforming the city in so many different ways. It was his management style, his culture, his approach to hiring, that enabled good things to happen. I've tried in my business to emulate that approach. I don't have a scintilla of his talent, but at least I can copy the way he goes about things."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:13:16.29]",
+      "time": "[14:20]",
       "text": "Is he unique in his approach as a politician?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:13:18.26]",
+      "time": "[14:22]",
       "text": "I have never worked for a politician like him and I don't know if I ever will again. The vast majority of the people who run for office are deeply self-loathing, insecure people who can't make it in any other field and desperately need the validation of holding public office so they feel like they're somebody. That psychological hold that holding office fills for them is so significant that they never make hard choices that are for the greater good against their own political interest. There's nothing that could matter more to them than filling that hole. As a result, they only govern in self-interest, which is why nothing ever gets done.<br><br>Mike Bloomberg is apolitical. He doesn't like politics. When I ran his mayoral campaign, every day at 5 AM I would send him an email that showed him what was going on and what I was up to. The best days for him were the days that we didn't talk again and he just went about his business being mayor. A perfect day for him was a day when he read my email, said, \"Got it,\" and didn't hear from me until the next morning at 5 AM. He's just totally unique in that situation.<br><br>Had he run for president, he would've been an amazing president because he would've brought in the same approach to hiring. He isn't loyal to any particular party, facet, ideology or special interest, just what he thinks is right. Sometimes his ideas would be considered very far left, sometimes far right. Most frequently he’s in the middle, but the reality is that they are just based on what makes rational, logical sense to him, and that's the best way you can possibly govern. He's the only person I've ever come across who governs that way."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:15:09.12]",
+      "time": "[16:11]",
       "text": "It sounds like building tech companies. You have these micro projects, you put teams on them, then you deploy, and you iterate."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:15:18.25]",
+      "time": "[16:21]",
       "text": "If you think about it, Bloomberg LP is one of the original tech companies, right? That's exactly what he did. It's such a big company now that it's not a startup, and he's so wealthy that you kind of forget, and he's 74 years old, but he was a really early startup guy."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:15:35.02]",
+      "time": "[16:38]",
       "text": "That'd be a cool book, by the way - The Bloomberg Way."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:15:41.01]",
+      "time": "[16:43]",
       "text": "He hasn't written that one yet, and I don't know if he will or not. He's not that retrospective - he's always thinking about what he's going to do next, so he doesn't spend a lot of time looking back. We built a whole archive for him, and people use it for a lot of different purposes, but he's maybe looked at it once. He doesn't think about what's happened - he thinks about what's happening next. If we could ever get him to slow down, it would be cool."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:16:05.14]",
+      "time": "[17:09]",
       "text": "Now, with your experience in working with him and other politicians, are you a fan of non-politicos putting their hat in the ring and taking office, leading cities and states and even countries?"
     },
     {
       "heading":"On his search for a new mayor for New York City - and why politicians are adaptable",
-      "time":"[00:16:20.20]"
+      "time":"[17:21]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:16:20.20]",
+      "time": "[17:21]",
       "text": "I love the idea of people from the private sector, from tech, running for office. I'm looking for a mayoral candidate for New York City for next year. If anyone listening to this podcast is interested, I started a Super-PAC called New York City Deserves Better because our current mayor is the epitome of all the worst traits. He's highly corrupt – he currently is under seven separate federal corruption investigations - he's lazy - he doesn't come to work until about 11 every day – and he's inept and totally focused on politics to the exclusion of everything else.<br><br>I would love if someone with a really great tech mentality wanted to run, but the challenge is that Mike won only because of this totally world-changing, horrific thing. Otherwise, he wouldn't've won, and he'd be the first to tell you that.<br><br>In a normal election, electing someone from outside the normal paradigm is really hard. Very few people vote in primaries, and as a result, it's the most hardcore partisan, ideological group that is least receptive to the private sector and to technology. Frequently, they're members of a union and told to vote based on who's giving the union the biggest contract, so as a result in a normal election it's hard to do that, which is actually why I launched an initiative around mobile voting.<br><br>What I've found in my work for Uber and FanDuel is that it’s easier to get people to advocate on behalf of a for-profit company than to get people to vote in their own interest. The reason why is very simple: if they can do it on their phones, they're already on the platform. We can say, \"If you love this platform and you want it to stay, press this button and you can email your state senator, your representative, your city councilperson, your mayor, your governor, whoever it is.\" We make it so easy that people do it. If we say you have to walk a couple blocks, wait in line, figure out your polling place, and all this other stuff, they don't bother.<br><br>The problem is that in a typical New York City Council primary, turnout's about 15%. That means that someone wins with 16-18,000 votes, and they typically know who every single one of those people are. They govern solely to make sure that those people are happy to the exclusion of everyone else. When Bill de Blasio won the primary in 2013, he got 280,000 votes, and he governs a city of 8.4 million people for those 280,000 voters to the exclusion of the other 8.1 million.<br><br>However, the good news about politicians being the way they are is that they're adaptable. If turnout were 60 or 70 or 80% because you had a month to vote, it was on your phone, and Snapchat, Instagram, Twitter and Facebook bugged the shit out of you until you pressed the button and voted, people would vote. If all of a sudden the same city councilman said, \"Hey, 70% of my constituents voted - not 15%,\" he or she would then govern toward the interest of that 70%. They're pragmatic. If you want to save democracy from the polarization and dysfunction you see in Washington right now, you've got to increase turnout. All the Rock the Vote campaigns that have existed since the early 90s won't work nearly as well as saying, \"Everyone, all you have to do is pull out your phone,” which is effectively ubiquitous at this point, “and just vote.\" I understand that there are hacking risks and engineering challenges, but we do more complicated feats of engineering every single day. It could happen. We're working on that right now."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:19:54.20]",
+      "time": "[20:57]",
       "text": "That is the techno-utopian dream."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:19:55.23]",
+      "time": "[20:59]",
       "text": "It's achievable. The first step is to figure out what the right platform is, and what needs to be created. Any good engineer would say, \"This is not hard to build. I build harder shit every day.\" The really hard work, and that's where we come in, is convincing a jurisdiction to try it out. They'll be terrified. I'd be happy if some random place did a school board election - anything to get proof of concept. I think the concept itself is so radical and so important that it'd get a ton of media attention, and that's what drives other politicians. It may be 15, 20 years until it's how presidential elections are determined, but frankly, it's less important in the presidential election because people will turn out to vote for that. It's all the other stuff that gets ignored."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:20:46.04]",
+      "time": "[23:33]",
       "text": "You have a playbook on how to win New York. Are there other operatives throughout America you respect? Who are they?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:20:55.14]",
+      "time": "[23:35]",
       "text": "Our model is unique. There's no one that does what we do, in that we run campaigns in cities and states everywhere, that only work for equity. We're only sixteen months into this experiment, and we'll see if it works, but there are a lot of really smart political people from both parties I like working with. On the polling side, Doug Schoen, Jeff Pollack, and Fred Yang are all really terrific. People like Bill Knapp and Jimmy Siegel make wonderful ads. There are so many people in different parts of politics. Howard Wolfson is the smartest political communications person I've ever worked with or met. There are great strategists like Kevin Sheekey.<br><br>It's not limited to any one party - there are really smart people who work with Republicans, Democrats, and Independents, and a lot of it depends on who you've come across in your career. I've been lucky to work with a lot of smart people, but the question is how much is that paradigm changing?<br><br>I had a piece that ran in TechCrunch over the weekend that talked in part about mobile voting, but also about how Reed Hastings may be the solution to the problem of money in politics. Ultimately, what drives campaigns today is raising money to be able to run TV ads. 80% of the spending in any big campaign is on TV, but the efficacy is... when was the last time you watched an actual TV ad?"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:22:31.14]",
+      "time": "[25:21]",
       "text": "It's been a long time."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:22:31.14]",
+      "time": "[25:32]",
       "text": "Right. For me, it'd be sports, and even then, I'm flipping the channel or putting it on mute so I can do something on my phone. As fewer and fewer people watch live TV, the efficacy of those ads keeps falling. Once political consultants and campaigns realize that and it goes away, the need for that kind of money is going to decline precipitously. Digital ads will fill the void to a certain extent, but the spend can't be disproportionate to what everyone else is spending. The reason why TV is so expensive is because what PepsiCo or AT&T or General Motors spends is the rate. To buy a week's worth of decent TV in New York City, you're spending $1.5 million. That's what drives it. If you're running for Congress, your limit is $2700 per person, so you have to raise $3, $4 million just for TV. Think of how many phone calls you have to make that in $2700 chunks. As a result, you spend all of your time raising money and all your feedback comes from donors. That's how you govern.<br><br>The other solution to this equation would be for people to realize that live TV for campaigns is less and less useful. Eventually, you'll hit a point where the people who vote who tend to be senior citizens age out completely. Even people in their fifties probably aren't watching a lot of live news. That's what'll do it."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:24:18.27]",
+      "time": "[25:34]",
       "text": "If you could fantasy draft candidates for mayor in New York..."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:24:30.27]",
+      "time": "[25:35]",
       "text": "Sheryl Sandberg would be my perfect candidate."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:24:31.12]",
+      "time": "[27:01]",
       "text": "In New York City?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:24:31.12]",
+      "time": "[27:02]",
       "text": "First of all, she's worked in government before. Every place has its idiosyncrasies in some ways, but she's really smart, she'll figure it out, and she has a unique combination of private sector experience, public sector experience, and innovation, but also empathy and the ability to understand what people are thinking about and going through.<br><br>To me, she would be the perfect candidate. We don't have anyone in New York City with the same profile as she does out there. She would be my dream candidate."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:25:50.06]",
+      "time": "[27:05]",
       "text": "What about a guy like Derek Jeter?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:25:59.04]",
+      "time": "[27:08]",
       "text": "It's interesting."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:26:03.25]",
+      "time": "[28:10]",
       "text": "He's clearly very smart..."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:26:04.08]",
+      "time": "[28:12]",
       "text": "He could probably win - I hate the Yankees, so that part is tricky. I respect Derek Jeter, and I'd certainly vote for him. Mayor is a really hard job and whether or not he'd want to do it... It depends on what the job is.<br><br>Mayor of New York City is a big deal, and I think the on the job training ... it's one thing if you're Mike Bloomberg or Sheryl Sandberg and you've managed something else that's really big. Even Joe Girardi or Joe Torre, Jeter's managers at the Yankees, would be better fits because they know how to run something. I'd love to see him do something else in either management or government or politics and develop the skillset to run for mayor, but part of the problem we have right now is that de Blasio has never had a meaningful job. He'd been a City Councilman and a public advocate, which is a made up patronage job. He didn't have any kind of management skills to run the city, and you see the results every day."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:27:07.09]",
+      "time": "[29:19]",
       "text": "How about in the tech sector?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:27:07.09]",
+      "time": "[29:33]",
       "text": "Tim Armstrong's name has come up a few times, getting to people here in New York. He could be pretty good. Assuming he wanted to do it, if we could meaningfully increase turnout, then I think nontraditional candidates like Tim Armstrong become viable. If turnout remains low - in the Democratic primary of 2013, 650,000 people voted in a city of 8.4 million - if it's that narrow group, their receptivity to a really successful tech executive is not going to be as high.<br><br>We have some very impressive tech luminaries here in the city. Fred Wilson, Kevin Ryan, Rasmussen, some really interesting people here interested in a number of things, be it building VC firms, companies, or organizations. I don't know if any of them have the profile that will appeal inherently to Democratic primary voters, and that's the challenge I face in finding somebody."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:28:16.11]",
+      "time": "[29:35]",
       "text": "Understood. There's one name I'll share with you, she's big in the data science community, her name's Hillary Mason."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:28:26.25]",
+      "time": "[29:37]",
       "text": "I've heard her name, I've never met her."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:28:33.00]",
+      "time": "[29:38]",
       "text": "She's whip-smart."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:28:35.00]",
+      "time": "[29:40]",
       "text": "Does she want to be mayor? Give her my email. If this were a morning show, we'd put her on the air. [laughs]"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:28:51.25]",
+      "time": "[29:57]",
       "text": "Now that Trump's digital team has been able to communicate their strategies - how they took $100 million and split it between TV and digital and kicked ass on retargeting - on Facebook and microtargeting - no one saw this coming. It feels like they did carve out a bit of the future on how to win digitally. Without getting specifically into what they did, how does it change what you're going to do?"
     },
     {
       "heading":"On how Trump’s win may change the face of politics - and new ideas to win campaigns in the future",
-      "time":"[00:29:21.21]"
+      "time":"[30:25]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:29:21.21]",
+      "time": "[30:25]",
       "text": "I'm going to take a step back. When Obama won in '08, the same points were being made. I think that's true, but it's specific to the candidate and their message. After '08, candidate after candidate tried to emulate what Obama did, and at the end of the day they weren't him, didn't have his message or resonance in that context, and you can't just replicate it.<br><br>Hillary spent a ton of money on digital targeting and everything else, too, but at the end of the day, if you have nothing to say, it doesn't matter who you're targeting, if it's snail mail, Snapchat ads, or TV ads ... you've got to make a point. One of the reasons she lost was because this country was founded on the basic notions that we reject the idea that you get to rule and govern based on heredity - it being your turn. The \"my turn\" candidate never wins. Ask Gore, Kerry, Dole, McCain - all really impressive people with no message other than \"It's my turn and I want it.\"<br><br>Hillary did the same thing. We reject that every single time. I think that Trump did do some really incredibly innovative things around using social media to reach voters, but it was his ability to do that combined with his message and personality that resonated with enough people to put him over the top. What you'll see now is people trying to replicate and imitate that, and that never works.<br><br>The question becomes what we do next year in the mayoral race here. I've talked openly about using a platform like Uber or Lyft to get people to the polls. Uber's got 3 million people on their New York City customer list, what if 5 or 10% turn out? That's 200,000 people - almost half the turnout last time."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:31:20.12]",
+      "time": "[32:22]",
       "text": "When can that be an ad unit?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:31:23.00]",
+      "time": "[32:24]",
       "text": "Pretty soon, I think. When Mike was thinking of running for president, one of the first things I thought of was not having a traditional field campaign. Democrats have unions, Republicans have Evangelicals, and we wouldn't have either of those things. So I went out to the Valley and took a bunch of meetings.<br><br>One of the first people I went to go see was Travis, and I said, \"I want to put a Bloomberg button on the app on election day, and I'll pay for every single American to get a ride to and from the polls.\" He was like, \"Fuck yeah!\" We would had to go through lawyers and all that to make sure it's all kosher, and of course Mike didn't run and Travis lost enthusiasm for the idea of Mike being president, but we did the same thing with a bunch of other companies.<br><br>Let's say you wanted to hire someone to knock on doors. Every service has their own rating system; just to use Uber as an example, we only want people with a rating of 4.8 or above. We could let our drivers know that you're hiring independent contractors who can work wherever and whenever they want, and that's how we're effectively going to staff the whole field campaign. That's still a model that I want to do for the mayoral team.<br><br>I was just meeting with the CEO of a company called Mic. It's a media platform, mostly video, aimed at millennials. We're talking about how I could use their platform to reach people who might not normally vote in a Democratic mayoral primary and make a case to them and say if you get a free Uber ride to or from the polls, is that enough to get people to turn out? He wasn't sure, but he thought it was worth talking about.<br><br>I do think whether it's social media, video, sharing economy in terms of logistics and transportation or people you can work with..."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:33:16.11]",
+      "time": "[34:19]",
       "text": "I think you might be the only person who could fight the regulatory battle to enable these platforms..."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:33:26.14]",
+      "time": "[34:27]",
       "text": "Other people could do it, but we're lucky to have a unique mix of tech experience, political experience, and how the two come together. We've run campaigns in 48 states, over 100 cities, the federal government and DC, so we've seen it from a lot of perspectives."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:33:43.10]",
+      "time": "[34:46]",
       "text": "I look at Uber, for instance, and the future is in ads. If I'm going to a restaurant, that restaurant should be able to pay for that ride. Connecting physical location to intent is absolutely the future - it's the new Google, so introducing that to polling makes it an extension of that product."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:34:09.13]",
+      "time": "[35:11]",
       "text": "Ultimately, my hope is that we can vote on our phones entirely and we don't even need that, but in a weird way we may get to pioneer it. You'll see people kind of take it for there."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:34:22.29]",
+      "time": "[35:23]",
       "text": "Talking about Donald Trump and his election, I was screaming from rooftops that it was about the Rust Belt, the economy, and it was about everything else to the campaign. It was very frustrating, but you have to have the right strategy to win."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:34:39.04]",
+      "time": "[35:42]",
       "text": "Look, I didn't vote for Trump. I was a reluctant Hillary supporter, but this is democracy. People were out here protesting after the election for days. They went crazy when Trump said he wouldn't accept the results, and then they didn't accept the results. No one's saying he cheated. I don't love the outcome, but I accept it, because to not accept the outcome means to question the basic underpinnings of democracy and I really believe in democracy."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:35:14.15]",
+      "time": "[36:16]",
       "text": "I'm the same way. I'm quite independent and I came to the conclusion that his thinking around foreign policy is more in line with the world I want my kids and grandkids to live in, but Hillary's approach to domestic much more. It's usually about the economy."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:35:32.29]",
+      "time": "[36:35]",
       "text": "People vote in their self-interest. Unless you have lots of soliders on the ground in combat, foreign policy generally doesn't factor into most voters' mindsets. This is where I think targeting and data can actually be challenging, but people walk into the voting booth with three or four thoughts in their head at most: \"How do I feel intrinsically about each candidate?\" \"What party am I in?\" \"What party are they in?\" and maybe one or two policy positions they particularly like or don't like. It's different for everybody.<br><br>With Mike I had this challenge where I had so many resources. Mike's so wealthy and we had so much data, so the temptation was to figure out the secret sauce for every single voter. The reality is that sometimes it's about the economy, or crime, and you can have a thousand smart messages that get lost in the din. Hillary had hundreds of bullet points on any issue, but no one could tell you what she stood for on anything because there was no real central theme."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:36:40.09]",
+      "time": "[37:43]",
       "text": "When you look at technology companies, you look at what the core transaction is that you need to monopolize in order to extend your platform. For Tinder it was swiping right to discover, for Facebook it was essentially signaling to the world that you had friends. That has to apply to the psychology of campaigns in terms of the things you own, and how to make that simple. You can extend when you need to certain groups, but you need to hone in on it."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:37:14.11]",
+      "time": "[38:19]",
       "text": "I think Trump did that well. A lot of the message I don't like or agree with, but I respect that he figured out who his voters were, what mattered to them, and stuck with it."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:37:26.02]",
+      "time": "[38:31]",
       "text": "You've worked with the 21st century's leading inventors, hustlers, and CEOs in Travis. Can you talk a little about the similarities and differences between Mike and Travis?"
     },
     {
       "heading":"On what makes Uber’s Travis Kalanick and Michael Bloomberg similar - and how they differ",
-      "time":"[00:37:45.29]"
+      "time":"[38:50]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:37:45.29]",
+      "time": "[38:50]",
       "text": "It's interesting. They're definitely two of the smartest people I've ever worked with and for. I've worked with Elon [Musk] a little bit, and he's at their level, but I didn't work with him as closely.<br><br>I'll tell you the Travis story that really blew me away - it had nothing to do with Uber. In the early days, when he was in New York, he'd come to our office and do his work from there, and we'd kind of talk about different political things going on with the company. He was working out of the conference room, and I'd sit with him. Most of the day, we were doing other work, and sometimes we'd have meetings, sometimes not. I'm on a call about a really complicated issue: natural gas export policies.<br><br>I'm on the call and I'm barely following. While he's doing something else, my end of the conversation - which was fairly rudimentary, as it was the first time I was introduced to this issue at all - he's certainly not an expert on energy policy or exports, but as soon as I got off the call he explained the entire thing to me: the strategy, the underlying issues, how to win. It blew me away. I asked, \"How did you know all that?\" I don't think there was some secret trove of knowledge he had. He's just that smart.<br><br>Mike's the same way. I remember being in the car with him once and Kevin Sheekey, who's a big Mike guy, explains that Mike can hold two conflicting thoughts in his head at the same time. He can link up macroeconomic policy and microeconomic policy, human nature, media, trade, foreign policy, commodity pricing, all these different things into one narrative that makes sense, and explain it, because his brain can actually function like that. Most people have to cut it up into smaller, more digestible pieces and come up with a theory to tie it all together. That was my \"Wow!\" moment with him.<br><br>Their management styles are a little different. I didn't get to know Mike until he was in his sixties, and I got to know Travis in his mid-30s. Travis comes off as more aggressive than Mike; when he's that age, there may be something that comes from being so successful for so long that you can kind of be just as effective while taking half a step back in your tone and approach. In terms of people who have vision and drive and the ability to put lots of different things together and make incredible sacrifices, too...<br><br>A lot of the writing I do about career stuff I try to aim at millennials, and I think the main thing they don't notice is that it takes unbelievable sacrifice to succeed at even a normal level of tremendous success. It's working incredibly hard, it's taking all these other things that matter to you - not just your personal life, but to be able to be told no all the time, to handle rejection and failure. Mike Bloomberg got fired by Solomon Brothers and took his severance package and put that into creating Bloomberg, LLP. Uber isn't Travis's first startup. He got sued by the record companies - he had his own version of Napster and got sued for like a trillion dollars. These guys had a lot of failure, and it taught them how to succeed and motivated them more. You need to get punched a lot. And you need to get back up."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:41:36.26]",
+      "time": "[42:37]",
       "text": "And it shows you how not to lose again. And how to pattern match things that are so complex that there's no playbook. It's a combination of your own intellect, your view of the world, serendipity, and who you have around you."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:41:52.23]",
+      "time": "[42:58]",
       "text": "Branch Rickey, who was the general manager of the Dodgers in the 1940s, had this quote: \"Luck is the residue of design.\" I think there's something to that. You can't obviously shape everything around you, but the more prepared you are, the harder you work, the more motivated you are, the luckier you are."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:42:12.24]",
+      "time": "[43:14]",
       "text": "I was watching a Pete Carroll interview - I'm a big Seahawks fan - and he was talking about his failure in New England and how he went back to the drawing board and read John Wooden's book. In the book, it talked about how Wooden was successful, but it wasn't until his late fifties and sixties that he created a design in how players talk to each other, dress, and practice. He imposed that system upon his team and it produced extraordinary results."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:42:42.29]",
+      "time": "[43:45]",
       "text": "That would work in college ball - he adapted it the right way."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:42:52.14]",
+      "time": "[43:54]",
       "text": "It's a similar approach. They got a kid who was a power forward who started playing football in his sophomore year of college, and he's the left tackle for the team."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:43:03.27]",
+      "time": "[44:06]",
       "text": "I think that he understands how to adapt this stuff. I've watched a lot less football this year."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:43:11.29]",
+      "time": "[44:15]",
       "text": "Jets fan?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:43:12.17]",
+      "time": "[44:18]",
       "text": "I'm a Giants fan. We're decent on paper, I watched a little bit of the Pittsburgh game - we're pretty bad, we're as weak of an A4 team as we could possibly be."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:43:22.21]",
+      "time": "[44:26]",
       "text": "It's a playoff team."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:43:25.17]",
+      "time": "[44:29]",
       "text": "We should make the wildcard and then we'll have a rough first game."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:43:32.23]",
+      "time": "[44:34]",
       "text": "Fourth quarter football for the Giants in the playoffs. Tough team to beat."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:43:37.10]",
+      "time": "[44:38]",
       "text": "I will say that the times the Giants won the Super Bowl, we were underdogs, and Eli just got really hot. Let's hope he does it again."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:43:48.00]",
+      "time": "[44:51]",
       "text": "I wouldn't want to run into the Giants in the playoffs."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:43:53.00]",
+      "time": "[44:53]",
       "text": "The Patriots don't."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:43:54.21]",
+      "time": "[44:55]",
       "text": "Looking at the intersection of regulation and tech, you've built a career on understanding the two and winning campaigns. Moving into this next platform shift - self-driving, autonomous vehicles and trucks and job displacement: Amazon just launched Go, there's 3.5 million plus cashiers in America and 3.5 million plus truck drivers. When we shifted from farms to factories there was a 1:1 match in skills, yet the expectation is that the shift will move people into computer-driven, knowledge-driven businesses where the jobs are. What's your view on this technology shift and how it relates to the safety net and capitalism?"
     },
     {
       "heading":"On self-driving cars, displacement, and a model for universal basic income that both liberals and conservatives will hate",
-      "time": "[00:44:49.26]"
+      "time": "[45:53]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:44:49.26]",
+      "time": "[45:53]",
       "text": "A few things. First of all, there's been a lot of talk, even more in the last couple of months, maybe because of Trump, about displacement of workers and advancing autonomy. I think people are right to worry about it, but at the same time, throughout history things get invented that displace normal modes of production. Everyone says, \"Oh no, no one's going to have jobs anymore.\" Then industries adapt and new things evolve, so I'm not sure that I'm willing to accept the basic premise that Amazon Go or Auto or whatever means that 7 million cashiers and truckers are suddenly out of a job, or there won't be an adaptation we can't think of right now. If we could, we'd be doing that.<br><br>Number two, that's why ideas like universal basic income are out there. I like UBI - what may separate my perspective from that of the people pushing it is that I'm not sure any of them have actually worked in government. Having worked in government, I worry about the ability of politicians to not raid the revenue coming in set aside for UBI. In theory, it's sacrosanct, but in reality politicians have very creative ways of divvying up money.<br><br>I have an alternate approach I've been putting out there, I think I called it an idea that both liberals and conservatives will hate. The idea is that right now, if you take SNAP - food stamps - you and I pay a dollar on taxes, so we have to pay someone an additional 1 cent on the dollar to prepare our taxes, or for software to do it or whatever it is. It's then collected by a government agency, the IRS or whatever, that has employees and cost. It then goes to a legislative body to appropriate, which gets sent off in twenty different directions, 18 of which aren't that important. It then goes to a giant social service agency that has massive union contracts, bureaucracy, and inefficiency. It finally gets to a program, distributed in the form of food stamps to someone who's hungry. Of our dollar, how much made it to that person - ten cents? Twelve cents?<br><br>Based on my time in both the private and public sector, I would argue we should come up with a system that shifts 100 cents on the dollar. From a liberal perspective, let's pick a minimum wage that people can really live on - $15, $20 - and say this is the kind of healthcare people have to have, this is the kind of policy around paid leave, sick leave, family leave, whatever, and that's all a worker's paradise, right? The business owner says, \"I can't afford this, I'll go out of business.\"<br><br>But you say, \"Look, we're going to hold you harmless. The delta from what you're spending before to what you're sending now will all be deducted from your taxes or credited back to you, which means at the end of the day P&L hasn't changed at all. You have happier, healthier, better workers who have better incentives to stay and not be fired, workers are getting 100 cents on the dollar to support their families and put money back into the economy.\"<br><br>The loser in this equation is government, since you're saying that rather than having these massive bureaucracies, agencies, and legislative and tax bodies collecting money, we're going to take the revenue away from government and give it directly to the worker. Liberals hate it because they don't want to see government starve - they believe in big government - and unions' political contributions sustain their campaign funds.<br><br>Conservatives will hate it because they don't like the idea of businesses being told what to pay, or there being healthcare regulations, or leave policies, or anything else, but it would be the most efficient transfer of wealth from point A to point B while helping businesses be more productive and efficient at reducing waste, which mostly occurs in government.<br><br>It's a different take on UBI - it gets to the same place, but the hole in my theory is that no matter how well you do that, there will still be a group of people who are mentally ill, or drug addicts, or alcoholics, or disabled, or otherwise unable to hold down a job, and they're still going to need some sort of safety net, but that's a radically smaller subset of the total population. With UBI, I worry about the integrity of it not from the people proposing it but from the reality of how government politics works, or my idea, which hopefully achieves the same thing but removes the ability of politicians to screw it up, I think something like that is going to be necessary.<br><br>If you have that, maybe you have a situation where people work 8 hours a day, play 8 hours a day, sleep 8 hours a day - the original notion of utopian society is that people aren't working around the clock because enough systems, technology, and wealth are created that it's not necessary. Who's to say that we can't get to that point?"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:50:08.28]",
+      "time": "[51:12]",
       "text": "Those are great points. We're doing a couple of events to unpack it with Neil Ferguson and some Y Combinator folks. Charles Murray, the libertarian, advocates that for UBI to be given, a requirement of that has to be for health insurance, so there's a government mandate to say that $3,000 of your UBI is going to cover health insurance."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:50:40.16]",
+      "time": "[51:42]",
       "text": "Murray's for or against that mandate?"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:50:42.03]",
+      "time": "[51:45]",
       "text": "He's for it."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:50:42.03]",
+      "time": "[51:46]",
       "text": "Wouldn't the argument be that people are rational enough to make their own choices to whether or not they get healthcare?"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:50:50.16]",
+      "time": "[51:54]",
       "text": "He's a conservative libertarian looking at UBI."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:50:54.24]",
+      "time": "[51:58]",
       "text": "It's interesting. If you gave me a multiple choice quiz asking if Murray would be for or against that, I'd say he'd be against it."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:51:02.20]",
+      "time": "[52:04]",
       "text": "This was written before the ACA and where we're at today. Who knows where he stands, we'll talk to him tomorrow and see what he thinks. My personal opinion is that citizens aren't able to capture their economic value on top of these social platforms. They give these systems massive amounts of data, which produces massive amounts of wealth, yet there's no API that exists for developers to let Bradley Tusk to make money on his tweets, or for Chris McCoy to directly monetize his Instagram content.<br><br>I think there's opportunity there for productivity to be captured. No one's talking about it and I'm pretty anti-regulation, but I also believe in opportunities. From a UBI perspective, I think 70% of Americans have less than $1,000 in savings. I look at it in a sense like seed funding for options."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:52:10.09]",
+      "time": "[53:14]",
       "text": "When people get big tax rebate checks, does the data show that they save it or they spend it?"
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:52:15.14]",
+      "time": "[53:20]",
       "text": "Well, I don't know anybody that does..."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:52:19.16]",
+      "time": "[53:22]",
       "text": "They spend it. Maybe if they're earning $30,000 and not $300,000, that changes it. The argument is usually seen as that it's an economic stimulus. Put money into the economy because people will spend it, and that will create more wealth for more people, but yeah, you're right. If government were a massive accelerator or something like that..."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:52:42.12]",
+      "time": "[53:44]",
       "text": "If you're in Middletown, Ohio, how do you get to Seattle, Washington? How do you buy a computer to learn how to run SQL? Americans lack optionality and that's troubling to me because education really missed technology."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:53:04.14]",
+      "time": "[54:06]",
       "text": "Education missed technology. I'm a big ed-reform and charter school guy, so obviously I really think teachers' unions have set us back tremendously. We have a system that does not allow for any sort of innovation or accountability. As a result, everything has to be done and taught to the lowest common denominator, and it produces exactly what you'd expect."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:53:29.12]",
+      "time": "[54:35]",
       "text": "Marc Andreesen has this quote: \"If you don't want your students' jobs to be replaced by robots, then stop teaching them like robots.\""
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:53:41.17]",
+      "time": "[54:44]",
       "text": "That's really good."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:53:43.16]",
+      "time": "[54:45]",
       "text": "It's great. Marc for president."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:53:46.17]",
+      "time": "[54:51]",
       "text": "It's funny - he's a big investor in AltSchools. Max, who's the CEO and founder, has some really brilliant stuff around this, but it's about how to teach people to think for themselves. That's what it's all about."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:54:01.17]",
+      "time": "[55:04]",
       "text": "How do you manufacture intrinsic motivation where you can get that fire? Can that be manufactured in an academic environment?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:54:18.02]",
+      "time": "[55:19]",
       "text": "I have two kids - a ten-year-old and a seven-year-old, and I think constantly about how we instill these things in them and teach them the right ways. I'm Jewish, my wife's Episcopalian, but they go to a Quaker school because it was a way to at least take certain values that could helpfully instill the notions of resilience and determination and willingness to try things differently. It was the closest thing we could find - it was also a few blocks from our house."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:54:48.05]",
+      "time": "[55:51]",
       "text": "Have you given much thought to the regulation of drone space?"
     },
     {
       "heading":"On the future of drones - and where tech and government can intersect and make lives better in the process",
-      "time": "[00:55:03.23]"
+      "time": "[56:05]"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:55:03.23]",
+      "time": "[56:05]",
       "text": "I have. The FAA is one of the few federal agencies that matter that has been really thoughtful about regulating something. They really deserve a lot of credit because it is so not the norm to do what they did. I'm excited that Elaine Chao is the nominee for transportation secretary because they oversee the FAA and she's very smart and thoughtful. She's a Bloomberg Foundation board member who clearly appreciates innovation, so my hope and expectation is that level of thoughtfulness will continue.<br><br>I really look at drone regulation as split between recreational and commercial. I am not bullish on the future of recreational drones because of regulation. The way I see it is that there are so many intersecting jurisdictions that can regulate recreational drones. A local park district, a local airport, a local stadium, a city, a town, a county, a state, the FAA, DOT... there's no way any of these companies have the bandwidth to survive all these different competing levels of regulation, registration laws, everything else. Every time that somebody flies their drone, intentionally or not, into the stands at a football game, every politician says, \"Hey, I'm having a press conference tomorrow on new regulations for recreational drones.\" At the end of the day, it won't be able to survive that. Also, you've flown recreational drones, I have too. It's cool for the first 15 minutes, and then it's like, \"Oh, I've got it.\""
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:56:42.29]",
+      "time": "[57:45]",
       "text": "It's a little like VR."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:56:42.29]",
+      "time": "[57:47]",
       "text": "Well, hopefully VR does better than that. I think drones are like ham radio or a model train set. It's cool for a little while. Commercial drones have not only so much potential but so much current applicability. Is there an argument that it will continue to displace people? Sure, but can it also do things that are typically unsafe and cause a lot of injuries and damage? Absolutely.<br><br>We've talked to companies who use drones to survey oil rigs and complicated energy sites, to move things in warehouses... there are so many ways that commercial drones add value, and the question is how you properly regulate them. My argument would be a pretty light touch. I think someone should be able to do whatever they want inside their own warehouse. Should drones be armed? No. I would like to see de minimis regulation on commercial drones absent a clear and compelling case that the activity would otherwise be dangerous. I wouldn't necessarily impose a lot of restrictions on recreational drones, either, but it's going to happen. The temptation is too great for the politicians to do it - there's too much of a chance of them getting in the way of fighting a forest fire, or flying too close to an airport."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:58:11.17]",
+      "time": "[59:15]",
       "text": "It's a huge revenue opportunity for cities."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:58:15.16]",
+      "time": "[59:17]",
       "text": "Until they regulate it out of business, but yeah."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[00:58:20.10]",
+      "time": "[59:20]",
       "text": "I see a world where drones communicate in real time using bitcoin for lane rights. \"My drone needs to pass your drone to deliver this package this second...\" I see the same thing with self-driving cars."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[00:58:33.06]",
+      "time": "[59:36]",
       "text": "That will have to happen, right? When we think about how the FCC regulates the airwaves and bandwidth, you could do the same thing ultimately in the skies. The Uber flying car designs are effectively some sort of drones carrying people in little containers - some are cooler than others, but that's what it is, and package drones, and everything else.<br><br>Here's the thing about autonomous cars we can hopefully get out as a concept: Trump's talking about a really big infrastructure bill, and any big infrastructure bill typically includes billions and billions of dollars for road construction. There's a whole giant industry that wants as much construction as possible. I would bet that no one is thinking about what kinds of roads we need when all cars are autonomous.<br><br>Road construction takes a long time and creates a lot of delays during the construction phase itself. If all cars are running at the same speed and talking to each other and there's no human element anymore, we may not need as much capacity as we think. If you're at peak efficiency, it may be that the roads we have are actually sufficient. Road widening is so expensive and so difficult that before we commit hundreds of billions of dollars do it, hopefully someone will stop and think and talk to Lewandowski, whoever it is, and ask what we really need. The reality is that what we have might actually be okay, and maybe the answer is it isn't.<br><br>My wife's from Austin, and Mopac, which is one of the big highways in Austin, is being widened because Austin is going from being the sleepy town it was 25 years ago to the ninth biggest city in America today and it wasn't built to handle all this traffic. It makes sense, but right now, when you're driving on it, you're stuck in all this construction and delays on top of all the normal traffic. In ten years, you may not need a wider Mopac.<br><br>I'm hoping that going forward, transportation planning and road building is synced up with the needs of autonomous vehicles. What we think today is necessary and what will actually be necessary in a decade or so are two very different things, and it would be a tremendous failure of urban planning to not recognize that."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:01:07.07]",
+      "time": "[1:02:10]",
       "text": "When there is federal money for infrastructure, it's typically the politicians deciding what gets built at the end of the day. I'd like to see that go directly to the voters and let them decide."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:01:19.15]",
+      "time": "[1:02:23]",
       "text": "Yeah. California has a version of that democracy now, and in some ways it works really well and in some ways it works really poorly. You could certainly do that, or you could mandate that rather than politicians divvying it up, you have to have a clear use case of why it's necessary.<br><br>When I was deputy governor of Illinois, in every single legislative session, every state senator in downstate Illinois, which is struggling economically – Rust Belt, lots of former manufacturing cities - always wanted more and more money for roads for their districts. I understood why: the jobs created doing the construction make them look like they're at least doing something. I don't think what's stopping Decatur from becoming the next Shanghai is the lack of another eight-lane highway. The problem isn’t that people can't get there, it's that there isn't a reason for people to go or stay there the way there used to be. We have got to make it a more attractive place, and that's not the virtue of having another road.<br><br>If we could take soy and coal and come up with a clean way to use it as fuel, that's something most of Illinois has either under or above ground, and that would be an argument for how to rescue downstate Illinois. I was pretty sure that it wasn't roads or prisons - we had five fully empty built prisons, and we wanted to close them because no one was using them, but you can't because people work there and need jobs. What are they doing? Flushing the toilets so the pipes don't go rusty. This is a consistent problem - the politics in infrastructure and capital spending really comes before common sense."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:03:02.03]",
+      "time": "[1:04:03]",
       "text": "I'd like to see subsidies within public transit as it relates to Uber and Lyft and these companies."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:03:09.00]",
+      "time": "[1:04:13]",
       "text": "You're starting to see some innovative mayors..."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:03:12.20]",
+      "time": "[1:04:15]",
       "text": "New Jersey, right?"
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:03:15.02]",
+      "time": "[1:04:17]",
       "text": "Yeah. Instead of a parking lot, they said they're just going to let people take Ubers."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:03:16.29]",
+      "time": "[1:04:21]",
       "text": "I'm having beers with a buddy tonight. He was in the Air Force and got Stanford to pay for his degree to go teach at the Air Force. He's from the town where they're subsidizing Uber, so I'm going to see about that."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:03:29.27]",
+      "time": "[1:04:31]",
       "text": "You're starting to see that. This is why I would love to bring about a world where innovators and regulators could work together. There's so much the startup world can do to help governments meet their goals, and there's so much opportunity.<br><br>So many startups we work with, we ask them what’s their procurement strategy, and they say they don't want to deal with that. I understand, but it's crazy because these are incredibly lucrative contracts that are incredibly sticky. We say that we'll do it, we'll fill out the paperwork, we'll do 95% of the work and everything we possibly can because it's too good of an opportunity. I would love to see more startups look at government procurement, and I'd love to see more governments looking at the startup world to solve societal problems. The more that we can demystify the notion that all regulators are stupid and corrupt and that all innovators are arrogant and hard to work with, we can start to achieve that."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:04:37.14]",
+      "time": "[1:05:39]",
       "text": "In Oakland, 5TB of data a day is what the sensors at the city are pushing. It takes months for some teams to run queries and parse. In some ways, there's a need for hardware –more so, there’s a lack of people. I look at America as having some form of infrastructure, like taking the GPS signal and open-sourcing that, or the national highway network, or weather data. I think we're at this state where we need a network of people who understand how to work with technology and data in every city in America with 50,000 people. I'd love to see that world exist. Then procurement and 21st century projects can happen at the city and state level."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:05:29.28]",
+      "time": "[1:06:29]",
       "text": "You see forms of this. Code For America has a version of this. The Bloomberg Foundation has all kinds of programs - Smarter Cities for Innovation - to do that. Google has, on open data, pushed a lot of policy onto the city level. There are companies and foundations and organizations doing what you're talking about, but it's almost all from the private or nonprofit sector coming to the government and saying, \"Hey, we can do this.\" Obama did something called the Digital Corps within the White House, and they do go to different federal agencies and help them find ways to work with startups and be more efficient and productive. He's a pretty tech-savvy president, and an anomaly in that."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:06:12.12]",
+      "time": "[1:07:15]",
       "text": "Our first technology president."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:06:14.04]",
+      "time": "[1:07:17]",
       "text": "He's not the norm. I think you're right, and we need to get more tech-savvy candidates, but that gets back to the fundamental, underlying question. Until more people are voting than a handful of highly ideological people motivated by interests, you're not going to achieve that. Look at the Uber and Lyft vote in Austin, where the anti-Uber and Lyft forces won. The old-line Austin residents who don't like change came out to vote in a special election on May 1, a weird election day, and your average person who uses Uber and Lyft didn't show up to vote. It's going to get fixed in the future, I'm pretty sure, but you can consistently see anti-tech policies getting pushed in cities that are tech hubs in part because the tech community is somewhat politically disengaged and because it's too hard to vote."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:07:14.20]",
+      "time": "[1:08:16]",
       "text": "Housing in San Francisco."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:07:14.20]",
+      "time": "[1:08:18]",
       "text": "Yeah."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:07:17.01]",
+      "time": "[1:08:19]",
       "text": "IMBYs versus NIMBYs. Tech folks don't vote."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:07:19.08]",
+      "time": "[1:08:25]",
       "text": "Short-term, if you want your interests represented, you better show up to vote. Long-term, you shouldn't be designing democracy around making it hard for people to actually express their views and interests. We should make it easy for people to do that, and that's what we're trying to do."
     },
     {
       "narrator" : "Chris McCoy",
-      "time": "[01:07:39.18]",
+      "time": "[1:08:40]",
       "text": "An inspiring conversation. I came in on the red eye this morning just to hang out with you. I appreciate it, Bradley."
     },
     {
       "narrator" : "Bradley Tusk",
-      "time": "[01:07:48.19]",
+      "time": "[1:08:51]",
       "text": "Thanks, Chris. I really appreciate it."
     }
   ]
