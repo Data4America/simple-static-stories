@@ -153,7 +153,15 @@ $(document).ready(function() {
   });
 
   $('.article-actions .ui.button.twitter, .dfa-header-article-share.tw, .say-thanks').click(function() {
-    var params = '?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&via=Data4America';
+    var isUnplugged = window.location.pathname.includes('unplugged'),
+        params = '';
+
+    if (isUnplugged) {
+      var $episode = $('#dfa-unplugged.episode').data();
+      params = '?url=' + encodeURI(this.dataset.url) + '&text=Listening to the @Data4America podcast with '+ encodeURI($episode.guest) + '(@'+ encodeURI($episode.twitter) +')';
+    } else {
+      params = '?url=' + encodeURI(this.dataset.url) + '&text=' + encodeURI(this.dataset.text) + '&via=Data4America';
+    }
     if (!$(this).hasClass('say-thanks')) {
       params = params + '&hashtags=d4a'
     }

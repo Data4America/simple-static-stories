@@ -4,6 +4,7 @@ block prepend title
   | #{ page.title + ' - '}
 
 block content
+  <script type="text/javascript"> if (window.location.pathname == '/donors') {window.location = '/supporters';}</script>
   div#dfa-supporters.ui.segments
     div.ui.segment
       h1.ui.header.center.aligned How Data4America is Funded
@@ -74,6 +75,11 @@ block content
               div.description ($50,000 - $249,999)
       div.ui.segment(style="width:40%;")
         div.ui.relaxed.divided.list
+          div.item
+             div.content
+               | Cyan Banister 
+               a(href="https://twitter.com/cyantist", target="_blank")
+                 i.ui.icon.twitter(style="color:#0084B4;")
 
     div.ui.horizontal.segments(style="background:#fff;")
       div.ui.segment(style="width:60%;")
@@ -86,11 +92,7 @@ block content
               div.description ($25,000 - $49,999)
       div.ui.segment(style="width:40%;")
         div.ui.relaxed.divided.list
-          div.item
-             div.content
-               | Cyan Banister 
-               a(href="https://twitter.com/cyantist", target="_blank")
-                 i.ui.icon.twitter(style="color:#0084B4;")
+
 
     div.ui.horizontal.segments(style="background:#fff;")
       div.ui.segment(style="width:60%;")
@@ -108,7 +110,7 @@ block content
                | Chris McCoy  
                a(href="http://twitter.com/chrisamccoy", target="_blank")
                  i.ui.icon.twitter(style="color:#0084B4;")
-               | and Ciara Viehweg  
+               | and Ciara McCoy  
                a(href="https://www.linkedin.com/in/ciaraviehweg", target="_blank")
                  i.ui.icon.linkedin(style="color:#0077B5;")
                br
@@ -147,7 +149,7 @@ block content
         div.ui.relaxed.divided.list
           div.item
             div.content
-               | Lincoln Initiative 
+               | Lincoln Network 
                a(href="https://twitter.com/joinlincoln", target="_blank")
                  i.ui.icon.twitter(style="color:#0084B4;")
 
@@ -223,6 +225,10 @@ block content
                | Ben Basche 
                a(href="https://twitter.com/basche42", target="_blank")
                  i.ui.icon.twitter(style="color:#0084B4;")
+               br   
+               | Bess Young  
+               a(href="https://www.linkedin.com/in/bessyount", target="_blank")
+                 i.ui.icon.linkedin(style="color:#0077B5;")
 
     div.ui.segment
       p Our donors and in-kind providers support 100% of our content, editorial, and event operations.
