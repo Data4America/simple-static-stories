@@ -52314,11 +52314,11 @@ input::-moz-focus-inner {
   line-height: 1.2rem !important;
 }
 #dfa-donate-form .dfa-header-text {
-  font-size: 0.95em;
+  font-size: 1.4em;
 }
 @media only screen and (max-width: 767px) {
   #dfa-donate-form .dfa-header-text {
-    font-size: 0.776em;
+    font-size: 0.8em;
   }
 }
 #dfa-email-wall {

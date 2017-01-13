@@ -12,7 +12,7 @@
     '   <tr>' +
     '     <td>' +
     '       <h4 class="dfa-header-text donate" style="margin-bottom: 0;">' +
-    '         Want to see more from Data<span style="color:#CC0001; font-style:italic;">4</span>America? Consider a tax-deductible gift.' +
+    '         Want to see more from Data<span style="color:#CC0001; font-style:italic;">4</span>America? <br>Consider a tax-deductible gift.' +
     '       </h4>' +
     '       <h4 class="dfa-header-text sponsor" style="display:none; margin: 0; font-size: 1.4em;">' +
     '         Sponsor a Policy Issue' +
