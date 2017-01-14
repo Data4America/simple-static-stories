@@ -339,15 +339,16 @@ $(document).ready(function() {
   // $('#fixed-btn').click(function() {
   //   $('#dfa-share-modal').modal('show');
   // });
-  var $fixedShare = $('#fixed-share-btn');
-  $fixedShare.find('.fixed-btn')
-    .popup({
-      position   : 'left center',
-      hoverable  : true,
-      setFluidWidth : true
-    })
-  ;
+  // var $fixedShare = $('#fixed-share-btn');
+  // $fixedShare.find('.fixed-btn')
+  //   .popup({
+  //     position   : 'left center',
+  //     hoverable  : true,
+  //     setFluidWidth : true
+  //   })
+  // ;
 
+  var $fixedShare = $('#fixed-share-btn');
   $fixedShare.find('.subscribe').click(function(){
     $('#dfa-subscribe-modal').modal({ observeChanges : true }).modal('show');
   });

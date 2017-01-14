@@ -1,3 +1,15 @@
-html(lang='en')
-  head
-    meta(http-equiv="refresh",content="0; URL='/supporters'")
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block metatags
+  meta(property="og:title", content="Data4America | Donate")
+
+block content
+  div.ui.segment
+    h1.ui.header.aligned.center= page.title
+    div.ui.divider
+    article.page
+      section.content
+        div.body-text.donate-wrapper

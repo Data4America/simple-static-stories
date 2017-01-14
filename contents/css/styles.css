@@ -52522,21 +52522,9 @@ input::-moz-focus-inner {
   margin: 0px;
   display: none;
   font-size: 1.7em;
-  width: 150px;
 }
-#fixed-share-btn .fixed-btn {
-  float: right;
-  background: #CF1A1A;
-  border-radius: 5px 0 0 5px;
-  padding: 0.6em;
-  margin: 0px;
-}
-#fixed-share-btn .fixed-btn i {
-  margin: 0px;
-  color: #fff;
-}
-#fixed-share-btn .fixed-btn .ui.header {
-  font-size: 1em !important;
+#fixed-share-btn ui.button {
+  border-radius: 0px;
 }
 @media only screen and (max-width: 767px) {
   #fixed-share-btn {

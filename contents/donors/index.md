@@ -1,4 +1,4 @@
 ---
-template: donate.jade
+template: donors.jade
 title: Our Supporters
 ---
