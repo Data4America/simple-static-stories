@@ -349,6 +349,10 @@ $(document).ready(function() {
     })
   ;
 
+  $('#donate-progress').progress({
+    percent: 16
+  });
+
   // var $fixedShare = $('#fixed-share-btn');
   $fixedShare.find('.subscribe').click(function(){
     $('#dfa-subscribe-modal').modal({ observeChanges : true }).modal('show');

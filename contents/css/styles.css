@@ -53785,6 +53785,9 @@ body.embed {
   max-width: 700px;
   background: #fff;
 }
+#dfa-unplugged .embed {
+  margin: 2em 1em;
+}
 #dfa-unplugged .ui.header {
   font-weight: 300;
 }
@@ -53843,7 +53846,7 @@ body.embed {
 }
 #dfa-unplugged .podcast p {
   font-size: 1em;
-  margin-bottom: 1.4em;
+  margin: 4em;
 }
 #dfa-unplugged .podcast .space {
   margin: 0 0.5em;

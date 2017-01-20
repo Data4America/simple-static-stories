@@ -80,24 +80,20 @@ block content
                   p.item-date=moment.utc(article.date).format('MMMM D, YYYY')
 
     div.column
-      div.ui.red.segment.inverted(style="margin:0 auto;")
-        div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
-          div.field
-            input(type='email', name='email', placeholder='Email Address')
-          button.ui.button.orange.fluid Send Me Content
-
-        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
-          i.send.icon
-          | Thank you for subscribing.
-          
-      div.ui.segment.inverted(style="background-color:#004f81; margin:1em auto 0px; border-radius:0px;")
+      div.ui.segment.inverted(style="background-color:#004f81; margin:auto; border-radius:0px;")
         h1.ui.header.center.aligned(style="font-size:2.5em; font-style:italic; margin-top:0px;") Help us reach our $250,000 Season Two fundraising goal.
         h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
         
       div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center;")
-        h1.ui.header.center.aligned(style="font-size:2.5em; font-style:italic; margin-top:0px;") Quick Donate.
-        h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Chip and get a D4A laptop sticker!
+      
+        div.ui.large.progress
+          div.label 
+            span(style="font-weight:300; font-size:1.5em;") $40,000 
+            | of $250,000
+        
+        div#donate-progress.ui.large.active.progress.indicating(style="margin: 1em;")
+          div.bar(style="background-color:#21BA45!important;")
+            div.progress
         
         div.ui.equal.width.center.aligned.padded.grid
           div.row(style="padding: 0.5em 0px;")
@@ -113,8 +109,18 @@ block content
               
           div.row(style="padding: 0.5em 0px;")
             div.column
-              button.ui.fluid.button.blue.huge.dfa-btn-donate(style="background-color:#004f81;") Donate
+              button.ui.fluid.button.huge.orange.dfa-btn-donate Donate Now
+              
+      div.ui.red.segment.inverted(style="margin:1em auto 0px;")
+        div#dfa-email-content.ui.form
+          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
+          div.field
+            input(type='email', name='email', placeholder='Email Address')
+          button.ui.button.orange.fluid Send Me Content
 
+        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
+          i.send.icon
+          | Thank you for subscribing.
 
       //- div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
       //-   a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
