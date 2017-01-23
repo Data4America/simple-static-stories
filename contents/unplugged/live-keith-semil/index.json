@@ -1,0 +1,674 @@
+{
+  "template": "unplugged-episode.jade",
+  "title": "Uplugged Live: Keith Rabois",
+  "profile": {
+    "guest": "Keith Rabois",
+    "session": "LIVE",
+    "artwork": "/img/live-keith-semil-600.jpg",
+    "link": "/unplugged/episode-1-greg-ferenstein",
+    "desc": [
+      "Keith is a tech entrepreneur and venture capitalist Khosla Ventures. He was a part of the early team at PayPal and has held executive positions at Linkedin, Slide, and Square."
+    ],
+    "host": [{
+      "name": "Semil Shah",
+      "twitter": "https://twitter.com/semil"
+    }],
+    "twitter": "rabois"
+  },
+  "transcript2": [
+    {
+       "narrator":"Semil Shah",
+       "text":"As we have done in the past before, Keith Rabois made time to share his thoughts on how tech and society at large may be altered with the new Administration which assumed office this week. While I don’t always agree with Keith, having read his perspectives for years now, he is more often right about things and quite frequently. We also share a personal interest in observing politics (from different sides of the spectrum), so we got together a day before the inauguration and recorded a conversation on a range of topics. Below is an edited, partial transcript of our discussion. The opinions expressed here belong to each individual only."
+    },
+    {
+      "heading":"Introduction and Personal Biases"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Keith has always been great at making time. So, let’s see January 18th, two days before the inauguration."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" It’s crazy. Isn’t it?"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"It’s crazy. I wanted to dive into a lot of topics. As brief context, you were an early supporter of Ted Cruz. You were classmate to Ted Cruz."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I actually I didn’t support Ted. I was a classmate in law school. Actually, technically a supporter of Scott Walker, which shows how well our predictions and endorsements, how far they go. But, I didn’t endorse anybody after that."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Got it.  I want to be clear about my biases too. This is difficult topic for many people. From my point of view, my bias is that I would’ve wanted the Democrats to win. But I completely understand how this happened and we’ll try as best as we can to take an apolitical approach here and focus more on analysis."
+    },
+    {
+      "heading":"On Retaliation Toward Tech"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"The number one thing to kick off with, and you mentioned this in the conversation you had with Emily Chang (on Bloomberg) a little bit: given the personality of the new Commander-in-chief – and this sort of harkens back to how Nixon was – and given the tenor of the attack from, let’s say, Silicon Valley/tech and entrepreneurship – that includes investors, executives, founders – should people be on alert for some type of retribution or some type of retaliation?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Most of the large companies post the election results have changed their tenor, changed their attitude. They are trying to dial back the ledge that they walked over. I think it is very difficult as a public and traded company to take up a partisan position, and most mature industries don’t in fact. For example, Wall Street gives lots of money to Democrats. Wall Street doesn’t probably love the fact that Democrats tend to regulate Wall Street and, all of a sudden to deregulate it, but they are very careful to not to get themselves in the middle of the bull’s eye. And I think Silicon Valley, being kind of a newish, more recent power, hasn’t realized the consequences of being wrong, and being partisan."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"At a time when we have Twitter, Facebook, and everything is now semi-public."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"The contributions were public and have been public for a long time, but the attitude of employees, the bigger… the “___ Trump” homepage. You just can’t do stuff like that and not pay consequences when the other party particularly controls both sides – in the Congress, House, Senate and the President – and so everybody is reacting from Jeff Bezos to Eric Schmidt. They are all trying to become friends."
+    },
+    {
+      "heading":"On Peter Thiel"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"One of my friends said to me that, in many ways, Peter Thiel saved technology, because had Peter not been a Trump supporter, and had he not shown that there is at least some diversity of views in Silicon Valley about politics, I think the desire, the President being somewhat vindictive just from purely public statements and attitudes, and the traditional views of the Republican party, I think given the contribution level, given the expressed outrage, absent Peter’s intervention, I think technology would have a real problem right now."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And do you think Peter is like a bridge?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, he’s up on the bridge as you saw sort of famously with this tech meeting that Recode has been covering substantially and vigorously. But, the reality is there’s very few people in technology with access to what would seem to be the President of the United States. Most companies want that access. The larger the company, the more they want the access across multiple verticals: financial services, healthcare obviously.<br><br>Peter made one of the great asymmetric bets in history. If you think about this from a classic, venture, startup perspective; everybody thought he was crazy and wrong and it turned out he was right. That’s a good incentive and accumulates to a lot of money, accumulate to a lot of power. This is actually a metaphor for what happened. I occasionally get accused of being part of the PayPal mafia, and people sometimes forget the history of PayPal. All the people that worked at PayPal were complete misfits and had no establishment contacts to Silicon Valley whatsoever. Yet in about from five years from 2002 to 2007, we went to become central casting in Silicon Valley, and almost accused of being the establishment. What happened was in 2003, 2004, 2005, nobody thought that there was another wave of technology innovation coming, because there was a nuclear winter in Silicon Valley, and particularly on the consumer side.<br><br>All founders who needed money sort of gravitated to Peter, Reid Hoffman, and to some extent, Sequoia and people like me, and it turns out there was another way. Some of our best turned out to be pretty good. We moved from outliers to central sort of central force in two to three years.<br><br>Peter’s bet on Trump has made him from an outlier in politics to a very central force in politics overnight. Now, he has to decide how to use that, how to leverage that, and see what happens. But it could have the same dynamic where Peter becomes a top one, two, three, four, player in politics just like he has been in technology."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Do you see him having ambitions on an elected official basis or on a more appointed position basis?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I think he cares about influencing specific policies, and the question will be can he do that from afar or not. A lot of people have the desire to do that from afar for lots of great reasons. It’s very, very, difficult to do that. In practice, it doesn’t work so well.<br><br>When you become President of the United States, there are so many bubbles that get created around you. Some of it’s security bubbles, some of it’s a political bubble where people try to crowd out other people. So, it’s really difficult to influence the President from afar.<br><br>So, I think at some point he may have to think about taking a more active role. For now, I suspect he’ll try to influence from afar and by placing the right people in the right places."
+    },
+    {
+      "heading":"Fighting Words From Tech Incumbents vs Tech CEOs"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Do you think there’s a difference when it comes to talking publicly about politics between the Bezos’, Eric Schmidts of the world, or sort of large tech incumbents versus the startups and the VCs that back them?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Startups can clearly be more reckless. I mean, startups are like Pirates, and the Apples and Googles are like the Navy. For startups, nobody really cares, for the most part, what the attitudes of the founders are and whether they endorse a particular candidate. But as a publicly-traded entity, you just can’t be partisan and expect to be a publicly-traded entity. You have shareholders.<br><br>Mark Zuckerberg at Facebook actually handled it very well when there was alleged controversy around Peter. He said, “Look we want to be a company that has a product that is used by billions of people. If we are going to be used by literally billions of people, we can’t alienate half of the United States. That makes no sense whatsoever.” So, I think he and Facebook probably navigated a very complicated morass quite well."
+    },
+    {
+      "heading":"On The Tech Sector as a \"Boogeyman\""
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"I’ve read this narrative– I personally disagree with it, but I wanted to get your view which is, “The tech industry, either at large, or the startup industry – since there’s such a concentration of wealth here – will turn into kind of a bogeyman or a target as well.” I tend to think of tech as more aspirational and people use the product and services on a daily basis, but do you think that that negative narrative could increase or grow during a new administration?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"It could, but I don’t really believe in the narrative. The evidence is against the narrative. For example, when I travel back to high school where I grew up, which is very far removed from technology, people really want to be in technology and are really interested in what I do, and how to find routes for actually now outpace their kids, which is a little embarrassing of using in technology. I’m dating myself badly here. Secondarily, I’ve seen public studies of sort of different industry reputations, and tech is always the number one or two most highly-regarded industry in the world. So, it depends compared to what? And tech is not perfect. Tech has lots of flaws. But when you compare human endeavors to other human endeavors, to other human endeavors, tech stocks up by any metric quite well."
+    },
+    {
+      "heading":"On Entrepreneurial Responses To A Trump Administration"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Do you think that there’s any room or place or… requirement isn’t the right word, but obligation for entrepreneurs or companies to either be part of the next wave coming up, or building products and services to either amplify or combat policy that they don’t like?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Absolutely. One of the things that we do here at Khosla Ventures is we filter all our investments by impact. There are lots of things that can make money that we don’t invest in, or aren’t interested in, and then when we find something that we think has potential high impact on society, in a positive direction, we are more likely to invest. So, it’s absolutely the right and positive thing for people to build companies that are sort of the change they want to see in the world. I think it’s also… one interesting thing about Trump winning is I think it will encourage more political behavior, more activity by non-professional politicians. So, I think more Silicon Valley people may run for office, more technology entrepreneurs may run for office, because it’s now established that it’s at least possible for someone who hasn’t spent his or her life in politics to be extremely successful. I think that will encourage more people to run for different levels of office – whether it’s the House, the Senate, the Governor or President – and I think that’s a great thing, to have more talented people, from more diverse set of backgrounds, running for office than 40 years in politics."
+    },
+    {
+      "heading":"On Fake News"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":" What’s your point of view on the fake news debate? There’s a debate around Facebook and news, and then just generally around filter bubbles. And what could entrepreneurs do to fix that if it is a problem? One of the issues I am finding is we think of incumbent companies as “you can disrupt them.” The issue with the incumbent companies that are built on top of the Internet or mobile networks is the network effects kick in, and they seemingly get stronger, and you have the founders either in control or close by. So, what can people do? Clearly we have free will to pick and choose where we get our media from, but that’s probably not the case of where people are going."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" I’m skeptical about this fake news debate for two reasons: One, I’ve seen no evidence that any voters in the United States are less informed than they were in any prior election in the American history. I’d like to see some comparative data that shows there’s been some decline in knowledge about the world, knowledge about policies, knowledge about candidates, and there’s none of that evidence. Two, I think that this is mostly the last gasp of the traditional media trying to reinsert themselves as a gatekeeper. Basically, what the Internet does classically across all industries is it eliminates gatekeepers, and you eliminate gatekeepers and get a wider array of opinions. Some of those opinions actually may thrive, that the gatekeepers would have filtered.<br><br>Naval [Ravikant] posted quite elegantly about this. I have read all the Startup Boy blogs about politics – they are incredible – and so I think that’s just one of the bigger drivers, the people complaining about fake news or all mass media types, not normal people. Then, the third is I think it’s a hard problem. I think you can discriminate between hoaxes and what I’d call hyper-partisan behavior.<br><br>Hoaxes are easier to filter, easier to eliminate, although people still buy the National Enquirer. There’s demand. That’s another point, that throughout history, the National Enquirer has been publishing fake news, hoaxes, for decades and it’s sort of unpopular.<br><br>We’ve had wars based upon fake news intentionally. If you take the American history, you learn about the Spanish-American War and how the first newspaper publication sort of manufactured the conflict. So, this is nothing new as far as I am concerned, but I think there is a way to eliminate intentional hoaxes versus my interpretation of facts that leads me to a conclusion, that may or may not be “true.” I think that is a problem and technology companies want to stop that."
+    },
+    {
+      "heading":"On Deregulation"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Do you expect deregulation and do you expect it in a couple of industries, or literally are we looking at all of them and thinking about them?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I’m a conservative. I would wish we would deregulate and relook at regulations across all industries. I doubt that will happen. I think it will be concentrated in a couple of verticals mostly driven by a very senior leader in the government who wants to take on the agenda in that vertical. I think it’s generally good for startups. Startup’s thrive on chaos, unpredictability, and flux in the system. And so when you do regulate something, it creates a lot of uncertainty, which maybe be bad for society, or difficult for society at large – and incumbents have challenges with that – but it’s a great opportunity for a new company to take advantages of the tectonic plates shifting."
+    },
+    {
+      "heading":"On Reexamining Everything With Fresh Eyes"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"It seems like the incoming administration’s brand is to say “unconventional rule-breaking got us here,” and so it is probably a license to look at everything with fresh eyes."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I think there is a license to look at things with fresh eyes and you can see some of the appointments the administration is making clearly reflect that. Some are a little bit more traditional."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Any ones that you would mark as traditional versus like a revisiting?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well I think the… for better or for worse, the Secretary of Education, the Administrator of the EPA, are examples of an attempt energy, possibly, examples to rethink from first principles, which will be interesting to see how that plays out I suspect the SEC is a pretty traditional appointee. So, it varies. I think in foreign policy, nobody really knows. I think there’s conflict among several of the senior people that are on the foreign policy team. So, how that plays out and how…"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"That will be a Netflix show."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah, and how the president arbitrates those disputes because they have very different views. I just was watching the new UN ambassador’s testimony this morning, which in my opinion is perfect and awesome, but she disagrees with several other people, including the President, on several things. So, that would be an interesting sort of administration to watch.<br><br>I think it’s healthy that he has hired effectively a diverse set of views. So, take Russia for example. Lots of people on his staff think Russia is evil. Other people think Russia is a great ally and should be trusted, and will be a great counterweight to China.<br><br>Those are pretty different views, and I think it’s a smart thing to have a divergent set of views in the Cabinet, but someone is ultimately going to have to make a decision because the rubber will meet the road at the policy level at some point."
+    },
+    {
+      "heading":"On Impact of Social Media on Domestic & Foreign Policy"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"On this idea or license to rethink from first principles – let’s say the EPA or any other agency – what has enabled us to go from within a 40-year period of building up and trusting institutions all the way to today, in what seems like erosion of that trust and a license to question all of that. How did that happen so quickly?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Social media has played a lot of a role now, particularly Twitter, in allowing people who want to critique the establishment, giving them a platform and an opportunity to develop an audience, and not have to run through people who have filters. The filters tend to take that stuff out. Filters tend to eliminate critiques of the establishment, and those filters are gone. Whether you use Twitter, or whether you use Facebook, or whether you use Reddit, which are really the three major choices. All of those have a lot of people with new ideas, new data, to publish “them” and distribute them, and attract a following, and that changes the debate.<br><br>You’re going to see this for better or for worse. I think in some areas it will turn out really well, that we’ve rethought policies from the first principle. For example, two of my own pet peeves, I have never thought the One China policy makes any sense. However, the foreign policy establishment within the United States has made it impossible for 40 years to revisit that conversation, and then one day Trump woke up, made a phone call, or returned a phone call, and started tweeting about it. And that’s changed 40 to 50 years of American foreign policy, which I think has been for the better. Or two, Trump is proposing to move the US embassy in Israel. That’s fundamentally changing the American foreign policy since the mid 1980s, which was the position, and I think that’s a good thing from my perspective."
+    },
+    {
+      "heading":"On How This “Change” Will Feel"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"There’s a lot of positive examples of rethinking things. The President-Elect is probably more like a bulldozer, and maybe a bulldozer without a refined GPS, and it depends on what you think of the general terrain. If you love the general terrain, he’s going to bulldoze over some things people like. If you don’t think the general terrain is safe or secure or prosperous, then it’s going to be great to have this bulldozer. Because when you bulldoze, who knows what plants are going to emerge? Some of them might be awesome crops. It’s going to depend upon your pre-existing views about the general status of the United States, and general policies, whether you like Trump or not."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And if this wave continues, whether Trump is leading it or not over an eight-year period, the effects of that will be felt like over the rest of everyone’s business lifetime who is watching this."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Absolutely. The consequences are sometimes hard to tell in the short term. Things that look crazy or wrong in the short term turned out to be brilliant, and things that look smart sometimes look disastrous. The classic example that everybody is familiar with is, the government gives us all this advice about what food to eat. It’s basically been wrong for 30 or 40 years, and had you ignored the government’s advice on food, you’d probably be better off, than worse off. That’s why we have all these obese Americans, as people actually listen to the government. Government policy can be terrible for society and it may take 10, 20, 30, 40 years to see that. Sometimes government policy that’s wrong at the time, in short term, may look to be brilliant later."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And it will obviously affect people at different generations, at different times, right? So, it can seem unfair in the beginning and then sort of, in some cases, gets better or worse overtime."
+    },
+    {
+      "heading":"On Healthcare"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" [Healthcare] is a pretty popular topic. Everybody has an opinion on it. But fundamentally, whether you like Obamacare or not, there are some structural problems with healthcare in the United States. Certainly not ideal. They’re certainly better things that we can be investing in that will lead to better lifespans, better outcomes for lots of people. At some point, the American people and the American politicians are going to have to address some of the root causes. So whether repealing Obamacare makes things worse in the short term is part of the question because, obviously, people care about their health care. But the question is: What happens in 2 years, 4 years, 6 years, 10 years? If things got worse for 2 years, but we are fundamentally on a solid plane for the rest of my life, that might be better.<br><br>So, there’s these short-term and long-term trade-offs, and then you layer that all out in politics, which is there are voters who care more about different time dimensions."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And the branding of what policies are in place."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah. Exactly. So, there’s multiple variables."
+    },
+    {
+      "heading":"Obamacare and Replacements"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"In the immediate term, to get micro for a second, what do you think the Congress will do in terms of the desire to, let’s say, “repeal Obamacare”, but then have something in place? What will happen with that?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, I think they are kind of stuck in this crazy box, which is a function of procedural rules, as I was kind of Tweeting about a couple of weeks ago. It’s easy to repeal Obamacare because there’s a way to do that with only 51 votes in the Senate, and there’s not a way to create a new Obamacare. A replacement with only 50 votes, you need probably 60. So, the structural desire to repeal and replace almost can’t be done in one step, which creates this perversity of the only structural way, like procedural way, to do this is may be to have to do a repeal first, without being able to replace technically. But the uncertainty of that to people, to the market, may be too dramatic for people to handle, so the Republicans may need to rethink how to do that, and how to do something that could get 60 votes, or somehow survive a filibuster at the Senate. It’s a very complicated challenge there, because of the filibuster rule that’s still possible."
+    },
+    {
+      "heading":"On Immigration"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Let’s move on to probably the most emotionally-contested issue, which I would say is around immigration. Obviously, in the campaign, a lot of stuff was said that is frankly crazy and scared a lot of people. What are we going to see now with Sessions in place? What should people expect? Will it be more along the lines of people wanting to follow rule of law and saying like everyone needs to be through a system? Or could it go over into another extreme?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I have a counter-intuitive sort of point of view on this – is I actually think that for skilled workers, H1B, traditional immigrants, it’s going to get easier and not harder. Then for unskilled workers, it’s going to get harder and not easier."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Which is what happens in a lot of other advanced countries."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Actually…right. There’s also a logic to that. President Obama, for his own political reasons, linked the two together, and that’s why the term was called Comprehensive Immigration Reform. And his base, the Democrats in power, would not allow any of liberalization of H1B visas without linking it to unskilled labor, particularly from Mexico. So, he insisted it’s all or nothing, and that’s why he got close to it. He actually got close to getting all, but wind up with nothing because of that insistence on linking the two things.<br><br>Republicans are going to delink those two things. They’ve always had the votes. The Republicans in DC have always had the votes to liberalize H1B visas and there’s a lot of Democrats who would support that. I think it’s possible that we see America becomes a shining city on a hill, where if you are talented and you have degrees, technical degrees particularly, it’s easier to get into United States legally, but otherwise it’s going to become more difficult.<br><br>Even Trump in some comments made his point, which is it is insane that we allow people to come here to get graduate degrees at Stanford, down the street, in CS, in Electrical Engineering, and then we kick them out of the country. That makes no sense whatsoever."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Should we expect a likelihood that the INS is one of the places that’s going to be rethought."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" Agencies have different latitudes set by the Congress of filling in the gaps. It’s not clear to me that the INS has a lot of latitude, versus like the Department of Justice, versus the President, and versus the Congress. A lot of these caps are set by congressional action. So, some agencies, like the SEC, famously has incredible discretion. Insider trading has never been defined by the Congress. So, the SEC gets to try to define it, subject it to a lot of court review, but they’ve been given a wide latitude to do what they want. Whereas the INS, I don’t think has nearly as much latitude."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"So in terms of potential financial regulation, the SEC may have more powers vis-a-vis Congress and the executive branch, but when it comes to immigration, it’s actually flipped ?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I think it’s been flipped. Obama has done a lot by executive action. Conservatives, at least, have been very critical of that. So, how that plays out in the Trump administration, whether Conservatives or Republicans support the use of executive action, which they had been very critical of, if they are not hypocritical, they really shouldn’t be having the President set immigration policy directly."
+    },
+    {
+      "heading":"New Administration and The Media"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Let’s look at the new Administration’s relationship with the press at large. So, traditional incumbent media and sort of the BuzzFeeds of the world, and the next BuzzFeed. The Cheddars of the world…"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I don’t have that much to add to it, we need to see it play out. It’s very clear that the President understands that the media is not necessarily his friend, and I think the more disruptive you are as a President, the more adversarial the media is going to be, particularly if you’re Conservative. I mean, there’s lots of studies that show how biased the people who go into mainstream media are, and they cover things disproportionately from a Democratic perspective, but it does appear very clearly that Trump is not going to take this like sitting down. He’s going to punch back. I think one of the things that fueled the rise of Trump was actually more Conservative people saying, “We want someone to punch back for us because nobody is supporting us. Nobody is defending us against attacks from the liberal media.” The best articulation of this that I read in summer of 2015, not ’16, was in the Atlantic of all places. And Trump has the personality to be a fighter, and he’s going to push back on the people that are critiquing him, and that no one knows how it’s going to play out."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And he has nothing to lose now."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, he does. I mean, as you become President, you have social capital, like your political capital. As you expend political capital, it may get depleted. Now if you expend it wisely, it may get increased just like social capital does. So, it’s not like he has some inherent, unalienable ability to do this. It depends on how he uses it, against who does he use it. Lady Thatcher had a bit of this dynamic. She’s obviously very different from Donald Trump, but in many ways, her relationship with a lot of the media in the UK was similar, and her willingness to ignore the media, or push back on the media, was roughly comparable, at least the closest proxy I can think of in my lifetime among the major democratically-elected leaders."
+    },
+    {
+      "heading":"On NATO and Foreign Entanglements"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Regarding foreign policy: One of the things that’s being rethought from first principles is NATO, and other entanglements or obligations that the country has. What should we expect vis-a-vis NATO and in Europe? How could that play out and what are the potential upsides of that and also the potential risks?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I do you think you see a distancing of the US from continental Europe. It depends a little bit on the election. So, France is going through a major election this year where it is possible that a true Conservative, Reaganist kind of a Republican-type person gets elected, which will radically shift French politics. So, that might create a realignment. Germany is going to go through an election that’s going to be quite contentious."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Europe also seems to have a lot of structural economic issues that have been sitting there for years."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"They have been simmering and the EU has masked some of this. They have structural economic issues. Nobody in Europe basically grows. None of those economies grow."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"They have huge unemployment."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yes, unemployment particularly among [young] people. Then you have this immigration and the associated risk of terrorism, and things like that, and insecurity. Then you have in some parts of Europe a vibrant anti-Semitism that has to be confronted as well.<br><br>So, you have serious fundamental problems. It’s not an easy job for anybody. Generally, European economies are heavily-regulated, heavily-taxed. A lot of growth in that dynamic where people are unemployed, and there’s a lot of union power, at least in some of the markets. It’s going to be very challenging. And so I expect a distancing of the US from Europe as they sort out the mess, and the countries in Europe sort out their messes in the US-favorable way, which France probably will. Who knows what happens in Germany? That might lead to some shuffling of the deck. I think our relationship in the UK are probably pretty strong, and so hard to tell how this plays out."
+    },
+    {
+      "heading":"On Globalization’s Future"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Does globalization continue to thrive in the same way it has?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"No. One of the things that people got wrong is everybody assumed it would. This is a classic Peter Thielen point, and I certainly wasn’t aware of this either. Everybody for the last decade or so assumed that we are in this inexorable trend towards globalization, and it looks like that may be false. Everybody just assumed the world is increasingly interdependent, increasingly globalized. There’s just one arc of history and that’s where we are going. For the last 15 years. Almost nobody would take the opposite view. It’s only about the last two years that many people, from economic commentators to conservative leaders, to liberal leaders, like very left-wing leaders, have been taking that view, and it’s seems like there’s a trend against globalization and interdependence. That may be one of the bigger mistakes in history. I think Peter got it right. I think Peter picked up on this a long time ago, but I don’t know too many people that are arguing this more than six to nine months ago."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"If you’re right in that started a reverse or sort of unravel two years ago, what do the next 5 or 10 years look like if that pace continues?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" I think it’s somewhat contrary in perspective. I think it depends upon old school factors, like what’s the natural resources that are particular to our economy. So, countries that have a lot of self-resiliency and potential self-resiliency may do fine. Countries that depend upon an intricate wave of networking and trade may suffer a bit. But generally, globalization has been good. If you believe in comparative advantage and all these things you learn in ECON 101, globalization is good for everybody. I think that’s mostly right. But moving towards a homogeneous future is clearly going to be wrong."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"When you combine the pace of globalization that went on plus the shifting value to knowledge work, and work with certain types of machines, it left a lot of people behind, and those people vote."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Those people do vote and it’s conflating several things. For example, one can be pretty pro-globalization, and still think China is cheating. You can stitch together different views. For example, I think we should probably be a little bit more tough on China in some of the things they do, but I’m still, generally as a person, pretty globalist. Other powers are clearly is manipulating many markets in attempting to take advantage of power vacuums and we’re doing nothing about it."
+    },
+    {
+      "heading":"On World Superpowers"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Are we potentially entering an area of a tripolar world where you have U.S, Russia, China?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" China definitely. Russia is a debatable proposition. It’s not clear that they’re an economic superpower. They’re a historical power, they’re a landmass power, and their population is a power. But it’s not clear that they can get in economic competition with anybody – like China and the United States – and produce things of value, at scale, in a way that leads to long-term power.<br><br>You can make a case that Russia is playing the political game very well, Putin’s playing his chess pieces quite astutely. But today, they have no long-term future on this level."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"That may also be a clue as to where he focuses."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Absolutely. As I said, he’s playing chess pieces quite astutely. He doesn’t have a lot of great chess pieces, but he’s playing them better than anybody else at the moment. I’m not sure that Russia can be a superpower, other than by political manipulation. The underlying, fundamental engine of that country just isn’t on the same scale in any dimension as the United States or China."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"I’m thinking we might see some aggression."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Potentially. What do declining superpowers often do when their economic engine isn’t capable of keeping up with the true superpowers? War and aggression is the more classic moods. They also get more and more desperate, and they do things that are riskier.<br><br>So, it could be a pretty precarious and dangerous situation, but I just don’t think over the next 10, 20, 30, 40 years you can make a case that Russia can keep up with the United States, or China, absent some artificial sort of sweeteners."
+    },
+    {
+      "heading":"On Election Hacking"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Let’s talk about this idea, and it leads back to tech that there was interference with the US election 2016. I know that there’s been interference across many other elections, historically, but this time it turned into more of a political issue. This has been one of the issues, for me, where I feel like I keep up pretty well with the news, but I can’t follow a piece of this. I’m totally lost. I’m waiting for the Wikipedia entry in two years. Walk us through what would you’ve read and what you think has happened, and what the implications are 1) for the US as a country, in terms of its own cyber security defenses, and also what tech incumbents and startups can do as an opportunity around that?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Sure. Cyber security is a great area for technology innovation. We have like three or four companies in our portfolio. The most prominent is called Cylance in LA, doing extremely well.<br><br>More and more companies will invest more and more money in protecting themselves against emerging threats. We have an interesting and innovative one called PatternX, it’s like artificial intelligence-based. There’s going to be a lot of innovation in this area. I mean, it’s just a good and costly thing for VCs to invest in. It’s a great thing for Silicon Valley to compete on.<br><br>The actual election, I have a somewhat nuanced view: to me, this isn’t anything new. I think this is what political enemies do, they attempt to influence outcomes in countries they’re hostile to. The only difference was the Obama administration, for whatever set of reasons, would never admit that Russia and Putin were potential enemies. They didn’t treat Russia like a potential threat, like which Romney and others warned about – Senator Rubio as well – and so they were surprised and shocked that a friend would do something like this.<br><br>Whereas if this had been in the middle of the Cold War, nobody would have been surprised or shocked, if using propaganda or other means, the Soviet Union was attempting to influence outcomes here, or vice versa. I mean, we had Radio Free Europe broadcasting into the Soviet Union. Our propaganda, it turned out to be true propaganda, but propaganda."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"My bias is I’m an Obama fan. I can’t understand how he didn’t inform people. Because it seems like at a certain point, a part of the job is to just inform people of what you’re hearing. My calculus is maybe everyone thought Hillary would win."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" There’s probably some truth to the Hillary’s-going-to-win kind of attitude, but I think it’s more ideological in the sense of not really believing that Russia’s the enemy. You saw his famous clip [of Obama] against Romney, which is “The ’80s called, they want their foreign policy back.” He just doesn’t understand at all that there’s hostile enemies in the world to the United States. He keeps, across every dimension, repeating every mistake in the Jimmy Carter administration. I saw Senator McCain said that exactly this morning, which is funny because I did Tweeted it a few months ago. I’m glad that he’s using my thoughts pulse."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"He’s probably got you on his Twitter list."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah. He’s got my talking plates down.<br><br>Obama, for whatever he’s done in American domestic policy, and whatever positive examples he’s set – I think he set several people will remember for a long time – on foreign policy, unmitigated disaster period. No exceptions."
+    },
+    {
+      "heading":"On Cybersecurity Opportunities"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"On cyber security and technology, will we just see a ramp up of vertical security funds, people moving into security, as a new area?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I don’t know about vertical funds because, as you know, from raising funds and researching that stuff, it’s hard to move on a dime. It’s hard to create funds from scratch, move, and all of a sudden start being in business. I do think there’ll make an emphasis on it.<br><br>I’ve mentioned that one of my goals for this year is to help start or jump start a new company. One area, probably the single area I’m most interested in, is in cyber security and I’m actively working on something in that area right now, and trying to pull together some pieces.<br><br>So, I think you’ll see a lot of, and I’m not a historically cyber security person, I just think that there’s a clear set of opportunities, a clear set of DNA and skills, that should combine together at the right time, the right place, and so I’ll apply these. I’ll be spending a lot of time personally on that this year. But, I think you’ll see a lot of lot that opportunistic investing, opportunist founding."
+    },
+    {
+      "heading":"On Bringing Jobs Back"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"I hate using these buzzwords, but I have to. The combination of robotics and automation that drives it are going to take a lot of jobs away. I think this month already, and we’re about halfway through, I got three pitches for really talented robotics engineers trying to do something in agriculture, all different models. You could just see it coming. We have really smart people working on it. Part of the campaign that put the new administration in power was sort of on bringing jobs back. That was a marketing message. What’s going to be the reality over the next five, 10 years?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"We’re clearly going to be seeing increasing use of robotics in agriculture and in other fields. What’s not obvious is what the sort of second-order effects are, with a dynamics system or static analysis, which is just… I mean, you know, Marc Andreessen when he’s Tweeting would always Tweet these graphs, which show, at least historically, every time there’s been a massive industrial movement it’s created more jobs net, than have been sacrificed.<br><br>Now, that doesn’t mean in a compressed period time, like in the first month or first year. But overall, technology has empowered people and create better and higher-paying jobs through every sort of epic of history. Maybe this is different, maybe it’s not. I think you can debate that, but it’s not as superficially obvious as, “Tech’s going to replace jobs. Hence, there are no jobs. Hence, everybody gets paid less.” I think that’s probably the wrong narrative."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"You’re saying that there’ll probably be a transition. There’ll probably be new jobs emerging that we don’t know of yet, and that in any sort of change, which has been kind of a theme in our conversations, there’s going to be a lot of people that don’t like it because of the inherent uncertainty in it>"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"It certainly is an interesting dynamic. Fundamentally, when you have uncertainty, you get the worst of all across bridges. You have people who fear the change – because they’re happy or satisfied where they are – and yet you don’t yet see the benefits. So, there’s few supporters and a lot of enemies.<br><br>Whereas, let’s take a different one that’s going to play out probably differently: self-driving cars. Self-driving cars are interesting because people can immediately grok the potential benefits. A lot of times, we see flux in innovation, that the pool of people that see the benefits can realize it, that want it, that demand it, and crave it, is pretty small. So, you have all the old people voting against it and not enough new people.<br><br>Self-driving cars. Because 40,000 people die every year. Because driving is a pain in the ass. Because driving is wasted time. All these reasons that causes traffic, and all this stuff. Fundamentally, cars are expensive. Whatever the case is, people don’t like their cars and would love to have self-driving cars emerge. A lot of people.<br><br>So, there’s people on the positive side championing more than you usually see for a type of breakthrough. So I think self-driving cars almost surely do emerge and I think because the regulatory structure where it’s possible to innovate in some states, but not all states, get evidence of the decrease in drunk driving, get evidence in the decreasing death. Then, other states will have to keep up once the evidence is clear."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"The argument people use there is if you extrapolate out to different sorts of automobiles, that you’ll end up with trucking."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And that turns into a political issue."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I think it does because trucking is still very large. I mean, there’s this analysis that suggests that in 30 somewhat states trucking is still the largest profession. It seems very counterintuitive to people who live in Silicon Valley, I admit. But 2) I think trucking is right for quick innovation. Whereas there’s usually two drivers, I think you will see as one driver, one machine, and that cuts the job. Now, that said trucking is suffering a recruiting shortage at the moment."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"It’s one of the toughest jobs."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"It’s a tough job for obvious reasons. But if you look at the new people becoming truckers, it actually has slowed down significantly. So there is like a drivers shortage kind of bubbling up anyway and that may modulate the effects of this transition. Yes, there’s a lot of truckers. Yes, some of them will potentially be exposed. But there’s not a lot of new people that want to be truckers and so the ability to ship things is dependent upon new truckers emerging, and they’re not emerging."
+    },
+    {
+      "heading":"Some Predictions and Democrats’ Future"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Okay. Let’s move into some more personal predictions. Let’s see here. Okay, two-term president barring any health issues. Two-term president."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Wow."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Can the Democrats… I mean, this is a separate question. Can the Democrats find someone to counter in this short period of time?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, they get a 2-year pass, so you don’t really need to know until after 2018. That’s a long time politics and the dynamics will be different, and Trump will often run on his record. Right? To some extent, the dynamics of re-election are a little bit different, is you’ll have to have at least some key accomplishments. You may have some negatives, but you have to have some key accomplishments. That’s something pretty important. Usually, the reelection is mostly a referendum on the current President, not the alternative candidate. That said, the Democrats have an age issue, which occasionally I will re-Tweet about usually, is all the leaders in that party are ancient. When I mean ancient, I mean they’re in their 70s or 80s, and it’s not clear who the next generation is or could be. Whereas at least on the Republican side, obviously Trump is 74 or whatever he is – or 69 or 70, whatever he is – but most of the leaders in the congressional branch, and the House and Senate, are quite young, like 40s and early 50s. So, there’s like a bench."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"If you wind the clock back a year, I think there are few sins in the Democrats, in terms of strategy, but not having a deep bench thought that they could unify very quickly. The problem was they unified around the wrong candidate in that sense. Whereas the Republicans had a very deep bench where people thought it was going to get ripped apart."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah. Well, 17 people ran for the Republican nomination. We make fun of them, and lots of people make fun of them now, but on paper, the credentials of the 17 people running were quite impressive. You’re talking about Governors from Texas, from New York, from Illinois, from even Michigan, from every like large state you could imagine.<br><br>The Republicans had an interesting field. Most who are up and coming, meaning in their 40s and 50s that were running on the Republican side, but it was a pretty vibrant competition. Trump to his credit, and people underestimate this, has managed to destroy the elites in the Republican Party and the Democratic Party at the same time. That’s precisely whether you think it’s good or bad. It’s incredibly oppressive for one person to literally destroy 17 people on the Republican side and then go over into the other party and win too. That’s a shocking disruption in some ways. But I think the Democrats have a bench problem. But they have another two years to kind of figure that out. I mean right now, their initial reaction to losing hasn’t been incredibly invigorating, but I don’t think they’re on the clock yet until 2018. In 2018, we’ll then start the clock and we’ll see what kind of person is the right antidote to Trump. But he’s going to have to accomplish some things. Otherwise, almost any Democrat can beat him if he accomplishes nothing."
+    },
+    {
+      "heading":"Most Promising and Most Troubling"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"What about for you, what seems the most promising to you in terms of the change that’s going to come, and the most troubling? If you had to isolate one on each."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"The most promising is one or two things that I already sort of alluded to. One is that I feel friends around me who want to get more engaged in politics, maybe actually even be willing to run for office, and I think that’s very liberating that people no longer believe that unless they devote their entire life in the time they’re 28 to 50, to politics, that they can’t run for office. So, I think that’s an incredible development that Trump has fueled. The second thing is, I think, rethinking first principles, at least, in some dimensions. There’s just sort of a lot of corrosive accumulation of debt, intellectual debt, that sort of accumulated over the years in politics. Trump, for better or for worse, sometimes not even knowing why, is sort of unlocking new thinking and new opportunities there, and some of that might turn out to be a very good thing."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"What’s most troubling to you about the change that could come?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, I think it is a little reckless in some cases. For example; one thing – and a little detail that not anybody will know – is generally when the President of the United States speaks on foreign policy, there’s a separate approval process for his or her speeches that it goes through, compared to a domestic policy speech. The whole point of that is to make sure the President doesn’t accidentally say the wrong thing. There’s, in fact, a different speechwriter that usually works on it, but also there’s a speechwriter who is classified with national security clearance, and then there’s an approval process that’s totally different than when you give a domestic speech. So, it’s very easy to make a mistake, like the wrong word, the wrong word translated in the wrong way, causes problems. Clearly, Trump is going to be Tweeting, and so I doubt those Tweets are getting the same level…"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Is that convention or is that law?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"It’s convention, but it’s done for… not every convention’s bad. Silicon Valley, right? A lot of conventions are bad and dumb, and that’s what we get paid for doing."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Part of the reason I was asking for that clarification is I asked a bunch of friends on Facebook… again, to be clear, I was not voting for Trump, but I was trying to assess during the campaign what things in the campaign did his sort of campaign did that were illegal, and I couldn’t find."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah, I don’t know that."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"All of it was like challenging conventions, right?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah. He’s challenging convention, but not all convention is bad. I mean, we get paid in Silicon Valley for exposing convention, change of convention. But just like to be reckless to rebuild every part of a company, from scratch, and so in the Valley like none of us would counsel our founders to rethink every part of building a company. I think rethinking everything and changing every convention, and disregarding them all might also be dangerous too, but you want the upside. Even the upside is some of the recklessness leads to revolution, and revolution can be powerful and empowering."
+    },
+    {
+      "heading":"On Carried Interest"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Sort of a nominal issue compared to things we’ve been talking about. What about this idea around carried interest and what will happen? I don’t really follow that."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"The carried interest debate is fundamentally around whether the carry that VCs get, which is the compensation that’s a huge fraction of our job is taxes, long-term capital gains, or regular income. It’s historically been taxed as long-term capital gains and that’s allegedly fueled the entire industry of venture capital. There has been both Trump and Hillary Clinton brand on campaign that they would eliminate this alleged loophole. It’s not really a loophole because it potentially expressed some flaw, but this alleged loophole… and Obama also did nothing about it. And the reason why it becomes problematic is it’s also used by a lot of hedge funds the way it’s currently drafted, and I don’t think venture capital or hedge funds are the same. But so it’s unclear or whether there’s going to be any change to the law. It’s kind of a silly change because the system we have is working. If you just look at venture capital, even if you change the amount of money the federal government would raise is fairly small, because there’s not that many venture capitalists, and it does create risk to the venture capital system."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"And most don’t even get in the carry."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, yeah. That’s true too, right. Unless you’re a successful venture capital investor, you don’t get a lot of carry, or any. Unless you’re getting carried, it’s obviously not taxed. Now, one potential impact is Trump is, at least, allegedly going to lower personal income taxes into the income tax rates. If they get reduced and the capital gains rates stay the same, the spread between the two may get compressed, in which case the difference doesn’t matter.<br><br>So where all of this policy matters is if there’s a big difference between personal income tax rates and long-term capital gains treatment, that obviously creates incentives, and incentives are pretty important to people. But if you harmonize the two or the gap becomes small, then the difference doesn’t matter as much. For example; this isn’t going to happen, but if Trump implemented a flat tax at 15%, it wouldn’t matter what the capital gains rate was because it’s going to be the same or below.<br><br>In any event, nobody is sure what’s going to happen. I think most of Silicon Valley thinks that they can discriminate between hedge funds and venture. I can think of lots of ways to do it, some which have already been proven in law. We went through this era from 2008 to 2012 where small business investments were exempted from federal capital gains treatment, between 25 and 75% exclusion, so there’s a precedent for that, when you invest in companies that were worth less than $50 million. So we could live as venture investors pretty easily, if you just exempted investments below, let’s say, $100 million of value, qualified them for capital gains treatment, I think everybody could be happy."
+    },
+    {
+      "heading":"On A Trump Bump"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"One more market question: Do you expect, like many people, a Trump bump in terms of the economy? I mean, we’re already seeing a little bit."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Well, the economy’s clear. The markets are clearly have not collapsed, which many people predicted would happen. Because of the implicit volatility and unpredictability, usually markets are afraid of that, and you haven’t seen any of that. I think the reason why, in so far as I can detect it, is the markets were baking in a lot of increased regulation and micromanagement of the economy by Democrats and Hillary. As soon as that went away, you were discounting by the volatility and potential recklessness of the President, but this overhang of we’re going to over-regulate the United States, and overtax the United States, went away as well. So net-net, the markets have been and are actually are pretty positive."
+    },
+    {
+      "heading":"On OpenDoor"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Let’s talk inside-baseball, non-politics, Trump-related. Give us a quick update on OpenDoor."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah, so OpenDoor company is growing. It’s still rather fast and sometimes shocking that you wake up and there’s like over 200 employees that work there. We’re going to need to move to like our third office or something crazy like that. Growing the team. We’re recruiting very actively. We finally added a CFO, which is nice for a company like ours. Very, very, happy. It’s got the opportunity to be one of these incredible companies. We have a lot of work to do, though. The problems only get harder, the challenges get harder, and people align in the team correctly, and figuring out what DNA you need to add. All that stuff gets more challenging as you have more product market, fit not less. So, lots of work to do. Lots of stress to confront, but very optimistic."
+    },
+    {
+      "heading":"On Non-Tech M&A of Startups"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"What about this idea that they’ll be some kind of bailout for Silicon Valley, from non-tech companies through M&A?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"You’re definitely seeing some of that play out right now where I think there are… just, you know, you talk about asymmetric of these observations is when Andreessen wrote software is going to eat the world. You’re seeing that now play out that software is eating every industry. Some of the incumbents are realizing that and saying, “Okay, well how do we buy some software.” And some of these incumbents have a lot of money certainly on their balance sheet, or market cap, and so they can leverage some of that even from a defensive perspective, at the level of offense."
+    },
+    {
+      "heading":"On Big Startups Crashing"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I think that may be a savior for a lot Silicon Valley companies because I think 2017, personally, the first six months is going to be a disaster. I think you’re going to see the Pebble story, the Beepi story, the ProductHunt story play out every week."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"There’s so many more coming."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Oh my God. I think there’s going to be literally at least one a week of a high-profile company that absolutely crashes and burns into maybe a talent acquisition kind of style thing. Basically, any high profile company that raised money over two years ago with a high burn rate that hasn’t raised since is probably in deep trouble. So, I think that this is going to be a very depressing year in many ways."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"You think there’s going to be this kind of weekly drumbeat of, “Oh there’s a company that I know or maybe it was a customer of, or had friends that,”…"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Absolutely."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"…that raised a lot of money."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"In 2013, 2014, particularly."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Those stories will compound on each other."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"There’s going got to be at least 50 of those companies out there. I think we’ve just seen the tip of the iceberg on this."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"If you’re right on this, that seems like it would take, in terms of the energy in the ecosystem, or the sort of exuberance, it could last a year."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Yeah. I mean, it’s a little bit of tale of two cities. You’re also going to see Snapchat thriving. You’re going to see, as we’ve talked about, OpenDoor growing. They’ll be the companies that have done very well over the last two-three years strike. There’s clearly companies with massive momentum that are changing the world and going to continue to thrive. To prove your point about network effects and lock-in, that will only get better. But, I think the companies that have a high burn rate, that couldn’t get their marginal cost structure to be correct, and that raised capital at a high price, are in for a very high-speed collision with a wall this year, and particularly the first six months. It takes two or three years to wash this stuff out the system. Because, generally, you raise money that can last for two, three years, but nobody wants to fund those companies. Nobody’s looking to fund a broken company at the moment. People all want… and so far as to paying a high price, or spending a lot of dollars, they want a high upside, high growth, high potential company, not something that might have missed its window."
+    },
+    {
+      "heading":"On Non-Tech M&A Trends"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"One question for myself is to benefit on that. I haven’t been around that long, but it seemed like in the past when venture capitalists would help bridge a connection from one of their portfolio companies – so let’s say a local technology company – then I’d say, “Oh well if you’re looking for a security solution. Here you go.” If we see more non-tech, let’s say across the U.S., or even global companies that are not inherently technology companies, finance companies, how can investors add value in helping broker or sort of plant the idea for those types of sales?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"It may be an interesting point of leverage for venture investors to forge relationships on a sustained basis with large Fortune 500 potential acquirers that are not technology-based, because founders generally won’t have that network. We can justify across a wide set of companies and say, put on for example, have what’s called the Customer Day by some, put on a slate of let’s say 15, 20 of our portfolio companies, have a significant executive presence from Target, or name your favorite non-tech company, come and meet the most interesting companies, see which ones they might want to partner with, invest in or acquire."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"It just seems like even with some of the best VC firms here, their networks necessarily don’t expand to the large CPG, or oil and gas."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"They may hire some people to help with that. In healthcare. So for example, we do a lot of healthcare investing at Khosla, so actually 20, 25% of our portfolio is related to health.<br><br>So, we’ve intentionally spent a lot of time forging relationships with senior leaders in traditional healthcare companies. As you invest in a vertical or a domain, you may want to have your partners or complements to your partners spend a lot of time forging those relationships."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"What are the backgrounds or specs of those types of people that can bridge that gap or help understand that? Because you’ve got to understand what’s happening here, but then they have to have those personal relationships."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"This is a tricky hire. It’s a challenging hire because, fundamentally, what we need is someone who understands that the key strategies for those companies, like the top two or three things. At least, you’re not going to spend $600 million on one of our companies, unless it aligns with the CEO’s top two or three initiatives. So, someone who has that level of visibility of insight into what are the top challenges for this company or versus that company, and then b) understands technology and the landscape here well enough to be able to identify which companies might fit. So, it is a challenging hire.<br><br>There are some people occasionally that have worked at a variety of tech companies and grew up in CPG, or something like that, or vice versa. You can find it, but it’s not a natural combination."
+    },
+    {
+      "heading":"What’s Over- and Under-Hyped?"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Got it. Okay, so last question, and thank you so much, Keith for your time. Right now what would do you see as the most overhyped thing in tech startups, and the most under-hyped thing?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"Overhyped. I still think the VR is mostly overhyped. I like AR a little bit more in terms of its use cases and potential adoption. Under-hyped…"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Just expand on that. Do you think VR is overhyped in terms of its time to hit the market or just in general as a consumer?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"I don’t think it’s a consumer platform. It’s an entertainment device, whereas AR actually can become a consumer platform. The only question is: Is the AR here? This is something we’ve never thought and haven’t thought about yet, but that, to me, is like a no-brainer. Then under-hyped? I’m not really sure mostly because I don’t tend to think that way, meaning I’m sort of like a founder-driven investor, so I don’t have a lot of micro hypothesis about the world. I generally wait for a founder to walk in and teach me about the world, and so I don’t have like, “Oh I would love to find X.”"
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"Let’s ask about it and I’m that way too. What are you seeing now. Any trends of founders coming in, let’s say, that are under 25? Then maybe, they still haven’t sort of… I feel like now we’re going to… the people who are 25 and over, they may have started one company, maybe two and there’s still some gas in the tank. What about people coming in under 25? Are you seeing any sort of differences in between them?"
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":"They’re interested more interested in healthcare, which is interesting. Three or four years ago when I started investing here, I started investing in healthcare and not everybody was interested like we were doing recruit for our portfolio. There were some people who were interested, but you had to talk to a lot of people that’d be like rejections. “Oh, it’s regulated. Blah, blah, blah, blah. There hasn’t been any massive companies created for a long time,” blah, blah, blah, all these excuses. Now among young founders, there’s a lot of interest in healthcare innovation. So, that’s great and we like to endorse that. Clearly, they ask about AI, and want to talk about AI, and machine learning, and all that stuff."
+    },
+    {
+       "narrator":"Semil Shah",
+       "text":"That seems like just now going to be baked into everything."
+    },
+    {
+       "narrator":"Keith Rabois",
+       "text":" Yeah. that’s … my personal opinion is an independent AI based company doesn’t make a lot of sense. Not all the partners agree with me. But fundamentally, I think it’s a use case. It’s powering a specific use case, a specific vertical with AI, where you have proprietary data and access to propriety data, and you have a very specific value proposition that has economic transformation that you’re unlocking. I don’t believe in a general AI sort of startup, barring, extraordinary circumstances. Then, we have invested in a few, so there are times where there’s extraordinary circumstances. But if I was counseling a younger founder in Milwaukee and say I’d stand up and say, “Go find a real problem to solve, and then show me how you’re going to use proprietary data and AI to solve that problem in a way that’s 10 X better than what people do today,” that’s a company."
+    }
+  ]
+}
