@@ -291,8 +291,15 @@ $(document).ready(function() {
       },
       observeChanges : true
     });
+
   $('.dfa-btn-donate').click(function() {
     $donateModal.modal('show');
+  });
+
+  $('#dfa-donate-widget .dfa-btn-donate').click(function() {
+    var data = $(this).data();
+    console.log('.dfa-price-option[data-value="'+data.value+'"]');
+    $donateModal.find('.dfa-price-option[data-value="'+data.value+'"]').trigger('click');
   });
 
   $.getScript('https://checkout.stripe.com/checkout.js', function() {
@@ -349,9 +356,43 @@ $(document).ready(function() {
     })
   ;
 
-  $('#donate-progress').progress({
+  $('#dfa-donate-progress').progress({
     percent: 16
   });
+
+  function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    var days = Math.floor( t/(1000*60*60*24) % 30 );
+    var months = Math.floor( t/(1000*60*60*24*30) );
+    return {
+      'total': t,
+      'months' : months,
+      'days': days,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
+
+  function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    var timeinterval = setInterval(function(){
+      var t = getTimeRemaining(endtime);
+      clock.innerHTML = '<div class="blue statistic"><div class="value">'+t.months+'</div><div class="label">Months</div></div>' +
+                        '<div class="orange statistic"><div class="value">'+t.days+'</div><div class="label">Days</div></div>' +
+                        '<div class="orange statistic"><div class="value">'+t.hours+'</div><div class="label">Hours</div></div>' +
+                        '<div class="red statistic"><div class="value">'+t.minutes+'</div><div class="label">Minutes</div></div>' +
+                        '<div class="red statistic"><div class="value">'+t.seconds+'</div><div class="label">Seconds</div></div>';
+      if(t.total<=0){
+        clearInterval(timeinterval);
+      }
+    },1000);
+  }
+
+  initializeClock('dfa-time-count', 'December 31 2017');
 
   // var $fixedShare = $('#fixed-share-btn');
   $fixedShare.find('.subscribe').click(function(){

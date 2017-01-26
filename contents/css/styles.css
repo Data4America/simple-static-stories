@@ -52264,6 +52264,31 @@ input::-moz-focus-inner {
   font-size: 2.5em;
   margin-bottom: 0.3em;
 }
+#dfa-donate-progress {
+  border: 4px solid rgba(27, 26, 26, 0.14);
+  margin: 1em;
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+#dfa-donate-progress .bar {
+  background-color: #21ba45 !important;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+#dfa-donate-progress .progress {
+  color: white;
+}
+#dfa-time-count {
+  display: inline-block;
+  margin: 0.5em auto 1em;
+}
+#dfa-time-count .statistic {
+  margin: 0em 0.2em 0em;
+}
+#dfa-time-count .value {
+  font-size: 2.5em;
+}
 #dfa-data-viz-tab {
   background: #269f74;
   margin: 1em 0em;
