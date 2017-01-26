@@ -19,30 +19,6 @@ block content
       a(href="https://www.facebook.com/BigThinkdotcom", target="_blank") Facebook 
       | fans, and 100,000+ followers on 
       a(href="https://twitter.com/bigthink", target="_blank") Twitter.
-    //- ol.list
-    //-   li We're publishing 
-    //-     a(href="http://lifemap.io", target="_blank") Lifemap
-    //-     |  on the 
-    //-     a(href="http://www.huffingtonpost.com/entry/the-lifemap-of-hillary-clinton-by-data4america_us_57ba0a08e4b07d22cc38a2a2", target="_blank") Huffington Post. 
-    //-     | Lifemap is the history of policy and the people who shape it in 100 characters or less.
-    //-     
-    //-   li We're producing a Podcast called 
-    //-     a(href="/unplugged" , target="_blank") Unplugged
-    //-     | . 
-    //-     a(href="http://bigthink.com/" , target="_blank") BigThink.com 
-    //-     | will be our exclusive distributor of our podcast 
-    //-     a(href="/unplugged", target="_blank") Unplugged. 
-    //-     |  They'll push to their 700k+ unique website visitors, 2.4 Million  
-    //-     a(href="https://www.facebook.com/BigThinkdotcom", target="_blank") Facebook 
-    //-     | fans, and 100,000+ followers on 
-    //-     a(href="https://twitter.com/bigthink", target="_blank") Twitter.
-    //-     
-    //-   li We just finished 
-    //-     a(href="/updates/august-2016/", target="_blank")  Season One
-    //-     |  at Data4America where, with the help of 
-    //-     a(href="/supporters", target="_blank") 15 donors 
-    //-     | and 100+ event attendees, we published over 26 pieces of original content. We're now raising support for Season Two. You can help us with a tax-deductible gift 
-    //-     a(href="/donate", target="_blank") here.
 
   h1.ui.horizontal.divider.header.red(style="margin:2em 0 0.5em") DATA SCIENCE
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0.5em 1em;") Bringing data science to the understanding of politics
@@ -118,30 +94,7 @@ block content
               
           div.row(style="padding: 0.5em 0px;")
             div.column
-              button.ui.fluid.button.huge.blue.dfa-btn-donate(style="background-color:#004f81;") Donate Now
-              
-      div.ui.red.segment.inverted(style="margin:1em auto 0px;")
-        div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
-          div.field
-            input(type='email', name='email', placeholder='Email Address')
-          button.ui.button.orange.fluid Send Me Content
-
-        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
-          i.send.icon
-          | Thank you for subscribing.
-
-      //- div.ui.segment(style="max-width:258px; margin:3em auto 1em;")
-      //-   a(href="https://www.facebook.com/data4america", target="_blank").ui.facebook.button.fluid
-      //-     i.facebook.icon
-      //-     |   Like us on Facebook
-      //-   a(href="https://www.twitter.com/data4america", target="_blank").ui.twitter.button.fluid(style="margin-top:1em;")
-      //-     i.twitter.icon
-      //-     |   Follow us on Twitter
-      //- 
-      //-   div.ui.divider
-      //-   h2.ui.header.center.aligned(style="font-size: 1.2em; font-weight:300; font-style:italic; margin-top:0px;") Help us reach our $250,000 funding goal by December 30th. Make a tax-deductible donation.
-      //-   button.dfa-btn-donate.large.ui.button.red.fluid Donate          
+              button.ui.fluid.button.huge.blue.dfa-btn-donate(style="background-color:#004f81;") Donate Now       
 
   h1.ui.horizontal.divider.header.orange(style="margin:2em 0 0.5em") UNPLUGGED
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0.5em 1em;")  A podcast exploring the intersection of government, technology, and the future.
@@ -182,7 +135,19 @@ block content
                     img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
 
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
+    
+    div.column
+      div.ui.red.segment.inverted
+        div#dfa-email-content.ui.form
+          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
+          div.field
+            input(type='email', name='email', placeholder='Email Address')
+          button.ui.button.orange.fluid Send Me Content
 
+        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
+          i.send.icon
+          | Thank you for subscribing.
+          
   h1#dfa-data-viz-header.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0.5em 1em;") Bringing data visualization to the understanding of politics
 

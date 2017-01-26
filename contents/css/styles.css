@@ -52273,8 +52273,6 @@ input::-moz-focus-inner {
 }
 #dfa-donate-progress .bar {
   background-color: #21ba45 !important;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
 }
 #dfa-donate-progress .progress {
   color: white;
