@@ -145,7 +145,6 @@ $(document).ready(function() {
   });
 
   $('.article-actions .ui.button.facebook, .dfa-header-article-share.fb').click(function() {
-    console.log(this.dataset.url);
     FB.ui({
         method: 'share',
         href: this.dataset.url
@@ -298,7 +297,6 @@ $(document).ready(function() {
 
   $('#dfa-donate-widget .dfa-btn-donate').click(function() {
     var data = $(this).data();
-    console.log('.dfa-price-option[data-value="'+data.value+'"]');
     $donateModal.find('.dfa-price-option[data-value="'+data.value+'"]').trigger('click');
   });
 
@@ -379,17 +377,19 @@ $(document).ready(function() {
 
   function initializeClock(id, endtime){
     var clock = document.getElementById(id);
-    var timeinterval = setInterval(function(){
-      var t = getTimeRemaining(endtime);
-      clock.innerHTML = '<div class="blue statistic"><div class="value">'+t.months+'</div><div class="label">Months</div></div>' +
-                        '<div class="orange statistic"><div class="value">'+t.days+'</div><div class="label">Days</div></div>' +
-                        '<div class="orange statistic"><div class="value">'+t.hours+'</div><div class="label">Hours</div></div>' +
-                        '<div class="red statistic"><div class="value">'+t.minutes+'</div><div class="label">Minutes</div></div>' +
-                        '<div class="red statistic"><div class="value">'+t.seconds+'</div><div class="label">Seconds</div></div>';
-      if(t.total<=0){
-        clearInterval(timeinterval);
-      }
-    },1000);
+    if (clock) {
+      var timeinterval = setInterval(function(){
+        var t = getTimeRemaining(endtime);
+        clock.innerHTML = '<div class="blue statistic"><div class="value">'+t.months+'</div><div class="label">Months</div></div>' +
+                          '<div class="orange statistic"><div class="value">'+t.days+'</div><div class="label">Days</div></div>' +
+                          '<div class="orange statistic"><div class="value">'+t.hours+'</div><div class="label">Hours</div></div>' +
+                          '<div class="red statistic"><div class="value">'+t.minutes+'</div><div class="label">Minutes</div></div>' +
+                          '<div class="red statistic"><div class="value">'+t.seconds+'</div><div class="label">Seconds</div></div>';
+        if(t.total<=0){
+          clearInterval(timeinterval);
+        }
+      },1000);
+    }
   }
 
   initializeClock('dfa-time-count', 'December 31 2017');
