@@ -355,7 +355,7 @@ $(document).ready(function() {
   ;
 
   $('#dfa-donate-progress').progress({
-    percent: 16
+    percent: 24
   });
 
   function getTimeRemaining(endtime){

@@ -61,11 +61,7 @@ block content
         h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
         
       div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding: 1em 0px 0px;")
-      
-        div.ui.large.progress
-          div.label 
-            span(style="font-weight:300; font-size:1.5em;") $40,000 
-            | of $250,000
+        p(style="margin: 0px 2em; text-align: right; font-weight: 300;") 76% remaining
         
         div#dfa-donate-progress.ui.large.active.progress.indicating
           div.bar
@@ -90,7 +86,7 @@ block content
             div.column
               button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="500") $500
             div.column
-              button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="1000") $1000
+              button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="1000") $1,000
               
           div.row(style="padding: 0.5em 0px;")
             div.column
@@ -116,7 +112,17 @@ block content
                   div.item-text!= article.metadata.description
 
               div.item-details
-                mixin podcastAuthor(article.metadata.author)
+                if article.metadata.author
+                  mixin podcastAuthor(article.metadata.author)
+                if article.metadata.authorExtra
+                  - var details = article.metadata.authorExtra.split('|')
+                  span.author
+                    | Hosted by: 
+                    b
+                      a(href='mailto:undefined')= details[0]
+                      a(href='https://twitter.com/'+details[1], target='_blank', style='color:#4099FF;')
+                        i.ui.twitter.icon(src='/img/mini-logos/twitter.png')
+                
                 div.ui.bulleted.list
                   if article.metadata.links
                     - var links = article.metadata.links.split(',')
@@ -135,6 +141,8 @@ block content
                     img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
 
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
+                  
+              
     
     div.column
       div.ui.red.segment.inverted
