@@ -24,6 +24,44 @@ block content
 
     div#dfa-unplugged.episode(data-guest=podcast.guest, data-twitter=podcast.twitter)
       div.podcast(data-url=(podcast.mp3 ? podcast.mp3 : ''), data-guest=podcast.guest)
+      
+        a.image(href=podcast.link)
+          img(src=podcast.artwork)    
+
+          if podcast.moreLinks
+            p.links.hidden
+              if podcast.twitter
+                i.icon.twitter(style="color:#1DA1F2;")
+                a(href='https://twitter.com/' + podcast.twitter, target="_blank")='@' + podcast.twitter
+              if podcast.email
+                span.space!='&#183;'
+                i.icon.grey.mail
+                a(href='https://mail.google.com/mail/?view=cm&fs=1&to=' + podcast.email + '&su=&body=', target="_blank")=podcast.email
+              if podcast.book
+                span.space!='&#183;'
+                i.icon.orange.book
+                a(href=podcast.book.url, target="_blank")=podcast.book.name
+              if podcast.articleInline
+                span.space!='&#183;'
+                i.icon.red.bookmark
+                a(href=podcast.articleInline.url, target="_blank")=podcast.articleInline.name
+              if podcast.books
+                br
+                each book, i in podcast.books
+                  i.icon.orange.book
+                  a(href=book.url, target="_blank")=book.name
+                  if i === 0
+                    span.space!='&#183;'
+              if podcast.article
+                br
+                i.icon.red.bookmark
+                a(href=podcast.article.url, target="_blank")=podcast.article.name
+
+            div.more-link
+              a(href="javascript:;")
+                i.chevron.down.icon
+                span More Details
+              
         h1.ui.header.title=podcast.guest
           if podcast.twitter
             a(href='https://twitter.com/' + podcast.twitter, target="_blank")
@@ -74,43 +112,6 @@ block content
                   a(href=host.linkedin, target="_blank")
                     i.ui.linkedin.square.icon
                 !="&nbsp;"
-            
-        a.image(href=podcast.link)
-          img(src=podcast.artwork)    
-
-          if podcast.moreLinks
-            p.links.hidden
-              if podcast.twitter
-                i.icon.twitter(style="color:#1DA1F2;")
-                a(href='https://twitter.com/' + podcast.twitter, target="_blank")='@' + podcast.twitter
-              if podcast.email
-                span.space!='&#183;'
-                i.icon.grey.mail
-                a(href='https://mail.google.com/mail/?view=cm&fs=1&to=' + podcast.email + '&su=&body=', target="_blank")=podcast.email
-              if podcast.book
-                span.space!='&#183;'
-                i.icon.orange.book
-                a(href=podcast.book.url, target="_blank")=podcast.book.name
-              if podcast.articleInline
-                span.space!='&#183;'
-                i.icon.red.bookmark
-                a(href=podcast.articleInline.url, target="_blank")=podcast.articleInline.name
-              if podcast.books
-                br
-                each book, i in podcast.books
-                  i.icon.orange.book
-                  a(href=book.url, target="_blank")=book.name
-                  if i === 0
-                    span.space!='&#183;'
-              if podcast.article
-                br
-                i.icon.red.bookmark
-                a(href=podcast.article.url, target="_blank")=podcast.article.name
-
-            div.more-link
-              a(href="javascript:;")
-                i.chevron.down.icon
-                span More Details
         
         if podcast.panel        
           div.panel
