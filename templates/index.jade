@@ -61,9 +61,9 @@ block content
         h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
         
       div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding: 1em 0px 0px;")
-        p(style="margin: 0px 2em; text-align: right; font-weight: 300;") 76% remaining
         
         div#dfa-donate-progress.ui.large.active.progress.indicating
+          p(style="text-align: right; font-weight: 300; position: absolute; right: 10px; top: 10px; font-size:0.8em;") 76% remaining
           div.bar
             div.progress
             
@@ -96,7 +96,9 @@ block content
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0.5em 1em;")  A podcast exploring the intersection of government, technology, and the future.
   div.dfa-feed.ui.three.column.stackable.grid
 
+    - var count = 0
     each article in articles
+      - count++
       if article.metadata.isPodcast
         - url = article.metadata.link ? article.metadata.link : article.url
         - ext = article.metadata.link ? true : false
@@ -141,20 +143,19 @@ block content
                     img.ui.tiny.image.unplugged-image(src="/img/unplugged-logo.png")
 
                   p.item-date= moment.utc(article.date).format('MMMM D, YYYY')
-                  
-              
-    
-    div.column
-      div.ui.red.segment.inverted
-        div#dfa-email-content.ui.form
-          h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
-          div.field
-            input(type='email', name='email', placeholder='Email Address')
-          button.ui.button.orange.fluid Send Me Content
+        
+        if count == 2
+          div.column
+            div.ui.red.segment.inverted
+              div#dfa-email-content.ui.form
+                h2.ui.header.center.aligned.inverted(style="font-weight:300; font-size: 1.5em; font-style:italic;")  Join a bunch of others and have new Data4America content emailed to you.
+                div.field
+                  input(type='email', name='email', placeholder='Email Address')
+                button.ui.button.orange.fluid Send Me Content
 
-        h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
-          i.send.icon
-          | Thank you for subscribing.
+              h2#subscribed-message.ui.header.center.aligned(style="font-weight:300; font-style:italic; display:none; margin:0px;") 
+                i.send.icon
+                | Thank you for subscribing.
           
   h1#dfa-data-viz-header.ui.horizontal.divider.header(style="margin:2em 0 0.5em; color:#008e5c;") DATA VIZ
   h2.ui.header.center.aligned(style="font-weight:300; font-style:italic; margin:0px 0.5em 1em;") Bringing data visualization to the understanding of politics

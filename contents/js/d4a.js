@@ -384,7 +384,8 @@ $(document).ready(function() {
                           '<div class="orange statistic"><div class="value">'+t.days+'</div><div class="label">Days</div></div>' +
                           '<div class="orange statistic"><div class="value">'+t.hours+'</div><div class="label">Hours</div></div>' +
                           '<div class="red statistic"><div class="value">'+t.minutes+'</div><div class="label">Minutes</div></div>' +
-                          '<div class="red statistic"><div class="value">'+t.seconds+'</div><div class="label">Seconds</div></div>';
+                          '<div class="red statistic"><div class="value">'+t.seconds+'</div><div class="label">Seconds</div></div>' +
+                          '<p>TO GO!</p>';
         if(t.total<=0){
           clearInterval(timeinterval);
         }
