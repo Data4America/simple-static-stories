@@ -34,7 +34,8 @@ block content
           h1.article-title= page.title
           div.article-meta
             div.article-publisher
-              mixin author(page.metadata.author, (page.metadata.isPodcast) ? 'Hosted by: ' : null, (page.metadata.isPodcast || page.metadata.isLifemap) ? ['twitter'] : null)
+              if page.metadata.author
+                mixin author(page.metadata.author, (page.metadata.isPodcast) ? 'Hosted by: ' : null, (page.metadata.isPodcast || page.metadata.isLifemap) ? ['twitter'] : null)
             div.article-date= moment.utc(page.date).format('MMMM D, YYYY')
 
     div.article-content!= typogr(page.html).typogrify()

@@ -2,12 +2,12 @@
   var content = '' +
     '<div style="text-align:center;">' +
     '<div class="dfa-donate" style="width:100%;">' +
-    ' <div id="dfa-loading">' +
+    ' <div class="dfa-loading">' +
     '   <div class="loader">Loading</div>' +
     '   <h2 class="">Processing your information...</h2>' +
     ' </div>' +
     // DONATE FORM
-    '<form id="dfa-donate-form" action="" method="post">' +
+    '<form class="dfa-donate-form" action="" method="post">' +
     ' <table>' +
     '   <tr>' +
     '     <td>' +
@@ -94,7 +94,7 @@
     '         <span class="preinput">$</span>' +
     '         <input type="number" name="amount" class="dfa-amount-input" value="" placeholder="Enter Amount" />' +
     '         <span class="postinput">One Time</span>' +
-    '         <div id="dfa-arrow-control"><div class="arrow up"></div><div class="arrow down"></div></div>' +
+    '         <div class="dfa-arrow-control"><div class="arrow up"></div><div class="arrow down"></div></div>' +
     '       </div>' +
     '     </td>' +
     '   </tr>' +
@@ -111,16 +111,16 @@
     '   <tr class="dfa-field monthly-check">' +
     '     <td>' +
     '       <div class="dfa-check">' +
-    '         <input id="dfa-monthly-subscription" name="monthly" type="checkbox" value="1" >' +
-    '         <label for="dfa-monthly-subscription">Make this a recurring monthly gift</label>' +
+    '         <input class="dfa-monthly-subscription" name="monthly" type="checkbox" value="1" >' +
+    '         <label>Make this a recurring monthly gift</label>' +
     '       </div>' +
     '     </td>' +
     '   </tr>' +
     //'   <tr class="dfa-field choose-donation">' +
     //'     <td>' +
     //'       <div class="dfa-check">' +
-    //'         <input id="dfa-choose-donation" name="choose" type="checkbox" value="1">' +
-    //'         <label for="dfa-choose-donation">Choose where my donation goes</label>' +
+    //'         <input class="dfa-choose-donation" name="choose" type="checkbox" value="1">' +
+    //'         <label>Choose where my donation goes</label>' +
     //'       </div>' +
     //'     </td>' +
     //'   </tr>' +
@@ -165,12 +165,12 @@
     '   <tr class="dfa-field anon-check">' +
     '     <td>' +
     '       <div class="dfa-check">' +
-    '         <input id="dfa-anon" name="anon" type="checkbox" value="1">' +
-    '         <label for="dfa-anon">Donate Anonymously</label>' +
+    '         <input class="dfa-anon" name="anon" type="checkbox" value="1">' +
+    '         <label>Donate Anonymously</label>' +
     '       </div>' +
     '     </td>' +
     '   </tr>' +
-    '   <tr id="dfa-cheque" style="display:none;">' +
+    '   <tr class="dfa-cheque" style="display:none;">' +
     '     <td style="background-color: #eee; border-radius: 10px; padding: 1em;">' +
     '       <h1 style="text-align:center;">Sponsor a Channel by Check</h1>' +
     '       <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
@@ -185,7 +185,7 @@
     '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
-    '   <tr id="dfa-cheque-member" style="display:none;">' +
+    '   <tr class="dfa-cheque-member" style="display:none;">' +
     '     <td style="background-color: #eee; border-radius: 10px; padding: 1em;">' +
     '       <h1 style="text-align:center;">Become a Member by Check</h1>' +
     '       <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
@@ -223,7 +223,7 @@
     ' </table>' +
     '</form>' +
     // PERSONAL INFO FORM
-    '<form id="dfa-personal-info-form" style="display:none;" action="" method="post">' +
+    '<form class="dfa-personal-info-form" style="display:none;" action="" method="post">' +
     ' <div class="dfa-mobile-header">' +
     '   <a href="javascript:;" class="dfa-button dfa-button-proceed">Next</a>' +
     ' </div>' +
@@ -236,7 +236,7 @@
     '   <tr class="dfa-field">' +
     '     <td colspan="2">' +
     '       <div class="dfa-check">' +
-    '         <input checked="checked" id="dfa-send-newsletters" name="newsletters" type="checkbox" value="1">' +
+    '         <input checked="checked" class="dfa-send-newsletters" name="newsletters" type="checkbox" value="1">' +
     '         <label for="dfa-send-newsletters">Send me new data stories by email</label>' +
     '       </div>' +
     '     </td>' +
@@ -347,7 +347,7 @@
     '  <input type="hidden" name="stripeToken" value="" />' +
     '</form>' +
     // POST LEARN MORE
-    ' <div id="dfa-learn-more">' +
+    ' <div class="dfa-learn-more">' +
     '   <div class="dfa-mobile-header">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
     '   </div>' +
@@ -363,7 +363,7 @@
     '   </p>' +
     ' </div>' +
     // CHECK MODULE
-    ' <div id="dfa-cheque-mod">' +
+    ' <div class="dfa-cheque-mod">' +
     '   <h1 style="text-align:center;">Donate by Check</h1>' +
     '   <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
     '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a Policy Issue, or want to become a founding member of Data4America, please write that in the memo of your check too.</p>' +
@@ -380,7 +380,7 @@
     '   </p>' +
     ' </div>' +
     // THANK YOU MODULE
-    ' <div id="dfa-thank-you">' +
+    ' <div class="dfa-thank-you">' +
     '   <div class="thankyou-monthly" style="display:none;">' +
     '     <h1 style="margin-bottom: 1.2em;">' +
     '       Your <span class="anon"></span> <strong class="amount"></strong> monthly donation to <strong><span style="color:#012868">D</span><span style="font-style:italic;color:#cc0101">4</span><span style="color:#012868">A</span></strong> is greatly appreciated!!' +
@@ -441,7 +441,7 @@
     '   </p>' +
     ' </div>' +
     // DFA BUDGET MODULE
-    ' <div id="dfa-budget" style="display:none;">' +
+    ' <div class="dfa-budget" style="display:none;">' +
     '   <table>' +
     '   <tr class="dfa-field">' +
     '     <td>' +
@@ -490,42 +490,675 @@
 
     $('.body-text').html(content);
 
-    var $mod = $('.dfa-donate'),
-      $modal = $('#dfa-donate-modal'),
-      $formDonate = $('#dfa-donate-form'),
-      $formPersonalInfo = $('#dfa-personal-info-form'),
-      $modLearnMore = $('#dfa-learn-more'),
-      $secCheque = $('#dfa-cheque'),
-      $memberCheque = $('#dfa-cheque-member'),
-      $modCheque = $('#dfa-cheque-mod'),
-      $modLoading = $('#dfa-loading'),
-      $modThankYou = $('#dfa-thank-you'),
-      $modBudget = $('#dfa-budget'),
-      $amount = $('.dfa-amount'),
-      $input = $('.dfa-amount-input'),
-      $checkMonthly = $('#dfa-monthly-subscription'),
-      $checkChooseDonation = $('#dfa-choose-donation'),
-      $stripeBtn = $('.donateStripe'),
-      $btnCheque = $('.btnCheque'),
-      $btnBack = $('.dfa-button-back'),
-      $btnBackCheque = $('.dfa-button-back-cheque'),
-      $btnDonateAgain = $('.dfa-btn-donate-again'),
-      $btnProceed = $('.dfa-button-proceed'),
-      $linkLearnMore = $('.dfa-link-learn-more'),
-      $linkBudget = $('.dfa-link-budget'),
-      $linkSponsor = $('.dfa-link-sponsor'),
-      $linkDonate = $('.dfa-link-donate'),
-      $linkMember = $('.dfa-link-member'),
-      $selectIssue = $('.dfa-select[name="sponsor_issue"]'),
-      $tableBudget = $formDonate.find('.dfa-table-budget'),
-      $inputTableBudget = $('.dfa-table-budget input[type="number"]'),
-      $priceArrows = $('#dfa-arrow-control'),
-      $rangeSlider = $('.dfa-range-slider'),
-      $sponsorStepButtons = $('.dfa-step-button'),
-      $sponsorSelectState = $('.dfa-select.select-states'),
-      $sponsorSelectCountry = $('.dfa-select.select-countries'),
-      $priceOptions = $('.dfa-price-option');
+    function init($mod) {
+      var $mod = $mod,
+        $modal = $mod.find('.dfa-donate-modal'),
+        $formDonate = $mod.find('.dfa-donate-form'),
+        $formPersonalInfo = $mod.find('.dfa-personal-info-form'),
+        $modLearnMore = $mod.find('.dfa-learn-more'),
+        $secCheque = $mod.find('.dfa-cheque'),
+        $memberCheque = $mod.find('.dfa-cheque-member'),
+        $modCheque = $mod.find('.dfa-cheque-mod'),
+        $modLoading = $mod.find('.dfa-loading'),
+        $modThankYou = $mod.find('.dfa-thank-you'),
+        $modBudget = $mod.find('.dfa-budget'),
+        $amount = $mod.find('.dfa-amount'),
+        $input = $mod.find('.dfa-amount-input'),
+        $checkMonthly = $mod.find('.dfa-monthly-subscription'),
+        $checkChooseDonation = $mod.find('.dfa-choose-donation'),
+        $stripeBtn = $mod.find('.donateStripe'),
+        $btnCheque = $mod.find('.btnCheque'),
+        $btnBack = $mod.find('.dfa-button-back'),
+        $btnBackCheque = $mod.find('.dfa-button-back-cheque'),
+        $btnDonateAgain = $mod.find('.dfa-btn-donate-again'),
+        $btnProceed = $mod.find('.dfa-button-proceed'),
+        $linkLearnMore = $mod.find('.dfa-link-learn-more'),
+        $linkBudget = $mod.find('.dfa-link-budget'),
+        $linkSponsor = $mod.find('.dfa-link-sponsor'),
+        $linkDonate = $mod.find('.dfa-link-donate'),
+        $linkMember = $mod.find('.dfa-link-member'),
+        $selectIssue = $mod.find('.dfa-select[name="sponsor_issue"]'),
+        $tableBudget = $formDonate.find('.dfa-table-budget'),
+        $inputTableBudget = $mod.find('.dfa-table-budget input[type="number"]'),
+        $priceArrows = $mod.find('#dfa-arrow-control'),
+        $rangeSlider = $mod.find('.dfa-range-slider'),
+        $sponsorStepButtons = $mod.find('.dfa-step-button'),
+        $sponsorSelectState = $mod.find('.dfa-select.select-states'),
+        $sponsorSelectCountry = $mod.find('.dfa-select.select-countries'),
+        $priceOptions = $mod.find('.dfa-price-option'),
+        paymentData;
 
+
+      var handler = global.StripeCheckout.configure({
+        //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
+        //key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
+        key: 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR',
+        image: 'https://33.media.tumblr.com/avatar_55d711f733d2_128.png',
+        token: function(token) {
+
+          // If a sponsor policy channel
+          var $option = $selectIssue.find('option:selected');
+          var issueName = $option.parent('optgroup').attr('label');
+          var issue = $option.val();
+          if (issue === 'Write in your own') {
+            issue = $formDonate.find('input[name="write_in"]').val();
+          }
+          issue = issueName + ':' + issue;
+
+          var $form = null;
+          var state = "";
+          var country = "";
+          var loc = "";
+
+          var $sponsorLoc = $('.dfa-sponsor-step.step1 .dfa-step-button.selected');
+          var step = $sponsorLoc.attr('data-step');
+          if (step === 'city') {
+            $form = $('.dfa-sponsor-step-form.city');
+            state = $form.find('input[name="state"]').val();
+            country = $form.find('input[name="country"]').val();
+
+            loc = $form.find('input[name="city"]').val() +
+              (country.length ? ', ' + country : '') +
+              (state.length ? ', ' + state : '');
+          } else if (step === 'state') {
+            $form = $('.dfa-sponsor-step-form.state');
+            country = $form.find('input[name="country"]').val();
+
+            loc = $form.find('input[name="state"]').val() +
+              (country.length ? ', ' + country : '');
+          } else if (step === 'country') {
+            $form = $('.dfa-sponsor-step-form.country');
+            loc = $form.find('select option:selected').val();
+          }
+
+          var fields = {
+            token: token.id,
+            email: token.email,
+            name: token.card.name,
+            amount: parseFloat( $input.val().replace(/,/gi,'') ) * 100,
+            type: $formPersonalInfo.find('input[name="donationType"]').val(),
+            address: token.card.address_line1,
+            state: token.card.address_state,
+            zip: token.card.address_zip,
+            city: token.card.address_city,
+            country: token.card.address_country,
+            anon: $formDonate.find('.dfa-anon').is(':checked') ? 'yes' : 'no',
+            issue: issue,
+            loc: loc,
+          };
+
+          paymentData = fields;
+
+          $formPersonalInfo.find('input[name="stripeToken"]').val(fields.token);
+          $formPersonalInfo.find('input[name="amount"]').val((fields.amount / 100));
+          $formPersonalInfo.find('input[name="email"]').val(fields.email);
+          $formPersonalInfo.find('input[name="name"]').val(fields.name);
+          $formPersonalInfo.find('input[name="name"]').val(fields.name);
+          $formPersonalInfo.find('input[name="address"]').val(fields.address);
+          $formPersonalInfo.find('input[name="city"]').val(fields.city);
+          $formPersonalInfo.find('input[name="zip"]').val(fields.zip);
+          $formPersonalInfo.find('select[name="state"]').find('option').removeAttr('selected');
+          $formPersonalInfo.find('select[name="state"]')
+            .find('option[value="' + fields.state + '"]').prop('selected', true);
+
+          if ($formDonate.find('.dfa-anon').is(':checked')) {
+            $formPersonalInfo.find('input[name="anon"]').val("yes");
+          }
+
+          if ($checkChooseDonation.is(':checked')) {
+            var fund = [];
+            $formDonate.find('.dfa-field.choose-donation-table input').each(function() {
+              fund.push($(this).attr('data-name') + ': ' + $(this).val() + '%');
+            });
+            $formPersonalInfo.find('input[name="donateto"]').val(fund.join(', '));
+          } else {
+            $formPersonalInfo.find('input[name="donateto"]').val("General Fund");
+          }
+
+          if ($(this).hasClass('.dfa-button-skip')) {
+            $formPersonalInfo.find('input[name="donateto"]').val("General Fund");
+          }
+
+          if ($modal.length) {
+            $modal.find('.icon.close').hide();
+          }
+
+          charge();
+        }
+      });
+
+      function checkMonthly() {
+        if ($(this).is(':checked')) {
+          $amount.find('.postinput').html('Monthly');
+          $formPersonalInfo.find('input[name="donationType"]').val('monthly');
+        } else {
+          $amount.find('.postinput').html('One Time');
+          $formPersonalInfo.find('input[name="donationType"]').val('onetime');
+        }
+      }
+
+      function checkChooseDonation() {
+        if ($(this).is(':checked')) {
+          $formDonate.find('.dfa-field.choose-donation-table').show();
+        } else {
+          $formDonate.find('.dfa-field.choose-donation-table').hide();
+        }
+      }
+
+      function sponsorPolicy() {
+        showHeader('sponsor');
+
+        $('.dfa-field-sponsor:not(.sub_issue)').show();
+        $('.dfa-field-member').hide();
+        $('.dfa-field.monthly-check').hide();
+        $('.dfa-field.price-options').hide();
+        $('.dfa-field.anon-check').hide();
+        $('.dfa-field.choose-donation-table').hide();
+        $('.dfa-field.choose-donation').hide();
+        $('.dfa-field.donation-input').hide();
+        $priceArrows.show();
+        $secCheque.hide();
+        $memberCheque.hide();
+
+        $amount.find('.postinput').html('One Time');
+        $input.attr('type', 'text');
+        $input.val('25,000');
+        $input.attr('readonly', 'readonly');
+        $formPersonalInfo.find('input[name="donationType"]').val('sponsor');
+
+        $linkSponsor.hide();
+        $linkDonate.show();
+        $linkMember.show();
+
+        goToTop();
+      }
+
+      function becomeMember() {
+        showHeader('member');
+
+        $('.dfa-field-member').show();
+        $('.dfa-field-sponsor').hide();
+        $('.dfa-field.price-options').hide();
+        $('.dfa-field.monthly-check').hide();
+        $('.dfa-field.anon-check').hide();
+        $('.dfa-field.choose-donation-table').hide();
+        $('.dfa-field.choose-donation').hide();
+        $('.dfa-field.donation-input').show();
+        $priceArrows.hide();
+        $secCheque.hide();
+
+        $amount.find('.postinput').html('Yearly');
+        $input.attr('type', 'text');
+        $input.val('500');
+        $input.attr('readonly', 'readonly');
+        $formPersonalInfo.find('input[name="donationType"]').val('member');
+
+        $linkSponsor.show();
+        $linkDonate.show();
+        $linkMember.hide();
+
+        goToTop();
+      }
+
+      function justDonate() {
+        $('.dfa-field-sponsor').hide();
+        $('.dfa-field-member').hide();
+        $('.dfa-field.monthly-check').show();
+        $('.dfa-field.anon-check').show();
+        $('.dfa-field.choose-donation').show();
+        $('.dfa-field.price-options').show();
+        $('.dfa-field.donation-input').show();
+        $priceArrows.hide();
+        $secCheque.hide();
+        $memberCheque.hide();
+
+        $input.val('');
+        $input.removeAttr('readonly');
+        $input.attr('type', 'number');
+
+        $checkMonthly.prop('checked', true);
+
+        checkMonthly.apply($checkMonthly[0]);
+
+        showHeader('donate');
+
+        $($priceOptions[1]).trigger('click');
+
+        $linkSponsor.show();
+        $linkMember.show();
+        $linkDonate.hide();
+
+        goToTop();
+      }
+
+      function onStripeSubmit(e) {
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+
+        if ($input.val().length === 0) {
+          $input.addClass('red');
+          goToTop();
+          return;
+        }
+
+        var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
+
+        var desc = '$' + numberWithCommas(amount / 100) +
+          (type == 'monthly' ? ' Monthly Donation' : ' Donation');
+
+        var buttonText = 'Give {{amount}}' +
+          (type == 'monthly' ? ' Monthly' : '');
+
+        // Open Checkout with further options
+        handler.open({
+            name: 'Data4America',
+            description: desc,
+            amount: amount,
+            panelLabel: buttonText,
+            allowRememberMe: false,
+            address: true,
+        });
+
+        e.preventDefault();
+      }
+
+      function onTypeInput() {
+        if ($(this).val().length > 0) {
+          $input.removeClass('red');
+        } else {
+          $input.addClass('red');
+        }
+      }
+
+      function goToDonateForm() {
+        $modLearnMore.hide();
+        $modCheque.hide();
+        $formDonate.show();
+
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        if (type == 'onetime' || type == 'monthly') {
+          justDonate();
+        } else if (type == 'sponsor') {
+          sponsorPolicy();
+        } else if (type == 'member') {
+          becomeMember();
+        }
+
+      }
+
+      function goToCheque() {
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        if (type === 'sponsor') {
+          if ($secCheque.css('display') == 'none') {
+            $secCheque.show();
+          } else {
+            $secCheque.hide();
+          }
+        } else if (type === 'member') {
+          $modCheque.find('h1').html('Become a Member by Check');
+          $modCheque.show();
+        } else {
+          $modCheque.find('h1').html('Donate by Check');
+          $modCheque.show();
+        }
+      }
+
+      // function learnMore() {
+      //   $modLearnMore.show();
+      //   $formDonate.hide();
+      // }
+
+      function learnMore() {
+        $('#dfa-supporters').show();
+        $('html, body').animate({
+          scrollTop: $('#dfa-supporters').offset().top - 65
+        });
+      }
+
+      function showBudget() {
+        $modBudget.show();
+        $modCheque.hide();
+      }
+
+      function giveByCheque() {
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        if (type === 'sponsor') {
+          if ($secCheque.css('display') == 'none') {
+            $secCheque.show();
+          } else {
+            $secCheque.hide();
+          }
+        } else if (type === 'member') {
+          if ($memberCheque.css('display') == 'none') {
+            $memberCheque.show();
+          } else {
+            $memberCheque.hide();
+          }
+        } else {
+          $formDonate.hide();
+          $modCheque.show();
+          $modBudget.hide();
+        }
+      }
+
+      function goToTop() {
+        if ($modal.length) {
+          $modal.parents('.ui.dimmer.modals').scrollTop(0);
+        } else {
+          $(window).scrollTop($('#dfa-content').offset().top - 70);
+        }
+      }
+
+      function showHeader(headerType) {
+        $('.dfa-header-text').hide();
+        $('.dfa-header-text.' + headerType).show();
+      }
+
+      function calculateBudget() {
+        var total = 0;
+        $tableBudget.find('input[type="number"]').each(function() {
+          var num = parseInt($(this).val());
+          if (isNaN(num)) {
+            num = 0;
+          }
+          total += num;
+        });
+
+        var $num = $('.dfa-budget-total .num');
+        $num.html(total + '%');
+        if (total === 100) {
+          $num.removeClass('red');
+        } else {
+          $num.addClass('red');
+        }
+      }
+
+      function charge() {
+        $.getScript('https://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
+
+        goToTop();
+        $formDonate.hide();
+        $modLoading.show();
+
+        global.$currentMod = $mod;
+      }
+
+      function submitData() {
+        $formPersonalInfo.hide();
+        $modLoading.show();
+
+        goToTop();
+
+        var $form = $formPersonalInfo;
+        var fields = {};
+
+        if ($formPersonalInfo.find('#dfa-send-newsletters').is(':checked')) {
+          $formPersonalInfo.find('input[name="sendNewsletters"]').val("yes");
+        } else {
+          $formPersonalInfo.find('input[name="sendNewsletters"]').val("no");
+        }
+
+        $form.find('input, select').each(function() {
+          if ($(this).hasClass('dfa-select')) {
+            fields[$(this).attr('name')] = $(this).find('option:selected').val();
+          } else {
+            fields[$(this).attr('name')] = $(this).val();
+          }
+        });
+
+        var address = fields.address + ', ' + fields.address2 +
+          fields.city + ', ' + fields.state + ', ' + fields.zip;
+
+        var urlVars = $.param({
+          type: fields.donationType,
+          id: fields.donationId,
+          nws: fields.sendNewsletters,
+          anon: fields.anon,
+          nm: fields.name,
+          em: fields.email,
+          tss: fields.tshirt,
+          amt: fields.amount,
+          to: fields.donateto,
+          fb: fields.fb,
+          tw: fields.tw,
+          lkn: fields.li,
+          addr: address,
+          pissue: paymentData.issue,
+          ploc: paymentData.loc,
+          rand: parseInt(Math.random() * 40000)
+        });
+
+        $.getScript('https://dev.data4america.org/donate/finalize.php?' + urlVars);
+
+        global.$currentMod = $mod;
+        global.goToThankYou = goToThankYou;
+      }
+
+      function goToThankYou() {
+        $modThankYou.show();
+
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        var email = $formPersonalInfo.find('input[name="email"]').val();
+        var amount = parseFloat($formPersonalInfo.find('input[name="amount"]').val());
+
+        $modThankYou.find('.email').html(email);
+        $modThankYou.find('.amount').html('$' + numberWithCommas(amount));
+
+        $modThankYou.find('.thankyou-' + type).show();
+
+        if (paymentData.anon === 'yes') {
+          $modThankYou.find('.thankyou-' + type + ' .anon').html('anonymous');
+        }
+
+        if ($modal.length) {
+          $modal.find('.icon.close').show();
+        }
+
+        var $td = $('.thankyou-video');
+        var width = $td.width();
+        var aspectRatio = 315/560;
+        var height = width * aspectRatio;
+        var embed = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/FguGc5NkFf0?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+        $td.html(embed);
+      }
+
+      function resetForm() {
+        $modThankYou.find('.thankyou-monthly, .thankyou-onetime, .thankyou-member, .thankyou-sponsor').hide();
+        $modThankYou.hide();
+
+        $('.thankyou-video').html('');
+
+        $formDonate.show();
+        justDonate();
+        $(window).scrollTop(0);
+
+        if ($modal.length) {
+          $modal.parents('.ui.dimmer.modals').scrollTop(0);
+        }
+      }
+
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      function populateIssues() {
+        var options = '<option value="">Choose your Issue</option>';
+        sponsorOptions.forEach(function(item) {
+          options += '<optgroup label="' + item.name + '">';
+          item.options.forEach(function(option) {
+            options += '<option value="' + option +'">' + option + '</option>';
+          });
+          options += '<option>Write in your own</option>';
+          options += '</optgroup>';
+        });
+        $selectIssue.html(options);
+      }
+
+      function onIssueSelect() {
+        var $option = $(this).find('option:selected');
+        var issueName = $option.parent('optgroup').attr('label');
+        var value = $option.val();
+        $writein = $(this).next('.write_in');
+
+        if (value === 'Write in your own') {
+          $writein.show();
+          $writein.find('h3').html(issueName + ':');
+          $writein.find('.dfa-input-text input').focus();
+        } else {
+          $writein.hide();
+        }
+      }
+
+      function onSponsorSelectState() {
+        showStep3();
+      }
+
+      function onSponsorSelectCountry() {
+        showStep3();
+      }
+
+      function updateSponsorPrice() {
+        var amount = parseFloat( $input.val().replace(/,/gi,'') );
+
+        if ($(this).hasClass('up')) {
+          amount = amount + 500;
+        } else {
+          if (amount == 10000) {
+            return;
+          } else {
+            amount = amount - 500;
+          }
+        }
+
+        $input.val( numberWithCommas(amount) );
+      }
+
+      function selectPrice() {
+        $priceOptions.removeClass('selected');
+        $(this).addClass('selected');
+
+        $input.val( $(this).attr('data-value') );
+        $input.focus();
+      }
+
+      function onInputAdded() {
+        $priceOptions.removeClass('selected');
+
+        $('.dfa-price-option[data-value="' + $input.val() + '"]').addClass('selected');
+      }
+
+      function openStep() {
+        var action = $(this).attr('data-step');
+        var $step2 = $('.dfa-sponsor-step.step2');
+        var $step3 = $('.dfa-sponsor-step.step3');
+        var $step4 = $('.dfa-sponsor-step.step4');
+        var $step2Forms = $step2.find('.dfa-sponsor-step-form');
+
+        $(this).parent().find('.dfa-button').removeClass('selected');
+        $(this).addClass('selected');
+
+        $step2.show();
+        $step2Forms.hide();
+
+        switch(action) {
+          case 'city':
+            $step2.find('.dfa-sponsor-step-form.city').show();
+            $step2.find('.dfa-sponsor-step-form.city input:eq(0)').focus();
+            break;
+          case 'state':
+            $step2.find('.dfa-sponsor-step-form.state').show();
+            $step2.find('.dfa-sponsor-step-form.state input:eq(0)').focus();
+            break;
+          case 'country':
+            $step2.find('.dfa-sponsor-step-form.country').show();
+            $step2.find('.dfa-sponsor-step-form.country .dfa-button.selected').trigger('click');
+            break;
+        }
+      }
+
+      $selectIssue.on('change', onIssueSelect);
+      $priceArrows.find('.arrow').on('click', updateSponsorPrice);
+      $sponsorSelectState.on('change', onSponsorSelectState);
+      $sponsorSelectCountry.on('change', onSponsorSelectCountry);
+
+      $checkMonthly.on('change', checkMonthly);
+      $checkChooseDonation.on('change', checkChooseDonation);
+
+      $linkSponsor.on('click', sponsorPolicy);
+      $linkDonate.on('click', justDonate);
+      $linkLearnMore.on('click', learnMore);
+      $linkBudget.on('click', showBudget);
+      $linkMember.on('click', becomeMember);
+
+      $rangeSlider.find('.input-range').on('input', function(){
+        var amount = numberWithCommas($(this).val());
+        $(this).parents('tr').find('h1 .amount').html('$' + amount);
+        $input.val(amount);
+      });
+
+      $stripeBtn.on('click', onStripeSubmit);
+      $btnCheque.on('click', giveByCheque);
+      $btnBack.on('click', goToDonateForm);
+      $btnBackCheque.on('click', goToCheque);
+      $btnDonateAgain.on('click', resetForm);
+      $priceOptions.on('click', selectPrice);
+
+      $sponsorStepButtons.on('click', openStep);
+
+      $input.on('input', onInputAdded);
+
+      $inputTableBudget.on('input', calculateBudget);
+
+      $btnProceed.on('click', submitData);
+
+      //$('.dfa-amount-input').focus();
+
+      if (window.location.hash.length) {
+        var price = parseInt(window.location.hash.replace('#', '')),
+            $option = $priceOptions.filter('[data-value="' + price + '"]');
+
+        if ($option.length) {
+          $option.trigger('click');
+        } else {
+          $input.val(price);
+          $input.trigger('input');
+        }
+      } else {
+        //$($priceOptions[1]).trigger('click');
+      }
+
+      populateIssues();
+
+      // Close Checkout on page navigation
+      $(global).on('popstate', function() {
+        handler.close();
+      });
+    }
+
+    global.__dfaCharged = function(donationId) {
+      if (global.$currentMod) {
+        var $formPersonalInfo = global.$currentMod.find('.dfa-personal-info-form'),
+            $formDonate = global.$currentMod.find('.dfa-donate-form'),
+            $modLoading = global.$currentMod.find('.dfa-loading');
+
+        $formPersonalInfo.find('input[name="donationId"]').val(donationId);
+        $formPersonalInfo.show();
+        $formDonate.hide();
+        $modLoading.hide();
+      }
+
+      global.$currentMod = null;
+    };
+
+    global.__dfaFinalized = function() {
+      if (global.$currentMod) {
+        var $modLoading = global.$currentMod.find('.dfa-loading');
+        $modLoading.hide();
+
+        global.goToThankYou();
+      }
+
+      global.$currentMod = null;
+    };
 
     var sponsorOptions = [
       { name: 'Criminal Justice', options: [ 'Criminal justice reform', 'Drug policy', 'Death penalty', 'Gun control', 'Legalize Sex work', 'Background checks for gun purchases' ] },
@@ -540,621 +1173,6 @@
       { name: 'Foreign Affairs', options: [ 'Foreign Affairs', 'Military', 'Military spending', 'Open data', 'Technology', 'War on ISIS', 'Support of Israel', 'Deal with Iran', 'United Nations membership', 'Drone policy', 'NSA Surveillance' ] },
       { name: 'Other', options: [] },
     ];
-
-    var paymentData;
-
-    var handler = global.StripeCheckout.configure({
-      //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
-      //key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
-      key: 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR',
-      image: 'https://33.media.tumblr.com/avatar_55d711f733d2_128.png',
-      token: function(token) {
-
-        // If a sponsor policy channel
-        var $option = $selectIssue.find('option:selected');
-        var issueName = $option.parent('optgroup').attr('label');
-        var issue = $option.val();
-        if (issue === 'Write in your own') {
-          issue = $formDonate.find('input[name="write_in"]').val();
-        }
-        issue = issueName + ':' + issue;
-
-        var $form = null;
-        var state = "";
-        var country = "";
-        var loc = "";
-
-        var $sponsorLoc = $('.dfa-sponsor-step.step1 .dfa-step-button.selected');
-        var step = $sponsorLoc.attr('data-step');
-        if (step === 'city') {
-          $form = $('.dfa-sponsor-step-form.city');
-          state = $form.find('input[name="state"]').val();
-          country = $form.find('input[name="country"]').val();
-
-          loc = $form.find('input[name="city"]').val() +
-            (country.length ? ', ' + country : '') +
-            (state.length ? ', ' + state : '');
-        } else if (step === 'state') {
-          $form = $('.dfa-sponsor-step-form.state');
-          country = $form.find('input[name="country"]').val();
-
-          loc = $form.find('input[name="state"]').val() +
-            (country.length ? ', ' + country : '');
-        } else if (step === 'country') {
-          $form = $('.dfa-sponsor-step-form.country');
-          loc = $form.find('select option:selected').val();
-        }
-
-        var fields = {
-          token: token.id,
-          email: token.email,
-          name: token.card.name,
-          amount: parseFloat( $input.val().replace(/,/gi,'') ) * 100,
-          type: $formPersonalInfo.find('input[name="donationType"]').val(),
-          address: token.card.address_line1,
-          state: token.card.address_state,
-          zip: token.card.address_zip,
-          city: token.card.address_city,
-          country: token.card.address_country,
-          anon: $formDonate.find('#dfa-anon').is(':checked') ? 'yes' : 'no',
-          issue: issue,
-          loc: loc,
-        };
-
-        paymentData = fields;
-
-        $formPersonalInfo.find('input[name="stripeToken"]').val(fields.token);
-        $formPersonalInfo.find('input[name="amount"]').val((fields.amount / 100));
-        $formPersonalInfo.find('input[name="email"]').val(fields.email);
-        $formPersonalInfo.find('input[name="name"]').val(fields.name);
-        $formPersonalInfo.find('input[name="name"]').val(fields.name);
-        $formPersonalInfo.find('input[name="address"]').val(fields.address);
-        $formPersonalInfo.find('input[name="city"]').val(fields.city);
-        $formPersonalInfo.find('input[name="zip"]').val(fields.zip);
-        $formPersonalInfo.find('select[name="state"]').find('option').removeAttr('selected');
-        $formPersonalInfo.find('select[name="state"]')
-          .find('option[value="' + fields.state + '"]').prop('selected', true);
-
-        if ($formDonate.find('#dfa-anon').is(':checked')) {
-          $formPersonalInfo.find('input[name="anon"]').val("yes");
-        }
-
-        if ($checkChooseDonation.is(':checked')) {
-          var fund = [];
-          $formDonate.find('.dfa-field.choose-donation-table input').each(function() {
-            fund.push($(this).attr('data-name') + ': ' + $(this).val() + '%');
-          });
-          $formPersonalInfo.find('input[name="donateto"]').val(fund.join(', '));
-        } else {
-          $formPersonalInfo.find('input[name="donateto"]').val("General Fund");
-        }
-
-        if ($(this).hasClass('.dfa-button-skip')) {
-          $formPersonalInfo.find('input[name="donateto"]').val("General Fund");
-        }
-
-        if ($modal.length) {
-          $modal.find('.icon.close').hide();
-        }
-
-        charge();
-      }
-    });
-
-    function checkMonthly() {
-      if ($(this).is(':checked')) {
-        $amount.find('.postinput').html('Monthly');
-        $formPersonalInfo.find('input[name="donationType"]').val('monthly');
-      } else {
-        $amount.find('.postinput').html('One Time');
-        $formPersonalInfo.find('input[name="donationType"]').val('onetime');
-      }
-    }
-
-    function checkChooseDonation() {
-      if ($(this).is(':checked')) {
-        $formDonate.find('.dfa-field.choose-donation-table').show();
-      } else {
-        $formDonate.find('.dfa-field.choose-donation-table').hide();
-      }
-    }
-
-    function sponsorPolicy() {
-      showHeader('sponsor');
-
-      $('.dfa-field-sponsor:not(.sub_issue)').show();
-      $('.dfa-field-member').hide();
-      $('.dfa-field.monthly-check').hide();
-      $('.dfa-field.price-options').hide();
-      $('.dfa-field.anon-check').hide();
-      $('.dfa-field.choose-donation-table').hide();
-      $('.dfa-field.choose-donation').hide();
-      $('.dfa-field.donation-input').hide();
-      $priceArrows.show();
-      $secCheque.hide();
-      $memberCheque.hide();
-
-      $amount.find('.postinput').html('One Time');
-      $input.attr('type', 'text');
-      $input.val('25,000');
-      $input.attr('readonly', 'readonly');
-      $formPersonalInfo.find('input[name="donationType"]').val('sponsor');
-
-      $linkSponsor.hide();
-      $linkDonate.show();
-      $linkMember.show();
-
-      goToTop();
-    }
-
-    function becomeMember() {
-      showHeader('member');
-
-      $('.dfa-field-member').show();
-      $('.dfa-field-sponsor').hide();
-      $('.dfa-field.price-options').hide();
-      $('.dfa-field.monthly-check').hide();
-      $('.dfa-field.anon-check').hide();
-      $('.dfa-field.choose-donation-table').hide();
-      $('.dfa-field.choose-donation').hide();
-      $('.dfa-field.donation-input').show();
-      $priceArrows.hide();
-      $secCheque.hide();
-
-      $amount.find('.postinput').html('Yearly');
-      $input.attr('type', 'text');
-      $input.val('500');
-      $input.attr('readonly', 'readonly');
-      $formPersonalInfo.find('input[name="donationType"]').val('member');
-
-      $linkSponsor.show();
-      $linkDonate.show();
-      $linkMember.hide();
-
-      goToTop();
-    }
-
-    function justDonate() {
-      $('.dfa-field-sponsor').hide();
-      $('.dfa-field-member').hide();
-      $('.dfa-field.monthly-check').show();
-      $('.dfa-field.anon-check').show();
-      $('.dfa-field.choose-donation').show();
-      $('.dfa-field.price-options').show();
-      $('.dfa-field.donation-input').show();
-      $priceArrows.hide();
-      $secCheque.hide();
-      $memberCheque.hide();
-
-      $input.val('');
-      $input.removeAttr('readonly');
-      $input.attr('type', 'number');
-
-      $checkMonthly.prop('checked', true);
-
-      checkMonthly.apply($checkMonthly[0]);
-
-      showHeader('donate');
-
-      $($priceOptions[1]).trigger('click');
-
-      $linkSponsor.show();
-      $linkMember.show();
-      $linkDonate.hide();
-
-      goToTop();
-    }
-
-    function onStripeSubmit(e) {
-      var type = $formPersonalInfo.find('input[name="donationType"]').val();
-
-      if ($input.val().length === 0) {
-        $input.addClass('red');
-        goToTop();
-        return;
-      }
-
-      var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
-
-      var desc = '$' + numberWithCommas(amount / 100) +
-        (type == 'monthly' ? ' Monthly Donation' : ' Donation');
-
-      var buttonText = 'Give {{amount}}' +
-        (type == 'monthly' ? ' Monthly' : '');
-
-      // Open Checkout with further options
-      handler.open({
-          name: 'Data4America',
-          description: desc,
-          amount: amount,
-          panelLabel: buttonText,
-          allowRememberMe: false,
-          address: true,
-      });
-
-      e.preventDefault();
-    }
-
-    function onTypeInput() {
-      if ($(this).val().length > 0) {
-        $input.removeClass('red');
-      } else {
-        $input.addClass('red');
-      }
-    }
-
-    function goToDonateForm() {
-      $modLearnMore.hide();
-      $modCheque.hide();
-      $formDonate.show();
-
-      var type = $formPersonalInfo.find('input[name="donationType"]').val();
-      if (type == 'onetime' || type == 'monthly') {
-        justDonate();
-      } else if (type == 'sponsor') {
-        sponsorPolicy();
-      } else if (type == 'member') {
-        becomeMember();
-      }
-
-    }
-
-    function goToCheque() {
-      var type = $formPersonalInfo.find('input[name="donationType"]').val();
-      if (type === 'sponsor') {
-        if ($secCheque.css('display') == 'none') {
-          $secCheque.show();
-        } else {
-          $secCheque.hide();
-        }
-      } else if (type === 'member') {
-        $modCheque.find('h1').html('Become a Member by Check');
-        $modCheque.show();
-      } else {
-        $modCheque.find('h1').html('Donate by Check');
-        $modCheque.show();
-      }
-    }
-
-    // function learnMore() {
-    //   $modLearnMore.show();
-    //   $formDonate.hide();
-    // }
-
-    function learnMore() {
-      $('#dfa-supporters').show();
-      $('html, body').animate({
-        scrollTop: $('#dfa-supporters').offset().top - 65
-      });
-    }
-
-    function showBudget() {
-      $modBudget.show();
-      $modCheque.hide();
-    }
-
-    function giveByCheque() {
-      var type = $formPersonalInfo.find('input[name="donationType"]').val();
-      if (type === 'sponsor') {
-        if ($secCheque.css('display') == 'none') {
-          $secCheque.show();
-        } else {
-          $secCheque.hide();
-        }
-      } else if (type === 'member') {
-        if ($memberCheque.css('display') == 'none') {
-          $memberCheque.show();
-        } else {
-          $memberCheque.hide();
-        }
-      } else {
-        $formDonate.hide();
-        $modCheque.show();
-        $modBudget.hide();
-      }
-    }
-
-    function goToTop() {
-      if ($modal.length) {
-        $modal.parents('.ui.dimmer.modals').scrollTop(0);
-      } else {
-        $(window).scrollTop($('#dfa-content').offset().top - 70);
-      }
-    }
-
-    function showHeader(headerType) {
-      $('.dfa-header-text').hide();
-      $('.dfa-header-text.' + headerType).show();
-    }
-
-    function calculateBudget() {
-      var total = 0;
-      $tableBudget.find('input[type="number"]').each(function() {
-        var num = parseInt($(this).val());
-        if (isNaN(num)) {
-          num = 0;
-        }
-        total += num;
-      });
-
-      var $num = $('.dfa-budget-total .num');
-      $num.html(total + '%');
-      if (total === 100) {
-        $num.removeClass('red');
-      } else {
-        $num.addClass('red');
-      }
-    }
-
-    function charge() {
-      $.getScript('https://dev.data4america.org/donate/charge.php?' + $.param(paymentData));
-
-      goToTop();
-      $formDonate.hide();
-      $modLoading.show();
-    }
-
-    function submitData() {
-      $formPersonalInfo.hide();
-      $modLoading.show();
-
-      goToTop();
-
-      var $form = $formPersonalInfo;
-      var fields = {};
-
-      if ($formPersonalInfo.find('#dfa-send-newsletters').is(':checked')) {
-        $formPersonalInfo.find('input[name="sendNewsletters"]').val("yes");
-      } else {
-        $formPersonalInfo.find('input[name="sendNewsletters"]').val("no");
-      }
-
-      $form.find('input, select').each(function() {
-        if ($(this).hasClass('dfa-select')) {
-          fields[$(this).attr('name')] = $(this).find('option:selected').val();
-        } else {
-          fields[$(this).attr('name')] = $(this).val();
-        }
-      });
-
-      var address = fields.address + ', ' + fields.address2 +
-        fields.city + ', ' + fields.state + ', ' + fields.zip;
-
-      var urlVars = $.param({
-        type: fields.donationType,
-        id: fields.donationId,
-        nws: fields.sendNewsletters,
-        anon: fields.anon,
-        nm: fields.name,
-        em: fields.email,
-        tss: fields.tshirt,
-        amt: fields.amount,
-        to: fields.donateto,
-        fb: fields.fb,
-        tw: fields.tw,
-        lkn: fields.li,
-        addr: address,
-        pissue: paymentData.issue,
-        ploc: paymentData.loc,
-        rand: parseInt(Math.random() * 40000)
-      });
-
-      $.getScript('https://dev.data4america.org/donate/finalize.php?' + urlVars);
-    }
-
-    function goToThankYou() {
-      $modThankYou.show();
-
-      var type = $formPersonalInfo.find('input[name="donationType"]').val();
-      var email = $formPersonalInfo.find('input[name="email"]').val();
-      var amount = parseFloat($formPersonalInfo.find('input[name="amount"]').val());
-
-      $modThankYou.find('.email').html(email);
-      $modThankYou.find('.amount').html('$' + numberWithCommas(amount));
-
-      $modThankYou.find('.thankyou-' + type).show();
-
-      if (paymentData.anon === 'yes') {
-        $modThankYou.find('.thankyou-' + type + ' .anon').html('anonymous');
-      }
-
-      if ($modal.length) {
-        $modal.find('.icon.close').show();
-      }
-
-      var $td = $('.thankyou-video');
-      var width = $td.width();
-      var aspectRatio = 315/560;
-      var height = width * aspectRatio;
-      var embed = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/FguGc5NkFf0?autoplay=1" frameborder="0" allowfullscreen></iframe>';
-      $td.html(embed);
-    }
-
-    function resetForm() {
-      $modThankYou.find('.thankyou-monthly, .thankyou-onetime, .thankyou-member, .thankyou-sponsor').hide();
-      $modThankYou.hide();
-
-      $('.thankyou-video').html('');
-
-      $formDonate.show();
-      justDonate();
-      $(window).scrollTop(0);
-
-      if ($modal.length) {
-        $modal.parents('.ui.dimmer.modals').scrollTop(0);
-      }
-    }
-
-    function numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-
-    function populateIssues() {
-      var options = '<option value="">Choose your Issue</option>';
-      sponsorOptions.forEach(function(item) {
-        options += '<optgroup label="' + item.name + '">';
-        item.options.forEach(function(option) {
-          options += '<option value="' + option +'">' + option + '</option>';
-        });
-        options += '<option>Write in your own</option>';
-        options += '</optgroup>';
-      });
-      $selectIssue.html(options);
-    }
-
-    function onIssueSelect() {
-      var $option = $(this).find('option:selected');
-      var issueName = $option.parent('optgroup').attr('label');
-      var value = $option.val();
-      $writein = $(this).next('.write_in');
-
-      if (value === 'Write in your own') {
-        $writein.show();
-        $writein.find('h3').html(issueName + ':');
-        $writein.find('.dfa-input-text input').focus();
-      } else {
-        $writein.hide();
-      }
-    }
-
-    function onSponsorSelectState() {
-      showStep3();
-    }
-
-    function onSponsorSelectCountry() {
-      showStep3();
-    }
-
-    function updateSponsorPrice() {
-      var amount = parseFloat( $input.val().replace(/,/gi,'') );
-
-      if ($(this).hasClass('up')) {
-        amount = amount + 500;
-      } else {
-        if (amount == 10000) {
-          return;
-        } else {
-          amount = amount - 500;
-        }
-      }
-
-      $input.val( numberWithCommas(amount) );
-    }
-
-    function selectPrice() {
-      $priceOptions.removeClass('selected');
-      $(this).addClass('selected');
-
-      $input.val( $(this).attr('data-value') );
-      $input.focus();
-    }
-
-    function onInputAdded() {
-      $priceOptions.removeClass('selected');
-
-      $('.dfa-price-option[data-value="' + $input.val() + '"]').addClass('selected');
-    }
-
-    function openStep() {
-      var action = $(this).attr('data-step');
-      var $step2 = $('.dfa-sponsor-step.step2');
-      var $step3 = $('.dfa-sponsor-step.step3');
-      var $step4 = $('.dfa-sponsor-step.step4');
-      var $step2Forms = $step2.find('.dfa-sponsor-step-form');
-
-      $(this).parent().find('.dfa-button').removeClass('selected');
-      $(this).addClass('selected');
-
-      $step2.show();
-      $step2Forms.hide();
-
-      switch(action) {
-        case 'city':
-          $step2.find('.dfa-sponsor-step-form.city').show();
-          $step2.find('.dfa-sponsor-step-form.city input:eq(0)').focus();
-          break;
-        case 'state':
-          $step2.find('.dfa-sponsor-step-form.state').show();
-          $step2.find('.dfa-sponsor-step-form.state input:eq(0)').focus();
-          break;
-        case 'country':
-          $step2.find('.dfa-sponsor-step-form.country').show();
-          $step2.find('.dfa-sponsor-step-form.country .dfa-button.selected').trigger('click');
-          break;
-      }
-    }
-
-    $selectIssue.on('change', onIssueSelect);
-    $priceArrows.find('.arrow').on('click', updateSponsorPrice);
-    $sponsorSelectState.on('change', onSponsorSelectState);
-    $sponsorSelectCountry.on('change', onSponsorSelectCountry);
-
-    $checkMonthly.on('change', checkMonthly);
-    $checkChooseDonation.on('change', checkChooseDonation);
-
-    $linkSponsor.on('click', sponsorPolicy);
-    $linkDonate.on('click', justDonate);
-    $linkLearnMore.on('click', learnMore);
-    $linkBudget.on('click', showBudget);
-    $linkMember.on('click', becomeMember);
-
-    $rangeSlider.find('.input-range').on('input', function(){
-      var amount = numberWithCommas($(this).val());
-      $(this).parents('tr').find('h1 .amount').html('$' + amount);
-      $input.val(amount);
-    });
-
-    $stripeBtn.on('click', onStripeSubmit);
-    $btnCheque.on('click', giveByCheque);
-    $btnBack.on('click', goToDonateForm);
-    $btnBackCheque.on('click', goToCheque);
-    $btnDonateAgain.on('click', resetForm);
-    $priceOptions.on('click', selectPrice);
-
-    $sponsorStepButtons.on('click', openStep);
-
-    $input.on('input', onInputAdded);
-
-    $inputTableBudget.on('input', calculateBudget);
-
-    $btnProceed.on('click', submitData);
-
-    //$('.dfa-amount-input').focus();
-
-    if (window.location.hash.length) {
-      var price = parseInt(window.location.hash.replace('#', '')),
-          $option = $priceOptions.filter('[data-value="' + price + '"]');
-
-      if ($option.length) {
-        $option.trigger('click');
-      } else {
-        $input.val(price);
-        $input.trigger('input');
-      }
-    } else {
-      //$($priceOptions[1]).trigger('click');
-    }
-
-    populateIssues();
-
-    // Close Checkout on page navigation
-    $(global).on('popstate', function() {
-      handler.close();
-    });
-
-    global.__dfaCharged = function(donationId) {
-      $formPersonalInfo.find('input[name="donationId"]').val(donationId);
-      $formDonate.hide();
-      $formPersonalInfo.show();
-      $modLoading.hide();
-
-      goToTop();
-    };
-
-    global.__dfaFinalized = function() {
-      $modLoading.hide();
-      goToThankYou();
-    };
 
     var usStates =  {
       "AL": "Alabama", "AK": "Alaska", "AS": "American Samoa", "AZ": "Arizona",
@@ -1224,7 +1242,6 @@
 
       $selects.append(options);
     }
-    populateStates();
 
     function populateCountries() {
       var $selects = $('.select-countries');
@@ -1236,6 +1253,15 @@
 
       $selects.append(options);
     }
+
     populateCountries();
+    populateStates();
+
+    $('.dfa-donate').each(function() {
+      if (!$(this).hasClass('init')) {
+        $(this).addClass('init')
+        init($(this));
+      }
+    });
 
 })(window, jQuery);
