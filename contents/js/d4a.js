@@ -385,7 +385,7 @@ $(document).ready(function() {
                           '<div class="orange statistic"><div class="value">'+t.hours+'</div><div class="label">Hours</div></div>' +
                           '<div class="red statistic"><div class="value">'+t.minutes+'</div><div class="label">Minutes</div></div>' +
                           '<div class="red statistic"><div class="value">'+t.seconds+'</div><div class="label">Seconds</div></div>' +
-                          '<p>TO GO!</p>';
+                          '<p style="text-align:right; font-weight:300; font-size:0.8em;">TO GO!</p>';
         if(t.total<=0){
           clearInterval(timeinterval);
         }
