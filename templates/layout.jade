@@ -10,10 +10,10 @@ html(lang='en')
       title
         block title
           = locals.name
-      block metatags
-        meta(property="og:title", content=locals.name)
       meta(property="og:site_name", content="data4america.org")
       meta(property="og:description", content="Bringing Data Science to the understanding of Politics")
+      block metatags
+        meta(property="og:title", content=locals.name)
       block metaImage
         meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
 
