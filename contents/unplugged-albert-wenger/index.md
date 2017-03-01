@@ -11,6 +11,7 @@ article: true
 published: true
 isEvent: true
 columnSize: false
+unplugged: true
 ---
 
 <p>
