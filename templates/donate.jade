@@ -13,3 +13,40 @@ block content
     article.page
       section.content
         div.body-text.donate-wrapper
+        
+        div#dfa-donate-widget(style="max-width: 430px;margin: 2em auto;")
+          div.ui.segment.inverted(style="background-color:#004f81; margin:auto; border-radius:0px;")
+            h1.ui.header.center.aligned(style="font-size:2.5em; font-style:italic; margin-top:0px;") Help us reach our $250,000 Season Two fundraising goal.
+            h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
+            
+          div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding: 1em 0px 0px;")
+            
+            div#dfa-donate-progress.ui.large.active.progress.indicating
+              p(style="text-align: right; font-weight: 300; position: absolute; right: 10px; top: 10px; font-size:0.8em;") 76% remaining
+              div.bar
+                div.progress
+                
+            div#dfa-time-count.ui.statistics
+            
+          div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding-top:0px;")
+            div.ui.equal.width.center.aligned.padded.grid
+              div.row(style="padding: 0.5em 0px;")
+                div.column
+                  button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="10") $10
+                div.column
+                  button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="25") $25
+              div.row(style="padding: 0.5em 0px;")
+                div.column
+                  button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="100") $100
+                div.column
+                  button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="250") $250
+                  
+              div.row(style="padding: 0.5em 0px;")
+                div.column
+                  button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="500") $500
+                div.column
+                  button.ui.fluid.button.red.huge.dfa-btn-donate(data-value="1000") $1,000
+                  
+              div.row(style="padding: 0.5em 0px;")
+                div.column
+                  button.ui.fluid.button.huge.blue.dfa-btn-donate(style="background-color:#004f81;") Donate Now 

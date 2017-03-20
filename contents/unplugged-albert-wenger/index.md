@@ -1,7 +1,7 @@
 ---
 title: "Unplugged Live: Albert Wenger"
 author: "kimmai-cutler"
-date: 2016-09-30
+date: 2016-10-6
 template: article.jade
 link: "/unplugged/live-albert-wenger"
 description: "Future of Jobs, Automation, and Basic Income. Our first-ever Roundtable."
@@ -11,7 +11,7 @@ article: true
 published: true
 isEvent: true
 columnSize: false
-unplugged: true
+roundtable: true
 ---
 
 <p>
