@@ -42,6 +42,10 @@ $(document).ready(function() {
   lifemapCategories();
   // scrollOnBottom();
 
+  if (window.location.pathname == '/donate') {
+    $('#dfa-content .ui.container.text .donate-wrapper').hide();
+  }
+
   $('.ui.form .ui.dropdown').dropdown();
 
   $('.dfa-bi-checkboxes .checkbox').checkbox({
@@ -260,7 +264,6 @@ $(document).ready(function() {
   if (window.location.pathname.search("/donate") === 0
       || window.location.pathname.search("/sponsorship") === 0) {
     $('#dfa-footer').remove();
-    $('.dfa-btn-donate').remove();
     $('#dfa-donate-modal').remove();
   }
 
