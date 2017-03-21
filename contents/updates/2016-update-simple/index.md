@@ -26,11 +26,14 @@ title: August 2016 Update
                 </td>
               </tr>
               <tr>
+
                 <td align="center" valign="top">
                   <!-- // Begin Template Body \\ -->
                   <table border="0" cellpadding="10" cellspacing="0" width="100%" id="templateBody">
                     <tr>
                       <td valign="top" class="bodyContent">
+                      
+                        <h4 style="color:#CC0505; font-weight:300; font-style:italic; margin: 1em 0px; text-align:center;">A nonprofit, nonpartisan educational initiative helping people learn about government using data science, data visualization, and public conversations.</h4>
 
                         <!-- // Begin Module: Standard Content \\ -->
                         <table border="0" cellpadding="10" cellspacing="0" width="100%">
