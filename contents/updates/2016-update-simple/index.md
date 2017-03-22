@@ -32,7 +32,7 @@ title: August 2016 Update
                   <table border="0" cellpadding="10" cellspacing="0" width="100%" id="templateBody">
                     <tr>
                       <td valign="top" class="bodyContent">
-                      
+
                         <h4 style="color:#CC0505; font-weight:300; font-style:italic; margin: 1em 0px; text-align:center;">A nonprofit, nonpartisan educational initiative helping people learn about government using data science, data visualization, and public conversations.</h4>
 
                         <!-- // Begin Module: Standard Content \\ -->
@@ -133,6 +133,31 @@ title: August 2016 Update
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                               <td class="podcastCover" style="padding:10px 0;text-align:center;">
+                                  <img style="max-width:400px;" src="https://data4america.org/img/unplugged-header-albertwenger-600.jpg" alt="unplugged-header-albertwenger-600.jpg">
+                               </td>
+                            </tr>
+                                <tr>
+                                  <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
+                                    <div class="h1">
+                                      <a href="https://twitter.com/albertwenger" target="_blank">Albert Wenger</a>
+                                    </div>
+                                    <div class="h5">A roundtable discussion with Albert Wenger , the author of World After Capital and a venture capitalist at Union Square Ventures.</div>
+                                    <div class="h5 host">
+                                      Host: <strong><a href="https://twitter.com/kimmaicutler" target="_blank">Kim-Mai Cutler</a></strong>
+                                    </div>
+                                    <div>
+                                      <a class="link-play-d4a" href="https://data4america.org/unplugged/live-albert-wenger">
+                                        <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
+                                      </a>
+                                      <span style="vertical-align: middle;">·</span>
+                                      <a class="link-read-transcript" href="https://data4america.org/unplugged/live-albert-wenger#transcript">
+                                        <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
                       <tr>
                          <td class="podcastCover" style="padding:10px 0;text-align:center;">
                             <img style="max-width:400px;" src="https://data4america.org/img/unplugged-samwang-600.jpg" alt="unplugged-samwang-600.jpg">
@@ -158,32 +183,7 @@ title: August 2016 Update
                           </div>
                         </td>
                       </tr>
-                      <tr>
-                         <td class="podcastCover" style="padding:10px 0;text-align:center;">
-                            <img style="max-width:400px;" src="https://data4america.org/img/unplugged-header-albertwenger-600.jpg" alt="unplugged-header-albertwenger-600.jpg">
-                         </td>
-                      </tr>
-                          <tr>
-                            <td style="padding:20px 0;text-align:center;border-bottom:1px solid #eee;">
-                              <div class="h1">
-                                <a href="https://twitter.com/albertwenger" target="_blank">Albert Wenger</a>
-                              </div>
-                              <div class="h5">A roundtable discussion with Albert Wenger , the author of World After Capital and a venture capitalist at Union Square Ventures.</div>
-                              <div class="h5 host">
-                                Host: <strong><a href="https://twitter.com/kimmaicutler" target="_blank">Kim-Mai Cutler</a></strong>
-                              </div>
-                              <div>
-                                <a class="link-play-d4a" href="https://data4america.org/unplugged/live-albert-wenger">
-                                  <img class="link-play-d4a" src="https://data4america.org/img/link-play-d4a.png" height="21" width="140" alt="link-play-d4a.png">
-                                </a>
-                                <span style="vertical-align: middle;">·</span>
-                                <a class="link-read-transcript" href="https://data4america.org/unplugged/live-albert-wenger#transcript">
-                                  <img src="https://data4america.org/img/link-read-transcript.png" height="21" width="116" alt="link-read-transcript.png">
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-                        <tr>
+
                       <tr>
                            <td class="podcastCover" style="padding:10px 0;text-align:center;">
                                 <img style="max-width:400px;" src="https://data4america.org/img/unplugged-garyjohnson-600.jpg" alt="unplugged-garyjohnson-600.jpg">
