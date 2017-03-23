@@ -52828,7 +52828,7 @@ input::-moz-focus-inner {
 }
 #masthead #dfa-podcast-menu .item .content .meta .price,
 #masthead #dfa-lifemap-menu .item .content .meta .price {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 #masthead .view-ui-menu {
   display: none;
@@ -53198,7 +53198,7 @@ input::-moz-focus-inner {
 .dfa-feed .dfa-feed-item .author {
   display: block;
   margin: 1em 0;
-  font-size: 0.9em;
+  font-size: 0.86em;
 }
 .dfa-feed .dfa-feed-item .author a {
   color: #004f81;

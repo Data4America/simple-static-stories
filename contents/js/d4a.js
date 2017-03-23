@@ -42,8 +42,8 @@ $(document).ready(function() {
   lifemapCategories();
   // scrollOnBottom();
 
-  if (window.location.pathname == '/donate') {
-    $('#dfa-content .ui.container.text .donate-wrapper').hide();
+  if (window.location.pathname.search("/donate") === 0) {
+    $('#dfa-donate-footer').hide();
   }
 
   $('.ui.form .ui.dropdown').dropdown();
