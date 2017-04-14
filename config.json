@@ -2,7 +2,7 @@
   "locals": {
     "url": "https://data4america.org",
     "name": "Data4America",
-    "development": true
+    "development": false
   },
   "plugins": [
     "wintersmith-nap",
