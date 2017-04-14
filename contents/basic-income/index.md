@@ -9,7 +9,7 @@ links: "Fork the code | https://github.com/Data4America/simple-static-stories/bl
 isStandard: true
 article: true
 icon: "red university"
-published: false
+published: true
 ugp: true
 ---
 
