@@ -202,15 +202,96 @@ html, body, header {
   }
 }
 
-
-#dfa-time-count {
+#dfa-time-count-index {
+  margin: 1em auto;
   display: inline-block;
-  margin: 0.5em auto 1em;
   .statistic {
     margin: 0em 0.2em 0em;
+    background: rgba(27, 26, 26, 0.14);
+    width: 60px;
   }
   .value {
     font-size: 2.5em;
+  }
+  .label {
+    font-size: 0.8em !important;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+#dfa-time-count.flip-clock-wrapper {
+  justify-content: center;
+  margin: 3em auto;
+  ul {
+    padding: 0px;
+    width:40px !important;
+    height:50px !important;
+    margin: 2px !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+  }
+  ul li a div div.inn {
+    font-size: 30px !important;
+    text-shadow: 0 1px 2px rgb(6, 108, 173);
+    background-color: rgb(6, 108, 173);
+    color:white;
+  }
+  ul li a div {
+    outline: 1px solid #034066;
+  }
+  ul li  {
+    line-height: 50px !important;
+  }
+  .flip-clock-dot {
+    left:2px !important;
+    width:5px !important;
+    height:5px !important;
+    background: white;
+  }
+  .flip-clock-dot.bottom {
+    bottom:15px;
+  }
+  .flip-clock-dot.top {
+    top:15px;
+  }
+  .flip-clock-divider {
+    height:50px;
+    width:10px;
+    .flip-clock-label {
+      color:white;
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+  }
+  .flip-clock-divider.days {
+    width:auto;
+    .flip-clock-label {
+      right:-83px;
+    }
+  }
+  .flip-clock-divider.hours {
+    .flip-clock-label {
+      right:-68px;
+    }
+  }
+  .flip-clock-divider.minutes, .flip-clock-divider.seconds {
+    .flip-clock-label {
+      right:-75px;
+    }
+  }
+  @media only screen and (max-width: 470px) {
+    ul {
+      width:24px !important;
+    }
+    .flip-clock-divider.days,.flip-clock-divider.minutes, .flip-clock-divider.seconds {
+      .flip-clock-label {
+        right:-60px;
+      }
+    }
+    .flip-clock-divider.hours {
+      .flip-clock-label {
+        right:-53px;
+      }
+    }
   }
 }
 

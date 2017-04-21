@@ -28,10 +28,10 @@
   "nap": {
     "assets": {
       "css": {
-        "main": ["/css/styles.css"]
+        "main": ["/css/styles.css", "/css/flipclock.css"]
       },
       "js": {
-        "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/emailwall.js", "/js/unplugged.js", "/js/semantic.js", "/js/slick.js"]
+        "main": ["/js/jquery-2.1.4.min.js", "/js/d4a.js", "/js/emailwall.js", "/js/unplugged.js", "/js/semantic.js", "/js/slick.js", "/js/flipclock.js"]
       }
     }
   }

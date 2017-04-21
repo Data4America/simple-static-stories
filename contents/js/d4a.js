@@ -361,6 +361,25 @@ $(document).ready(function() {
     percent: 24
   });
 
+  function initFlipClock() {
+    // Grab the current date
+    var currentDate = new Date();
+
+    // Set some date in the future. In this case, it's always Jan 1
+    var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+
+    // Calculate the difference in seconds between the future and current date
+    var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+    // Instantiate a coutdown FlipClock
+    clock = $('#dfa-time-count').FlipClock(diff, {
+      clockFace: 'DailyCounter',
+      countdown: true
+    });
+  }
+
+  initFlipClock();
+
   function getTimeRemaining(endtime){
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor( (t/1000) % 60 );
@@ -396,13 +415,13 @@ $(document).ready(function() {
     }
   }
 
-  initializeClock('dfa-time-count', 'December 31 2017');
+  initializeClock('dfa-time-count-index', 'December 31 2017');
 
   //donation shape rotation
-  $('#dfa-donate-widget .ui.shape').shape();
-  var timeinterval = setInterval(function(){
-    $('#dfa-donate-widget .ui.shape').shape('flip right');
-  },2000);
+  // $('#dfa-donate-widget .ui.shape').shape();
+  // var timeinterval = setInterval(function(){
+  //   $('#dfa-donate-widget .ui.shape').shape('flip right');
+  // },2000);
 
   // var $fixedShare = $('#fixed-share-btn');
   $fixedShare.find('.subscribe').click(function(){

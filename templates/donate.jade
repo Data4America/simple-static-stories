@@ -13,30 +13,42 @@ block content
     article.page
       section.content
       
-        div#dfa-donate-widget(style="max-width: 430px;margin: 2em auto 0em;")
-          div.ui.cube.inverted.shape
-            div.sides
-              .active.side
-                .content
-                  .center
-                    h1.ui.header.center.aligned(style="font-size:1.2em; font-style:italic; margin-top:0px;") Help us reach our $250,000 Season Two fundraising goal.
-              .side
-                .content
-                  .center
-                    h2.ui.header.center.aligned(style="font-size:1em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
+        div#dfa-donate-widget(style="max-width: 460px;margin: 2em auto 0em;")
+          //- div.ui.cube.inverted.shape
+          //-   div.sides
+          //-     .active.side
+          //-       .content
+          //-         .center
+          //-           h1.ui.header.center.aligned(style="font-size:1.2em; font-style:italic; margin-top:0px;") Help us reach our $250,000 Season Two fundraising goal.
+          //-     .side
+          //-       .content
+          //-         .center
+          //-           h2.ui.header.center.aligned(style="font-size:1em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
             
-          //- div.ui.segment.inverted(style="background-color:#004f81; margin:auto; border-radius:0px;")
-          //-   h1.ui.header.center.aligned(style="font-size:2.5em; font-style:italic; margin-top:0px;") Help us reach our $250,000 Season Two fundraising goal.
-          //-   h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
-            
-          div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding: 1em 0px 0px;")
+          div.ui.segment.inverted(style="background-color:#004f81; margin:auto; border-radius:0px;")
+            h1.ui.header.center.aligned(style='font-size:2.2em; margin-top:0px;')
+              | Help us reach our 
+              br
+              span(style="font-size:2em; line-height: normal;") $250,000
+              br
+              |  Season Two fundraising goal.
+            h2.ui.header.center.aligned(style="font-size:1.5em; font-weight:300; margin-top:0px;") Make a tax-deductible donation.
             
             div#dfa-donate-progress.ui.large.active.progress.indicating
               p(style="text-align: right; font-weight: 300; position: absolute; right: 10px; top: 10px; font-size:0.8em;") 76% remaining
               div.bar
                 div.progress
                 
-            div#dfa-time-count.ui.statistics
+            div#dfa-time-count.ui.statistics  
+            
+          //- div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding: 1em 0px 0px;")
+          //-   
+          //-   div#dfa-donate-progress.ui.large.active.progress.indicating
+          //-     p(style="text-align: right; font-weight: 300; position: absolute; right: 10px; top: 10px; font-size:0.8em;") 76% remaining
+          //-     div.bar
+          //-       div.progress
+          //-       
+          //-   div#dfa-time-count.ui.statistics
             
           //- div.ui.segment(style="margin:0px auto;border-radius:0px;border:0px;box-shadow:none; text-align:center; padding-top:0px;")
           //-   div.ui.equal.width.center.aligned.padded.grid
@@ -61,4 +73,4 @@ block content
           //-       div.column
           //-         button.ui.fluid.button.huge.blue.dfa-btn-donate(style="background-color:#004f81;") Donate Now 
                       
-        div.body-text.donate-wrapper(style="max-width: 430px;margin: auto;")
+        div.body-text.donate-wrapper(style="max-width: 460px;margin: auto;")
