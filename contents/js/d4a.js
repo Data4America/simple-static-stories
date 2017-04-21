@@ -398,6 +398,12 @@ $(document).ready(function() {
 
   initializeClock('dfa-time-count', 'December 31 2017');
 
+  //donation shape rotation
+  $('#dfa-donate-widget .ui.shape').shape();
+  var timeinterval = setInterval(function(){
+    $('#dfa-donate-widget .ui.shape').shape('flip right');
+  },2000);
+
   // var $fixedShare = $('#fixed-share-btn');
   $fixedShare.find('.subscribe').click(function(){
     $('#dfa-subscribe-modal').modal({ observeChanges : true }).modal('show');
