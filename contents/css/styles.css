@@ -52328,7 +52328,7 @@ input::-moz-focus-inner {
   color: white;
 }
 #dfa-time-count.flip-clock-wrapper ul li a div {
-  outline: 1px solid #034066;
+  outline: 1px solid rgba(3, 64, 102, 0.48);
 }
 #dfa-time-count.flip-clock-wrapper ul li {
   line-height: 50px !important;
