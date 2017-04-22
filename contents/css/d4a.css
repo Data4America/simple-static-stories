@@ -62,6 +62,7 @@ p {
     line-height: 1em; /* Otherwise facebook like button gets shifted down */
 }
 
+
 @media (min-width: 992px) {
     .header-bar {
         background: none;
