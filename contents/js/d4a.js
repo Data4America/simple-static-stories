@@ -358,7 +358,7 @@ $(document).ready(function() {
   ;
 
   $('#dfa-donate-progress').progress({
-    percent: 24
+    percent: 9
   });
 
   function initFlipClock() {
