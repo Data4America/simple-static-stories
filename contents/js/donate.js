@@ -953,7 +953,7 @@
           $modal.find('.icon.close').show();
         }
 
-        var $td = $('.thankyou-video');
+        var $td = $modThankYou.find('.thankyou-video');
         var width = $td.width();
         var aspectRatio = 315/560;
         var height = width * aspectRatio;
