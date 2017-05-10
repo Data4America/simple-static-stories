@@ -18,8 +18,10 @@ block content
       div#dfa-tagline.fourteen.wide.column
         h1.ui.header
           | Bridging data and conversations to advance the understanding of policy
-        h3.ui.header
-          | A nonprofit, nonpartisan educational initiative helping people learn about government using data science, data visualization, and public conversations.
+        h3.ui.header.center.aligned
+          | A nonprofit, nonpartisan initiative made with 
+          span(style="margin: 0em 0.4em 0em 0em;") 💙  
+          | from 🇺🇸 
 
       //- P  
       //-   strong 1/ 
@@ -80,7 +82,7 @@ block content
       //-   strong 12/
       //-   |  We experiment with many ideas. Some work, some don’t; we double down on the one’s that do.
 
-      h1 Our Team
+      h2(style="font-weight:300;") We're a team of Republicans, Democrats, Libertarians, and Independents working together to help America understand where the future is headed, faster.
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });
       include teamGrid
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.founder || p.boardOfDirectors || p.editorialBoard || p.team; });

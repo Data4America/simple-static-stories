@@ -1,0 +1,16 @@
+{
+  "name": "Stephen Walters",
+  "title": "Editorial Board",
+  "founder": false,
+  "boardOfDirectors": false,
+  "editorialBoard": true,
+  "advisor": false,
+  "bio": "Sr. SWE @Google, Former Arctic Space Satellite ISP SWE @SsiMicro, Drop Out",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "twitter.com/sjwalter"
+    }
+  ],
+  "id": "stephen-walters"
+}
