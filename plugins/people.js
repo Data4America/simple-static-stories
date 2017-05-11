@@ -17,6 +17,7 @@ var order = [
     'craig-montuori',
     'patrick-ruffini',
     'antone-johnson',
+    'gillian-morris',
     'bert-kaufman',
     'tatsiana-maskalevich',
     'jay-wacker',
@@ -25,6 +26,7 @@ var order = [
     'meeyong-rao',
     'elissa-redmiles',
     'zhan-li',
+    'stephen-walters',
     'jeremy-scheff',
     'charles-belle',
     'ganesh-iyer',
@@ -53,9 +55,9 @@ var order = [
 
 function sortObjective(p) {
     // Sort by role, then by position in "order" above, then alphabetical by last name
-    return (p.founder ? 1e9 : 0) + 
-           (p.boardOfDirectors ? 1e8 : 0) + 
-           (p.editorialBoard ? 1e7 : 0) + 
+    return (p.founder ? 1e9 : 0) +
+           (p.boardOfDirectors ? 1e8 : 0) +
+           (p.editorialBoard ? 1e7 : 0) +
            (p.advisor ? 1e6 : 0) +
            (p.team ? 1e5 : 0) +
            (order.length - order.indexOf(p.id)) * 1e4 +

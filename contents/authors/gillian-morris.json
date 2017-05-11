@@ -1,0 +1,24 @@
+{
+  "name": "Gillian Morris",
+  "title": "Board of Directors",
+  "founder": false,
+  "boardOfDirectors": true,
+  "editorialBoard": false,
+  "advisor": false,
+  "bio": "Founder @hitlist_app. Contributor @harvardbiz.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "http://twitter.com/gillianim"
+    },
+    {
+      "type": "linkedin",
+      "url": " http://linkedin.com/in/gillianim"
+    },
+    {
+      "type": "www",
+      "url": "https://hbr.org/2015/05/traveling-the-world-made-me-a-better-entrepreneur"
+    }
+  ],
+  "id": "gillian-morris"
+}

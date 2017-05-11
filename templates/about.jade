@@ -82,7 +82,8 @@ block content
       //-   strong 12/
       //-   |  We experiment with many ideas. Some work, some don’t; we double down on the one’s that do.
 
-      h2(style="font-weight:300;") We're a team of Republicans, Democrats, Libertarians, and Independents working together to help America understand where the future is headed, faster.
+      //- h2(style="font-weight:300;") We're a team of Republicans, Democrats, Libertarians, and Independents working together to help America understand where the future is headed, faster.
+      h2 Our Team
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.boardOfDirectors; });
       include teamGrid
       - var people = env.helpers.getPeople(contents).filter(function (p) { return p.founder || p.boardOfDirectors || p.editorialBoard || p.team; });

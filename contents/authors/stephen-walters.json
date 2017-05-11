@@ -4,6 +4,7 @@
   "founder": false,
   "boardOfDirectors": false,
   "editorialBoard": true,
+  "staff" : true,
   "advisor": false,
   "bio": "Sr. SWE @Google, Former Arctic Space Satellite ISP SWE @SsiMicro, Drop Out",
   "links": [
