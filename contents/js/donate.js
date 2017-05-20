@@ -1136,14 +1136,20 @@
 
     global.__dfaCharged = function(donationId) {
       if (global.$currentMod) {
-        var $formPersonalInfo = global.$currentMod.find('.dfa-personal-info-form'),
-            $formDonate = global.$currentMod.find('.dfa-donate-form'),
-            $modLoading = global.$currentMod.find('.dfa-loading');
+        var $mod = global.$currentMod,
+            $formPersonalInfo = $mod.find('.dfa-personal-info-form'),
+            $formDonate = $mod.find('.dfa-donate-form'),
+            $modLoading = $mod.find('.dfa-loading');
 
         $formPersonalInfo.find('input[name="donationId"]').val(donationId);
         $formPersonalInfo.show();
         $formDonate.hide();
         $modLoading.hide();
+
+        var $modal = $mod.parents('#dfa-donate-modal');
+        if ($modal.length) {
+          $modal.modal('refresh');
+        }
       }
 
       global.$currentMod = null;
@@ -1151,8 +1157,15 @@
 
     global.__dfaFinalized = function() {
       if (global.$currentMod) {
-        var $modLoading = global.$currentMod.find('.dfa-loading');
+        var $mod = global.$currentMod,
+            $modLoading = $mod.find('.dfa-loading');
+
         $modLoading.hide();
+
+        var $modal = $mod.parents('#dfa-donate-modal');
+        if ($modal.length) {
+          $modal.modal('refresh');
+        }
 
         global.goToThankYou();
       }
