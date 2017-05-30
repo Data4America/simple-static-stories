@@ -830,6 +830,9 @@ html(lang='en')
                        a(href="https://twitter.com/basche42", target="_blank")
                          i.ui.icon.twitter(style="color:#0084B4;")
 
+          div#dfa-bitcoin-donate(style="text-align:center; margin-top:1em;")
+            div.ui.red.huge.button Fuel us with Bitcoin
+          
       //- div#dfa-footer(style="display:none;")
       //-   h3.ui.header
       //-     a.ui.red.button.donate.dfa-btn-donate Donate 
@@ -866,6 +869,14 @@ html(lang='en')
         i.close.icon
         div.content
           div.body-text
+          
+      div#dfa-bitcoin-modal.ui.small.modal
+        i.close.icon
+        div.header(style="text-align:center;") Donate Bitcoin
+        div.content
+          p.ui.header.center.aligned 15gJiApW3G9MN2iTteQwQbq7NundwGWwv6
+          img.ui.medium.image.centered(src="/img/donate_bitcoin.png")
+          
 
     block js
       != nap.js('main')
