@@ -362,7 +362,7 @@ $(document).ready(function() {
   ;
 
   $('#dfa-donate-progress').progress({
-    percent: 9
+    percent: 20
   });
 
   function initFlipClock() {
