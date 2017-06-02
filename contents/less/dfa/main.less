@@ -236,6 +236,19 @@ html, body, header {
   }
 }
 
+#dfa-bitcoin-modal .ui.horizontal.segments {
+  @media only screen and (max-width: @largestMobileScreen) {
+    display: block;
+    p.ui.header {
+      font-size: 0.8em;
+    }
+    .ui.segment:last-child {
+      border-left:none;
+      border-top:1px solid rgba(34, 36, 38, 0.15);
+    }
+  }
+}
+
 #dfa-time-count.flip-clock-wrapper {
   justify-content: center;
   margin: 3em auto;

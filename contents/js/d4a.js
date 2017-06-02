@@ -97,7 +97,7 @@ $(document).ready(function() {
     });
   }
 
-  $('#dfa-bitcoin-donate').click(function(){
+  $('#dfa-bitcoin-donate a').click(function(){
     $('#dfa-bitcoin-modal').modal('show');
   });
 

@@ -831,7 +831,7 @@ html(lang='en')
                          i.ui.icon.twitter(style="color:#0084B4;")
 
           div#dfa-bitcoin-donate(style="text-align:center; margin-top:1em;")
-            div.ui.red.huge.button Fuel us with Bitcoin
+            a.ui.blue.header(style="cursor:pointer;") Tip us with Bitcoin or Ether
           
       //- div#dfa-footer(style="display:none;")
       //-   h3.ui.header
@@ -870,12 +870,22 @@ html(lang='en')
         div.content
           div.body-text
           
-      div#dfa-bitcoin-modal.ui.small.modal
+      div#dfa-bitcoin-modal.ui.modal
         i.close.icon
-        div.header(style="text-align:center;") Donate Bitcoin
+        div.header(style="text-align:center;") Tip us with Bitcoin or Ether
         div.content
-          p.ui.header.center.aligned 15gJiApW3G9MN2iTteQwQbq7NundwGWwv6
-          img.ui.medium.image.centered(src="/img/donate_bitcoin.png")
+          div.ui.horizontal.segments(style="margin:0px; border:none; box-shadow:none;")
+            div.ui.segment   
+              img.ui.small.image.centered(src="/img/bitcoin.png")   
+              p.ui.header.center.aligned 0xf85df14ede0d7d8000e1f872b5730f0bff69996c
+              img.ui.medium.image.centered(src="/img/donate_bitcoin.png")
+            
+            div.ui.segment   
+              img.ui.small.image.centered(src="/img/ethereum.png")   
+              p.ui.header.center.aligned 15gJiApW3G9MN2iTteQwQbq7NundwGWwv6
+              img.ui.medium.image.centered(src="/img/donate_bitcoin.png")
+              
+          p(style="text-align:center; margin: 1em 0px;") Your cryptocurrency support is not tax-deductible.
           
 
     block js

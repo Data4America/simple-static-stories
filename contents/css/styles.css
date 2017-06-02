@@ -52327,6 +52327,18 @@ input::-moz-focus-inner {
   font-size: 0.8em !important;
   background: rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 767px) {
+  #dfa-bitcoin-modal .ui.horizontal.segments {
+    display: block;
+  }
+  #dfa-bitcoin-modal .ui.horizontal.segments p.ui.header {
+    font-size: 0.8em;
+  }
+  #dfa-bitcoin-modal .ui.horizontal.segments .ui.segment:last-child {
+    border-left: none;
+    border-top: 1px solid rgba(34, 36, 38, 0.15);
+  }
+}
 #dfa-time-count.flip-clock-wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
