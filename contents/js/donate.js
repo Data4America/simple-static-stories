@@ -909,22 +909,22 @@
           fields.city + ', ' + fields.state + ', ' + fields.zip;
 
         var urlVars = $.param({
-          type: fields.donationType,
-          id: fields.donationId,
-          nws: fields.sendNewsletters,
-          anon: fields.anon,
-          nm: fields.name,
-          em: fields.email,
-          tss: fields.tshirt,
-          amt: fields.amount,
-          to: fields.donateto,
-          fb: fields.fb,
-          tw: fields.tw,
-          lkn: fields.li,
-          addr: address,
+          type:   fields.donationType,
+          id:     fields.donationId,
+          nws:    fields.sendNewsletters,
+          anon:   fields.anon,
+          nm:     fields.name,
+          em:     fields.email,
+          tss:    fields.tshirt,
+          amt:    fields.amount,
+          to:     fields.donateto,
+          fb:     fields.fb,
+          tw:     fields.tw,
+          lkn:    fields.li,
+          addr:   address,
           pissue: paymentData.issue,
-          ploc: paymentData.loc,
-          rand: parseInt(Math.random() * 40000)
+          ploc:   paymentData.loc,
+          tm:     new Date().getTime()
         });
 
         $.getScript('https://dev.data4america.org/donate/finalize.php?' + urlVars);
