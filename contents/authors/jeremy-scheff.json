@@ -3,9 +3,9 @@
   "title": "Editorial Board",
   "founder": false,
   "boardOfDirectors": false,
-  "editorialBoard": true,
+  "editorialBoard": false,
   "advisor": false,
-  "staff": true,
+  "staff": false,
   "staffTitle": "Engineering",
   "bio": "Data scientist @Covance. Founder @basketball_gm. @RutgersU Ph.D Biomedical Engineering &#x2018;13.",
   "links": [

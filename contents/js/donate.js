@@ -217,8 +217,7 @@
     '   </tr>' +
     '   <tr>' +
     '     <td style="padding-bottom:0;">' +
-    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal'+
-    '       acknowledgment letter containing tax-deduction language for your records.</p>' +
+    '       <p style="color:#777; font-size:0.65em; text-align:left;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '     </td>' +
     '   </tr>' +
     ' </table>' +
@@ -366,18 +365,16 @@
     // CHECK MODULE
     ' <div class="dfa-cheque-mod">' +
     '   <h1 style="text-align:center;">Donate by Check</h1>' +
-    '   <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>.</p>' +
-    '   <p>IMPORTANT: Put <strong>Data4America</strong> in the Memo line.</p>'+
-    '   <p>If you\'re donating in honor of someone or want to donate anonymously, please write that in the memo of your check too.</p>' +
+    '   <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>. Put <strong>Data4America</strong> in the Memo line.</p>' +
+    '   <p>If you\'re donating in honor of someone, want to donate anonymously, sponsoring a Policy Issue, or want to become a founding member of Data4America, please write that in the memo of your check too.</p>' +
     '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
     '   Attn: Gifts Administration // Data4America<br />' +
     '   2440 West El Camino Real, Suite 300<br />' +
     '   Mountain View, CA 94040<br />' +
     '   EIN: 20-5205488</p>' +
-    '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. You\'ll be receiving the receipt from our fiscal sponsor The Silicon Valley Community Foundation.</p>' +
-    '   <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Data4America%20-%20private/Donation%20Pledge%20Form%20-%20D4A.pdf" target="_blank">Download our Donation Slip</a></p>' +
-    '   <p style="color:#777; font-size:0.8em;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide' +
-    '    a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
+    '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '   <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
+    '   <p style="color:#777; font-size:0.8em;">Donations to Data4America will be processed by Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
     '   </p>' +
@@ -927,7 +924,7 @@
           addr:   address,
           pissue: paymentData.issue,
           ploc:   paymentData.loc,
-          tm:     new Date().getTime()
+          rand:   new Date().getTime()
         });
 
         $.getScript('https://dev.data4america.org/donate/finalize.php?' + urlVars);

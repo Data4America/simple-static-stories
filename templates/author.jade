@@ -24,22 +24,9 @@ mixin author(authorName, prefix, links)
 
 mixin authorName(authorID)
   - var author = contents.authors[authorID + '.json'];
-  span.author
-    = prefix ? prefix : 'By '
-      a(href='mailto:' + author.metadata.email)= author.metadata.name
-      if author.metadata.links
-        each link in author.metadata.links
-          if link.type === 'twitter'
-            a(href=link.url, target='_blank', style="color:#4099FF;")
-              i.ui.twitter.icon(src='/img/mini-logos/' + link.type + '.png')
-            !='&nbsp;'
-
-mixin podcastAuthor(authors)
-  - var authors = authors.split(',').map(function(a) { return contents.authors[a + '.json'] });
-  span.author Hosted by:
-    each author in authors
-      !='&nbsp;'
-      b
+  if author
+    span.author
+      = prefix ? prefix : 'By '
         a(href='mailto:' + author.metadata.email)= author.metadata.name
         if author.metadata.links
           each link in author.metadata.links
@@ -48,3 +35,17 @@ mixin podcastAuthor(authors)
                 i.ui.twitter.icon(src='/img/mini-logos/' + link.type + '.png')
               !='&nbsp;'
 
+mixin podcastAuthor(authors)
+  - var authors = authors.split(',').map(function(a) { return contents.authors[a + '.json'] });
+  if author
+    span.author Hosted by:
+      each author in authors
+        !='&nbsp;'
+        b
+          a(href='mailto:' + author.metadata.email)= author.metadata.name
+          if author.metadata.links
+            each link in author.metadata.links
+              if link.type === 'twitter'
+                a(href=link.url, target='_blank', style="color:#4099FF;")
+                  i.ui.twitter.icon(src='/img/mini-logos/' + link.type + '.png')
+              !='&nbsp;'
