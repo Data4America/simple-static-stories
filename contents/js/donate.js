@@ -203,15 +203,15 @@
     '     <td style="text-align:center;">' +
     '       <div>' +
     '         <a class="dfa-button donateStripe" href="javascript:;">Give by <i class="icn credit-card">credit card</i></a>' +
-    '         <a class="dfa-button btnCheque" href="javascript:;">Give by <i class="icn cheque">cheque</i></a>' +
+    '         <a class="dfa-button btnCheque dfa-donate-scroll" href="javascript:;">Give by <i class="icn cheque">cheque</i></a>' +
     //'         <a class="dfa-button donatePaypal" href="javascript:;">Give by <i class="icn paypal">PayPal</i></a></p>' +
     '       </div>' +
     '     </td>' +
     '   </tr>' +
     '   <tr>' +
     '     <td>' +
-    '       <a class="dfa-link-donate" style="display:none;" href="javascript:;">Make a one-time donation</a>' +
-    '       <a class="dfa-link-sponsor" href="javascript:;">Sponsor a Policy Issue</a>' +
+    '       <a class="dfa-link-donate dfa-donate-scroll" style="display:none;" href="javascript:;">Make a one-time donation</a>' +
+    '       <a class="dfa-link-sponsor dfa-donate-scroll" href="javascript:;">Sponsor a Policy Issue</a>' +
     //'       <a class="dfa-link-member" href="javascript:;">Become a founding member</a>' +
     '     </td>' +
     '   </tr>' +
@@ -350,7 +350,7 @@
     // POST LEARN MORE
     ' <div class="dfa-learn-more">' +
     '   <div class="dfa-mobile-header">' +
-    '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
+    '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
     '   </div>' +
     '   <p>Your support will help us do the following:</p>' +
     '   <ol>' +
@@ -360,7 +360,7 @@
     '     <li>Potentially expand the Data4America concept to other countries utilizing our underlying technology and distributed editorial board model. Imagine Data4India, Data4UK, Data4Canada, and even Data4China...</li>' +
     '   </ol>' +
     '   <p style="text-align:center;">' +
-    '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
+    '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
     '   </p>' +
     ' </div>' +
     // CHECK MODULE
@@ -379,7 +379,7 @@
     '   <p style="color:#777; font-size:0.8em;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide' +
     '    a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '   <p style="text-align:center;">' +
-    '     <a class="dfa-button dfa-button-back" href="javascript:;">Back</a>' +
+    '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
     '   </p>' +
     ' </div>' +
     // THANK YOU MODULE
@@ -485,7 +485,7 @@
     '   </tr>' +
     '   </table>' +
     '   <p style="text-align:center;">' +
-    '     <a class="dfa-button dfa-button-back-cheque" href="javascript:;">Back</a>' +
+    '     <a class="dfa-button dfa-button-back-cheque dfa-donate-scroll" href="javascript:;">Back</a>' +
     '   </p>' +
     ' </div>' +
     '</div>' +
@@ -497,6 +497,7 @@
       var $mod = $mod,
         $modal = $mod.find('.dfa-donate-modal'),
         $formDonate = $mod.find('.dfa-donate-form'),
+        $donateScroll = $mod.find('.dfa-donate-scroll'),
         $formPersonalInfo = $mod.find('.dfa-personal-info-form'),
         $modLearnMore = $mod.find('.dfa-learn-more'),
         $secCheque = $mod.find('.dfa-cheque'),
@@ -817,6 +818,11 @@
         });
       }
 
+      function scrollUp(scrollTo) {
+        $('body').scrollTop($mod.offset().top - 60);
+      }
+
+
       function showBudget() {
         $modBudget.show();
         $modCheque.hide();
@@ -824,6 +830,7 @@
 
       function giveByCheque() {
         var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        console.log(type);
         if (type === 'sponsor') {
           if ($secCheque.css('display') == 'none') {
             $secCheque.show();
@@ -1104,6 +1111,7 @@
       $btnBackCheque.on('click', goToCheque);
       $btnDonateAgain.on('click', resetForm);
       $priceOptions.on('click', selectPrice);
+      $donateScroll.on('click', scrollUp);
 
       $sponsorStepButtons.on('click', openStep);
 
@@ -1180,7 +1188,10 @@
       { name: 'Criminal Justice', options: [ 'Criminal justice reform', 'Drug policy', 'Death penalty', 'Gun control', 'Legalize Sex work', 'Background checks for gun purchases' ] },
       { name: 'Culture and Society', options: [ 'Race and Gender', 'Government and Religion', 'Abortion', 'Arts', 'Civil Rights', 'Religious Freedom Act', 'Gay marriage', 'Police voilence and Race', 'Wage and Race', 'Wage and Gender', 'Voting oppertunities by race/gender/class' ] },
       { name: 'Domestic Policy', options: [ 'Immigration', 'Border security', 'Birthright citizenship', 'Temporary amnesty', 'NSA Surveillance', 'Campaign finance', 'Net Neutrality', 'Affirmative action', 'Patriot Act', 'Gerrymandering', 'Confederate flag'] },
-      { name: 'Economic Affairs', options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Reform', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes', 'Tax incentives for companies to have comprehensive cybersecurity plans in place', 'Limitless H1-B Visas for high-skilled workers'] },
+      {
+        name: 'Economic Affairs',
+        options: [ 'Housing policy', 'Infastructure', 'Budget', 'Taxes', 'Equal Pay', 'Welfare', 'Corporate income tax', 'Labor unions', 'Wall Street Reform', 'Minimum Wage', 'Labor unions', 'Farm subsidies', 'Property taxes', 'Land value taxes', 'Trans-Pacific Partnership', 'Pension reform', 'Capital gain taxes', 'Carried interest taxes', 'Tax incentives for companies to have comprehensive cybersecurity plans in place', 'Limitless H1-B Visas for high-skilled workers']
+      },
       { name: 'Education', options: [ 'Education', 'Elementary education', 'Secondary education', 'Higher education', 'In-State Tuition', 'Common Core', 'Student Loans', 'Skills-based education', 'Technology education', 'Universal access to education for children from birth to age five' ] },
       { name: 'Environment', options: [ 'Environment', 'Food policy', 'Air quality', 'Global warming', 'Environment and Climate Policy', '50% reduction of C02 emissions by 2030' ] },
       { name: 'Government Operations', options: [ 'Federal spending', 'Term limits for Congress', 'Campaign finance reform', 'Government privatization' ] },
