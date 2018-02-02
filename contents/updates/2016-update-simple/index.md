@@ -397,7 +397,7 @@ title: August 2016 Update
                         3/ HuffPo is <a target="_blank" href="https://twitter.com/HuffPostPol/status/768534447536898048">tweeting</a> Lifemap out to their 860,000 followers!
                         <br><br>
                         <div class="lf-logo" style="text-align:center;">
-                           <img style="max-width:400px;" src="http://lifemap.io/img/lifemap.png" />
+                           <img style="max-width:400px;" src="/img/lifemap.png" />
                         </div>
                      </div>
                   </td>
