@@ -1,0 +1,67 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  article.dfa-article.article.big
+    div.ui.items.article-header
+      div.item
+        div.content
+          h1.article-title(style="font-weight: 300; text-align: center; font-style: italic;")
+            span(style="font-weight:normal;") Data
+              span(style="color:#cc0000;") 4
+              | America
+            |  Conversations #1
+  
+    div.article-content
+      h3 DATE AND TIME
+      p Wed, March 7 2018 
+        br 
+        | 6:00 PM – 9:00 PM PST
+        br
+        a(href="/ics/Data4America.ics", target="_blank") Add to Calendar
+        
+      h3 LOCATION
+      p 54 Washburn St
+        br
+        | San Francisco, CA 94103
+        br
+        a(href="https://www.google.com/maps/place/40%C2%B045'19.1%22N+73%C2%B058'54.2%22W/@40.7553119,-73.9822661,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d40.7553119!4d-73.9817189?hl=en", target="_blank") View Map
+
+        
+      h3 ABOUT
+      ul(style="padding-left: 1em;")
+        li
+          p Invite-only
+        li
+          p Up to 40 attendees
+        li
+          p Open conversations about policy ideas
+        li
+          p Republicans, Democrats, Libertarians, Independents, and more are Welcome
+        li
+          p We’ll start the evening with a 15-minute lightning talk from Renee DiResta on her work 
+            a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank") profiled in the NYT
+        li
+          p $75 for admission
+        li
+          p Up to $40 will be tax-deductible
+        li
+          p Doors close promptly at 6pm ET
+          
+      div.content-center
+        a(href="/conversation1apply").ui.button.huge.red Request an Invite
+        
+      div.text-center(style="margin-top:4em;")
+        h1 Why Conversations?  
+        
+        p Partisan bias is an an all-time high in America. You can see it in the voting patterns of Congress.
+            
+        img.ui.centered.big.image(src="/img/america-votes-chart.png")
+          
+        p Putting a group of Republicans, Democrats, Libertarians, and Independents in the room to discuss political ideas, not necessarily politics, is progress our country needs right now.
+        
+        a(href="/conversation1apply").ui.button.huge.red Request an Invite
+
+    //- div.dfa-article-donate.body-text

@@ -1,0 +1,18 @@
+extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  article.dfa-article.article.big
+    div.ui.items.article-header
+      div.item
+        div.content
+          h1.article-title(style="font-weight: 300; text-align: center; font-style: italic;")
+            span(style="font-weight:normal;") Data
+              span(style="color:#cc0000;") 4
+              | America
+            |  Conversations #1 Apply
+  
+    div.article-content
+      iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSe1mPb9d1IyHjF_veDIvPOFZxOvEcz9L03wR1E6redKiVUqRg/viewform?usp=sf_link", width="100%", height="1520", frameborder="0")

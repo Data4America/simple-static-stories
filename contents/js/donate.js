@@ -493,7 +493,7 @@
 
     $('.body-text').html(content);
 
-    function init($mod) {
+    function init($mod, isArticle) {
       var $mod = $mod,
         $modal = $mod.find('.dfa-donate-modal'),
         $formDonate = $mod.find('.dfa-donate-form'),
@@ -530,8 +530,16 @@
         $sponsorSelectState = $mod.find('.dfa-select.select-states'),
         $sponsorSelectCountry = $mod.find('.dfa-select.select-countries'),
         $priceOptions = $mod.find('.dfa-price-option'),
+        $header = $mod.find('.dfa-header-text.donate'),
         paymentData;
 
+      if (isArticle) {
+        $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
+        $amount.find('input').val(75).attr('readonly', true);
+        $mod.find('.dfa-field.price-options').hide();
+        $mod.find('.dfa-field.anon-check').hide();
+        $mod.find('.dfa-field.action-buttons .donateStripe').hide();
+      }
 
       var handler = global.StripeCheckout.configure({
         //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
@@ -1286,8 +1294,13 @@
 
     $('.dfa-donate').each(function() {
       if (!$(this).hasClass('init')) {
-        $(this).addClass('init')
-        init($(this));
+        $(this).addClass('init');
+        if ($(this).parents('.dfa-article-donate').length) {
+          console.log('article');
+          init($(this), true);
+        } else {
+          init($(this), false);
+        }
       }
     });
 

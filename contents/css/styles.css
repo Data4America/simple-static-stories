@@ -52191,6 +52191,20 @@ input::-moz-focus-inner {
   font-style: italic;
   color: #CC0001;
 }
+.content-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
 /*-------------------
      on lock
 --------------------*/
