@@ -538,7 +538,7 @@
         $amount.find('input').val(75).attr('readonly', true);
         $mod.find('.dfa-field.price-options').hide();
         $mod.find('.dfa-field.anon-check').hide();
-        $mod.find('.dfa-field.action-buttons .donateStripe').hide();
+        $mod.find('.dfa-field.action-buttons .btnCheque').hide();
       }
 
       var handler = global.StripeCheckout.configure({
