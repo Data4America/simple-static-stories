@@ -53480,37 +53480,6 @@ input::-moz-focus-inner {
     line-height: 1.4;
   }
 }
-.dfa-article.event .article-schedule {
-  background: #00326c0d;
-  padding: 1em;
-}
-.dfa-article.event .article-schedule h3 {
-  font-size: 1em;
-  margin: 0px;
-}
-.dfa-article.event .article-schedule p {
-  margin: 0px;
-}
-.dfa-article.event img {
-  margin: 2em 0px;
-}
-.dfa-article.event .ui.button {
-  margin: 2em 0px;
-}
-.dfa-article.event .ui.button.bottom {
-  margin-bottom: 0px;
-}
-@media only screen and (max-width: 767px) {
-  .dfa-article.event .ui.grid {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-}
-.dfa-article.no-max-width {
-  max-width: none;
-}
 @media only screen and (max-width: 767px) {
   #dfa-content p {
     word-break: break-word;
