@@ -41,6 +41,7 @@ $(document).ready(function() {
   changeTopNav();
   lifemapCategories();
   // scrollOnBottom();
+  isEventPage();
 
   if (window.location.pathname.search("/donate") === 0) {
     $('#dfa-donate-footer').hide();
@@ -519,6 +520,17 @@ $(document).ready(function() {
   }
 
 });
+
+function isEventPage() {
+  var paths = ['/conversation1', '/conversation1apply', '/conversation1payment'],
+  pathname = window.location.pathname;
+  console.log(pathname, paths.indexOf(pathname));
+  if (paths.indexOf(pathname) > -1) {
+    $('#dfa-donate-footer').hide();
+    $('#dfa-logo-footer').hide();
+    $('#dfa-as-seen-in').hide();
+  }
+}
 
 function initMobileMenu() {
   var $masthead = $('#masthead'),

@@ -535,10 +535,15 @@
 
       if (isArticle) {
         $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
-        $amount.find('input').val(75).attr('readonly', true);
+        if (window.location.pathname == '/conversation1paymenttest') {
+          $amount.find('input').val(1).attr('readonly', true);
+        } else {
+          $amount.find('input').val(75).attr('readonly', true);
+        }
         $mod.find('.dfa-field.price-options').hide();
         $mod.find('.dfa-field.anon-check').hide();
         $mod.find('.dfa-field.action-buttons .btnCheque').hide();
+        $mod.find('.dfa-link-sponsor.dfa-donate-scroll').hide();
       }
 
       var handler = global.StripeCheckout.configure({
@@ -1296,7 +1301,6 @@
       if (!$(this).hasClass('init')) {
         $(this).addClass('init');
         if ($(this).parents('.dfa-article-donate').length) {
-          console.log('article');
           init($(this), true);
         } else {
           init($(this), false);

@@ -67,6 +67,10 @@ html, body, header {
   text-transform: none;
 }
 
+.no-padding {
+  padding: 0px !important;
+}
+
 /*-------------------
      TEXT STYLE
 --------------------*/
@@ -1513,6 +1517,43 @@ html, body, header {
       line-height: 1.4;
     }
   }
+}
+
+.dfa-article.event {
+  .article-schedule {
+    background: #00326c0d;
+    padding:1em;
+    h3 {
+      font-size: 1em;
+      margin: 0px;
+    }
+
+    p {
+      margin: 0px;
+    }
+  }
+
+  img {
+    margin: 2em 0px;
+  }
+
+  .ui.button {
+    margin: 2em 0px;
+  }
+
+  .ui.button.bottom {
+    margin-bottom:0px;
+  }
+
+  @media only screen and (max-width: @largestMobileScreen) {
+    .ui.grid {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.dfa-article.no-max-width {
+  max-width: none;
 }
 
 @media only screen and (max-width: @largestMobileScreen) {
