@@ -522,9 +522,9 @@ $(document).ready(function() {
 });
 
 function isEventPage() {
-  var paths = ['/conversation1', '/conversation1apply', '/conversation1payment'],
+  var paths = ['/conversation1', '/conversation1apply', '/conversation1payment', '/conversation1paymenttest'],
   pathname = window.location.pathname;
-  console.log(pathname, paths.indexOf(pathname));
+  // console.log(pathname, paths.indexOf(pathname));
   if (paths.indexOf(pathname) > -1) {
     $('#dfa-donate-footer').hide();
     $('#dfa-logo-footer').hide();
