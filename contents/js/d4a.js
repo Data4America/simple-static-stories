@@ -522,10 +522,18 @@ $(document).ready(function() {
 });
 
 function isEventPage() {
-  var paths = ['/conversation1', '/conversation1apply', '/conversation1payment', '/conversation1paymenttest'],
-  pathname = window.location.pathname;
+  var paths = ['conversation1', 'conversation1apply', 'conversation1payment', 'conversation1paymenttest'],
+      pathname = window.location.pathname,
+      found = false;
+
+  paths.forEach(function(item) {
+    if (pathname.search(item) >= 0) {
+      found = true;
+    }
+  });
+
   // console.log(pathname, paths.indexOf(pathname));
-  if (paths.indexOf(pathname) > -1) {
+  if (found) {
     $('#dfa-donate-footer').hide();
     $('#dfa-logo-footer').hide();
     $('#dfa-as-seen-in').hide();

@@ -535,11 +535,13 @@
 
       if (isArticle) {
         $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
-        if (window.location.pathname == '/conversation1paymenttest') {
+
+        if (window.location.pathname.search("conversation1paymenttest") >= 0) {
           $amount.find('input').val(1).attr('readonly', true);
         } else {
           $amount.find('input').val(75).attr('readonly', true);
         }
+
         $mod.find('.dfa-field.price-options').hide();
         $mod.find('.dfa-field.anon-check').hide();
         $mod.find('.dfa-field.action-buttons .btnCheque').hide();
