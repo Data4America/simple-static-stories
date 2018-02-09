@@ -363,8 +363,10 @@ $(document).ready(function() {
   ;
 
   $('#dfa-donate-progress').progress({
-    percent: 57
+    percent: 20
   });
+
+  $('#dfa-donate-progress > p').text('80% remaining');
 
   function initFlipClock() {
     // Grab the current date
@@ -420,7 +422,7 @@ $(document).ready(function() {
     }
   }
 
-  initializeClock('dfa-time-count-index', 'December 31 2017');
+  initializeClock('dfa-time-count-index', 'December 31 2018');
 
   //donation shape rotation
   // $('#dfa-donate-widget .ui.shape').shape();
