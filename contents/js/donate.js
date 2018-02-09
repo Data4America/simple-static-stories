@@ -534,9 +534,14 @@
         paymentData;
 
       if (isArticle) {
+<<<<<<< HEAD
         $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
 
         if (window.location.pathname.search("conversation1paymenttest") >= 0) {
+=======
+        $header.html('Pay for your admission to Conversation #1.<br><br>Up to $40 will be tax-deductible');
+        if (window.location.pathname == '/conversation1paymenttest') {
+>>>>>>> d4bcc0258c60870419a90a16ddb32aba972d453c
           $amount.find('input').val(1).attr('readonly', true);
         } else {
           $amount.find('input').val(75).attr('readonly', true);
@@ -751,31 +756,13 @@
       }
 
       function onStripeSubmit(e) {
-        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+         $formPersonalInfo.show();
 
         if ($input.val().length === 0) {
           $input.addClass('red');
           goToTop();
           return;
         }
-
-        var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
-
-        var desc = '$' + numberWithCommas(amount / 100) +
-          (type == 'monthly' ? ' Monthly Donation' : ' Donation');
-
-        var buttonText = 'Give {{amount}}' +
-          (type == 'monthly' ? ' Monthly' : '');
-
-        // Open Checkout with further options
-        handler.open({
-            name: 'Data4America',
-            description: desc,
-            amount: amount,
-            panelLabel: buttonText,
-            allowRememberMe: false,
-            address: true,
-        });
 
         e.preventDefault();
       }
@@ -845,7 +832,6 @@
 
       function giveByCheque() {
         var type = $formPersonalInfo.find('input[name="donationType"]').val();
-        console.log(type);
         if (type === 'sponsor') {
           if ($secCheque.css('display') == 'none') {
             $secCheque.show();
@@ -908,6 +894,25 @@
       }
 
       function submitData() {
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
+
+        var desc = '$' + numberWithCommas(amount / 100) +
+          (type == 'monthly' ? ' Monthly Donation' : ' Donation');
+
+        var buttonText = 'Give {{amount}}' +
+          (type == 'monthly' ? ' Monthly' : '');
+
+        // Open Checkout with further options
+        handler.open({
+            name: 'Data4America',
+            description: desc,
+            amount: amount,
+            panelLabel: buttonText,
+            allowRememberMe: false,
+            address: true,
+        });
+
         $formPersonalInfo.hide();
         $modLoading.show();
 
@@ -1168,7 +1173,7 @@
             $modLoading = $mod.find('.dfa-loading');
 
         $formPersonalInfo.find('input[name="donationId"]').val(donationId);
-        $formPersonalInfo.show();
+        // $formPersonalInfo.show();
         $formDonate.hide();
         $modLoading.hide();
 

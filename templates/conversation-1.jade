@@ -5,14 +5,15 @@ block prepend title
 
 block content
   div#dfa-event
-
     div.cover
-      div.text
-        h1.ui.inverted.header 
-          span(style='font-weight:normal;')
-            | Data
-            span(style='color:#cc0000;') 4
-            | America Conversations #1
+      div.image
+        img(src="/img/d4a-conversations.png")
+      //- div.text
+      //-   h1.ui.inverted.header 
+      //-     span(style='font-weight:normal;')
+      //-       | Data
+      //-       span(style='color:#cc0000;') 4
+      //-       | America Conversations #1
 
     div.ui.grid.stackable
       div.eleven.wide.column
@@ -25,19 +26,33 @@ block content
               p Invite-only
             li
               p Up to 40 attendees
+
             li
               p Open conversations about policy ideas
+
             li
               p Republicans, Democrats, Libertarians, Independents, and more are Welcome
+
             li
               p We’ll start the evening with a 15-minute lightning talk from Renee DiResta on her work 
                 a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank") profiled in the NYT
             li
               p $75 for admission
+
+            li
+              p Food and drinks will be served
+
             li
               p Up to $40 will be tax-deductible
+
             li
-              p Doors close promptly at 6pm PT
+              p Event starts at 6:30pm
+
+            li
+              p Doors close promptly at 7pm
+
+            li
+              p Event ends at 9pm
 
           div(style='text-align: center;')
             a(href="/conversation1apply").ui.button.huge.red Request an Invite
@@ -80,7 +95,10 @@ block content
         div.ui.attached.segment.organizers
           h4.ui.header Data4America
           img.ui.fluid.image(src="https://data4america.org/img/logo-256.png", style="max-width:150px;")
-          p A non-profit, educational initiative bringing data science to the understanding of politics.
+          p Bridging data and conversations to advance the understanding of policy
+          p A nonprofit, nonpartisan initiative made with 
+            span(style="margin: 0em 0.4em 0em 0em;") 💙  
+            | from 🇺🇸 
           p
             a(href="http://data4america.org/")
               i.globe.icon
@@ -95,3 +113,6 @@ block content
               |  twitter.com/data4america        
     
     //- div.dfa-article-donate.body-text
+
+  .dfa-btn-donate(style='text-align:center; margin-top:3em;')
+    a.ui.blue.huge.header(style='cursor:pointer;') Make a tax-deductible donation

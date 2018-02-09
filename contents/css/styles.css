@@ -54279,7 +54279,7 @@ body.embed {
 }
 #dfa-event .cover {
   height: 336px;
-  background: url(/img/conference-room-min.jpg) no-repeat;
+  background: url(/img/event-cover.jpg) no-repeat;
   background-position: 0 -348px;
   background-size: 100%;
   margin: 0 0 1em;
@@ -54300,6 +54300,20 @@ body.embed {
   bottom: 0;
   border-radius: 0 0 5px 5px;
   font-size: 2.6em;
+}
+#dfa-event .cover .image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 2em;
+  left: 2em;
+  background: white;
+  padding: 0.3em;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #05050587;
+}
+#dfa-event .cover .image img {
+  width: 100%;
 }
 #dfa-event .cover .text .header {
   margin: 20px;
