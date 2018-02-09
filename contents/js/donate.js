@@ -42,7 +42,7 @@
     '         <strong>How It Works:</strong>' +
     '         You can sponsor any issue at the local, state, or federal level.  Data4America will actively promote the policy channel and start accepting crowdsourced submissions for it.' +
     '         <br /><br />' +
-    '         You’ll be publicly recognized for the policy channel sponsorship. Data4America only publishes what the non-partisan Editorial Board approves.' +
+    '         Youâ€™ll be publicly recognized for the policy channel sponsorship. Data4America only publishes what the non-partisan Editorial Board approves.' +
     '       </div>' +
     '       <div class="dfa-sponsor-step step1" style="display:block;">' +
     '         <h1><strong>Step 1:</strong> Do you want to sponsor a local, state, or federal-level policy issue?</h1>' +
@@ -181,7 +181,7 @@
     '       2440 West El Camino Real, Suite 300<br />' +
     '       Mountain View, CA 94040<br />' +
     '       EIN: 20-5205488</p>' +
-    '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorshipâ€”expected to be before October 30, 2015.</p>' +
     '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
@@ -195,7 +195,7 @@
     '       2440 West El Camino Real, Suite 300<br />' +
     '       Mountain View, CA 94040<br />' +
     '       EIN: 20-5205488</p>' +
-    '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorship—expected to be before October 30, 2015.</p>' +
+    '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorshipâ€”expected to be before October 30, 2015.</p>' +
     '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
@@ -392,7 +392,7 @@
     '       Your card has successfully been charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We’ll email you a receipt for this donation and for all future monthly donations to:' +
+    '       Weâ€™ll email you a receipt for this donation and for all future monthly donations to:' +
     '       <strong class="email"></strong>.' +
     '     </p>' +
     '     <p>' +
@@ -407,7 +407,7 @@
     '       Your card has been successfully charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We’ll send you a receipt for this donation to: <strong class="email"></strong>.' +
+    '       Weâ€™ll send you a receipt for this donation to: <strong class="email"></strong>.' +
     '     </p>' +
     '   </div>' +
     '   <div class="thankyou-member" style="display:none;">' +
@@ -418,7 +418,7 @@
     '       Your card has been successfully charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We’ll send you a receipt for this donation to: <strong class="email"></strong>.' +
+    '       Weâ€™ll send you a receipt for this donation to: <strong class="email"></strong>.' +
     '     </p>' +
     '   </div>' +
     '   <div class="thankyou-sponsor" style="display:none;">' +
@@ -429,7 +429,7 @@
     '       Your card has been successfully charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We’ll send you a receipt for this donation to: <strong class="email"></strong>.' +
+    '       Weâ€™ll send you a receipt for this donation to: <strong class="email"></strong>.' +
     '     </p>' +
     '   </div>' +
     '   <p class="thankyou-video" style="padding:0.6em;"></p>' +
@@ -534,14 +534,9 @@
         paymentData;
 
       if (isArticle) {
-<<<<<<< HEAD
         $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
 
         if (window.location.pathname.search("conversation1paymenttest") >= 0) {
-=======
-        $header.html('Pay for your admission to Conversation #1.<br><br>Up to $40 will be tax-deductible');
-        if (window.location.pathname == '/conversation1paymenttest') {
->>>>>>> d4bcc0258c60870419a90a16ddb32aba972d453c
           $amount.find('input').val(1).attr('readonly', true);
         } else {
           $amount.find('input').val(75).attr('readonly', true);
@@ -557,7 +552,7 @@
         //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
         //key: 'pk_live_m9gkuRZSe8d3tNC6DlXhic24',
         key: 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR',
-        image: 'https://33.media.tumblr.com/avatar_55d711f733d2_128.png',
+        image: 'https://data4america.org/img/logo-256.png',
         token: function(token) {
 
           // If a sponsor policy channel
@@ -756,13 +751,31 @@
       }
 
       function onStripeSubmit(e) {
-         $formPersonalInfo.show();
+        var type = $formPersonalInfo.find('input[name="donationType"]').val();
 
         if ($input.val().length === 0) {
           $input.addClass('red');
           goToTop();
           return;
         }
+
+        var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
+
+        var desc = '$' + numberWithCommas(amount / 100) +
+          (type == 'monthly' ? ' Monthly Donation' : ' Donation');
+
+        var buttonText = 'Give {{amount}}' +
+          (type == 'monthly' ? ' Monthly' : '');
+
+        // Open Checkout with further options
+        handler.open({
+            name: 'Data4America',
+            description: desc,
+            amount: amount,
+            panelLabel: buttonText,
+            allowRememberMe: false,
+            address: true,
+        });
 
         e.preventDefault();
       }
@@ -832,6 +845,7 @@
 
       function giveByCheque() {
         var type = $formPersonalInfo.find('input[name="donationType"]').val();
+        console.log(type);
         if (type === 'sponsor') {
           if ($secCheque.css('display') == 'none') {
             $secCheque.show();
@@ -894,25 +908,6 @@
       }
 
       function submitData() {
-        var type = $formPersonalInfo.find('input[name="donationType"]').val();
-        var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
-
-        var desc = '$' + numberWithCommas(amount / 100) +
-          (type == 'monthly' ? ' Monthly Donation' : ' Donation');
-
-        var buttonText = 'Give {{amount}}' +
-          (type == 'monthly' ? ' Monthly' : '');
-
-        // Open Checkout with further options
-        handler.open({
-            name: 'Data4America',
-            description: desc,
-            amount: amount,
-            panelLabel: buttonText,
-            allowRememberMe: false,
-            address: true,
-        });
-
         $formPersonalInfo.hide();
         $modLoading.show();
 
@@ -1173,7 +1168,7 @@
             $modLoading = $mod.find('.dfa-loading');
 
         $formPersonalInfo.find('input[name="donationId"]').val(donationId);
-        // $formPersonalInfo.show();
+        $formPersonalInfo.show();
         $formDonate.hide();
         $modLoading.hide();
 
