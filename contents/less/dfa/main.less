@@ -2531,8 +2531,12 @@ body.embed {
     position: relative;
 
     @media only screen and (max-width: @largestMobileScreen) {
-      background-size: 150%;
-      background-position: 0;
+      // background-size: 150%;
+      // background-position: 0;
+      background-size: contain;
+      background-position: top;
+      background-color: white;
+      // margin: 0px;
     }
   }
 
@@ -2556,6 +2560,18 @@ body.embed {
     padding: 0.3em;
     border-radius: 4px;
     box-shadow: 5px 5px 12px #05050587;
+
+    @media only screen and (max-width: @largestMobileScreen) {
+      // left: calc(~'50% - 100px');
+      // bottom: calc(~'50% - 100px');
+      left: calc(~'50% - 65px');
+      bottom: -17px;
+      /* padding: 0px; */
+      height: 130px;
+      width: 130px;
+      box-shadow: 2px 2px 12px #05050587;
+      z-index: 1;
+    }
   }
 
   .cover .image img {
@@ -2599,7 +2615,9 @@ body.embed {
     font-size: 1.2em;
     margin: 1em 0;
   }
-
+  @media only screen and (max-width: @largestMobileScreen) {
+    overflow: hidden;
+  }
 }
 
 #dfa-updates {
