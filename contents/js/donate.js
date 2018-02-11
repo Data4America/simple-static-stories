@@ -498,7 +498,7 @@
 
     $('.body-text').html(content);
 
-    function init($mod, isArticle) {
+    function init($mod) {
       var $mod = $mod,
         $modal = $mod.find('.dfa-donate-modal'),
         $formDonate = $mod.find('.dfa-donate-form'),
@@ -537,26 +537,27 @@
         $sponsorSelectCountry = $mod.find('.dfa-select.select-countries'),
         $priceOptions = $mod.find('.dfa-price-option'),
         $header = $mod.find('.dfa-header-text.donate'),
+        isConversation = false,
         paymentData = {};
 
-      if (isArticle) {
-        $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
-
-        if (window.location.pathname.search("conversation1paymenttest") >= 0) {
-          $amount.find('input').val(1).attr('readonly', true);
-        } else {
-          $amount.find('input').val(75).attr('readonly', true);
-        }
-
-        $mod.find('.dfa-field.price-options').hide();
-        $mod.find('.dfa-field.anon-check').hide();
-        $mod.find('.dfa-field.action-buttons .btnCheque').hide();
-        $mod.find('.dfa-link-sponsor.dfa-donate-scroll').hide();
+      // Detect 'Conversation' page
+      if ($mod.parents('.dfa-conversation').length) {
+        isConversation = true;
+        changeToConversation();
       }
 
+      function getStripeKey() {
+        if (window.location.hash.search('#test:') === 0) {
+          paymentData.test = window.location.hash.split(':')[1];
+          return 'pk_test_6xSjbhgmCXE8kJ9160XcERqN';
+        }
+
+        return 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR';
+      }
+
+
       var handler = global.StripeCheckout.configure({
-        //key: 'pk_test_6xSjbhgmCXE8kJ9160XcERqN',
-        key: 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR',
+        key: getStripeKey(),
         image: 'https://data4america.org/img/logo-256.png',
         token: function(token) {
           var fields = {};
@@ -774,12 +775,30 @@
         var type = $formPersonalInfo.find('input[name="donationType"]').val();
         if (type == 'onetime' || type == 'monthly') {
           justDonate();
+
+          if (isConversation) {
+            changeToConversation();
+          }
         } else if (type == 'sponsor') {
           sponsorPolicy();
         } else if (type == 'member') {
           becomeMember();
         }
+      }
 
+      function changeToConversation() {
+        $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
+
+        if (window.location.pathname.search("conversation1paymenttest") >= 0) {
+          $amount.find('input').val(1).attr('readonly', true);
+        } else {
+          $amount.find('input').val(75).attr('readonly', true);
+        }
+
+        $mod.find('.dfa-field.price-options').hide();
+        $mod.find('.dfa-field.anon-check').hide();
+        $mod.find('.dfa-field.action-buttons .btnCheque').hide();
+        $mod.find('.dfa-link-sponsor.dfa-donate-scroll').hide();
       }
 
       function goToCheque() {
@@ -1247,11 +1266,7 @@
     $('.dfa-donate').each(function() {
       if (!$(this).hasClass('init')) {
         $(this).addClass('init');
-        if ($(this).parents('.dfa-article-donate').length) {
-          init($(this), true);
-        } else {
-          init($(this), false);
-        }
+        init($(this));
       }
     });
 
