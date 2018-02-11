@@ -47,6 +47,10 @@ $(document).ready(function() {
     $('#dfa-donate-footer').hide();
   }
 
+  $('.dfa-event-calendar').click(function(){
+    $('#dfa-event-cal-opts').modal('show');
+  });
+
   $('.ui.form .ui.dropdown').dropdown();
 
   $('.dfa-bi-checkboxes .checkbox').checkbox({

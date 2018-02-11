@@ -52191,6 +52191,9 @@ input::-moz-focus-inner {
 .no-padding {
   padding: 0px !important;
 }
+a {
+  cursor: pointer;
+}
 /*-------------------
      TEXT STYLE
 --------------------*/
