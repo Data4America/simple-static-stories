@@ -50510,6 +50510,9 @@ a.dfa-button {
   color: #fff;
   text-decoration: none;
 }
+a.dfa-button.dfa-button-back {
+  background-color: grey;
+}
 @media only screen and (max-width: 767px) {
   a.dfa-button {
     display: block;
@@ -51040,7 +51043,15 @@ input::-moz-focus-inner {
 }
 @media only screen and (max-width: 767px) {
   .dfa-mobile-header {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .dfa-mobile-header .dfa-button {

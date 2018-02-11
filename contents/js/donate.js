@@ -226,6 +226,7 @@
     // PERSONAL INFO FORM
     '<form class="dfa-personal-info-form" style="display:none;" action="" method="post">' +
     ' <div class="dfa-mobile-header">' +
+    '   <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
     '   <a href="javascript:;" class="dfa-button dfa-button-proceed">Next</a>' +
     ' </div>' +
     ' <table>' +
