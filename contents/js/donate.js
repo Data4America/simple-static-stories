@@ -88,6 +88,14 @@
     '       </div>' +
     '     </td>' +
     '   </tr>' +
+    '   <tr class="dfa-field">' +
+    '     <td colspan="2">' +
+    '       <div class="error-message ui message red" style="margin-bottom:0.6em; display:none;">' +
+    '         <b>ERROR: </b>' +
+    '         <span class="text"></span>' +
+    '       </div>' +
+    '     </td>' +
+    '   </tr>' +
     '   <tr class="dfa-field donation-input">' +
     '     <td>' +
     '       <div class="dfa-amount">' +
@@ -237,14 +245,6 @@
     '   </tr>' +
     '   <tr class="dfa-field">' +
     '     <td colspan="2">' +
-    '       <div class="error-message ui message red" style="margin-bottom:0.6em; display:none;">' +
-    '         <b>ERROR: </b>' +
-    '         <span class="text"></span>' +
-    '       </div>' +
-    '     </td>' +
-    '   </tr>' +
-    '   <tr class="dfa-field">' +
-    '     <td colspan="2">' +
     '       <div class="dfa-check">' +
     '         <input checked="checked" class="dfa-send-newsletters" name="newsletters" type="checkbox" value="1">' +
     '         <label for="dfa-send-newsletters">Send me new data stories by email</label>' +
@@ -342,14 +342,6 @@
     '       <div class="dfa-input-text"><input type="text" name="li" value="" /></div>' +
     '     </td>' +
     '   </tr>' +
-    '   <tr class="dfa-field">' +
-    '     <td colspan="2"> ' +
-    '       <div class="error-message ui message red" style="margin-bottom:0.6em; display:none;">' +
-    '         <b> ERROR: </b>' +
-    '         <span class="text"></span>' +
-    '       </div>' +
-    '     </td>' +
-    '   </tr>' +
     '   <tr>' +
     '     <td colspan="2" style="text-align:center;">' +
     '       <a href="javascript:;" class="dfa-button dfa-button-proceed">Next</a>' +
@@ -363,7 +355,6 @@
     '  <input type="hidden" name="donationId" value="" />' +
     '  <input type="hidden" name="amount" value="" />' +
     '  <input type="hidden" name="donateto" value="General Fund" />' +
-    '  <input type="hidden" name="stripeToken" value="" />' +
     '</form>' +
     // POST LEARN MORE
     ' <div class="dfa-learn-more">' +
@@ -556,6 +547,7 @@
       // Detect 'Conversation' page
       if ($mod.parents('.dfa-conversation').length) {
         isConversation = true;
+        paymentData.conversation = 'yes';
         changeToConversation();
       }
 
@@ -568,49 +560,23 @@
         return 'pk_live_ZOomKa0jZ1trH7YcyUBtoJiR';
       }
 
-
       var handler = global.StripeCheckout.configure({
         key: getStripeKey(),
         image: 'https://data4america.org/img/logo-256.png',
         token: function(token) {
-          var fields = {};
 
-          if ($formPersonalInfo.find('#dfa-send-newsletters').is(':checked')) {
-            $formPersonalInfo.find('input[name="sendNewsletters"]').val("yes");
-          } else {
-            $formPersonalInfo.find('input[name="sendNewsletters"]').val("no");
-          }
-
-          $formPersonalInfo.find('input, select').each(function() {
-            if ($(this).hasClass('dfa-select')) {
-              fields[$(this).attr('name')] = $(this).find('option:selected').val();
-            } else {
-              fields[$(this).attr('name')] = $(this).val();
-            }
-          });
+          $formDonate.hide();
+          $modLoading.show();
 
           // ASSIGN DATA
           paymentData.token = token.id;
-          paymentData.name = fields.name;
-          paymentData.email = fields.email;
-          paymentData.address = fields.address;
-          paymentData.state = fields.state;
-          paymentData.zip = fields.zip;
-          paymentData.city = fields.city;
-          paymentData.to = fields.donateto;
-          paymentData.fb = fields.fb;
-          paymentData.tw = fields.tw;
-          paymentData.lkn = fields.li;
-          paymentData.nws = fields.sendNewsletters;
-          paymentData.tss = fields.tshirt;
-
-          if (fields.address2.length > 0) {
-            paymentData.address += ', ' + fields.address2;
-          }
-
-          $formPersonalInfo.hide();
-          $modLoading.show();
-          goToTop();
+          paymentData.email = token.email;
+          paymentData.name = token.card.name;
+          paymentData.address = token.card.address_line1;
+          paymentData.state = token.card.address_state;
+          paymentData.zip = token.card.address_zip;
+          paymentData.city = token.card.address_city;
+          paymentData.country = token.card.address_country;
 
           $.ajax({
             type: "POST",
@@ -618,26 +584,31 @@
             data: paymentData,
             dataType: 'json',
             success: function(data) {
-              console.log(data);
-
               if (data.status === 0) {
-                $formPersonalInfo.show();
                 $modLoading.hide();
+                $formDonate.show();
                 showErrorOnForm(data.message);
                 return;
               }
 
-              if ($modal.length) {
-                $modal.find('.icon.close').hide();
-              }
+              $formPersonalInfo.find('input[name="donationId"]').val(data.id);
+              $formPersonalInfo.find('input[name="amount"]').val(paymentData.amount / 100);
+              $formPersonalInfo.find('input[name="email"]').val(paymentData.email);
+              $formPersonalInfo.find('input[name="name"]').val(paymentData.name);
+              $formPersonalInfo.find('input[name="address"]').val(paymentData.address);
+              $formPersonalInfo.find('input[name="city"]').val(paymentData.city);
+              $formPersonalInfo.find('input[name="zip"]').val(paymentData.zip);
+              $formPersonalInfo.find('select[name="state"]').find('option').removeAttr('selected');
+              $formPersonalInfo.find('select[name="state"]').find('option[value="' + paymentData.state + '"]').prop('selected', true);
+              $formPersonalInfo.find('input[name="anon"]').val(paymentData.anon);
 
               $modLoading.hide();
+              $formPersonalInfo.show();
+              goToTop();
+
               if ($modal.length) {
                 $modal.modal('refresh');
               }
-
-              goToThankYou();
-              goToTop();
             }
           });
         }
@@ -662,8 +633,8 @@
       }
 
       function showErrorOnForm(message) {
-        $formPersonalInfo.find('.error-message').show();
-        $formPersonalInfo.find('.error-message .text').html(message);
+        $formDonate.find('.error-message').show();
+        $formDonate.find('.error-message .text').html(message);
       }
 
       function sponsorPolicy() {
@@ -752,36 +723,61 @@
         goToTop();
       }
 
-      function onStripeSubmit(e) {
-        if ($input.val().length === 0) {
-          $input.addClass('red');
-          goToTop();
-          return;
+      function onDataSubmit() {
+        var fields = {};
+
+        if ($formPersonalInfo.find('#dfa-send-newsletters').is(':checked')) {
+          $formPersonalInfo.find('input[name="sendNewsletters"]').val("yes");
+        } else {
+          $formPersonalInfo.find('input[name="sendNewsletters"]').val("no");
         }
 
-        var type = $formPersonalInfo.find('input[name="donationType"]').val(),
-            email = $formPersonalInfo.find('input[name="email"]').val();
-
-        var amount = parseFloat( $input.val().replace(/,/gi,'') ) * 100;
-
-        var desc = '$' + numberWithCommas(amount / 100) +
-          (type == 'monthly' ? ' Monthly Donation' : ' Donation');
-
-        var buttonText = 'Give {{amount}}' +
-          (type == 'monthly' ? ' Monthly' : '');
-
-        // Open Checkout with further options
-        handler.open({
-            name: 'Data4America',
-            email: email,
-            description: desc,
-            amount: amount,
-            panelLabel: buttonText,
-            allowRememberMe: false,
-            address: true
+        $formPersonalInfo.find('input, select').each(function() {
+          if ($(this).hasClass('dfa-select')) {
+            fields[$(this).attr('name')] = $(this).find('option:selected').val();
+          } else {
+            fields[$(this).attr('name')] = $(this).val();
+          }
         });
 
-        e.preventDefault();
+        paymentData.id = fields.donationId;
+        paymentData.name = fields.name;
+        paymentData.email = fields.email;
+        paymentData.address = fields.address;
+        paymentData.state = fields.state;
+        paymentData.zip = fields.zip;
+        paymentData.city = fields.city;
+        paymentData.to = fields.donateto;
+        paymentData.fb = fields.fb;
+        paymentData.tw = fields.tw;
+        paymentData.lkn = fields.li;
+        paymentData.nws = fields.sendNewsletters;
+        paymentData.tss = fields.tshirt;
+
+        if (fields.address2.length > 0) {
+          paymentData.address += ', ' + fields.address2;
+        }
+
+        $formPersonalInfo.hide();
+        $modLoading.show();
+
+        $.ajax({
+          type: "POST",
+          url: "https://dev.data4america.org/donate/submit.php",
+          data: paymentData,
+          dataType: 'json',
+          success: function(data) {
+            console.log(data);
+
+            $modLoading.hide();
+            if ($modal.length) {
+              $modal.modal('refresh');
+            }
+
+            goToThankYou();
+            goToTop();
+          }
+        });
       }
 
       function onTypeInput() {
@@ -866,7 +862,7 @@
         $modCheque.hide();
       }
 
-      function giveByCreditCard() {
+      function giveByCreditCard(e) {
         if ($input.val().length == 0) {
           return;
         }
@@ -877,13 +873,23 @@
         paymentData.anon = $formDonate.find('.dfa-anon').is(':checked') ? 'yes' : 'no';
         assignSponsorData();
 
-        $formPersonalInfo.show();
-        $formDonate.hide();
-        $modLoading.hide();
+        var desc = '$' + numberWithCommas(paymentData.amount / 100) +
+          (paymentData.type == 'monthly' ? ' Monthly Donation' : ' Donation');
 
-        if ($modal.length) {
-          $modal.modal('refresh');
-        }
+        var buttonText = 'Give {{amount}}' +
+          (paymentData.type == 'monthly' ? ' Monthly' : '');
+
+        // Open Checkout with further options
+        handler.open({
+            name: 'Data4America',
+            description: desc,
+            amount: paymentData.amount,
+            panelLabel: buttonText,
+            allowRememberMe: false,
+            address: true
+        });
+
+        e.preventDefault();
       }
 
       function giveByCheque() {
@@ -1162,11 +1168,9 @@
 
       $inputTableBudget.on('input', calculateBudget);
 
-      $btnProceed.on('click', onStripeSubmit);
-      //$btnProceed.on('click', submitData);
+      $btnProceed.on('click', onDataSubmit);
 
-      //$('.dfa-amount-input').focus();
-
+      /*
       if (window.location.hash.length) {
         var price = parseInt(window.location.hash.replace('#', '')),
             $option = $priceOptions.filter('[data-value="' + price + '"]');
@@ -1180,6 +1184,7 @@
       } else {
         //$($priceOptions[1]).trigger('click');
       }
+      */
 
       populateIssues();
 
