@@ -61,13 +61,30 @@ block content
               i.globe.icon
               |  data4america.org
           p
+            a(href="https://twitter.com/data4america", target="_blank")
+              i.twitter.icon
+              |  twitter.com/data4america 
+          p
             a(href="https://www.facebook.com/data4america/", target="_blank")
               i.facebook.icon
               |  facebook.com/data4america
-          p
-            a(href="https://twitter.com/data4america", target="_blank")
-              i.twitter.icon
-              |  twitter.com/data4america   
 
     div.text-center(style="margin-top:3em;")
       a.ui.blue.large.header.text-center(style='cursor:pointer;', href="/donate", target="_blank") Make a tax-deductible donation
+      
+    div#dfa-event-cal-opts.ui.small.modal
+      i.icon.close
+      div.header(style="text-align: center;") Add to Calendar
+      div.content
+        div.ui.icon.huge.vertical.basic.fluid.buttons              
+          a.ui.button(href="/ics/Data4America.ics", target="_blank")
+            i.icon.mail 
+            | Outlook Calendar
+            
+          a.ui.button(href="https://calendar.google.com/calendar/r/eventedit?text=Data4America+Conversations+%231&dates=20180307T023000Z/20180307T050000Z&ctz=America/Los_Angeles&location=54+Washburn+St+San+Francisco,+CA+94103&details=For+details,+link+here:+https://www.data4america.org/conversation1&sf=true&output=xml", target="_blank") 
+            i.icon.google 
+            | Google Calendar
+          
+          a.ui.button(href="/ics/Data4America.ics", target="_blank") 
+            i.icon.apple 
+            | Apple Calendar
