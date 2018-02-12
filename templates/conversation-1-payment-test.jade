@@ -32,11 +32,11 @@ block content
               p Open conversations about policy ideas
 
             li
-              p Republicans, Democrats, Libertarians, Independents, and more are Welcome
+              p Republicans, Democrats, Libertarians, Independents, and more are welcome
 
             li
               p We’ll start the evening with a 15-minute lightning talk from Renee DiResta on her work
-                a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank") profiled in the NYT
+                a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank")  profiled in the NYT
             li
               p $75 for admission
 
@@ -87,21 +87,38 @@ block content
           h4.ui.header Data4America
           img.ui.fluid.image(src="https://data4america.org/img/logo-256.png", style="max-width:150px;")
           p Bridging data and conversations to advance the understanding of policy
-          p A nonprofit, nonpartisan initiative made with
-            span(style="margin: 0em 0.4em 0em 0em;") 💙
-            | from 🇺🇸
+          p A nonprofit, nonpartisan initiative made with 
+            span(style="margin: 0em 0.4em 0em 0em;") 💙  
+            | from 🇺🇸 
           p
             a(href="http://data4america.org/")
               i.globe.icon
               |  data4america.org
           p
+            a(href="https://twitter.com/data4america", target="_blank")
+              i.twitter.icon
+              |  twitter.com/data4america 
+          p
             a(href="https://www.facebook.com/data4america/", target="_blank")
               i.facebook.icon
               |  facebook.com/data4america
-          p
-            a(href="https://twitter.com/data4america", target="_blank")
-              i.twitter.icon
-              |  twitter.com/data4america
 
     div.text-center(style="margin-top:3em;")
       a.ui.blue.large.header.text-center(style='cursor:pointer;', href="/donate", target="_blank") Make a tax-deductible donation
+      
+    div#dfa-event-cal-opts.ui.small.modal
+      i.icon.close
+      div.header(style="text-align: center;") Add to Calendar
+      div.content
+        div.ui.icon.huge.vertical.basic.fluid.buttons              
+          a.ui.button(href="/ics/Data4America.ics", target="_blank")
+            i.icon.mail 
+            | Outlook Calendar
+            
+          a.ui.button(href="https://calendar.google.com/calendar/r/eventedit?text=Data4America+Conversations+%231&dates=20180307T023000Z/20180307T050000Z&ctz=America/Los_Angeles&location=54+Washburn+St+San+Francisco,+CA+94103&details=For+details,+link+here:+https://www.data4america.org/conversation1&sf=true&output=xml", target="_blank") 
+            i.icon.google 
+            | Google Calendar
+          
+          a.ui.button(href="/ics/Data4America.ics", target="_blank") 
+            i.icon.apple 
+            | Apple Calendar

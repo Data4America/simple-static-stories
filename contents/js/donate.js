@@ -211,7 +211,7 @@
     '   <tr>' +
     '     <td>' +
     '       <a class="dfa-link-donate dfa-donate-scroll" style="display:none;" href="javascript:;">Make a one-time donation</a>' +
-    '       <a class="dfa-link-sponsor dfa-donate-scroll" href="javascript:;">Sponsor a Policy Issue</a>' +
+    // '       <a class="dfa-link-sponsor dfa-donate-scroll" href="javascript:;">Sponsor a Policy Issue</a>' +
     //'       <a class="dfa-link-member" href="javascript:;">Become a founding member</a>' +
     '     </td>' +
     '   </tr>' +
@@ -352,8 +352,8 @@
     '   </tr>' +
     '   <tr>' +
     '     <td colspan="2" style="text-align:center;">' +
-    '       <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
     '       <a href="javascript:;" class="dfa-button dfa-button-proceed">Next</a>' +
+    '       <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
     '     </td>' +
     '   </tr>' +
     '  </table>' +
