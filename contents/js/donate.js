@@ -237,6 +237,14 @@
     '   </tr>' +
     '   <tr class="dfa-field">' +
     '     <td colspan="2">' +
+    '       <div class="error-message ui message red" style="margin-bottom:0.6em; display:none;">' +
+    '         <b>ERROR: </b>' +
+    '         <span class="text"></span>' +
+    '       </div>' +
+    '     </td>' +
+    '   </tr>' +
+    '   <tr class="dfa-field">' +
+    '     <td colspan="2">' +
     '       <div class="dfa-check">' +
     '         <input checked="checked" class="dfa-send-newsletters" name="newsletters" type="checkbox" value="1">' +
     '         <label for="dfa-send-newsletters">Send me new data stories by email</label>' +
@@ -336,6 +344,10 @@
     '   </tr>' +
     '   <tr class="dfa-field">' +
     '     <td colspan="2"> ' +
+    '       <div class="error-message ui message red" style="margin-bottom:0.6em; display:none;">' +
+    '         <b> ERROR: </b>' +
+    '         <span class="text"></span>' +
+    '       </div>' +
     '     </td>' +
     '   </tr>' +
     '   <tr>' +
@@ -608,6 +620,13 @@
             success: function(data) {
               console.log(data);
 
+              if (data.status === 0) {
+                $formPersonalInfo.show();
+                $modLoading.hide();
+                showErrorOnForm(data.message);
+                return;
+              }
+
               if ($modal.length) {
                 $modal.find('.icon.close').hide();
               }
@@ -640,6 +659,11 @@
         } else {
           $formDonate.find('.dfa-field.choose-donation-table').hide();
         }
+      }
+
+      function showErrorOnForm(message) {
+        $formPersonalInfo.find('.error-message').show();
+        $formPersonalInfo.find('.error-message .text').html(message);
       }
 
       function sponsorPolicy() {
@@ -753,7 +777,8 @@
             description: desc,
             amount: amount,
             panelLabel: buttonText,
-            allowRememberMe: false
+            allowRememberMe: false,
+            address: true
         });
 
         e.preventDefault();
