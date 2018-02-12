@@ -54291,6 +54291,19 @@ body.embed {
     font-size: 1.4em;
   }
 }
+#dfa-event .dfa-event-share {
+  position: absolute;
+  right: 5px;
+  top: -30px;
+  font-size: 2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+#dfa-event .dfa-event-share span {
+  font-size: 19px;
+  margin-right: 5px;
+}
 #dfa-event .cover {
   height: 336px;
   background: url(/img/event-cover.jpg) no-repeat;

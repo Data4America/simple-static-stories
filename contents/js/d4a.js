@@ -51,6 +51,10 @@ $(document).ready(function() {
     $('#dfa-event-cal-opts').modal('show');
   });
 
+  $('.dfa-event-share').click(function(){
+    $('#dfa-share-event').modal('show');
+  });
+
   $('.ui.form .ui.dropdown').dropdown();
 
   $('.dfa-bi-checkboxes .checkbox').checkbox({

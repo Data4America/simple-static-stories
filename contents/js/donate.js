@@ -813,7 +813,7 @@
       }
 
       function changeToConversation() {
-        $header.html('Pay for your admission to Conversation #1.<br>Up to $40 will be tax-deductible');
+        $header.html('Pay for your invite-admission to Conversation One.<br>Up to $40 will be tax-deductible from the Silicon Valley Community Foundation, our fiscal sponsor.');
 
         if (window.location.pathname.search("conversation1paymenttest") >= 0) {
           $amount.find('input').val(1).attr('readonly', true);
