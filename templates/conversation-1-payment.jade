@@ -5,6 +5,7 @@ block prepend title
   
 block metatags
   meta(property="og:title", content=page.title+" - Data4America")
+  meta(property="og:description", content="Putting a group of Republicans, Democrats, Libertarians, and Independents in the room to discuss political ideas, not necessarily politics, is progress our country needs right now.")
 
 block content
   div#dfa-event
@@ -27,38 +28,9 @@ block content
             span Share
             i.icon.external.share
           h3 ABOUT
-          ul(style="padding-left: 1em;")
-            li
-              p Invite-only
-            li
-              p Up to 40 attendees
-
-            li
-              p Open conversations about policy ideas
-
-            li
-              p Republicans, Democrats, Libertarians, Independents, and more are welcome
-
-            li
-              p We’ll start the evening with a 15-minute lightning talk from Renee DiResta on her work
-                a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank")  profiled in the NYT
-            li
-              p $75 for admission
-
-            li
-              p Food and drinks will be served
-
-            li
-              p Up to $40 will be tax-deductible
-
-            li
-              p Event starts at 6:30pm
-
-            li
-              p Doors close promptly at 7pm
-
-            li
-              p Event ends at 9pm
+          p Please join us for an invite-only conversation about policy ideas with Republicans, Democrats, Libertarians, Independents and more. We'll start the evening with a 15 minute lightning talk from Renee DiResta on her work 
+            a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank")  profiled in the NYT
+            | . Please arrive by 7pm to ensure seating. Admission is $75, of which $40 will be tax-deductible. 
 
           div.dfa-conversation.body-text
 
@@ -116,15 +88,15 @@ block content
       div.header(style="text-align: center;") Add to Calendar
       div.content
         div.ui.icon.huge.vertical.basic.fluid.buttons              
-          a.ui.button(href="/ics/Data4America-conversation-one.ics", target="_blank")
+          a.ui.button(href="/ics/conversation-one-dfa.ics", target="_blank")
             i.icon.mail 
             | Outlook Calendar
             
-          a.ui.button(href="http://www.google.com/calendar/event?action=TEMPLATE&text=Data4America%20Conversations%20One&dates=20180307T023000Z/20180307T050000Z&ctz=America/Los_Angeles&location=54%20Washburn%20St%20San%20Francisco%2C%20CA%2094103&details=For+details,+link+here:+https://www.data4america.org/conversation1", target="_blank") 
+          a.ui.button(href="http://www.google.com/calendar/event?action=TEMPLATE&text=Data4America%20Conversations%20One&dates=20180307T023000Z/20180307T050000Z&ctz=America/Los_Angeles&location=54%20Washburn%20St%20San%20Francisco%2C%20CA%2094103&details=For+details,+link+here:+https://www.data4america.org/conversationone", target="_blank") 
             i.icon.google 
             | Google Calendar
           
-          a.ui.button(href="/ics/Data4America-conversation-one.ics", target="_blank") 
+          a.ui.button(href="/ics/conversation-one-dfa.ics", target="_blank") 
             i.icon.apple 
             | Apple Calendar
             
@@ -140,5 +112,5 @@ block content
           i.twitter.icon
         a.ui.large.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
           i.linkedin.icon
-        a.ui.large.circular.icon.button(href="https://mail.google.com/mail/?view=cm&fs=1&to=&su="+encodedTitle+"&body="+url, target="_blank")
+        a.ui.large.circular.icon.button(href="mailto:?body="+url+"&subject="+encodedTitle, target="_blank")
           i.mail.icon
