@@ -50926,9 +50926,18 @@ input::-webkit-inner-spin-button {
 .dfa-thank-you {
   display: none;
 }
+.dfa-thank-you .dfa-share .container.mobile {
+  display: none;
+}
 @media only screen and (max-width: 767px) {
   .dfa-thank-you {
     margin-top: 1.4em;
+  }
+  .dfa-thank-you .dfa-share .container {
+    display: none;
+  }
+  .dfa-thank-you .dfa-share .container.mobile {
+    display: block;
   }
   .dfa-thank-you h1 {
     font-size: 1.5em;
@@ -54294,7 +54303,7 @@ body.embed {
 #dfa-event .dfa-event-share {
   position: absolute;
   right: 5px;
-  top: -30px;
+  top: -40px;
   font-size: 2em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -54303,6 +54312,19 @@ body.embed {
 #dfa-event .dfa-event-share span {
   font-size: 19px;
   margin-right: 5px;
+}
+#dfa-event .dfa-event-share.footer {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+}
+#dfa-event .dfa-event-image {
+  margin: 1em auto;
 }
 #dfa-event .cover {
   height: 336px;

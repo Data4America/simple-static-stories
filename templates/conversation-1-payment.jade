@@ -9,9 +9,12 @@ block metatags
 
 block content
   div#dfa-event
+    - var encodedTitle = encodeURI(page.title + ' - Data4America')
+    - var twitterText = encodeURI('Get invited to Conversation One from @Data4America held in San Francisco, CA on March 7th at 6:30pm PT -')
+    - var url = 'http://www.data4america.org'+page.url
     div.cover
       div.image
-        img(src="/img/d4a-conversations.png")
+        img(src="/img/d4a-conversations-one.png")
       //- div.text
       //-   h1.ui.inverted.header
       //-     span(style='font-weight:normal;')
@@ -24,15 +27,31 @@ block content
 
         h3.ui.top.attached.header(style="margin-top:0;") Event Details
         div.ui.attached.segment
-          a.dfa-event-share
-            span Share
-            i.icon.external.share
-          h3 ABOUT
+          div.dfa-event-share
+            a.ui.medium.circular.facebook.icon.button(href="https://www.facebook.com/sharer/sharer.php?u="+url+"&title="+encodedTitle, target="_blank")
+              i.facebook.icon
+            a.ui.medium.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+twitterText+"&url="+url+"&via=data4america", target="_blank")
+              i.twitter.icon
+            a.ui.medium.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
+              i.linkedin.icon
+            a.ui.medium.grey.circular.icon.button(href="mailto:?body="+twitterText+url+"&subject="+encodedTitle, target="_blank")
+              i.mail.icon
+          h1(style="margin-top:0.5em;") About Conversation One from Data4America
           p Please join us for an invite-only conversation about policy ideas with Republicans, Democrats, Libertarians, Independents and more. We'll start the evening with a 15 minute lightning talk from Renee DiResta on her work 
             a(href="https://www.nytimes.com/2017/11/12/technology/social-media-disinformation.html", target="_blank")  profiled in the NYT
             | . Please arrive by 7pm to ensure seating. Admission is $75, of which $40 will be tax-deductible. 
 
           div.dfa-conversation.body-text
+            
+          div.dfa-event-share.footer
+            a.ui.medium.circular.facebook.icon.button(href="https://www.facebook.com/sharer/sharer.php?u="+url+"&title="+encodedTitle, target="_blank")
+              i.facebook.icon
+            a.ui.medium.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+twitterText+"&url="+url+"&via=data4america", target="_blank")
+              i.twitter.icon
+            a.ui.medium.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
+              i.linkedin.icon
+            a.ui.medium.grey.circular.icon.button(href="mailto:?body="+twitterText+url+"&subject="+encodedTitle, target="_blank")
+              i.mail.icon
 
       div.five.wide.column
 
@@ -104,13 +123,14 @@ block content
       i.icon.close
       div.header(style="text-align: center;") Share with Friends
       div.content(style="text-align:center;")
-        - var encodedTitle = encodedTitle = encodeURI(page.title + ' - Data4America')
+        - var encodedTitle = encodeURI(page.title + ' - Data4America')
+        - var twitterText = encodeURI('Get invited to Conversation One from @Data4America held in San Francisco, CA on March 7th at 6:30pm PT -')
         - var url = 'http://www.data4america.org'+page.url
         a.ui.large.circular.facebook.icon.button(href="https://www.facebook.com/sharer/sharer.php?u="+url+"&title="+encodedTitle, target="_blank")
           i.facebook.icon
-        a.ui.large.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+encodedTitle+"&url="+url+"&via=data4america", target="_blank")
+        a.ui.large.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+twitterText+"&url="+url+"&via=data4america", target="_blank")
           i.twitter.icon
         a.ui.large.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
           i.linkedin.icon
-        a.ui.large.circular.icon.button(href="mailto:?body="+url+"&subject="+encodedTitle, target="_blank")
+        a.ui.large.circular.icon.button(href="mailto:?body="+twitterText+url+"&subject="+encodedTitle, target="_blank")
           i.mail.icon

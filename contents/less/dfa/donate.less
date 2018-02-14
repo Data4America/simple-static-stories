@@ -548,11 +548,20 @@ content: '#' counter(step-counter);
 /* THANK YOU MODULE */
 .dfa-thank-you {
     display: none;
+    .dfa-share .container.mobile {
+      display: none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .dfa-thank-you {
       margin-top: 1.4em;
+      .dfa-share .container {
+        display: none;
+      }
+      .dfa-share .container.mobile {
+        display: block;
+      }
     }
 
     .dfa-thank-you h1 {

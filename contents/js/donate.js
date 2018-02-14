@@ -234,7 +234,7 @@
     // PERSONAL INFO FORM
     '<form class="dfa-personal-info-form" style="display:none;" action="" method="post">' +
     ' <div class="dfa-mobile-header">' +
-    '   <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
+    // '   <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
     '   <a href="javascript:;" class="dfa-button dfa-button-proceed">Next</a>' +
     ' </div>' +
     ' <table>' +
@@ -345,7 +345,7 @@
     '   <tr>' +
     '     <td colspan="2" style="text-align:center;">' +
     '       <a href="javascript:;" class="dfa-button dfa-button-proceed">Next</a>' +
-    '       <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
+    // '       <a href="javascript:;" class="dfa-button dfa-button-back">Back</a> ' +
     '     </td>' +
     '   </tr>' +
     '  </table>' +
@@ -446,7 +446,37 @@
     '     Share your support' +
     '   </p>' +
     '   <p style="padding: 0 5px 5px; margin: 0;">' +
-    '     <iframe border="0" src="https://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
+    // '     <iframe border="0" src="https://dev.data4america.org/embed-share.html" style="width:100%; height:40px; border:none;"></iframe>' +
+    '    <div class="dfa-share" style="text-align:center;">'+
+    '        <div class="container">'+
+    '            <a href="https://www.facebook.com/sharer/sharer.php?u=http://data4america.org/donate" target="_blank" class="ui facebook button">'+
+    '              <i class="ui facebook icon"></i>'+
+    '              <span class="text">Share</span>'+
+    '            </a>'+
+    '            <a class="ui twitter button" href="https://twitter.com/intent/tweet?text=Help%20%40Data4America%20bridge%20data%20and%20conversations%20to%20advance%20the%20understanding%20of%20policy.%0AMake%20a%20tax-deductible%20donation%3A%20http%3A%2F%2Fdata4america.org%2Fdonate&source=webclient" target="_blank">'+
+    '              <i class="ui twitter icon"></i>'+
+    '              <span class="text">Tweet</span>'+
+    '            </a>'+
+    '            <a class="ui email button" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to&su=Help%20Data4America%20bridge%20data%20and%20conversations%20to%20advance%20the%20understanding%20of%20policy&body=Make%20a%20tax-deductible%20donation%3A%20http%3A%2F%2Fdata4america.org%2Fdonate&tf=1" target="_blank">'+
+    '              <i class="icon mail"></i>'+
+    '              Email'+
+    '            </a>'+
+    '        </div>'+
+    '        <div class="container mobile">'+
+    '            <a class="ui facebook button circular icon" href="https://www.facebook.com/sharer/sharer.php?u=http://data4america.org/donate" target="_blank">'+
+    '              <i class="ui facebook icon"></i>'+
+    '            </a>'+
+    '            <a class="ui twitter button circular icon" href="https://twitter.com/intent/tweet?text=Help%20%40Data4America%20bridge%20data%20and%20conversations%20to%20advance%20the%20understanding%20of%20policy.%0AMake%20a%20tax-deductible%20donation%3A%20http%3A%2F%2Fdata4america.org%2Fdonate&source=webclient" target="_blank">'+
+    '              <i class="ui twitter icon"></i>'+
+    '            </a>'+
+    '            <a class="ui email button circular icon" href="mailto:?subject=Help%20Data4America%20bridge%20data%20and%20conversations%20to%20advance%20the%20understanding%20of%20policy&body=Make%20a%20tax-deductible%20donation%3A%20http%3A%2F%2Fdata4america.org%2Fdonate" target="_blank">'+
+    '              <i class="icon mail"></i>'+
+    '            </a>'+
+    '            <a class="circular ui icon button orange sms" href="javascript:;">'+
+    '              <i class="icon-sms"></i>'+
+    '            </a>'+
+    '        </div>'+
+    '      </div>'+
     '   </p>' +
     '   <p style="padding: 10px 0 0; text-align: center; font-size: 1.4em; margin: 0;">' +
     '     <a href="javascript:;" class="dfa-btn-donate-again">Donate Again</a>'
@@ -811,7 +841,7 @@
       }
 
       function changeToConversation() {
-        $header.html('Pay for your invite-admission to Conversation One.<br>Up to $40 will be tax-deductible from the Silicon Valley Community Foundation, our fiscal sponsor.');
+        $header.html('Pay for your invite-admission to Conversation One.<br><br>Up to $40 will be tax-deductible from the Silicon Valley Community Foundation, our fiscal sponsor.');
 
         if (window.location.pathname.search("conversationonepaymenttest") >= 0) {
           $amount.find('input').val(1).attr('readonly', true);
@@ -1013,12 +1043,12 @@
           $modal.find('.icon.close').show();
         }
 
-        var $td = $modThankYou.find('.thankyou-video');
-        var width = $td.width();
-        var aspectRatio = 315/560;
-        var height = width * aspectRatio;
-        var embed = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/FguGc5NkFf0?autoplay=1" frameborder="0" allowfullscreen></iframe>';
-        $td.html(embed);
+        // var $td = $modThankYou.find('.thankyou-video');
+        // var width = $td.width();
+        // var aspectRatio = 315/560;
+        // var height = width * aspectRatio;
+        // var embed = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/FguGc5NkFf0?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+        // $td.html(embed);
       }
 
       function resetForm() {
