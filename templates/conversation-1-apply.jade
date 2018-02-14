@@ -9,10 +9,12 @@ block metatags
 
 block content
   div#dfa-event
-
+    - var encodedTitle = encodeURI(page.title + ' - Data4America')
+    - var twitterText = encodeURI('Get invited to Conversation One from @Data4America held in San Francisco, CA on March 7th at 6:30pm PT -')
+    - var url = 'http://www.data4america.org'+page.url
     div.cover
       div.image
-        img(src="/img/d4a-conversations.png")
+        img(src="/img/d4a-conversations-one.png")
       //- div.text
       //-   h1.ui.inverted.header 
       //-     span(style='font-weight:normal;')
@@ -25,11 +27,28 @@ block content
 
         h3.ui.top.attached.header(style="margin-top:0;") Apply
         div.ui.attached.segment
-          a.dfa-event-share
-            span Share
-            i.icon.external.share
+          div.dfa-event-share
+            a.ui.medium.circular.facebook.icon.button(href="https://www.facebook.com/sharer/sharer.php?u="+url+"&title="+encodedTitle, target="_blank")
+              i.facebook.icon
+            a.ui.medium.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+twitterText+"&url="+url+"&via=data4america", target="_blank")
+              i.twitter.icon
+            a.ui.medium.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
+              i.linkedin.icon
+            a.ui.medium.grey.circular.icon.button(href="mailto:?body="+twitterText+url+"&subject="+encodedTitle, target="_blank")
+              i.mail.icon
+                
           iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSe1mPb9d1IyHjF_veDIvPOFZxOvEcz9L03wR1E6redKiVUqRg/viewform?usp=sf_link", width="100%", height="1280", frameborder="0")
 
+          div.dfa-event-share.footer
+            a.ui.medium.circular.facebook.icon.button(href="https://www.facebook.com/sharer/sharer.php?u="+url+"&title="+encodedTitle, target="_blank")
+              i.facebook.icon
+            a.ui.medium.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+twitterText+"&url="+url+"&via=data4america", target="_blank")
+              i.twitter.icon
+            a.ui.medium.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
+              i.linkedin.icon
+            a.ui.medium.grey.circular.icon.button(href="mailto:?body="+twitterText+url+"&subject="+encodedTitle, target="_blank")
+              i.mail.icon
+                
       div.five.wide.column
 
         h3.ui.top.attached.header When & Where
@@ -96,17 +115,3 @@ block content
             i.icon.apple 
             | Apple Calendar
     
-    div#dfa-share-event.ui.small.modal
-      i.icon.close
-      div.header(style="text-align: center;") Share with Friends
-      div.content(style="text-align:center;")
-        - var encodedTitle = encodedTitle = encodeURI(page.title + ' - Data4America')
-        - var url = 'http://www.data4america.org'+page.url
-        a.ui.large.circular.facebook.icon.button(href="https://www.facebook.com/sharer/sharer.php?u="+url+"&title="+encodedTitle, target="_blank")
-          i.facebook.icon
-        a.ui.large.circular.twitter.icon.button(href="https://twitter.com/intent/tweet?text="+encodedTitle+"&url="+url+"&via=data4america", target="_blank")
-          i.twitter.icon
-        a.ui.large.circular.linkedin.icon.button(href="https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+encodedTitle, target="_blank")
-          i.linkedin.icon
-        a.ui.large.circular.icon.button(href="mailto:?body="+url+"&subject="+encodedTitle, target="_blank")
-          i.mail.icon
