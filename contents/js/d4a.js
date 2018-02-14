@@ -298,7 +298,7 @@ $(document).ready(function() {
       },
       onHidden: function() {
         $donateModal.find('.body-text').html('');
-        $.getScript('/js/donate-widget.js');
+        $.getScript('/js/donate-v1.7.js');
       },
       observeChanges : true
     });
@@ -313,7 +313,7 @@ $(document).ready(function() {
   });
 
   $.getScript('https://checkout.stripe.com/checkout.js', function() {
-    $.getScript('/js/donate-widget.js', function() {
+    $.getScript('/js/donate-v1.7.js', function() {
       if (window.location.pathname.search("/sponsorship") === 0) {
         $('.dfa-link-sponsor').trigger('click');
 
