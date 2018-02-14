@@ -302,7 +302,7 @@ $(document).ready(function() {
       },
       onHidden: function() {
         $donateModal.find('.body-text').html('');
-        $.getScript('/js/donate.js');
+        $.getScript('/js/donate-widget.js');
       },
       observeChanges : true
     });
@@ -317,7 +317,7 @@ $(document).ready(function() {
   });
 
   $.getScript('https://checkout.stripe.com/checkout.js', function() {
-    $.getScript('/js/donate.js', function() {
+    $.getScript('/js/donate-widget.js', function() {
       if (window.location.pathname.search("/sponsorship") === 0) {
         $('.dfa-link-sponsor').trigger('click');
 
@@ -532,7 +532,7 @@ $(document).ready(function() {
 });
 
 function isEventPage() {
-  var paths = ['conversation1', 'conversation1apply', 'conversation1payment', 'conversation1paymenttest'],
+  var paths = ['conversationone', 'conversationoneapply', 'conversationonepayment', 'conversationonepaymenttest'],
       pathname = window.location.pathname,
       found = false;
 
