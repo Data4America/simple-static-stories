@@ -402,7 +402,7 @@
     '     </p>' +
     '     <p>' +
     '       We\'ll email you a receipt for this donation and for all future monthly donations to:' +
-    '       <strong class="email"></strong>.' +
+    '       <strong class="email-text"></strong>.' +
     '     </p>' +
     '     <p>' +
     '       To cancel your monthly donation, email us at <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=supporters@data4america.org&tf=1" target="_blank">supporters@data4america.org</a>.' +
@@ -597,6 +597,7 @@
 
           $formDonate.hide();
           $modLoading.show();
+          goToTop();
 
           // ASSIGN DATA
           paymentData.token = token.id;
@@ -754,6 +755,10 @@
       }
 
       function onDataSubmit() {
+        $formPersonalInfo.hide();
+        $modLoading.show();
+        goToTop();
+
         var fields = {};
 
         if ($formPersonalInfo.find('#dfa-send-newsletters').is(':checked')) {
@@ -787,9 +792,6 @@
         if (fields.address2.length > 0) {
           paymentData.address += ', ' + fields.address2;
         }
-
-        $formPersonalInfo.hide();
-        $modLoading.show();
 
         $.ajax({
           type: "POST",
@@ -841,7 +843,7 @@
       function changeToConversation() {
         $header.html('Pay for your invite-admission to Conversation One.<br><br>Up to $40 will be tax-deductible from the Silicon Valley Community Foundation, our fiscal sponsor.');
 
-        if (window.location.pathname.search("conversation1paymenttest") >= 0) {
+        if (window.location.pathname.search("conversationonepaymenttest") >= 0) {
           $amount.find('input').val(1).attr('readonly', true);
         } else {
           $amount.find('input').val(75).attr('readonly', true);
@@ -869,11 +871,6 @@
           $modCheque.show();
         }
       }
-
-      // function learnMore() {
-      //   $modLearnMore.show();
-      //   $formDonate.hide();
-      // }
 
       function learnMore() {
         $('#dfa-supporters').show();
@@ -1028,7 +1025,7 @@
             email = paymentData.email,
             amount = paymentData.amount / 100;
 
-        $modThankYou.find('.email').html(email);
+        $modThankYou.find('.email-text').html(email);
         $modThankYou.find('.amount').html('$' + numberWithCommas(amount));
 
         $modThankYou.find('.thankyou-' + type).show();

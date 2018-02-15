@@ -12,14 +12,14 @@ html(lang='en')
           = locals.name
 
       meta(property="og:site_name", content="data4america.org")
-      meta(property="og:description", content="Bringing Data Science to the understanding of Politics")
       block metatags
         meta(property="og:title", content=locals.name)
+        meta(property="og:description", content="Bridging data and conversations to advance the understanding of policy.\n\nA nonprofit, nonpartisan initiative made with 💙 from 🇺🇸")
       block metaImage
         meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
 
       link(rel='icon', href=contents['favicon.png'].url)
-      
+
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
       link(href='//cdn-images.mailchimp.com/embedcode/classic-10_7.css', rel='stylesheet', type='text/css')
       != nap.css('main')
