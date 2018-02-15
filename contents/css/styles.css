@@ -54313,6 +54313,12 @@ body.embed {
   font-size: 19px;
   margin-right: 5px;
 }
+#dfa-event .dfa-event-apply {
+  margin: 1.5em 0px 1em;
+}
+#dfa-event .dfa-event-apply.bottom {
+  margin: 1.5em 0px 2em;
+}
 #dfa-event .dfa-event-share.footer {
   position: static;
   display: -webkit-box;
@@ -54321,7 +54327,6 @@ body.embed {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 1em;
 }
 #dfa-event .dfa-event-image {
   margin: 1em auto;
