@@ -37,7 +37,7 @@ title: 2016 Update
                         <table border="0" cellpadding="10" cellspacing="0" width="100%">
                           <tr>
                             <td valign="top">
-                              <div style="padding:20px;">
+                              <div style="padding:18px;">
                               1/ We just finished our first season at Data4America, where with the help of our fiscal sponsor the Silicon Valley Community Foundation we published 26 pieces of original content -- powered by $45,000 from our <a href="http://data4america.org/supporters">founding donors</a>.
                               <br>
               								<br>

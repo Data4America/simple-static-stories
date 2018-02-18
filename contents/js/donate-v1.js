@@ -416,7 +416,7 @@
     '       Your card has been successfully charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We\'ll send you a receipt for this donation to: <strong class="email"></strong>.' +
+    '       We\'ll send you a receipt for this donation to: <strong class="email-text"></strong>.' +
     '     </p>' +
     '   </div>' +
     '   <div class="thankyou-member" style="display:none;">' +
@@ -427,7 +427,7 @@
     '       Your card has been successfully charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We\'ll send you a receipt for this donation to: <strong class="email"></strong>.' +
+    '       We\'ll send you a receipt for this donation to: <strong class="email-text"></strong>.' +
     '     </p>' +
     '   </div>' +
     '   <div class="thankyou-sponsor" style="display:none;">' +
@@ -438,7 +438,7 @@
     '       Your card has been successfully charged <strong class="amount"></strong>.' +
     '     </p>' +
     '     <p>' +
-    '       We\'ll send you a receipt for this donation to: <strong class="email"></strong>.' +
+    '       We\'ll send you a receipt for this donation to: <strong class="email-text"></strong>.' +
     '     </p>' +
     '   </div>' +
     '   <p class="thankyou-video" style="padding:0.6em;"></p>' +
@@ -1037,13 +1037,6 @@
         if ($modal.length) {
           $modal.find('.icon.close').show();
         }
-
-        // var $td = $modThankYou.find('.thankyou-video');
-        // var width = $td.width();
-        // var aspectRatio = 315/560;
-        // var height = width * aspectRatio;
-        // var embed = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/FguGc5NkFf0?autoplay=1" frameborder="0" allowfullscreen></iframe>';
-        // $td.html(embed);
       }
 
       function resetForm() {
@@ -1197,6 +1190,11 @@
 
       $btnProceed.on('click', onDataSubmit);
 
+      $mod.find('.ui.button.sms').click(function() {
+        var text = 'Help us bring data science to government. http://data4america.org/donate';
+        prefillSms(null, text);
+      });
+
       /*
       if (window.location.hash.length) {
         var price = parseInt(window.location.hash.replace('#', '')),
@@ -1316,6 +1314,23 @@
       });
 
       $selects.append(options);
+    }
+
+    function prefillSms(num, value) {
+      var ua = navigator.userAgent.toLowerCase();
+      var url;
+
+      if (!num) {
+        num = "";
+      }
+
+      if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1) {
+        url = "sms:" + num + ";body=" + encodeURIComponent(value);
+      } else {
+        url = "sms:" + num + "?body=" + encodeURIComponent(value);
+      }
+
+      location.href = url;
     }
 
     populateCountries();

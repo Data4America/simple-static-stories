@@ -19,9 +19,8 @@ html(lang='en')
         meta(property="og:image", content="https://data4america.org/img/postcard-front.jpg")
 
       link(rel='icon', href=contents['favicon.png'].url)
-
-      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
       link(href='//cdn-images.mailchimp.com/embedcode/classic-10_7.css', rel='stylesheet', type='text/css')
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml')
       != nap.css('main')
 
 
