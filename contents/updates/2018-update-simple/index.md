@@ -48,7 +48,7 @@ title: August 2016 Update
                                           Data4America’s Conversations are invitation-only, revenue-generating events at which Democrats, Republicans, Independents and others get together for “no-small-talk” policy discussions. This year’s first is planned for March.
                                           <br>
                                           <br>
-                                          D4A is reaching out to other nonprofit policy groups, like Tech4America, to advance public conversations around topics like the Future of Work. These happen in a private setting, but usually involve a public figure, such as a governor, senator, or other high-ranking official with government experience.
+                                          D4A is reaching out to other nonprofit policy groups, like <a href="http://www.t4a.org/">Tech4America</a>, to advance public conversations around topics like the Future of Work. These happen in a private setting, but usually involve a public figure, such as a governor, senator, or other high-ranking official with government experience.
                                           <br>
                                           <br>
                                           Executive Director Chris McCoy said these events are important to achieve the organization’s mandate of not only helping the public -- but helping the elected officials who lead the public -- understand policy, with a bent on technology. McCoy recently became a member of the World Economic Forum and will contribute to the WEF’s global cross data flows and blockchain initiatives.
