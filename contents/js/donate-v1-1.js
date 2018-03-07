@@ -190,7 +190,7 @@
     '       Mountain View, CA 94040<br />' +
     '       EIN: 20-5205488</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorshipâ€”expected to be before October 30, 2015.</p>' +
-    '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
+    '       <p style="text-align:center;"><a href="https://www.dropbox.com/s/1xyqwfz0zq1wxng/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
     '   <tr class="dfa-cheque-member" style="display:none;">' +
@@ -204,7 +204,7 @@
     '       Mountain View, CA 94040<br />' +
     '       EIN: 20-5205488</p>' +
     '       <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. Your tax deductible receipt will be mailed once Data4America receives its fiscal sponsorshipâ€”expected to be before October 30, 2015.</p>' +
-    '       <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
+    '       <p style="text-align:center;"><a href="https://www.dropbox.com/s/1xyqwfz0zq1wxng/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '     </td>' +
     '   </tr>' +
     '   <tr class="dfa-field action-buttons">' +
@@ -384,7 +384,7 @@
     '   Mountain View, CA 94040<br />' +
     '   EIN: 20-5205488</p>' +
     '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. You\'ll be receiving the receipt from our fiscal sponsor The Silicon Valley Community Foundation.</p>' +
-    '   <p style="text-align:center;"><a href="https://dl.dropboxusercontent.com/u/13612299/Data4America%20-%20private/Donation%20Pledge%20Form%20-%20D4A.pdf" target="_blank">Download our Donation Slip</a></p>' +
+    '   <p style="text-align:center;"><a href="https://www.dropbox.com/s/1xyqwfz0zq1wxng/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
     '   <p style="color:#777; font-size:0.8em;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide' +
     '    a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
     '   <p style="text-align:center;">' +
