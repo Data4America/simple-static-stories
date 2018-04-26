@@ -1,6 +1,5 @@
 var order = [
     'chris-mccoy',
-    'renee-diresta',
     'garrett-johnson',
     'abhi-nemani',
     'nate-lubin',
@@ -31,6 +30,7 @@ var order = [
     'waylin-ross',
     'sam-drzymala',
     'christopher-nicholson',
+    'renee-diresta',
     'blake-masters',
     'cyan-banister',
     'ramez-naam',

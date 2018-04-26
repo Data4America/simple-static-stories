@@ -1,10 +1,10 @@
 {
   "name": "Renee Diresta",
-  "title": "Board of Directors",
+  "title": "Advisor",
   "founder": false,
-  "boardOfDirectors": true,
-  "editorialBoard": true,
-  "advisor": false,
+  "boardOfDirectors": false,
+  "editorialBoard": false,
+  "advisor": true,
   "bio": "Current biz dev @<a href=\"https://www.haveninc.com/\" target=\"_blank\">Haven</a>. Former VC @O&apos;Reilly. Former trader @Jane Street. Helped sponsor and&#xA0;<a href=\"http://www.wired.com/2015/06/antivaxxers-influencing-legislation/\" target=\"_blank\">provide data science</a>&#xA0;to the SB277&#xA0;<span style=\"line-height: 1.4;\">bill signed by the CA governor.</span>",
   "links": [
     {
