@@ -218,7 +218,7 @@
     '   </tr>' +
     '   <tr>'+
     '     <td style="text-align:center;">' +
-    '       <div id="dfa-bitcoin-donate" style="text-align:center;"><a class="ui blue header">Donate with Crypto</a></div>'+
+    '       <div style="text-align:center;"><a class="ui blue header btnCrypto">Donate with Crypto</a></div>'+
     '     </td>' +
     '   </tr>'+
     '   <tr>' +
@@ -397,23 +397,27 @@
     '   </p>' +
     ' </div>' +
     // CRYPTO MODULE
-    ' <div class="dfa-crypto-mod">' +
-    '   <h1 style="text-align:center;">Donate by Check</h1>' +
-    '   <p>Please make your donation check payable to: <strong>Silicon Valley Community Foundation</strong>.</p>' +
-    '   <p>IMPORTANT: Put <strong>Data4America</strong> in the Memo line.</p>'+
-    '   <p>If you\'re donating in honor of someone or want to donate anonymously, please write that in the memo of your check too.</p>' +
-    '   <p style="font-weight: bold; text-align: center; background: #ddd; padding-top: 0.6em;">Silicon Valley Community Foundation<br />' +
-    '   Attn: Gifts Administration // Data4America<br />' +
-    '   2440 West El Camino Real, Suite 300<br />' +
-    '   Mountain View, CA 94040<br />' +
-    '   EIN: 20-5205488</p>' +
-    '   <p>Your donation receipt will be mailed within one to two weeks after the donation has been processed. You\'ll be receiving the receipt from our fiscal sponsor The Silicon Valley Community Foundation.</p>' +
-    '   <p style="text-align:center;"><a href="https://www.dropbox.com/s/1xyqwfz0zq1wxng/Donation%20Pledge%20Form%20-%20Data4America.pdf" target="_blank">Download our Donation Slip</a></p>' +
-    '   <p style="color:#777; font-size:0.8em;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide' +
-    '    a formal acknowledgment letter containing tax-deduction language for your records.</p>' +
+    ' <div class="dfa-crypto-mod" style="display:none;">' +
+    '   <h1 style="text-align:center;">Donate by Crypto</h1>' +
+    '   <p>To make donation in cryptocurrency, please follow the steps below.</p>' +
+    '   <p style="text-transform: uppercase; text-align: left;"><b>1. Open your wallet app and scan the appropriate QR CODE.</b></p>'+
+    '   <div style="border:none; box-shadow:none; background:none;" class="ui horizontal segments">'+
+    '     <div class="ui segment"><img src="/img/bitcoin.png" class="ui small image centered"/>'+
+    // '       <p class="ui header center aligned" style="word-wrap: break-word;">0xf85df14ede0d7d8000e1f872b5730f0bff69996c</p>'+
+    '       <img src="/img/donate_bitcoin.png" style="margin-top: 1em;" class="ui medium image centered"/>'+
+    '     </div>'+
+    '     <div class="ui segment"><img src="/img/ethereum.png" class="ui small image centered"/>'+
+    // '       <p class="ui header center aligned" style="word-wrap: break-word;">0x214680FB044798b19a556038e6fdEE9B62ade267</p>'+
+    '       <img src="/img/donate-ethereum.png" style="margin-top: 1em;" class="ui medium image centered"/>'+
+    '     </div>'+
+    '   </div>'+
+    '   <p style="text-transform: uppercase; text-align: left;"><b>2. Make your donation.</b></p>'+
+    '   <p style="text-transform: uppercase; text-align: left;"><b>3. Once your transaction is complete, please forward your confirmation email to jbendit@tippingpoint.org</b></p>'+
+    '   <p style="text-align: left;">We will provide a tax letter for your records.</p>'+
+    '   <p style="text-transform: uppercase; text-align: left;"><b>Because our board covers 100% of our costs, every donation goes where its needed most.</b></p>'+
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
-    '   </p>' +
+    '   </p>'
     ' </div>' +
     // THANK YOU MODULE
     ' <div class="dfa-thank-you">' +
@@ -576,6 +580,7 @@
         $checkChooseDonation = $mod.find('.dfa-choose-donation'),
         $btnCreditCard = $mod.find('.donateByCC'),
         $btnCheque = $mod.find('.btnCheque'),
+        $btnCrypto = $mod.find('.btnCrypto'),
         $btnBack = $mod.find('.dfa-button-back'),
         $btnBackCheque = $mod.find('.dfa-button-back-cheque'),
         $btnDonateAgain = $mod.find('.dfa-btn-donate-again'),
@@ -967,6 +972,11 @@
         }
       }
 
+      function donateCrypto() {
+        $formDonate.hide();
+        $modCrypto.show();
+      }
+
       function assignSponsorData() {
           paymentData.issue = "";
           paymentData.loc = "";
@@ -1201,6 +1211,7 @@
 
       $btnCreditCard.on('click', giveByCreditCard);
       $btnCheque.on('click', giveByCheque);
+      $btnCrypto.on('click', donateCrypto);
       $btnBack.on('click', goToDonateForm);
       $btnInfoBack.on('click', goToDonateForm);
       $btnBackCheque.on('click', goToCheque);
