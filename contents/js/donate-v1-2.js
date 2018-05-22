@@ -412,9 +412,11 @@
     '     </div>'+
     '   </div>'+
     '   <p style="text-transform: uppercase; text-align: left;"><b>2. Make your donation.</b></p>'+
-    '   <p style="text-transform: uppercase; text-align: left;"><b>3. Once your transaction is complete, please forward your confirmation email to jbendit@tippingpoint.org</b></p>'+
-    '   <p style="text-align: left;">We will provide a tax letter for your records.</p>'+
-    '   <p style="text-transform: uppercase; text-align: left;"><b>Because our board covers 100% of our costs, every donation goes where its needed most.</b></p>'+
+    '   <p style="text-transform: uppercase; text-align: left;"><b>3. Once your transaction is complete, please forward your confirmation email to ' +
+    '     <a href="mailto:donations@data4america.org">donations@data4america.org</a>' +
+    '   </b></p>'+
+    '   <p style="text-align: center;">We will provide a tax letter for your records.</p>'+
+    '   <p style="text-transform: uppercase; text-align: center;"><b>Because our board covers 100% of our costs, every donation goes where its needed most.</b></p>'+
     '   <p style="text-align:center;">' +
     '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
     '   </p>'
