@@ -218,7 +218,7 @@
     '   </tr>' +
     '   <tr>'+
     '     <td style="text-align:center;">' +
-    '       <div style="text-align:center;"><a class="ui blue header btnCrypto">Donate with Crypto</a></div>'+
+    '       <div style="text-align:center;"><a class="ui blue header btnCrypto">Donate with Crypto<img src="/img/bitcoin-logo.png"  style="margin-left:0.3em; width:30px; vertical-align: sub;"><img src="/img/eth-light-logo-v2.png" style="margin-left:0.3em; width:30px; vertical-align: sub;"></a></div>'+
     '     </td>' +
     '   </tr>'+
     '   <tr>' +
