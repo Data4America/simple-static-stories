@@ -3,26 +3,24 @@ extends layout
 block content
   div(style="max-width:700px; margin:0 auto;")
     div.dfa-donate.init(style="width:100%;")
-      div.dfa-crypto-mod(style='')
+      div.dfa-crypto-mod(style='font-size: 0.9em;')
         h1(style='text-align:center;') Donate by Crypto
         p To make donation in cryptocurrency, please follow the steps below.
-        p(style='text-transform: uppercase; text-align: left;')
-          b 1. Open your wallet app and scan the appropriate QR CODE.
+        p(style='text-align: left;') 1. Open your wallet app and scan the appropriate QR CODE.
         .ui.horizontal.segments(style='border:none; box-shadow:none; background:none;')
           .ui.segment
             img.ui.small.image.centered(src='/img/bitcoin.png')
-            img.ui.medium.image.centered(src='/img/donate_bitcoin.png', style='margin-top: 1em;')
+            img.ui.small.image.centered(src='/img/donate_bitcoin.png', style='margin-top: 1em;')
           .ui.segment
             img.ui.small.image.centered(src='/img/ethereum.png')
-            img.ui.medium.image.centered(src='/img/donate-ethereum.png', style='margin-top: 1em;')
-        p(style='text-transform: uppercase; text-align: left;')
-          b 2. Make your donation.
-        p(style='text-transform: uppercase; text-align: left;')
-          b
-            | 3. Once your transaction is complete, please forward your confirmation email to      
-            a(href='mailto:donations@data4america.org') donations@data4america.org
+            img.ui.small.image.centered(src='/img/donate-ethereum.png', style='margin-top: 1em;')
+        p(style='text-align: left;') 2. Make your donation.
+        p(style='text-align: left;')
+          | 3. Once your transaction is complete, please forward your confirmation email to      
+          a(href='mailto:donations@data4america.org') donations@data4america.org
         p(style='text-align: center;') We will provide a tax letter for your records.
-        p(style='text-transform: uppercase; text-align: center;')
-          b
-            | Because our board covers 100% of our costs, every donation goes where its needed most.
+        p(style='text-align: center;')
+          | Because our board covers 100% of our costs, every donation goes where its needed most.
+        p(style='text-align:center;')
+          a.dfa-button.dfa-button-back.dfa-donate-scroll(href='javascript:;') Back
   
