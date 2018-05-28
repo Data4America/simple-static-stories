@@ -400,26 +400,28 @@
     ' <div class="dfa-crypto-mod" style="display:none; font-size: 0.8em;">' +
     '   <h1 style="text-align:center;">Donate by Crypto</h1>' +
     '   <p>To make donation in cryptocurrency, please follow the steps below.</p>' +
-    '   <p style="text-align: left;">1. Open your wallet app and scan the appropriate QR CODE.</p>'+
-    '   <div style="border:none; box-shadow:none; background:none;" class="ui horizontal segments">'+
-    '     <div class="ui segment"><img src="/img/bitcoin.png" class="ui small image centered"/>'+
-    // '       <p class="ui header center aligned" style="word-wrap: break-word;">0xf85df14ede0d7d8000e1f872b5730f0bff69996c</p>'+
-    '       <img src="/img/donate_bitcoin.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '   <div class="list-wrapper">' +
+    '     <p style="text-align: left;"><span class="number">1</span> <span class="text">Open your wallet app and scan the appropriate QR CODE.<span></p>'+
+    '     <div style="border:none; box-shadow:none; background:none;" class="ui horizontal segments">'+
+    '       <div class="ui segment"><img src="/img/bitcoin.png" class="ui small image centered"/>'+
+    // '        <p class="ui header center aligned" style="word-wrap: break-word;">0xf85df14ede0d7d8000e1f872b5730f0bff69996c</p>'+
+    '         <img src="/img/donate_bitcoin.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '       </div>'+
+    '       <div class="ui segment"><img src="/img/ethereum.png" class="ui small image centered"/>'+
+    // '        <p class="ui header center aligned" style="word-wrap: break-word;">0x214680FB044798b19a556038e6fdEE9B62ade267</p>'+
+    '        <img src="/img/donate-ethereum.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '      </div>'+
     '     </div>'+
-    '     <div class="ui segment"><img src="/img/ethereum.png" class="ui small image centered"/>'+
-    // '       <p class="ui header center aligned" style="word-wrap: break-word;">0x214680FB044798b19a556038e6fdEE9B62ade267</p>'+
-    '       <img src="/img/donate-ethereum.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '     </div>'+
+    '     <p style="text-align: left;"><span class="number">2</span> <span class="text">Make your donation.</span></p>'+
+    '     <p style="text-align: left;"><span class="number">3</span> <span class="text">Once your transaction is complete, please forward your confirmation email to ' +
+    '      <a href="mailto:donations@data4america.org">donations@data4america.org</a></span>' +
+    '     </p>'+
     '   </div>'+
-    '   <p style="text-align: left;">2. Make your donation.</p>'+
-    '   <p style="text-align: left;">3. Once your transaction is complete, please forward your confirmation email to ' +
-    '     <a href="mailto:donations@data4america.org">donations@data4america.org</a>' +
-    '   </p>'+
     '   <p style="text-align: center;">We will provide a tax letter for your records.</p>'+
     '   <p style="text-align: center;">Because our board covers 100% of our costs, every donation goes where its needed most.</p>'+
-    '   <p style="text-align:center;">' +
-    '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
-    '   </p>'
+    // '   <p style="text-align:center;">' +
+    // '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
+    // '   </p>'
     ' </div>' +
     // THANK YOU MODULE
     ' <div class="dfa-thank-you">' +

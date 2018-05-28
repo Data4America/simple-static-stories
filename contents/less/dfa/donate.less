@@ -386,6 +386,43 @@ input::-webkit-inner-spin-button {
     font-size: 0.8em;
 }
 
+.dfa-crypto-mod {
+  .list-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .list-wrapper::before {
+    position: absolute;
+    content: ' ';
+    width: 2px;
+    left: 19px;
+    top: 0px;
+    background-color: #d2d0d0;
+    height: 95%;
+    z-index: -1;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    span.number {
+      background-color: #d2d0d0;
+      display: inline-block;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      margin-right: 0.5em;
+    }
+    span.text {
+      flex: auto;
+    }
+  }
+}
+
 .dfa-donate ol {
   margin: 0;
   padding: 0;
