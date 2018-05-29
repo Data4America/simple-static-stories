@@ -52013,6 +52013,7 @@ input::-webkit-inner-spin-button {
 .dfa-crypto-mod .list-wrapper {
   position: relative;
   z-index: 1;
+  margin-bottom: 1em;
 }
 .dfa-crypto-mod .list-wrapper::before {
   position: absolute;
@@ -52033,6 +52034,10 @@ input::-webkit-inner-spin-button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .dfa-crypto-mod p span.number {
   background-color: #d2d0d0;
