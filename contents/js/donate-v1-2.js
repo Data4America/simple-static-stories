@@ -402,16 +402,16 @@
     '   <h3 style="font-weight:normal;">To make donation in cryptocurrency, please follow the steps below.</h3>' +
     '   <div class="list-wrapper">' +
     '     <p style="text-align: left;"><span class="number">1</span> <span class="text">Open your wallet app and scan the QR CODE or copy and paste the address.<span></p>'+
-    '     <div style="border:none; box-shadow:none; background:none;" class="ui horizontal segments">'+
+    '     <div style="border:none; box-shadow:none; background:none; margin: 0px 1.5em;" class="ui horizontal segments">'+
     '       <div class="ui segment">'+
     // '          <img src="/img/bitcoin.png" class="ui small image centered"/>'+
     '          <img src="/img/d4a-btc-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size: 0.8em;">3KHL4rtRy9TnQB69kk6rcTT8jZs4ZjLqVB</p>'+
+    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size: 0.8em;">3ELXtUVUHmL71whkTrmSmBqNw6eAV2mKfe</p>'+
     '       </div>'+
     '       <div class="ui segment">'+
     // '        <img src="/img/ethereum.png" class="ui small image centered"/>'+
     '          <img src="/img/d4a-eth-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size:0.8em;">0xbc7606c256a0a6665f1f27b0273f8488bb6f0e12</p>'+
+    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size:0.8em;">0x803e42de525db0335a7ad008fb33ea1c2190525b</p>'+
     '        </div>'+
     '     </div>'+
     '     <p style="text-align: left;"><span class="number">2</span> <span class="text">Make your donation.</span></p>'+
