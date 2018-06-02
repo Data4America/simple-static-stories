@@ -3,28 +3,30 @@ extends layout
 block content
   div(style="max-width:700px; margin:0 auto;")
     div.dfa-donate.init(style="width:100%;")
-      div.dfa-crypto-mod(style="font-size: 0.8em;")
-        h1(style="text-align:center;") Donate by Crypto
-        h3(style="font-weight:normal; text-align:center;") To make donation in cryptocurrency, please follow the steps below.
+      .dfa-crypto-mod(style='font-size: 0.9em;')
+        h1(style='text-align:center;') Donate by Crypto
+        h3(style='font-weight:normal;') To make donation in cryptocurrency, please follow the steps below.
         .list-wrapper
-          p(style="text-align: left;")
+          p(style='text-align: left;')
             span.number 1
-            span.text Open your wallet app and scan the appropriate QR CODE.
-          .ui.horizontal.segments(style="border:none; box-shadow:none; background:none;")
+            span.text
+              | Open your wallet app and scan the QR CODE or copy and paste the address.
+              span
+          .ui.horizontal.segments(style='border:none; box-shadow:none; background:none;')
             .ui.segment
-              img.ui.small.image.centered(src="/img/bitcoin.png")
-              img.ui.small.image.centered(src="/img/donate_bitcoin.png", style="margin-top: 1em;")
+              img.ui.small.image.centered(src='/img/d4a-btc-qr.png', style='margin-top: 1em;')
+              p.ui.small.header.center.aligned(style='word-wrap: break-word; font-size: 0.85em;') 3KHL4rtRy9TnQB69kk6rcTT8jZs4ZjLqVB
             .ui.segment
-              img.ui.small.image.centered(src="/img/ethereum.png")
-              img.ui.small.image.centered(src="/img/donate-ethereum.png", style="margin-top: 1em;")
-          p(style="text-align: left;")
+              img.ui.small.image.centered(src='/img/d4a-eth-qr.png', style='margin-top: 1em;')
+              p.ui.small.header.center.aligned(style='word-wrap: break-word; font-size:0.85em;') 0xbc7606c256a0a6665f1f27b0273f8488bb6f0e12
+          p(style='text-align: left;')
             span.number 2
             span.text Make your donation.
-          p(style="text-align: left;")
+          p(style='text-align: left;')
             span.number 3
-            span.text Once your transaction is complete, please forward your confirmation email to
-              = ' '
-              a(href="mailto:donations@data4america.org") donations@data4america.org
-        p(style="text-align: center;") We will provide a tax letter for your records.
-        p(style="text-align: center; font-style: italic; font-size: 0.8em; margin-top: -1.5em;")
+            span.text
+              | Once your transaction is complete, please forward your confirmation email to
+              a(href='mailto:donations@data4america.org') donations@data4america.org
+        p(style='text-align: center; margin-top: 3em;') We will provide a tax letter for your records.
+        p(style='text-align: center; font-style: italic; font-size: 0.8em; margin-top: -1.5em;')
           | Because our board covers 100% of our costs, every donation goes where its needed most.

@@ -401,23 +401,25 @@
     '   <h1 style="text-align:center;">Donate by Crypto</h1>' +
     '   <h3 style="font-weight:normal;">To make donation in cryptocurrency, please follow the steps below.</h3>' +
     '   <div class="list-wrapper">' +
-    '     <p style="text-align: left;"><span class="number">1</span> <span class="text">Open your wallet app and scan the appropriate QR CODE.<span></p>'+
+    '     <p style="text-align: left;"><span class="number">1</span> <span class="text">Open your wallet app and scan the QR CODE or copy and paste the address.<span></p>'+
     '     <div style="border:none; box-shadow:none; background:none;" class="ui horizontal segments">'+
-    '       <div class="ui segment"><img src="/img/bitcoin.png" class="ui small image centered"/>'+
-    // '        <p class="ui header center aligned" style="word-wrap: break-word;">0xf85df14ede0d7d8000e1f872b5730f0bff69996c</p>'+
-    '         <img src="/img/donate_bitcoin.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '       <div class="ui segment">'+
+    // '          <img src="/img/bitcoin.png" class="ui small image centered"/>'+
+    '          <img src="/img/d4a-btc-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size: 0.8em;">3KHL4rtRy9TnQB69kk6rcTT8jZs4ZjLqVB</p>'+
     '       </div>'+
-    '       <div class="ui segment"><img src="/img/ethereum.png" class="ui small image centered"/>'+
-    // '        <p class="ui header center aligned" style="word-wrap: break-word;">0x214680FB044798b19a556038e6fdEE9B62ade267</p>'+
-    '        <img src="/img/donate-ethereum.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '      </div>'+
+    '       <div class="ui segment">'+
+    // '        <img src="/img/ethereum.png" class="ui small image centered"/>'+
+    '          <img src="/img/d4a-eth-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size:0.8em;">0xbc7606c256a0a6665f1f27b0273f8488bb6f0e12</p>'+
+    '        </div>'+
     '     </div>'+
     '     <p style="text-align: left;"><span class="number">2</span> <span class="text">Make your donation.</span></p>'+
     '     <p style="text-align: left;"><span class="number">3</span> <span class="text">Once your transaction is complete, please forward your confirmation email to ' +
     '      <a href="mailto:donations@data4america.org">donations@data4america.org</a></span>' +
     '     </p>'+
     '   </div>'+
-    '   <p style="text-align: center;">We will provide a tax letter for your records.</p>'+
+    '   <p style="text-align: center; margin-top: 3em;">We will provide a tax letter for your records.</p>'+
     '   <p style="text-align: center; font-style: italic; font-size: 0.8em; margin-top: -1.5em;">Because our board covers 100% of our costs, every donation goes where its needed most.</p>'+
     // '   <p style="text-align:center;">' +
     // '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
