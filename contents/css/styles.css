@@ -52019,7 +52019,7 @@ input::-webkit-inner-spin-button {
   position: absolute;
   content: ' ';
   width: 2px;
-  left: 22px;
+  left: 19px;
   top: 0px;
   background-color: #d2d0d0;
   height: 95%;
@@ -52041,21 +52041,29 @@ input::-webkit-inner-spin-button {
 }
 .dfa-crypto-mod p span.number {
   background-color: #d2d0d0;
-  display: inline-block;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  -webkit-flex-basis: 14px;
+      -ms-flex-preferred-size: 14px;
+          flex-basis: 14px;
   text-align: center;
   padding: 1em;
   margin-right: 0.5em;
-  line-height: 1;
+  line-height: 0.7;
 }
 .dfa-crypto-mod p span.text {
   -webkit-box-flex: 1;
-  -webkit-flex: auto;
-      -ms-flex: auto;
-          flex: auto;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+@media only screen and (max-width: 767px) {
+  .dfa-crypto-mod .list-wrapper .ui.segments {
+    display: block;
+  }
+  .dfa-crypto-mod .list-wrapper .ui.segments .ui.segment {
+    width: 100%;
+  }
 }
 .dfa-donate ol {
   margin: 0;

@@ -397,7 +397,7 @@ input::-webkit-inner-spin-button {
     position: absolute;
     content: ' ';
     width: 2px;
-    left: 22px;
+    left: 19px;
     top: 0px;
     background-color: #d2d0d0;
     height: 95%;
@@ -409,17 +409,28 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     span.number {
       background-color: #d2d0d0;
-      display: inline-block;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
+      flex-basis: 14px;
       text-align: center;
       padding: 1em;
       margin-right: 0.5em;
-      line-height: 1;
+      line-height: 0.7;
     }
     span.text {
-      flex: auto;
+      flex: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .dfa-crypto-mod {
+    .list-wrapper {
+      .ui.segments {
+        display: block;
+        .ui.segment {
+          width: 100%;
+        }
+      }
     }
   }
 }
