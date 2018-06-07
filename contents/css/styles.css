@@ -52015,14 +52015,19 @@ input::-webkit-inner-spin-button {
   z-index: 1;
   margin-bottom: 1em;
 }
+.dfa-crypto-mod .list-wrapper .address {
+  word-wrap: break-word;
+  font-size: 0.8em !important;
+  word-break: break-all;
+}
 .dfa-crypto-mod .list-wrapper::before {
   position: absolute;
   content: ' ';
   width: 2px;
-  left: 19px;
-  top: 0px;
+  left: 1.3em;
+  top: 4px;
   background-color: #d2d0d0;
-  height: 95%;
+  height: 81%;
   z-index: -1;
 }
 .dfa-crypto-mod p {

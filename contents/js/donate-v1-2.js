@@ -402,25 +402,30 @@
     '   <h3 style="font-weight:normal;">To make donation in cryptocurrency, please follow the steps below.</h3>' +
     '   <div class="list-wrapper">' +
     '     <p style="text-align: left;"><span class="number">1</span> <span class="text">Open your wallet app and scan the QR CODE or copy and paste the address.<span></p>'+
-    '     <div style="border:none; box-shadow:none; background:none; margin: 0px 1.5em;" class="ui horizontal segments">'+
+    '     <div style="border:none; box-shadow:none; background:none; margin: 0px 0 0 1.5em;" class="ui horizontal segments">'+
     '       <div class="ui segment">'+
     // '          <img src="/img/bitcoin.png" class="ui small image centered"/>'+
     '          <img src="/img/d4a-btc-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size: 0.8em;">3ELXtUVUHmL71whkTrmSmBqNw6eAV2mKfe</p>'+
+    '          <p class="ui small header center aligned address">3ELXtUVUHmL71whkTrmSmBqNw6eAV2mKfe</p>'+
     '       </div>'+
     '       <div class="ui segment">'+
     // '        <img src="/img/ethereum.png" class="ui small image centered"/>'+
     '          <img src="/img/d4a-eth-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '          <p class="ui small header center aligned" style="word-wrap: break-word; font-size:0.8em;">0x803e42de525db0335a7ad008fb33ea1c2190525b</p>'+
+    '          <p class="ui small header center aligned address">0x803e42de525db0335a7ad008fb33ea1c2190525b</p>'+
     '        </div>'+
     '     </div>'+
-    '     <p style="text-align: left;"><span class="number">2</span> <span class="text">Make your donation.</span></p>'+
-    '     <p style="text-align: left;"><span class="number">3</span> <span class="text">Once your transaction is complete, please forward your confirmation email to ' +
+    '     <p style="text-align: left;"><span class="number">2</span> <span class="text">Make your donation by sending Bitcoin or Ethereum to our addresses above.</span></p>'+
+    '     <p style="text-align: left;"><span class="number">3</span> <span class="text">Once your transaction is complete, send us any form of the following confirmation to: ' +
     '      <a href="mailto:donations@data4america.org">donations@data4america.org</a></span>' +
     '     </p>'+
+    '     <ul style="text-align: left; padding-left: 5em; margin-top: -1em; font-size: 0.8em;">'+
+    '       <li>A screenshot of your transaction receipt</li>'+
+    '       <li>Etherscan URL</li>'+
+    '       <li>Bitcoin transaction URL</li>'+
+    '       <li>Any other visual proof of your transactions ent to our addresses</li>'+
     '   </div>'+
-    '   <p style="text-align: center; margin-top: 3em;">We will provide a tax letter for your records.</p>'+
-    '   <p style="text-align: center; font-style: italic; font-size: 0.8em; margin-top: -1.5em;">Because our board covers 100% of our costs, every donation goes where its needed most.</p>'+
+    '   <p style="text-align: center; margin-top: 3em;">We\'ll confirm receipt by email and then provide a tax letter for your records.</p>'+
+    '   <p style="text-align: left; font-size: 0.8em; margin-top: -0.5em;"> Crypto4America is a special project of Data4America, a 501(c)(3) public charity registered in the United States, EIN# 47-4629656. Donations to Crypto4America will be processed by and made tax deductible through Data4America. Contributions will be tax-deductible to the fullest extent of the law. Data4America will provide a formal acknowledgment letter containing tax-deduction language for your records</p>'+
     // '   <p style="text-align:center;">' +
     // '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
     // '   </p>'
