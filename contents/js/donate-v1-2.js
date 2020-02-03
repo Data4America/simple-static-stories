@@ -12,7 +12,7 @@
     '   <tr>' +
     '     <td>' +
     '       <h4 class="dfa-header-text donate" style="margin-bottom: 0;">' +
-    '         Want to see more from Data<span style="color:#CC0001; font-style:italic;">4</span>America? <br>Consider a tax-deductible gift.' +
+    '         Want to see more from Data<span style="color:#CC0001; font-style:italic;">4</span>America? <br>Consider a non tax-deductible gift.' +
     '       </h4>' +
     '       <h4 class="dfa-header-text sponsor" style="display:none; margin: 0; font-size: 1.4em;">' +
     '         Sponsor a Policy Issue' +
@@ -230,8 +230,7 @@
     '   </tr>' +
     '   <tr>' +
     '     <td style="padding:0;">' +
-    '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation, a 501(c)(3) public charity registered in the United States, EIN# 20-5205488. Contributions will be tax-deductible to the fullest extent of the law. SVCF will provide a formal'+
-    '       acknowledgment letter containing tax-deduction language for your records.</p>' +
+    // '       <p style="color:#777; font-size:0.65em; text-align:left;">Data4America is a California nonprofit corporation being fiscally sponsored by the Silicon Valley Community Foundation. Donations to Data4America will be processed by and made tax deductible through the Silicon Valley Community Foundation.</p>' +
     '     </td>' +
     '   </tr>' +
     ' </table>' +
@@ -405,14 +404,14 @@
     '     <div style="border:none; box-shadow:none; background:none; margin: 0px 0 0 1.5em;" class="ui horizontal segments">'+
     '       <div class="ui segment">'+
     // '          <img src="/img/bitcoin.png" class="ui small image centered"/>'+
-    '          <img src="/img/d4a-btc-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '          <p class="ui small header center aligned address">3ELXtUVUHmL71whkTrmSmBqNw6eAV2mKfe</p>'+
+    '          <img src="/img/d4a-btc-qr-v2.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    '          <p class="ui small header center aligned address">14jdcHmfJuJq1KZ8E8ULLvPCdtEfY9Wnis</p>'+
     '       </div>'+
-    '       <div class="ui segment">'+
-    // '        <img src="/img/ethereum.png" class="ui small image centered"/>'+
-    '          <img src="/img/d4a-eth-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
-    '          <p class="ui small header center aligned address">0x803e42de525db0335a7ad008fb33ea1c2190525b</p>'+
-    '        </div>'+
+    // '       <div class="ui segment">'+
+    // // '        <img src="/img/ethereum.png" class="ui small image centered"/>'+
+    // '          <img src="/img/d4a-eth-qr.png" style="margin-top: 1em;" class="ui small image centered"/>'+
+    // '          <p class="ui small header center aligned address">0x803e42de525db0335a7ad008fb33ea1c2190525b</p>'+
+    // '        </div>'+
     '     </div>'+
     '     <p style="text-align: left;"><span class="number">2</span> <span class="text">Make your donation by sending Bitcoin or Ethereum to our addresses above.</span></p>'+
     '     <p style="text-align: left;"><span class="number">3</span> <span class="text">Once your transaction is complete, send us any form of the following confirmation to: ' +
@@ -420,12 +419,12 @@
     '     </p>'+
     '     <ul style="text-align: left; padding-left: 5em; margin-top: -1em; font-size: 0.8em;">'+
     '       <li>A screenshot of your transaction receipt</li>'+
-    '       <li>Etherscan URL</li>'+
+    // '       <li>Etherscan URL</li>'+
     '       <li>Bitcoin transaction URL</li>'+
     '       <li>Any other visual proof of your transactions ent to our addresses</li>'+
     '   </div>'+
-    '   <p style="text-align: center; margin-top: 3em;">We\'ll confirm receipt by email and then provide a tax letter for your records.</p>'+
-    '   <p style="text-align: left; font-size: 0.8em; margin-top: -0.5em;"> Crypto4America is a special project of Data4America, a 501(c)(3) public charity registered in the United States, EIN# 47-4629656. Donations to Crypto4America will be processed by and made tax deductible through Data4America. Contributions will be tax-deductible to the fullest extent of the law. Data4America will provide a formal acknowledgment letter containing tax-deduction language for your records</p>'+
+    // '   <p style="text-align: center; margin-top: 3em;">We\'ll confirm receipt by email and then provide a tax letter for your records.</p>'+
+    // '   <p style="text-align: left; font-size: 0.8em; margin-top: -0.5em;"> Crypto4America is a special project of Data4America, a 501(c)(3) public charity registered in the United States, EIN# 47-4629656. Donations to Crypto4America will be processed by and made tax deductible through Data4America. Contributions will be tax-deductible to the fullest extent of the law. Data4America will provide a formal acknowledgment letter containing tax-deduction language for your records</p>'+
     // '   <p style="text-align:center;">' +
     // '     <a class="dfa-button dfa-button-back dfa-donate-scroll" href="javascript:;">Back</a>' +
     // '   </p>'
